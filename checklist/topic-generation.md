@@ -181,7 +181,16 @@ If validation fails, retry generation once. If second attempt fails, halt with `
 ## Halt conditions
 
 - `topic-generation-exhausted`: every candidate from ROADMAP gap analysis has either been published, is in flight, or fails US-only / cannibalization filters. Operator must add new gap analysis to ROADMAP before another Stage -2 invocation succeeds.
-- `topic-generation-validation-failed`: two consecutive generation attempts produced invalid briefs/outlines. This should be very rare; if it happens, suggests the generator prompts need revision.
+
+## Soft-fail conditions (do NOT halt the batch)
+
+The following conditions skip the current candidate and immediately try the next-best from the candidate pool, so a batch run does not stall on a single unlucky topic:
+
+- `validation-failed-after-retry`: two consecutive generation attempts produced invalid brief/outline structure. Log the rejected drafts to `blog/_failed-generation/[timestamp]-[slug]/` for later review, then move to the next candidate.
+- `keyword-validation-failed-after-retry`: WebSearch on the focus keyword returned no useful signal twice. Move to next candidate.
+- `webfetch-permission-prompt-on-validation`: a competitor URL is not in the allowlist and would prompt the operator. Skip the URL, use available WebSearch signal alone, continue.
+
+If the candidate pool is then exhausted by repeated soft-fails, halt with `topic-generation-exhausted` as above.
 
 ## Why this exists
 
