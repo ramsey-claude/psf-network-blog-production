@@ -63,7 +63,17 @@ Sub-steps:
 **Input:** `brief.md`, `outline.md`, `evidence.md`
 **Output:** `draft.md`
 
-Draft follows the psfnetwork template (component order in the Railway blog-post.jsx). Every claim must trace back to an `evidence.md` entry. Sources section references evidence rows.
+Draft follows the component order in `brand/template-structure.md`. Every claim must trace back to an `evidence.md` entry. Sources section references evidence rows.
+
+**Required output structure:**
+1. YAML frontmatter at the top of `draft.md` containing every field listed in `brand/template-structure.md` (title, slug, type, topic, author, reviewer, read_time, published, updated, focus_keyword, secondary_keywords, meta_description, canonical, hero_visual_alt). Length rules:
+   - `title`: 55-60 characters, focus keyword in the first third
+   - `meta_description`: 150-160 characters, includes focus keyword and a CTA verb
+2. H1 in the body matching the post topic (not necessarily identical to `title`, but related)
+3. Every component block from `brand/template-structure.md` in order
+4. Author and reviewer values use the standing personas in `brand/personas.md`. Any other names are rejected by Stage 7 QA.
+
+The draft is responsible for producing title and meta description on its own. They are not retro-fitted in QA - they must be present and within length rules when Stage 2 ends.
 
 ## Stage 3 - Expert + editorial review
 Multi-agent sequential discussion. Two changes from v1:

@@ -1,5 +1,7 @@
 # SEO & GEO Blog İçerik Checklist
 
+> **Operating scope (2026-05-14):** psfnetwork US pazarı ve EN dili. Bu checklist sadece EN içerik için uygulanır. Lokalizasyon (TR / FR / AE) çıkarılmıştır - bkz. `checklist/localization-guide.md` future expansion notu.
+
 Her blog yayınlamadan önce bu listeyi baştan sona geç. Maddeler **SEO**, **GEO** veya **SEO+GEO** etiketiyle işaretlenmiştir.
 
 ---
@@ -85,15 +87,7 @@ Her blog yayınlamadan önce bu listeyi baştan sona geç. Maddeler **SEO**, **G
 
 ---
 
-## 8. Lokalizasyon — TR Pazarı `SEO+GEO`
-
-- [ ] Türkiye koşullarına özel referanslar eklendi (iklim, pazar, kullanıcı alışkanlığı)
-- [ ] Hitap biçimi seçildi ve tutarlı uygulandı (sen / siz)
-- [ ] Yerel arama terimleri ve Türkçe keyword varyasyonları kullanıldı `SEO`
-
----
-
-## 9. QA — Yayın Öncesi Kontrol
+## 8. QA — Yayın Öncesi Kontrol
 
 - [ ] Tüm iç ve dış linkler test edildi, kırık link yok
 - [ ] Tüm görseller yükleniyor, alt text'ler dolu

@@ -19,13 +19,16 @@ Work through every item. Mark each PASS or FAIL. Use the routing table to decide
 
 ### B. SEO & GEO structure
 
-- [ ] Title tag 55-60 characters, focus keyword in the first third
-- [ ] Meta description 150-160 characters, includes CTA and keyword
-- [ ] H1 unique, contains focus keyword
+- [ ] Frontmatter present with all fields listed in `brand/template-structure.md`
+- [ ] `title` field 55-60 characters, focus keyword in the first third
+- [ ] `meta_description` field 150-160 characters, includes focus keyword and a CTA verb
+- [ ] `canonical` field set to `https://psfnetwork.com/blog/[slug]`
+- [ ] `hero_visual_alt` field populated, 60-120 characters
+- [ ] H1 unique in body, contains focus keyword
 - [ ] H2s in question format
-- [ ] TL;DR or summary block present at top
-- [ ] Every H2 has an answer capsule of 50-75 words
-- [ ] FAQ section structured for FAQ schema (Q/A pairs)
+- [ ] QuickAnswer block present at top
+- [ ] Every H2 has an answer capsule of 50-75 words (self-contained)
+- [ ] FAQ section structured for FAQ schema (Q/A pairs), minimum 5 entries
 - [ ] At least 2 internal links to relevant posts that actually exist in the repo
 - [ ] All external links point to high-authority sources from `evidence.md`
 
@@ -36,15 +39,19 @@ Work through every item. Mark each PASS or FAIL. Use the routing table to decide
 - [ ] Tone matches `brand/tone-and-voice.md`
 - [ ] No contradictions within the content
 - [ ] No orphaned sentences or incomplete paragraphs
-- [ ] Author name and review credit present
-- [ ] Disclaimer block present and complete
+- [ ] Author and reviewer match a standing persona in `brand/personas.md`. Any other name = FAIL.
+- [ ] Disclaimer block present, text matches the canonical disclaimer in `brand/tone-and-voice.md`
+- [ ] Every component listed in `brand/template-structure.md` is present in the draft, in order
 
-### D. Localization (if applicable)
+### D. Template completeness
 
-- [ ] Financial terms preserved per `checklist/localization-guide.md`
-- [ ] Register consistent throughout (siz / vous / formal)
-- [ ] Currency formatting correct for the target market
-- [ ] Each localized variant has its own `draft-[market].md`
+- [ ] ArticleHero metadata (type, topic) present in frontmatter
+- [ ] HeroVisual placeholder line `[VISUAL-HERO-XX]` present
+- [ ] QuickAnswer has exactly 4 stat cards
+- [ ] Opening is 2 paragraphs with no headers
+- [ ] Sources section uses numbered list and references evidence.md rows
+- [ ] AuthorCard, Disclaimer, CTABlock, Related blocks all present
+- [ ] Related lists exactly 3 internal links
 
 ## Routing on FAIL
 
@@ -56,7 +63,7 @@ Do not blindly restart from Stage 1. Route by failure type:
 | A. Financial accuracy - source exists but wording wrong | Stage 4 (Revision) |
 | B. SEO & GEO structure | Stage 4 (Revision) |
 | C. Brand & content quality | Stage 4 (Revision) |
-| D. Localization | Stage 5 (Localization) |
+| D. Template completeness | Stage 4 (Revision) |
 
 Loop budget is shared with Stage 3. If `loop_count > 3` at any failure: set `stage: "manual-review-required"` and stop.
 
