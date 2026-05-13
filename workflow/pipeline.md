@@ -14,6 +14,7 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 
 | Stage | Name | Purpose |
 |-------|------|---------|
+| -2 | Topic discovery & brief/outline generation | Only runs when Stage -1 returns no eligible candidate |
 | -1 | Topic selection | Only runs when the trigger did not specify a slug |
 | 0 | State check | Read `pipeline-state.json`, resume or start |
 | 1 | Research & evidence | SERP snapshot, source every claim, cannibalization check |
@@ -27,6 +28,14 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 | 9 | Client delivery | Upload outputs to operator Google Drive |
 | 10 | Post-publish QA | Live URL: schema, performance, AI citation (deferred until site is live) |
 
+## Stage -2 - Topic discovery & brief/outline generation (conditional)
+
+Runs only when Stage -1 returns "no ready candidate" — every existing slug under `blog/` is published or in flight. Generates a fresh `brief.md` + `outline.md` for the next-best seed from `ROADMAP.md` Step 2 (gap analysis), then loops back to Stage -1 so the new slug can be picked.
+
+Spec in `checklist/topic-generation.md`. Halt conditions: `topic-generation-exhausted` (no remaining gap-analysis candidates pass filters) or `topic-generation-validation-failed` (two consecutive generated drafts fail validation).
+
+Stage -2 commits its output as `feat(brief): generate brief + outline for [slug] - Stage -2 auto`.
+
 ## Stage -1 - Topic selection (conditional)
 
 Runs only when the trigger did not include a slug. See `checklist/topic-selection.md` for the full scoring criteria.
@@ -38,7 +47,7 @@ Short version:
 4. Apply the scoring rules in `checklist/topic-selection.md`. Hub posts always come before Spoke posts that link back to them.
 5. Output the selected slug + a one-paragraph justification. Write the justification to the selected slug's `pipeline-state.json` under `flags.topic_selection_reason` when state is first created in Stage 0.
 
-If no candidate has both `brief.md` and `outline.md` ready, halt with an explanation. Topic selection does not generate briefs or outlines.
+If no candidate has both `brief.md` and `outline.md` ready, **fall through to Stage -2** (topic generation) rather than halting. Topic selection itself does not author briefs or outlines.
 
 ## Stage 0 - State check
 Read `blog/[slug]/pipeline-state.json` from the repo.

@@ -15,6 +15,8 @@ Saying "yaz" pre-authorizes every action below for the duration of the run. No p
 - File writes to the local staging directory
 - GitHub API reads against `ramsey-claude/psf-network-blog-production`
 - GitHub API writes against `ramsey-claude/psf-network-blog-production` (commits, file PUTs, ref updates) within the slug's directory and `workflow/loop-log.md`
+- Brief.md and outline.md generation in new slug directories under `blog/[new-slug]/` (Stage -2)
+- Updates to `ROADMAP.md` Phase 1/2 trackers when Stage -2 generates a new topic
 - Anthropic API calls for any reviewer, drafter, moderator, classifier, or QA role
 - Internal looping (Stage 3 -> Stage 2, Stage 7 -> earlier) within the shared loop budget of 3
 - Web fetches and web searches for SERP snapshot and source verification in Stage 1
