@@ -1,0 +1,64 @@
+{
+  "slug": "reits-vs-fractional-real-estate",
+  "title": "Fractional Real Estate vs REIT: Complete 2026 Comparison",
+  "stage": "published",
+  "stage_name": "github-published-drive-pending",
+  "completed_steps": [
+    "stage-minus1-topic-selection",
+    "stage0-state-init",
+    "stage1-serp-snapshot",
+    "stage1-cannibalization-clean",
+    "stage1-claim-inventory",
+    "stage1-evidence-gathering",
+    "stage1-outline-reconciliation",
+    "stage2-draft-v1",
+    "stage3-panel-selection",
+    "stage3-sec-review",
+    "stage3-finra-review",
+    "stage3-cfpb-review",
+    "stage3-editorial-review",
+    "stage3-moderator-consensus",
+    "stage4-revision",
+    "stage5-localization-noop",
+    "stage6-recheck-noop",
+    "stage7-pre-publish-qa-pass",
+    "stage8-github-publish"
+  ],
+  "pending_steps": [
+    "stage9-drive-delivery"
+  ],
+  "loop_count": 0,
+  "last_updated": "2026-05-14",
+  "expert_panel": ["SEC", "FINRA", "CFPB", "Editorial"],
+  "target_markets": ["EN-US"],
+  "flags": {
+    "high_severity_issues_count": 0,
+    "med_severity_issues_count": 4,
+    "low_severity_issues_count": 5,
+    "localization_triggered_recheck": false,
+    "qa_fail_reasons": [],
+    "cannibalization_conflict": false,
+    "topic_selection_reason": "Priority 3 in ROADMAP Step 3, Spoke. Hub (fractional-real-estate-investing) is published; Priority 2 (passive income) is published. Both prerequisites satisfied. Brief flagged neutral comparison angle as differentiator; SERP confirmed gap (no competitor owns clean GEO-ready REITs-vs-fractional head-to-head).",
+    "chart_skipped": "Outline CHART-PIE-01 (portfolio allocation) replaced with prose; specific allocation percentages would be investment advice per CFPB-aligned review, not appropriate for a general comparison guide"
+  },
+  "expert_verdicts": {
+    "stage3": {
+      "SEC": "APPROVE_WITH_NOTES",
+      "FINRA": "APPROVE_WITH_NOTES",
+      "CFPB": "APPROVE_WITH_NOTES",
+      "Editorial": "APPROVE_WITH_NOTES",
+      "Moderator": "PROCEED_TO_STAGE_4"
+    }
+  },
+  "evidence_summary": {
+    "claims_total": 16,
+    "claims_sourced": 13,
+    "claims_dropped": 4
+  },
+  "qa_summary": {
+    "total_items": 33,
+    "pass": 33,
+    "fail": 0,
+    "recommendation": "PUBLISH"
+  }
+}
