@@ -1,8 +1,8 @@
 {
   "slug": "fractional-real-estate-investing",
-  "title": "What Is Fractional Real Estate Investing? A Complete Guide (2026)",
-  "stage": 1,
-  "stage_name": "research-complete",
+  "title": "What Is Fractional Real Estate Investing? The 2026 Guide",
+  "stage": 3,
+  "stage_name": "review-complete-proceed",
   "completed_steps": [
     "stage-minus1-topic-selection",
     "stage0-state-init",
@@ -10,11 +10,16 @@
     "stage1-cannibalization-clean",
     "stage1-claim-inventory",
     "stage1-evidence-gathering",
-    "stage1-outline-reconciliation"
+    "stage1-outline-reconciliation",
+    "stage2-draft-v1",
+    "stage3-panel-selection",
+    "stage3-sec-review",
+    "stage3-finra-review",
+    "stage3-cfpb-review",
+    "stage3-editorial-review",
+    "stage3-moderator-consensus"
   ],
   "pending_steps": [
-    "stage2-draft",
-    "stage3-expert-editorial-review",
     "stage4-revision",
     "stage5-localization-noop",
     "stage6-recheck-noop",
@@ -28,10 +33,21 @@
   "target_markets": ["EN-US"],
   "flags": {
     "high_severity_issues_count": 0,
+    "med_severity_issues_count": 5,
+    "low_severity_issues_count": 3,
     "localization_triggered_recheck": false,
     "qa_fail_reasons": [],
     "cannibalization_conflict": false,
-    "topic_selection_reason": "Hub of Phase 1 cluster (Priority 1, Type=Hub). All 5 spokes in queue have internal links pointing back to this hub; publishing the hub first prevents broken internal links. Focus keyword 'fractional real estate investing' has 880 search volume and KD 35, with documented competitor weakness (Arrived's page has 100 traffic per ROADMAP Step 2 gap analysis). Runner-up considered: how-to-build-passive-income-with-real-estate (Priority 2, KD 10)."
+    "topic_selection_reason": "Hub of Phase 1 cluster (Priority 1, Type=Hub). All 5 spokes in queue have internal links pointing back to this hub; publishing the hub first prevents broken internal links."
+  },
+  "expert_verdicts": {
+    "stage3": {
+      "SEC": "APPROVE_WITH_NOTES",
+      "FINRA": "APPROVE_WITH_NOTES",
+      "CFPB": "APPROVE_WITH_NOTES",
+      "Editorial": "APPROVE_WITH_NOTES",
+      "Moderator": "PROCEED_TO_STAGE_4"
+    }
   },
   "evidence_summary": {
     "claims_total": 17,
