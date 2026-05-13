@@ -24,7 +24,8 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 | 6 | Expert re-check | Conditional, only if Stage 5 changed financial terms |
 | 7 | Pre-publish QA | Items checkable from markdown only |
 | 8 | Publish | Commit all artifacts to main |
-| 9 | Post-publish QA | Live URL: schema, performance, AI citation |
+| 9 | Client delivery | Upload outputs to operator Google Drive |
+| 10 | Post-publish QA | Live URL: schema, performance, AI citation (deferred until site is live) |
 
 ## Stage -1 - Topic selection (conditional)
 
@@ -87,7 +88,9 @@ Apply every HIGH, most MED, judgment on LOW. Never delete sections - revise. Mai
 **Input:** `draft.md`, `checklist/localization-guide.md`
 **Output:** `localization-notes-[market].md` and `draft-[market].md` per target market; primary market keeps base `draft.md`.
 
-If more than one target market is requested, localization runs once per market. Each pass reports whether financial terms were modified.
+**Default behavior:** psfnetwork operates in the US market only and ships English-only content. With the default `target_markets: ["EN-US"]`, Stage 5 is a no-op: it writes an empty `localization-notes-EN-US.md` recording "no localization required, primary market only", and proceeds. Stage 6 also becomes a no-op.
+
+Multi-market localization (TR, FR, AE) is spec'd in `checklist/localization-guide.md` for future expansion, but is not invoked by the default pipeline. To enable, set `target_markets` in the brief's metadata to include additional markets before running.
 
 ## Stage 6 - Expert re-check (conditional)
 Runs only if any localized version modified financial terms, disclosures, numerical claims, or regulatory references. Same panel as Stage 3 but targeted to changed sections only.
@@ -117,14 +120,48 @@ blog/[slug]/changelog.md
 blog/[slug]/localization-notes-[market].md
 blog/[slug]/qa-report.md
 blog/[slug]/pipeline-state.json
-blog/[slug]/[slug]-chart.jsx        (if applicable)
+blog/[slug]/[slug]-chart.tsx        (if applicable, Framer-compatible TypeScript)
 blog/[slug]/expert-reviews/         (all stage3 and stage6 files)
 ```
 
 Commit message: `feat(blog): publish [slug] - passed pre-publish QA on loop [n]`. Update `pipeline-state.json` with `stage: "published"`.
 
-## Stage 9 - Post-publish QA
-Runs after the page is live. See `checklist/qa-gate-post-publish.md`. Schema validation, Core Web Vitals, AI citation tests, GSC indexing.
+## Stage 9 - Client delivery (Google Drive)
+After GitHub publish, mirror the outputs to the operator's Google Drive for client handoff. See `checklist/delivery.md`.
+
+**Tooling:** Google Drive MCP (`mcp__claude_ai_Google_Drive__*`). Authenticated under the operator's account. No third-party sharing is set by the pipeline.
+
+**Target structure:**
+
+```
+My Drive/
+└── psfnetwork/
+    └── [slug]/
+        ├── [Title].gdoc                      (primary draft, converted from markdown)
+        ├── [Title] - [market].gdoc           (one per localized variant)
+        ├── [slug]-chart.tsx                  (Framer-compatible TypeScript, if applicable)
+        └── [additional chart/table].tsx      (one per chart/table component)
+```
+
+**Actions:**
+1. Ensure the `psfnetwork` folder exists in My Drive root. Create if missing.
+2. Ensure subfolder `psfnetwork/[slug]/` exists. Create if missing.
+3. Convert `draft.md` to a Google Doc and upload. Document title = the post's H1.
+4. Convert each `draft-[market].md` to a Google Doc and upload. Title = "[H1] - [market]".
+5. Upload every `.tsx` chart/table file as-is (text/typescript, no conversion).
+6. Write a `delivery-manifest.md` in the repo listing each Drive file URL, doc ID, and timestamp.
+7. Update `pipeline-state.json` `flags.drive_delivery` with the manifest summary.
+
+**Gate:**
+- Drive write failure on any file: retry once. If still failing, halt with `delivery-failed` state. GitHub publish is not rolled back.
+- Successful delivery does not require operator confirmation. The operator sees the files in their Drive.
+
+**Output:** `delivery-manifest.md` in the repo.
+
+## Stage 10 - Post-publish QA (live URL)
+Runs after the page is live on psfnetwork.com. See `checklist/qa-gate-post-publish.md`. Schema validation, Core Web Vitals, AI citation tests, GSC indexing.
+
+This stage is deferred until the site is actually live. The pipeline does not block on it. When the live URL is available, the operator (or a separate scheduled run) invokes this stage independently.
 
 **Output:** `post-publish-report.md`
 
@@ -145,12 +182,18 @@ Failures here do not restart the production pipeline. They generate targeted rem
   "loop_count": "number, shared budget across Stage 3 and Stage 7, max 3",
   "last_updated": "YYYY-MM-DD",
   "expert_panel": ["string"],
-  "target_markets": ["string"],
+  "target_markets": ["string, default ['EN-US']"],
   "flags": {
     "high_severity_issues_count": "number",
     "localization_triggered_recheck": "boolean",
     "qa_fail_reasons": ["string"],
-    "cannibalization_conflict": "boolean"
+    "cannibalization_conflict": "boolean",
+    "topic_selection_reason": "string (only set when Stage -1 ran)",
+    "drive_delivery": {
+      "delivered_at": "YYYY-MM-DD",
+      "folder_id": "string",
+      "files": [{"name": "string", "id": "string", "url": "string"}]
+    }
   },
   "evidence_summary": {
     "claims_total": "number",
@@ -195,9 +238,13 @@ Combined budget across Stage 3 and Stage 7: max 3. On exceed, set `stage: "manua
   |-- FAIL routed by type --> [1] / [4] / [5] (max 3 total loops)
   |
   v
-[8] Publish
+[8] Publish (GitHub commit)
   |
   v
-[9] Post-publish QA
+[9] Client delivery (Google Drive)
+  |-- delivery failure --> retry once, then HALT (GitHub state remains published)
+  |
+  v
+[10] Post-publish QA (deferred, runs when live URL exists)
   |-- failures --> remediation tasks (not pipeline restart)
 ```

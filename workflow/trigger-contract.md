@@ -17,7 +17,8 @@ Saying "yaz" pre-authorizes every action below for the duration of the run. No p
 - GitHub API writes against `ramsey-claude/psf-network-blog-production` (commits, file PUTs, ref updates) within the slug's directory and `workflow/loop-log.md`
 - Anthropic API calls for any reviewer, drafter, moderator, classifier, or QA role
 - Internal looping (Stage 3 -> Stage 2, Stage 7 -> earlier) within the shared loop budget of 3
-- Web fetches for SERP snapshot and source verification in Stage 1
+- Web fetches and web searches for SERP snapshot and source verification in Stage 1
+- Google Drive MCP calls for Stage 9 delivery: folder creation under `psfnetwork/`, file creation, markdown-to-Google-Doc conversion, .tsx file upload - all scoped to the operator's own Drive, no third-party sharing
 
 ## Stop conditions
 
@@ -35,8 +36,10 @@ The pipeline halts on any of these without further prompting:
 - File deletes (the pipeline only writes and overwrites within the slug's directory)
 - Force-push, non-fast-forward updates, or any rewrite of `main` history
 - Branch creation other than the working branch implicit in the run
-- Calls to paid third-party APIs not listed in pre-authorized actions
+- Calls to paid third-party APIs not listed in pre-authorized actions (Semrush is intentionally excluded - see `checklist/research-stage.md`)
 - Any change to repo settings, collaborators, or webhooks
+- Sharing any Google Drive file or folder with another account (the pipeline writes to the operator's Drive only, never shares)
+- Writes to Google Drive locations outside `My Drive/psfnetwork/`
 
 ## Resume semantics
 

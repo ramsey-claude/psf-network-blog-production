@@ -1,6 +1,8 @@
 # Localization Guide
 
-This guide defines the scope and rules for the localization review stage (Stage 3) in the psfnetwork blog production pipeline.
+> **Current operating state (2026-05-14):** psfnetwork operates in the US market only and publishes English-only content. The default pipeline runs with `target_markets: ["EN-US"]`, which makes Stage 5 a no-op. The TR / FR / AE sections of this guide are retained for future expansion but are not invoked in current runs. To enable any non-US market, add it to `target_markets` in the brief's metadata before triggering the pipeline.
+
+This guide defines the scope and rules for the localization review stage (Stage 5) in the psfnetwork blog production pipeline.
 
 ---
 
