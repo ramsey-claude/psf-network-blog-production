@@ -2,7 +2,7 @@
   "slug": "fractional-real-estate-investing",
   "title": "What Is Fractional Real Estate Investing? The 2026 Guide",
   "stage": "published",
-  "stage_name": "github-published-drive-pending",
+  "stage_name": "complete-stage10-deferred",
   "completed_steps": [
     "stage-minus1-topic-selection",
     "stage0-state-init",
@@ -23,10 +23,11 @@
     "stage5-localization-noop",
     "stage6-recheck-noop",
     "stage7-pre-publish-qa-pass",
-    "stage8-github-publish"
+    "stage8-github-publish",
+    "stage9-drive-delivery"
   ],
   "pending_steps": [
-    "stage9-drive-delivery"
+    "stage10-post-publish-qa (deferred until psfnetwork.com is live)"
   ],
   "loop_count": 0,
   "last_updated": "2026-05-14",
@@ -40,7 +41,20 @@
     "qa_fail_reasons": [],
     "cannibalization_conflict": false,
     "topic_selection_reason": "Hub of Phase 1 cluster (Priority 1, Type=Hub). All 5 spokes link back to this hub; hub-before-spoke dependency satisfied.",
-    "chart_skipped": "CHART-BAR-01 reference removed in Stage 4; REIT and direct-rental specific return figures not in evidence.md, replaced with cautionary prose to avoid fabrication"
+    "chart_skipped": "CHART-BAR-01 reference removed in Stage 4; REIT and direct-rental specific return figures not in evidence.md, replaced with cautionary prose to avoid fabrication",
+    "drive_delivery": {
+      "delivered_at": "2026-05-14",
+      "folder_id": "13N_NjKbSKMLtbcMUvLxDplZaL7GJtJ-n",
+      "folder_url": "https://drive.google.com/drive/folders/13N_NjKbSKMLtbcMUvLxDplZaL7GJtJ-n",
+      "files": [
+        {
+          "name": "What Is Fractional Real Estate Investing? A Complete Guide for 2026",
+          "id": "1KC4sX56-NeFTQXW5X7UuLSsuQzDfZe3G9F8mgI8KzL4",
+          "url": "https://docs.google.com/document/d/1KC4sX56-NeFTQXW5X7UuLSsuQzDfZe3G9F8mgI8KzL4/edit",
+          "mimeType": "application/vnd.google-apps.document"
+        }
+      ]
+    }
   },
   "expert_verdicts": {
     "stage3": {
