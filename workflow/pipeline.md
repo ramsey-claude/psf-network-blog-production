@@ -4,7 +4,8 @@ Autonomous pipeline. Triggered by a single command. No human approval between st
 
 ## Trigger
 
-- New post: `psf network için yeni blog yaz: [slug or topic]`
+- New post, system picks topic: `psf network için yeni blog yaz`
+- New post, operator-specified topic: `psf network için yeni blog yaz: [slug or topic]`
 - Resume: `psf network [slug] devam et`
 
 The trigger is a blanket pre-authorization for every stage that follows. Pipeline runs until publish or until it hits a stop condition. See `workflow/trigger-contract.md`.
@@ -13,6 +14,7 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 
 | Stage | Name | Purpose |
 |-------|------|---------|
+| -1 | Topic selection | Only runs when the trigger did not specify a slug |
 | 0 | State check | Read `pipeline-state.json`, resume or start |
 | 1 | Research & evidence | SERP snapshot, source every claim, cannibalization check |
 | 2 | Draft | Write from brief + outline + evidence |
@@ -23,6 +25,19 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 | 7 | Pre-publish QA | Items checkable from markdown only |
 | 8 | Publish | Commit all artifacts to main |
 | 9 | Post-publish QA | Live URL: schema, performance, AI citation |
+
+## Stage -1 - Topic selection (conditional)
+
+Runs only when the trigger did not include a slug. See `checklist/topic-selection.md` for the full scoring criteria.
+
+Short version:
+1. List every directory under `blog/`. Each is a candidate slug.
+2. For each candidate, read `pipeline-state.json` if present. Exclude any candidate where `stage == "published"`.
+3. Read `brief.md` metadata (Priority, Type) and cross-reference with `ROADMAP.md` (Step 3 Priority Posts table, Phase 1 Execution Tracker).
+4. Apply the scoring rules in `checklist/topic-selection.md`. Hub posts always come before Spoke posts that link back to them.
+5. Output the selected slug + a one-paragraph justification. Write the justification to the selected slug's `pipeline-state.json` under `flags.topic_selection_reason` when state is first created in Stage 0.
+
+If no candidate has both `brief.md` and `outline.md` ready, halt with an explanation. Topic selection does not generate briefs or outlines.
 
 ## Stage 0 - State check
 Read `blog/[slug]/pipeline-state.json` from the repo.

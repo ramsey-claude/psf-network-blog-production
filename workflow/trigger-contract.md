@@ -4,7 +4,8 @@ The psfnetwork blog production pipeline is autonomous once triggered. This docum
 
 ## Triggers
 
-- `psf network için yeni blog yaz: [slug or topic]` - new post, start at Stage 0
+- `psf network için yeni blog yaz` - new post, system picks the topic (runs Stage -1 first)
+- `psf network için yeni blog yaz: [slug or topic]` - new post, operator-specified topic, skip Stage -1
 - `psf network [slug] devam et` - resume an in-flight post, start at the stage stored in `pipeline-state.json`
 
 ## Pre-authorized actions
