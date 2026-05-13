@@ -2,25 +2,38 @@
 
 Stage 1 produces the evidence base for the draft. Nothing enters Stage 2 unless it appears in `evidence.md`.
 
+## Tooling
+
+Stage 1 uses only the built-in `WebSearch` and `WebFetch` tools. No paid SERP API (Semrush, SerpAPI, etc.) is invoked from the pipeline. Rationale: keep token cost on Anthropic side only and avoid burning external API quota during high-volume runs.
+
+- `WebSearch` for keyword and question discovery (returns a result list)
+- `WebFetch` for full-page reads of primary sources, competitor pages, and federal agency docs
+
+GSC-based cannibalization is **deferred** until psfnetwork has 100 or more posts published. The site is not live yet; there is no useful GSC data to query. Until that threshold, cannibalization is a repo scan only.
+
 ## Sub-tasks
 
 ### 1. SERP snapshot
 
 Capture current state of search for the focus keyword.
 
-- [ ] Top 10 organic results (URL, title, snippet)
-- [ ] People Also Ask box - every question shown, in order
-- [ ] AI Overview text if visible, copied verbatim
-- [ ] Featured snippet if shown (source URL and text)
-- [ ] Related searches at the bottom of the SERP
+- [ ] Top 10 organic results (URL, title, snippet) - via `WebSearch` on the focus keyword
+- [ ] People Also Ask approximation - run `WebSearch` on the 3 most likely question variants ("what is X", "how does X work", "is X a good Y") and record top results
+- [ ] AI Overview text if surfaced by `WebSearch` results, copied verbatim
+- [ ] Featured snippet if any result clearly carries one (best-effort, may not be reliably detectable through `WebSearch`)
+- [ ] Related searches - best-effort from `WebSearch` output
+
+Limitations: `WebSearch` returns a result list, not the rich Google SERP HTML. People Also Ask, AI Overview, and featured snippet detection are best-effort. Mark each as `[best-effort]` or `[not detected]` rather than fabricating.
 
 **Output:** `serp-snapshot.md`
 
-### 2. Cannibalization check
+### 2. Cannibalization check (repo-only until 100 posts)
 
 - [ ] Search `blog/` for any existing post targeting the same focus keyword
 - [ ] Search for any existing post with overlapping secondary keywords (>50% overlap on the brief's keyword table)
 - [ ] If a conflict exists: write `cannibalization-conflict.md` with the conflict details, halt pipeline
+
+When the published-post count reaches 100, this section gains a GSC step: query the GSC API for the focus keyword and check whether an existing live URL already ranks. Until then, repo scan is sufficient because there is no live ranking signal to conflict with.
 
 ### 3. Claim inventory
 
