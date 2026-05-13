@@ -1,117 +1,188 @@
-# Pipeline — Detailed Steps
+# psfnetwork Blog Production Pipeline (v2)
 
-Full decision tree for the psfnetwork blog production pipeline.
+Autonomous pipeline. Triggered by a single command. No human approval between stages once triggered. State is persisted to `blog/[slug]/pipeline-state.json` so any stage can resume after interruption.
 
----
+## Trigger
 
-## Stage 1 — Expert Panel Discussion
+- New post: `psf network için yeni blog yaz: [slug or topic]`
+- Resume: `psf network [slug] devam et`
 
-**Input:** Draft blog post  
-**Output:** Consolidated expert feedback + flagged issues list
+The trigger is a blanket pre-authorization for every stage that follows. Pipeline runs until publish or until it hits a stop condition. See `workflow/trigger-contract.md`.
 
-1. Distribute draft to all 8 experts using `checklist/expert-review-template.md`
-2. Each expert completes their domain checklist independently
-3. Experts flag issues with severity: High / Med / Low
-4. Panel consolidates feedback — conflicts between experts resolved by majority + domain authority
-5. If 3 or more High severity issues found: content returns to writer for full rewrite before Stage 2
-6. If fewer than 3 High issues: proceed to Stage 2 with revision notes
+## Stage map
 
-**Decision:**
-- 3+ High issues → Back to writer (full rewrite)
-- 0-2 High issues → Stage 2
+| Stage | Name | Purpose |
+|-------|------|---------|
+| 0 | State check | Read `pipeline-state.json`, resume or start |
+| 1 | Research & evidence | SERP snapshot, source every claim, cannibalization check |
+| 2 | Draft | Write from brief + outline + evidence |
+| 3 | Expert + editorial review | Dynamic regulator panel + editorial reviewer, sequential discussion |
+| 4 | Revision | Apply consensus fixes |
+| 5 | Localization | Per target market |
+| 6 | Expert re-check | Conditional, only if Stage 5 changed financial terms |
+| 7 | Pre-publish QA | Items checkable from markdown only |
+| 8 | Publish | Commit all artifacts to main |
+| 9 | Post-publish QA | Live URL: schema, performance, AI citation |
 
----
+## Stage 0 - State check
+Read `blog/[slug]/pipeline-state.json` from the repo.
+- File missing: new post, start at Stage 1.
+- `stage == "published"`: stop, report already published.
+- Otherwise: resume at the listed stage. Do not redo completed steps.
 
-## Stage 2 — Content Revision
+## Stage 1 - Research & evidence gathering
+**Input:** `brief.md`, `outline.md`
+**Output:** `evidence.md`, `serp-snapshot.md`, possibly updated `outline.md`
 
-**Input:** Draft + expert panel feedback  
-**Output:** Revised draft + change log
+Sub-steps:
+1. SERP snapshot. Top 10 organic, People Also Ask, AI Overview, featured snippet, related searches for the focus keyword. Save to `serp-snapshot.md`.
+2. Cannibalization check. Search `blog/` for existing posts on same keyword. If conflict: write `cannibalization-conflict.md`, halt.
+3. Claim inventory. Extract every numerical, regulatory, comparative, historical, and named-entity claim from outline.
+4. Source verification. Each claim gets a row in `evidence.md` with primary source. See `checklist/research-stage.md` for acceptable sources.
+5. Outline reconciliation. Unsourceable claims are removed or replaced. Outline updated if changed.
 
-1. Writer implements all required changes from Stage 1
-2. Change log documents every flagged issue and how it was resolved
-3. High severity fixes reviewed by the relevant expert before proceeding
-4. Revised draft approved by SEO lead for keyword/GEO integrity
+**Gate:** No claim enters Stage 2 without a row in `evidence.md`.
 
-**Decision:**
-- All High issues resolved + SEO lead approved → Stage 3
-- Unresolved issues → Back to Stage 1
+## Stage 2 - Draft generation
+**Input:** `brief.md`, `outline.md`, `evidence.md`
+**Output:** `draft.md`
 
----
+Draft follows the psfnetwork template (component order in the Railway blog-post.jsx). Every claim must trace back to an `evidence.md` entry. Sources section references evidence rows.
 
-## Stage 3 — Localization Review
+## Stage 3 - Expert + editorial review
+Multi-agent sequential discussion. Two changes from v1:
+- Panel is dynamic. Default minimum: SEC, FINRA, CFPB. Topic-triggered additions per `checklist/expert-routing.md`.
+- Editorial reviewer always runs. Responsible for reader experience (hook, flow, clarity, brand voice). See `checklist/editorial-review.md`.
 
-**Input:** Revised draft  
-**Output:** Localized draft + localization change log
+Round order: SEC, FINRA, CFPB, other regulators alphabetically, Editorial last among reviewers, Moderator final. Each reviewer reads all prior reviews and responds.
 
-1. Localization specialist reviews using `checklist/localization-guide.md`
-2. Market-specific language, tone, and references adjusted
-3. Financial terms checked against the terminology rules in the localization guide
-4. Localization change log completed — each change tagged with whether it triggers Stage 4 full review
-
-**Decision:**
-- No financial terms changed → Stage 4 targeted review
-- Financial terms changed → Stage 4 full expert panel review
-- No localization needed → Stage 5
-
----
-
-## Stage 4 — Expert Re-check
-
-**Input:** Localized draft + localization change log  
-**Output:** Expert approval or revision request
-
-1. Expert panel reviews localized content
-2. Targeted review: only changed sections reviewed
-3. Full review: all 8 experts re-run their domain checklists
-4. If localization introduced new financial accuracy issues: content returns to Stage 2 (not Stage 1) with specific notes
+**Outputs:** `expert-reviews/stage3-panel-selection.md`, `expert-reviews/stage3-[reviewer].md` per reviewer, `expert-reviews/stage3-moderator-consensus.md`.
 
 **Decision:**
-- No new issues → Stage 5
-- New issues found → Stage 2 (with localization notes attached)
+- 3+ HIGH issues (any reviewer, including editorial): set `stage: "rewrite-required"`, loop back to Stage 2 with consensus notes. Increment `loop_count`. Max 3.
+- 0-2 HIGH: proceed to Stage 4.
 
----
+## Stage 4 - Revision
+**Input:** `draft.md`, `stage3-moderator-consensus.md`
+**Output:** updated `draft.md`, `changelog.md`
 
-## Stage 5 — QA Gate
+Apply every HIGH, most MED, judgment on LOW. Never delete sections - revise. Maintain brand voice. Output a numbered changelog with each change and its source reviewer.
 
-**Input:** Expert-approved localized draft  
-**Output:** Published content or pipeline restart
+## Stage 5 - Localization
+**Input:** `draft.md`, `checklist/localization-guide.md`
+**Output:** `localization-notes-[market].md` and `draft-[market].md` per target market; primary market keeps base `draft.md`.
 
-1. QA reviewer works through `checklist/qa-gate.md` in full
-2. Any single fail triggers a pipeline restart
-3. Failure reason documented in `workflow/loop-log-template.md`
-4. Restart goes to Stage 1 with failure context
+If more than one target market is requested, localization runs once per market. Each pass reports whether financial terms were modified.
+
+## Stage 6 - Expert re-check (conditional)
+Runs only if any localized version modified financial terms, disclosures, numerical claims, or regulatory references. Same panel as Stage 3 but targeted to changed sections only.
 
 **Decision:**
-- All items pass → Publish
-- Any item fails → Stage 1 (restart)
+- New issues: loop to Stage 4 with localization notes.
+- No new issues: proceed to Stage 7.
 
----
+## Stage 7 - Pre-publish QA
+See `checklist/qa-gate.md`. Items in this gate are only those verifiable from markdown before publish. Failures route by failure type (per qa-gate routing table). Blanket Stage 1 restart is removed.
 
-## Pipeline Diagram
+**Output:** `qa-report.md`
+
+**Decision:** PASS → Stage 8. FAIL → route to the stage indicated by failure type. Loop budget shared with Stage 3 (max 3 total).
+
+## Stage 8 - Publish
+Commit all artifacts to `main`:
 
 ```
-DRAFT
+blog/[slug]/brief.md
+blog/[slug]/outline.md
+blog/[slug]/evidence.md
+blog/[slug]/serp-snapshot.md
+blog/[slug]/draft.md
+blog/[slug]/draft-[market].md       (per market)
+blog/[slug]/changelog.md
+blog/[slug]/localization-notes-[market].md
+blog/[slug]/qa-report.md
+blog/[slug]/pipeline-state.json
+blog/[slug]/[slug]-chart.jsx        (if applicable)
+blog/[slug]/expert-reviews/         (all stage3 and stage6 files)
+```
+
+Commit message: `feat(blog): publish [slug] - passed pre-publish QA on loop [n]`. Update `pipeline-state.json` with `stage: "published"`.
+
+## Stage 9 - Post-publish QA
+Runs after the page is live. See `checklist/qa-gate-post-publish.md`. Schema validation, Core Web Vitals, AI citation tests, GSC indexing.
+
+**Output:** `post-publish-report.md`
+
+Failures here do not restart the production pipeline. They generate targeted remediation tasks (schema fix, performance ticket, content edit pushed as an update).
+
+## State file
+
+`blog/[slug]/pipeline-state.json` is written after every stage.
+
+```json
+{
+  "slug": "string",
+  "title": "string",
+  "stage": "number | 'rewrite-required' | 'manual-review-required' | 'published'",
+  "stage_name": "string",
+  "completed_steps": ["string"],
+  "pending_steps": ["string"],
+  "loop_count": "number, shared budget across Stage 3 and Stage 7, max 3",
+  "last_updated": "YYYY-MM-DD",
+  "expert_panel": ["string"],
+  "target_markets": ["string"],
+  "flags": {
+    "high_severity_issues_count": "number",
+    "localization_triggered_recheck": "boolean",
+    "qa_fail_reasons": ["string"],
+    "cannibalization_conflict": "boolean"
+  },
+  "evidence_summary": {
+    "claims_total": "number",
+    "claims_sourced": "number",
+    "claims_dropped": "number"
+  }
+}
+```
+
+## Loop budget
+
+Combined budget across Stage 3 and Stage 7: max 3. On exceed, set `stage: "manual-review-required"`, commit state, stop.
+
+## Diagram
+
+```
+[0] State check
   |
   v
-[Stage 1] Expert Panel Discussion
-  |-- 3+ High issues --> Writer (rewrite) --> Stage 1
+[1] Research & evidence
+  |-- cannibalization conflict --> HALT
   |
   v
-[Stage 2] Content Revision
-  |-- Unresolved issues --> Stage 1
+[2] Draft
   |
   v
-[Stage 3] Localization Review
-  |-- No localization needed --> Stage 5
+[3] Expert + editorial review
+  |-- 3+ HIGH --> [2] (loop, max 3)
   |
   v
-[Stage 4] Expert Re-check
-  |-- New issues found --> Stage 2
+[4] Revision
   |
   v
-[Stage 5] QA Gate
-  |-- Any fail --> Stage 1 (with failure log)
+[5] Localization
   |
   v
-PUBLISHED
+[6] Expert re-check (conditional)
+  |-- new issues --> [4]
+  |
+  v
+[7] Pre-publish QA
+  |-- FAIL routed by type --> [1] / [4] / [5] (max 3 total loops)
+  |
+  v
+[8] Publish
+  |
+  v
+[9] Post-publish QA
+  |-- failures --> remediation tasks (not pipeline restart)
 ```

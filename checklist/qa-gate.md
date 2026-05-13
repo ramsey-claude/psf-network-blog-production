@@ -1,88 +1,65 @@
-# QA Gate
+# Pre-publish QA Gate
 
-Final pre-publication gate (Stage 5). If any item fails, the pipeline restarts from Stage 1.
+Stage 7. Verifies items that can be checked from the markdown file before commit. Post-publish items live in `qa-gate-post-publish.md`.
 
----
+## How to use
 
-## How to Use
+Work through every item. Mark each PASS or FAIL. Use the routing table to decide where a FAIL goes - blanket restart from Stage 1 is not the default.
 
-Work through all items in order. Mark each as pass or fail. If any item is marked **fail**, stop, document the failure reason in the loop log, and restart the pipeline.
+## Checklist
 
----
+### A. Financial accuracy (sourced)
 
-## QA Checklist
-
-### A. Financial Accuracy
-
-- [ ] All investment return claims include a risk disclosure
-- [ ] No guaranteed return language anywhere in the content
-- [ ] FDIC insurance limits stated correctly if referenced
-- [ ] SEC, CFTC, FINRA, Fed references are factually accurate
-- [ ] All statistics and data points are sourced
+- [ ] Every numerical claim has an entry in `evidence.md`
+- [ ] Every regulatory claim has an entry in `evidence.md`
+- [ ] All investment return claims include a risk disclosure within the same section
+- [ ] No "guaranteed return" language anywhere
+- [ ] FDIC, SEC, CFTC, FINRA, Fed references factually accurate per evidence
 - [ ] No misleading comparisons between regulated and unregulated products
 
-### B. SEO & GEO
+### B. SEO & GEO structure
 
-- [ ] Title tag 55-60 characters, focus keyword in first third
+- [ ] Title tag 55-60 characters, focus keyword in the first third
 - [ ] Meta description 150-160 characters, includes CTA and keyword
-- [ ] H1 is unique and contains focus keyword
-- [ ] H2s are in question format
-- [ ] TL;DR / summary block present at top of content
-- [ ] FAQ schema applied to H2 question-answer pairs
-- [ ] Article schema complete (author, datePublished, headline)
-- [ ] Canonical URL set
-- [ ] At least 2 internal links to relevant pages
-- [ ] All external links point to high-authority sources
+- [ ] H1 unique, contains focus keyword
+- [ ] H2s in question format
+- [ ] TL;DR or summary block present at top
+- [ ] Every H2 has an answer capsule of 50-75 words
+- [ ] FAQ section structured for FAQ schema (Q/A pairs)
+- [ ] At least 2 internal links to relevant posts that actually exist in the repo
+- [ ] All external links point to high-authority sources from `evidence.md`
 
-### C. Technical
+### C. Brand & content quality
 
-- [ ] All internal and external links tested — no broken links
-- [ ] All images loading, alt texts populated
-- [ ] Mobile layout tested — no formatting breaks
-- [ ] Page speed tested (Core Web Vitals green)
-- [ ] Schema markup passed Google Rich Results Test
-- [ ] hreflang set if multilingual version exists
-
-### D. Brand & Content Quality
-
-- [ ] Brand name written as psfnetwork (all lowercase, one word) throughout
-- [ ] Brand colors and typography consistent with brand guideline
-- [ ] Tone matches psfnetwork brand voice (see `brand/tone-and-voice.md`)
-- [ ] No contradictory statements within the content
+- [ ] Brand name written as psfnetwork throughout
+- [ ] No em dashes or en dashes
+- [ ] Tone matches `brand/tone-and-voice.md`
+- [ ] No contradictions within the content
 - [ ] No orphaned sentences or incomplete paragraphs
-- [ ] Author name and publication date visible on page
+- [ ] Author name and review credit present
+- [ ] Disclaimer block present and complete
 
-### E. Localization (if applicable)
+### D. Localization (if applicable)
 
-- [ ] Financial terms not distorted by localization
+- [ ] Financial terms preserved per `checklist/localization-guide.md`
 - [ ] Register consistent throughout (siz / vous / formal)
-- [ ] Local market references are accurate and current
-- [ ] Currency formatting correct for target market
+- [ ] Currency formatting correct for the target market
+- [ ] Each localized variant has its own `draft-[market].md`
 
-### F. GEO Final Check
+## Routing on FAIL
 
-- [ ] Content tested in Perplexity — brand/content cited correctly
-- [ ] Content tested in ChatGPT — key facts extracted accurately
-- [ ] Answer capsules (50-75 word H2 responses) are self-contained
+Do not blindly restart from Stage 1. Route by failure type:
 
----
+| Failed section | Route to |
+|----------------|----------|
+| A. Financial accuracy - claim unsourceable | Stage 1 (Research) |
+| A. Financial accuracy - source exists but wording wrong | Stage 4 (Revision) |
+| B. SEO & GEO structure | Stage 4 (Revision) |
+| C. Brand & content quality | Stage 4 (Revision) |
+| D. Localization | Stage 5 (Localization) |
 
-## Failure Protocol
+Loop budget is shared with Stage 3. If `loop_count > 3` at any failure: set `stage: "manual-review-required"` and stop.
 
-If any item fails:
+## Outputs
 
-1. Document the failure in `workflow/loop-log-template.md`
-2. Identify which stage introduced the issue
-3. Restart pipeline from **Stage 1** with the failure reason attached to the brief
-4. Note: if the failure is isolated to localization (Section E), pipeline may restart from Stage 3 at the lead's discretion
-
----
-
-## Sign-off
-
-| Role | Name | Date | Status |
-|------|------|------|--------|
-| SEO Lead | | | |
-| Expert Panel Lead | | | |
-| Localization | | | |
-| Final approver | | | |
+`qa-report.md` with PASS/FAIL per item, failure reasons, routing decision, and final recommendation (PUBLISH / ROUTE_TO_STAGE_X / HALT).
