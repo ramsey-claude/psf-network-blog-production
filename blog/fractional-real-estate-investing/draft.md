@@ -30,27 +30,29 @@ hero_visual_alt: "Illustration of multiple investors holding shares of a single 
 
 ## Quick Answer (60 seconds)
 
-Fractional real estate investing lets multiple investors co-own a single rental property by purchasing shares of the legal entity that holds the property, typically an LLC. Each investor receives a proportional share of rental income and any appreciation when the property is sold. Platforms handle property management. Minimums on regulated US platforms start as low as $20. All such investments carry real risk, including the loss of principal, and returns are not guaranteed.
+Fractional real estate investing lets multiple investors co-own a single rental property by purchasing shares of the legal entity that holds the property, typically an LLC. Each investor receives a proportional share of rental income and any appreciation when the property is sold. Platforms handle property management. A single share on some regulated US platforms (such as Ark7) costs as little as $20; a meaningful position typically requires aggregating multiple shares. All such investments carry real risk, including the loss of principal, and returns are not guaranteed.
 
 **Stat cards:**
-- **$20** - Minimum investment on some regulated US platforms
+- **$20** - Per-share minimum on some regulated US platforms (e.g., Ark7)
 - **4 to 9%** - Typical platform-reported annual dividend yield range
 - **2012** - Year the JOBS Act expanded private offering rules
 - **0** - Maintenance calls you will ever receive
+
+*Past performance does not predict future results. All investments carry risk including loss of principal.*
 
 ---
 
 ## Opening
 
-A few years ago, owning rental property meant a down payment of $20,000 or more, a mortgage application, and a long list of repairs you would learn about at 2 a.m. Fractional real estate investing changes the math. You can now buy a slice of a US rental property for less than the price of dinner, hold it through a regulated investment vehicle, and let a platform handle the tenants, repairs, and tax forms.
+The minimum stake in a US rental property used to be a $20,000 down payment. Now it can be $20. Fractional real estate investing changed the math: you can buy a slice of a rental property for less than the price of dinner, hold it through a regulated investment vehicle, and let a platform handle the tenants, repairs, and tax forms.
 
-The trade-offs are real. You give up direct control. Your money is locked up longer than a brokerage account. Platforms charge fees that compound across years. This guide walks through how fractional real estate investing actually works, where the risks sit, and how the per-square-foot ownership model used by psfnetwork compares to traditional share-based platforms.
+The trade-offs are real. You give up direct control. Your money is locked up longer than a brokerage account. Platforms charge fees that compound across years. This guide walks through how fractional real estate investing actually works, where the risks sit, and how the per-square-foot ownership model used by psfnetwork compares to traditional share-based platforms. By the end, you will know whether fractional real estate fits your situation and how to evaluate any platform before you commit.
 
 ---
 
 ## What is fractional real estate investing?
 
-**Answer capsule:** Fractional real estate investing is the practice of multiple investors co-owning a single property through shares in a special purpose entity, usually an LLC, that holds the property's title. Each investor receives rental income and appreciation in proportion to their stake. Online platforms standardized this model in the US after the JOBS Act of 2012 expanded the rules under which private offerings can be marketed to non-accredited investors, and minimums now start as low as $20.
+**Answer capsule:** Fractional real estate investing is the practice of multiple investors co-owning a single property through shares in a special purpose entity, usually an LLC, that holds title. Each investor receives a proportional share of rental income and appreciation. Online platforms standardized the model in the US after the JOBS Act of 2012 expanded private offering rules for non-accredited investors, and minimums now start as low as $20.
 
 Fractional real estate is not new. Wealthy families have co-owned vacation homes and commercial buildings for decades through partnerships and trusts. What changed is access. Online platforms standardized the legal structure, lowered the minimums, and used Securities and Exchange Commission (SEC) exemptions to allow public marketing of these offerings. The result is a category that now holds billions in assets across major US platforms like Fundrise, Arrived, Ark7, and psfnetwork, and continues to grow.
 
@@ -58,9 +60,9 @@ When you buy fractional shares, you are not buying a deed. You are buying a secu
 
 ---
 
-## How does fractional real estate investing work, step by step?
+## How does fractional real estate investing work?
 
-**Answer capsule:** Most fractional real estate platforms follow a four-step process. The platform sources and underwrites a property, places it inside an LLC, divides the LLC into shares or units, and sells those shares through an SEC-qualified offering. Once funded, the platform manages the property, collects rent, and distributes net income to investors monthly or quarterly. When the property is sold, proceeds are distributed in proportion to ownership.
+**Answer capsule:** Most fractional real estate platforms follow a four-step process. The platform sources a property, places it in an LLC, divides the LLC into shares, and sells those shares through an SEC-qualified offering. Once funded, the platform manages the property, collects rent, and distributes net income to investors monthly or quarterly. When the property is sold, proceeds are distributed in proportion to ownership.
 
 **Step 1: Property sourcing.** The platform identifies a property, performs due diligence, and prices it. Some platforms focus on single-family rentals, others on small multifamily, a few on commercial real estate.
 
@@ -68,7 +70,7 @@ When you buy fractional shares, you are not buying a deed. You are buying a secu
 
 **Step 3: Funding.** Investors buy shares. Minimums vary by platform: $20 on some, $100 to $5,000 on others. Most platforms require investors to be at least 18 and have a US bank account.
 
-**Step 4: Distributions.** The platform manages the property, collects rent, pays expenses, and distributes net income. For US investors, distributions are typically reported on a Schedule K-1 (Form 1065) because the LLC is usually a pass-through entity. When the property is sold, proceeds are distributed in proportion to ownership after any platform fees or carry.
+**Step 4: Distributions.** The platform manages the property, collects rent, pays expenses, and distributes net income. For US investors, distributions are typically reported on a Schedule K-1 (Form 1065) because the LLC is usually a pass-through entity. K-1 reporting can be more complex than a standard 1099 and may delay your tax filing; consult a tax advisor before investing. When the property is sold, proceeds are distributed in proportion to ownership after any platform fees or carry.
 
 Returns are not guaranteed at any step. Property values can fall, tenants can default, and platforms can change their fee structures.
 
@@ -94,9 +96,9 @@ The fractional model also splits along platform structure. Some platforms use a 
 
 ## What is the square-foot ownership model?
 
-**Answer capsule:** The square-foot ownership model expresses your stake in a property as a number of square feet rather than a number of shares. You still hold a security backed by an LLC interest, but the unit of ownership is anchored to the physical property. If a property is 1,200 square feet and trades at a price equivalent of $400 per square foot, buying 50 square feet means a $20,000 stake representing 4.17% of the property and its income.
+**Answer capsule:** The square-foot ownership model expresses your stake as a number of square feet rather than shares. You hold an LLC membership interest, but the unit of ownership maps to the physical property. If a property is 1,200 square feet priced at $400 per square foot, 50 square feet costs $20,000 and represents 4.17% of the property and its income.
 
-The square-foot model is a presentation layer on top of the same LLC and shares structure that other platforms use. It does not change the underlying securities law treatment, and the same risk disclosures apply. What it changes is intuition. Most people have a sense of how much 100 square feet is and what rent it might generate. Most people do not have that intuition for a share that costs $73.21.
+These figures are for illustration only; actual property pricing varies, and the security itself remains an LLC membership interest priced per square foot. The square-foot model is a presentation layer on top of the same LLC and shares structure that other platforms use. It does not change the underlying securities law treatment, and the same risk disclosures apply. What it changes is intuition. Most people have a sense of how much 100 square feet is and what rent it might generate. Most people do not have that intuition for a share that costs $73.21.
 
 > "The clearest way to understand fractional ownership is to anchor it to something physical. A square foot is something you can stand in. A share is an abstraction. Both are securities, both carry the same risks, but one is easier to reason about." - Daniel Cho, CFA
 
@@ -110,7 +112,7 @@ The case for it: lower minimums than direct ownership, passive income, exposure 
 
 The case against it: limited liquidity (most platforms do not have a deep secondary market), platform risk (the platform itself can fail), fee drag (annual management fees, sourcing fees, and carry can compress returns), and concentration risk inside the platform (you depend on the platform's underwriting).
 
-[CHART-BAR-01] - See `fractional-real-estate-investing-chart.tsx` for the 5-year return range comparison across fractional platforms, public REITs, and direct rental ownership.
+Comparing returns across fractional platforms, public REITs, and direct rental ownership requires care: platform-reported figures, REIT index returns, and direct-rental ROI surveys use different fee, vintage, and survivorship assumptions. A like-for-like comparison is rare, and any single number for "fractional return" or "REIT return" understates the variance. Use ranges, read the fine print, and treat any specific historical number as backward-looking.
 
 Fractional real estate suits an investor who:
 - Has already covered emergency savings and high-interest debt
@@ -124,7 +126,7 @@ It does not suit an investor who needs the capital back within 12 months, expect
 
 ## How do you choose a fractional real estate platform?
 
-**Answer capsule:** Choose a platform on five criteria: regulatory status, fee structure, liquidity terms, property mix, and distribution frequency. Regulatory status is the most important because it determines what disclosures you receive and what protections apply. Fees compound, so even a 1% difference can erode multi-year returns significantly.
+**Answer capsule:** Choose a platform on five criteria: regulatory status, fee structure, liquidity terms, property mix, and distribution frequency. Regulatory status is the most important because it determines what disclosures you receive and what investor protections apply to you. Fees compound, so even a 1% annual difference can erode multi-year returns significantly. Liquidity terms vary widely; some platforms lock you in for the full property hold of five or more years.
 
 **1. Regulatory status.** Confirm the platform files offerings under SEC Regulation A (open to non-accredited investors with disclosure) or Regulation D (typically accredited investors only). Verify the issuing entity in SEC EDGAR. Under Regulation A Tier 2, non-accredited investors are capped at 10% of the greater of their annual income or net worth per offering. Regulation D Rule 506(b) allows up to 35 non-accredited but sophisticated investors plus unlimited accredited, with no general solicitation. Rule 506(c) allows general solicitation but accepts only accredited investors. Avoid platforms with no US regulatory filings.
 
@@ -149,7 +151,7 @@ A: It is not risk-free. The principal risks are loss of principal if property va
 A: For US investors, income is generally reported on a Schedule K-1 (Form 1065) because most platforms use pass-through LLC structures. You may also receive depreciation pass-through, which can offset some of the distribution income. Tax treatment varies by structure and by jurisdiction. Consult a tax advisor before investing.
 
 **Q: What happens if the platform shuts down?**
-A: The property is held in an LLC separate from the platform itself, so a platform shutdown does not automatically wipe out the underlying property value. Finding a replacement servicer can take time, however, and disputes can drag. Read the operating agreement to understand the backup servicer arrangement before investing.
+A: The property is held in an LLC separate from the platform itself, so a platform shutdown does not automatically wipe out the underlying property value. Finding a replacement servicer can take time, however, and disputes can take months or years to resolve. Full recovery is not assured. Read the operating agreement's backup-servicer language before investing, not after.
 
 **Q: How is fractional real estate different from a REIT?**
 A: A REIT is a publicly traded or non-traded entity that holds a portfolio of properties and, by tax rule, distributes at least 90% of taxable income to shareholders as dividends. A fractional real estate investment is typically a stake in a single property or a small portfolio held by an LLC. Publicly traded REITs trade daily and offer broad sector exposure. Fractional investing lets you pick a specific property but offers less liquidity.
@@ -164,10 +166,10 @@ A: No. FDIC deposit insurance covers depositor accounts at insured banks, up to 
 
 ## Sources
 
-1. U.S. Securities and Exchange Commission, "Regulation A (Tier 1 and Tier 2 Offerings)", https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-tier-2-offerings.
-2. U.S. Securities and Exchange Commission, "Rule 506 of Regulation D", https://www.sec.gov/resources-small-businesses/exempt-offerings/rule-506-regulation-d.
-3. U.S. Securities and Exchange Commission, "Real Estate Investment Trusts (REITs)", https://www.sec.gov/answers/reits.htm.
-4. U.S. Securities and Exchange Commission, "SEC Adopts Rules to Facilitate Smaller Companies' Access to Capital", https://www.sec.gov/news/pressrelease/2015-49.
+1. U.S. Securities and Exchange Commission (SEC), "Regulation A (Tier 1 and Tier 2 Offerings)", https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-tier-2-offerings.
+2. SEC, "Rule 506 of Regulation D", https://www.sec.gov/resources-small-businesses/exempt-offerings/rule-506-regulation-d.
+3. SEC, "Real Estate Investment Trusts (REITs)", https://www.sec.gov/answers/reits.htm.
+4. SEC, "SEC Adopts Rules to Facilitate Smaller Companies' Access to Capital", https://www.sec.gov/news/pressrelease/2015-49.
 5. U.S. Congress, "H.R.3606 - Jumpstart Our Business Startups Act", https://www.congress.gov/bill/112th-congress/house-bill/3606.
 6. Internal Revenue Service, "About Schedule K-1 (Form 1065)", https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065.
 7. Federal Deposit Insurance Corporation, "What Is Deposit Insurance?", https://www.fdic.gov/resources/deposit-insurance/what-is-deposit-insurance/index.html.
@@ -192,7 +194,7 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Ready to look at a property? Browse psfnetwork's current offerings, view the square-foot breakdown, and read the full risk disclosures before you invest.
+Ready to look at a property? psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 

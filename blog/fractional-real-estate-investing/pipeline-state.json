@@ -1,8 +1,8 @@
 {
   "slug": "fractional-real-estate-investing",
   "title": "What Is Fractional Real Estate Investing? The 2026 Guide",
-  "stage": 3,
-  "stage_name": "review-complete-proceed",
+  "stage": "published",
+  "stage_name": "github-published-drive-pending",
   "completed_steps": [
     "stage-minus1-topic-selection",
     "stage0-state-init",
@@ -17,14 +17,15 @@
     "stage3-finra-review",
     "stage3-cfpb-review",
     "stage3-editorial-review",
-    "stage3-moderator-consensus"
-  ],
-  "pending_steps": [
+    "stage3-moderator-consensus",
     "stage4-revision",
+    "stage4-capsule-length-self-check",
     "stage5-localization-noop",
     "stage6-recheck-noop",
-    "stage7-pre-publish-qa",
-    "stage8-publish",
+    "stage7-pre-publish-qa-pass",
+    "stage8-github-publish"
+  ],
+  "pending_steps": [
     "stage9-drive-delivery"
   ],
   "loop_count": 0,
@@ -38,7 +39,8 @@
     "localization_triggered_recheck": false,
     "qa_fail_reasons": [],
     "cannibalization_conflict": false,
-    "topic_selection_reason": "Hub of Phase 1 cluster (Priority 1, Type=Hub). All 5 spokes in queue have internal links pointing back to this hub; publishing the hub first prevents broken internal links."
+    "topic_selection_reason": "Hub of Phase 1 cluster (Priority 1, Type=Hub). All 5 spokes link back to this hub; hub-before-spoke dependency satisfied.",
+    "chart_skipped": "CHART-BAR-01 reference removed in Stage 4; REIT and direct-rental specific return figures not in evidence.md, replaced with cautionary prose to avoid fabrication"
   },
   "expert_verdicts": {
     "stage3": {
@@ -53,5 +55,11 @@
     "claims_total": 17,
     "claims_sourced": 15,
     "claims_dropped": 2
+  },
+  "qa_summary": {
+    "total_items": 33,
+    "pass": 33,
+    "fail": 0,
+    "recommendation": "PUBLISH"
   }
 }
