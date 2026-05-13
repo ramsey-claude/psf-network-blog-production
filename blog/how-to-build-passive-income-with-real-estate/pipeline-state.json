@@ -1,0 +1,65 @@
+{
+  "slug": "how-to-build-passive-income-with-real-estate",
+  "title": "Passive Income Real Estate: A Beginner's Guide for 2026",
+  "stage": "published",
+  "stage_name": "github-published-drive-pending",
+  "completed_steps": [
+    "stage-minus1-topic-selection",
+    "stage0-state-init",
+    "stage1-serp-snapshot",
+    "stage1-cannibalization-clean",
+    "stage1-claim-inventory",
+    "stage1-evidence-gathering",
+    "stage1-outline-reconciliation",
+    "stage2-draft-v1",
+    "stage3-panel-selection",
+    "stage3-sec-review",
+    "stage3-finra-review",
+    "stage3-cfpb-review",
+    "stage3-editorial-review",
+    "stage3-moderator-consensus",
+    "stage4-revision",
+    "stage5-localization-noop",
+    "stage6-recheck-noop",
+    "stage7-pre-publish-qa-pass",
+    "stage8-github-publish"
+  ],
+  "pending_steps": [
+    "stage9-drive-delivery",
+    "stage10-post-publish-qa (deferred until psfnetwork.com is live)"
+  ],
+  "loop_count": 0,
+  "last_updated": "2026-05-14",
+  "expert_panel": ["SEC", "FINRA", "CFPB", "Editorial"],
+  "target_markets": ["EN-US"],
+  "flags": {
+    "high_severity_issues_count": 0,
+    "med_severity_issues_count": 3,
+    "low_severity_issues_count": 4,
+    "localization_triggered_recheck": false,
+    "qa_fail_reasons": [],
+    "cannibalization_conflict": false,
+    "topic_selection_reason": "Priority 2 in ROADMAP Step 3, Spoke type. Hub (fractional-real-estate-investing) is published, so hub-before-spoke dependency is satisfied. Brief flagged 'passive income claims must not imply guaranteed income' - CFPB review angle for this post. KD 10 makes it highly winnable per brief.",
+    "chart_skipped": "CHART-BAR-01 (income by amount) and CHART-LINE-01 (compounding) replaced with markdown tables in body; underlying data is illustrative arithmetic on a 7% assumed yield, fully captioned with caveats"
+  },
+  "expert_verdicts": {
+    "stage3": {
+      "SEC": "APPROVE_WITH_NOTES",
+      "FINRA": "APPROVE_WITH_NOTES",
+      "CFPB": "APPROVE_WITH_NOTES",
+      "Editorial": "APPROVE_WITH_NOTES",
+      "Moderator": "PROCEED_TO_STAGE_4"
+    }
+  },
+  "evidence_summary": {
+    "claims_total": 13,
+    "claims_sourced": 11,
+    "claims_dropped": 2
+  },
+  "qa_summary": {
+    "total_items": 33,
+    "pass": 33,
+    "fail": 0,
+    "recommendation": "PUBLISH"
+  }
+}
