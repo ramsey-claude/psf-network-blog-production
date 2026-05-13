@@ -29,9 +29,17 @@ Limitations: `WebSearch` returns a result list, not the rich Google SERP HTML. P
 
 ### 2. Cannibalization check (repo-only until 100 posts)
 
-- [ ] Search `blog/` for any existing post targeting the same focus keyword
-- [ ] Search for any existing post with overlapping secondary keywords (>50% overlap on the brief's keyword table)
-- [ ] If a conflict exists: write `cannibalization-conflict.md` with the conflict details, halt pipeline
+**Algorithm:**
+
+1. List every directory under `blog/` other than the slug being produced.
+2. For each, read `brief.md`. Parse the `## Target Keywords` table.
+3. Collect the focus keyword (row 1) and all secondary keywords from each brief.
+4. Compare against the current slug's focus keyword and secondary keywords (case-insensitive, exact match on the keyword phrase).
+5. **Conflict definitions:**
+   - **HARD conflict:** Another brief has the same focus keyword as row 1. Halt the pipeline. Write `cannibalization-conflict.md` with both slug names and the conflicting keyword.
+   - **SOFT conflict:** Another brief shares 2 or more of the current brief's keywords (anywhere in its table). Log in `serp-snapshot.md` under "potential overlap" but do not halt. Editorial reviewer will see it in Stage 3 and decide whether to differentiate.
+
+**Output:** `cannibalization-conflict.md` only on HARD conflict. Otherwise the soft conflict (if any) appears in `serp-snapshot.md`.
 
 When the published-post count reaches 100, this section gains a GSC step: query the GSC API for the focus keyword and check whether an existing live URL already ranks. Until then, repo scan is sufficient because there is no live ranking signal to conflict with.
 
@@ -75,10 +83,13 @@ For each claim, find a primary source. Each entry becomes a row in `evidence.md`
 | Claim | Yes |
 | Source URL | Yes |
 | Source publisher | Yes |
+| Source title (page or document title) | Yes |
 | Source date | Yes |
 | Exact quote or data point | Yes |
 | Accessed date | Yes |
 | Confidence (high / medium / low) | Yes |
+
+The "Source title" field maps to the Sources section in the draft. Format used in the draft's Sources block: `[N]. Source publisher, "Source title", Source URL.` Source date and accessed date are not inlined in the draft; they live in `evidence.md` for audit.
 
 ### 5. Outline reconciliation
 

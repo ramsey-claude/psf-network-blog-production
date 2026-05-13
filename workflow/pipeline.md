@@ -185,7 +185,7 @@ Failures here do not restart the production pipeline. They generate targeted rem
 {
   "slug": "string",
   "title": "string",
-  "stage": "number | 'rewrite-required' | 'manual-review-required' | 'published'",
+  "stage": "number | 'rewrite-required' | 'manual-review-required' | 'published' | 'delivery-failed' | 'unsourceable-claim' | 'cannibalization-conflict'",
   "stage_name": "string",
   "completed_steps": ["string"],
   "pending_steps": ["string"],

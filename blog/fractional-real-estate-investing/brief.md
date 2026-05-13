@@ -19,7 +19,7 @@
 | is fractional real estate a good investment | 30 | 14 | I |
 
 ## ICP
-First-time investor, 25-45, $500-$50K to invest, wants real estate exposure without landlord responsibilities. May have heard of Fundrise or Arrived but hasn't invested yet. Could be US-based or international (Gulf/UAE segment).
+First-time US investor, 25-45, $500-$50K to invest, wants real estate exposure without landlord responsibilities. May have heard of Fundrise or Arrived but hasn't invested yet. US-resident audience only (psfnetwork operates in the US market).
 
 ## Content Angle
 Definitive explainer that positions psfnetwork's square-foot model as the natural evolution of fractional ownership. Covers what it is, how it works, the different platform models, and why the per-sq-ft approach is the clearest way to understand fractional ownership.
