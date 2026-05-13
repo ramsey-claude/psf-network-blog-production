@@ -1,30 +1,45 @@
 # Post-publish QA Gate
 
-Stage 9. Runs after the page is live. Items here require a live URL. Failures trigger remediation tasks rather than a pipeline restart.
+Stage 10. Runs after the page is live on psfnetwork.com. Failures trigger remediation tasks rather than a pipeline restart.
+
+## Execution model
+
+A launchd cron (`workflow/com.psfnetwork.stage10.plist`) runs `workflow/stage10_runner.py` daily at 09:13 local. The runner is idempotent and standalone (no Claude session needed):
+
+- Reads each published `pipeline-state.json` from the repo.
+- For each, fetches the live URL. 404 = defer (next day retries). 200 = run automated checks below.
+- Writes `post-publish-report.md` and updates `pipeline-state.json`.
+- Pushes both as a single commit (`chore(stage10): post-publish QA for [slug] - auto-runner`).
+
+Automated check coverage and manual items are split below:
 
 ## Checklist
 
-### A. Live URL hygiene
+### A. Live URL hygiene (automated by runner)
 
-- [ ] URL responds 200
-- [ ] Canonical URL set correctly
-- [ ] hreflang set correctly if multilingual
-- [ ] Robots meta allows indexing
-- [ ] OG and Twitter tags render in a social preview check
+- [x] URL responds 200 - automated
+- [x] Canonical URL set correctly and matches expected - automated
+- [x] Title tag present, 50-65 chars - automated
+- [x] Meta description present, 140-170 chars - automated
+- [ ] hreflang set correctly if multilingual - manual (single-locale today)
+- [ ] Robots meta allows indexing - manual
+- [ ] OG and Twitter tags render in a social preview check - manual
 
-### B. Schema validation
+### B. Schema validation (automated by runner)
 
-- [ ] Article schema present and valid via Google Rich Results Test
-- [ ] FAQ schema present and valid
-- [ ] Breadcrumb schema present and valid
-- [ ] All schema entities reference the canonical URL
+- [x] Article / BlogPosting / NewsArticle schema present (JSON-LD) - automated
+- [x] FAQ schema present (FAQPage type) - automated
+- [x] Breadcrumb schema present (BreadcrumbList type) - automated
+- [ ] Schema validates against Google Rich Results Test - manual (until a Rich Results API is wired in)
 
-### C. Performance
+### C. Performance (manual - not automated)
 
-- [ ] Core Web Vitals: LCP, INP, CLS all in green per PageSpeed Insights (mobile and desktop)
+- [ ] Core Web Vitals: LCP, INP, CLS green per PageSpeed Insights (mobile + desktop)
 - [ ] Mobile layout passes Google Mobile-Friendly Test
 
-### D. AI citation test
+To automate: add a PageSpeed Insights API call to the runner (requires API key).
+
+### D. AI citation test (manual - not automated)
 
 For each query, record whether the post is cited, the cited passage, and the position in the answer.
 

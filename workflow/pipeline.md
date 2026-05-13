@@ -165,11 +165,26 @@ My Drive/
 **Output:** `delivery-manifest.md` in the repo.
 
 ## Stage 10 - Post-publish QA (live URL)
-Runs after the page is live on psfnetwork.com. See `checklist/qa-gate-post-publish.md`. Schema validation, Core Web Vitals, AI citation tests, GSC indexing.
+Runs automatically once the live URL is available. See `checklist/qa-gate-post-publish.md`.
 
-This stage is deferred until the site is actually live. The pipeline does not block on it. When the live URL is available, the operator (or a separate scheduled run) invokes this stage independently.
+**Automation:** A launchd cron (`workflow/com.psfnetwork.stage10.plist`, installed at `~/Library/LaunchAgents/com.psfnetwork.stage10.plist`) fires `workflow/stage10_runner.py` every day at 09:13 local. The runner:
+1. Lists all `blog/[slug]/pipeline-state.json` with `stage: "published"`.
+2. For each, attempts the live URL (default `https://psfnetwork.com/blog/[slug]`).
+3. If 404 / not live, defers (next day's cron retries).
+4. If 200, runs the automatable Stage 10 checks (canonical, title/meta length, JSON-LD schema presence) and writes `post-publish-report.md` + updates `pipeline-state.json` `flags.post_publish_qa`.
+5. Pushes both as a single commit.
 
-**Output:** `post-publish-report.md`
+The runner is idempotent: it skips slugs where `flags.post_publish_qa.completed_at` is already set.
+
+**Out of scope for the runner (manual / LLM follow-up):**
+- AI citation testing in Perplexity / ChatGPT (requires LLM with web).
+- Google AI Overview check (live SERP scrape).
+- Core Web Vitals via PageSpeed Insights (would need an API key).
+- GSC URL inspection / index request.
+
+These appear in the generated `post-publish-report.md` as "Manual follow-up" and are not blockers.
+
+**Output:** `post-publish-report.md` in each slug's directory.
 
 Failures here do not restart the production pipeline. They generate targeted remediation tasks (schema fix, performance ticket, content edit pushed as an update).
 
