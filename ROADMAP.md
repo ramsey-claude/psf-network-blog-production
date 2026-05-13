@@ -1,27 +1,41 @@
-# psfnetwork Blog Production — Master Roadmap
+# psfnetwork Blog Production - Master Roadmap
 
 Last updated: May 2026
 
+> **Operating scope:** psfnetwork is a US-based fractional real estate company. All blog content is published in English for the US market. Multi-market localization is spec'd in `checklist/localization-guide.md` for future expansion but is not invoked by the default pipeline.
+
 ---
 
-## Step 0 — Repository Structure
+## Repository structure
 
 Every blog post lives at:
 
 ```
 blog/
-└── [post-slug]/
-    ├── brief.md              Keyword targets, audience, angle, competitors
-    ├── outline.md            Section-by-section content plan
-    ├── draft.md              Full content draft (pipeline output)
-    ├── expert-reviews/       One .md per expert, Stage 1 + Stage 4
-    ├── localization-notes.md Stage 3 output
-    └── [slug]-chart.jsx      Framer component (if charts/tables present)
+└── [slug]/
+    ├── brief.md                    Keyword targets, audience, angle, competitors
+    ├── outline.md                  Section-by-section content plan
+    ├── evidence.md                 Sourced facts and stats (Stage 1)
+    ├── serp-snapshot.md            SERP capture (Stage 1)
+    ├── claim-inventory.md          Claims to source (Stage 1)
+    ├── draft.md                    Full content draft (Stage 2 output, revised in Stage 4)
+    ├── changelog.md                Stage 4 revision log
+    ├── qa-report.md                Stage 7 output
+    ├── delivery-manifest.md        Stage 9 Drive upload manifest
+    ├── pipeline-state.json         Persistent state, updated every stage
+    ├── [slug]-chart.tsx            Framer-compatible TypeScript chart, if applicable
+    └── expert-reviews/             One .md per reviewer for Stage 3 (and Stage 6 if triggered)
+        ├── stage3-panel-selection.md
+        ├── stage3-sec.md
+        ├── stage3-finra.md
+        ├── stage3-cfpb.md
+        ├── stage3-editorial.md
+        └── stage3-moderator-consensus.md
 ```
 
 ---
 
-## Step 1 — Competitor Top Traffic Pages (Semrush, May 2026)
+## Step 1 - Competitor Top Traffic Pages (Semrush, May 2026)
 
 ### Ark7 (most aggressive content player)
 | URL | Traffic | Pattern |
@@ -42,7 +56,7 @@ blog/
 | /guides/real-estate-investing-guide | 212 | Beginner guide |
 | /how-it-works | 160 | Product page |
 
-**Pattern:** Brand traffic dominates (73%). Education content (REITs 101, investing guide) drives the rest. No programmatic content.
+**Pattern:** Brand traffic dominates (73%). Education content drives the rest. No programmatic content.
 
 ### Arrived
 | URL | Traffic | Pattern |
@@ -54,73 +68,36 @@ blog/
 | /blog/fractional-real-estate-investing | 100 | Core topic |
 | /blog/types-of-real-estate-investments | 92 | Education |
 
-**Pattern:** Brand traffic dominates (92%). Blog drives ~7% of traffic. Niche topics (Section 8, arbitrage) outperform core topics.
+**Pattern:** Brand traffic dominates (92%). Niche topics outperform core topics on the blog.
 
-### Mogul
-| URL | Traffic | Pattern |
-|-----|---------|---------|
-| mogul.club/ | 1,924 | Homepage |
-| /blogposts/what-is-steve-harveys-net-worth | 685 | Celebrity net worth |
-| /blogposts/how-much-do-twitch-streamers-make | 492 | Pop culture |
-| /blogposts/what-is-katt-williams-net-worth | 370 | Celebrity net worth |
-
-**Pattern:** Celebrity/pop culture content drives most blog traffic — completely off-topic from their product. Only 1 comparison article (Arrived vs Fundrise) in top 20.
-
-### Realbricks
-| URL | Traffic | Pattern |
-|-----|---------|---------|
-| realbricks.com/ | 1,247 | Homepage |
-| /articles/90-of-millionaires-own-real-estate | 763 | Stat-driven hook |
-| /articles/how-to-invest-in-real-estate-with-100 | 581 | Low-barrier entry |
-| /articles/why-is-princeton-texas-growing-so-fast | 385 | Local market |
-
-**Pattern:** Stat-hook articles and low-barrier-entry content drive traffic. "90% of millionaires" and "$100 investing" articles are strongest.
-
-### Lofty
-| URL | Traffic | Pattern |
-|-----|---------|---------|
-| lofty.ai/ | 9,228 | Homepage (brand) |
-| /reviews/groundfloor | 125 | Competitor review |
-| /compare/fundrise-vs-arrived-homes | 39 | Comparison |
-
-**Pattern:** Nearly all traffic is brand. Content almost nonexistent.
-
-### Groundfloor
-| URL | Traffic | Pattern |
-|-----|---------|---------|
-| groundfloor.com/ | 12,651 | Homepage (brand) |
-| /blog/private-market-credit-opportunities | 41 | Thought leadership |
-| /blog/market-trends-charlotte | 39 | Local market |
-
-**Pattern:** Brand-heavy. Minimal content contribution.
+### Mogul / Realbricks / Lofty / Groundfloor
+See git history. Pattern: brand-heavy with one or two outlier articles each. Realbricks's "90% of millionaires own real estate" stat-hook drives 763 traffic - a model worth studying.
 
 ---
 
-## Step 2 — Content Gap Analysis: What Competitors Are NOT Covering
-
-These are high-opportunity topics with search demand that none (or few) of the 10 competitors have substantive content on:
+## Step 2 - Content Gap Analysis: What Competitors Are NOT Covering
 
 | # | Gap Topic | Why It's a Gap | Est. KD | Est. Volume |
 |---|-----------|---------------|---------|-------------|
-| 1 | International fractional real estate investing | All competitors are US-only. Zero content for non-US investors or US investors wanting international exposure | Low | Growing |
-| 2 | Real estate investing for Gulf/UAE investors | No competitor targets this segment at all | Low | Untapped |
-| 3 | Square-foot real estate ownership explained | Unique psfnetwork model - no competitor addresses this concept | Low | Definitional |
-| 4 | Fractional real estate vs REIT (clear comparison) | Competitors mention both but no one owns the definitive comparison | Low-Med | 880+ |
-| 5 | How to invest in real estate with $100 | Realbricks has it but weakly covered; strong keyword signal | Low | 581 traffic |
-| 6 | 90% of millionaires own real estate — what that means for you | Realbricks drives 763 traffic with this hook; no other competitor has it | Low | High CTR hook |
-| 7 | Passive income from real estate (beginner guide) | Covered broadly but no one owns a clean, definitive version | Low (10 KD) | 320 vol |
-| 8 | Best fractional real estate platforms comparison | Every competitor avoids objective comparisons. psfnetwork can be neutral + honest | Med | 590+ |
-| 9 | Proptech news and trends (evergreen) | 14,800 vol, KD 31 — Ark7/Arrived ignore this entirely | Low | 14,800 |
-| 10 | REITs 101 for beginners | Fundrise has it (476 traffic) but it's old. GEO-optimized version is winnable | Med | 4,400+ |
+| 1 | Square-foot real estate ownership explained | Unique psfnetwork model, no competitor addresses it | Low | Definitional |
+| 2 | Fractional real estate vs REIT (clear comparison) | Competitors mention both but no one owns the comparison | Low-Med | 880+ |
+| 3 | How to invest in real estate with $100 | Realbricks has it weakly; strong keyword signal | Low | 581 traffic |
+| 4 | 90% of millionaires own real estate | Realbricks drives 763 traffic with this hook | Low | High CTR hook |
+| 5 | Passive income from real estate (beginner guide) | Covered broadly but no definitive version | Low (10 KD) | 320 vol |
+| 6 | Best fractional real estate platforms comparison | Competitors avoid objective comparisons | Med | 590+ |
+| 7 | Proptech news and trends | 14,800 vol, KD 31, ignored entirely | Low | 14,800 |
+| 8 | REITs 101 for beginners | Fundrise has an old version | Med | 4,400+ |
+
+International / Gulf / UAE gaps are documented in git history but are out of scope under the current US-only operating posture.
 
 ---
 
-## Step 3 — Priority Blog Posts (6 Posts, Phase 1)
+## Step 3 - Priority Blog Posts (Phase 1)
 
-Ranked by: gap size + KD + psfnetwork ICP alignment + pipeline feasibility
+Ranked by: gap size + KD + psfnetwork ICP alignment + pipeline feasibility. Used by Stage -1 topic selection.
 
-| Priority | Post Slug | Target Keyword | Vol | KD | Type |
-|----------|-----------|---------------|-----|----|------|
+| Priority | Slug | Target Keyword | Vol | KD | Type |
+|----------|------|---------------|-----|----|------|
 | 1 | fractional-real-estate-investing | fractional real estate investing | 880 | 35 | Hub |
 | 2 | how-to-build-passive-income-with-real-estate | passive income real estate | 320 | 10 | Spoke |
 | 3 | reits-vs-fractional-real-estate | fractional real estate vs reit | Low-comp | ~20 | Spoke |
@@ -128,64 +105,58 @@ Ranked by: gap size + KD + psfnetwork ICP alignment + pipeline feasibility
 | 5 | best-fractional-real-estate-platforms | best fractional real estate platforms | 590 | 33 | Spoke |
 | 6 | what-is-proptech | proptech news | 14,800 | 31 | Spoke |
 
----
-
-## Step 4 — Template Structure (from psfnetwork-blog-template)
-
-Every post must follow this component order, pulled from `blog-post.jsx`:
-
-```
-ReadingProgress bar
-Nav
-ArticleHero          (type tag, topic tag, h1, dek, author, dates, read time)
-HeroVisual           (1200x630 illustration placeholder — [VISUAL-HERO-XX])
-TOC (sticky sidebar) (section links + reviewer credit)
-QuickAnswer          (60-second summary + 4 stat cards)
-Opening              (2-paragraph hook, no headers)
-[Section H2s]        (each: h2 in question format, answer capsule first 75 words, body, optional chart/pull quote)
-FAQ                  (accordion, minimum 5 Q&As, schema-ready)
-Sources              (numbered, linked)
-AuthorCard           (name, credential, bio)
-Disclaimer           (standard psfnetwork disclaimer)
-CTABlock             (full-width, above footer)
-Related              (3 related posts)
-Footer
-```
-
-### Chart/Table Rules
-- Every chart or table in a post gets a corresponding Framer JSX component
-- File name: `[post-slug]-chart.jsx`
-- Saved in: `blog/[post-slug]/[post-slug]-chart.jsx`
-- Component must be self-contained (no external deps beyond React)
-- Uses psfnetwork design tokens: `--rust (#FF7141)`, `--teal (#4F8FA3)`, `--ink (#1C1C1C)`, `--cream (#F7F5F0)`
+Hub-before-spoke dependency: Priority 1 must publish before Priorities 2-6 since each spoke links back to the hub.
 
 ---
 
-## Pipeline Execution Order
+## Step 4 - Template Structure (from psfnetwork blog template)
 
-For each post:
+See `brand/template-structure.md` for the canonical component order. The pipeline produces drafts that map cleanly onto these components.
+
+### Chart and table rules
+
+- File format: `.tsx` (Framer-compatible TypeScript)
+- File name: `[slug]-chart.tsx` (or `[slug]-table-N.tsx` for multiples)
+- Location: `blog/[slug]/`
+- Component: default export, self-contained, no external chart library, SVG rendering
+- Brand tokens inline: `#FF7141` rust, `#4F8FA3` teal, `#1C1C1C` ink, `#F7F5F0` cream
+- Component name: PascalCase from slug + Chart or Table suffix
+- Typed props interface (Framer Code Components expect it)
+
+---
+
+## Pipeline Execution Order (v2)
+
+For each post the pipeline runs:
 
 ```
-1. brief.md created (keyword targets, ICP, angle, competitor gap)
-2. outline.md created (template-mapped section plan)
-3. Stage 1: 8 expert reviews (expert-reviews/stage1-[expert].md)
-4. Stage 2: draft.md revised based on expert feedback
-5. Stage 3: localization-notes.md created
-6. Stage 4: expert re-check (expert-reviews/stage4-[expert].md if triggered)
-7. Stage 5: QA gate (checklist/qa-gate.md filled for post)
-8. If chart/table: [slug]-chart.jsx created and committed
-9. GitHub push with passing QA sign-off
+[-1] Topic selection             (only if no slug provided)
+[0]  State check
+[1]  Research & evidence
+[2]  Draft
+[3]  Expert + editorial review   (dynamic panel: SEC, FINRA, CFPB, Editorial default)
+[4]  Revision
+[5]  Localization                (no-op while target_markets = ['EN-US'])
+[6]  Expert re-check             (no-op if Stage 5 was a no-op)
+[7]  Pre-publish QA              (routes by failure type, not blanket restart)
+[8]  Publish (GitHub commit)
+[9]  Client delivery (Google Drive)
+[10] Post-publish QA             (deferred until live URL exists)
 ```
+
+Full stage definitions in `workflow/pipeline.md`. Trigger and authorization rules in `workflow/trigger-contract.md`.
 
 ---
 
 ## Phase 1 Execution Tracker
 
-| Post | Brief | Outline | Stage 1 | Draft | L10n | Stage 4 | QA | Chart | Status |
-|------|-------|---------|---------|-------|------|---------|-----|-------|--------|
-| fractional-real-estate-investing | - | - | - | - | - | - | - | - | Planned |
-| how-to-build-passive-income-with-real-estate | - | - | - | - | - | - | - | - | Planned |
-| reits-vs-fractional-real-estate | - | - | - | - | - | - | - | - | Planned |
-| how-to-invest-in-real-estate-with-100 | - | - | - | - | - | - | - | - | Planned |
-| best-fractional-real-estate-platforms | - | - | - | - | - | - | - | - | Planned |
-| what-is-proptech | - | - | - | - | - | - | - | - | Planned |
+| Slug | Brief | Outline | S1 Research | S2 Draft | S3 Review | S4 Revise | S7 QA | S8 Publish | S9 Drive | Status |
+|------|-------|---------|-------------|----------|-----------|-----------|-------|------------|----------|--------|
+| fractional-real-estate-investing | done | done | - | - | - | - | - | - | - | Ready |
+| how-to-build-passive-income-with-real-estate | done | done | - | - | - | - | - | - | - | Queued |
+| reits-vs-fractional-real-estate | done | done | - | - | - | - | - | - | - | Queued |
+| how-to-invest-in-real-estate-with-100 | done | done | - | - | - | - | - | - | - | Queued |
+| best-fractional-real-estate-platforms | done | done | - | - | - | - | - | - | - | Queued |
+| what-is-proptech | done | done | - | - | - | - | - | - | - | Queued |
+
+Status values: `Ready`, `Queued`, `In-flight`, `Rewrite-required`, `Manual-review-required`, `Published`.

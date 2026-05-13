@@ -1,90 +1,95 @@
 # Expert Review Template
 
-Use this form for each of the 8 regulatory experts during Stage 1 (initial review) and Stage 4 (post-localization re-check).
+Use this template for each reviewer in Stage 3 (initial multi-agent review) and Stage 6 (post-localization re-check, conditional).
+
+Stage 3 panel is dynamic. See `checklist/expert-routing.md` for which reviewers to invoke for a given post. Default panel for any investment content: SEC, FINRA, CFPB, Editorial. Topic-triggered additions per the routing table.
+
+Each reviewer is a separate file: `expert-reviews/stage3-[reviewer].md` and (if re-check fires) `expert-reviews/stage6-[reviewer].md`.
 
 ---
 
-## Review Metadata
+## Review metadata
 
 | Field | Value |
 |-------|-------|
-| Expert | <!-- SEC / CFTC / Fed / OCC / FDIC / CFPB / FINRA / FSOC --> |
-| Stage | <!-- Stage 1: Initial Review / Stage 4: Post-Localization Re-check --> |
+| Reviewer | <!-- SEC / FINRA / CFPB / OCC / FDIC / Fed / CFTC / FSOC / Editorial --> |
+| Stage | <!-- Stage 3 / Stage 6 --> |
 | Content title | |
 | Review date | |
-| Reviewer | |
+| Round position | <!-- 1st reviewer / 2nd / ... / Editorial (last reviewer) / Moderator (final) --> |
+| Prior reviewers seen | <!-- list of reviewers whose output this reviewer read before writing --> |
 
 ---
 
-## Domain Checklist
+## Output format (required)
 
-### SEC — Securities Markets
-- [ ] No unregistered investment offering language
-- [ ] Securities disclaimers present where required
-- [ ] No implied guaranteed returns on investment
-- [ ] Fund/vehicle descriptions are accurate and not misleading
-- [ ] Prospectus or disclosure references are correct
+Every reviewer outputs in this exact format. The moderator depends on it being parseable.
 
-### CFTC — Futures & Derivatives
-- [ ] No unregulated derivatives or futures product claims
-- [ ] Commodity references are accurate
-- [ ] Swap or leverage language is not misleading
-- [ ] Crypto asset references comply with current CFTC guidance
+```
+DOMAIN FINDINGS:
+[Your specific findings within your domain. Concrete. Quote the draft when relevant.]
 
-### Fed — Monetary Policy
-- [ ] Interest rate commentary is accurate and current
-- [ ] Monetary policy claims are not speculative without disclosure
-- [ ] Bank holding company references are correct
-- [ ] No misleading statements about Fed rate direction
+FLAGGED ISSUES:
+1. [Issue description] - SEVERITY: HIGH / MED / LOW - FIX: [specific recommendation]
+2. ...
 
-### OCC — National Banks
-- [ ] Banking product comparisons are factually accurate
-- [ ] Lending rate references are current and sourced
-- [ ] National bank charter references are correct
-- [ ] No misleading bank product endorsements
+RESPONSE TO PREVIOUS REVIEWERS:
+[Agreements, disagreements, additions. Reference reviewers by name. If first reviewer in round, write "N/A - first in round".]
 
-### FDIC — Deposit Insurance
-- [ ] FDIC insurance limits are stated correctly ($250,000 per depositor)
-- [ ] No implication that non-deposit investments are FDIC insured
-- [ ] Bank failure references are accurate
-- [ ] Deposit product language does not conflate with investment products
-
-### CFPB — Consumer Protection
-- [ ] Fee disclosures are clear and complete
-- [ ] APR and cost representations are accurate
-- [ ] No deceptive consumer-facing claims
-- [ ] Debt or mortgage references comply with CFPB rules
-- [ ] Required disclosures are present
-
-### FINRA — Broker-Dealers
-- [ ] Investment return claims include appropriate risk disclosures
-- [ ] Brokerage comparisons are fair and factual
-- [ ] No unlicensed broker-dealer activity implied
-- [ ] Past performance disclaimers present where needed
-
-### FSOC — Systemic Risk
-- [ ] Macro-financial risk statements are accurate and not alarmist
-- [ ] Systemic risk references are proportionate and sourced
-- [ ] No misleading statements about financial system stability
-- [ ] Too-big-to-fail references are factually grounded
+VERDICT: APPROVE / APPROVE_WITH_NOTES / REVISION_REQUIRED
+```
 
 ---
 
-## Flagged Issues
+## Domain prompts
 
-| # | Location in content | Issue description | Severity (High / Med / Low) | Recommended fix |
-|---|---------------------|------------------|----------------------------|-----------------|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
+Each reviewer applies the prompt below. Editorial uses its own checklist in `checklist/editorial-review.md`.
+
+### SEC - Securities Markets
+Focus on: securities offering language, Regulation A+ / Regulation D references, fund and vehicle descriptions, implied guarantees, disclosure adequacy. Check that "fractional ownership" is framed as ownership of an LLC interest (a security), not deed ownership.
+
+### FINRA - Broker-Dealers
+Focus on: investment return claims, risk disclosure placement, broker-dealer activity references, past-performance disclaimers, suitability framing.
+
+### CFPB - Consumer Protection
+Focus on: fee disclosures, APR and cost representations, deceptive-claim risk, required consumer disclosures, ease-of-understanding for non-accredited investors.
+
+### CFTC - Futures & Derivatives (invoke only when content touches derivatives, futures, or tokenized assets)
+Focus on: derivatives and futures product claims, commodity references, swap or leverage language, crypto asset references against current CFTC guidance.
+
+### Fed - Monetary Policy (invoke only when content touches rates, inflation, or Fed actions)
+Focus on: interest rate commentary, monetary policy claims, bank holding references, statements about rate direction.
+
+### OCC - National Banks (invoke only when content touches bank lending, mortgages, national bank products)
+Focus on: banking product comparisons, lending rate references, national bank charter references, bank product endorsements.
+
+### FDIC - Deposit Insurance (invoke only when content touches deposits, savings products, or comparisons with bank accounts)
+Focus on: FDIC insurance limits ($250,000 per depositor per insured bank), no implication that non-deposit investments are FDIC-insured, deposit vs investment product distinction.
+
+### FSOC - Systemic Risk (invoke only when content touches macro stability, contagion, or systemic risk)
+Focus on: proportionality of systemic risk statements, sourcing, too-big-to-fail framing.
+
+### Editorial (always invoked, last among reviewers)
+See `checklist/editorial-review.md`. Focus on: hook strength, answer capsule quality, narrative flow, sentence-level clarity, brand voice, banned constructions (em dashes, "guaranteed return", lowercased "psfnetwork", etc.).
 
 ---
 
-## Verdict
+## Severity guide
 
-- [ ] **Approved** — No issues found, content may proceed
-- [ ] **Approved with minor notes** — Issues logged above but not blocking
-- [ ] **Revision required** — Content must be revised before proceeding
+- **HIGH:** A regulatory or factual violation, or a reader-experience failure that materially harms the post (buries the answer, breaks brand voice, contains a banned construction). Must be fixed.
+- **MED:** A meaningful issue that should be fixed but does not block publication on its own. Issue may be partially overridden if it conflicts with the post's core argument.
+- **LOW:** A minor refinement. Apply only if it improves the content without adding work disproportionate to the gain.
 
-### Notes
-<!-- Additional context, edge cases, or recommendations -->
+---
+
+## Multi-agent discussion protocol
+
+Round order is set in `checklist/expert-routing.md`:
+
+1. Regulators in order: SEC, FINRA, CFPB, then any others alphabetically
+2. Editorial (always last reviewer)
+3. Moderator (always after all reviewers)
+
+Each reviewer reads every prior reviewer's output before writing. The RESPONSE TO PREVIOUS REVIEWERS section must reference at least one prior finding (agree, disagree, or extend) unless this reviewer is first in the round.
+
+The moderator's job is in `checklist/moderator.md`. The moderator does not flag new issues - it consolidates, deduplicates, resolves conflicts, and decides whether the post enters Stage 4 (revision) or loops back to Stage 2 (rewrite) per the 3-HIGH rule.
