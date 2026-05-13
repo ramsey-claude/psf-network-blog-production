@@ -137,9 +137,9 @@ blog/[slug]/expert-reviews/         (all stage3 and stage6 files)
 Commit message: `feat(blog): publish [slug] - passed pre-publish QA on loop [n]`. Update `pipeline-state.json` with `stage: "published"`.
 
 ## Stage 9 - Client delivery (Google Drive)
-After GitHub publish, mirror the outputs to the operator's Google Drive for client handoff. See `checklist/delivery.md`.
+After GitHub publish, mirror the post's body to the operator's Google Drive as a styled native Google Doc. Full spec in `checklist/delivery.md`.
 
-**Tooling:** Google Drive MCP (`mcp__claude_ai_Google_Drive__*`). Authenticated under the operator's account. No third-party sharing is set by the pipeline.
+**Tooling:** Google Drive REST API via `workflow/drive_cli.py` (OAuth, project `my-project-82896`, token at `/Users/onur/.psfnetwork-drive/token.json`). NOT the Drive MCP - it cannot convert docx to native gdoc and cannot delete. The pipeline does not set sharing permissions.
 
 **Target structure:**
 
@@ -147,24 +147,20 @@ After GitHub publish, mirror the outputs to the operator's Google Drive for clie
 My Drive/
 └── psfnetwork/
     └── [slug]/
-        ├── [Title].gdoc                      (primary draft, converted from markdown)
-        ├── [Title] - [market].gdoc           (one per localized variant)
-        ├── [slug]-chart.tsx                  (Framer-compatible TypeScript, if applicable)
-        └── [additional chart/table].tsx      (one per chart/table component)
+        └── [Title].gdoc        (native Google Doc, one per slug)
 ```
 
 **Actions:**
-1. Ensure the `psfnetwork` folder exists in My Drive root. Create if missing.
-2. Ensure subfolder `psfnetwork/[slug]/` exists. Create if missing.
-3. Convert `draft.md` to a Google Doc and upload. Document title = the post's H1.
-4. Convert each `draft-[market].md` to a Google Doc and upload. Title = "[H1] - [market]".
-5. Upload every `.tsx` chart/table file as-is (text/typescript, no conversion).
-6. Write a `delivery-manifest.md` in the repo listing each Drive file URL, doc ID, and timestamp.
-7. Update `pipeline-state.json` `flags.drive_delivery` with the manifest summary.
+1. `render-for-drive.py blog/[slug]/draft.md -o /tmp/[slug].docx` produces a styled docx with a Production Notes block + body.
+2. Ensure `psfnetwork/[slug]/` folder exists via `drive_cli.py list`. Create if missing.
+3. Delete any existing files in the slug folder via `drive_cli.py delete <id>` (clean state across re-runs).
+4. `drive_cli.py upload-as-gdoc /tmp/[slug].docx <folder_id> "[H1]"`. Drive converts docx to a native Google Doc on upload.
+5. Write `delivery-manifest.md` with Drive file id + view URL + timestamp.
+6. Update `pipeline-state.json` `flags.drive_delivery`.
 
 **Gate:**
-- Drive write failure on any file: retry once. If still failing, halt with `delivery-failed` state. GitHub publish is not rolled back.
-- Successful delivery does not require operator confirmation. The operator sees the files in their Drive.
+- Drive write failure: retry once. If still failing, halt with `delivery-failed`. GitHub publish is not rolled back.
+- Operator does not confirm individual uploads; they see the result in Drive.
 
 **Output:** `delivery-manifest.md` in the repo.
 

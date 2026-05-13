@@ -44,13 +44,14 @@
     "chart_skipped": "CHART-BAR-01 reference removed in Stage 4; REIT and direct-rental specific return figures not in evidence.md, replaced with cautionary prose to avoid fabrication",
     "drive_delivery": {
       "delivered_at": "2026-05-14",
+      "format": "native Google Doc (converted from styled docx via Drive REST API)",
       "folder_id": "13N_NjKbSKMLtbcMUvLxDplZaL7GJtJ-n",
       "folder_url": "https://drive.google.com/drive/folders/13N_NjKbSKMLtbcMUvLxDplZaL7GJtJ-n",
       "files": [
         {
           "name": "What Is Fractional Real Estate Investing? A Complete Guide for 2026",
-          "id": "1KC4sX56-NeFTQXW5X7UuLSsuQzDfZe3G9F8mgI8KzL4",
-          "url": "https://docs.google.com/document/d/1KC4sX56-NeFTQXW5X7UuLSsuQzDfZe3G9F8mgI8KzL4/edit",
+          "id": "1CiaY-JdG8mWdC9TnK6Hs_VJK0et3tVjyZhZj_hrpni4",
+          "url": "https://docs.google.com/document/d/1CiaY-JdG8mWdC9TnK6Hs_VJK0et3tVjyZhZj_hrpni4/edit",
           "mimeType": "application/vnd.google-apps.document"
         }
       ]

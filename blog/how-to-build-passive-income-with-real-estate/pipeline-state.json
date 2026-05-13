@@ -43,13 +43,14 @@
     "chart_skipped": "Both outline charts replaced with markdown tables; underlying data is illustrative arithmetic at 7% assumed yield",
     "drive_delivery": {
       "delivered_at": "2026-05-14",
+      "format": "native Google Doc (converted from styled docx via Drive REST API)",
       "folder_id": "1nIHibw8FAeFspZmFOtjNbft60UyOilJM",
       "folder_url": "https://drive.google.com/drive/folders/1nIHibw8FAeFspZmFOtjNbft60UyOilJM",
       "files": [
         {
           "name": "Passive Income Real Estate: How to Build It Without Becoming a Landlord",
-          "id": "1rbWz7Y0cTQoD9gD6R6tggoItCL4WTvNVAarjSqlwzZY",
-          "url": "https://docs.google.com/document/d/1rbWz7Y0cTQoD9gD6R6tggoItCL4WTvNVAarjSqlwzZY/edit",
+          "id": "1nwAX39ZOQd1KFF_4yRXb7U8WXvt_U_g5Oa1q3cEmcyA",
+          "url": "https://docs.google.com/document/d/1nwAX39ZOQd1KFF_4yRXb7U8WXvt_U_g5Oa1q3cEmcyA/edit",
           "mimeType": "application/vnd.google-apps.document"
         }
       ]
