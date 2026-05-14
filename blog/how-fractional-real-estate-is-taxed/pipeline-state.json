@@ -1,0 +1,39 @@
+{
+  "slug": "how-fractional-real-estate-is-taxed",
+  "title": "How Fractional Real Estate Is Taxed: A K-1 Guide for 2026",
+  "stage": "published",
+  "stage_name": "Published",
+  "completed_steps": [
+    "stage-minus-4-incident-log-read",
+    "stage-minus-2-brief-outline",
+    "stage-1-research",
+    "stage-2-draft",
+    "stage-3-review",
+    "stage-4-revision",
+    "stage-5-localization-noop",
+    "stage-7-pre-publish-qa",
+    "stage-8-publish"
+  ],
+  "pending_steps": ["stage-9-delivery", "stage-10-post-publish-qa"],
+  "loop_count": 0,
+  "last_updated": "2026-05-15",
+  "expert_panel": ["SEC", "FINRA", "CFPB", "IRS-specialist", "Editorial"],
+  "target_markets": ["EN-US"],
+  "flags": {
+    "high_severity_issues_count": 0,
+    "med_severity_issues_count": 8,
+    "localization_triggered_recheck": false,
+    "qa_fail_reasons": [],
+    "cannibalization_conflict": false,
+    "topic_selection_reason": "Stage -1 returned no pre-briefed candidate (all 10 existing slugs are stage=published). Stage -2 picked ROADMAP Step 2 item 16 (How fractional real estate is taxed / K-1 deep dive): low-med KD, 590+ tax-cluster volume, strong hub-link to fractional-real-estate-investing, primary IRS sources available, no cannibalization with existing 10 published slugs. Runner-up: Item 21 (fractional in self-directed IRA).",
+    "stage7_micro_fixes": [
+      "title: 63 -> 57 chars (alternative from outline)",
+      "section-6 capsule: 77 -> 70 words (trimmed redundant phrasing)"
+    ]
+  },
+  "evidence_summary": {
+    "claims_total": 24,
+    "claims_sourced": 24,
+    "claims_dropped": 0
+  }
+}
