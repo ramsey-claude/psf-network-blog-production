@@ -304,6 +304,15 @@ def push_files(slug, report_md, state_obj, parent_sha):
 
 
 def main():
+    # Check for known auth-broken sentinels written by other components.
+    sentinel_dir = Path('/Users/onur/.psfnetwork-drive')
+    for name in ('auth-broken-github', 'auth-broken-drive'):
+        s = sentinel_dir / name
+        if s.exists():
+            print(f'Halting: {name} sentinel present.', file=sys.stderr)
+            print(f'  {s.read_text().strip()}', file=sys.stderr)
+            sys.exit(4)
+
     if not GITHUB_TOKEN:
         print('PSFNETWORK_GITHUB_TOKEN not set; aborting.', file=sys.stderr)
         sys.exit(2)

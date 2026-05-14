@@ -87,8 +87,25 @@ See git history. Pattern: brand-heavy with one or two outlier articles each. Rea
 | 6 | Best fractional real estate platforms comparison | Competitors avoid objective comparisons | Med | 590+ |
 | 7 | Proptech news and trends | 14,800 vol, KD 31, ignored entirely | Low | 14,800 |
 | 8 | REITs 101 for beginners | Fundrise has an old version | Med | 4,400+ |
+| 9 | Real estate crowdfunding vs fractional | Terms used interchangeably; no clean structural breakdown | Low | Medium |
+| 10 | How to invest $10,000 in real estate | Mid-tier capital level; specific dollar anchor | Low-Med | 480 (related kw) |
+| 11 | REIT dividends taxation explained | Specific tax-treatment angle, complements REITs vs Fractional | Med | 1,600 |
+| 12 | Real estate ETFs vs fractional | VNQ/IYR vs Reg A fractional - liquid vs structured | Low-Med | Medium |
+| 13 | Reg A vs Reg D for fractional investors | Regulatory primer; rarely written for non-issuers | Low | Definitional |
+| 14 | Single-family vs multifamily fractional | Property-type comparison inside the asset class | Low | Medium |
+| 15 | Real estate debt platforms vs equity fractional | Groundfloor-style debt vs Arrived-style equity | Low | Medium |
+| 16 | How fractional real estate is taxed (K-1 deep dive) | Tax complexity is a known reader pain point | Low-Med | 590+ (tax keywords) |
+| 17 | Fractional real estate platform fees comparison | Fee transparency varies widely; comparison is rare | Low | Medium |
+| 18 | What is a real estate operating agreement | LLC-specific deep dive for due diligence | Low | Definitional |
+| 19 | How to read a Reg A offering circular | Practical due-diligence guide; no good resource | Low | Definitional |
+| 20 | Tokenized real estate vs traditional fractional | Lofty/Algorand vs Reg A LLC structural compare | Low | Medium |
+| 21 | Fractional real estate IRA / self-directed IRA | Tax-advantaged path; complex but high-intent | Low-Med | Medium |
+| 22 | Real estate vs index funds for retirement | Asset allocation framing; pulls in retirement readers | Med | High |
+| 23 | What happens when a fractional property is sold | Exit mechanics; consumer pain point | Low | Definitional |
 
 International / Gulf / UAE gaps are documented in git history but are out of scope under the current US-only operating posture.
+
+**Pool status (2026-05-14):** Items 1-7 published or in pipeline. Items 9-10 published as Stage -2 generations. Items 8, 11-23 remain as future candidates. When the pool drops below 3 unused items, regenerate the gap list via Stage -3 or operator-led SERP audit.
 
 ---
 

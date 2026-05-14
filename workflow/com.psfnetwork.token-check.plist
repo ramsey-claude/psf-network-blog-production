@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.psfnetwork.token-check</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/onur/psfnetwork-pipeline/.venv/bin/python3</string>
+        <string>/Users/onur/psfnetwork-pipeline/workflow/token_expiry_check.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/onur/psfnetwork-pipeline</string>
+
+    <!-- Daily at 09:07 local; offsets from the Stage 10 cron at 09:13. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>7</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/onur/.psfnetwork-drive/token-check.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/onur/.psfnetwork-drive/token-check.err</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

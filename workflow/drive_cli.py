@@ -23,29 +23,77 @@ Usage:
 """
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
+from google.auth.exceptions import RefreshError
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from googleapiclient.errors import HttpError
 
 TOKEN_PATH = Path('/Users/onur/.psfnetwork-drive/token.json')
+SENTINEL_DIR = Path('/Users/onur/.psfnetwork-drive')
+AUTH_BROKEN_SENTINEL = SENTINEL_DIR / 'auth-broken-drive'
 SCOPES = ['https://www.googleapis.com/auth/drive']
+
+
+def _write_broken_sentinel(reason):
+    SENTINEL_DIR.mkdir(parents=True, exist_ok=True)
+    AUTH_BROKEN_SENTINEL.write_text(json.dumps({
+        'reason': reason,
+        'checked_at': datetime.now(timezone.utc).isoformat(),
+        'remediation': 'Run .venv/bin/python3 workflow/drive_auth.py to re-mint the token.',
+    }, indent=2) + '\n')
+
+
+def _clear_broken_sentinel():
+    if AUTH_BROKEN_SENTINEL.exists():
+        AUTH_BROKEN_SENTINEL.unlink()
 
 
 def get_service():
     if not TOKEN_PATH.exists():
+        _write_broken_sentinel('token file missing')
         raise SystemExit(f'Token not found at {TOKEN_PATH}. Run drive_auth.py first.')
     creds = Credentials.from_authorized_user_file(str(TOKEN_PATH), SCOPES)
     if not creds.valid:
         if creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-            TOKEN_PATH.write_text(creds.to_json())
+            try:
+                creds.refresh(Request())
+                TOKEN_PATH.write_text(creds.to_json())
+            except RefreshError as e:
+                _write_broken_sentinel(f'refresh failed: {e}')
+                raise SystemExit(
+                    f'Token refresh failed: {e}. Re-run drive_auth.py to re-mint the token.'
+                )
         else:
+            _write_broken_sentinel('token invalid; no refresh token available')
             raise SystemExit('Token invalid and cannot refresh. Re-run drive_auth.py.')
+    _clear_broken_sentinel()
     return build('drive', 'v3', credentials=creds)
+
+
+def cmd_health():
+    """Verify Drive token works. Outputs ok / broken JSON and exit code."""
+    try:
+        svc = get_service()
+    except SystemExit as e:
+        print(json.dumps({
+            'status': 'broken',
+            'reason': str(e),
+            'sentinel': str(AUTH_BROKEN_SENTINEL),
+            'checked_at': datetime.now(timezone.utc).isoformat(),
+        }), file=sys.stderr)
+        sys.exit(1)
+    try:
+        svc.about().get(fields='user(emailAddress)').execute()
+    except HttpError as e:
+        _write_broken_sentinel(f'health check HTTP error: {e}')
+        print(json.dumps({'status': 'broken', 'error': str(e)}), file=sys.stderr)
+        sys.exit(1)
+    print(json.dumps({'status': 'ok', 'checked_at': datetime.now(timezone.utc).isoformat()}))
 
 
 def cmd_delete(file_id):
@@ -114,6 +162,8 @@ def main():
             cmd_upload_as_is(*args)
         elif cmd == 'list':
             cmd_list(*args)
+        elif cmd == 'health':
+            cmd_health()
         else:
             print(f'Unknown command: {cmd}')
             sys.exit(2)

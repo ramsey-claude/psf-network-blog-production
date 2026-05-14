@@ -14,6 +14,7 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 
 | Stage | Name | Purpose |
 |-------|------|---------|
+| -3 | Auto gap discovery (topic pool refresh) | Only runs when Stage -2 exhausts the ROADMAP pool |
 | -2 | Topic discovery & brief/outline generation | Only runs when Stage -1 returns no eligible candidate |
 | -1 | Topic selection | Only runs when the trigger did not specify a slug |
 | 0 | State check | Read `pipeline-state.json`, resume or start |
@@ -28,11 +29,17 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 | 9 | Client delivery | Upload outputs to operator Google Drive |
 | 10 | Post-publish QA | Live URL: schema, performance, AI citation (deferred until site is live) |
 
+## Stage -3 - Auto gap discovery (conditional)
+
+Runs only when Stage -2 reports `topic-generation-exhausted` (ROADMAP Step 2 has fewer than 3 unused gap candidates). Scans competitor blogs from ROADMAP Step 1, identifies topics not yet covered by psfnetwork, appends new candidates to Step 2, then loops back to Stage -2.
+
+Spec in `checklist/topic-discovery-stage-minus-3.md`. Halt conditions: `discovery-failed` (no surface-able candidates after a full scan) or `competitor-fetch-failed`.
+
 ## Stage -2 - Topic discovery & brief/outline generation (conditional)
 
 Runs only when Stage -1 returns "no ready candidate" — every existing slug under `blog/` is published or in flight. Generates a fresh `brief.md` + `outline.md` for the next-best seed from `ROADMAP.md` Step 2 (gap analysis), then loops back to Stage -1 so the new slug can be picked.
 
-Spec in `checklist/topic-generation.md`. Halt conditions: `topic-generation-exhausted` (no remaining gap-analysis candidates pass filters) or `topic-generation-validation-failed` (two consecutive generated drafts fail validation).
+Spec in `checklist/topic-generation.md`. Halt conditions: `topic-generation-exhausted` (no remaining gap-analysis candidates pass filters; falls through to Stage -3) or `topic-generation-validation-failed` (two consecutive generated drafts fail validation).
 
 Stage -2 commits its output as `feat(brief): generate brief + outline for [slug] - Stage -2 auto`.
 
