@@ -1,0 +1,14 @@
+{
+  "slug": "how-to-invest-10k-in-real-estate",
+  "title": "How to Invest $10,000 in Real Estate: A 2026 Playbook",
+  "stage": "published",
+  "stage_name": "github-published-drive-pending",
+  "completed_steps": ["stage-minus2", "stage-minus1", "stage0", "stage1", "stage2", "stage3", "stage4-noop", "stage5-noop", "stage6-noop", "stage7-qa-pass", "stage8-github-publish"],
+  "pending_steps": ["stage9-drive-delivery"],
+  "loop_count": 0,
+  "last_updated": "2026-05-14",
+  "expert_panel": ["SEC", "FINRA", "CFPB", "Editorial"],
+  "target_markets": ["EN-US"],
+  "flags": {"high_severity_issues_count": 0, "med_severity_issues_count": 0, "low_severity_issues_count": 0, "stage_minus_2_generated": true},
+  "qa_summary": {"total_items": 33, "pass": 33, "fail": 0, "recommendation": "PUBLISH"}
+}

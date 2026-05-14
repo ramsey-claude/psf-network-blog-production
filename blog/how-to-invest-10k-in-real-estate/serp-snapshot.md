@@ -1,0 +1,1 @@
+SERP for "how to invest 10k in real estate": mix of generic "invest 10k" content and real estate-specific guides. Few competitors target the specific dollar amount with allocation framework. Cannibalization: 0 conflicts.
