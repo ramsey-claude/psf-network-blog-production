@@ -8,6 +8,26 @@ The psfnetwork blog production pipeline is autonomous once triggered. This docum
 - `psf network için yeni blog yaz: [slug or topic]` - new post, operator-specified topic, skip Stage -1
 - `psf network [slug] devam et` - resume an in-flight post, start at the stage stored in `pipeline-state.json`
 
+## Mandatory pre-flight (Stage -4)
+
+The first action of every triggered run, before any other read or fetch:
+
+1. Read `workflow/incident-log.md` from current `main`.
+2. Internalize the "Active rules" section. These rules govern this run.
+3. If the incident log is unreachable, halt with `incident-log-unreachable`. Do not proceed.
+
+This is non-optional. The active rules encode every failure mode the pipeline has previously fixed; skipping the read re-introduces past failures.
+
+## Mandatory post-flight (Stage 11)
+
+The last action of every batch run, after the last slug publishes or the run halts:
+
+1. Run the `checklist/post-run-qa.md` retrospective.
+2. Append any new incidents to `workflow/incident-log.md`. Promote new structural causes to "Active rules".
+3. Commit the updated log to `main` with message `chore(workflow): post-run QA for batch ending [date] — [N] slugs, [M] new incidents`.
+
+Skipping post-run QA breaks the learning loop. The next run's Stage -4 needs current rules.
+
 ## Pre-authorized actions
 
 Saying "yaz" pre-authorizes every action below for the duration of the run. No per-stage confirmation prompts.
@@ -33,6 +53,7 @@ The pipeline halts on any of these without further prompting:
 - A claim cannot be sourced AND there is no acceptable replacement available -> halt with `unsourceable-claim` state
 - An auth sentinel at `/Users/onur/.psfnetwork-drive/auth-broken-{github,drive}` is present at run start -> halt with `auth-broken` state and the sentinel's reason. Do NOT proceed with stages that need the broken credential; operator must run `workflow/rotate-github-token.sh` or `workflow/drive_auth.py` to clear it
 - Stage -3 returns `discovery-failed` (no surfaceable gap candidates) -> halt; operator must seed ROADMAP Step 2 manually
+- `workflow/incident-log.md` is unreachable at Stage -4 -> halt with `incident-log-unreachable`. Do not run without current rules.
 
 ## Transient failure handling (no halt)
 

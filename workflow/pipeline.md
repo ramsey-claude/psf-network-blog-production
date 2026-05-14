@@ -14,6 +14,7 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 
 | Stage | Name | Purpose |
 |-------|------|---------|
+| -4 | Pre-flight (incident log read) | First action on every trigger — read `workflow/incident-log.md` and apply its active rules to this run |
 | -3 | Auto gap discovery (topic pool refresh) | Only runs when Stage -2 exhausts the ROADMAP pool |
 | -2 | Topic discovery & brief/outline generation | Only runs when Stage -1 returns no eligible candidate |
 | -1 | Topic selection | Only runs when the trigger did not specify a slug |
@@ -28,6 +29,15 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 | 8 | Publish | Commit all artifacts to main |
 | 9 | Client delivery | Upload outputs to operator Google Drive |
 | 10 | Post-publish QA | Live URL: schema, performance, AI citation (deferred until site is live) |
+| 11 | Post-run workflow QA | Once-per-batch retrospective; updates `workflow/incident-log.md` |
+
+## Stage -4 - Pre-flight (incident log read)
+
+**Mandatory first action on every trigger.** Before reading any brief, selecting any topic, or fetching any source: read `workflow/incident-log.md` from the current `main`. Internalize the "Active rules" section. The run then proceeds with those rules in force.
+
+If the incident log is unreachable (network error, repo unavailable), halt with `incident-log-unreachable` rather than running blind. The active rules represent every guardrail the pipeline has learned the hard way; running without them re-introduces past failures.
+
+No deliverable for this stage — it is a read-and-internalize step. The fact that it ran is implicit in the run proceeding successfully (errors prevented by the log won't appear).
 
 ## Stage -3 - Auto gap discovery (conditional)
 
@@ -179,6 +189,25 @@ My Drive/
 - Operator does not confirm individual uploads; they see the result in Drive.
 
 **Output:** `delivery-manifest.md` in the repo.
+
+## Stage 11 - Post-run workflow QA
+
+Runs once at the end of every batch (after the last slug publishes or the run halts on a stop condition). Spec in `checklist/post-run-qa.md`.
+
+The output is an updated `workflow/incident-log.md` committed to `main`. This is meta-QA on the pipeline itself — blog-level QA is handled by Stages 7 and 10.
+
+**Triggers:**
+- Last slug in a batch reaches `stage: "published"`.
+- Batch halts on a documented stop condition.
+- Operator-initiated interrupt (record what was in flight).
+
+**Outputs:**
+- Updated `workflow/incident-log.md` on `main`.
+- One-line summary: slugs processed, halts, new incidents, open issues count.
+
+**Halt conditions:** `incident-log-conflict` (log diverged on `main` mid-run; rebase needed), `auth-broken-*` sentinel present.
+
+The next run's Stage -4 reads this updated log, closing the loop.
 
 ## Stage 10 - Post-publish QA (live URL)
 Runs automatically once the live URL is available. See `checklist/qa-gate-post-publish.md`.
