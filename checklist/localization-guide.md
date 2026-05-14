@@ -1,6 +1,6 @@
 # Localization Guide
 
-> **Current operating state (2026-05-14):** psfnetwork operates in the US market only and publishes English-only content. The default pipeline runs with `target_markets: ["EN-US"]`, which makes Stage 5 a no-op. The TR / FR / AE sections of this guide are retained for future expansion but are not invoked in current runs. To enable any non-US market, add it to `target_markets` in the brief's metadata before triggering the pipeline.
+> **Operating scope:** psfnetwork operates in the US market only and publishes English-only content. The pipeline runs with `target_markets: ["EN-US"]`. No other markets or languages are in scope.
 
 This guide defines the scope and rules for the localization review stage (Stage 5) in the psfnetwork blog production pipeline.
 
@@ -11,10 +11,10 @@ This guide defines the scope and rules for the localization review stage (Stage 
 The localization specialist reviews content **after** the expert panel revision (Stage 2) and **before** the expert re-check (Stage 4).
 
 Localization covers:
-- Market-specific language and references
-- Audience tone and register
-- Local terminology alignment
-- Currency, date, and number formatting
+- US English voice, tone, and register
+- US market-specific language and references
+- US regulatory terminology alignment
+- Currency, date, and number formatting (USD, MM/DD/YYYY, US comma/decimal conventions)
 
 Localization does **not** cover:
 - Financial accuracy (that is the expert panel's job)
@@ -23,42 +23,38 @@ Localization does **not** cover:
 
 ---
 
-## Target Markets
+## Target Market
 
 | Market | Language | Register | Notes |
 |--------|----------|----------|-------|
-| TR | Turkish | Formal (siz) | Default for psfnetwork TR audience |
-| EN | English | Professional, accessible | International/global content |
-| FR | French | Formal (vous) | FR market expansion |
-| AE | English (Gulf) | Professional | UAE/Gulf fractional real estate market |
+| US | English (en-US) | Professional, accessible | psfnetwork operates exclusively in the US market |
 
 ---
 
 ## Financial Terminology Rules
 
-Financial terms must **not** be localized if doing so changes the legal or regulatory meaning. When in doubt, keep the original English term and add a parenthetical explanation.
+Financial terms must use the standard US English form. Do not introduce translations, transliterations, or non-US regulatory equivalents.
 
 Examples:
 
 | Do this | Not this |
 |---------|----------|
-| fractional ownership (kesirli mülkiyet) | kesirli mülkiyet only — English term must appear |
-| ROI (yatırım getirisi) | yatırım getirisi only |
-| capital gains | not "kazanç" without qualification |
-| SEC-registered | do not translate SEC to a local equivalent |
+| fractional ownership | partial ownership, share-in-property |
+| return on investment (ROI) | yield-on-capital, profit-rate |
+| capital gains | gains, returns (without qualification) |
+| SEC-registered | regulator-approved (without naming SEC) |
+
+When a term has a non-obvious meaning to a US retail audience, add a short parenthetical or footnote — but the canonical US English term must appear first.
 
 ---
 
-## Local References
+## US Market References
 
-For TR market content:
-- Reference Turkish real estate market conditions where relevant (TUIK data, TCMB rates)
-- Use TL for Turkish Lira, not TRY in body text (TRY acceptable in tables)
-- Hitap biçimi: siz (formal) throughout — no sen unless specifically approved
-
-For EN/AE content:
-- Reference Dubai Land Department (DLD) for UAE property references
-- Currency: AED for UAE, USD for international comparisons
+- Currency: USD throughout. Use `$1,234.56` formatting (comma thousands, period decimal).
+- Dates: `May 14, 2026` in body text; `MM/DD/YYYY` in tables/forms.
+- Real estate references: use US-recognized bodies — SEC, FINRA, state real estate commissions, county recorder offices, IRS for tax references.
+- Avoid UK English spellings (use *organize* not *organise*, *color* not *colour*).
+- Avoid metric units in property descriptions unless paired with imperial (e.g., square feet primary, square meters secondary).
 
 ---
 
@@ -69,7 +65,7 @@ The following localization changes automatically trigger a full expert panel re-
 1. Any change to a financial term, product name, or regulatory body name
 2. Addition or removal of a disclaimer or disclosure
 3. Change to a numerical claim (rates, returns, limits)
-4. Addition of a local regulatory reference not present in the original
+4. Addition of a regulatory reference not present in the original
 
 If none of the above apply, Stage 4 is still recommended but the expert panel may do a targeted review of changed sections only.
 
@@ -80,7 +76,7 @@ If none of the above apply, Stage 4 is still recommended but the expert panel ma
 | Field | Value |
 |-------|-------|
 | Content title | |
-| Target market | |
+| Target market | US (en-US) |
 | Review date | |
 | Localizer | |
 

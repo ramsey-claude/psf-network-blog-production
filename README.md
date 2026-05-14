@@ -34,10 +34,10 @@ Each expert flags issues in their domain. The panel reaches consensus on require
 Draft is revised based on expert panel feedback. Flagged terms, claims, and structures are corrected. The revised draft is documented with a change log.
 
 ### Stage 3 — Localization Review
-A localization specialist reviews the revised content for market-specific language, local references, and terminology alignment. For psfnetwork content this means:
-- TR/EN/FR/AE market-specific terminology
-- Local regulatory references where applicable
-- Audience-appropriate tone and register
+A localization specialist reviews the revised content for US English voice and US market-specific language. psfnetwork operates exclusively in the US market with English-only content (`target_markets: ["EN-US"]`). Localization covers:
+- US English register and tone (en-US, no UK spellings)
+- US regulatory terminology alignment (SEC, FINRA, IRS, state bodies)
+- US conventions: USD currency, MM/DD/YYYY dates, imperial units for real estate
 
 ### Stage 4 — Expert Re-check
 The localized content goes back through the expert panel. Localization must not introduce inaccurate financial terminology or weaken regulatory compliance language. If issues are found, content returns to Stage 2.
