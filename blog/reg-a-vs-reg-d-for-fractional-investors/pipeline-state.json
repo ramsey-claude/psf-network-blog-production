@@ -30,7 +30,18 @@
       "title: 53 -> 58 chars (added 'Real Estate' + '(2026)')",
       "meta: 143 -> 155 chars (expanded 'how much' to 'how much capital, and what disclosures you receive')",
       "section-5 capsule: 83 -> 65 words (trimmed redundant phrasing on Reg D speed)"
-    ]
+    ],
+    "drive_delivery": {
+      "delivered_at": "2026-05-15",
+      "folder_id": "1_RC1PxPU6GOZWtAoJtPgNEDRkDFZTyqd",
+      "files": [
+        {
+          "name": "Reg A vs Reg D for Fractional Real Estate Investors (2026)",
+          "id": "1K5Y3HMM8m-H3fTf2-HWdZdBsjzgHyFbOiR8w7hZRvkM",
+          "url": "https://docs.google.com/document/d/1K5Y3HMM8m-H3fTf2-HWdZdBsjzgHyFbOiR8w7hZRvkM/edit"
+        }
+      ]
+    }
   },
   "evidence_summary": {
     "claims_total": 25,
