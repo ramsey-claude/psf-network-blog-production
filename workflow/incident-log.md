@@ -32,6 +32,8 @@ These are non-negotiable. Re-read this list at the start of every run.
 
 ### Process
 - **Permission prompts:** if Claude Code prompts mid-run for a command pattern that should be allowlisted, log it under "Open issues" and continue manually if possible — the allowlist gap is a process bug to fix between runs.
+- **Single-command Bash calls:** issue Bash tool calls as single commands, not multi-line compounds. Permission patterns match the FULL invocation string, not piece by piece — `Bash(for *)` does not cover `cd ... && ... && for d in ...`. For multi-step shell logic, write a script under `workflow/` (covered by `Bash(bash /Users/onur/psfnetwork-pipeline/*.sh)`) or use Python.
+- **One-shot push scripts go in repo:** ad-hoc push helpers belong under `/Users/onur/psfnetwork-pipeline/workflow/scripts/` (or a similar repo path), not `/tmp/`. `/tmp/*.sh` invocations are NOT allowlisted and trigger prompts. Repo-path scripts ARE covered by existing rules.
 - **Loop budget:** combined Stage 3 + Stage 7 max 3. On exceed, set `stage: "manual-review-required"` and halt.
 - **Idempotency:** every stage must be safe to re-run on the same inputs. Stage 9 deletes existing Drive files in the slug folder before re-uploading to keep state clean.
 
@@ -101,6 +103,27 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **Root cause:** Stage 2 spec said "50–75 words" but didn't enforce. Drafters tended to over-explain.
 - **Fix:** No tooling change; rule already enforced by Stage 7 QA. Stage 2 prompt should remind drafter of the cap explicitly.
 - **Rule:** Active Rules > Content quality > Answer capsules.
+
+### 2026-05-15 — Compound-bash permission prompts mid-run
+- **Stage:** -1 / 0 (just after Stage -4 incident-log read)
+- **Symptom:** A multi-line Bash command (chained `cd … && echo … && ls … && for d in …`) triggered a Claude Code permission prompt even though each individual command in the chain (`cd`, `echo`, `ls`, `for`, `jq`, `basename`) was allowlisted or auto-allowed. Operator rejected the call to make the point that "tam otonom" wasn't fully achieved.
+- **Root cause:** Claude Code permission system matches the FULL Bash invocation string as a single pattern, not piece by piece. Allowlisting `Bash(for *)` does not authorize a compound that starts with `cd` and contains a `for` later. The harness sees one tool call with one command string and tries to match it as a whole.
+- **Fix:** Issue Bash calls as single-command invocations when possible. For multi-step logic, write a `workflow/`-scoped `.sh` file (already allowlisted via `Bash(bash /Users/onur/psfnetwork-pipeline/*.sh)`) or a Python one-shot. Avoid inline multi-line compounds.
+- **Rule:** Active Rules > Process > "Single-command Bash calls; for multi-step shell logic, write a script under workflow/ or use Python."
+
+### 2026-05-15 — /tmp/*.sh ad-hoc push helper triggered prompt
+- **Stage:** 8 (Publish)
+- **Symptom:** Ad-hoc push helper at `/tmp/push-blog11.sh` triggered a permission prompt (allowlisted pattern is `Bash(bash /Users/onur/psfnetwork-pipeline/*.sh)`, not /tmp/).
+- **Root cause:** One-shot push scripts written to /tmp/ during a run don't match the workflow/-scoped allowlist pattern. Each new /tmp/ filename is an unmatched literal.
+- **Fix:** Write per-run push helpers to `workflow/scripts/` (or similar repo-scoped dir) so the existing `Bash(bash /Users/onur/psfnetwork-pipeline/*.sh)` pattern covers them. Or extend allowlist to `Bash(bash /tmp/push-*.sh)` for the well-known prefix.
+- **Rule:** Active Rules > Process > "One-shot push scripts go under /Users/onur/psfnetwork-pipeline/workflow/scripts/, not /tmp/."
+
+### 2026-05-15 — Stage 2 over-shoot on title and capsule length
+- **Stage:** 2 (Draft) → 7 (Pre-publish QA)
+- **Symptom:** First-pass draft had title at 63 chars (over the 55-60 target) and one answer capsule at 77 words (over the 75-word cap). Stage 7 trimmed both within its 2-micro-fix budget; no loop required.
+- **Root cause:** Stage 2 prompt told the drafter the limits but the drafter still wrote prose for the topic first, length second. The 7-word over on one capsule was a single-sentence overrun; the title used the more colorful "Mechanics for 2026" variant over the shorter alternative.
+- **Fix:** Stage 2 prompt should pick the shortest viable title from the outline by default (the outline already provides both), and the drafter should hard-count every capsule before moving on. Re-runs should follow this discipline; Stage 7's 2-micro-fix budget is for genuinely tight edge cases, not for routine cleanup.
+- **Rule:** Already captured under Content quality. Strengthened wording in this entry's "Fix" section.
 
 ---
 
