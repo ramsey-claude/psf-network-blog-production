@@ -1,0 +1,1 @@
+Editorial: 6 H2s + FAQ in question format. Capsules in 50-75 (spot-checked). Title 56 chars. No em/en dashes. Disclaimer matches. Hook ("If you have spent any time researching real estate, you have seen the 90 percent claim") names the reader's likely state directly. APPROVE.
