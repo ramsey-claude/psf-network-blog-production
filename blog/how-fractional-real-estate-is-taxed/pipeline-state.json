@@ -29,7 +29,18 @@
     "stage7_micro_fixes": [
       "title: 63 -> 57 chars (alternative from outline)",
       "section-6 capsule: 77 -> 70 words (trimmed redundant phrasing)"
-    ]
+    ],
+    "drive_delivery": {
+      "delivered_at": "2026-05-15",
+      "folder_id": "11txAR0kXJBlG11EewoUda7KxbI24Kd8e",
+      "files": [
+        {
+          "name": "How Fractional Real Estate Is Taxed: A K-1 Guide for 2026",
+          "id": "1BcQ6M3l8YScA-KOge7VWvIqSXqiyrpZqZxS4N10wio4",
+          "url": "https://docs.google.com/document/d/1BcQ6M3l8YScA-KOge7VWvIqSXqiyrpZqZxS4N10wio4/edit"
+        }
+      ]
+    }
   },
   "evidence_summary": {
     "claims_total": 24,
