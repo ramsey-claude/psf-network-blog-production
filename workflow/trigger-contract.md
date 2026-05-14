@@ -14,13 +14,13 @@ Saying "yaz" pre-authorizes every action below for the duration of the run. No p
 
 - File writes to the local staging directory
 - GitHub API reads against `ramsey-claude/psf-network-blog-production`
-- GitHub API writes against `ramsey-claude/psf-network-blog-production` (commits, file PUTs, ref updates) within the slug's directory and `workflow/loop-log.md`
+- GitHub API writes against `ramsey-claude/psf-network-blog-production` (commits, file PUTs, ref updates) within the slug's directory and `blog/[slug]/loop-log-[N].md` (per-loop, template in `workflow/loop-log-template.md`)
 - Brief.md and outline.md generation in new slug directories under `blog/[new-slug]/` (Stage -2)
 - Updates to `ROADMAP.md` Phase 1/2 trackers when Stage -2 generates a new topic
 - Anthropic API calls for any reviewer, drafter, moderator, classifier, or QA role
 - Internal looping (Stage 3 -> Stage 2, Stage 7 -> earlier) within the shared loop budget of 3
 - Web fetches and web searches for SERP snapshot and source verification in Stage 1
-- Google Drive MCP calls for Stage 9 delivery: folder creation under `psfnetwork/`, file creation, markdown-to-Google-Doc conversion, .tsx file upload - all scoped to the operator's own Drive, no third-party sharing
+- Google Drive REST API calls via `workflow/drive_cli.py` (OAuth, project `my-project-82896`, token at `/Users/onur/.psfnetwork-drive/token.json`) for Stage 9 delivery: folder creation under `psfnetwork/`, file upload, markdown-to-Google-Doc conversion (via `upload-as-gdoc`), file deletion for clean re-runs — all scoped to the operator's own Drive, no third-party sharing. The Drive MCP is NOT used (it cannot auto-convert docx → native gdoc and lacks delete).
 
 ## Stop conditions
 
@@ -31,6 +31,17 @@ The pipeline halts on any of these without further prompting:
 - A tool-level permission denial from the harness that this contract does not pre-authorize
 - The operator interrupts the run
 - A claim cannot be sourced AND there is no acceptable replacement available -> halt with `unsourceable-claim` state
+- An auth sentinel at `/Users/onur/.psfnetwork-drive/auth-broken-{github,drive}` is present at run start -> halt with `auth-broken` state and the sentinel's reason. Do NOT proceed with stages that need the broken credential; operator must run `workflow/rotate-github-token.sh` or `workflow/drive_auth.py` to clear it
+- Stage -3 returns `discovery-failed` (no surfaceable gap candidates) -> halt; operator must seed ROADMAP Step 2 manually
+
+## Transient failure handling (no halt)
+
+These are retried in-stage and do NOT halt the run:
+
+- GitHub API 5xx or 429: retry up to 3 times with exponential backoff (2s, 8s, 30s).
+- Drive API 5xx or 403 (transient propagation): retry once after 30s. If still failing, halt with `delivery-failed` for that slug only; other slugs in a batch continue.
+- WebFetch / WebSearch transient timeout: retry once with the same query. If still failing, mark the claim/source as `unverified` in `evidence.md` and continue. Stage 1 gate only halts if the unverified-claim count exceeds the brief's tolerance (default: 0 for regulatory claims, 2 for general).
+- Federal source 403 (sec.gov main domain): substitute investor.gov / EDGAR / govinfo per `psfnetwork_federal_fetch` policy. Already in memory; do not treat as a halt.
 
 ## Actions still requiring explicit operator approval
 
