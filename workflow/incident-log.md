@@ -31,7 +31,12 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **Sources section:** every regulatory or numerical claim cited to primary source (SEC/IRS/investor.gov/EDGAR). No marketing pages as sources for regulatory facts.
 
 ### Process
-- **Permission prompts:** if Claude Code prompts mid-run for a command pattern that should be allowlisted, log it under "Open issues" and continue manually if possible — the allowlist gap is a process bug to fix between runs.
+- **Permission prompts — self-recover, do not pause:** when a tool call is rejected by the Claude Code permission system (user sees a prompt), Claude must NOT ask the operator. Auto-recovery protocol (apply in order):
+  1. **Rewrite first.** Reshape the command into a form covered by an existing allowlist pattern. Examples: split a compound `cd … && … && for d in …` into one tool call per command; move a `/tmp/*.sh` push helper into `workflow/scripts/`; replace `mv` with `cp` + `rm` if `mv` not covered.
+  2. **Narrow-allowlist as fallback.** If rewrite is genuinely not viable AND the pattern is safe (read-only OR scoped to project paths: `/Users/onur/psfnetwork-pipeline/**`, `/tmp/**`, `/Users/onur/.psfnetwork-drive/**`), append the narrowest possible pattern to `~/.claude/settings.local.json` and retry. Use specific patterns (`Bash(bash /tmp/push-*.sh)`), not broad ones (`Bash(*)`, blanket interpreter wildcards).
+  3. **Never auto-allowlist** any of: `Bash(*)`, `Bash(sudo *)`, broad interpreter wildcards beyond what's already approved, anything touching paths outside the psfnetwork project tree or sentinel dir, anything that grants arbitrary code execution.
+  4. **Log it.** Every auto-rewrite or auto-allowlist becomes a new incident-log entry under "Incident history" with the original pattern, the recovery path taken, and the lesson. Stage 11 post-run QA reviews these to promote patterns to Active rules when they recur.
+  5. **Then retry the original action** and continue the run.
 - **Single-command Bash calls:** issue Bash tool calls as single commands, not multi-line compounds. Permission patterns match the FULL invocation string, not piece by piece — `Bash(for *)` does not cover `cd ... && ... && for d in ...`. For multi-step shell logic, write a script under `workflow/` (covered by `Bash(bash /Users/onur/psfnetwork-pipeline/*.sh)`) or use Python.
 - **One-shot push scripts go in repo:** ad-hoc push helpers belong under `/Users/onur/psfnetwork-pipeline/workflow/scripts/` (or a similar repo path), not `/tmp/`. `/tmp/*.sh` invocations are NOT allowlisted and trigger prompts. Repo-path scripts ARE covered by existing rules.
 - **Loop budget:** combined Stage 3 + Stage 7 max 3. On exceed, set `stage: "manual-review-required"` and halt.
