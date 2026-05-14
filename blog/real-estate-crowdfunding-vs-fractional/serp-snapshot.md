@@ -1,0 +1,1 @@
+SERP for "real estate crowdfunding vs fractional": few dedicated comparison pieces; most aggregator content conflates the two. psfnetwork's clarifying structural distinction is differentiated. Cannibalization: no conflicts.

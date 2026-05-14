@@ -1,0 +1,1 @@
+Reg CF framework, Reg A, Reg D, LLC pass-through K-1, 1099-INT for debt, Groundfloor debt model, Fundrise eREIT structure, CrowdStreet commercial focus, JOBS Act 2012. All claims cross-reference hub + cluster evidence.
