@@ -2,7 +2,7 @@
   "slug": "how-to-invest-in-real-estate-with-100",
   "title": "How to Invest in Real Estate With $100 in 2026: A Guide",
   "stage": "published",
-  "stage_name": "github-published-drive-pending",
+  "stage_name": "complete-stage10-deferred",
   "completed_steps": [
     "stage-minus1-topic-selection",
     "stage0-state-init",
@@ -22,10 +22,11 @@
     "stage5-localization-noop",
     "stage6-recheck-noop",
     "stage7-pre-publish-qa-pass",
-    "stage8-github-publish"
+    "stage8-github-publish",
+    "stage9-drive-delivery"
   ],
   "pending_steps": [
-    "stage9-drive-delivery"
+    "stage10-post-publish-qa (deferred until psfnetwork.com is live)"
   ],
   "loop_count": 0,
   "last_updated": "2026-05-14",
@@ -36,8 +37,15 @@
     "med_severity_issues_count": 3,
     "low_severity_issues_count": 5,
     "cannibalization_conflict": false,
-    "topic_selection_reason": "Priority 4 in ROADMAP. Hub + Priorities 2, 3 published; dependencies satisfied. Brief flagged competitor Realbricks at 581 traffic - winnable with neutral comparison angle.",
-    "chart_skipped": "CHART-BAR-01 (income by amount) replaced with markdown table in body; arithmetic at 7% assumed yield, fully captioned with caveats per CFPB+FINRA review"
+    "topic_selection_reason": "Priority 4 in ROADMAP. Hub + Priorities 2, 3 published; dependencies satisfied.",
+    "chart_skipped": "CHART-BAR-01 replaced with markdown table; arithmetic at 7% yield with strong caveats per CFPB+FINRA review",
+    "drive_delivery": {
+      "delivered_at": "2026-05-14",
+      "format": "native Google Doc",
+      "folder_id": "1Pu5tI9AbzjQma869tSNrO8fQ6ez2A_OI",
+      "folder_url": "https://drive.google.com/drive/folders/1Pu5tI9AbzjQma869tSNrO8fQ6ez2A_OI",
+      "files": [{"name": "How to Invest in Real Estate With $100 (or Less) in 2026", "id": "1JSaKhuHc43KvGQBKGSoRh3j_t74n8zXROHbbvcWItQY", "url": "https://docs.google.com/document/d/1JSaKhuHc43KvGQBKGSoRh3j_t74n8zXROHbbvcWItQY/edit", "mimeType": "application/vnd.google-apps.document"}]
+    }
   },
   "expert_verdicts": {
     "stage3": {
@@ -48,15 +56,6 @@
       "Moderator": "PROCEED_TO_STAGE_4"
     }
   },
-  "evidence_summary": {
-    "claims_total": 14,
-    "claims_sourced": 11,
-    "claims_dropped": 3
-  },
-  "qa_summary": {
-    "total_items": 33,
-    "pass": 33,
-    "fail": 0,
-    "recommendation": "PUBLISH"
-  }
+  "evidence_summary": {"claims_total": 14, "claims_sourced": 11, "claims_dropped": 3},
+  "qa_summary": {"total_items": 33, "pass": 33, "fail": 0, "recommendation": "PUBLISH"}
 }
