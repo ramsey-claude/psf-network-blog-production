@@ -23,14 +23,37 @@
         <string>/opt/homebrew/bin:/usr/bin:/bin:/usr/local/bin</string>
     </dict>
 
-    <!-- Run once per day at 09:13 local time. -->
+    <!-- Run four times per day at xx:13. Token-check at 09:07 precedes the
+         first run, so its sentinel state is fresh for the 09:13 run. Slugs
+         pushed mid-day get post-publish checks within ~6 hours instead of
+         waiting until next day. -->
     <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key>
-        <integer>9</integer>
-        <key>Minute</key>
-        <integer>13</integer>
-    </dict>
+    <array>
+        <dict>
+            <key>Hour</key>
+            <integer>3</integer>
+            <key>Minute</key>
+            <integer>13</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>9</integer>
+            <key>Minute</key>
+            <integer>13</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>15</integer>
+            <key>Minute</key>
+            <integer>13</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>21</integer>
+            <key>Minute</key>
+            <integer>13</integer>
+        </dict>
+    </array>
 
     <key>StandardOutPath</key>
     <string>/Users/onur/.psfnetwork-drive/stage10.log</string>

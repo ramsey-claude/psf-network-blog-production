@@ -31,10 +31,14 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
+
+SENTINEL_DIR = Path('/Users/onur/.psfnetwork-drive')
+RETRY_BACKOFF = [2, 8, 30]  # seconds; max 3 attempts on transient failure
 
 
 def _resolve_github_token():
@@ -55,21 +59,57 @@ UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
       'AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15')
 
 
+def _write_auth_broken(reason):
+    """Write auth-broken-github sentinel and exit. Used on hard auth failures."""
+    SENTINEL_DIR.mkdir(parents=True, exist_ok=True)
+    (SENTINEL_DIR / 'auth-broken-github').write_text(json.dumps({
+        'reason': reason,
+        'detected_by': 'stage10_runner.gh_request',
+        'checked_at': datetime.now(timezone.utc).isoformat(),
+        'remediation': 'Run bash workflow/rotate-github-token.sh to install a new PAT.',
+    }, indent=2) + '\n')
+
+
 def gh_request(method, path, body=None, accept='application/vnd.github+json'):
+    """GitHub API call with retry on 5xx/429 and sentinel-on-401."""
     url = f'{GH_API}{path}' if path.startswith('/') else path
     data = json.dumps(body).encode('utf-8') if body is not None else None
-    req = urllib.request.Request(url, data=data, method=method)
-    req.add_header('Authorization', f'Bearer {GITHUB_TOKEN}')
-    req.add_header('Accept', accept)
-    if data is not None:
-        req.add_header('Content-Type', 'application/json')
-    with urllib.request.urlopen(req) as resp:
-        body_bytes = resp.read()
-        if not body_bytes:
-            return {}
-        if accept.endswith('json') or 'json' in resp.headers.get('Content-Type', ''):
-            return json.loads(body_bytes)
-        return body_bytes
+
+    last_err = None
+    for attempt, backoff in enumerate([0] + RETRY_BACKOFF):
+        if backoff:
+            print(f'  gh_request retry {attempt}/{len(RETRY_BACKOFF)} after {backoff}s '
+                  f'({method} {path}): {last_err}', file=sys.stderr)
+            time.sleep(backoff)
+        req = urllib.request.Request(url, data=data, method=method)
+        req.add_header('Authorization', f'Bearer {GITHUB_TOKEN}')
+        req.add_header('Accept', accept)
+        if data is not None:
+            req.add_header('Content-Type', 'application/json')
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                body_bytes = resp.read()
+                if not body_bytes:
+                    return {}
+                if accept.endswith('json') or 'json' in resp.headers.get('Content-Type', ''):
+                    return json.loads(body_bytes)
+                return body_bytes
+        except urllib.error.HTTPError as e:
+            if e.code == 401:
+                _write_auth_broken(f'401 from {method} {path}')
+                print(f'GitHub returned 401 — token revoked/expired. Sentinel written. '
+                      f'Exit 5.', file=sys.stderr)
+                sys.exit(5)
+            if e.code == 429 or 500 <= e.code < 600:
+                last_err = f'HTTP {e.code}'
+                continue  # retry
+            raise  # other 4xx: real client error, no retry
+        except (urllib.error.URLError, TimeoutError) as e:
+            last_err = f'network {e}'
+            continue  # retry
+
+    # Exhausted retries
+    raise RuntimeError(f'gh_request {method} {path} failed after retries: {last_err}')
 
 
 def fetch_url(url):
@@ -305,9 +345,8 @@ def push_files(slug, report_md, state_obj, parent_sha):
 
 def main():
     # Check for known auth-broken sentinels written by other components.
-    sentinel_dir = Path('/Users/onur/.psfnetwork-drive')
     for name in ('auth-broken-github', 'auth-broken-drive'):
-        s = sentinel_dir / name
+        s = SENTINEL_DIR / name
         if s.exists():
             print(f'Halting: {name} sentinel present.', file=sys.stderr)
             print(f'  {s.read_text().strip()}', file=sys.stderr)
