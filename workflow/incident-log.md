@@ -121,23 +121,19 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **After:** Retries on 429/5xx and network errors with exponential backoff (2s, 8s, 30s, max 3 attempts). On 401, writes `auth-broken-github` sentinel directly (in addition to the daily token-check) and exits 5 so mid-day token revocation is captured immediately. Other 4xx errors are non-retryable (real client errors).
 - **Rule:** Any runtime code path that talks to a remote API and runs without Claude-in-loop MUST do its own retry + sentinel-on-auth-failure. Procedural retry policy in `trigger-contract.md` covers the Claude path only.
 
-## Operator one-time action — fine-grained PAT swap
+## 2026-05-15 — Classic PAT expiry verification (resolved, not applicable)
 
-This is the only remaining open item that requires an operator click. After it's done, the 7-day expiry warning works automatically.
+Verified the current token via GitHub API headers:
+- Prefix `ghp_` → classic PAT (not fine-grained)
+- `github-authentication-token-expiration` response header is absent → **no expiration**
+- GitHub returns this header only when an expiration is set; its absence on a classic PAT means the operator chose "No expiration" at mint time.
 
-**Steps:**
-1. Visit https://github.com/settings/personal-access-tokens/new
-2. Configure: **Resource owner** = `ramsey-claude` (or personal account if you push as yourself), **Repository access** = "Only select repositories" → `ramsey-claude/psf-network-blog-production`
-3. Permissions (Repository): **Contents** = Read and write, **Metadata** = Read-only. Everything else: No access.
-4. **Expiration** = 90 days (recommended). Fine-grained tokens cap at 1 year.
-5. Click **Generate token**. Copy the `github_pat_…` string.
-6. In terminal: `bash workflow/rotate-github-token.sh` — paste at the prompt. The script smoke-tests before replacing the old token, so a bad paste aborts cleanly.
-7. Verify: `.venv/bin/python3 workflow/token_expiry_check.py` should now print the actual expiry date instead of "no expiry header".
+**Implication:** the 7-day warning path in `workflow/token_expiry_check.py` is structurally unreachable on the current token (no expiry to warn about). This is fine — the runtime catches manual revocation, scope change, or any future GitHub policy shift via the 401 → `auth-broken-github` sentinel path, which IS implemented and tested.
 
-Until this is done, expiry detection is day-of (via 401 → sentinel). After this is done, you get a 7-day heads-up via `token-warning-github` sentinel.
+**Status:** removed from Open issues. `token_expiry_check.py` still runs daily (cheap idempotent check) so if the operator ever swaps to a token that DOES have an expiry, the warning path becomes active automatically without code changes.
 
 ## Open issues / known limitations
 
 - **Loop budget enforcement is procedural:** Claude reads `loop_count` and stops; no runtime guard. Hard to enforce in code since Claude is the one writing `pipeline-state.json`. Acceptable as-is; runtime guard would require restructuring stages as code, not LLM-in-loop.
 - **`workflow/loop-log-template.md` template not yet used in published runs:** all 10 published blogs had clean reviews (0/0/0), no loop events triggered. The template path will be exercised the first time a real loop fires. Will be added to incident history once it does.
-- **Fine-grained PAT swap pending operator action** (see section above). Until done, no proactive 7-day expiry warning; only day-of detection via 401.
+- **Token scope hygiene (optional hardening, not autonomy-blocking):** the current `ghp_…` classic PAT has very broad scopes (`admin:enterprise`, `admin:org`, `delete_repo`, `workflow`, `repo`, etc.) while the pipeline only needs Contents read/write on one repo. If the token ever leaks, blast radius is the whole GitHub account. A fine-grained PAT scoped to `ramsey-claude/psf-network-blog-production` with only Contents R/W + Metadata R would dramatically reduce that. Not required for autonomy — purely a security-hygiene improvement.
