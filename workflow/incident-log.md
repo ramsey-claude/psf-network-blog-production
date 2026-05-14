@@ -24,8 +24,9 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **Working directory:** the cwd persists between Bash calls but `cd` inside a chained command does not survive. Always use absolute paths when writing files, never rely on cwd implicitly. (Bit us on the blog-8 first push: empty tree because cwd was wrong after a `cd` into expert-reviews/.)
 
 ### Content quality
-- **Answer capsules:** 50–75 words. If first draft is over, Stage 4 must trim — never ship over.
-- **Title:** 55–60 chars, focus keyword in first third. **Meta description:** 150–160 chars, includes focus keyword + CTA verb. Stage 2 produces these; Stage 7 QA rejects if missing or out-of-range.
+- **Answer capsules:** 50–75 words. If first draft is over, Stage 4 must trim — never ship over. Sections with 4+ concrete points: prefer 3 in the capsule and let the fourth land in the body.
+- **Title:** 55–60 chars, focus keyword in first third. **Meta description:** 150–160 chars, includes focus keyword + CTA verb. Stage 2 produces these; Stage 7 QA rejects if missing or out-of-range. Hard-count BOTH directions — under-floor AND over-cap both count as fails. "Shortest viable" means shortest WITHIN the range, not absolutely shortest.
+- **Stage 7 micro-fix budget:** intended for ≤2 micro-fixes per run. If 4+ micro-fixes needed, escalate to Stage 4 (proper revision) rather than burning Stage 7 cleanup. 3 micro-fixes is on the boundary and warrants logging the pattern in incident history.
 - **Author + reviewer:** present in YAML frontmatter on every draft. Standing personas only.
 - **Disclaimer:** every post ends with "Past performance is not indicative of future results. Real estate investing involves risk, including the possible loss of principal." or equivalent boilerplate.
 - **Sources section:** every regulatory or numerical claim cited to primary source (SEC/IRS/investor.gov/EDGAR). No marketing pages as sources for regulatory facts.
