@@ -130,6 +130,19 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **Fix:** Stage 2 prompt should pick the shortest viable title from the outline by default (the outline already provides both), and the drafter should hard-count every capsule before moving on. Re-runs should follow this discipline; Stage 7's 2-micro-fix budget is for genuinely tight edge cases, not for routine cleanup.
 - **Rule:** Already captured under Content quality. Strengthened wording in this entry's "Fix" section.
 
+### 2026-05-15 — Stage 2 over-shoot recurrence + UNDER-shoot on title/meta (Reg A vs Reg D post)
+- **Stage:** 2 (Draft) → 7 (Pre-publish QA)
+- **Symptom:** Reg A vs Reg D draft hit Stage 7 with title at 53 chars (UNDER the 55 floor), meta at 143 chars (UNDER the 150 floor), AND one capsule at 83 words (OVER the 75 cap). Three micro-fixes within budget; no loop.
+- **Root cause:** Two distinct drift directions in the same run. Title/meta drifted SHORT because the outline preferred the shortest-viable variant per the rule from the previous incident (over-correction); the capsule drifted LONG for a content-rich section where the drafter wanted to cover all four points (cap, Reg D no-cap, qualification timeline, fractional-platform implications) in one capsule.
+- **Fix:** Stage 2 must hard-count title (55-60), meta (150-160), AND capsule (50-75) on every section BEFORE finalizing. The previous "pick shortest viable" rule for title is correct but must respect the 55-floor — "shortest viable" means shortest within the range, not absolute shortest. Capsule overruns happen when a single section has 4+ concrete points; in that case, prefer 3 points in the capsule and let the fourth land in the body.
+- **Rule:** Stage 7 micro-fix budget is intended for at most 2 micro-fixes per run. 3 this run is on the boundary — if the next run hits 4+, the run loops back to Stage 4 (proper revision pass) rather than burning Stage 7 micro-fixes. This thresholding goes into Active Rules > Content quality.
+
+### 2026-05-15 — Reg A vs Reg D published; complementary-pair pattern noted
+- **Stage:** -2 (Topic selection)
+- **Observation (positive, not failure):** This run's selection (Reg A vs Reg D) was deliberately chosen to complement last run's selection (K-1 tax post). The tax post referenced Reg A's structure as context; this post explains Reg A as the topic. The two posts form a structurally connected pair under the same hub.
+- **Pattern:** When the previous run shipped a spoke that REFERENCES a structural concept in passing, the next run's Stage -2 should consider making that concept its own topic — natural content clustering, hub-link reinforcement, no cannibalization (different focus keywords).
+- **Rule:** Already implicit in the "hub-supporting + brand-fit" Stage -2 scoring. Worth keeping the pair pattern in mind for future selections; not a hard rule.
+
 ---
 
 ## Resolved on 2026-05-14 — second autonomy pass
