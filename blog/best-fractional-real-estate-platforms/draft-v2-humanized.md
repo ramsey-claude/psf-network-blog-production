@@ -48,17 +48,15 @@ That is the whole guide in one paragraph. The rest is the work behind it.
 
 ---
 
-## Why we are even writing this
+## Why are we even writing this?
 
-Here is the experience that this guide is built on. A reader we will call Marcus, a 38-year-old physical therapist in Austin, told us he spent three weekends comparing platforms before his first $7,000 deposit. He read Lofty's roundup, which placed Lofty highly. He read Ark7's comparison, which placed Ark7 at the top. He read Fundrise's blog, which placed Fundrise at the top. By Sunday night he had eight browser tabs, three half-filled spreadsheets, and zero confidence about which one was actually best.
+A reader we will call Marcus, a 38-year-old physical therapist in Austin, told us he spent three weekends comparing platforms before his first $7,000 deposit. He read Lofty's roundup, which placed Lofty highly. He read Ark7's comparison, which placed Ark7 at the top. He read Fundrise's blog, which placed Fundrise at the top. By Sunday night he had eight browser tabs, three half-filled spreadsheets, and zero confidence about which one was actually best. He was not doing anything wrong. The category is structured to confuse him. Every platform writes its own "best platforms" article and ranks itself first. They are not lying. They are marketing. The structural problem is that the reader is left without a neutral source.
 
-He was not doing anything wrong. The category is structured to confuse him. Every platform writes its own "best platforms" article and ranks itself first. That is not a moral failing on their part. They are marketing. The structural problem is that the reader is left without a neutral source.
-
-We are psfnetwork. We have a horse in this race. We are also the only platform we know of that has agreed to write a guide where we do not rank ourselves first, and where we name the other platform when another platform is the better answer for someone in your situation. We think that is the actually useful thing to do, and we think the marketing-incentives reason that other platforms do not do it is exactly why the reader needs it.
+We are psfnetwork. We have a horse in this race. We are also the only platform we know of that has agreed to write a guide where we do not rank ourselves first, and where we name another platform when that platform is the better answer for someone in your situation. We think that is the actually useful thing to do, and we think the marketing-incentives reason other platforms do not do it is exactly why the reader needs it.
 
 ---
 
-## How we compared them
+## How did we compare them?
 
 Six criteria, applied the same way to every platform. Regulatory status. Minimum investment. Income frequency. Fee structure. Liquidity model. Structural type, LLC or tokenized.
 
@@ -135,7 +133,7 @@ Minimums and structures change. Verify on the platform's offering page before in
 
 ---
 
-## How to actually choose
+## How do you actually choose?
 
 Five questions. Answer them in this order.
 
@@ -153,7 +151,7 @@ That is five questions. Your answers point to a short list of two or three platf
 
 ---
 
-## What to watch out for, across every platform on this list
+## What should you watch out for across every platform?
 
 Four risks. They apply equally to whichever platform you choose, including ours.
 
@@ -165,7 +163,7 @@ Four risks. They apply equally to whichever platform you choose, including ours.
 
 **Tax complexity.** Most LLC-structured platforms send K-1s, not 1099s. K-1s are more involved at tax time and often arrive late. Hold positions on three platforms and your accountant has new opinions about your hobbies.
 
-The performance section of any marketing page is the area where the caveats matter most. Yields are "target," not "guaranteed." IRRs are usually platform-reported, not third-party audited. Past performance does not predict future results. Treat any specific yield or IRR number as backward-looking and add your own margin of safety to it.
+The performance section of any marketing page is the area where the caveats matter most. Yields are labeled "target," never promised. IRRs are usually platform-reported, not third-party audited. Past performance does not predict future results. Treat any specific yield or IRR number as backward-looking and add your own margin of safety to it.
 
 ---
 
