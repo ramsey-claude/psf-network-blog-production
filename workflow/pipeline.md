@@ -101,6 +101,25 @@ Draft follows the component order in `brand/template-structure.md`. Every claim 
 
 The draft is responsible for producing title and meta description on its own. They are not retro-fitted in QA - they must be present and within length rules when Stage 2 ends.
 
+## Stage 2.5 - Humanization pass
+**Input:** `draft.md`, `brief.md` (Human Anchors section), `brand/tone-and-voice.md`, `brand/voice-samples/`, `checklist/ai-tells.md`
+**Output:** `draft.md` (revised in place), `humanization-log.md`
+
+Single-reviewer stage between draft and expert panel. Mandate is voice and reader experience only — not compliance. Six steps in order, all gated:
+
+1. **AI tells sweep** — run the full ban list from `checklist/ai-tells.md`. Zero HIGH-tier matches may remain. Cadence and voice checks (Tier 7 and Tier 8) must pass.
+2. **Human anchor injection** — all three Human Anchors from the brief (Real Story, POV Anchor, Contrarian Note) must appear in the body. No anchor may be relegated to a sidebar or callout.
+3. **Rhythm rewrite** — at least one sub-5-word sentence, at least one 25+ word sentence, paragraph length variance ≥ 30%, no three consecutive paragraphs sharing the same opener pattern.
+4. **De-listification** — at least 40% of H2 sections must be narrative paragraphs. Bullet fragments rewritten as full sentences. Maximum one Pros/Cons section.
+5. **Voice consistency** — second person throughout. No mid-paragraph person switching. Generic "investors" only when literally referring to the class.
+6. **Specificity audit** — every claim is checked: would a human writing this know the specific version? Generic claims either researched and replaced, explicitly framed as un-benchmarked, or cut.
+
+Full spec in `checklist/humanization-pass.md`.
+
+**Gate:** `humanization-log.md` exists with `VERDICT: PASS`. All six step results recorded as PASS. If FAIL on any step, draft returns to Stage 2 with the log as rewrite brief. Maximum three Stage 2 ↔ Stage 2.5 cycles before brief revision is triggered.
+
+**Why this stage exists:** the v2 pipeline had editorial review embedded in Stage 3 as one voice among nine. Posts kept reading as AI-generated because editorial got out-voted on voice questions by regulators focused on compliance. Stage 2.5 gives humanization its own pass before the panel.
+
 ## Stage 3 - Expert + editorial review
 Multi-agent sequential discussion. Two changes from v1:
 - Panel is dynamic. Default minimum: SEC, FINRA, CFPB. Topic-triggered additions per `checklist/expert-routing.md`.

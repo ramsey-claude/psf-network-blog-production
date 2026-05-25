@@ -1,21 +1,33 @@
 # psfnetwork blog production
 
-End-to-end blog production pipeline for psfnetwork — from draft to published, with multi-expert regulatory review, localization, and QA gates.
+End-to-end blog production pipeline for psfnetwork — from draft to published, with humanization, multi-expert regulatory review, localization, and QA gates.
 
 ## Overview
 
-Every blog post goes through a structured pipeline before publication. The pipeline combines the SEO & GEO blog checklist with a financial regulatory review layer specific to psfnetwork's fractional real estate content.
+Every blog post goes through a structured pipeline before publication. The pipeline combines the SEO & GEO blog checklist with a humanization pass and a financial regulatory review layer specific to psfnetwork's fractional real estate content.
 
 ```
-Draft → Expert Panel Review → Revision → Localization → Expert Re-check → QA → Publish
-                                                                               ↓ (fail)
-                                                                         Back to Draft
+Draft → Humanization Pass → Expert Panel Review → Revision → Localization → Expert Re-check → QA → Publish
+           ↑                                                                                       ↓ (fail)
+           └──── rewrite ──── Back to Draft ──────────────────────────────────────────────────────┘
 ```
 
 ## Pipeline Stages
 
-### Stage 1 — Expert Panel Discussion
-Eight US financial regulatory experts review the draft simultaneously, each from their own domain:
+### Stage 1 — Humanization Pass
+A dedicated reviewer rewrites the draft to sound like a person wrote it. This is the only stage with the explicit mandate to break AI cadence and inject human signal. Six steps:
+
+1. AI tells sweep (per `checklist/ai-tells.md` ban list)
+2. Human anchor injection (real story, POV, contrarian note — sourced from the brief)
+3. Rhythm and cadence rewrite (sentence and paragraph length variance)
+4. De-listification (at least 40% narrative H2s)
+5. Voice consistency (second person throughout)
+6. Specificity audit (named subjects, dollar figures, dates — no generic claims)
+
+The draft cannot enter Stage 2 with any HIGH-tier AI tell unresolved, all three Human Anchors missing, or a failed cadence/voice check. See `checklist/humanization-pass.md`.
+
+### Stage 2 — Expert Panel Discussion
+Eight US financial regulatory experts review the humanized draft simultaneously, each from their own domain:
 
 | Expert | Domain | Focus in psfnetwork content |
 |--------|--------|----------------------------|
@@ -30,36 +42,42 @@ Eight US financial regulatory experts review the draft simultaneously, each from
 
 Each expert flags issues in their domain. The panel reaches consensus on required revisions before the content moves forward.
 
-### Stage 2 — Content Revision
-Draft is revised based on expert panel feedback. Flagged terms, claims, and structures are corrected. The revised draft is documented with a change log.
+### Stage 3 — Content Revision
+Draft is revised based on expert panel feedback. Flagged terms, claims, and structures are corrected. The revised draft is documented with a change log. Voice changes from this stage that risk re-introducing AI tells trigger a targeted humanization re-pass.
 
-### Stage 3 — Localization Review
+### Stage 4 — Localization Review
 A localization specialist reviews the revised content for US English voice and US market-specific language. psfnetwork operates exclusively in the US market with English-only content (`target_markets: ["EN-US"]`). Localization covers:
 - US English register and tone (en-US, no UK spellings)
 - US regulatory terminology alignment (SEC, FINRA, IRS, state bodies)
 - US conventions: USD currency, MM/DD/YYYY dates, imperial units for real estate
 
-### Stage 4 — Expert Re-check
-The localized content goes back through the expert panel. Localization must not introduce inaccurate financial terminology or weaken regulatory compliance language. If issues are found, content returns to Stage 2.
+### Stage 5 — Expert Re-check
+The localized content goes back through the expert panel. Localization must not introduce inaccurate financial terminology or weaken regulatory compliance language. If issues are found, content returns to Stage 3.
 
-### Stage 5 — QA Gate
+### Stage 6 — QA Gate
 Final pre-publication checklist (see `checklist/qa-gate.md`). If any item fails, the pipeline restarts from Stage 1 with the failure reason documented.
 
 ## Repository Structure
 
 ```
 psf-network-blog-production/
-├── README.md                        This file
+├── README.md                              This file
 ├── checklist/
-│   ├── seo-geo-blog-checklist.md    Full SEO & GEO production checklist
-│   ├── expert-review-template.md   Per-expert review form
-│   ├── localization-guide.md        Localization rules and scope
-│   └── qa-gate.md                   QA gate criteria and failure protocol
+│   ├── ai-tells.md                        Ban list of AI-generated language tells
+│   ├── humanization-pass.md               Stage 1 humanization spec
+│   ├── brief-required-sections.md         Brief format including Human Anchors
+│   ├── seo-geo-blog-checklist.md          Full SEO & GEO production checklist
+│   ├── expert-review-template.md          Per-expert review form
+│   ├── editorial-review.md                Editorial reviewer checklist (Stage 2)
+│   ├── localization-guide.md              Localization rules and scope (US/EN only)
+│   └── qa-gate.md                         QA gate criteria and failure protocol
 ├── workflow/
-│   ├── pipeline.md                  Detailed pipeline steps and decision trees
-│   └── loop-log-template.md         Template for logging pipeline restarts
+│   ├── pipeline.md                        Detailed pipeline steps and decision trees
+│   └── loop-log-template.md               Template for logging pipeline restarts
 └── brand/
-    └── tone-and-voice.md            psfnetwork brand voice for content producers
+    ├── tone-and-voice.md                  psfnetwork brand voice for content producers
+    ├── personas.md                        Target audience personas
+    └── voice-samples/                     Reference writing samples from psfnetwork team
 ```
 
 ## Brand Notes
@@ -68,7 +86,7 @@ psf-network-blog-production/
 - Brand colors: Cream #F7F5F0 | Matte Black #1C1C1C | Orange #FF7141 | Blue #4F8FA3
 - Font: Söhne (Kräftig, Halbfett, Buch)
 - Visual/video assets: produced by Superclasico
-- Written content: AI-generated, human-reviewed through this pipeline
+- Written content: AI-drafted, humanization-reviewed, regulator-cleared
 
 ## Related Repositories
 
