@@ -197,16 +197,20 @@ My Drive/
 ```
 
 **Actions:**
-1. `render-for-drive.py blog/[slug]/draft.md -o /tmp/[slug].docx` produces a styled docx with a Production Notes block + body.
+1. Invoke `workflow/deliver.py --slug [slug] --version [version] --folder-id [id] --title "[H1]"`. This wrapper enforces the QA gate (refuses upload without a `qa-report-vN.md` recording PUBLISH) and chains render + upload in one call.
 2. Ensure `psfnetwork/[slug]/` folder exists via `drive_cli.py list`. Create if missing.
 3. Delete any existing files in the slug folder via `drive_cli.py delete <id>` (clean state across re-runs).
-4. `drive_cli.py upload-as-gdoc /tmp/[slug].docx <folder_id> "[H1]"`. Drive converts docx to a native Google Doc on upload.
-5. Write `delivery-manifest.md` with Drive file id + view URL + timestamp.
-6. Update `pipeline-state.json` `flags.drive_delivery`.
+4. After successful `deliver.py` response, write `delivery-manifest.md` with Drive file id + view URL + timestamp.
+5. Update `pipeline-state.json` `flags.drive_delivery`.
 
-**Gate:**
+**Gate (enforced by `deliver.py`):**
+- Refuses delivery if `blog/[slug]/qa-report-[version].md` does not exist.
+- Refuses delivery if the qa-report Recommendation does not contain "PUBLISH".
+- Refuses delivery if the qa-report Summary lists any FAILs.
 - Drive write failure: retry once. If still failing, halt with `delivery-failed`. GitHub publish is not rolled back.
 - Operator does not confirm individual uploads; they see the result in Drive.
+
+**Direct use of `drive_cli.py upload-as-gdoc` is no longer permitted from Stage 9.** It is retained for one-off operator-driven actions (initial folder setup, manual cleanup) but Stage 9 must go through `deliver.py`. This rule was added 2026-05-26 after a delivery skipped Stage 7 QA and shipped two violation rounds to Drive before the gap was caught.
 
 **Output:** `delivery-manifest.md` in the repo.
 
@@ -224,8 +228,11 @@ The output is an updated `workflow/incident-log.md` committed to `main`. This is
 **Outputs:**
 - Updated `workflow/incident-log.md` on `main`.
 - One-line summary: slugs processed, halts, new incidents, open issues count.
+- `workflow/meta-qa-report-YYYY-MM-DD.md` from the Stage 11 meta-QA sub-step.
 
-**Halt conditions:** `incident-log-conflict` (log diverged on `main` mid-run; rebase needed), `auth-broken-*` sentinel present.
+**Sub-step: meta-QA on pipeline artifacts.** Before committing the incident-log update, run the checks in `checklist/meta-qa.md` against `README.md`, `ROADMAP.md`, `checklist/**/*.md`, `workflow/**/*.md`, `brand/**/*.md`, and any public-facing customer wireframes in the working tree. BLOCKING failures halt the retrospective until fixed. Added 2026-05-26 after the v3 humanization rollout shipped 101 em-dashes across 7 operational files because Stage 7 only inspected blog drafts.
+
+**Halt conditions:** `incident-log-conflict` (log diverged on `main` mid-run; rebase needed), `auth-broken-*` sentinel present, `meta-qa-failed` (BLOCKING violations found in pipeline artifacts).
 
 The next run's Stage -4 reads this updated log, closing the loop.
 

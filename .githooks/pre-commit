@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+# psfnetwork pre-commit hook
+#
+# Blocks commits that violate Tier 0 (BLOCKING) rules from checklist/ai-tells.md.
+# Scope: every staged .md file across the entire repo (blog content, checklists,
+# workflow specs, brand docs, README). The same rules apply to every file.
+#
+# To activate locally:
+#   git config core.hooksPath .githooks
+#
+# To bypass (do not, this exists because we kept violating the rule):
+#   git commit --no-verify
+#
+# Bypass is logged in the commit's audit trail via the runtime CI re-check.
+
+set -euo pipefail
+
+# Collect staged markdown files (only modified or added, not deleted)
+STAGED_MD=$(git diff --cached --name-only --diff-filter=AM | grep -E '\.md$' || true)
+
+if [ -z "$STAGED_MD" ]; then
+    exit 0
+fi
+
+FAIL=0
+declare -a FINDINGS
+
+scan() {
+    local pattern="$1"
+    local label="$2"
+    local severity="$3"
+    while IFS= read -r f; do
+        [ -z "$f" ] && continue
+        # Match only on lines that were added or modified in this commit
+        local hits
+        hits=$(git diff --cached -U0 -- "$f" | grep -E '^\+' | grep -v '^\+\+\+' | grep -cE "$pattern" || true)
+        if [ "$hits" -gt 0 ]; then
+            FINDINGS+=("  [$severity] $label in $f ($hits new occurrences)")
+            FAIL=1
+        fi
+    done <<< "$STAGED_MD"
+}
+
+# Tier 0 - BLOCKING punctuation
+scan '—' 'em-dash (—)' 'BLOCK'
+scan '–' 'en-dash (–)' 'BLOCK'
+scan '--[^>]' 'double-hyphen (--)' 'BLOCK'
+
+# Tier 2 - HIGH brand voice violations
+scan '\bguaranteed (return|yield)' 'guaranteed return language' 'BLOCK'
+scan '\bPSFnetwork\b|\bPSF Network\b|\bPSFNETWORK\b|\bPsfnetwork\b' 'psfnetwork casing violation' 'BLOCK'
+
+# Tier 2 - HIGH AI tells (warn only, do not block on isolated occurrences)
+scan '\b(unlock|leverage|leverages|leveraging|leveraged|robust|seamless|streamlined|game-changing|revolutionary|cutting-edge|paradigm shift|synergy|harness|empower|myriad|plethora)\b' 'HIGH-tier AI tell' 'WARN'
+scan 'In today.s rapidly evolving|now more than ever|when it comes to|in conclusion|at the end of the day' 'stock opener/closer' 'WARN'
+
+# Emit findings
+if [ "${#FINDINGS[@]}" -gt 0 ]; then
+    printf 'pre-commit findings:\n' >&2
+    for line in "${FINDINGS[@]}"; do
+        printf '%s\n' "$line" >&2
+    done
+fi
+
+if [ "$FAIL" -eq 1 ]; then
+    printf '\nCommit refused. Fix BLOCK-tier issues above, then re-stage and commit.\n' >&2
+    printf 'See checklist/ai-tells.md for replacement patterns.\n' >&2
+    printf 'Bypass with --no-verify only in genuine emergencies; record the reason in the commit message.\n' >&2
+    exit 1
+fi
+
+# WARN-only findings already printed; allow commit.
+exit 0
