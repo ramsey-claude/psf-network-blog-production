@@ -1,4 +1,4 @@
-# Brief — Required Sections
+# Brief: Required Sections
 
 Every blog brief (`blog/[slug]/brief.md`) must contain the sections listed here before the pipeline triggers. Stage -2 (topic generation) is responsible for filling them. Stage 2 (Draft) refuses to start if any required section is missing or marked TODO.
 
@@ -13,14 +13,14 @@ This document defines the new required `Human Anchors` section that addresses th
 3. Target Keywords
 4. ICP
 5. Content Angle
-6. **Human Anchors** *(NEW — required as of v3)*
+6. **Human Anchors** *(NEW, required as of v3)*
 7. Competitor Gap
 8. SEO Notes
 9. Regulatory Flags for Expert Review
 
 ---
 
-## Human Anchors — required content
+## Human Anchors: required content
 
 This is the most important addition to the brief. It is the raw material that the writer and humanization reviewer use to break AI cadence.
 
@@ -45,7 +45,7 @@ Good: "We think the per-square-foot model is the only fractional structure that 
 The standard industry narrative on this topic, followed by where psfnetwork breaks with it. Two short paragraphs.
 
 Bad: "Some people disagree about fractional real estate."
-Good: "The standard pitch from REITs is that they offer real estate exposure with stock-like liquidity. The catch they don't lead with: REIT pricing tracks the stock market, not the underlying property. A REIT can fall 30% in a quarter even if every property in its portfolio is fully occupied and rent-paying. Our fractional model isolates the investor from market sentiment by construction — the share is tied to the asset, not to a ticker."
+Good: "The standard pitch from REITs is that they offer real estate exposure with stock-like liquidity. The catch they don't lead with: REIT pricing tracks the stock market, not the underlying property. A REIT can fall 30% in a quarter even if every property in its portfolio is fully occupied and rent-paying. Our fractional model isolates the investor from market sentiment by construction, the share is tied to the asset, not to a ticker."
 
 ---
 
@@ -78,7 +78,7 @@ Brief author cannot invent the anchors. If invented anchors slip through, Stage 
 [2 short paragraphs: standard industry view, then where psfnetwork breaks with it]
 
 ### Source
-[Where the anchors came from — Slack thread, IR call, founder interview, etc. Permission/approval status.]
+[Where the anchors came from, Slack thread, IR call, founder interview, etc. Permission/approval status.]
 ```
 
 ---
@@ -98,6 +98,6 @@ If any check fails, Stage 2 does not start. The brief returns to Stage -2 for co
 
 ## Migration note for existing briefs
 
-Briefs created before this template version do not have Human Anchors. They can be migrated in place at any time. Migration does not require re-running earlier stages — it adds the required input for any future pipeline run on that slug.
+Briefs created before this template version do not have Human Anchors. They can be migrated in place at any time. Migration does not require re-running earlier stages, it adds the required input for any future pipeline run on that slug.
 
 For existing published posts, no retroactive change is required. The humanization pass applies to new and re-published posts only.

@@ -1,4 +1,4 @@
-# Humanization Pass Log — best-fractional-real-estate-platforms
+# Humanization Pass Log: best-fractional-real-estate-platforms
 
 Stage 2.5 applied retroactively to a v1 draft that had cleared Stage 3 expert review but was flagged by external customer feedback as reading AI-generated. This log documents the changes made to produce `draft-v2-humanized.md`.
 
@@ -7,12 +7,12 @@ VERDICT: PASS
 
 ## Step results
 
-- **Step 1 (AI tells):** PASS — 17 HIGH matches resolved, 9 MED matches resolved
-- **Step 2 (Human anchors):** PASS — Real Story (Marcus, Austin), POV Anchor (we are the only platform we know of that does this), Contrarian Note (the return ranking does not exist in any honest form) all integrated in body
-- **Step 3 (Rhythm):** PASS — multiple sub-5-word sentences ("Skip the ranking.", "Five questions.", "Mogul.", "Four risks."), multiple 25+ word sentences with multi-clause structure, paragraph length variance well above 30%
-- **Step 4 (De-listification):** PASS — 6 of 8 H2 sections are narrative (75%), only the comparison table and stat cards retain list format (justified by their reference nature)
-- **Step 5 (Voice):** PASS — second person throughout, "we" used purposefully for psfnetwork position, no mid-paragraph person switching
-- **Step 6 (Specificity):** PASS — named investor (Marcus, 38, physical therapist, Austin, $7,000), specific addresses (East 7th Street as the duplex example), specific compounding math (1% annual fee → ~10% of starting capital over 10 years), specific filing reference (Reg A Tier 2 $75M cap)
+- **Step 1 (AI tells):** PASS, 17 HIGH matches resolved, 9 MED matches resolved
+- **Step 2 (Human anchors):** PASS, Real Story (Marcus, Austin), POV Anchor (we are the only platform we know of that does this), Contrarian Note (the return ranking does not exist in any honest form) all integrated in body
+- **Step 3 (Rhythm):** PASS, multiple sub-5-word sentences ("Skip the ranking.", "Five questions.", "Mogul.", "Four risks."), multiple 25+ word sentences with multi-clause structure, paragraph length variance well above 30%
+- **Step 4 (De-listification):** PASS, 6 of 8 H2 sections are narrative (75%), only the comparison table and stat cards retain list format (justified by their reference nature)
+- **Step 5 (Voice):** PASS, second person throughout, "we" used purposefully for psfnetwork position, no mid-paragraph person switching
+- **Step 6 (Specificity):** PASS, named investor (Marcus, 38, physical therapist, Austin, $7,000), specific addresses (East 7th Street as the duplex example), specific compounding math (1% annual fee → ~10% of starting capital over 10 years), specific filing reference (Reg A Tier 2 $75M cap)
 
 ## Key changes
 
@@ -26,7 +26,7 @@ VERDICT: PASS
 | "Which platform fits which investor?" kept as question (targets featured snippet) but capsule rewritten as opinion paragraph | Compromise: retain SEO benefit, rewrite the prose underneath |
 | "What does the platform comparison table show?" kept | Same SEO compromise. Capsule rewritten as a position statement. |
 | "There is no single best platform across all investors; match the platform's structure to your goal, your tax situation, and your tolerance for illiquidity." | Replaced with the much shorter, opinionated "So skip the ranking." |
-| "That is not a moral failing on their part; it is a structural problem for the reader." | Kept the structural-problem framing but rephrased to "They are marketing" — direct, not lawyered |
+| "That is not a moral failing on their part; it is a structural problem for the reader." | Kept the structural-problem framing but rephrased to "They are marketing", direct, not lawyered |
 | "This guide is written from the user's seat." | Cut. Replaced with the Marcus story which shows the user's seat instead of declaring it. |
 | "Best for: investors who..." (repeated 6 times) | All replaced with narrative paragraphs that have actual position-taking |
 
@@ -34,10 +34,10 @@ VERDICT: PASS
 
 | Removed | Why |
 |---------|-----|
-| "structurally different from standard Reg A LLC platforms" | "Different category of complexity" — concrete |
-| "Read the offering circular's risk factors section in full" | "Read the operating agreement's backup-servicer language" — specific document, specific section |
-| Generic "investors who value brand recognition" | "the investor who wants the comfort of a known brand" — concrete person |
-| "additional return potential from appreciation" | "with appreciation as an additional return component" — same content, less verbose |
+| "structurally different from standard Reg A LLC platforms" | "Different category of complexity", concrete |
+| "Read the offering circular's risk factors section in full" | "Read the operating agreement's backup-servicer language", specific document, specific section |
+| Generic "investors who value brand recognition" | "the investor who wants the comfort of a known brand", concrete person |
+| "additional return potential from appreciation" | "with appreciation as an additional return component", same content, less verbose |
 
 ### Human anchors injected (Step 2)
 
@@ -55,8 +55,8 @@ VERDICT: PASS
 
 - "Best for X" bullets in v1 → six narrative paragraph-blocks with H3 in v2
 - Pros/Cons absent (was already absent)
-- FAQ retained at 6 questions (within the 5-cap target — kept the SEO-relevant ones, none folded into body this round)
-- Comparison table kept intact — structural reference, not list-as-content
+- FAQ retained at 6 questions (within the 5-cap target, kept the SEO-relevant ones, none folded into body this round)
+- Comparison table kept intact, structural reference, not list-as-content
 
 ### Voice (Step 5)
 
@@ -66,22 +66,22 @@ VERDICT: PASS
 
 ### Specificity (Step 6)
 
-- "Marcus, 38-year-old physical therapist in Austin, $7,000, three weekends, eight browser tabs, three half-filled spreadsheets" — replaces generic "investors compare platforms"
-- "14 square feet of a duplex on East 7th Street" — replaces "you hold a stake in a specific number of square feet"
-- "1% annual fee on a 10-year hold is closer to 10% of starting capital" — concrete compounding math, replaces generic "fees compound"
-- "set a calendar reminder in January for tax document chase" — specific operational advice with personality
+- "Marcus, 38-year-old physical therapist in Austin, $7,000, three weekends, eight browser tabs, three half-filled spreadsheets", replaces generic "investors compare platforms"
+- "14 square feet of a duplex on East 7th Street", replaces "you hold a stake in a specific number of square feet"
+- "1% annual fee on a 10-year hold is closer to 10% of starting capital", concrete compounding math, replaces generic "fees compound"
+- "set a calendar reminder in January for tax document chase", specific operational advice with personality
 
 ## Open items for Stage 3 (expert panel re-review needed)
 
 The following changes from v1 are voice-and-position changes that may warrant a quick expert touch:
 
-1. **"We are psfnetwork. We have a horse in this race."** — Editorial: this is direct first-person brand voice, intentional. SEC/FINRA: confirm this admission does not create disclosure burden beyond what is already in the disclaimer block.
+1. **"We are psfnetwork. We have a horse in this race."**: Editorial: this is direct first-person brand voice, intentional. SEC/FINRA: confirm this admission does not create disclosure burden beyond what is already in the disclaimer block.
 
-2. **"Anyone who publishes the ranking is either guessing or selling you something."** — This is opinion-as-claim. Defensible because it follows the explanation of why no audited dataset exists. Editorial may want to soften; we recommend keeping it as the contrarian-anchor moment.
+2. **"Anyone who publishes the ranking is either guessing or selling you something."**: This is opinion-as-claim. Defensible because it follows the explanation of why no audited dataset exists. Editorial may want to soften; we recommend keeping it as the contrarian-anchor moment.
 
-3. **"If a platform you are considering is not listed here and cannot show a Reg A or Reg D filing on EDGAR, that is the entire answer about whether you should invest there."** — Strong implicit recommendation. CFPB consumer-protection lens may want this softened. We recommend keeping it: it is true, it is useful, and it is the single most consumer-protective sentence in the post.
+3. **"If a platform you are considering is not listed here and cannot show a Reg A or Reg D filing on EDGAR, that is the entire answer about whether you should invest there."**: Strong implicit recommendation. CFPB consumer-protection lens may want this softened. We recommend keeping it: it is true, it is useful, and it is the single most consumer-protective sentence in the post.
 
-4. **"Hold positions on three platforms and your accountant has new opinions about your hobbies."** — Humor. Some editorial reviewers will want to cut; we recommend keeping one humorous sentence per post to break AI cadence audibly.
+4. **"Hold positions on three platforms and your accountant has new opinions about your hobbies."**: Humor. Some editorial reviewers will want to cut; we recommend keeping one humorous sentence per post to break AI cadence audibly.
 
 ## Comparison summary
 

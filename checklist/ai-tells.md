@@ -1,4 +1,4 @@
-# AI Tells — Ban List
+# AI Tells: Ban List
 
 The single biggest reason psfnetwork drafts read as AI-generated is unfiltered language tells. This list is the canonical inventory of those tells, with the required replacement pattern. The humanization reviewer (see `humanization-pass.md`) enforces this list on every draft before the expert panel sees it.
 
@@ -16,7 +16,24 @@ Match is case-insensitive, word-boundary aware. Variants and inflections count (
 
 ---
 
-## Tier 1 — Stock openers and closers (HIGH)
+## Tier 0: Hard punctuation bans (BLOCKING)
+
+These are absolute. A draft with any of these does not enter Stage 3, period. No exceptions, no severity downgrade, no "but it reads better here." If you find yourself typing one of these, you have already failed the pass.
+
+| Banned | Replace with |
+|--------|--------------|
+| Em-dash (, ) | Comma, colon, period, middle dot ( · ), or parentheses depending on context. Never an em-dash, anywhere, for any reason. |
+| En-dash ( – ) | Same replacements as em-dash. Use hyphen ( - ) for ranges. |
+| Double-hyphen ( -- ) | Same. This is an em-dash typed in a hurry. Replace. |
+| Smart quotes paired with em-dash construction | Cut the entire construction and rewrite the sentence in plain punctuation. |
+
+The em-dash is the single most reliable AI tell in long-form prose. Models default to it. Humans writing on a phone or under deadline do not. Removing every em-dash from a draft does more for the human signal than any other single intervention on this list.
+
+The replacement is almost always a period, sometimes a comma, occasionally a colon. If you cannot rewrite a sentence without an em-dash, the sentence is doing too much. Break it in two.
+
+---
+
+## Tier 1: Stock openers and closers (HIGH)
 
 These give the post away in the first or last sentence.
 
@@ -35,7 +52,7 @@ These give the post away in the first or last sentence.
 
 ---
 
-## Tier 2 — Hype verbs and adjectives (HIGH)
+## Tier 2: Hype verbs and adjectives (HIGH)
 
 These are the AI-marketing vocabulary that every model defaults to.
 
@@ -68,7 +85,7 @@ These are the AI-marketing vocabulary that every model defaults to.
 
 ---
 
-## Tier 3 — Connective tissue tells (MED)
+## Tier 3: Connective tissue tells (MED)
 
 AI overuses these as transition glue. Humans use them rarely.
 
@@ -87,13 +104,13 @@ AI overuses these as transition glue. Humans use them rarely.
 
 ---
 
-## Tier 4 — Hedging weasels (HIGH near any factual claim)
+## Tier 4: Hedging weasels (HIGH near any factual claim)
 
 These signal the model is unsure. Either source the claim or remove the claim.
 
 | Banned | Action |
 |--------|--------|
-| may potentially | "may" OR "potentially" — not both |
+| may potentially | "may" OR "potentially", not both |
 | could possibly | Same. |
 | might be able to | "can" or "cannot" |
 | is often considered | Source it or cut it |
@@ -107,7 +124,7 @@ Required disclosures (`brand/tone-and-voice.md`) are not hedges and are not in s
 
 ---
 
-## Tier 5 — Rhetorical scaffolding (MED)
+## Tier 5: Rhetorical scaffolding (MED)
 
 The "tell-them-what-you-told-them" structure of AI essays.
 
@@ -123,7 +140,7 @@ The "tell-them-what-you-told-them" structure of AI essays.
 
 ---
 
-## Tier 6 — Listicle and structure tells (MED)
+## Tier 6: Listicle and structure tells (MED)
 
 | Pattern | Action |
 |---------|--------|
@@ -135,7 +152,7 @@ The "tell-them-what-you-told-them" structure of AI essays.
 
 ---
 
-## Tier 7 — Cadence and rhythm (HIGH)
+## Tier 7: Cadence and rhythm (HIGH)
 
 This is invisible on a scan, audible on a read.
 
@@ -151,7 +168,7 @@ Fix: rewrite at least one sentence to be under 5 words and one sentence to be 25
 
 ---
 
-## Tier 8 — Voice tells (HIGH)
+## Tier 8: Voice tells (HIGH)
 
 The text refers to itself, hedges its identity, or breaks the second-person frame.
 

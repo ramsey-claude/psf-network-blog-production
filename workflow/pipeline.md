@@ -14,7 +14,7 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 
 | Stage | Name | Purpose |
 |-------|------|---------|
-| -4 | Pre-flight (incident log read) | First action on every trigger — read `workflow/incident-log.md` and apply its active rules to this run |
+| -4 | Pre-flight (incident log read) | First action on every trigger, read `workflow/incident-log.md` and apply its active rules to this run |
 | -3 | Auto gap discovery (topic pool refresh) | Only runs when Stage -2 exhausts the ROADMAP pool |
 | -2 | Topic discovery & brief/outline generation | Only runs when Stage -1 returns no eligible candidate |
 | -1 | Topic selection | Only runs when the trigger did not specify a slug |
@@ -38,7 +38,7 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 
 If the incident log is unreachable (network error, repo unavailable), halt with `incident-log-unreachable` rather than running blind. The active rules represent every guardrail the pipeline has learned the hard way; running without them re-introduces past failures.
 
-No deliverable for this stage — it is a read-and-internalize step. The fact that it ran is implicit in the run proceeding successfully (errors prevented by the log won't appear).
+No deliverable for this stage, it is a read-and-internalize step. The fact that it ran is implicit in the run proceeding successfully (errors prevented by the log won't appear).
 
 ## Stage -3 - Auto gap discovery (conditional)
 
@@ -48,7 +48,7 @@ Spec in `checklist/topic-discovery-stage-minus-3.md`. Halt conditions: `discover
 
 ## Stage -2 - Topic discovery & brief/outline generation (conditional)
 
-Runs only when Stage -1 returns "no ready candidate" — every existing slug under `blog/` is published or in flight. Generates a fresh `brief.md` + `outline.md` for the next-best seed from `ROADMAP.md` Step 2 (gap analysis), then loops back to Stage -1 so the new slug can be picked.
+Runs only when Stage -1 returns "no ready candidate", every existing slug under `blog/` is published or in flight. Generates a fresh `brief.md` + `outline.md` for the next-best seed from `ROADMAP.md` Step 2 (gap analysis), then loops back to Stage -1 so the new slug can be picked.
 
 Spec in `checklist/topic-generation.md`. Halt conditions: `topic-generation-exhausted` (no remaining gap-analysis candidates pass filters; falls through to Stage -3) or `topic-generation-validation-failed` (two consecutive generated drafts fail validation).
 
@@ -106,14 +106,14 @@ The draft is responsible for producing title and meta description on its own. Th
 **Input:** `draft.md`, `brief.md` (Human Anchors section), `brand/tone-and-voice.md`, `brand/voice-samples/`, `checklist/ai-tells.md`
 **Output:** `draft.md` (revised in place), `humanization-log.md`
 
-Single-reviewer stage between draft and expert panel. Mandate is voice and reader experience only — not compliance. Six steps in order, all gated:
+Single-reviewer stage between draft and expert panel. Mandate is voice and reader experience only, not compliance. Six steps in order, all gated:
 
-1. **AI tells sweep** — run the full ban list from `checklist/ai-tells.md`. Zero HIGH-tier matches may remain. Cadence and voice checks (Tier 7 and Tier 8) must pass.
-2. **Human anchor injection** — all three Human Anchors from the brief (Real Story, POV Anchor, Contrarian Note) must appear in the body. No anchor may be relegated to a sidebar or callout.
-3. **Rhythm rewrite** — at least one sub-5-word sentence, at least one 25+ word sentence, paragraph length variance ≥ 30%, no three consecutive paragraphs sharing the same opener pattern.
-4. **De-listification** — at least 40% of H2 sections must be narrative paragraphs. Bullet fragments rewritten as full sentences. Maximum one Pros/Cons section.
-5. **Voice consistency** — second person throughout. No mid-paragraph person switching. Generic "investors" only when literally referring to the class.
-6. **Specificity audit** — every claim is checked: would a human writing this know the specific version? Generic claims either researched and replaced, explicitly framed as un-benchmarked, or cut.
+1. **AI tells sweep**: run the full ban list from `checklist/ai-tells.md`. Zero HIGH-tier matches may remain. Cadence and voice checks (Tier 7 and Tier 8) must pass.
+2. **Human anchor injection**: all three Human Anchors from the brief (Real Story, POV Anchor, Contrarian Note) must appear in the body. No anchor may be relegated to a sidebar or callout.
+3. **Rhythm rewrite**: at least one sub-5-word sentence, at least one 25+ word sentence, paragraph length variance ≥ 30%, no three consecutive paragraphs sharing the same opener pattern.
+4. **De-listification**: at least 40% of H2 sections must be narrative paragraphs. Bullet fragments rewritten as full sentences. Maximum one Pros/Cons section.
+5. **Voice consistency**: second person throughout. No mid-paragraph person switching. Generic "investors" only when literally referring to the class.
+6. **Specificity audit**: every claim is checked: would a human writing this know the specific version? Generic claims either researched and replaced, explicitly framed as un-benchmarked, or cut.
 
 Full spec in `checklist/humanization-pass.md`.
 
@@ -214,7 +214,7 @@ My Drive/
 
 Runs once at the end of every batch (after the last slug publishes or the run halts on a stop condition). Spec in `checklist/post-run-qa.md`.
 
-The output is an updated `workflow/incident-log.md` committed to `main`. This is meta-QA on the pipeline itself — blog-level QA is handled by Stages 7 and 10.
+The output is an updated `workflow/incident-log.md` committed to `main`. This is meta-QA on the pipeline itself, blog-level QA is handled by Stages 7 and 10.
 
 **Triggers:**
 - Last slug in a batch reaches `stage: "published"`.

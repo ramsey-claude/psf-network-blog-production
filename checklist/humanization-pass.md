@@ -1,4 +1,4 @@
-# Humanization Pass — Stage 2.5
+# Humanization Pass: Stage 2.5
 
 A dedicated review stage between the Draft (Stage 2) and the Expert Panel (Stage 3). One reviewer, one job: make the post sound like a person wrote it.
 
@@ -29,36 +29,36 @@ Putting humanization before Stage 3 forces the rewrite to happen while the draft
 
 ---
 
-## The pass — six steps in order
+## The pass: six steps in order
 
-### Step 1 — AI tells sweep
+### Step 1: AI tells sweep
 
 Run the full ban list from `checklist/ai-tells.md`. Resolve every HIGH match. Document MED and LOW resolutions in the log.
 
 **Gate:** zero HIGH matches remaining. Cadence check passes. Voice check passes.
 
-### Step 2 — Human anchor injection
+### Step 2: Human anchor injection
 
 Pull the three Human Anchors from `brief.md`. Each anchor must appear in the body, not as a sidebar or callout:
 
-- **Real story** — one specific scenario with a named (or anonymized but specific) subject, a place, a date, a dollar figure. Woven into the body within the first 60% of the post.
-- **POV anchor** — one paragraph or sentence that takes a position. First person plural ("we think", "we've seen") is allowed once per post for this purpose.
-- **Contrarian note** — one paragraph that acknowledges the dominant industry view and disagrees with it (or qualifies it). Format: "The standard answer is [X]. Here's where that breaks down."
+- **Real story**: one specific scenario with a named (or anonymized but specific) subject, a place, a date, a dollar figure. Woven into the body within the first 60% of the post.
+- **POV anchor**: one paragraph or sentence that takes a position. First person plural ("we think", "we've seen") is allowed once per post for this purpose.
+- **Contrarian note**: one paragraph that acknowledges the dominant industry view and disagrees with it (or qualifies it). Format: "The standard answer is [X]. Here's where that breaks down."
 
 **Gate:** all three anchors present and integrated. No anchor is a standalone callout box.
 
-### Step 3 — Rhythm and cadence rewrite
+### Step 3: Rhythm and cadence rewrite
 
 Read the draft out loud (or simulate). Apply the Tier 7 rules from the ban list:
 
 - Insert at least one sentence under 5 words
 - Insert at least one sentence over 25 words (with multiple clauses, breathing)
-- Vary paragraph length — at least one 1-sentence paragraph, at least one 5+ sentence paragraph
-- Vary sentence openers — no three consecutive paragraphs starting with the same word or part of speech
+- Vary paragraph length, at least one 1-sentence paragraph, at least one 5+ sentence paragraph
+- Vary sentence openers, no three consecutive paragraphs starting with the same word or part of speech
 
 **Gate:** cadence check passes per the rules above.
 
-### Step 4 — De-listification
+### Step 4: De-listification
 
 Count H2 sections. At least 40% must be narrative paragraphs, not bullet lists.
 
@@ -71,7 +71,7 @@ Pros/Cons sections: maximum one per post. Prefer a narrative trade-off paragraph
 
 **Gate:** at least 40% narrative H2s. No fragment bullets. Pros/Cons used at most once.
 
-### Step 5 — Voice consistency
+### Step 5: Voice consistency
 
 Address the reader as "you" throughout. Do not switch between "you" / "the investor" / "one" within the same paragraph.
 
@@ -79,7 +79,7 @@ If the post needs to refer to a generic third party, name them: "a co-investor",
 
 **Gate:** voice check passes. No paragraph switches person.
 
-### Step 6 — Specificity audit
+### Step 6: Specificity audit
 
 For every claim, the reviewer asks: *would a human writing this know the specific version of this claim?*
 
@@ -89,7 +89,7 @@ For every claim, the reviewer asks: *would a human writing this know the specifi
 - "Some platforms charge fees" → which platforms, what fees
 
 If a specific is not available from `evidence.md`, the claim is generic-tagged. Generic-tagged claims get one of three treatments:
-1. Researched and replaced with a specific (preferred — sends back to Stage 1 sub-task)
+1. Researched and replaced with a specific (preferred, sends back to Stage 1 sub-task)
 2. Rewritten as an explicit framing ("There is no industry-standard benchmark for X, but the closest is Y")
 3. Cut
 
@@ -99,7 +99,7 @@ If a specific is not available from `evidence.md`, the claim is generic-tagged. 
 
 ## Reviewer profile
 
-The humanization reviewer is one person (or one model instance with this checklist as its system prompt). They are explicitly not a regulator. Their authority is voice and reader experience. They do not flag compliance issues — those belong to Stage 3.
+The humanization reviewer is one person (or one model instance with this checklist as its system prompt). They are explicitly not a regulator. Their authority is voice and reader experience. They do not flag compliance issues, those belong to Stage 3.
 
 The reviewer does not negotiate with the writer between revisions. The humanization pass is a single pass with redline output. If the writer disagrees with a specific change, that disagreement is logged and the Stage 3 panel can override.
 
@@ -110,24 +110,24 @@ The reviewer does not negotiate with the writer between revisions. The humanizat
 The reviewer produces `humanization-log.md` with:
 
 ```markdown
-# Humanization Pass Log — [slug]
+# Humanization Pass Log: [slug]
 
 ## Pass result
 VERDICT: PASS / NEEDS_REWRITE
 
 ## Step results
-- Step 1 (AI tells): PASS — [N] HIGH matches resolved
-- Step 2 (Human anchors): PASS / FAIL — [which anchors present, which missing]
-- Step 3 (Rhythm): PASS / FAIL — [which rule failed if any]
-- Step 4 (De-listification): PASS / FAIL — [% narrative H2s]
+- Step 1 (AI tells): PASS, [N] HIGH matches resolved
+- Step 2 (Human anchors): PASS / FAIL, [which anchors present, which missing]
+- Step 3 (Rhythm): PASS / FAIL, [which rule failed if any]
+- Step 4 (De-listification): PASS / FAIL, [% narrative H2s]
 - Step 5 (Voice): PASS / FAIL
-- Step 6 (Specificity): PASS / FAIL — [N generic claims, N resolved, N justified]
+- Step 6 (Specificity): PASS / FAIL, [N generic claims, N resolved, N justified]
 
 ## Key changes
 [List of 5-15 most significant changes, before/after]
 
 ## Open items for Stage 3
-[Anything the panel should know — e.g., a contrarian claim that needs SEC blessing]
+[Anything the panel should know, e.g., a contrarian claim that needs SEC blessing]
 ```
 
 ---
@@ -136,7 +136,7 @@ VERDICT: PASS / NEEDS_REWRITE
 
 If the draft fails NEEDS_REWRITE, it does not go to Stage 3. It goes back to Stage 2 with the humanization log as the rewrite brief. The writer rewrites and re-submits to humanization.
 
-A draft can cycle Stage 2 ↔ Stage 2.5 up to three times before triggering a brief review. If a draft fails humanization three times, the issue is upstream — the brief lacks usable Human Anchors, or the topic is too generic to humanize. Loop back to brief revision.
+A draft can cycle Stage 2 ↔ Stage 2.5 up to three times before triggering a brief review. If a draft fails humanization three times, the issue is upstream, the brief lacks usable Human Anchors, or the topic is too generic to humanize. Loop back to brief revision.
 
 ---
 
