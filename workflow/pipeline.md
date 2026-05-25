@@ -21,6 +21,7 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 | 0 | State check | Read `pipeline-state.json`, resume or start |
 | 1 | Research & evidence | SERP snapshot, source every claim, cannibalization check |
 | 2 | Draft | Write from brief + outline + evidence |
+| 2.5 | Humanization pass | Break AI cadence: ban-list sweep, human anchors, rhythm, voice, specificity |
 | 3 | Expert + editorial review | Dynamic regulator panel + editorial reviewer, sequential discussion |
 | 4 | Revision | Apply consensus fixes |
 | 5 | Localization | Per target market |
