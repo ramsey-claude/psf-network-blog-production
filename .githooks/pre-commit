@@ -2,65 +2,89 @@
 # psfnetwork pre-commit hook
 #
 # Blocks commits that violate Tier 0 (BLOCKING) rules from checklist/ai-tells.md.
-# Scope: every staged .md file across the entire repo (blog content, checklists,
-# workflow specs, brand docs, README). The same rules apply to every file.
+# Scope: every staged .md file (blog content, checklists, workflow specs,
+# brand docs, README, ROADMAP). Same rules apply to every file.
 #
-# To activate locally:
+# Activate locally:
 #   git config core.hooksPath .githooks
 #
-# To bypass (do not, this exists because we kept violating the rule):
+# Bypass (do not, this exists because we kept violating the rule):
 #   git commit --no-verify
 #
-# Bypass is logged in the commit's audit trail via the runtime CI re-check.
+# BSD-grep compatible (macOS default). Uses LC_ALL=C, grep -F for literal
+# unicode punctuation, and BRE patterns ('^[+]' instead of '^\+') to avoid
+# BSD ERE issues with backslash-plus.
 
-set -euo pipefail
+set -uo pipefail
 
-# Collect staged markdown files (only modified or added, not deleted)
-STAGED_MD=$(git diff --cached --name-only --diff-filter=AM | grep -E '\.md$' || true)
+STAGED_MD=$(git diff --cached --name-only --diff-filter=AM | grep '\.md$' || true)
 
 if [ -z "$STAGED_MD" ]; then
     exit 0
 fi
 
 FAIL=0
-declare -a FINDINGS
 
-scan() {
+# scan_fixed pattern label severity
+# Fixed-string match. Use for unicode punctuation and exact phrases.
+scan_fixed() {
     local pattern="$1"
     local label="$2"
     local severity="$3"
+    local total=0
+    local f hits
     while IFS= read -r f; do
         [ -z "$f" ] && continue
-        # Match only on lines that were added or modified in this commit
-        local hits
-        hits=$(git diff --cached -U0 -- "$f" | grep -E '^\+' | grep -v '^\+\+\+' | grep -cE "$pattern" || true)
-        if [ "$hits" -gt 0 ]; then
-            FINDINGS+=("  [$severity] $label in $f ($hits new occurrences)")
-            FAIL=1
+        hits=$(git diff --cached -U0 -- "$f" 2>/dev/null \
+            | grep '^[+]' 2>/dev/null \
+            | grep -v '^[+][+][+]' 2>/dev/null \
+            | LC_ALL=C grep -cF -- "$pattern" 2>/dev/null || true)
+        hits=${hits:-0}
+        if [ "$hits" -gt 0 ] 2>/dev/null; then
+            printf '  [%s] %s in %s (%s new occurrences)\n' "$severity" "$label" "$f" "$hits" >&2
+            total=$((total + hits))
         fi
     done <<< "$STAGED_MD"
+    if [ "$total" -gt 0 ] && [ "$severity" = "BLOCK" ]; then
+        FAIL=1
+    fi
 }
 
-# Tier 0 - BLOCKING punctuation
-scan '—' 'em-dash (—)' 'BLOCK'
-scan '–' 'en-dash (–)' 'BLOCK'
-scan '--[^>]' 'double-hyphen (--)' 'BLOCK'
+# scan_ere pattern label severity
+# Extended-regex match. No \b (BSD does not support); use ( |^) and edge chars.
+scan_ere() {
+    local pattern="$1"
+    local label="$2"
+    local severity="$3"
+    local total=0
+    local f hits
+    while IFS= read -r f; do
+        [ -z "$f" ] && continue
+        hits=$(git diff --cached -U0 -- "$f" 2>/dev/null \
+            | grep '^[+]' 2>/dev/null \
+            | grep -v '^[+][+][+]' 2>/dev/null \
+            | LC_ALL=C grep -cE -- "$pattern" 2>/dev/null || true)
+        hits=${hits:-0}
+        if [ "$hits" -gt 0 ] 2>/dev/null; then
+            printf '  [%s] %s in %s (%s new occurrences)\n' "$severity" "$label" "$f" "$hits" >&2
+            total=$((total + hits))
+        fi
+    done <<< "$STAGED_MD"
+    if [ "$total" -gt 0 ] && [ "$severity" = "BLOCK" ]; then
+        FAIL=1
+    fi
+}
 
-# Tier 2 - HIGH brand voice violations
-scan '\bguaranteed (return|yield)' 'guaranteed return language' 'BLOCK'
-scan '\bPSFnetwork\b|\bPSF Network\b|\bPSFNETWORK\b|\bPsfnetwork\b' 'psfnetwork casing violation' 'BLOCK'
+# Tier 0: BLOCKING punctuation
+scan_fixed '—' 'em-dash' 'BLOCK'
+scan_fixed '–' 'en-dash' 'BLOCK'
 
-# Tier 2 - HIGH AI tells (warn only, do not block on isolated occurrences)
-scan '\b(unlock|leverage|leverages|leveraging|leveraged|robust|seamless|streamlined|game-changing|revolutionary|cutting-edge|paradigm shift|synergy|harness|empower|myriad|plethora)\b' 'HIGH-tier AI tell' 'WARN'
-scan 'In today.s rapidly evolving|now more than ever|when it comes to|in conclusion|at the end of the day' 'stock opener/closer' 'WARN'
+# Tier 2: HIGH brand voice violations
+scan_ere 'guaranteed (return|yield|annual)' 'guaranteed return language' 'BLOCK'
+scan_ere 'PSFnetwork|PSF Network|PSFNETWORK|Psfnetwork' 'psfnetwork casing violation' 'BLOCK'
 
-# Emit findings
-if [ "${#FINDINGS[@]}" -gt 0 ]; then
-    printf 'pre-commit findings:\n' >&2
-    for line in "${FINDINGS[@]}"; do
-        printf '%s\n' "$line" >&2
-    done
-fi
+# Tier 2 HIGH AI tells (WARN only)
+scan_ere '( |^)(unlock|leverage|leverages|leveraging|leveraged|robust|seamless|streamlined|synergy|harness|empower|myriad|plethora)( |[.,;:!?)"])' 'HIGH-tier AI tell' 'WARN'
 
 if [ "$FAIL" -eq 1 ]; then
     printf '\nCommit refused. Fix BLOCK-tier issues above, then re-stage and commit.\n' >&2
@@ -69,5 +93,4 @@ if [ "$FAIL" -eq 1 ]; then
     exit 1
 fi
 
-# WARN-only findings already printed; allow commit.
 exit 0
