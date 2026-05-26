@@ -19,13 +19,13 @@
 | real estate passive income ideas | 20 | 0 | I |
 
 ## ICP
-Salaried professional, 30-45, looking to supplement income without quitting their job. Has heard "passive income" but conflates it with get-rich-quick. Needs a grounded, practical guide that shows real estate as the most reliable passive income vehicle — especially fractional platforms.
+Salaried professional, 30-45, looking to supplement income without quitting their job. Has heard "passive income" but conflates it with get-rich-quick. Needs a grounded, practical guide that shows real estate as the most reliable passive income vehicle, especially fractional platforms.
 
 ## Content Angle
 Most "passive income real estate" content focuses on becoming a landlord. This post leads with the passive-first framing: you can earn rental income without owning a whole property, managing tenants, or fixing anything. Fractional platforms are the lead recommendation. Direct ownership covered as the advanced path.
 
 ## Competitor Gap
-- Realbricks has /articles/passive-income-from-rental-property (only 16 traffic — very weak)
+- Realbricks has /articles/passive-income-from-rental-property (only 16 traffic, very weak)
 - Groundfloor has /news-insights/how-to-invest-in-real-estate-for-passive-income (11 traffic)
 - No competitor owns this keyword cleanly
 - KD 10 means this is highly winnable with quality content

@@ -17,8 +17,8 @@ Top organic for "what is proptech 2026":
 **Pattern:** Industry consultancies (PwC, MIT, NAR) own the high-authority end. Trade-conference and software-vendor sites fill the middle. **No competitor in psfnetwork's category (Ark7, Arrived, Fundrise, Realbricks) has proptech educational content** per ROADMAP gap analysis. psfnetwork can take the investor-angled definitional slot.
 
 Top organic for "proptech companies trends 2026 market size":
-- Future Market Insights, Precedence Research, Fortune Business Insights, IMARC, Mordor, Market.us — all aggregator/research-firm reports
-- Qubit Capital, Vocal Media — VC angle
+- Future Market Insights, Precedence Research, Fortune Business Insights, IMARC, Mordor, Market.us, all aggregator/research-firm reports
+- Qubit Capital, Vocal Media, VC angle
 - Various trends blogs
 
 Market size signals (converging across aggregators): ~$51-55B in 2026, projecting $120-209B by 2031-2035, CAGR 14-17.8%.

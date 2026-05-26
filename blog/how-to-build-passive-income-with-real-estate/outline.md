@@ -13,23 +13,23 @@
 | Read time | 8 min |
 
 ## QuickAnswer (60 sec)
-Real estate generates passive income through two channels: rental distributions (monthly or quarterly cash from tenants) and appreciation (value increase when a property sells). Fractional platforms let you access both without buying a whole property. A $5,000 investment across 10 fractional properties earning 7% annually generates roughly $350/year, growing as you reinvest. The key is starting — even $100 puts the compounding mechanism in motion.
+Real estate generates passive income through two channels: rental distributions (monthly or quarterly cash from tenants) and appreciation (value increase when a property sells). Fractional platforms let you access both without buying a whole property. A $5,000 investment across 10 fractional properties earning 7% annually generates roughly $350/year, growing as you reinvest. The key is starting, even $100 puts the compounding mechanism in motion.
 
 **4 Stat Cards:**
-- 7% — Average target annual yield on fractional platforms
-- $350 — Estimated annual income on $5,000 invested at 7%
-- 2,900 — Monthly searches for "rental properties for passive income" (KD 14)
-- 0 hrs — Active time required with fractional ownership
+- 7%, Average target annual yield on fractional platforms
+- $350, Estimated annual income on $5,000 invested at 7%
+- 2,900, Monthly searches for "rental properties for passive income" (KD 14)
+- 0 hrs, Active time required with fractional ownership
 
 ## Sections
 
 ### 1. What is passive income from real estate? (id: what-is)
-**Answer capsule:** Two income streams — rental distributions + appreciation. Passive = no landlord work.
+**Answer capsule:** Two income streams, rental distributions + appreciation. Passive = no landlord work.
 Body: Active vs passive real estate. Why real estate passive income is different from dividends or savings interest.
 
 ### 2. How much passive income can real estate generate? (id: how-much)
 **Answer capsule:** Realistic range 4-10% annually depending on model.
-**Chart:** [CHART-BAR-01] Income by investment amount at 5%, 7%, 9% yield — $1K, $5K, $10K, $25K.
+**Chart:** [CHART-BAR-01] Income by investment amount at 5%, 7%, 9% yield, $1K, $5K, $10K, $25K.
 Body: Compound reinvestment table. How 3 years of reinvestment changes the math.
 
 ### 3. The four ways to earn passive real estate income (id: four-ways)
@@ -42,7 +42,7 @@ Body: Platform selection criteria, first investment mechanics, what to expect fr
 
 ### 5. What to do with distributions (id: reinvest)
 **Answer capsule:** Reinvest for first 3 years, then draw income.
-**Chart:** [CHART-LINE-01] Compounding: reinvest vs spend — $5,000 over 10 years at 7%.
+**Chart:** [CHART-LINE-01] Compounding: reinvest vs spend, $5,000 over 10 years at 7%.
 Body: Why compounding matters more in early years. How to set up auto-reinvest on platforms.
 
 ### 6. Risks of real estate passive income (id: risks)
@@ -58,8 +58,8 @@ Body: Honest treatment of risks without catastrophizing. How diversification mit
 
 ## Charts / Framer Components
 - `how-to-build-passive-income-with-real-estate-chart.jsx`
-  - Chart 1: Bar — income by investment amount at 3 yield scenarios
-  - Chart 2: Line — compound growth: reinvest vs spend
+  - Chart 1: Bar, income by investment amount at 3 yield scenarios
+  - Chart 2: Line, compound growth: reinvest vs spend
 
 ## Internal Links
 - -> fractional-real-estate-investing (hub)

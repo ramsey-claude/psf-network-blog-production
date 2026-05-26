@@ -8,7 +8,7 @@ Numbered list of every factual / numeric / regulatory / comparative claim the dr
 3. Form 7004 extension: 6 months → ev.6
 4. Extended K-1 delivery: September 15 → ev.6
 5. Passive activity special allowance: $25,000 → ev.8
-6. Allowance phase-out range: $100,000–$150,000 MAGI → ev.8
+6. Allowance phase-out range: $100,000-$150,000 MAGI → ev.8
 7. Residential rental depreciation period: 27.5 years → ev.9
 8. Non-residential real property depreciation period: 39 years → ev.10
 9. Section 1250 unrecaptured gain maximum rate: 25% → ev.14
@@ -26,15 +26,15 @@ Numbered list of every factual / numeric / regulatory / comparative claim the dr
 19. Section 1031 like-kind exchange does NOT apply to LLC member interests → ev.15
 
 ## Comparative claims
-20. K-1 (Form 1065 partnership) vs 1099 (direct/REIT) — different forms for different structures → ev.1, ev.3
+20. K-1 (Form 1065 partnership) vs 1099 (direct/REIT), different forms for different structures → ev.1, ev.3
 21. Reg A LLC structure (typical fractional) vs REIT structure (no K-1, 1099-DIV instead) → derived from ev.1 + ev.11/12
 
 ## Reader-action claims (advisory framing only, not regulatory)
-22. "Talk to your CPA" framing at each decision point — no specific tax advice claims
-23. State-filing complexity at multi-property scale — framed as "may apply, ask the operator about composite returns"
+22. "Talk to your CPA" framing at each decision point, no specific tax advice claims
+23. State-filing complexity at multi-property scale, framed as "may apply, ask the operator about composite returns"
 
 ## Brand / structural claim (psfnetwork)
-24. psfnetwork uses Reg A LLC structure; per-square-foot model affects share count but not K-1 mechanics — structural, no return promise
+24. psfnetwork uses Reg A LLC structure; per-square-foot model affects share count but not K-1 mechanics, structural, no return promise
 
 ## Total
 - Numerical: 12

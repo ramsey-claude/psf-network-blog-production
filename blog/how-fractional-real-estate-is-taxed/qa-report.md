@@ -4,7 +4,7 @@
 **Date:** 2026-05-15
 **Verifier:** Stage 7 automated checks + manual cross-reference
 
-## Section A — YAML frontmatter
+## Section A: YAML frontmatter
 
 | Field | Status | Value |
 |-------|--------|-------|
@@ -23,7 +23,7 @@
 | canonical | PASS | https://psfnetwork.com/blog/how-fractional-real-estate-is-taxed |
 | hero_visual_alt | PASS | descriptive, ~140 chars |
 
-## Section B — Component structure
+## Section B: Component structure
 
 | Component | Present | Notes |
 |-----------|---------|-------|
@@ -39,7 +39,7 @@
 | CTA | PASS | Action-oriented, links to offering circular review |
 | Related | PASS | 3 internal links to existing slugs |
 
-## Section C — Answer capsule lengths (50-75 words)
+## Section C: Answer capsule lengths (50-75 words)
 
 | Section | Words | Status |
 |---------|-------|--------|
@@ -51,30 +51,30 @@
 | Sale or exit | 70 | OK (initially 77; trimmed in Stage 7 fix) |
 | psfnetwork specifically | 73 | OK |
 
-## Section D — Content quality
+## Section D: Content quality
 
 | Check | Status |
 |-------|--------|
 | Disclaimer boilerplate ("Past performance...loss of principal") | PASS |
 | Standing personas only (no invented bylines) | PASS |
-| Sources are primary regulatory (IRS, SEC) | PASS — 8 IRS + 1 SEC; no marketing pages cited for regulatory facts |
-| Every claim in claim-inventory.md maps to evidence row | PASS — 24 claims → 15 evidence rows (some rows cover multiple claims) |
+| Sources are primary regulatory (IRS, SEC) | PASS, 8 IRS + 1 SEC; no marketing pages cited for regulatory facts |
+| Every claim in claim-inventory.md maps to evidence row | PASS, 24 claims → 15 evidence rows (some rows cover multiple claims) |
 | US-only scope (no non-US regulatory references) | PASS |
-| "Consult your CPA" framing on actionable items | PASS — present in 7 of 7 H2 sections plus FAQ Q1, Q2 |
-| Stage 3 consensus changes applied | PASS — all 7 changelog items reflected in draft |
+| "Consult your CPA" framing on actionable items | PASS, present in 7 of 7 H2 sections plus FAQ Q1, Q2 |
+| Stage 3 consensus changes applied | PASS, all 7 changelog items reflected in draft |
 
-## Section E — Hub linkage
+## Section E: Hub linkage
 
-- Hub: fractional-real-estate-investing — referenced in Related ✓
-- Sister spokes: real-estate-crowdfunding-vs-fractional, reits-vs-fractional-real-estate — referenced in Related ✓
+- Hub: fractional-real-estate-investing, referenced in Related ✓
+- Sister spokes: real-estate-crowdfunding-vs-fractional, reits-vs-fractional-real-estate, referenced in Related ✓
 - Inbound link from hub (when next hub update is published): TBD, not part of this run
 
 ## Failures fixed within Stage 7 (no loop)
 
 | Issue | Original | Fixed value |
 |-------|----------|-------------|
-| Title length | 63 chars (over) | 57 chars (within) — alternative title from outline used |
-| Section 6 capsule length | 77 words (over) | 70 words (within) — trimmed redundant phrasing |
+| Title length | 63 chars (over) | 57 chars (within), alternative title from outline used |
+| Section 6 capsule length | 77 words (over) | 70 words (within), trimmed redundant phrasing |
 
 Both fixes are within the "tight tightening" budget of Stage 7 (≤2 micro-edits without invoking a loop back to Stage 4). Loop count remains 0/3.
 

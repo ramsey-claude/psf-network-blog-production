@@ -13,18 +13,18 @@
 | Read time | 7 min |
 
 ## QuickAnswer (60 sec)
-In 2026, you can invest in real estate with as little as $20-$100 through fractional platforms that let you buy shares of rental properties. Platforms like psfnetwork, Ark7, Arrived, and Realbricks all accept small minimums and pay distributions from rental income. The most important step is simply starting — even $100 invested today begins the compounding cycle. Choose a platform, verify its SEC registration, and make your first investment.
+In 2026, you can invest in real estate with as little as $20-$100 through fractional platforms that let you buy shares of rental properties. Platforms like psfnetwork, Ark7, Arrived, and Realbricks all accept small minimums and pay distributions from rental income. The most important step is simply starting, even $100 invested today begins the compounding cycle. Choose a platform, verify its SEC registration, and make your first investment.
 
 **4 Stat Cards:**
-- $20 — Lowest fractional platform minimum (Ark7)
-- $100 — psfnetwork entry point
-- 4-9% — Typical target annual yield
-- 10 min — Time to open a fractional account
+- $20, Lowest fractional platform minimum (Ark7)
+- $100, psfnetwork entry point
+- 4-9%, Typical target annual yield
+- 10 min, Time to open a fractional account
 
 ## Sections
 
 ### 1. Can you really invest in real estate with $100? (id: can-you)
-**Answer capsule:** Yes — fractional platforms have changed this. Specific examples with current minimums.
+**Answer capsule:** Yes, fractional platforms have changed this. Specific examples with current minimums.
 Body: Brief history of how high the barrier used to be, what changed.
 
 ### 2. The four options for investing with under $500 (id: options)
@@ -36,9 +36,9 @@ Body: Brief history of how high the barrier used to be, what changed.
 Body: Account opening, verification, funding, property selection, first distribution timeline.
 
 ### 4. What $100 actually buys you (id: what-it-buys)
-**Answer capsule:** Concrete example — 1 share of a property, expected monthly income.
+**Answer capsule:** Concrete example, 1 share of a property, expected monthly income.
 **Chart:** [CHART-BAR-01] What $100, $500, $1,000, $5,000 earns annually at 7% yield.
-Body: Reinvestment math — how $100/month becomes a meaningful portfolio in 5 years.
+Body: Reinvestment math, how $100/month becomes a meaningful portfolio in 5 years.
 
 ### 5. Mistakes to avoid when starting with a small amount (id: mistakes)
 **Answer capsule:** Top 3 mistakes: concentrating in one property, withdrawing early, ignoring fees.
@@ -52,7 +52,7 @@ Body: Each mistake explained with a real consequence example.
 5. Is fractional real estate investing safe for beginners?
 
 ## Charts / Framer Components
-- `how-to-invest-in-real-estate-with-100-chart.jsx` — Bar chart: annual income by investment amount
+- `how-to-invest-in-real-estate-with-100-chart.jsx`, Bar chart: annual income by investment amount
 
 ## Internal Links
 - -> fractional-real-estate-investing (hub)

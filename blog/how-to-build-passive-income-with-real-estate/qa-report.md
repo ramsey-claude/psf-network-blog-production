@@ -15,7 +15,7 @@ Stage 7. Verified against `checklist/qa-gate.md`.
 | Every numerical claim has an entry in `evidence.md` | PASS - C1-C13 covered; arithmetic claims explicitly labeled illustrative |
 | Every regulatory claim has an entry in `evidence.md` | PASS - Schedule E (E1), Form 8582 / passive activity (E2), K-1 (E3), REIT 90%+ (E4), non-traded REIT risks (E5), FDIC (E6) |
 | All investment return claims include a risk disclosure within the same section | PASS - QuickAnswer carries inline italic footer; how-much body explicitly labels illustrative; risks section is its own H2 |
-| No "guaranteed return" language anywhere | PASS - phrase does not appear |
+| No "guaranteed return" language anywhere | PASS - phrase does not appear | <!-- check-rules: allow -->
 | Federal references factually accurate per evidence | PASS - IRS and investor.gov citations match retrieved content |
 | No misleading regulated vs unregulated comparisons | PASS |
 

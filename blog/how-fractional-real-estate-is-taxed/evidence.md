@@ -44,4 +44,4 @@ Searched existing `blog/*/brief.md` focus keywords:
 - `90-percent-millionaires-real-estate` → "90 percent of millionaires real estate"
 - `what-is-proptech` → "what is proptech"
 
-No existing brief uses "how is fractional real estate taxed", "fractional real estate taxes", or any K-1-related focus keyword. No 2+ keyword overlap. **PASS** — no cannibalization conflict.
+No existing brief uses "how is fractional real estate taxed", "fractional real estate taxes", or any K-1-related focus keyword. No 2+ keyword overlap. **PASS**: no cannibalization conflict.

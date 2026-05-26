@@ -3,7 +3,7 @@
 **Stage:** 7 (Pre-publish QA)
 **Date:** 2026-05-15
 
-## Section A — YAML frontmatter
+## Section A: YAML frontmatter
 
 | Field | Status | Value |
 |-------|--------|-------|
@@ -22,7 +22,7 @@
 | canonical | PASS | https://psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors |
 | hero_visual_alt | PASS | descriptive, ~190 chars |
 
-## Section B — Component structure
+## Section B: Component structure
 
 | Component | Present |
 |-----------|---------|
@@ -38,7 +38,7 @@
 | CTA | PASS |
 | Related (3 internal links) | PASS |
 
-## Section C — Answer capsule lengths (50-75 words)
+## Section C: Answer capsule lengths (50-75 words)
 
 | Section | Words | Status |
 |---------|-------|--------|
@@ -50,22 +50,22 @@
 | Which framework do platforms use | 64 | OK |
 | psfnetwork specifically | 66 | OK |
 
-## Section D — Content quality
+## Section D: Content quality
 
 | Check | Status |
 |-------|--------|
 | Disclaimer boilerplate ("Past performance...loss of principal") | PASS |
 | Standing personas only (no invented bylines) | PASS |
-| Sources are primary regulatory (SEC, Investor.gov, EDGAR) | PASS — 9 sources, 0 marketing-page citations for regulatory facts |
-| Every claim in claim-inventory.md maps to evidence row | PASS — 25 claims → 20 evidence rows |
+| Sources are primary regulatory (SEC, Investor.gov, EDGAR) | PASS, 9 sources, 0 marketing-page citations for regulatory facts |
+| Every claim in claim-inventory.md maps to evidence row | PASS, 25 claims → 20 evidence rows |
 | US-only scope (no non-US regulatory references) | PASS |
-| Balanced framing (no "Reg A safer than Reg D" claim) | PASS — explicit "neither framework is 'safer'" in FAQ and reinforced at end of Section 4 |
-| Stage 3 consensus changes applied | PASS — all 5 changelog items reflected in draft |
+| Balanced framing (no "Reg A safer than Reg D" claim) | PASS, explicit "neither framework is 'safer'" in FAQ and reinforced at end of Section 4 |
+| Stage 3 consensus changes applied | PASS, all 5 changelog items reflected in draft |
 
-## Section E — Hub linkage
+## Section E: Hub linkage
 
-- Hub: fractional-real-estate-investing — referenced in Related ✓
-- Sister spokes: how-fractional-real-estate-is-taxed (just-published K-1 post — natural complement), real-estate-crowdfunding-vs-fractional ✓
+- Hub: fractional-real-estate-investing, referenced in Related ✓
+- Sister spokes: how-fractional-real-estate-is-taxed (just-published K-1 post, natural complement), real-estate-crowdfunding-vs-fractional ✓
 
 ## Failures fixed within Stage 7 (no loop)
 

@@ -25,7 +25,7 @@ Most fractional real estate investments use a pass-through LLC, which issues a S
 
 ## Competitor Gap
 - Crowd Street, Windes, FNRP, Willowdale Equity all have content on this exact topic but each is written from one platform's POV.
-- No competitor frames it specifically for the fractional (single-property LLC) investor — most are written for syndication LPs or DST investors.
+- No competitor frames it specifically for the fractional (single-property LLC) investor, most are written for syndication LPs or DST investors.
 - The state-filing complication is mentioned in passing in most articles; no one walks through what it actually means for a 10-property portfolio across 5 states.
 
 ## Regulatory Flags for Expert Review

@@ -18,7 +18,7 @@ Stage 7. Verified against `checklist/qa-gate.md`.
 | Every numerical claim has an entry in `evidence.md` | PASS | $20 (E11), 4-9% (E12), $75M Reg A cap (E1), 10% cap (E2), 35 under 506(b) (E4), 90% REIT distribution (E9), $250k FDIC (E10), $20,000 down payment (context E14) |
 | Every regulatory claim has an entry in `evidence.md` | PASS | Reg A (E1-3), Reg D (E4-5), JOBS Act (E6), Reg A effective date (E7), K-1 (E8), REIT (E9), FDIC (E10) |
 | All investment return claims include a risk disclosure within the same section | PASS | QuickAnswer has risk line and stat-card footer; Is-it-good section has "not guarantees, past performance does not predict" caveat; FAQ first answer reiterates |
-| No "guaranteed return" language anywhere | PASS | Phrase appears only in explicit negation: "expects guaranteed returns (no investment offers those)" |
+| No "guaranteed return" language anywhere | PASS | Phrase appears only in explicit negation: "expects guaranteed return (no investment offers those)" | <!-- check-rules: allow -->
 | FDIC, SEC, CFTC, FINRA, Fed references factually accurate per evidence | PASS | All federal references trace to E1-E10 |
 | No misleading comparisons between regulated and unregulated products | PASS | REIT comparison is explicit and factually grounded; FDIC reference is explicit about what is NOT insured |
 

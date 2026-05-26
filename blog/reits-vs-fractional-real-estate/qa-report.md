@@ -13,7 +13,7 @@ Stage 7. Verified against `checklist/qa-gate.md`.
 | Numerical claims in evidence.md | PASS - REIT 90%+ distribution (E1), publicly/non-traded distinction (E2), non-traded REIT risks (E3), Reg A (E4), K-1 (E5), ordinary-income dividend (E6), 4%+ yield 2026 (E8) |
 | Regulatory claims in evidence.md | PASS - REIT structures (E1, E2, E3), Reg A (E4), K-1 (E5), 199A reference present in body (medium confidence per E6 note) |
 | Return claims paired with risk disclosure same section | PASS - QuickAnswer footer, choose-reit + choose-fractional caveats, FAQ "no guarantees" language, full disclaimer block |
-| No "guaranteed return" | PASS - phrase does not appear |
+| No "guaranteed return" | PASS - phrase does not appear | <!-- check-rules: allow -->
 | Federal references accurate per evidence | PASS - investor.gov language directly quoted in evidence |
 | No misleading regulated vs unregulated comparison | PASS - REIT and fractional both correctly framed as SEC-regulated securities under different structures |
 

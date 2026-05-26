@@ -21,7 +21,7 @@
 Investor actively researching and comparing platforms before committing capital. Has likely already heard of 2-3 platforms. Needs a trustworthy comparison that cuts through platform self-promotion.
 
 ## Content Angle
-Honest, criteria-driven comparison across our 10 tracked competitors + psfnetwork. Not a psfnetwork advertorial — a genuinely useful guide that earns trust. psfnetwork's international/sq-ft angle highlighted as the differentiator for a specific segment.
+Honest, criteria-driven comparison across our 10 tracked competitors + psfnetwork. Not a psfnetwork advertorial, a genuinely useful guide that earns trust. psfnetwork's international/sq-ft angle highlighted as the differentiator for a specific segment.
 
 ## Competitor Gap
 - Ark7 writes comparisons but always positions itself as winner

@@ -16,16 +16,16 @@
 Proptech (property technology) refers to technology platforms and software that digitize, automate, or democratize the real estate industry. The category includes fractional investment platforms, AI valuation tools, digital mortgage lenders, rental management software, and blockchain property registries. The global proptech market exceeded $30B in 2025 and is projected to reach $86B by 2032. For investors, the most actionable proptech development is fractional ownership platforms, which have lowered real estate entry points from $50,000+ to under $100.
 
 **4 Stat Cards:**
-- $30B+ — Global proptech market size (2025)
-- $86B — Projected market size (2032)
-- $100 — New minimum to invest in real estate via proptech
-- 14,800 — Monthly searches for "proptech news"
+- $30B+, Global proptech market size (2025)
+- $86B, Projected market size (2032)
+- $100, New minimum to invest in real estate via proptech
+- 14,800, Monthly searches for "proptech news"
 
 ## Sections
 
 ### 1. What is proptech? (id: what-is)
 **Answer capsule:** 75-word definition covering technology + property intersection.
-Body: History — PropTech 1.0 (Zillow/Trulia), 2.0 (crowdfunding), 3.0 (AI + blockchain + fractional).
+Body: History, PropTech 1.0 (Zillow/Trulia), 2.0 (crowdfunding), 3.0 (AI + blockchain + fractional).
 
 ### 2. The five categories of proptech (id: categories)
 **Answer capsule:** Investment platforms, AI valuation, digital mortgages, rental management, blockchain title.
@@ -52,7 +52,7 @@ Body: Each trend with current examples and investor implications.
 5. What is the difference between fintech and proptech?
 
 ## Charts / Framer Components
-- `what-is-proptech-chart.jsx` — Line chart: global proptech market size 2015-2032
+- `what-is-proptech-chart.jsx`, Line chart: global proptech market size 2015-2032
 
 ## Internal Links
 - -> fractional-real-estate-investing (hub)

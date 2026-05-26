@@ -1,8 +1,8 @@
-# Stage 3 — CFPB Reviewer
+# Stage 3: CFPB Reviewer
 
 **Reviewer scope:** Consumer-facing clarity, omission of material information, misleading framing for retail investors.
 
-Prior reviews considered: SEC (M1 language tightening, M2 liquidity-limitation framing — agreed). FINRA (M1 benefit/risk pairing on tax-deferred cash flow — agreed and amplifies my own concern).
+Prior reviews considered: SEC (M1 language tightening, M2 liquidity-limitation framing, agreed). FINRA (M1 benefit/risk pairing on tax-deferred cash flow, agreed and amplifies my own concern).
 
 ## Findings
 
@@ -26,7 +26,7 @@ Suggested fix: add a single "confirm with your CPA" sentence to the end of FAQ Q
 **L1. Multi-state filing in Section 5 mentions California, NY, NJ by name.**
 This is accurate context but could be read by a reader as "if my property isn't in those states I'm fine." Section 5 already says "do not assume you can ignore a small allocation," which mitigates. Acceptable.
 
-**L2. The SDIRA FAQ (Q5) is good gatekeeping — correctly redirects readers to a specialist.**
+**L2. The SDIRA FAQ (Q5) is good gatekeeping, correctly redirects readers to a specialist.**
 The post acknowledges complexity without trying to over-deliver. Good consumer-protection posture.
 
 ## Verdict

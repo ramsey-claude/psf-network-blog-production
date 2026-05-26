@@ -38,6 +38,6 @@ Definitive explainer that positions psfnetwork's square-foot model as the natura
 
 ## Regulatory Flags for Expert Review
 - SEC Regulation A+ vs Regulation D distinctions must be accurate
-- No guaranteed return language
+- No guaranteed return language <!-- check-rules: allow -->
 - Platform comparisons must include risk disclosures
 - "Ownership" framing must be legally precise (shares in LLC, not deed ownership)

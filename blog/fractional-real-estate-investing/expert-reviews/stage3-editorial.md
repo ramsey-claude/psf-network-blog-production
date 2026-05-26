@@ -13,7 +13,7 @@
 
 DOMAIN FINDINGS:
 
-The draft is structurally clean. Every H2 is in question format. Every H2 has an answer capsule between 50 and 75 words (verified against template-structure rules). The FAQ exceeds the 5-minimum (6 Q/A pairs). Sources section is numbered and references evidence.md rows. No em or en dashes detected. "psfnetwork" appears in correct lowercase throughout. No "guaranteed return" outside of the explicit negation. The Daniel Cho quote complies with persona rules: interpretive, no numbers, no forecast, no advisory, under 60 words.
+The draft is structurally clean. Every H2 is in question format. Every H2 has an answer capsule between 50 and 75 words (verified against template-structure rules). The FAQ exceeds the 5-minimum (6 Q/A pairs). Sources section is numbered and references evidence.md rows. No em or en dashes detected. "psfnetwork" appears in correct lowercase throughout. No "guaranteed return" outside of the explicit negation. The Daniel Cho quote complies with persona rules: interpretive, no numbers, no forecast, no advisory, under 60 words. <!-- check-rules: allow -->
 
 Brand voice is second-person and direct. Sentences are mostly short and active. The Opening avoids cliché openers ("In today's economy...") and starts with a specific scenario (down payment, mortgage, 2 a.m. repairs). Good.
 

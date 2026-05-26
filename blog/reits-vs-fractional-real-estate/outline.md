@@ -16,10 +16,10 @@
 REITs (Real Estate Investment Trusts) are pooled funds that trade on stock exchanges, offering maximum liquidity but no control over specific properties. Fractional real estate platforms let you own shares in individual properties, with direct income from specific rentals and (usually) lower liquidity. REITs suit investors who prioritize liquidity and diversification. Fractional suits investors who want property-level transparency, higher yields, and a direct connection to specific assets.
 
 **4 Stat Cards:**
-- $10 — REIT minimum (Fundrise)
-- $20-100 — Fractional platform minimum
-- Daily — REIT liquidity (publicly traded)
-- Quarterly-Monthly — Fractional distribution frequency
+- $10, REIT minimum (Fundrise)
+- $20-100, Fractional platform minimum
+- Daily, REIT liquidity (publicly traded)
+- Quarterly-Monthly, Fractional distribution frequency
 
 ## Sections
 
@@ -44,7 +44,7 @@ Body: IRA investors, liquidity-first investors, passive diversification seekers.
 Body: Income-focused, property-specific investors, international/Gulf investors seeking US exposure.
 
 ### 6. Can you hold both? (id: both)
-**Answer capsule:** Yes — they complement each other.
+**Answer capsule:** Yes, they complement each other.
 Body: Portfolio allocation example: 60% REIT ETF + 40% fractional for liquidity + yield combination.
 **Chart:** [CHART-PIE-01] Sample portfolio allocation: REITs vs fractional vs cash.
 
@@ -56,7 +56,7 @@ Body: Portfolio allocation example: 60% REIT ETF + 40% fractional for liquidity 
 5. What is the difference between a REIT and a real estate fund?
 
 ## Charts / Framer Components
-- `reits-vs-fractional-real-estate-chart.jsx` — Pie/donut chart: sample portfolio allocation
+- `reits-vs-fractional-real-estate-chart.jsx`, Pie/donut chart: sample portfolio allocation
 
 ## Internal Links
 - -> fractional-real-estate-investing (hub)

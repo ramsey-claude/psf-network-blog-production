@@ -14,7 +14,7 @@ Return-claim architecture is sound. The 4% REIT yield is paired with the year ("
 
 Stat card block has the standard inline risk-line footer.
 
-No "guaranteed return" language. CTA does not solicit improperly.
+No "guaranteed return" language. CTA does not solicit improperly. <!-- check-rules: allow -->
 
 FLAGGED ISSUES:
 

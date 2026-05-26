@@ -1,6 +1,6 @@
-# Stage 3 — SEC Reviewer
+# Stage 3: SEC Reviewer
 
-**Reviewer scope:** Securities Act exemptions verbatim accuracy — Reg A tiers, Rule 506(b)/(c), Rule 501 accredited definition, verification methods, ongoing reporting, recent rulemaking.
+**Reviewer scope:** Securities Act exemptions verbatim accuracy, Reg A tiers, Rule 506(b)/(c), Rule 501 accredited definition, verification methods, ongoing reporting, recent rulemaking.
 
 ## Findings
 
@@ -10,10 +10,10 @@ None.
 ### MED
 
 **M1. Section 6, "Hybrid" example is partially dated.**
-The post says "Fundrise has done this historically (eREITs under Reg A, eFunds occasionally under Reg D)." Fundrise's current product mix is essentially all Reg A (eREITs and the Innovation Fund). The "occasionally Reg D" historical reference is technically accurate but could mislead a reader checking the platform today. Suggested fix: soften to "Some platforms have historically used both frameworks" without naming Fundrise specifically for the Reg D leg, OR drop the hybrid example entirely — the structural point holds without it.
+The post says "Fundrise has done this historically (eREITs under Reg A, eFunds occasionally under Reg D)." Fundrise's current product mix is essentially all Reg A (eREITs and the Innovation Fund). The "occasionally Reg D" historical reference is technically accurate but could mislead a reader checking the platform today. Suggested fix: soften to "Some platforms have historically used both frameworks" without naming Fundrise specifically for the Reg D leg, OR drop the hybrid example entirely, the structural point holds without it.
 
 **M2. Verification methods list in Section 3 is accurate but could note the 90-day recency window more prominently.**
-The post mentions "dated within the prior three months" for brokerage and bank statements. The 90-day recency is a hard rule under 506(c) verification — if the documentation is stale, the verification step does not satisfy the rule. Worth tightening from "dated within the prior three months" to "dated within the prior 90 days" (interchangeable, but the rule's wording uses the 90-day formulation).
+The post mentions "dated within the prior three months" for brokerage and bank statements. The 90-day recency is a hard rule under 506(c) verification, if the documentation is stale, the verification step does not satisfy the rule. Worth tightening from "dated within the prior three months" to "dated within the prior 90 days" (interchangeable, but the rule's wording uses the 90-day formulation).
 
 ### LOW
 

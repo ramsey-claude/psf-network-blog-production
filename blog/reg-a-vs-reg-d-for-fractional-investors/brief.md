@@ -21,7 +21,7 @@
 Investor doing due diligence on a fractional real estate offering, who has noticed that platforms describe their offerings under one of two SEC frameworks (Reg A or Reg D) and wants to understand what the distinction means for them. Sub-segment: investors comparing accredited-only offerings (typically Reg D) against open-to-public ones (typically Reg A Tier 2). Pain points: "Why can I invest in some offerings but not others?", "Does this mean one is safer than the other?", "What disclosures am I entitled to under each?".
 
 ## Content Angle
-Most fractional platforms operate under either Regulation A (Tier 1 or Tier 2) or Regulation D (Rule 506(b) or 506(c)). The choice is structural: it determines who can invest, how much, what disclosures are required, and what ongoing reporting the issuer must do. This post is a non-issuer primer — written for the investor, not the company raising capital. It walks through the practical differences and what each framework means for fractional real estate specifically. We do not say one is "better" — they serve different audiences and product structures.
+Most fractional platforms operate under either Regulation A (Tier 1 or Tier 2) or Regulation D (Rule 506(b) or 506(c)). The choice is structural: it determines who can invest, how much, what disclosures are required, and what ongoing reporting the issuer must do. This post is a non-issuer primer, written for the investor, not the company raising capital. It walks through the practical differences and what each framework means for fractional real estate specifically. We do not say one is "better", they serve different audiences and product structures.
 
 ## Competitor Gap
 - Existing Reg A vs Reg D content (law firms, SEC.gov) is written for issuers, not for retail investors deciding where to put their money.
@@ -29,12 +29,12 @@ Most fractional platforms operate under either Regulation A (Tier 1 or Tier 2) o
 - No clean retail-investor-facing comparison in real estate context.
 
 ## Regulatory Flags for Expert Review
-- SEC: extremely high importance here — every claim about offering caps, accredited investor thresholds, disclosure requirements, and ongoing reporting must be verbatim-accurate. This is the highest-stakes review post we've shipped on regulatory framing.
-- FINRA: balance — neither framework should be characterized as "safer" or "better."
+- SEC: extremely high importance here, every claim about offering caps, accredited investor thresholds, disclosure requirements, and ongoing reporting must be verbatim-accurate. This is the highest-stakes review post we've shipped on regulatory framing.
+- FINRA: balance, neither framework should be characterized as "safer" or "better."
 - CFPB: consumer-facing claims about investor protections need precision; accredited investor net worth threshold ($1M ex-residence or $200K income) frequently misstated.
 
 ## Hub Linkage
-Spoke of `fractional-real-estate-investing` (hub). Complements `how-fractional-real-estate-is-taxed` (just published) — that post explains the tax form, this one explains the regulatory framework that produces the form.
+Spoke of `fractional-real-estate-investing` (hub). Complements `how-fractional-real-estate-is-taxed` (just published), that post explains the tax form, this one explains the regulatory framework that produces the form.
 
 ## Per-Square-Foot Angle
 psfnetwork operates under Regulation A Tier 2 (allows up to $75M / 12 months, non-accredited investors with the 10% income/net worth cap). We surface this in a "How does this apply to psfnetwork?" section without making the post a product page.

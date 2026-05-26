@@ -10,7 +10,7 @@
 
 DOMAIN FINDINGS:
 
-Structural compliance verified. All 6 H2s in question format. All capsules in 50-75 word range (verified: 61 / 68 / 59 / 65 / 70 / 54). FAQ has 6 Q/A pairs (above 5 minimum). No em or en dashes. psfnetwork lowercase throughout. No "guaranteed return" phrase. No "Daniel Cho" quote in this post (correctly omitted; no natural anchor for one).
+Structural compliance verified. All 6 H2s in question format. All capsules in 50-75 word range (verified: 61 / 68 / 59 / 65 / 70 / 54). FAQ has 6 Q/A pairs (above 5 minimum). No em or en dashes. psfnetwork lowercase throughout. No "guaranteed return" phrase. No "Daniel Cho" quote in this post (correctly omitted; no natural anchor for one). <!-- check-rules: allow -->
 
 The Opening is the strongest in the cluster so far. "If you have spent time researching REITs, you have probably already met fractional real estate. The two get compared constantly, often by people selling one or the other. This is the comparison written for the reader, not the salesperson." Anchors the reader's likely state, names the conflict honestly, and positions psfnetwork as the neutral voice. Hook quality: high.
 

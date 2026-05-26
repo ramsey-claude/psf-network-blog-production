@@ -7,9 +7,9 @@ Every factual / numeric / regulatory / comparative claim the draft will make. Ea
 2. Reg A Tier 2: $75M / 12 months → ev.2
 3. Tier 2 cap raised from $50M to $75M in March 2021 → ev.3
 4. Reg A Tier 2 non-accredited cap: 10% of greater of income or net worth (excl. primary residence) → ev.9
-5. Reg D 506 — no offering-amount limit → ev.12
-6. Reg D 506(b) — up to 35 non-accredited sophisticated investors → ev.10
-7. Reg D 506(c) — accredited only → ev.11
+5. Reg D 506, no offering-amount limit → ev.12
+6. Reg D 506(b), up to 35 non-accredited sophisticated investors → ev.10
+7. Reg D 506(c), accredited only → ev.11
 
 ## Accredited investor definition
 8. Income threshold: $200K individual / $300K spouse-or-equivalent in EACH of prior two years → ev.14, ev.16
@@ -39,7 +39,7 @@ Every factual / numeric / regulatory / comparative claim the draft will make. Ea
 24. Reg A trades qualification overhead for retail accessibility; Reg D trades public access for offering speed → derived
 
 ## Brand / structural (psfnetwork)
-25. psfnetwork operates under Reg A Tier 2 — qualified offering circular, EDGAR-filed, public access with 10% cap → derived from publicly visible structure
+25. psfnetwork operates under Reg A Tier 2: qualified offering circular, EDGAR-filed, public access with 10% cap → derived from publicly visible structure
 
 ## Total
 - Numerical/cap: 7

@@ -2,7 +2,7 @@
 
 ## Title decision
 
-Working title (preferred — shortest viable from outline per active rule): **"Reg A vs Reg D: What Fractional Investors Need to Know"** (52 chars — under 55-60 target).
+Working title (preferred, shortest viable from outline per active rule): **"Reg A vs Reg D: What Fractional Investors Need to Know"** (52 chars, under 55-60 target).
 
 Alternative if needed to hit the 55+ minimum: **"Reg A vs Reg D: A Fractional Investor's Quick Guide"** (52 chars also).
 
@@ -20,11 +20,11 @@ Alternative if needed to hit the 55+ minimum: **"Reg A vs Reg D: A Fractional In
 
 | Component | Plan |
 |-----------|------|
-| ArticleHero | Type tag: "Explainer". Topic tag: "Regulation". H1 matches title. Dek: "Most fractional platforms operate under one of two SEC frameworks. The choice is structural — it determines who can invest and what you are entitled to know." |
+| ArticleHero | Type tag: "Explainer". Topic tag: "Regulation". H1 matches title. Dek: "Most fractional platforms operate under one of two SEC frameworks. The choice is structural, it determines who can invest and what you are entitled to know." |
 | HeroVisual | `[VISUAL-HERO-01]` |
 | QuickAnswer | 60-sec summary: Reg A = open to non-accredited (Tier 2 with cap), Reg D = typically accredited-only, different offering size limits, different ongoing reporting. 4 stat cards: "Reg A Tier 2" / "Reg D 506(c)" / "$75M / 12mo" / "Accredited only" |
 | Opening | 2 paragraphs. Para 1 hooks on the moment investors realize not every offering is open to them. Para 2: what readers can do after. |
-| H2 Sections | See section plan below — 7 H2s. |
+| H2 Sections | See section plan below, 7 H2s. |
 | FAQ | Minimum 5. |
 | Sources | SEC (via investor.gov + search-confirmed SEC.gov resources, per incident-log federal-fetch rule), EDGAR. |
 | AuthorCard | Maya Reyes + Daniel Cho |
@@ -53,7 +53,7 @@ Each section opens with a 50-75 word answer capsule (hard-count before finalizin
    Body: Where each framework's disclosure ends up: Reg A in offering circular + ongoing reports; Reg D in private placement memorandum (PPM), no public SEC review.
 
 5. **How do offering caps and timing differ?**
-   Capsule: Reg A caps a 12-month rolling offering at $20 million (Tier 1) or $75 million (Tier 2). Reg D has no offering-amount limit — Rule 506 offerings can raise unlimited capital. Reg A requires SEC qualification (months of review). Reg D needs only a Form D filing post-first-sale. For a fractional real estate platform raising small recurring rounds, Reg D is faster to open but limits investor pool; Reg A is slower to open but admits everyone.
+   Capsule: Reg A caps a 12-month rolling offering at $20 million (Tier 1) or $75 million (Tier 2). Reg D has no offering-amount limit, Rule 506 offerings can raise unlimited capital. Reg A requires SEC qualification (months of review). Reg D needs only a Form D filing post-first-sale. For a fractional real estate platform raising small recurring rounds, Reg D is faster to open but limits investor pool; Reg A is slower to open but admits everyone.
    Body: Practical timeline differences for an issuer; what this means for offering frequency on a fractional platform.
 
 6. **Which framework do fractional real estate platforms typically use?**
@@ -61,7 +61,7 @@ Each section opens with a 50-75 word answer capsule (hard-count before finalizin
    Body: Examples (Fundrise, Arrived, Realbricks, psfnetwork on Reg A; CrowdStreet, larger syndicators on Reg D).
 
 7. **How does this apply to psfnetwork specifically?**
-   Capsule: psfnetwork operates under Regulation A Tier 2, which means the offering is qualified by the SEC, the offering circular and ongoing reports are publicly filed on EDGAR, and non-accredited investors can participate subject to the 10% cap. The per-square-foot model is a unit-of-ownership detail — it doesn't change the regulatory framework. The framework is what enables the consumer-facing model.
+   Capsule: psfnetwork operates under Regulation A Tier 2, which means the offering is qualified by the SEC, the offering circular and ongoing reports are publicly filed on EDGAR, and non-accredited investors can participate subject to the 10% cap. The per-square-foot model is a unit-of-ownership detail, it doesn't change the regulatory framework. The framework is what enables the consumer-facing model.
    Body: Brief; link to offering circular on EDGAR for any specific property.
 
 ## FAQ candidates
@@ -76,15 +76,15 @@ Each section opens with a 50-75 word answer capsule (hard-count before finalizin
 ## Source plan
 
 Primary (must-have):
-- SEC, "Regulation A — Tier 1 and Tier 2" — search-confirmed via SEC.gov resource pages
-- SEC, "Rule 506 of Regulation D" — SEC.gov small business resources
-- SEC, "Accredited Investor" — investor.gov definition page
-- SEC, "Form D filing" — investor.gov
+- SEC, "Regulation A, Tier 1 and Tier 2", search-confirmed via SEC.gov resource pages
+- SEC, "Rule 506 of Regulation D", SEC.gov small business resources
+- SEC, "Accredited Investor", investor.gov definition page
+- SEC, "Form D filing", investor.gov
 - EDGAR full-text search at efts.sec.gov for any specific issuer reference
 
 Secondary (industry framing, NOT regulatory authority):
-- Industry overviews from law firms / fractional platform pages — for context only, not for regulatory claims
+- Industry overviews from law firms / fractional platform pages, for context only, not for regulatory claims
 
-Per incident-log: sec.gov main domain may 403 — substitute investor.gov, EDGAR, govinfo where needed.
+Per incident-log: sec.gov main domain may 403, substitute investor.gov, EDGAR, govinfo where needed.
 
 Generated by Stage -2 (auto, run 2026-05-15).

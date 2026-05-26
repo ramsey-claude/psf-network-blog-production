@@ -55,7 +55,7 @@ Two H2s were already in question format ("Which platform fits which investor?", 
 | A | A1: Every numerical claim has evidence entry | MANUAL | Requires evidence.md cross-check (existing v1 evidence.md applies) |
 | A | A2: Every regulatory claim has evidence entry | MANUAL | Requires evidence.md cross-check |
 | A | A3: Return claims include risk disclosure in same section | PASS | Stat card caveat + final disclaimer |
-| A | A4: No "guaranteed return" language | PASS | Fixed |
+| A | A4: No "guaranteed return" language | PASS | Fixed | <!-- check-rules: allow -->
 | A | A5: Regulator references accurate | MANUAL | SEC Reg A Tier 2 $75M cap, Reg D; recommend SEC re-touch given v2 voice changes |
 | A | A6: No misleading regulated/unregulated comparisons | PASS | Lofty tokenized clearly framed as different regulatory zone |
 | B | B1: Frontmatter all required fields | PASS | All 15 fields present |

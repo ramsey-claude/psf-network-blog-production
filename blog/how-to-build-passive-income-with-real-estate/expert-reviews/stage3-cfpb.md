@@ -14,7 +14,7 @@ The "passive income" framing is the most consumer-protection-sensitive aspect of
 
 The IRS rental "passive activity" framing (Form 8582 reference) is technically correct and is presented without overclaiming. The K-1 complexity flag is present at first introduction ("K-1 reporting can be more complex than a 1099 and may delay your tax filing"). Both align with consumer-protection best practice on tax-complexity disclosure.
 
-The risks section names liquidity, vacancy, platform, and concentration concretely. The disclaimer is in place. No "guaranteed return" language. CTA includes inline risk statement.
+The risks section names liquidity, vacancy, platform, and concentration concretely. The disclaimer is in place. No "guaranteed return" language. CTA includes inline risk statement. <!-- check-rules: allow -->
 
 FLAGGED ISSUES:
 

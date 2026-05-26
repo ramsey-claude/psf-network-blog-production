@@ -1,4 +1,4 @@
-# Stage 3 — SEC Reviewer
+# Stage 3: SEC Reviewer
 
 **Reviewer scope:** Securities Act compliance, Regulation A framing, accredited/non-accredited investor language, return-claim balance.
 
@@ -18,7 +18,7 @@ The post says "Most fractional platforms have limited secondary markets for LLC 
 ### LOW
 
 **L1. Reg A Tier 2 reporting obligations not mentioned.**
-The post correctly states the dollar cap and non-accredited access but doesn't mention that Tier 2 offerings have ongoing annual/semiannual reporting obligations to the SEC. This is out of scope for the post's reader (the investor, not the issuer), so no action required — but if Editorial expands the regulatory section in a future revision, this is a fact to include.
+The post correctly states the dollar cap and non-accredited access but doesn't mention that Tier 2 offerings have ongoing annual/semiannual reporting obligations to the SEC. This is out of scope for the post's reader (the investor, not the issuer), so no action required, but if Editorial expands the regulatory section in a future revision, this is a fact to include.
 
 **L2. Hub-link to "REITs vs fractional" post is good positioning.**
 The Related block correctly points to a sister post that handles the REIT-specific tax treatment that this post intentionally does not deep-dive into. No action; calling out for moderator visibility.

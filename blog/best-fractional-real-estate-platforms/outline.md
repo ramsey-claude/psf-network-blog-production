@@ -7,25 +7,25 @@
 | Type tag | Comparison |
 | Topic tag | Platforms |
 | H1 | Best Fractional Real Estate Platforms in 2026 (Honest Comparison) |
-| Dek | We tracked 10 platforms for six months. Here is what the data shows — fees, yields, liquidity, and who each is actually right for. |
+| Dek | We tracked 10 platforms for six months. Here is what the data shows, fees, yields, liquidity, and who each is actually right for. |
 | Author | Maya Reyes, Senior Editor |
 | Reviewer | Daniel Cho, CFA |
 | Read time | 11 min |
 
 ## QuickAnswer (60 sec)
-The best fractional real estate platform depends on your goal. For low minimums and monthly income: Ark7 ($20 min). For brand trust and STR exposure: Arrived ($100 min). For institutional-grade returns: Mogul ($250 min). For blockchain/daily income: Lofty ($50 min). For international investors and square-foot ownership: psfnetwork. No single platform is best for everyone — match the platform to your goals, liquidity needs, and market interest.
+The best fractional real estate platform depends on your goal. For low minimums and monthly income: Ark7 ($20 min). For brand trust and STR exposure: Arrived ($100 min). For institutional-grade returns: Mogul ($250 min). For blockchain/daily income: Lofty ($50 min). For international investors and square-foot ownership: psfnetwork. No single platform is best for everyone, match the platform to your goals, liquidity needs, and market interest.
 
 **4 Stat Cards:**
-- $20 — Lowest minimum (Ark7)
-- 18.8% — Highest claimed IRR (Mogul, unaudited)
-- Daily — Highest income frequency (Lofty)
-- $337M — Largest AUM in category (Arrived)
+- $20, Lowest minimum (Ark7)
+- 18.8%, Highest claimed IRR (Mogul, unaudited)
+- Daily, Highest income frequency (Lofty)
+- $337M, Largest AUM in category (Arrived)
 
 ## Sections
 
 ### 1. How we evaluated these platforms (id: methodology)
 **Answer capsule:** 6 criteria, 10 platforms, data from public filings and platform disclosures.
-Body: Evaluation criteria explained — regulatory status, fees, minimum, income frequency, liquidity, track record.
+Body: Evaluation criteria explained, regulatory status, fees, minimum, income frequency, liquidity, track record.
 
 ### 2. Best overall for beginners (id: beginners)
 Platform: Ark7. Why: lowest minimum, monthly income, simple UX.
@@ -57,7 +57,7 @@ Platform: psfnetwork. Why: international market access, sq-ft model, Gulf market
 5. Which fractional platforms work for non-US investors?
 
 ## Charts / Framer Components
-- `best-fractional-real-estate-platforms-chart.jsx` — Table component with sortable platform comparison
+- `best-fractional-real-estate-platforms-chart.jsx`, Table component with sortable platform comparison
 
 ## Internal Links
 - -> fractional-real-estate-investing (hub)

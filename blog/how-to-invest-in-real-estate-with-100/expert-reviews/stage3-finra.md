@@ -4,7 +4,7 @@
 
 DOMAIN FINDINGS:
 
-Return-claim architecture is sound. 7% yield labeled "platform-reported" and paired with "These are not promises; they are arithmetic at a representative assumption" in the body. Compounding tables explicitly "illustrative compounding numbers, not forecasts." Stat card footer has the standard past-performance line. No "guaranteed return."
+Return-claim architecture is sound. 7% yield labeled "platform-reported" and paired with "These are not promises; they are arithmetic at a representative assumption" in the body. Compounding tables explicitly "illustrative compounding numbers, not forecasts." Stat card footer has the standard past-performance line. No "guaranteed return." <!-- check-rules: allow -->
 
 The realistic-plan framing ($100/month, reinvest for 3-5 years) is honest and not promotional. Good.
 

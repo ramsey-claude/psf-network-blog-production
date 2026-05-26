@@ -1,4 +1,4 @@
-# Stage 3 — Editorial Reviewer
+# Stage 3: Editorial Reviewer
 
 **Reviewer scope:** Hook quality, flow, brand voice ("informed friend, not salesman"), clarity, capsule length compliance, FAQ tone.
 

@@ -9,7 +9,7 @@ Stage 7. Verified against `checklist/qa-gate.md`. Loop 0.
 | Numerical claims in evidence.md | PASS - platform minimums (E1-E6), Reg A/D (E7), K-1 (E8), REIT 90% (E9), 4-9% yield (E10) |
 | Regulatory claims in evidence | PASS |
 | Return claims paired with risk disclosure | PASS - QuickAnswer footer, body caveats, FAQ |
-| No "guaranteed return" | PASS |
+| No "guaranteed return" | PASS | <!-- check-rules: allow -->
 | Federal references accurate | PASS |
 | No misleading regulated vs unregulated | PASS - Lofty tokenization caveat now present |
 
