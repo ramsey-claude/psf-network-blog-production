@@ -6,10 +6,10 @@ This stage exists to make batch runs ("10 blog yaz") self-sustaining without req
 
 ## Inputs
 
-- `ROADMAP.md` — Step 2 (Content Gap Analysis), Step 3 (Priority Posts), Phase 1 Execution Tracker.
+- `ROADMAP.md`, Step 2 (Content Gap Analysis), Step 3 (Priority Posts), Phase 1 Execution Tracker.
 - All existing `blog/*/brief.md` keyword tables (to avoid cannibalization with seeds being considered).
-- `brand/tone-and-voice.md` — brand voice for the angle and ICP framing.
-- `brand/personas.md` — author + reviewer to use in the new outline's Template Mapping.
+- `brand/tone-and-voice.md`, brand voice for the angle and ICP framing.
+- `brand/personas.md`, author + reviewer to use in the new outline's Template Mapping.
 - Operating scope: US-only audience, English-only content. Filter all candidates accordingly.
 
 ## Sub-steps
@@ -25,7 +25,7 @@ Filter rules (apply in order):
 
 Among the remaining candidates, rank by:
 1. Hub-supporting: does this topic naturally link back to the published hub? Spokes preferred.
-2. KD/Volume score: `Volume / (KD + 1)` — higher is better.
+2. KD/Volume score: `Volume / (KD + 1)`, higher is better.
 3. Type weight: Comparison or Definitional Spoke > Listicle.
 4. Brand fit: does the topic let psfnetwork's per-square-foot model show up naturally?
 
@@ -148,11 +148,11 @@ Optional: [Chart, pull quote, table reference]
 ```
 
 Constraints:
-- 4 Stat Cards exact — required by the template.
+- 4 Stat Cards exact, required by the template.
 - 5-7 H2 sections in question format. Last section is always FAQ (not counted in 5-7).
 - FAQ has 5-6 Q&A pairs minimum.
 - Internal Links reference existing slugs only (not yet-to-be-generated ones).
-- Sources Needed names sources, not specific URLs — those come from Stage 1.
+- Sources Needed names sources, not specific URLs, those come from Stage 1.
 - Stat card values: use "TBD - illustrative" if the underlying number requires sourcing in Stage 1.
 
 ### 5. Commit and loop back
@@ -196,12 +196,12 @@ If the candidate pool is then exhausted by repeated soft-fails, halt with `topic
 
 For batch runs ("yaz 10 blog"), Stage -1 alone would halt after Phase 1's 6 priority slugs are exhausted. Stage -2 makes the queue self-replenishing within the operator's strategic frame (the ROADMAP gap analysis), without requiring the operator to author briefs by hand mid-batch.
 
-Topic generation is rules-based and seed-bounded — Stage -2 cannot invent topics outside the ROADMAP frame, which keeps psfnetwork's content strategy under operator control.
+Topic generation is rules-based and seed-bounded, Stage -2 cannot invent topics outside the ROADMAP frame, which keeps psfnetwork's content strategy under operator control.
 
 ## What this stage does NOT do
 
 - Invent topics outside the ROADMAP gap analysis.
 - Skip US-only / cannibalization filters.
 - Author content beyond the brief and outline (that is Stage 2's job, with full sourcing in Stage 1).
-- Set Priority to 1 (Hub) — hubs are operator-authored decisions.
+- Set Priority to 1 (Hub), hubs are operator-authored decisions.
 - Use Maya Reyes or Daniel Cho in any quote or voice (those personas only appear in published content, not in briefs).

@@ -25,15 +25,15 @@ Excluded: `blog/**` (covered by Stage 7), `competitors/**`, `workflow/incident-l
 
 ### Section M-A: Punctuation (BLOCKING)
 
-- [ ] Zero em-dashes (`—`)
-- [ ] Zero en-dashes (`–`)
+- [ ] Zero em-dashes (`—`) <!-- check-rules: allow -->
+- [ ] Zero en-dashes (`–`) <!-- check-rules: allow -->
 - [ ] Zero double-hyphens (`--` outside of CLI flag examples and HTML comments)
 
 ### Section M-B: Brand voice (BLOCKING)
 
 - [ ] `psfnetwork` written lowercase, single word, no spaces, no other casing
-- [ ] No "guaranteed return," "guaranteed yield," or any guaranteed-X-investment language
-- [ ] No "delve," "leverage" (as verb), "synergy," "robust solution"
+- [ ] No "guaranteed return," "guaranteed yield," or any guaranteed-X-investment language <!-- check-rules: allow -->
+- [ ] No "delve," "leverage" (as verb), "synergy," "robust solution" <!-- check-rules: allow -->
 
 ### Section M-C: Cross-document consistency (FAIL on mismatch)
 

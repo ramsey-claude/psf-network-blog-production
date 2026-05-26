@@ -24,7 +24,7 @@ The last action of every batch run, after the last slug publishes or the run hal
 
 1. Run the `checklist/post-run-qa.md` retrospective.
 2. Append any new incidents to `workflow/incident-log.md`. Promote new structural causes to "Active rules".
-3. Commit the updated log to `main` with message `chore(workflow): post-run QA for batch ending [date] — [N] slugs, [M] new incidents`.
+3. Commit the updated log to `main` with message `chore(workflow): post-run QA for batch ending [date], [N] slugs, [M] new incidents`.
 
 Skipping post-run QA breaks the learning loop. The next run's Stage -4 needs current rules.
 
@@ -40,7 +40,7 @@ Saying "yaz" pre-authorizes every action below for the duration of the run. No p
 - Anthropic API calls for any reviewer, drafter, moderator, classifier, or QA role
 - Internal looping (Stage 3 -> Stage 2, Stage 7 -> earlier) within the shared loop budget of 3
 - Web fetches and web searches for SERP snapshot and source verification in Stage 1
-- Google Drive REST API calls via `workflow/drive_cli.py` (OAuth, project `my-project-82896`, token at `/Users/onur/.psfnetwork-drive/token.json`) for Stage 9 delivery: folder creation under `psfnetwork/`, file upload, markdown-to-Google-Doc conversion (via `upload-as-gdoc`), file deletion for clean re-runs — all scoped to the operator's own Drive, no third-party sharing. The Drive MCP is NOT used (it cannot auto-convert docx → native gdoc and lacks delete).
+- Google Drive REST API calls via `workflow/drive_cli.py` (OAuth, project `my-project-82896`, token at `/Users/onur/.psfnetwork-drive/token.json`) for Stage 9 delivery: folder creation under `psfnetwork/`, file upload, markdown-to-Google-Doc conversion (via `upload-as-gdoc`), file deletion for clean re-runs, all scoped to the operator's own Drive, no third-party sharing. The Drive MCP is NOT used (it cannot auto-convert docx → native gdoc and lacks delete).
 
 ## Stop conditions
 
@@ -48,7 +48,7 @@ The pipeline halts on any of these without further prompting:
 
 - `loop_count > 3` -> set `stage: "manual-review-required"`, commit state, stop
 - Cannibalization conflict in Stage 1 -> write `cannibalization-conflict.md`, stop
-- A tool-level permission denial from the harness for an action this contract does not pre-authorize AND that cannot be auto-recovered via the rewrite/narrow-allowlist protocol (see "Permission prompt self-recovery" below). Recoverable prompts do NOT halt — they re-loop transparently to the operator.
+- A tool-level permission denial from the harness for an action this contract does not pre-authorize AND that cannot be auto-recovered via the rewrite/narrow-allowlist protocol (see "Permission prompt self-recovery" below). Recoverable prompts do NOT halt, they re-loop transparently to the operator.
 - The operator interrupts the run
 - A claim cannot be sourced AND there is no acceptable replacement available -> halt with `unsourceable-claim` state
 - An auth sentinel at `/Users/onur/.psfnetwork-drive/auth-broken-{github,drive}` is present at run start -> halt with `auth-broken` state and the sentinel's reason. Do NOT proceed with stages that need the broken credential; operator must run `workflow/rotate-github-token.sh` or `workflow/drive_auth.py` to clear it
@@ -61,7 +61,7 @@ When a tool call gets rejected by the Claude Code permission system, the run doe
 
 1. **Rewrite the command first.** Reshape into an allowlisted form (single-command Bash, repo-scoped paths, `cp` + `rm` instead of `mv`, etc.). Most prompts are caused by compound commands or path scope and resolve cleanly via rewrite.
 2. **Narrow-allowlist as fallback.** If the action is safe (read-only, or write-scoped to `/Users/onur/psfnetwork-pipeline/**`, `/tmp/**`, `/Users/onur/.psfnetwork-drive/**`), append the narrowest necessary pattern to `~/.claude/settings.local.json` and retry. Never broad-allow: `Bash(*)`, `sudo *`, interpreter wildcards beyond what is already approved, paths outside the project tree.
-3. **Log the incident** to `workflow/incident-log.md` under "Incident history" — original pattern, recovery taken, lesson — so Stage 11 can promote recurring fixes to Active rules.
+3. **Log the incident** to `workflow/incident-log.md` under "Incident history", original pattern, recovery taken, lesson, so Stage 11 can promote recurring fixes to Active rules.
 4. **Retry the original action** and continue the run.
 
 This protocol replaces the prior behavior of halting on permission denial for any pattern the contract didn't pre-authorize. Only genuinely unrecoverable denials (the unsafe-pattern list above) halt the run, and they halt with `permission-unrecoverable` rather than pausing for input.

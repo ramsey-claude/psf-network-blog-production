@@ -1,4 +1,4 @@
-# psfnetwork — Tone and Voice
+# psfnetwork: Tone and Voice
 
 Brand voice reference for content producers. Read before writing any psfnetwork content.
 
@@ -8,16 +8,16 @@ Brand voice reference for content producers. Read before writing any psfnetwork 
 
 psfnetwork makes fractional real estate investing accessible to people who want to build wealth through property without the complexity of full ownership. The brand is:
 
-- **Confident but not arrogant** — we know what we're talking about, we don't need to shout
-- **Clear over clever** — plain language beats jargon every time
-- **Optimistic but honest** — real estate has real risks, we don't hide them
-- **Modern and direct** — no fluff, no filler, no corporate speak
+- **Confident but not arrogant**: we know what we're talking about, we don't need to shout
+- **Clear over clever**: plain language beats jargon every time
+- **Optimistic but honest**: real estate has real risks, we don't hide them
+- **Modern and direct**: no fluff, no filler, no corporate speak
 
 ---
 
 ## Voice Rules
 
-1. Write in second person (you / your) — talk to the reader directly
+1. Write in second person (you / your), talk to the reader directly
 2. Short sentences. Under 20 words when possible.
 3. Active voice. "Investors earn returns" not "Returns are earned by investors."
 4. No superlatives without proof. Not "the best" unless you can back it up.
@@ -34,11 +34,11 @@ Use these terms consistently:
 | Use | Avoid |
 |-----|-------|
 | fractional ownership | fractional shares (securities connotation) |
-| psfnetwork | PSFnetwork / PSF Network / PSFNETWORK |
+| psfnetwork | PSFnetwork / PSF Network / PSFNETWORK | <!-- check-rules: allow -->
 | co-investors | shareholders (legal precision) |
 | property | asset (too generic) |
 | exit | sell / liquidate (too transactional for brand voice) |
-| target return | guaranteed return (never use guaranteed) |
+| target return | guaranteed return (never use guaranteed) | <!-- check-rules: allow -->
 
 ---
 

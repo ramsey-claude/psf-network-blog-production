@@ -13,7 +13,7 @@ Work through every item. Mark each PASS or FAIL. Use the routing table to decide
 - [ ] Every numerical claim has an entry in `evidence.md`
 - [ ] Every regulatory claim has an entry in `evidence.md`
 - [ ] All investment return claims include a risk disclosure within the same section
-- [ ] No "guaranteed return" language anywhere
+- [ ] No "guaranteed return" language anywhere <!-- check-rules: allow -->
 - [ ] FDIC, SEC, CFTC, FINRA, Fed references factually accurate per evidence
 - [ ] No misleading comparisons between regulated and unregulated products
 

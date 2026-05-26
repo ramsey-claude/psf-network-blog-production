@@ -96,22 +96,37 @@ def diff_base_files(base_sha):
             if line.endswith('.md') and (REPO_ROOT / line).exists()]
 
 
+ALLOW_PRAGMA = re.compile(r'<!--\s*check-rules:\s*allow\s*-->')
+
+
 def check_file(path):
-    """Return (blocking_findings, warning_findings) for one file."""
+    """Return (blocking_findings, warning_findings) for one file.
+
+    Lines containing the pragma `<!-- check-rules: allow -->` are exempted
+    from all checks. Use this on lines that legitimately document a banned
+    pattern (e.g., the ban list itself, or a 'use/avoid' table).
+    """
     try:
         text = path.read_text(encoding='utf-8')
     except (UnicodeDecodeError, OSError) as e:
         return ([(f'read-error: {e}', 0, '')], [])
+
+    lines = text.split('\n')
+    allowed_lines = {i + 1 for i, line in enumerate(lines) if ALLOW_PRAGMA.search(line)}
 
     blocking = []
     warning = []
     for name, pattern, desc in BLOCKING:
         for m in pattern.finditer(text):
             line_no = text[:m.start()].count('\n') + 1
+            if line_no in allowed_lines:
+                continue
             blocking.append((name, line_no, m.group(0)[:60]))
     for name, pattern, desc in WARNING:
         for m in pattern.finditer(text):
             line_no = text[:m.start()].count('\n') + 1
+            if line_no in allowed_lines:
+                continue
             warning.append((name, line_no, m.group(0)[:60]))
     return (blocking, warning)
 

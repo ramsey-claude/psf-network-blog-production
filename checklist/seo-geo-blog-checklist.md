@@ -41,7 +41,7 @@ Her blog yayınlamadan önce bu listeyi baştan sona geç. Maddeler **SEO**, **G
 
 ---
 
-## 4. GEO — Yapay Zeka Uyumluluğu `GEO`
+## 4. GEO: Yapay Zeka Uyumluluğu `GEO`
 
 - [ ] **[ÖNEMLİ]** İçeriğin en üstüne 30-50 kelimelik **TL;DR / Kısaca / Özet** bloğu eklendi
 - [ ] Her H2 başlık, yapay zekanın direkt snippet alabilmesi için soru formatında
@@ -87,7 +87,7 @@ Her blog yayınlamadan önce bu listeyi baştan sona geç. Maddeler **SEO**, **G
 
 ---
 
-## 8. QA — Yayın Öncesi Kontrol
+## 8. QA: Yayın Öncesi Kontrol
 
 - [ ] Tüm iç ve dış linkler test edildi, kırık link yok
 - [ ] Tüm görseller yükleniyor, alt text'ler dolu

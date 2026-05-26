@@ -44,7 +44,7 @@ Examples:
 | capital gains | gains, returns (without qualification) |
 | SEC-registered | regulator-approved (without naming SEC) |
 
-When a term has a non-obvious meaning to a US retail audience, add a short parenthetical or footnote — but the canonical US English term must appear first.
+When a term has a non-obvious meaning to a US retail audience, add a short parenthetical or footnote, but the canonical US English term must appear first.
 
 ---
 
@@ -52,7 +52,7 @@ When a term has a non-obvious meaning to a US retail audience, add a short paren
 
 - Currency: USD throughout. Use `$1,234.56` formatting (comma thousands, period decimal).
 - Dates: `May 14, 2026` in body text; `MM/DD/YYYY` in tables/forms.
-- Real estate references: use US-recognized bodies — SEC, FINRA, state real estate commissions, county recorder offices, IRS for tax references.
+- Real estate references: use US-recognized bodies, SEC, FINRA, state real estate commissions, county recorder offices, IRS for tax references.
 - Avoid UK English spellings (use *organize* not *organise*, *color* not *colour*).
 - Avoid metric units in property descriptions unless paired with imperial (e.g., square feet primary, square meters secondary).
 
@@ -88,6 +88,6 @@ If none of the above apply, Stage 4 is still recommended but the expert panel ma
 | 2 | | | | Yes / No |
 
 ### Verdict
-- [ ] No financial terms changed — Stage 4 targeted review sufficient
-- [ ] Financial terms changed — Stage 4 full expert panel review required
-- [ ] No localization needed — content proceeds directly to Stage 5 QA
+- [ ] No financial terms changed, Stage 4 targeted review sufficient
+- [ ] Financial terms changed, Stage 4 full expert panel review required
+- [ ] No localization needed, content proceeds directly to Stage 5 QA

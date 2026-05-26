@@ -23,7 +23,7 @@ These are absolute. A draft with any of these does not enter Stage 3, period. No
 | Banned | Replace with |
 |--------|--------------|
 | Em-dash (, ) | Comma, colon, period, middle dot ( · ), or parentheses depending on context. Never an em-dash, anywhere, for any reason. |
-| En-dash ( – ) | Same replacements as em-dash. Use hyphen ( - ) for ranges. |
+| En-dash ( – ) | Same replacements as em-dash. Use hyphen ( - ) for ranges. | <!-- check-rules: allow -->
 | Double-hyphen ( -- ) | Same. This is an em-dash typed in a hurry. Replace. |
 | Smart quotes paired with em-dash construction | Cut the entire construction and rewrite the sentence in plain punctuation. |
 

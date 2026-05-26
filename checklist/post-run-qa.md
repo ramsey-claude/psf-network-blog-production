@@ -14,8 +14,8 @@ NOT after every individual blog. Only after a batch boundary.
 
 ## Inputs
 
-- `workflow/incident-log.md` — the current rules and history.
-- `workflow/pipeline.md`, `workflow/trigger-contract.md`, `checklist/*.md` — current spec.
+- `workflow/incident-log.md`, the current rules and history.
+- `workflow/pipeline.md`, `workflow/trigger-contract.md`, `checklist/*.md`, current spec.
 - `blog/*/pipeline-state.json` for every slug touched in this batch.
 - Any `loop-log-[N].md` files written during the batch.
 - launchd logs at `/Users/onur/.psfnetwork-drive/{stage10,token-check}.{log,err}`.
@@ -65,7 +65,7 @@ Any failure here is a new incident.
 
 ### 6. Commit
 
-Commit message: `chore(workflow): post-run QA for batch ending [date] — [N] slugs, [M] new incidents`.
+Commit message: `chore(workflow): post-run QA for batch ending [date], [N] slugs, [M] new incidents`.
 
 Files always committed:
 - `workflow/incident-log.md` (updated).
