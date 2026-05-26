@@ -76,7 +76,7 @@ The honest answer is that this question is upside down. The right question is wh
 
 Fundrise or HappyNest. Both list $10 minimums. Fundrise's Flagship Fund is a diversified private REIT structure, you are buying into a pool, not a property. HappyNest focuses on commercial real estate at the same entry point.
 
-Be honest with yourself about what $10 buys. It buys the habit. It does not buy meaningful exposure. If your only goal is to start moving, either of these gets you moving. If your goal is to build a real position, you will be adding capital for years, and the question of which platform is more about whether the structure compounds the way you want than whether the entry point is low.
+Be honest with yourself about what $10 buys. It buys the habit. It does not buy meaningful exposure. If your only goal is to start moving, either of these gets you moving. If your goal is to build a real position, you will be adding capital for years. The question of which platform then matters less for the entry point and more for whether the structure compounds the way you want.
 
 ### You have a hundred dollars and you want to pick the building
 
@@ -90,7 +90,7 @@ We have heard both pitched as "the best." Neither is the best. They are differen
 
 This is where we put ourselves. psfnetwork is a $100 entry point with a per-square-foot ownership unit. You hold a stake in a specific number of square feet of a specific property at a specific address. The underlying legal structure is the same Reg A LLC framework the others use. The difference is presentation.
 
-Why does presentation matter? Because the standard fractional industry talks in "shares" of an LLC. A share is an abstraction. Square feet are not. A first-time investor can hold one number, "I own 14 square feet of a duplex on East 7th Street", and understand exactly what they bought. The same investor holding "0.0042 of an LLC interest" has to do a chain of mental math to get to the same place.
+Why does presentation matter? Because the standard fractional industry talks in "shares" of an LLC. A share is an abstraction. Square feet are not. A first-time investor can hold one sentence in mind ("I own 14 square feet of a duplex on East 7th Street") and understand exactly what they bought. The same investor holding "0.0042 of an LLC interest" has to do a chain of mental math to get to the same place.
 
 We are not the right answer for someone who wants the highest possible yield, who does not care about the math, or who wants the liquidity profile of a stock. We are the right answer for the investor whose biggest barrier is feeling like they understand what they own.
 
@@ -110,7 +110,7 @@ Mogul is for the investor who wants a more concentrated, higher-minimum position
 
 ### You want commercial focus and a low entry point
 
-HappyNest, mentioned above at $10. Same Reg A LLC structure as most of this list, commercial focus, quarterly distributions. The same caveat about $10 entry points applies, it is a habit-builder, not a position-builder.
+HappyNest, mentioned above at $10. Same Reg A LLC structure as most of this list, commercial focus, quarterly distributions. The same caveat about $10 entry points applies. It is a habit-builder, not a position-builder.
 
 ---
 
@@ -118,16 +118,20 @@ HappyNest, mentioned above at $10. Same Reg A LLC structure as most of this list
 
 The table below is the structural side-by-side. We did not include a returns column. We will not include a returns column. Anyone who does is comparing different things and calling them the same thing.
 
-| Platform | Minimum | Income freq. | Structure | Liquidity | Notable |
-|----------|---------|--------------|-----------|-----------|---------|
-| Fundrise | $10 | Quarterly | Diversified private REIT | Quarterly redemption windows (per platform) | Fund-style, no property pick |
-| HappyNest | $10 | Quarterly | Reg A LLC | Limited / per platform | Commercial focus |
-| Ark7 | $20 | Monthly | Reg A LLC | Secondary market after 1-year hold (per platform) | Property-level selection |
-| Lofty | $50 | Daily (USDC) | Tokenized (Algorand) | Internal marketplace | Token-structure caveats apply |
-| Arrived | $100 | Quarterly | Reg A LLC | Limited / per platform | SFR + STR focus |
-| Realbricks | $100 | Quarterly | Reg A LLC | Limited / per platform | Dividends from rental income |
-| psfnetwork | $100 | Per offering | Reg A LLC | 5-10 year typical hold | Square-foot model |
-| Mogul | $250 | Per offering | Reg D / Reg A varies | Limited | Curated; performance claims platform-reported |
+The compact view, optimized for mobile reading:
+
+| Platform | Minimum | Income | Key trait |
+|----------|---------|--------|-----------|
+| Fundrise | $10 | Quarterly | Diversified private REIT, no property pick |
+| HappyNest | $10 | Quarterly | Reg A LLC, commercial focus |
+| Ark7 | $20 | Monthly | Reg A LLC, property-level selection |
+| Lofty | $50 | Daily (USDC) | Tokenized on Algorand, internal marketplace |
+| Arrived | $100 | Quarterly | Reg A LLC, SFR and STR focus |
+| Realbricks | $100 | Quarterly | Reg A LLC, dividends from rental income |
+| psfnetwork | $100 | Per offering | Reg A LLC, square-foot ownership model |
+| Mogul | $250 | Per offering | Curated commercial, performance platform-reported |
+
+Liquidity sits roughly the same across the Reg A LLC platforms (limited, per-platform redemption windows). Three exceptions are worth knowing. Ark7 opens a secondary market after a one-year hold (per platform marketing). Lofty runs an internal marketplace continuously. Fundrise has its own quarterly redemption windows that read more like a fund than a single-property liquidity event. The rest, psfnetwork included, are designed for the full 5-10 year hold.
 
 Minimums and structures change. Verify on the platform's offering page before investing. SEC EDGAR is the audit source. If a platform you are considering is not listed here and cannot show a Reg A or Reg D filing on EDGAR, that is the entire answer about whether you should invest there.
 
@@ -139,7 +143,7 @@ Five questions. Answer them in this order.
 
 How much do you have to start? That cuts the list in half before you do anything else. Anyone with $10 is not on Mogul. Anyone with $250 is not constrained to Fundrise.
 
-Do you want to pick the property, or are you happy with a managed portfolio? This is the bigger split than people realize. Fundrise is the diversified pool. Almost everything else is property-by-property.
+Do you want to pick the property, or are you happy with a managed portfolio? This split matters more than people realize. Fundrise is the diversified pool. Almost everything else is property-by-property.
 
 How often do you want income? Lofty pays daily. Ark7 pays monthly. Most others pay quarterly. If you are reinvesting, frequency barely matters. If you want the dopamine of a distribution showing up regularly, it matters more.
 
@@ -161,7 +165,7 @@ Four risks. They apply equally to whichever platform you choose, including ours.
 
 **Fees that compound.** A one percent annual management fee on a ten-year hold is not one percent. It is closer to ten percent of your starting capital, minus the compounding the fee removes. Two percent is more like twenty. Always read the fee schedule line by line. Acquisition fees, asset management fees, disposition fees, and platform fees stack. The marketing yield does not include them.
 
-**Tax complexity.** Most LLC-structured platforms send K-1s, not 1099s. K-1s are more involved at tax time and often arrive late. Hold positions on three platforms and your accountant has new opinions about your hobbies.
+**Tax complexity.** Most LLC-structured platforms send K-1s, not 1099s. K-1s are more involved at tax time and often arrive late. Hold positions on three platforms, and your accountant will have new opinions about your hobbies.
 
 The performance section of any marketing page is the area where the caveats matter most. Yields are labeled "target," never promised. IRRs are usually platform-reported, not third-party audited. Past performance does not predict future results. Treat any specific yield or IRR number as backward-looking and add your own margin of safety to it.
 
@@ -176,16 +180,16 @@ A: They carry real risk and are not FDIC insured. Your principal can decline. Yo
 A: No one knows, because no audited apples-to-apples ranking exists. Platforms publish target or historical yields in the 4 to 9 percent range, with appreciation as an additional return component. Every one of those numbers is platform-reported. Anyone publishing a ranking is either guessing or selling you something. Diversifying across two or three platforms is a hedge against any single platform's selection bias.
 
 **Q: Can I use multiple platforms at once?**
-A: Yes, and many investors do. The benefit is spreading platform risk. The cost is administrative, separate onboarding, separate KYC, and a stack of K-1s at tax time if all the platforms are LLC-structured. If you are running multi-platform, set a calendar reminder in January for tax document chase.
+A: Yes, and many investors do. The benefit is spreading platform risk. The cost is administrative: separate onboarding, separate KYC, and a stack of K-1s at tax time if all the platforms are LLC-structured. If you are running multi-platform, set a calendar reminder in January for tax document chase.
 
 **Q: What happens to my investment if a platform shuts down?**
 A: The property is held in an LLC separate from the platform itself, so a platform shutdown does not automatically wipe out the underlying value. But finding a replacement servicer takes time, disputes can take months or years, and full recovery is not assured. The operating agreement's backup-servicer language is the document to read.
 
 **Q: How are fractional real estate platforms regulated?**
-A: Most US platforms file under SEC Regulation A, Tier 2 lets non-accredited investors in with disclosure, capped at $75 million per twelve months, or Regulation D, typically accredited investors only. Tokenized platforms like Lofty operate in a different regulatory zone with additional considerations. Confirm the specific filing on EDGAR before committing.
+A: Most US platforms file under one of two SEC rules. Regulation A Tier 2 lets non-accredited investors in with disclosure and caps the raise at $75 million per twelve months. Regulation D is typically accredited investors only. Tokenized platforms like Lofty operate in a different regulatory zone with additional considerations. Confirm the specific filing on EDGAR before committing.
 
 **Q: How does psfnetwork compare to Arrived?**
-A: Both are Reg A LLC platforms with $100 minimums. Both let you pick the specific property. The legal structure is the same. Two real differences. First, Arrived's focus is single-family and short-term rentals; ours is mixed commercial and residential. Second, ours is presented as square-foot ownership rather than abstract shares, same underlying interest, different cognitive framing. If "I own 14 square feet of a building on East 7th Street" makes more sense to you than "I own 0.0042 of an LLC interest," you will probably prefer ours. If you do not care about the framing, Arrived's brand recognition and SFR focus is a fair reason to choose them.
+A: Both are Reg A LLC platforms with $100 minimums. Both let you pick the specific property. The legal structure is the same. Two real differences. First, Arrived focuses on single-family and short-term rentals; ours is mixed commercial and residential. Second, ours is presented as square-foot ownership rather than abstract shares. Same underlying interest, different cognitive framing. If "I own 14 square feet of a building on East 7th Street" makes more sense to you than "I own 0.0042 of an LLC interest," you will probably prefer ours. If you do not care about the framing, Arrived's brand recognition and SFR focus is a fair reason to choose them.
 
 ---
 
@@ -207,7 +211,7 @@ A: Both are Reg A LLC platforms with $100 minimums. Both let you pick the specif
 
 **Maya Reyes** is a Senior Editor at psfnetwork, covering fractional real estate, real-asset investing, and consumer finance.
 
-**Reviewed by Daniel Cho, CFA** - investment strategist and former real estate analyst.
+**Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 
 ---
 
