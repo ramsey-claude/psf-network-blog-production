@@ -1,6 +1,20 @@
 # psfnetwork blog production
 
+[![Content rules](https://github.com/ramsey-claude/psf-network-blog-production/actions/workflows/lint-content.yml/badge.svg)](https://github.com/ramsey-claude/psf-network-blog-production/actions/workflows/lint-content.yml)
+
 End-to-end blog production pipeline for psfnetwork, from draft to published, with humanization, multi-expert regulatory review, localization, and QA gates.
+
+## Quick start
+
+```bash
+make setup       # create venv, install pinned deps
+make lint        # run brand-voice and grammar checks
+make test        # run pytest suite
+make status      # repo health snapshot
+```
+
+See `CONTRIBUTING.md` for contributor protocol and `SECURITY.md` for the
+security policy.
 
 ## Overview
 

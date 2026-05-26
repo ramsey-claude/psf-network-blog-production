@@ -1,4 +1,6 @@
 .venv/
 __pycache__/
 *.pyc
-push.sh
+*.docx
+.DS_Store
+.pytest_cache/

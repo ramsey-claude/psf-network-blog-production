@@ -1,0 +1,25 @@
+# Pinned dependencies for the psfnetwork blog production pipeline.
+# Used by the .venv that runs Stage 8 commits, Stage 9 Drive deliveries,
+# Stage 10 post-publish QA cron, and check-rules.py linting.
+#
+# Install:
+#   python3 -m venv .venv
+#   .venv/bin/pip install -r requirements.txt
+#
+# Update protocol: bump a pin only when a security advisory or a needed
+# feature requires it. Run the test suite (pytest tests/) before pushing.
+
+# Google Drive REST API client (Stage 9 delivery + Stage 10 post-publish)
+google-api-python-client==2.149.0
+google-auth==2.36.0
+google-auth-oauthlib==1.2.1
+
+# YAML parsing for blog frontmatter (Stage 2 draft and render-for-drive)
+PyYAML==6.0.2
+
+# Test runner (tests/ directory)
+pytest==8.3.3
+
+# Optional: deeper grammar checking. Uncomment if Java is available in
+# the venv host and you want LanguageTool-backed Stage 7 Section E checks.
+# language-tool-python==2.8.1
