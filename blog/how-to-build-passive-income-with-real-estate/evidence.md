@@ -37,7 +37,7 @@ Tools: WebSearch + curl with browser UA for federal sources (per `checklist/rese
 ## E3 - Schedule K-1 (Form 1065) is used by partnerships/LLCs to report each partner's share
 
 - Claim refs: C7
-- Source URL: https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065
+- Source URL: https://www.irs.gov/instructions/i1065sk1
 - Source publisher: IRS
 - Source title: About Schedule K-1 (Form 1065)
 - Source date: current
@@ -66,7 +66,7 @@ Tools: WebSearch + curl with browser UA for federal sources (per `checklist/rese
 ## E6 - Real estate investments are not FDIC insured
 
 - Claim refs: C10
-- Source URL: https://www.fdic.gov/resources/deposit-insurance/what-is-deposit-insurance/ (follow `-L` for redirects)
+- Source URL: https://www.fdic.gov/resources/deposit-insurance/
 - Source publisher: FDIC
 - Source date: current
 - Confidence: high

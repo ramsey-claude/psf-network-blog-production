@@ -171,8 +171,8 @@ A: No. FDIC deposit insurance covers depositor accounts at insured banks, up to 
 3. SEC, "Real Estate Investment Trusts (REITs)", https://www.sec.gov/answers/reits.htm.
 4. SEC, "SEC Adopts Rules to Facilitate Smaller Companies' Access to Capital", https://www.sec.gov/news/pressrelease/2015-49.
 5. U.S. Congress, "H.R.3606 - Jumpstart Our Business Startups Act", https://www.congress.gov/bill/112th-congress/house-bill/3606.
-6. Internal Revenue Service, "About Schedule K-1 (Form 1065)", https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065.
-7. Federal Deposit Insurance Corporation, "What Is Deposit Insurance?", https://www.fdic.gov/resources/deposit-insurance/what-is-deposit-insurance/index.html.
+6. Internal Revenue Service, "Partner's Instructions for Schedule K-1 (Form 1065)", https://www.irs.gov/instructions/i1065sk1.
+7. Federal Deposit Insurance Corporation, "What Is Deposit Insurance?", https://www.fdic.gov/resources/deposit-insurance/.
 8. Ark7, "Fractional Real Estate Investing in Jersey City: 2026 Guide", https://ark7.com/blog/learn/in-depth/fractional-real-estate/fractional-real-estate-investing-jersey-city/.
 9. Bankrate, "Fractional Real Estate Investing: Pros And Cons", https://www.bankrate.com/investing/fractional-real-estate-investing/.
 

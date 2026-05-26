@@ -124,7 +124,7 @@ A: Yes, and most equity fractional offerings ARE crowdfunded under Reg A or Reg 
 1. SEC Office of Investor Education (investor.gov), "Regulation Crowdfunding", https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-crowdfunding.
 2. SEC, "Regulation A", https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a.
 3. SEC, "Regulation D Rule 506", https://www.sec.gov/resources-small-businesses/exempt-offerings/rule-506-regulation-d.
-4. IRS, "About Schedule K-1 (Form 1065)", https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065.
+4. IRS, "Partner's Instructions for Schedule K-1 (Form 1065)", https://www.irs.gov/instructions/i1065sk1.
 
 ---
 

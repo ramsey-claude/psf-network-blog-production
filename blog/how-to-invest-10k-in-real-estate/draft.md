@@ -131,7 +131,7 @@ A: Each fractional position generates a Schedule K-1 (Form 1065) because the und
 
 1. SEC Office of Investor Education (investor.gov), "Regulation A", https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a.
 2. SEC, "Real Estate Investment Trusts (REITs)", https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits.
-3. IRS, "About Schedule K-1 (Form 1065)", https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065.
+3. IRS, "Partner's Instructions for Schedule K-1 (Form 1065)", https://www.irs.gov/instructions/i1065sk1.
 4. Nareit, "REIT Industry Data", https://www.reit.com/data-research/data.
 
 ---

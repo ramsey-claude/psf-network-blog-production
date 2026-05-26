@@ -77,7 +77,7 @@ Each section opens with a 50–75 word answer capsule, then expands.
 
 Primary (must-have, IRS-domain):
 - IRS, "Partner's Instructions for Schedule K-1 (Form 1065)" — https://www.irs.gov/instructions/i1065sk1
-- IRS, "About Schedule K-1 (Form 1065)" — https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065
+- IRS, "About Schedule K-1 (Form 1065)" — https://www.irs.gov/instructions/i1065sk1
 - IRS, Publication 925 (Passive Activity Loss Rules) — https://www.irs.gov/publications/p925
 - IRS, Publication 946 (How to Depreciate Property / MACRS) — https://www.irs.gov/publications/p946
 

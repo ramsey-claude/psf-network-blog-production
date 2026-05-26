@@ -180,7 +180,7 @@ A: No. FDIC deposit insurance covers depositor accounts at insured banks. Fracti
 
 1. Internal Revenue Service (IRS), "About Schedule E (Form 1040)", https://www.irs.gov/forms-pubs/about-schedule-e-form-1040.
 2. IRS, "About Form 8582, Passive Activity Loss Limitations", referenced via Schedule E page, https://www.irs.gov/forms-pubs/about-schedule-e-form-1040.
-3. IRS, "About Schedule K-1 (Form 1065)", https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065.
+3. IRS, "Partner's Instructions for Schedule K-1 (Form 1065)", https://www.irs.gov/instructions/i1065sk1.
 4. SEC Office of Investor Education (investor.gov), "Real Estate Investment Trusts (REITs)", https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits.
 5. Federal Deposit Insurance Corporation, "What Is Deposit Insurance?", https://www.fdic.gov/resources/deposit-insurance/.
 6. Concreit, "Rental Property vs. Fractional Real Estate Investing", https://www.concreit.com/blog/rental-property-vs-fractional-real-estate-investing.

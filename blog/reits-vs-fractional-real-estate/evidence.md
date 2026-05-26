@@ -44,7 +44,7 @@ Tools: WebSearch + curl with browser UA for federal sources.
 ## E5 - Schedule K-1 (Form 1065) reports each partner's share
 
 - Claim refs: C11
-- Source URL: https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065
+- Source URL: https://www.irs.gov/instructions/i1065sk1
 - Source publisher: IRS
 - Source title: About Schedule K-1 (Form 1065)
 - Source date: 2024

@@ -60,7 +60,7 @@ Tools: WebSearch + curl with browser UA. Many claims cross-reference hub evidenc
 
 ## E8 - Schedule K-1 (Form 1065) (cross-ref)
 - Claim refs: C10
-- Source URL: https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065
+- Source URL: https://www.irs.gov/instructions/i1065sk1
 - Source publisher: IRS
 - Confidence: high
 

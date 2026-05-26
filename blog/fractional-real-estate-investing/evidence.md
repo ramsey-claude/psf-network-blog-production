@@ -79,7 +79,7 @@ Sourcing tools: WebSearch (3 queries succeeded) + WebFetch (federal pages return
 
 ## E8 - Schedule K-1 (Form 1065) reports partner share of partnership income
 - Claim ref: C11
-- Source URL: https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065
+- Source URL: https://www.irs.gov/instructions/i1065sk1
 - Source publisher: Internal Revenue Service (IRS)
 - Source title: About Schedule K-1 (Form 1065)
 - Source date: 2024
@@ -97,7 +97,7 @@ Sourcing tools: WebSearch (3 queries succeeded) + WebFetch (federal pages return
 
 ## E10 - FDIC insurance covers depositor accounts only; investments NOT FDIC insured
 - Claim refs: C7, C12
-- Source URL: https://www.fdic.gov/resources/deposit-insurance/what-is-deposit-insurance/index.html
+- Source URL: https://www.fdic.gov/resources/deposit-insurance/
 - Source publisher: Federal Deposit Insurance Corporation (FDIC)
 - Source title: What Is Deposit Insurance?
 - Source date: 2024

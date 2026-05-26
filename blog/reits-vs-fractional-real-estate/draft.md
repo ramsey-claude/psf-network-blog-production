@@ -158,7 +158,7 @@ A: A REIT is a specific legal entity that meets IRS REIT rules (90 percent distr
 
 1. SEC Office of Investor Education (investor.gov), "Real Estate Investment Trusts (REITs)", https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits.
 2. investor.gov, "Regulation A", https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a.
-3. Internal Revenue Service, "About Schedule K-1 (Form 1065)", https://www.irs.gov/forms-pubs/about-schedule-k-1-form-1065.
+3. Internal Revenue Service, "Partner's Instructions for Schedule K-1 (Form 1065)", https://www.irs.gov/instructions/i1065sk1.
 4. Internal Revenue Service, "About Schedule E (Form 1040)", https://www.irs.gov/forms-pubs/about-schedule-e-form-1040.
 5. Nareit, "REIT Industry Data & Performance", https://www.reit.com/data-research/data.
 6. NerdWallet, "Best-Performing REITs for May 2026", https://www.nerdwallet.com/investing/learn/reit-investing.
