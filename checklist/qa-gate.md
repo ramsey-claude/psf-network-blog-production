@@ -53,6 +53,18 @@ Work through every item. Mark each PASS or FAIL. Use the routing table to decide
 - [ ] AuthorCard, Disclaimer, CTABlock, Related blocks all present
 - [ ] Related lists exactly 3 internal links
 
+### E. Grammar and readability
+
+Added 2026-05-26 after customer feedback flagged "grammatical errors and mobile formatting issues" on a v2 humanized doc that Stage 7 had previously cleared. Sections A through D do not catch grammar; this section does.
+
+- [ ] `python3 workflow/check-rules.py blog/[slug]/draft-vN.md` returns zero BLOCKING and zero grammar-tier WARNINGs (`grammar-comma-splice`, `grammar-hyphen-as-emdash`, `grammar-bare-comparative`, `grammar-runon`)
+- [ ] No comma splices in body prose (heuristic flag: comma followed by independent-clause pronoun starting a new clause)
+- [ ] No hyphen-as-em-dash constructions (single hyphen surrounded by spaces between lowercase words)
+- [ ] No bare comparatives missing a standard ("the bigger X than Y realize" type)
+- [ ] No run-on sentences (heuristic: 40+ words, 3+ commas, no semicolon)
+- [ ] Wide tables fit a phone screen. 6+ column tables are restructured to 4 columns max, with non-critical columns folded into a narrative paragraph below. The 6-column comparison table flagged on 2026-05-26 was the failure mode this rule prevents.
+- [ ] Optional deeper check: run LanguageTool against the draft if Java is available in the pipeline venv. Recipe: `pip install language-tool-python; python -c "import language_tool_python; t = language_tool_python.LanguageTool('en-US'); print(t.check(open('blog/[slug]/draft-vN.md').read()))"`. Not required for PASS but recommended before any externally visible delivery.
+
 ## Routing on FAIL
 
 Do not blindly restart from Stage 1. Route by failure type:

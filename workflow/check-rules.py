@@ -60,6 +60,44 @@ WARNING = [
 ]
 
 
+# Grammar heuristics. These are intentionally conservative (more false negatives
+# than false positives) because we want a human to investigate every flag, not
+# to drown in noise. The customer feedback on 2026-05-26 ("grammatical errors")
+# was real grammar issues these patterns would have caught.
+#
+# This is not a replacement for a full grammar engine. For deeper checks, run
+# LanguageTool (see checklist/qa-gate.md Section E). These patterns catch the
+# specific failure modes that have actually slipped through in production.
+GRAMMAR = [
+    # Hyphen used as em-dash substitute. " word - word " with single hyphen
+    # surrounded by spaces and flanked by lowercase letters is almost always
+    # a leftover em-dash construction that should be a colon or a comma.
+    ('grammar-hyphen-as-emdash',
+     re.compile(r'[A-Za-z][A-Za-z ,.]* - [a-z]'),
+     'hyphen used like an em-dash; prefer colon, comma, or period'),
+
+    # Comma splice with starting independent-clause pronouns. Pattern:
+    # ", it is" / ", we are" / ", they are" mid-sentence often joins two
+    # independent clauses with a comma. False positives possible (legitimate
+    # appositives), so this is WARN, not BLOCK. Manual review per flag.
+    ('grammar-comma-splice',
+     re.compile(r', (it is|it does|it was|we are|we have|we did|they are|they have|they did) [a-z]', re.IGNORECASE),
+     'possible comma splice; verify the comma is not joining two independent clauses'),
+
+    # "the [adjective]-er than [noun] realize" comparative-without-standard.
+    # Caught the "bigger split than people realize" issue.
+    ('grammar-bare-comparative',
+     re.compile(r'\bthe (bigger|smaller|larger|harder|easier|simpler|deeper) [a-z]+ than'),
+     'comparative may be missing a standard of comparison; consider rephrasing'),
+
+    # Run-on: a sentence with three or more commas that has no period or
+    # semicolon between an independent-clause start and the end. Heuristic
+    # only; flags long comma-laden sentences for manual review.
+    # Implementation: split into sentences (by . or !), check each.
+    # Done in code below, not regex.
+]
+
+
 def default_scope():
     files = []
     for pattern in ['README.md', 'ROADMAP.md']:
@@ -128,6 +166,34 @@ def check_file(path):
             if line_no in allowed_lines:
                 continue
             warning.append((name, line_no, m.group(0)[:60]))
+    for name, pattern, desc in GRAMMAR:
+        for m in pattern.finditer(text):
+            line_no = text[:m.start()].count('\n') + 1
+            if line_no in allowed_lines:
+                continue
+            warning.append((name, line_no, m.group(0)[:80]))
+
+    # Run-on sentence heuristic: long sentences (>40 words) with >=3 commas
+    # and no semicolon in body prose. Skip code blocks and tables.
+    in_code = False
+    for i, line in enumerate(lines, start=1):
+        if line.strip().startswith('```'):
+            in_code = not in_code
+            continue
+        if in_code:
+            continue
+        if line.strip().startswith('|') or line.strip().startswith('#') or line.strip().startswith('-'):
+            continue
+        if i in allowed_lines:
+            continue
+        # Split line into sentences by . ! ?
+        for sentence in re.split(r'(?<=[.!?])\s+', line):
+            word_count = len(sentence.split())
+            comma_count = sentence.count(',')
+            if word_count >= 40 and comma_count >= 3 and ';' not in sentence:
+                warning.append(('grammar-runon', i,
+                               f'long sentence ({word_count} words, {comma_count} commas, no semicolon); consider splitting'))
+
     return (blocking, warning)
 
 
