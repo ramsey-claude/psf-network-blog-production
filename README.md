@@ -28,7 +28,26 @@ Draft → Humanization Pass → Expert Panel Review → Revision → Localizatio
 
 ## Pipeline Stages
 
-### Stage 1: Humanization Pass
+The pipeline uses one authoritative stage numbering. See `workflow/pipeline.md` Stage map for the full table. The short version below is the production path a brief follows from input to delivery.
+
+| Stage | Name | Output |
+|-------|------|--------|
+| 1 | Research and evidence | `evidence.md`, `serp-snapshot.md` |
+| 2 | Draft generation | `draft.md` |
+| 2.5 | Humanization pass | revised `draft.md`, `humanization-log.md` |
+| 3 | Expert and editorial review | `expert-reviews/stage3-*.md` |
+| 4 | Revision | revised `draft.md`, `changelog.md` |
+| 5 | Localization | `localization-notes-EN-US.md` |
+| 6 | Expert re-check (conditional) | `expert-reviews/stage6-*.md` |
+| 7 | Pre-publish QA | `qa-report.md` (or `qa-report-vN.md`) |
+| 8 | Publish | commit on `main` |
+| 9 | Client delivery | `delivery-manifest.md` + Drive doc |
+| 10 | Post-publish QA | `post-publish-report.md` |
+| 11 | Post-run workflow QA | updated `workflow/incident-log.md` |
+
+Optional pre-stages (-4 to -1) handle incident-log readout, gap discovery, brief generation, and topic selection when the trigger does not specify a slug. Full spec in `workflow/pipeline.md`.
+
+### Stage 2.5: Humanization Pass (the new gate)
 A dedicated reviewer rewrites the draft to sound like a person wrote it. This is the only stage with the explicit mandate to break AI cadence and inject human signal. Six steps:
 
 1. AI tells sweep (per `checklist/ai-tells.md` ban list)
@@ -38,10 +57,10 @@ A dedicated reviewer rewrites the draft to sound like a person wrote it. This is
 5. Voice consistency (second person throughout)
 6. Specificity audit (named subjects, dollar figures, dates, no generic claims)
 
-The draft cannot enter Stage 2 with any HIGH-tier AI tell unresolved, all three Human Anchors missing, or a failed cadence/voice check. See `checklist/humanization-pass.md`.
+The draft cannot enter Stage 3 with any HIGH-tier AI tell unresolved, all three Human Anchors missing, or a failed cadence/voice check. See `checklist/humanization-pass.md`.
 
-### Stage 2: Expert Panel Discussion
-Eight US financial regulatory experts review the humanized draft simultaneously, each from their own domain:
+### Stage 3: Expert Panel Discussion
+Eight US financial regulatory experts plus an editorial reviewer read the humanized draft, each from their own domain:
 
 | Expert | Domain | Focus in psfnetwork content |
 |--------|--------|----------------------------|
@@ -53,23 +72,18 @@ Eight US financial regulatory experts review the humanized draft simultaneously,
 | CFPB | Consumer Protection | Consumer-facing claims, fee disclosures |
 | FINRA | Broker-Dealers | Brokerage comparisons, investment return claims |
 | FSOC | Systemic Risk | Macro-financial risk statements |
+| Editorial | Reader experience and brand voice | Hook, capsule, flow, structure (see `checklist/editorial-review.md`) |
 
-Each expert flags issues in their domain. The panel reaches consensus on required revisions before the content moves forward.
+Each reviewer flags issues in their domain. The moderator (`checklist/moderator.md`) reaches consensus on required revisions before content advances to Stage 4.
 
-### Stage 3: Content Revision
-Draft is revised based on expert panel feedback. Flagged terms, claims, and structures are corrected. The revised draft is documented with a change log. Voice changes from this stage that risk re-introducing AI tells trigger a targeted humanization re-pass.
+### Stages 4 to 6: Revision, Localization, Re-check
+Stage 4 applies consensus fixes from Stage 3, documented in `changelog.md`. Stage 5 localizes to US English (`target_markets: ["EN-US"]`, see `checklist/localization-guide.md`). Stage 6 runs the expert panel again ONLY if Stage 5 changed financial terms or disclosures, per `checklist/expert-routing.md`.
 
-### Stage 4: Localization Review
-A localization specialist reviews the revised content for US English voice and US market-specific language. psfnetwork operates exclusively in the US market with English-only content (`target_markets: ["EN-US"]`). Localization covers:
-- US English register and tone (en-US, no UK spellings)
-- US regulatory terminology alignment (SEC, FINRA, IRS, state bodies)
-- US conventions: USD currency, MM/DD/YYYY dates, imperial units for real estate
+### Stage 7: Pre-publish QA Gate
+Final pre-publication checklist (see `checklist/qa-gate.md`, Sections A through E). If any BLOCKING item fails, content routes back per the routing table; no blanket Stage 1 restart. Section E grammar checks added 2026-05-26 after customer feedback.
 
-### Stage 5: Expert Re-check
-The localized content goes back through the expert panel. Localization must not introduce inaccurate financial terminology or weaken regulatory compliance language. If issues are found, content returns to Stage 3.
-
-### Stage 6: QA Gate
-Final pre-publication checklist (see `checklist/qa-gate.md`). If any item fails, the pipeline restarts from Stage 1 with the failure reason documented.
+### Stages 8 to 11: Publish, Deliver, Monitor, Retrospect
+Stage 8 commits all artifacts to `main`. Stage 9 delivers a native Google Doc to the operator's Drive folder via `workflow/deliver.py` (which enforces a QA-report check before upload). Stage 10 verifies the live URL once published. Stage 11 runs a once-per-batch retrospective plus meta-QA on pipeline artifacts (see `checklist/meta-qa.md`).
 
 ## Repository Structure
 

@@ -49,6 +49,18 @@ Good: "The standard pitch from REITs is that they offer real estate exposure wit
 
 ---
 
+## Source authority
+
+The brief author is whoever runs Stage -2 (topic generation). For autonomous runs, that is Claude. For operator-initiated runs, that is Onur.
+
+Neither role has authority to invent Human Anchor content. Anchors come from:
+
+- **Real Story:** investor relations call notes, support transcripts, founder anecdotes. Requires an operator-attested source line.
+- **POV Anchor:** the operator's written record of what psfnetwork stands for on this topic. Lives in `brand/voice-samples/` (founder essays, public statements) or the operator's interview notes.
+- **Contrarian Note:** the operator's written critique of the industry's default framing for this topic. Same source as POV Anchor.
+
+If none of the above are available for a topic, Stage -2 halts with `human-anchor-source-missing` and produces no brief. The operator provides the source material via a Slack DM, an interview transcript, or a curated set of investor stories. Brief generation does not proceed otherwise.
+
 ## How to source Human Anchors
 
 If the brief author does not have direct input from a real psfnetwork source, they must request one before submitting the brief. Acceptable sources:

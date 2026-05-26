@@ -4,6 +4,24 @@ Single source of truth for everything the pipeline has learned the hard way. **R
 
 **Update protocol:** Every batch run ends with the `checklist/post-run-qa.md` retrospective. New incidents are appended to "Incident history" and any new permanent rule is appended to "Active rules". The log is committed to `main` as part of the post-run QA push.
 
+### Entry template
+
+Every new incident-history entry uses this format. Copy and fill in.
+
+```markdown
+### YYYY-MM-DD: One-line headline
+
+- **Stage:** N (Name of stage)
+- **Symptom:** what the operator or customer saw
+- **Root cause:** what was actually broken
+- **Fix:** what was changed in this incident
+- **Rule:** the new active rule (if any), or "no new rule, one-off"
+- **Tests:** tests/test_X.py::test_Y (if a regression test was added)
+- **Reference:** commit SHA or PR link
+```
+
+Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and produce an entry of the same shape, classified as `customer-feedback`.
+
 ---
 
 ## Active rules (apply on every run)

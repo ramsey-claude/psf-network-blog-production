@@ -48,4 +48,11 @@ humanize-status:  ## Show which slugs have a v2 humanized draft
 		fi \
 	done
 
+brief-preflight:  ## Verify a brief is ready for Stage 2. Usage: make brief-preflight SLUG=<slug>
+	@if [ -z "$(SLUG)" ]; then echo "Usage: make brief-preflight SLUG=<slug>"; exit 2; fi
+	$(PY) workflow/brief_preflight.py blog/$(SLUG)/brief.md
+
+meta-qa:  ## Stage 11 sub-step: scan operational artifacts against checklist/meta-qa.md
+	$(PY) workflow/check-rules.py README.md ROADMAP.md $$(find checklist workflow brand -name '*.md')
+
 status: lint list-blog humanize-status  ## One-shot repo health snapshot

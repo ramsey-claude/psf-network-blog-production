@@ -102,6 +102,8 @@ Draft follows the component order in `brand/template-structure.md`. Every claim 
 
 The draft is responsible for producing title and meta description on its own. They are not retro-fitted in QA - they must be present and within length rules when Stage 2 ends.
 
+**Brief preflight (mandatory before draft starts).** Run `python3 workflow/brief_preflight.py blog/[slug]/brief.md`. Exit 0 means proceed. Exit 1 means the brief is missing required sections per `checklist/brief-required-sections.md` (most commonly the Human Anchors section or one of its sub-fields). Stage 2 does NOT start until the brief passes. Tests pin the contract: `tests/test_brief_preflight.py`.
+
 ## Stage 2.5 - Humanization pass
 **Input:** `draft.md`, `brief.md` (Human Anchors section), `brand/tone-and-voice.md`, `brand/voice-samples/`, `checklist/ai-tells.md`
 **Output:** `draft.md` (revised in place), `humanization-log.md`
@@ -218,28 +220,6 @@ My Drive/
 
 **Output:** `delivery-manifest.md` in the repo.
 
-## Stage 11 - Post-run workflow QA
-
-Runs once at the end of every batch (after the last slug publishes or the run halts on a stop condition). Spec in `checklist/post-run-qa.md`.
-
-The output is an updated `workflow/incident-log.md` committed to `main`. This is meta-QA on the pipeline itself, blog-level QA is handled by Stages 7 and 10.
-
-**Triggers:**
-- Last slug in a batch reaches `stage: "published"`.
-- Batch halts on a documented stop condition.
-- Operator-initiated interrupt (record what was in flight).
-
-**Outputs:**
-- Updated `workflow/incident-log.md` on `main`.
-- One-line summary: slugs processed, halts, new incidents, open issues count.
-- `workflow/meta-qa-report-YYYY-MM-DD.md` from the Stage 11 meta-QA sub-step.
-
-**Sub-step: meta-QA on pipeline artifacts.** Before committing the incident-log update, run the checks in `checklist/meta-qa.md` against `README.md`, `ROADMAP.md`, `checklist/**/*.md`, `workflow/**/*.md`, `brand/**/*.md`, and any public-facing customer wireframes in the working tree. BLOCKING failures halt the retrospective until fixed. Added 2026-05-26 after the v3 humanization rollout shipped 101 em-dashes across 7 operational files because Stage 7 only inspected blog drafts.
-
-**Halt conditions:** `incident-log-conflict` (log diverged on `main` mid-run; rebase needed), `auth-broken-*` sentinel present, `meta-qa-failed` (BLOCKING violations found in pipeline artifacts).
-
-The next run's Stage -4 reads this updated log, closing the loop.
-
 ## Stage 10 - Post-publish QA (live URL)
 Runs automatically once the live URL is available. See `checklist/qa-gate-post-publish.md`.
 
@@ -263,6 +243,28 @@ These appear in the generated `post-publish-report.md` as "Manual follow-up" and
 **Output:** `post-publish-report.md` in each slug's directory.
 
 Failures here do not restart the production pipeline. They generate targeted remediation tasks (schema fix, performance ticket, content edit pushed as an update).
+
+## Stage 11 - Post-run workflow QA
+
+Runs once at the end of every batch (after the last slug publishes or the run halts on a stop condition). Spec in `checklist/post-run-qa.md`.
+
+The output is an updated `workflow/incident-log.md` committed to `main`. This is meta-QA on the pipeline itself, blog-level QA is handled by Stages 7 and 10.
+
+**Triggers:**
+- Last slug in a batch reaches `stage: "published"`.
+- Batch halts on a documented stop condition.
+- Operator-initiated interrupt (record what was in flight).
+
+**Outputs:**
+- Updated `workflow/incident-log.md` on `main`.
+- One-line summary: slugs processed, halts, new incidents, open issues count.
+- `workflow/meta-qa-report-YYYY-MM-DD.md` from the Stage 11 meta-QA sub-step.
+
+**Sub-step: meta-QA on pipeline artifacts.** Before committing the incident-log update, run the checks in `checklist/meta-qa.md` against `README.md`, `ROADMAP.md`, `checklist/**/*.md`, `workflow/**/*.md`, `brand/**/*.md`, and any public-facing customer wireframes in the working tree. BLOCKING failures halt the retrospective until fixed. Added 2026-05-26 after the v3 humanization rollout shipped 101 em-dashes across 7 operational files because Stage 7 only inspected blog drafts.
+
+**Halt conditions:** `incident-log-conflict` (log diverged on `main` mid-run; rebase needed), `auth-broken-*` sentinel present, `meta-qa-failed` (BLOCKING violations found in pipeline artifacts).
+
+The next run's Stage -4 reads this updated log, closing the loop.
 
 ## State file
 

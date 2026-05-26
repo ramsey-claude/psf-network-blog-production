@@ -97,6 +97,30 @@ If a specific is not available from `evidence.md`, the claim is generic-tagged. 
 
 ---
 
+## Edge cases
+
+### Voice samples directory is empty
+
+`brand/voice-samples/` is checked at the start of the pass. If it contains only the README (no actual sample files):
+
+- The pass proceeds with WARN level, not BLOCK
+- The humanization log explicitly notes "voice-samples-empty: drafting against tone-and-voice.md spec only"
+- The Step 5 (voice consistency) check is harder to verify without samples; the reviewer leans more conservatively (more deletion of voice-shifty phrasings)
+
+When voice samples become available, future runs auto-pick them up. No code change needed.
+
+### Human Anchor appears invented
+
+If the Real Story, POV, or Contrarian content in the brief looks generic or invented (no name + no city + no dollar figure + no date in Real Story; no specific contrarian claim; no first-person admission in POV), Stage 2.5 cannot reliably detect this; the brief-preflight check catches missing or short anchors, not low-quality ones.
+
+The humanization reviewer is the manual check. If an anchor reads invented, log it under "Open items for Stage 3" in the humanization log and proceed. Stage 3 Editorial reviewer is the second pair of eyes; if both pass, the anchor is accepted as written.
+
+### Conflict between voice goal and SEO requirement
+
+If a humanization step wants to rewrite an H2 in narrative form but the H2 is the canonical question-format target for a featured snippet, keep the question H2 and rewrite the body capsule underneath in narrative voice. This compromise was added 2026-05-26 after the first v2 over-rotated and broke the SEO structure.
+
+The qa-report B7 check verifies this balance (substantive H2s in question format, body in narrative voice).
+
 ## Reviewer profile
 
 The humanization reviewer is one person (or one model instance with this checklist as its system prompt). They are explicitly not a regulator. Their authority is voice and reader experience. They do not flag compliance issues, those belong to Stage 3.
