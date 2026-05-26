@@ -33,7 +33,7 @@ Tools: WebSearch + curl with browser UA. Many claims cross-reference hub evidenc
 - Source URL: https://fundrise.com/
 - Source publisher: Fundrise
 - Source date: 2026
-- Exact quote (per WebSearch): "The Fundrise Flagship Fund is a $1.2 billion private real estate fund that lets you invest without needing hundreds of thousands of dollars, and you don't need to be an accredited investor — you can get started with as little as $10."
+- Exact quote (per WebSearch): "The Fundrise Flagship Fund is a $1.2 billion private real estate fund that lets you invest without needing hundreds of thousands of dollars, and you don't need to be an accredited investor, you can get started with as little as $10."
 - Confidence: medium
 
 ## E5 - Lofty $50 minimum

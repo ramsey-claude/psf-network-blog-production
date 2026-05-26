@@ -4,7 +4,7 @@
 
 Working title: **"How Is Fractional Real Estate Taxed? The K-1 Mechanics for 2026"**
 
-Character count target: 55–60. Counts: 58. Focus keyword "how is fractional real estate taxed" is in the first third.
+Character count target: 55-60. Counts: 58. Focus keyword "how is fractional real estate taxed" is in the first third.
 
 Alternative (if Stage 4 needs swap): "How Fractional Real Estate Is Taxed: A K-1 Guide for 2026" (58 chars).
 
@@ -34,18 +34,18 @@ Alternative (if Stage 4 needs swap): "How Fractional Real Estate Is Taxed: A K-1
 
 ## H2 section plan
 
-Each section opens with a 50–75 word answer capsule, then expands.
+Each section opens with a 50-75 word answer capsule, then expands.
 
 1. **What tax form does fractional real estate generate, K-1 or 1099?**
-   Capsule: Most fractional real estate uses a pass-through LLC, which issues an IRS Schedule K-1 (Form 1065) — not a 1099. K-1 reports your share of partnership income, deductions, and credits. A 1099 shows up only if you invested in a debt-side product (interest income) or a REIT-structured offering (1099-DIV).
+   Capsule: Most fractional real estate uses a pass-through LLC, which issues an IRS Schedule K-1 (Form 1065), not a 1099. K-1 reports your share of partnership income, deductions, and credits. A 1099 shows up only if you invested in a debt-side product (interest income) or a REIT-structured offering (1099-DIV).
    Body: Form 1065 vs Form 1120-S distinction; LLCs default to partnership tax classification; the regulatory tie to Reg A LLCs.
 
 2. **What is on a fractional real estate K-1?**
-   Capsule: Your K-1 shows rental real estate income (Box 2), depreciation and other deductions, capital gains on property sales (Box 9a/10), and your share of partnership liabilities. The values are your share — not the LLC's total — and they flow to specific lines on your Form 1040 (mostly Schedule E).
+   Capsule: Your K-1 shows rental real estate income (Box 2), depreciation and other deductions, capital gains on property sales (Box 9a/10), and your share of partnership liabilities. The values are your share, not the LLC's total, and they flow to specific lines on your Form 1040 (mostly Schedule E).
    Body: Walk through the actual K-1 boxes that matter for a fractional investor; what lands on Schedule E.
 
 3. **How does depreciation pass through to fractional investors?**
-   Capsule: The LLC depreciates the building (typically 27.5 years residential, 39 years commercial straight-line under MACRS) and allocates each investor a share of that depreciation expense. Depreciation often makes K-1 taxable income lower than cash distributed — creating "phantom losses" that can offset other passive income but not active wage income.
+   Capsule: The LLC depreciates the building (typically 27.5 years residential, 39 years commercial straight-line under MACRS) and allocates each investor a share of that depreciation expense. Depreciation often makes K-1 taxable income lower than cash distributed, creating "phantom losses" that can offset other passive income but not active wage income.
    Body: MACRS basics, passive activity loss rules (§469), why this is the friction-but-also-benefit nobody mentions upfront.
 
 4. **When does the K-1 arrive and what does it mean for my filing?**
@@ -53,7 +53,7 @@ Each section opens with a 50–75 word answer capsule, then expands.
    Body: Partnership tax calendar; why operators file extensions; the operator practice of providing tax estimates in advance.
 
 5. **Do I have to file in every state where the property is located?**
-   Capsule: Sometimes. If the property generates income in a state with an income tax, your share of that income may be taxable in that state. Some LLCs file composite or withholding returns on investors' behalf. Across a multi-property portfolio, you can end up filing in 3–5 states. Ask the operator about composite returns before you invest.
+   Capsule: Sometimes. If the property generates income in a state with an income tax, your share of that income may be taxable in that state. Some LLCs file composite or withholding returns on investors' behalf. Across a multi-property portfolio, you can end up filing in 3-5 states. Ask the operator about composite returns before you invest.
    Body: State sourcing rules; how composite returns work; the practical complexity at scale.
 
 6. **What happens at sale or exit?**
@@ -76,10 +76,10 @@ Each section opens with a 50–75 word answer capsule, then expands.
 ## Source plan
 
 Primary (must-have, IRS-domain):
-- IRS, "Partner's Instructions for Schedule K-1 (Form 1065)" — https://www.irs.gov/instructions/i1065sk1
-- IRS, "About Schedule K-1 (Form 1065)" — https://www.irs.gov/instructions/i1065sk1
-- IRS, Publication 925 (Passive Activity Loss Rules) — https://www.irs.gov/publications/p925
-- IRS, Publication 946 (How to Depreciate Property / MACRS) — https://www.irs.gov/publications/p946
+- IRS, "Partner's Instructions for Schedule K-1 (Form 1065)", https://www.irs.gov/instructions/i1065sk1
+- IRS, "About Schedule K-1 (Form 1065)", https://www.irs.gov/instructions/i1065sk1
+- IRS, Publication 925 (Passive Activity Loss Rules), https://www.irs.gov/publications/p925
+- IRS, Publication 946 (How to Depreciate Property / MACRS), https://www.irs.gov/publications/p946
 
 Secondary (industry context, NOT regulatory authority):
 - Crowd Street, "How Schedule K-1s Affect Your Tax Filing"

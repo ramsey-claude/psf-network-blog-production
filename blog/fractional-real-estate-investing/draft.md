@@ -120,7 +120,7 @@ Fractional real estate suits an investor who:
 - Wants real estate exposure without becoming a landlord
 - Understands and accepts that principal loss is possible
 
-It does not suit an investor who needs the capital back within 12 months, expects guaranteed returns (no investment offers those), or is uncomfortable with the legal structure of holding LLC membership interests.
+It does not suit an investor who needs the capital back within 12 months, expects a return promise (no investment offers one), or is uncomfortable with the legal structure of holding LLC membership interests.
 
 ---
 
