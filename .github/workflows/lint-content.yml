@@ -1,0 +1,40 @@
+name: Content rules
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-rules:
+    name: Brand voice and punctuation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Run check-rules.py against changed files
+        run: |
+          # On push: compare HEAD to its parent. On PR: compare to base branch.
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          else
+            BASE_SHA="${{ github.event.before }}"
+          fi
+
+          # If BASE_SHA is empty or all-zero (first push, force-push), fall back to full repo scan.
+          if [ -z "$BASE_SHA" ] || [ "$BASE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            echo "No diff base available; scanning full default scope."
+            python3 workflow/check-rules.py
+          else
+            echo "Comparing against $BASE_SHA"
+            python3 workflow/check-rules.py --diff-base "$BASE_SHA"
+          fi

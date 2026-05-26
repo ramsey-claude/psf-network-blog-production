@@ -182,6 +182,10 @@ blog/[slug]/expert-reviews/         (all stage3 and stage6 files)
 
 Commit message: `feat(blog): publish [slug] - passed pre-publish QA on loop [n]`. Update `pipeline-state.json` with `stage: "published"`.
 
+**Pre-commit rule check (autonomous, not a local git hook).** Before the commit, run `python3 workflow/check-rules.py --staged` (or with explicit file args). Exit code 0 means proceed. Exit code 1 means a BLOCKING brand-voice or punctuation violation was found in the staged content; halt with `content-rule-violation`, log the file/line/pattern, and route to Stage 4 (Revision). Do NOT bypass with `git commit --no-verify`. The same script runs as a GitHub Action on every push (`.github/workflows/lint-content.yml`) as a server-side backup catch.
+
+The operator does not need to install anything locally. Pipeline runs the check, GitHub re-runs it on receipt. Local `.githooks/pre-commit` is provided as optional convenience for anyone editing the repo by hand.
+
 ## Stage 9 - Client delivery (Google Drive)
 After GitHub publish, mirror the post's body to the operator's Google Drive as a styled native Google Doc. Full spec in `checklist/delivery.md`.
 
