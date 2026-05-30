@@ -3,12 +3,34 @@
   "title": "Best Fractional Real Estate Platforms in 2026: A Comparison",
   "stage": "published",
   "stage_name": "complete-stage10-deferred",
-  "completed_steps": ["stage-minus1", "stage0", "stage1", "stage2", "stage3", "stage4", "stage5-noop", "stage6-noop", "stage7-qa-pass", "stage8-github-publish", "stage9-drive-delivery"],
-  "pending_steps": ["stage10-deferred"],
+  "completed_steps": [
+    "stage-minus1",
+    "stage0",
+    "stage1",
+    "stage2",
+    "stage3",
+    "stage4",
+    "stage5-noop",
+    "stage6-noop",
+    "stage7-qa-pass",
+    "stage8-github-publish",
+    "stage9-drive-delivery",
+    "stage10-post-publish-qa"
+  ],
+  "pending_steps": [
+    "stage10-deferred"
+  ],
   "loop_count": 0,
-  "last_updated": "2026-05-14",
-  "expert_panel": ["SEC", "FINRA", "CFPB", "Editorial"],
-  "target_markets": ["EN-US"],
+  "last_updated": "2026-05-30",
+  "expert_panel": [
+    "SEC",
+    "FINRA",
+    "CFPB",
+    "Editorial"
+  ],
+  "target_markets": [
+    "EN-US"
+  ],
   "flags": {
     "high_severity_issues_count": 0,
     "med_severity_issues_count": 1,
@@ -16,9 +38,44 @@
     "drive_delivery": {
       "delivered_at": "2026-05-14",
       "folder_id": "1jKP0k2m8tg6QeRKQEtzvx9jRWiuvwWqY",
-      "files": [{"id": "1ltEx81E3evOVl9veucPpgvNl4YHVoep4byzD_d_mHDs", "url": "https://docs.google.com/document/d/1ltEx81E3evOVl9veucPpgvNl4YHVoep4byzD_d_mHDs/edit"}]
+      "files": [
+        {
+          "id": "1ltEx81E3evOVl9veucPpgvNl4YHVoep4byzD_d_mHDs",
+          "url": "https://docs.google.com/document/d/1ltEx81E3evOVl9veucPpgvNl4YHVoep4byzD_d_mHDs/edit"
+        }
+      ]
+    },
+    "post_publish_qa": {
+      "completed_at": "2026-05-30",
+      "live": true,
+      "http_status": 200,
+      "checks": {
+        "canonical_present": true,
+        "canonical_matches": false,
+        "canonical_value": "https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms",
+        "title_present": true,
+        "title_length_ok": false,
+        "title_value": "Best Fractional Real Estate Platforms in 2026 (Honest Comparison) - PSFnetwork",
+        "meta_description_present": false,
+        "meta_description_length_ok": false,
+        "schemas_found": [
+          "FAQPage"
+        ],
+        "has_article_schema": false,
+        "has_faq_schema": true,
+        "has_breadcrumb_schema": false
+      }
     }
   },
-  "evidence_summary": {"claims_total": 15, "claims_sourced": 11, "claims_dropped": 4},
-  "qa_summary": {"total_items": 33, "pass": 33, "fail": 0, "recommendation": "PUBLISH"}
+  "evidence_summary": {
+    "claims_total": 15,
+    "claims_sourced": 11,
+    "claims_dropped": 4
+  },
+  "qa_summary": {
+    "total_items": 33,
+    "pass": 33,
+    "fail": 0,
+    "recommendation": "PUBLISH"
+  }
 }
