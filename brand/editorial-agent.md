@@ -13,9 +13,10 @@ optimized, or structurally repetitive.
 
 This document is the writer/editor charter. It does not replace the enforcement
 gates in `checklist/ai-tells.md`, `checklist/humanization-pass.md`,
-`checklist/editorial-review.md`, or `workflow/check-rules.py`. Those gates verify
-the output of this charter. Where this charter and a gate disagree on a hard
-rule, the gate wins.
+`checklist/editorial-review.md`, `checklist/human-editor-qa.md`, or
+`workflow/check-rules.py`. Those gates verify the output of this charter, and the
+Human Editor QA (Stage 7.5) is the final binding read before publish. Where this
+charter and a gate disagree on a hard rule, the gate wins.
 
 ---
 
