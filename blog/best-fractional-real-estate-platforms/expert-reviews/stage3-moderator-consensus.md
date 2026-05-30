@@ -12,8 +12,8 @@ CONSOLIDATED ISSUE:
 
 MODERATOR OBSERVATIONS:
 - This is the cleanest review in the cluster so far. SEC issued no MEDs, only LOW/pass notes. The structural-comparison framing pays off.
-- The psfnetwork inclusion was correctly judged by all reviewers as structural-not-promotional. No fix needed.
-- "Best Fractional Real Estate Platforms" SEO category is dominated by self-promotional listicles; psfnetwork's neutral framing is the editorial differentiator.
+- The PSFnetwork inclusion was correctly judged by all reviewers as structural-not-promotional. No fix needed.
+- "Best Fractional Real Estate Platforms" SEO category is dominated by self-promotional listicles; PSFnetwork's neutral framing is the editorial differentiator.
 
 DECISION: PROCEED_TO_STAGE_4
 LOOP_COUNT_AFTER_THIS_DECISION: 0

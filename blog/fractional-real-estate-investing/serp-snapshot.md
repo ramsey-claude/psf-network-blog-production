@@ -17,7 +17,7 @@ Top organic (US):
 9. Ark7 - Fractional Real Estate Investing Kansas City: 2026 Guide
 10. Ark7 - Fractional Real Estate Investing in Lincoln: 2026 Guide
 
-**Pattern:** Ark7 dominates with 8 of 10 results via programmatic city pages. Binaryx is the only non-programmatic "complete guide" angle. **The clean canonical explainer "What is fractional real estate investing?" at 2026 freshness is essentially unowned at the freshness layer.** This is the gap psfnetwork should fill.
+**Pattern:** Ark7 dominates with 8 of 10 results via programmatic city pages. Binaryx is the only non-programmatic "complete guide" angle. **The clean canonical explainer "What is fractional real estate investing?" at 2026 freshness is essentially unowned at the freshness layer.** This is the gap PSFnetwork should fill.
 
 ## Query 2: "what is fractional real estate investing how does it work"
 
@@ -49,7 +49,7 @@ Top organic (US):
 9. Boston Apartments - Shared Ownership
 10. FNRP - Investor's Guide
 
-**Pattern:** Pros/cons framing dominates. Bankrate is the authority voice. Few results quantify risks specifically. Opportunity: psfnetwork can quantify the risks with specific sourced examples.
+**Pattern:** Pros/cons framing dominates. Bankrate is the authority voice. Few results quantify risks specifically. Opportunity: PSFnetwork can quantify the risks with specific sourced examples.
 
 ## People Also Ask (approximation)
 
@@ -64,7 +64,7 @@ Inferred from query result patterns. Confidence: best-effort (`WebSearch` does n
 
 ## AI Overview / Featured Snippet
 
-Not directly detected through `WebSearch` result structure. Best-effort note: Realbricks and Bankrate content is being heavily cited by AI summarizers per the search result blurbs. psfnetwork's GEO-structured answer capsules should target displacing those summarizers.
+Not directly detected through `WebSearch` result structure. Best-effort note: Realbricks and Bankrate content is being heavily cited by AI summarizers per the search result blurbs. PSFnetwork's GEO-structured answer capsules should target displacing those summarizers.
 
 ## Cannibalization check
 

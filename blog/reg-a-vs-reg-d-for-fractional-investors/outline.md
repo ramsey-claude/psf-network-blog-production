@@ -58,10 +58,10 @@ Each section opens with a 50-75 word answer capsule (hard-count before finalizin
 
 6. **Which framework do fractional real estate platforms typically use?**
    Capsule: Most consumer-facing fractional platforms operate under Regulation A Tier 2, because Tier 2 admits non-accredited investors with a per-offering cap of 10% of the greater of annual income or net worth (excluding primary residence). Larger commercial real estate syndications often use Reg D 506(c) when their target investors are accredited and the offering size exceeds the Reg A Tier 2 cap.
-   Body: Examples (Fundrise, Arrived, Realbricks, psfnetwork on Reg A; CrowdStreet, larger syndicators on Reg D).
+   Body: Examples (Fundrise, Arrived, Realbricks, PSFnetwork on Reg A; CrowdStreet, larger syndicators on Reg D).
 
-7. **How does this apply to psfnetwork specifically?**
-   Capsule: psfnetwork operates under Regulation A Tier 2, which means the offering is qualified by the SEC, the offering circular and ongoing reports are publicly filed on EDGAR, and non-accredited investors can participate subject to the 10% cap. The per-square-foot model is a unit-of-ownership detail, it doesn't change the regulatory framework. The framework is what enables the consumer-facing model.
+7. **How does this apply to PSFnetwork specifically?**
+   Capsule: PSFnetwork operates under Regulation A Tier 2, which means the offering is qualified by the SEC, the offering circular and ongoing reports are publicly filed on EDGAR, and non-accredited investors can participate subject to the 10% cap. The per-square-foot model is a unit-of-ownership detail, it doesn't change the regulatory framework. The framework is what enables the consumer-facing model.
    Body: Brief; link to offering circular on EDGAR for any specific property.
 
 ## FAQ candidates

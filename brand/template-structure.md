@@ -1,8 +1,8 @@
-# psfnetwork Blog Template - Component Structure
+# PSFnetwork Blog Template - Component Structure
 
-Canonical component order for every blog post on psfnetwork. The Stage 2 draft is written to map cleanly onto this order. Stage 7 QA verifies the draft contains every section.
+Canonical component order for every blog post on PSFnetwork. The Stage 2 draft is written to map cleanly onto this order. Stage 7 QA verifies the draft contains every section.
 
-Source: extracted from the psfnetwork blog template (Railway deployment) in a prior session. The deployment is a React SPA; the template cannot be re-extracted via `WebFetch` alone (server returns the HTML shell, components render client-side). To re-verify, open the deployment in a browser and inspect the rendered DOM.
+Source: extracted from the PSFnetwork blog template (Railway deployment) in a prior session. The deployment is a React SPA; the template cannot be re-extracted via `WebFetch` alone (server returns the HTML shell, components render client-side). To re-verify, open the deployment in a browser and inspect the rendered DOM.
 
 ---
 
@@ -21,7 +21,7 @@ Source: extracted from the psfnetwork blog template (Railway deployment) in a pr
 | 9 | FAQ | Accordion, minimum 5 Q/A pairs, schema-ready | `## FAQ` block, Q: / A: pairs |
 | 10 | Sources | Numbered, linked | `## Sources` block, numbered list |
 | 11 | AuthorCard | Name, credential, bio | `## Author` block |
-| 12 | Disclaimer | Standard psfnetwork disclaimer | `## Disclaimer` block (verbatim from `brand/tone-and-voice.md`) |
+| 12 | Disclaimer | Standard PSFnetwork disclaimer | `## Disclaimer` block (verbatim from `brand/tone-and-voice.md`) |
 | 13 | CTABlock | Full-width call to action | `## CTA` block |
 | 14 | Related | 3 related posts | `## Related` block, bulleted with internal links |
 | 15 | Footer | Site footer | (template chrome) |
@@ -96,7 +96,7 @@ Stage 7 QA verifies every field is populated and within length rules. See `check
 ### AuthorCard, Disclaimer, CTA, Related (components 11-14)
 - Authored as the final blocks of draft.md
 - Disclaimer text is verbatim from `brand/tone-and-voice.md`
-- CTA is short, action-oriented, links to psfnetwork product
+- CTA is short, action-oriented, links to PSFnetwork product
 - Related lists exactly 3 posts, each an internal link to a slug in `blog/`
 
 ---

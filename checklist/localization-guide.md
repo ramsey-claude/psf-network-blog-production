@@ -1,8 +1,8 @@
 # Localization Guide
 
-> **Operating scope:** psfnetwork operates in the US market only and publishes English-only content. The pipeline runs with `target_markets: ["EN-US"]`. No other markets or languages are in scope.
+> **Operating scope:** PSFnetwork operates in the US market only and publishes English-only content. The pipeline runs with `target_markets: ["EN-US"]`. No other markets or languages are in scope.
 
-This guide defines the scope and rules for the localization review stage (Stage 5) in the psfnetwork blog production pipeline.
+This guide defines the scope and rules for the localization review stage (Stage 5) in the PSFnetwork blog production pipeline.
 
 ---
 
@@ -27,7 +27,7 @@ Localization does **not** cover:
 
 | Market | Language | Register | Notes |
 |--------|----------|----------|-------|
-| US | English (en-US) | Professional, accessible | psfnetwork operates exclusively in the US market |
+| US | English (en-US) | Professional, accessible | PSFnetwork operates exclusively in the US market |
 
 ---
 

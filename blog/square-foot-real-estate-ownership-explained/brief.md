@@ -15,17 +15,17 @@
 | per square foot ownership | TBD - definitional query | TBD - low | I |
 | psf real estate investing | TBD - brand-adjacent | TBD - low | I |
 | fractional ownership square foot model | TBD - long-tail | TBD - very low | I |
-| psfnetwork model explained | TBD - branded | TBD - very low | I/N |
+| PSFnetwork model explained | TBD - branded | TBD - very low | I/N |
 
 ## ICP
-Investor who has seen psfnetwork or similar per-square-foot platforms and wants to understand the structural model deeply, beyond the marketing pitch. Or competitor-curious investor researching alternatives to share-based fractional platforms. Comfortable with technical detail on LLC structure, security characterization, and tax treatment.
+Investor who has seen PSFnetwork or similar per-square-foot platforms and wants to understand the structural model deeply, beyond the marketing pitch. Or competitor-curious investor researching alternatives to share-based fractional platforms. Comfortable with technical detail on LLC structure, security characterization, and tax treatment.
 
 ## Content Angle
 Deep dive on the per-square-foot ownership model. Hub post mentioned it as one section; this post owns the topic at definitional depth. Explains the structural facts (LLC interest, presentation layer, same securities law), the intuition advantages (anchoring to a physical unit), and the honest limits (it does not change risk or returns). Brand-friendly without being promotional.
 
 ## Competitor Gap
 - No competitor has a definitional deep-dive on per-square-foot ownership.
-- psfnetwork can own this keyword cluster permanently.
+- PSFnetwork can own this keyword cluster permanently.
 - Brand search demand will compound as more readers encounter the model.
 
 ## SEO Notes

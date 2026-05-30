@@ -70,7 +70,7 @@ Focus on: FDIC insurance limits ($250,000 per depositor per insured bank), no im
 Focus on: proportionality of systemic risk statements, sourcing, too-big-to-fail framing.
 
 ### Editorial (always invoked, last among reviewers)
-See `checklist/editorial-review.md`. Focus on: hook strength, answer capsule quality, narrative flow, sentence-level clarity, brand voice, banned constructions (em dashes, "guaranteed return", lowercased "psfnetwork", etc.). <!-- check-rules: allow -->
+See `checklist/editorial-review.md`. Focus on: hook strength, answer capsule quality, narrative flow, sentence-level clarity, brand voice, banned constructions (em dashes, "guaranteed return", mis-cased brand name (must be PSFnetwork), etc.). <!-- check-rules: allow -->
 
 ---
 

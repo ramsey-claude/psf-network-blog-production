@@ -10,7 +10,7 @@ Top organic for the focus keyword (from prior cluster runs):
 - Realbricks blog mentions
 - Concreit - Investor's Guide
 
-**Pattern:** Aggregator listicles dominate. Most are platform-promotional (Lofty's roundup features Lofty prominently; Realbricks features Realbricks). No competitor produces a credibly neutral 10-platform comparison. **psfnetwork's edge: neutral, criteria-anchored evaluation, naming psfnetwork only where its structural angle is genuinely a fit.**
+**Pattern:** Aggregator listicles dominate. Most are platform-promotional (Lofty's roundup features Lofty prominently; Realbricks features Realbricks). No competitor produces a credibly neutral 10-platform comparison. **PSFnetwork's edge: neutral, criteria-anchored evaluation, naming PSFnetwork only where its structural angle is genuinely a fit.**
 
 ## People Also Ask (approximation)
 

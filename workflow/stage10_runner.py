@@ -2,7 +2,7 @@
 """
 Stage 10 post-publish QA runner. Standalone — does not require a Claude session.
 
-For each published post in the psfnetwork repo:
+For each published post in the PSFnetwork repo:
 1. Check if the live URL (psfnetwork.com/blog/[slug]) responds 200.
 2. If live and Stage 10 not already done, run the automatable checks:
    - HTTP status 200

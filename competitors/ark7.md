@@ -56,6 +56,6 @@ Ark7 runs the most aggressive blog/SEO operation in the fractional real estate s
 - FAQ and educational hub
 - Effectively using blog as top-of-funnel acquisition channel
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-Ark7 is the dominant content player in US fractional real estate. psfnetwork should not try to out-Ark7 Ark7 on US city content. The differentiation is international/Gulf market focus and the square-foot ownership concept.
+Ark7 is the dominant content player in US fractional real estate. PSFnetwork should not try to out-Ark7 Ark7 on US city content. The differentiation is international/Gulf market focus and the square-foot ownership concept.

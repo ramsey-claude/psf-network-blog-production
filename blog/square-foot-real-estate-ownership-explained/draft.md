@@ -53,7 +53,7 @@ What the model changes is what you can picture. "I own 50 shares of a rental pro
 
 **Answer capsule:** Square-foot real estate ownership is a fractional-investing model that expresses your stake in a property as a number of square feet rather than as shares. You buy a membership interest in an LLC that owns the property; the LLC denominates ownership in square feet so the math anchors to the physical property. Legally, you hold a security regulated under SEC Regulation A or Regulation D, same as any other fractional real estate platform.
 
-The model is recent. It emerged as a presentation layer on top of standard Reg A LLC structures that platforms like Fundrise, Arrived, Ark7, and Realbricks already use. psfnetwork is the most prominent platform offering per-square-foot ownership as its default unit. The square-foot model does not require any change to securities law or LLC operating agreements; it is a naming and pricing convention.
+The model is recent. It emerged as a presentation layer on top of standard Reg A LLC structures that platforms like Fundrise, Arrived, Ark7, and Realbricks already use. PSFnetwork is the most prominent platform offering per-square-foot ownership as its default unit. The square-foot model does not require any change to securities law or LLC operating agreements; it is a naming and pricing convention.
 
 If a property is 1,200 square feet and the platform values it at $480,000, the per-square-foot price is $400. A 50 square foot purchase costs $20,000 and represents 4.17 percent of the property. The math is identical to buying 50 shares of an equivalent share-based offering at $400 per share; the units just have a physical anchor.
 
@@ -125,8 +125,8 @@ A: No. You hold an LLC interest, not a deed to a specific area of the property. 
 **Q: How is income calculated for a 50-square-foot stake?**
 A: Proportional to your stake percentage. If the property is 1,200 square feet, your 50 square feet is 4.17 percent of the property. You receive 4.17 percent of the net rental income, distributed monthly or quarterly, and 4.17 percent of any appreciation when the property is sold.
 
-**Q: Is square-foot ownership available outside psfnetwork?**
-A: psfnetwork is the most prominent platform offering per-square-foot ownership as its default unit. A few other platforms have experimented with the framing. Most US fractional platforms still use share-based units.
+**Q: Is square-foot ownership available outside PSFnetwork?**
+A: PSFnetwork is the most prominent platform offering per-square-foot ownership as its default unit. A few other platforms have experimented with the framing. Most US fractional platforms still use share-based units.
 
 **Q: How does this compare to a REIT?**
 A: A REIT pools many properties and distributes at least 90 percent of taxable income as dividends. Square-foot fractional ownership is a stake in one specific property held by an LLC. The two are structurally different in regulatory frame, tax treatment (1099-DIV vs K-1), liquidity (daily for publicly traded REIT vs multi-year hold for fractional), and unit basis. See our REITs vs Fractional guide for the full comparison.
@@ -146,7 +146,7 @@ A: No. You still receive a Schedule K-1 (Form 1065) because the underlying entit
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at psfnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA** - investment strategist and former real estate analyst.
 
@@ -160,7 +160,7 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Want to see square-foot ownership applied to a real property? psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+Want to see square-foot ownership applied to a real property? PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 
