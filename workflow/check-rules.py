@@ -134,6 +134,21 @@ def diff_base_files(base_sha):
             if line.endswith('.md') and (REPO_ROOT / line).exists()]
 
 
+# Path prefixes (relative to repo root, posix-style) excluded from scanning in
+# every mode. framer-export/ holds generated, import-staging copies of blog
+# drafts; like blog/**/draft.md it is derived content, not site or workflow
+# prose, so it is not subject to the brand-voice rules here.
+EXCLUDE_PREFIXES = ('framer-export/',)
+
+
+def is_excluded(path):
+    try:
+        rel = path.relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        return False
+    return any(rel.startswith(prefix) for prefix in EXCLUDE_PREFIXES)
+
+
 ALLOW_PRAGMA = re.compile(r'<!--\s*check-rules:\s*allow\s*-->')
 
 
@@ -213,6 +228,8 @@ def main():
         targets = [Path(f).resolve() for f in args.files]
     else:
         targets = default_scope()
+
+    targets = [t for t in targets if not is_excluded(t)]
 
     if not targets:
         if not args.quiet:

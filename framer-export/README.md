@@ -17,7 +17,7 @@ Framer build the formatted blocks itself.
 
 ### 1. Create the CMS collection in Framer
 
-In the project ([PSFnetwork](https://framer.com/projects/PSFnetwork--6bKb0EpuKuOgXIlv9Apl-640G6)),
+In the Framer project ([open in Framer](https://framer.com/projects/PSFnetwork--6bKb0EpuKuOgXIlv9Apl-640G6)),
 open **CMS → New Collection → "Blog"** and add fields matching the CSV columns:
 
 | CSV column | Framer field type |
@@ -46,13 +46,13 @@ plain-text copy of `content`.
 
 CSV import drops the body in as plain text. To get real headings/lists/links,
 open each item's **Formatted text** field, then copy the matching
-`bodies/<slug>.md` file and paste it in — Framer converts the markdown into
+`bodies/<slug>.md` file and paste it in. Framer converts the markdown into
 formatted blocks automatically. (You can skip this for posts where the
 plain-text import is good enough, but pasting gives the best result.)
 
 ### 4. Hero images
 
-Bodies have no hero image — add it to the collection's **Image** field per
+Bodies have no hero image, so add it to the collection's **Image** field per
 post; `hero_visual_alt` already carries the alt text.
 
 ## Notes
