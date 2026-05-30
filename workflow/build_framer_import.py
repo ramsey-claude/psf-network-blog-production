@@ -124,6 +124,28 @@ def clean_body(body: str) -> tuple[str, str, str]:
     return text, display_title, dek
 
 
+def extract_tldr(content: str) -> str:
+    """First paragraph after the 'Quick Answer' H2, else the first paragraph."""
+    lines = content.splitlines()
+    start = 0
+    for i, line in enumerate(lines):
+        if line.strip().lower().startswith("## quick answer"):
+            start = i + 1
+            break
+    para: list[str] = []
+    for line in lines[start:]:
+        if line.strip() == "":
+            if para:
+                break
+            continue
+        if line.lstrip().startswith(("#", "-", "*", ">", "|")):
+            if para:
+                break
+            continue
+        para.append(line.strip())
+    return " ".join(para)
+
+
 def main() -> None:
     BODIES.mkdir(parents=True, exist_ok=True)
     rows: list[dict[str, str]] = []
@@ -164,7 +186,43 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(rows)
 
+    # Second CSV: columns named to match the live Framer "Articles" collection
+    # so the import maps cleanly. Plain-text/date fields only - reference fields
+    # (Author, Blog Categories), the Hero Image, and the formatted Content body
+    # are set in the Framer UI, not via CSV.
+    matched_cols = [
+        "Title",
+        "Slug",
+        "Date",
+        "Featured",
+        "Excerpt",
+        "TL;DR",
+        "Meta Description",
+        "Keywords",
+    ]
+    matched_path = OUT / "framer-articles-import.csv"
+    with matched_path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=matched_cols)
+        writer.writeheader()
+        for r in rows:
+            keywords = ", ".join(
+                k for k in (r["focus_keyword"], r["secondary_keywords"]) if k
+            )
+            writer.writerow(
+                {
+                    "Title": r["title"],
+                    "Slug": r["slug"],
+                    "Date": r["published"],
+                    "Featured": "false",
+                    "Excerpt": r["dek"],
+                    "TL;DR": extract_tldr(r["content"]),
+                    "Meta Description": r["meta_description"],
+                    "Keywords": keywords,
+                }
+            )
+
     print(f"Wrote {csv_path.relative_to(ROOT)} ({len(rows)} posts)")
+    print(f"Wrote {matched_path.relative_to(ROOT)} ({len(rows)} posts)")
     print(f"Wrote {len(rows)} body files to {BODIES.relative_to(ROOT)}/")
 
 
