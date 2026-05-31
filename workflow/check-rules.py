@@ -136,10 +136,12 @@ def diff_base_files(base_sha):
 
 
 # Path prefixes (relative to repo root, posix-style) excluded from scanning in
-# every mode. framer-export/ holds generated, import-staging copies of blog
-# drafts; like blog/**/draft.md it is derived content, not site or workflow
-# prose, so it is not subject to the brand-voice rules here.
-EXCLUDE_PREFIXES = ('framer-export/',)
+# every mode. These mirror the default-scope exclusions so that --diff-base and
+# --staged honor them too (otherwise a brand-casing edit to an otherwise-exempt
+# file pulls it into the diff and the linter flags pre-existing content):
+#   - framer-export/ : generated import-staging copies of blog drafts
+#   - competitors/   : third-party content notes, not our prose
+EXCLUDE_PREFIXES = ('framer-export/', 'competitors/')
 
 
 def is_excluded(path):
@@ -147,6 +149,9 @@ def is_excluded(path):
         rel = path.relative_to(REPO_ROOT).as_posix()
     except ValueError:
         return False
+    # blog/**/draft.md goes through Stage 7 QA with its own rules.
+    if rel.startswith('blog/') and rel.endswith('/draft.md'):
+        return True
     return any(rel.startswith(prefix) for prefix in EXCLUDE_PREFIXES)
 
 
