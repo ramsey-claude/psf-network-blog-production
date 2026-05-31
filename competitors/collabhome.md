@@ -52,6 +52,6 @@ Fractional equity ownership exclusively in student housing properties near major
 - University market-specific content
 - Monthly distribution announcements
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-CollabHome is fully differentiated by niche (student housing near US universities). Zero direct competition with psfnetwork's international/Gulf real estate focus. No content overlap expected.
+CollabHome is fully differentiated by niche (student housing near US universities). Zero direct competition with PSFnetwork's international/Gulf real estate focus. No content overlap expected.

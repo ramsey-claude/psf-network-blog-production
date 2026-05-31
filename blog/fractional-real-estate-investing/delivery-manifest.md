@@ -12,7 +12,7 @@
 
 ```
 My Drive/
-└── psfnetwork/                          (1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG)
+└── PSFnetwork/                          (1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG)
     └── fractional-real-estate-investing/   (13N_NjKbSKMLtbcMUvLxDplZaL7GJtJ-n)
         └── What Is Fractional Real Estate Investing? A Complete Guide for 2026 (native gdoc)
 ```

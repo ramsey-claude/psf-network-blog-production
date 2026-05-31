@@ -53,13 +53,13 @@ The honest framing for the average reader is that you cannot reliably skip the w
 
 The practical sequence for most readers: build emergency savings first, contribute to retirement accounts up to any employer match, hold a diversified equity position, then add investment real estate via fractional platforms or REITs as a portfolio diversifier. The 90 percent figure should not change this sequence; if anything, it confirms that real estate complements rather than replaces the rest of the portfolio for most millionaires.
 
-For high-income earners with secure positions and existing market exposure, direct rental property or larger fractional positions become viable. For everyone else, fractional platforms (Fundrise from $10, Arrived from $100, psfnetwork from $100) lower the entry point dramatically.
+For high-income earners with secure positions and existing market exposure, direct rental property or larger fractional positions become viable. For everyone else, fractional platforms (Fundrise from $10, Arrived from $100, PSFnetwork from $100) lower the entry point dramatically.
 
 ---
 
 ## What is the easiest way to add real estate to a small portfolio?
 
-**Answer capsule:** Three honest options at the small-portfolio level. Publicly traded REIT ETFs (VNQ, IYR) through any brokerage give you immediate real estate exposure with daily liquidity and minimums of $1 to one share. Fractional platforms (Fundrise, Ark7, Arrived, psfnetwork) let you own a specific property with $10 to $100 minimums and pass-through K-1 tax treatment. Real estate debt platforms let you lend to property projects at $10 to $100. Pick based on your goal: liquidity (REIT ETF), property-level selection (fractional), or yield-focused income (debt).
+**Answer capsule:** Three honest options at the small-portfolio level. Publicly traded REIT ETFs (VNQ, IYR) through any brokerage give you immediate real estate exposure with daily liquidity and minimums of $1 to one share. Fractional platforms (Fundrise, Ark7, Arrived, PSFnetwork) let you own a specific property with $10 to $100 minimums and pass-through K-1 tax treatment. Real estate debt platforms let you lend to property projects at $10 to $100. Pick based on your goal: liquidity (REIT ETF), property-level selection (fractional), or yield-focused income (debt).
 
 The right answer is not always the same as the answer that makes a good slogan. The "90 percent of millionaires" claim makes a good slogan. It does not make a good portfolio strategy by itself.
 
@@ -95,7 +95,7 @@ A: REIT ETFs (daily liquidity, ~$1 minimum on a fractional broker) for liquid ex
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at psfnetwork.
+**Maya Reyes** is a Senior Editor at PSFnetwork.
 
 **Reviewed by Daniel Cho, CFA**.
 
@@ -109,7 +109,7 @@ Past performance is not indicative of future results. Real estate investing invo
 
 ## CTA
 
-If real estate makes sense as a diversifier in your portfolio, fractional platforms are the lowest-friction way to start. psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest.
+If real estate makes sense as a diversifier in your portfolio, fractional platforms are the lowest-friction way to start. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest.
 
 ---
 

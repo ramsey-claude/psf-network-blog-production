@@ -70,7 +70,7 @@ Two H2s were already in question format ("Which platform fits which investor?", 
 | B | B10: FAQ minimum 5 entries | PASS | 6 entries |
 | B | B11: At least 2 internal links | PASS | 3 internal links |
 | B | B12: External links from evidence.md | MANUAL | Sources section identical to v1, evidence.md already validated |
-| C | C1: Brand name "psfnetwork" lowercase throughout | PASS | No casing violations |
+| C | C1: Brand name "PSFnetwork" lowercase throughout | PASS | No casing violations |
 | C | C2: No em/en dashes | PASS | Zero of each (this was the customer-flagged violation in the prior round) |
 | C | C3: Tone matches brand guide | MANUAL + RECOMMENDED REVIEW | v2 deliberately pushed voice toward stronger opinion; recommend editorial re-touch on three "open items" flagged in humanization log |
 | C | C4: No internal contradictions | PASS | Visual inspection |

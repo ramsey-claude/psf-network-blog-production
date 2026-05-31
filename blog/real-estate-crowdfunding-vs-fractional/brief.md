@@ -20,7 +20,7 @@
 Investor researching both fractional platforms and real estate crowdfunding sites (Fundrise, Groundfloor, CrowdStreet). Often confused about whether they are the same thing. Wants a clear structural distinction.
 
 ## Content Angle
-Many readers think "fractional" and "crowdfunding" are synonyms. They overlap but are not identical. This post clarifies the structural distinction: crowdfunding can finance debt or equity; fractional is specifically equity ownership of a single property; some crowdfunding products are equity but with different liquidity profiles. psfnetwork stays neutral and lets the reader pick the right structure.
+Many readers think "fractional" and "crowdfunding" are synonyms. They overlap but are not identical. This post clarifies the structural distinction: crowdfunding can finance debt or equity; fractional is specifically equity ownership of a single property; some crowdfunding products are equity but with different liquidity profiles. PSFnetwork stays neutral and lets the reader pick the right structure.
 
 ## Competitor Gap
 - No competitor has a clean structural distinction post.

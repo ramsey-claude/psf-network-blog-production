@@ -98,7 +98,7 @@ To generate $1,000 a month at the 7% midpoint, you would need roughly $171,000 i
 
 A few specifics:
 
-**Fractional platforms** sell shares of a single property through an LLC. Examples include Fundrise, Arrived, Ark7, and psfnetwork. The LLC is the issuer; you are a member, not a property owner directly. Tax reporting is usually a K-1.
+**Fractional platforms** sell shares of a single property through an LLC. Examples include Fundrise, Arrived, Ark7, and PSFnetwork. The LLC is the issuer; you are a member, not a property owner directly. Tax reporting is usually a K-1.
 
 **REITs** pool many properties into one entity. Most REITs distribute at least 90 percent (often closer to 100 percent) of their taxable income to shareholders as dividends. Publicly traded REITs trade like stocks. Non-traded REITs carry additional risks: they may pay distributions out of offering proceeds rather than property cash flow, and they often have external managers with potential conflicts of interest.
 
@@ -189,7 +189,7 @@ A: No. FDIC deposit insurance covers depositor accounts at insured banks. Fracti
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at psfnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA** - investment strategist and former real estate analyst.
 
@@ -203,7 +203,7 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Want to see the per-square-foot math on a real property? psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+Want to see the per-square-foot math on a real property? PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 

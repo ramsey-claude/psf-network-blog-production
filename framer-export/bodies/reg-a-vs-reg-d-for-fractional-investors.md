@@ -93,7 +93,7 @@ The mechanics matter for what kinds of products each framework supports.
 
 For a fractional real estate platform, the calculus often runs like this:
 
-- A platform that wants to admit non-accredited retail investors at scale (think Fundrise, Arrived, Ark7, Realbricks, psfnetwork) chooses Reg A Tier 2. The SEC qualification overhead is real, but it unlocks the entire retail investor base and preempts state-by-state qualification.
+- A platform that wants to admit non-accredited retail investors at scale (think Fundrise, Arrived, Ark7, Realbricks, PSFnetwork) chooses Reg A Tier 2. The SEC qualification overhead is real, but it unlocks the entire retail investor base and preempts state-by-state qualification.
 - A platform that targets accredited investors with larger property-by-property offerings (think CrowdStreet's larger deals, many commercial syndications) chooses Reg D 506(c). The verification overhead is now lower after the March 2025 minimum-investment guidance, and the no-cap offering size accommodates larger deals.
 
 ---
@@ -104,7 +104,7 @@ For a fractional real estate platform, the calculus often runs like this:
 
 The reader-visible result is the gate at the platform sign-up:
 
-- **No accreditation gate, "anyone can invest" framing:** the platform is almost certainly running under Reg A Tier 2. Examples: Fundrise's eREITs and eFunds (Reg A), Arrived's single-family rental offerings (Reg A), Realbricks (Reg A), Ark7 (Reg A), psfnetwork (Reg A).
+- **No accreditation gate, "anyone can invest" framing:** the platform is almost certainly running under Reg A Tier 2. Examples: Fundrise's eREITs and eFunds (Reg A), Arrived's single-family rental offerings (Reg A), Realbricks (Reg A), Ark7 (Reg A), PSFnetwork (Reg A).
 - **Accreditation gate at sign-up, "verify your accredited status" flow:** the platform is running under Reg D 506(c). Examples: CrowdStreet's deal-by-deal offerings to accredited investors, most commercial syndications listed on platforms like RealCrowd or EquityMultiple's larger deals.
 - **Hybrid:** some platforms have historically run both, Reg A for retail offerings and Reg D for accredited-only larger deals. The platform's offering page typically labels each one, so the framework is visible per offering rather than per platform.
 
@@ -112,11 +112,11 @@ The framework choice is not hidden. The legal page or offering circular section 
 
 ---
 
-## How does this apply to psfnetwork specifically?
+## How does this apply to PSFnetwork specifically?
 
-**Answer capsule:** psfnetwork operates under Regulation A Tier 2. The offering circular for each property is qualified by the SEC and publicly filed on EDGAR; non-accredited investors can participate subject to the 10% cap on the greater of annual income or net worth (excluding primary residence). The per-square-foot model is a unit-of-ownership detail, it doesn't change the regulatory framework. The framework is what enables the consumer-facing model.
+**Answer capsule:** PSFnetwork operates under Regulation A Tier 2. The offering circular for each property is qualified by the SEC and publicly filed on EDGAR; non-accredited investors can participate subject to the 10% cap on the greater of annual income or net worth (excluding primary residence). The per-square-foot model is a unit-of-ownership detail, it doesn't change the regulatory framework. The framework is what enables the consumer-facing model.
 
-Under Reg A Tier 2, every psfnetwork property offering produces a publicly accessible paper trail: the qualified offering circular, the annual Form 1-K with audited financials, the semiannual Form 1-SA, and Form 1-U filings for material events. These are searchable on EDGAR by issuer name. Before investing in a specific property, look up its filings and read the offering circular's risk factors and operating-agreement excerpts.
+Under Reg A Tier 2, every PSFnetwork property offering produces a publicly accessible paper trail: the qualified offering circular, the annual Form 1-K with audited financials, the semiannual Form 1-SA, and Form 1-U filings for material events. These are searchable on EDGAR by issuer name. Before investing in a specific property, look up its filings and read the offering circular's risk factors and operating-agreement excerpts.
 
 Why Reg A Tier 2 specifically? Three reasons mirror the broader industry pattern. First, retail accessibility is the entire premise of fractional ownership, the framework choice has to admit non-accredited investors, which rules out Reg D 506(c). Second, state-level preemption matters when you operate across all 50 states; Reg A Tier 2 gives you that, Reg A Tier 1 does not. Third, the offering cap fits the model, a single property at $75 million is a comfortable ceiling for the size of property a fractional platform typically lists.
 
@@ -160,7 +160,7 @@ A: Regulation Crowdfunding (Reg CF), created by the JOBS Act of 2012, allows com
 
 ## Author
 
-**Maya Reyes**, Senior Editor at psfnetwork.
+**Maya Reyes**, Senior Editor at PSFnetwork.
 
 **Reviewed by Daniel Cho, CFA**.
 

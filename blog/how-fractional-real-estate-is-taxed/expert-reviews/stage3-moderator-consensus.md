@@ -25,7 +25,7 @@ These are the consensus items from the panel that Stage 4 must apply, in order o
 
 3. **Section 2 (What's on a K-1), Box 13/20 precision.** Replace "Box 13 / 20, Various deductions and credits" with the correct box-and-code mapping: "Box 13, Other deductions allocated to partners; Box 20, Code Z, Section 199A qualified business income information." (IRS specialist M1)
 
-4. **Section 7 (psfnetwork), Reg A Tier 2 cap precision.** Add a brief clarifying parenthetical noting that the non-accredited 10% cap is computed against income/net worth excluding primary residence. (SEC M1)
+4. **Section 7 (PSFnetwork), Reg A Tier 2 cap precision.** Add a brief clarifying parenthetical noting that the non-accredited 10% cap is computed against income/net worth excluding primary residence. (SEC M1)
 
 5. **FAQ Q1 and Q2, add CPA-confirmation closer.** End-sentence each with "Confirm with your CPA, this is the kind of judgment call where individual facts matter." (CFPB M2)
 

@@ -28,8 +28,8 @@ Alternative (if Stage 4 needs swap): "How Fractional Real Estate Is Taxed: A K-1
 | FAQ | Minimum 5; see candidate list below. |
 | Sources | IRS (Form 1065 K-1 instructions, MACRS, IRC §469), investor.gov (Reg A overview). Marketing pages allowed only for industry context, not regulatory facts. |
 | AuthorCard | Maya Reyes, Senior Editor. Reviewer: Daniel Cho, CFA. |
-| Disclaimer | Standard psfnetwork disclaimer plus a tax-specific "This is not individualized tax advice; consult your CPA." |
-| CTA | Action: "Review the offering circular for tax structure details on any specific psfnetwork property." |
+| Disclaimer | Standard PSFnetwork disclaimer plus a tax-specific "This is not individualized tax advice; consult your CPA." |
+| CTA | Action: "Review the offering circular for tax structure details on any specific PSFnetwork property." |
 | Related | fractional-real-estate-investing, real-estate-crowdfunding-vs-fractional, reits-vs-fractional-real-estate |
 
 ## H2 section plan
@@ -60,8 +60,8 @@ Each section opens with a 50-75 word answer capsule, then expands.
    Capsule: When the LLC sells the property, you receive a capital gain (or loss) on your K-1 for that tax year. Hold longer than a year and it is taxed at long-term capital gains rates. Recaptured depreciation is taxed at up to 25% (Section 1250 unrecaptured gain). Net proceeds are distributed; the K-1 is your tax record.
    Body: Capital gain mechanics on a property sale within an LLC; depreciation recapture; reinvestment doesn't defer gain (1031 doesn't apply to LLC interests).
 
-7. **How does this apply to psfnetwork specifically?**
-   Capsule: psfnetwork uses the same Reg A LLC structure as most fractional platforms. Each property is its own LLC; each LLC issues K-1s to its investors. The per-square-foot model affects the number of shares you hold and the size of your allocation, but the tax form and mechanics are identical to any other Reg A fractional offering.
+7. **How does this apply to PSFnetwork specifically?**
+   Capsule: PSFnetwork uses the same Reg A LLC structure as most fractional platforms. Each property is its own LLC; each LLC issues K-1s to its investors. The per-square-foot model affects the number of shares you hold and the size of your allocation, but the tax form and mechanics are identical to any other Reg A fractional offering.
    Body: Brief, structural; no return promises; link to offering circular language.
 
 ## FAQ candidates

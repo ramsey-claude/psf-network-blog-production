@@ -12,7 +12,7 @@ DOMAIN FINDINGS:
 
 The post handles SEC-regulated structures accurately. REIT description ("at least 90 percent, often closer to 100 percent") matches investor.gov source language. Non-traded REIT risks (distributions paid from offering proceeds and borrowings, external manager conflicts) are explicitly surfaced. Fractional platforms are framed as LLC issuers under Reg A or Reg D, with shareholders holding membership interests, not deeds. Cross-reference to hub post for the legal mechanics is appropriate.
 
-CTA copy is conservative: "psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest." This addresses the general-solicitation concern that affected the hub draft.
+CTA copy is conservative: "PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest." This addresses the general-solicitation concern that affected the hub draft.
 
 FLAGGED ISSUES:
 

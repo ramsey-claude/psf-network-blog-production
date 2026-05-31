@@ -7,7 +7,7 @@
 
 ```
 My Drive/
-└── psfnetwork/
+└── PSFnetwork/
     └── reg-a-vs-reg-d-for-fractional-investors/
         └── Reg A vs Reg D for Fractional Real Estate Investors (2026).gdoc
 ```
@@ -16,7 +16,7 @@ My Drive/
 
 | Item | Value |
 |------|-------|
-| Drive parent folder | `1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG` (`psfnetwork/`) |
+| Drive parent folder | `1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG` (`PSFnetwork/`) |
 | Slug subfolder | `1_RC1PxPU6GOZWtAoJtPgNEDRkDFZTyqd` |
 | Native Google Doc id | `1K5Y3HMM8m-H3fTf2-HWdZdBsjzgHyFbOiR8w7hZRvkM` |
 | Title | Reg A vs Reg D for Fractional Real Estate Investors (2026) |

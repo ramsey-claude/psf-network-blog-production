@@ -11,7 +11,7 @@ VERDICT: PASS
 - **Step 2 (Human anchors):** PASS, Real Story (Marcus, Austin), POV Anchor (we are the only platform we know of that does this), Contrarian Note (the return ranking does not exist in any honest form) all integrated in body
 - **Step 3 (Rhythm):** PASS, multiple sub-5-word sentences ("Skip the ranking.", "Five questions.", "Mogul.", "Four risks."), multiple 25+ word sentences with multi-clause structure, paragraph length variance well above 30%
 - **Step 4 (De-listification):** PASS, 6 of 8 H2 sections are narrative (75%), only the comparison table and stat cards retain list format (justified by their reference nature)
-- **Step 5 (Voice):** PASS, second person throughout, "we" used purposefully for psfnetwork position, no mid-paragraph person switching
+- **Step 5 (Voice):** PASS, second person throughout, "we" used purposefully for PSFnetwork position, no mid-paragraph person switching
 - **Step 6 (Specificity):** PASS, named investor (Marcus, 38, physical therapist, Austin, $7,000), specific addresses (East 7th Street as the duplex example), specific compounding math (1% annual fee → ~10% of starting capital over 10 years), specific filing reference (Reg A Tier 2 $75M cap)
 
 ## Key changes
@@ -42,7 +42,7 @@ VERDICT: PASS
 ### Human anchors injected (Step 2)
 
 - **Real Story:** "A reader we will call Marcus, a 38-year-old physical therapist in Austin, told us he spent three weekends comparing platforms before his first $7,000 deposit. He read Lofty's roundup, which placed Lofty highly. He read Ark7's comparison, which placed Ark7 at the top. He read Fundrise's blog, which placed Fundrise at the top. By Sunday night he had eight browser tabs, three half-filled spreadsheets, and zero confidence about which one was actually best."
-- **POV Anchor:** "We are psfnetwork. We have a horse in this race. We are also the only platform we know of that has agreed to write a guide where we do not rank ourselves first, and where we name the other platform when another platform is the better answer for someone in your situation."
+- **POV Anchor:** "We are PSFnetwork. We have a horse in this race. We are also the only platform we know of that has agreed to write a guide where we do not rank ourselves first, and where we name the other platform when another platform is the better answer for someone in your situation."
 - **Contrarian Note:** "The platform comparison everyone wants is the return ranking. It does not exist in any honest form. Vintages differ. Fee schedules differ. Property mixes differ. Auditors do not produce a head-to-head IRR table because the inputs are not comparable, and the platforms that publish their own ranking always come out on top." Plus the explicit non-inclusion of a returns column in the comparison table, with the framing made explicit.
 
 ### Cadence interventions (Step 3)
@@ -61,7 +61,7 @@ VERDICT: PASS
 ### Voice (Step 5)
 
 - "you" address: introduced earlier (within first 150 words) and held consistently
-- "we" used for psfnetwork position three times: in the "Why we are even writing this" section, in the explicit "We are psfnetwork. We have a horse in this race." moment, and in "This is where we put ourselves" in the square-foot section. Each instance is doing positioning work, not filler.
+- "we" used for PSFnetwork position three times: in the "Why we are even writing this" section, in the explicit "We are PSFnetwork. We have a horse in this race." moment, and in "This is where we put ourselves" in the square-foot section. Each instance is doing positioning work, not filler.
 - No paragraph switches person mid-flow
 
 ### Specificity (Step 6)
@@ -75,7 +75,7 @@ VERDICT: PASS
 
 The following changes from v1 are voice-and-position changes that may warrant a quick expert touch:
 
-1. **"We are psfnetwork. We have a horse in this race."**: Editorial: this is direct first-person brand voice, intentional. SEC/FINRA: confirm this admission does not create disclosure burden beyond what is already in the disclaimer block.
+1. **"We are PSFnetwork. We have a horse in this race."**: Editorial: this is direct first-person brand voice, intentional. SEC/FINRA: confirm this admission does not create disclosure burden beyond what is already in the disclaimer block.
 
 2. **"Anyone who publishes the ranking is either guessing or selling you something."**: This is opinion-as-claim. Defensible because it follows the explanation of why no audited dataset exists. Editorial may want to soften; we recommend keeping it as the contrarian-anchor moment.
 

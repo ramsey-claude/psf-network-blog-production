@@ -70,7 +70,7 @@ When most people say "REIT" they mean the publicly traded version. That is the d
 
 The legal structure matters. You are not buying a deed. You are buying a security, a unit of membership interest in an LLC that owns the property. Distributions are typically reported on a Schedule K-1 (Form 1065) because the LLC is a pass-through entity. K-1 reporting can be more complex than a standard 1099 and may delay your tax filing; consult a tax advisor before investing.
 
-Some platforms, like psfnetwork, use a per-square-foot ownership model. Your stake is expressed in square feet of the property rather than abstract shares. The underlying legal structure is the same; what changes is intuition.
+Some platforms, like PSFnetwork, use a per-square-foot ownership model. Your stake is expressed in square feet of the property rather than abstract shares. The underlying legal structure is the same; what changes is intuition.
 
 ---
 
@@ -169,7 +169,7 @@ A: A REIT is a specific legal entity that meets IRS REIT rules (90 percent distr
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at psfnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA** - investment strategist and former real estate analyst.
 
@@ -183,7 +183,7 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Want to see how psfnetwork's per-square-foot model fits alongside REITs? psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+Want to see how PSFnetwork's per-square-foot model fits alongside REITs? PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 

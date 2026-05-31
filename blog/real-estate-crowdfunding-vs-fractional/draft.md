@@ -61,7 +61,7 @@ Crowdfunding includes platforms like Fundrise, Groundfloor (debt-focused), and C
 
 ## What is fractional real estate?
 
-**Answer capsule:** Fractional real estate specifically refers to equity ownership of a property divided into shares. You buy an LLC membership interest in the entity that owns the property and receive a proportional share of rental income and any appreciation when the property is sold. Typical platforms include Fundrise, Arrived, Ark7, Realbricks, and psfnetwork. The legal structure is consistent: a pass-through LLC issuing shares (or square feet) under SEC Regulation A or D.
+**Answer capsule:** Fractional real estate specifically refers to equity ownership of a property divided into shares. You buy an LLC membership interest in the entity that owns the property and receive a proportional share of rental income and any appreciation when the property is sold. Typical platforms include Fundrise, Arrived, Ark7, Realbricks, and PSFnetwork. The legal structure is consistent: a pass-through LLC issuing shares (or square feet) under SEC Regulation A or D.
 
 Fractional is a subset of how a property can be financed. The financing mechanism in most cases IS crowdfunding (many small investors pool capital), but the product framing is "you own a piece of this specific property" rather than "you funded this project."
 
@@ -86,7 +86,7 @@ In practice, a Fundrise eREIT and a single-property fractional offering on Arriv
 | Tax form | 1099-INT (debt), K-1 (equity LLC) | K-1 (Form 1065) |
 | Hold structure | Defined maturity (debt) or open-ended (equity) | Open-ended, typically 5-10 year property sale |
 | Income | Interest (debt) or rental distributions (equity) | Rental distributions + appreciation at sale |
-| Examples | Groundfloor (debt), Fundrise (equity funds), CrowdStreet (commercial equity) | Arrived, Ark7, Realbricks, psfnetwork |
+| Examples | Groundfloor (debt), Fundrise (equity funds), CrowdStreet (commercial equity) | Arrived, Ark7, Realbricks, PSFnetwork |
 
 Real estate crowdfunding is the broader category. Fractional is a specific structural product within it.
 
@@ -94,9 +94,9 @@ Real estate crowdfunding is the broader category. Fractional is a specific struc
 
 ## Which structure suits which investor?
 
-**Answer capsule:** Debt crowdfunding (Groundfloor and similar) suits yield-focused income investors who want defined maturities and interest income. Fund-style equity crowdfunding (Fundrise) suits investors who want diversified property exposure managed at the fund level. Single-property fractional (Arrived, Ark7, Realbricks, psfnetwork) suits investors who want to pick the specific property. The right answer depends on whether you want yield certainty (debt), diversification (fund), or property-level selection (single-property fractional).
+**Answer capsule:** Debt crowdfunding (Groundfloor and similar) suits yield-focused income investors who want defined maturities and interest income. Fund-style equity crowdfunding (Fundrise) suits investors who want diversified property exposure managed at the fund level. Single-property fractional (Arrived, Ark7, Realbricks, PSFnetwork) suits investors who want to pick the specific property. The right answer depends on whether you want yield certainty (debt), diversification (fund), or property-level selection (single-property fractional).
 
-For most investors building a real estate allocation from scratch, a mix is sensible: a smaller debt position for yield predictability, a larger equity position for appreciation exposure, with the equity split between fund-style (Fundrise) and single-property fractional (psfnetwork or Arrived) based on whether you enjoy property-level selection or prefer set-and-forget.
+For most investors building a real estate allocation from scratch, a mix is sensible: a smaller debt position for yield predictability, a larger equity position for appreciation exposure, with the equity split between fund-style (Fundrise) and single-property fractional (PSFnetwork or Arrived) based on whether you enjoy property-level selection or prefer set-and-forget.
 
 ---
 
@@ -130,7 +130,7 @@ A: Yes, and most equity fractional offerings ARE crowdfunded under Reg A or Reg 
 
 ## Author
 
-**Maya Reyes**, Senior Editor at psfnetwork.
+**Maya Reyes**, Senior Editor at PSFnetwork.
 
 **Reviewed by Daniel Cho, CFA**.
 
@@ -144,7 +144,7 @@ Past performance is not indicative of future results. Real estate investing invo
 
 ## CTA
 
-If single-property equity fractional fits your goal, psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest.
+If single-property equity fractional fits your goal, PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest.
 
 ---
 

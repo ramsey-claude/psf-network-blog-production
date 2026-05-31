@@ -71,7 +71,7 @@ en alttaki "Yeniden kullanılabilir prompt"u kullan.
 
 ## Yeniden kullanılabilir prompt (yeni içerik partisi için)
 
-> psfnetwork blog içeriklerini Framer CMS "Articles" koleksiyonuna aktaracağım.
+> PSFnetwork blog içeriklerini Framer CMS "Articles" koleksiyonuna aktaracağım.
 > Kurallar:
 > - Gövde alanı **Content** (rich-text), Body kullanılmıyor.
 > - Alanlar: Title, Slug, Excerpt(=dek), TL;DR(=quick answer), Meta

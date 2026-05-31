@@ -20,7 +20,7 @@ The token is stored at `/Users/onur/.psfnetwork-drive/token.json` (outside the r
 
 ```
 My Drive/
-└── psfnetwork/                          (created on first run)
+└── PSFnetwork/                          (created on first run)
     └── [slug]/                          (one per post)
         └── [Title].gdoc                 (native Google Doc, converted from .docx)
 ```
@@ -32,7 +32,7 @@ One native Google Doc per slug. No `.docx` files left in the folder. No localize
 For each post in Stage 9:
 
 1. **Render docx.** Run `render-for-drive.py blog/[slug]/draft.md -o /tmp/[slug].docx`. Produces a styled docx with Production Notes block + body.
-2. **Ensure parent folders.** Call `drive_cli.py list <psfnetwork_folder_id>`. If `psfnetwork/[slug]/` does not exist, create via Drive API.
+2. **Ensure parent folders.** Call `drive_cli.py list <psfnetwork_folder_id>`. If `PSFnetwork/[slug]/` does not exist, create via Drive API.
 3. **Cleanup prior uploads in the slug folder.** Call `drive_cli.py list <slug_folder_id>`. For each existing file, call `drive_cli.py delete <fileId>`. This prevents stale or duplicate docs lingering across re-runs.
 4. **Upload native gdoc.** Call `drive_cli.py upload-as-gdoc /tmp/[slug].docx <slug_folder_id> "[H1 of the post]"`. The API converts the docx to a native Google Doc on the fly (target mimeType `application/vnd.google-apps.document`, source mimeType `application/vnd.openxmlformats-officedocument.wordprocessingml.document`).
 5. **Capture result.** The API returns `{id, name, mimeType, webViewLink}`. Record in `blog/[slug]/delivery-manifest.md` and `pipeline-state.json` `flags.drive_delivery`.

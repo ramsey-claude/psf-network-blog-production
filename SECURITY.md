@@ -17,7 +17,7 @@ acknowledgment before any disclosure.
 
 - The Drive folders themselves (managed by the operator's Google account
   permissions, not by this repo)
-- The Railway / external infrastructure that hosts the live psfnetwork site
+- The Railway / external infrastructure that hosts the live PSFnetwork site
 - Third-party platform pages referenced from blog drafts
 
 ## Known sensitive paths

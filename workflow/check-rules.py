@@ -48,8 +48,9 @@ BLOCKING = [
     # Tier 2: brand voice
     ('guaranteed-return', re.compile(r'guaranteed\s+(return|yield|annual)', re.IGNORECASE),
      'guaranteed return language (bans even in negation)'),
-    ('psfnetwork-casing', re.compile(r'\b(PSFnetwork|PSF\s+Network|PSFNETWORK|Psfnetwork)\b'),
-     'psfnetwork casing variant (must be lowercase one word)'),
+    ('psfnetwork-casing',
+     re.compile(r'(?<![./\w])(psfnetwork|PSF\s+Network|PSFNETWORK|Psfnetwork)(?!\.com)(?![\w-])'),
+     'PSFnetwork casing variant (must be PSFnetwork, capital PSF, one word)'),
 ]
 
 WARNING = [

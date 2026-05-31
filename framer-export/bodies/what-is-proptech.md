@@ -25,7 +25,7 @@ For an investor, the most useful framing is not which proptech buzzword to chase
 
 The history matters because "proptech" is often used as a generic buzzword. Specifically: proptech 1.0 digitized search (listings online). Proptech 2.0 digitized access to ownership (crowdfunding, fractional). Proptech 3.0 is automating decisions (AI valuation, underwriting) and rethinking title (tokenization, blockchain registries).
 
-For psfnetwork's audience, proptech 2.0 (fractional ownership) is the era that opened real estate investing to capital sizes that previously could not access it. Proptech 3.0 is being built on top of that foundation.
+For PSFnetwork's audience, proptech 2.0 (fractional ownership) is the era that opened real estate investing to capital sizes that previously could not access it. Proptech 3.0 is being built on top of that foundation.
 
 ---
 
@@ -33,7 +33,7 @@ For psfnetwork's audience, proptech 2.0 (fractional ownership) is the era that o
 
 **Answer capsule:** The five categories most relevant to investors: investment platforms (fractional ownership, crowdfunding), AI valuation and underwriting (automated property appraisal and risk modeling), digital mortgage and lending (online closing, smart escrow), rental and property management software (tenant screening, IoT building ops), and blockchain title and tokenization (on-chain property records, tokenized fractions). Each category has its own incumbents, regulatory frame, and investor relevance.
 
-**1. Investment platforms.** Fractional ownership platforms (Fundrise, Arrived, Ark7, Realbricks, psfnetwork) and crowdfunding (Groundfloor) are the most directly investor-relevant proptech. They let you put $10 to $100 into a specific property or fund-style position.
+**1. Investment platforms.** Fractional ownership platforms (Fundrise, Arrived, Ark7, Realbricks, PSFnetwork) and crowdfunding (Groundfloor) are the most directly investor-relevant proptech. They let you put $10 to $100 into a specific property or fund-style position.
 
 **2. AI valuation and underwriting.** Automated appraisal tools (Zillow's Zestimate evolved into more sophisticated successors) and underwriting models. For fractional platforms, AI affects which properties make it onto the platform; you do not interact with the tool directly.
 
@@ -87,7 +87,7 @@ Tokenization remains experimental for most US investors. Regulatory clarity on t
 A: Proptech (short for property technology) is the category of software and digital platforms transforming the real estate industry. It includes fractional investment, AI valuation, digital mortgages, rental management, and blockchain title. The term emerged alongside fintech in the early 2010s.
 
 **Q: What are examples of proptech companies?**
-A: Investment platforms: Fundrise, Arrived, Ark7, Realbricks, HappyNest, psfnetwork. Crowdfunding: Groundfloor. AI valuation: modern Zestimate-style tools. Digital mortgage: Rocket Mortgage. Rental management: AppFolio. Tokenization: Lofty. The list is not exhaustive; proptech now spans hundreds of companies.
+A: Investment platforms: Fundrise, Arrived, Ark7, Realbricks, HappyNest, PSFnetwork. Crowdfunding: Groundfloor. AI valuation: modern Zestimate-style tools. Digital mortgage: Rocket Mortgage. Rental management: AppFolio. Tokenization: Lofty. The list is not exhaustive; proptech now spans hundreds of companies.
 
 **Q: How does proptech affect real estate investors?**
 A: For individual investors, the most significant effect is fractional ownership platforms, which dropped the entry point for owning a piece of a rental property from a $20,000+ down payment to $10 to $100 shares. Indirect effects include AI-driven property selection, which can change which properties make it onto fractional platforms, and predictive maintenance, which can affect distribution stability.
@@ -116,7 +116,7 @@ A: Industry research firms estimate the global proptech market at $51 to $55 bil
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at psfnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA** - investment strategist and former real estate analyst.
 
@@ -130,7 +130,7 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-The most investor-relevant proptech category is fractional ownership. psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+The most investor-relevant proptech category is fractional ownership. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 

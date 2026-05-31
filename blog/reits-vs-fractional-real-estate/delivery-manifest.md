@@ -12,7 +12,7 @@
 
 ```
 My Drive/
-└── psfnetwork/                            (1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG)
+└── PSFnetwork/                            (1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG)
     └── reits-vs-fractional-real-estate/   (1GHxEZD_LmfYNNHhJlElOrO3ebNrHkW-J)
         └── Fractional Real Estate vs REIT: Which Is Right for You? (native gdoc)
 ```

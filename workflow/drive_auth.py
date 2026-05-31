@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-One-shot OAuth flow to mint a Drive-scoped token for the psfnetwork pipeline.
+One-shot OAuth flow to mint a Drive-scoped token for the PSFnetwork pipeline.
 
 Reuses the existing OAuth client at /Users/onur/gsc-mcp/credentials.json
 (GCP project: seo-kpi-449217) and adds Drive scope on top of any prior scope.

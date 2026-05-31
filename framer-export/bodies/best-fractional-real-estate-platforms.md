@@ -1,6 +1,6 @@
 ## Quick Answer (60 seconds)
 
-The "best" fractional real estate platform depends on your goal. For the lowest entry point: Fundrise ($10) or HappyNest ($10). For single-property selection with monthly distributions: Ark7 ($20) or Arrived ($100). For square-foot ownership clarity: psfnetwork. For commercial focus: HappyNest. For tokenized exposure (with the additional considerations that brings): Lofty. There is no single best platform across all investors; match the platform's structure to your goal, your tax situation, and your tolerance for illiquidity. All such investments carry real risk, including loss of principal.
+The "best" fractional real estate platform depends on your goal. For the lowest entry point: Fundrise ($10) or HappyNest ($10). For single-property selection with monthly distributions: Ark7 ($20) or Arrived ($100). For square-foot ownership clarity: PSFnetwork. For commercial focus: HappyNest. For tokenized exposure (with the additional considerations that brings): Lofty. There is no single best platform across all investors; match the platform's structure to your goal, your tax situation, and your tolerance for illiquidity. All such investments carry real risk, including loss of principal.
 
 - **$10** - Lowest fractional platform minimum
 - **7** - Major US platforms compared in this guide
@@ -15,7 +15,7 @@ The "best" fractional real estate platform depends on your goal. For the lowest 
 
 Most "best platform" articles in this category are written by the platforms themselves. Lofty's roundup ranks Lofty highly. Realbricks' guide features Realbricks. Ark7's comparisons place Ark7 at the top. That is not a moral failing on their part; it is a structural problem for the reader.
 
-This guide is written from the user's seat. psfnetwork appears in the comparison, named where its structural model is a fit and not named where another platform is the better answer. Every claim about another platform's minimum, structure, or feature is sourced to the platform's own disclosure or to a regulated filing. Where the data is unaudited (typical for performance claims), we say so.
+This guide is written from the user's seat. PSFnetwork appears in the comparison, named where its structural model is a fit and not named where another platform is the better answer. Every claim about another platform's minimum, structure, or feature is sourced to the platform's own disclosure or to a regulated filing. Where the data is unaudited (typical for performance claims), we say so.
 
 ---
 
@@ -29,7 +29,7 @@ We did not run a head-to-head return horse race because there is no audited appl
 
 ## Which platform fits which investor?
 
-**Answer capsule:** Different platforms suit different goals. Lowest entry / fund-style diversified exposure: Fundrise or HappyNest. Single-property selection at low minimums: Ark7. Single-family rentals with brand trust: Arrived. Square-foot ownership for intuitive math: psfnetwork. Tokenized fractions with daily liquidity (with token-structure caveats): Lofty. Premium / curated commercial: Mogul. The match depends on your goal and tolerance, not on which platform is "best" in absolute terms.
+**Answer capsule:** Different platforms suit different goals. Lowest entry / fund-style diversified exposure: Fundrise or HappyNest. Single-property selection at low minimums: Ark7. Single-family rentals with brand trust: Arrived. Square-foot ownership for intuitive math: PSFnetwork. Tokenized fractions with daily liquidity (with token-structure caveats): Lofty. Premium / curated commercial: Mogul. The match depends on your goal and tolerance, not on which platform is "best" in absolute terms.
 
 *These "best for" assignments reflect structural fit and feature differences, not return rankings or individual investment advice.*
 
@@ -45,7 +45,7 @@ $20 per share. Monthly income distributions. Secondary market available after a 
 
 $100 minimum. Single-family and short-term-rental focus. Quarterly distributions. Backed by well-known investors. Best for: investors who value name recognition and SFR-specific exposure.
 
-### Square-foot ownership: psfnetwork
+### Square-foot ownership: PSFnetwork
 
 $100 entry point. Per-square-foot ownership unit (you hold a stake in a specific number of square feet of a property). Same underlying Reg A LLC structure as other fractional platforms; the difference is presentation, which can make the math easier to reason about. Best for: investors who want the intuitive anchoring of a physical unit.
 
@@ -71,7 +71,7 @@ $250 minimum at the time of writing. Curated deal flow. Performance claims are p
 | Lofty | $50 | Daily (USDC) | Tokenized (Algorand) | Internal marketplace | Token-structure caveats apply |
 | Arrived | $100 | Quarterly | Reg A LLC | Limited / per platform | SFR + STR focus |
 | Realbricks | $100 | Quarterly | Reg A LLC | Limited / per platform | Dividends from rental income |
-| psfnetwork | $100 | Per offering | Reg A LLC | 5-10 year typical hold | Square-foot model |
+| PSFnetwork | $100 | Per offering | Reg A LLC | 5-10 year typical hold | Square-foot model |
 | Mogul | $250 | Per offering | Reg D / Reg A varies | Limited | Curated; performance claims platform-reported |
 
 Minimums and structures change. Verify on the platform's offering page before investing. SEC EDGAR is the audit source.
@@ -86,7 +86,7 @@ If you have $10 to start and want simplicity: Fundrise Flagship Fund.
 
 If you have $100 and want property-level selection at the lowest cost: Ark7 or Arrived.
 
-If you have $100 and want the intuitive square-foot framing: psfnetwork.
+If you have $100 and want the intuitive square-foot framing: PSFnetwork.
 
 If you have $250+ and want a curated commercial deal flow: Mogul.
 
@@ -121,8 +121,8 @@ A: The property is held in an LLC separate from the platform itself, so a platfo
 **Q: How are fractional real estate platforms regulated?**
 A: Most US-regulated platforms file offerings under SEC Regulation A (Tier 2 allows non-accredited investors with disclosure, capped at $75 million per 12 months) or Regulation D (typically accredited investors only). Tokenized platforms like Lofty operate under a different regulatory frame and carry additional considerations. Confirm the specific filing on SEC EDGAR before committing.
 
-**Q: How does psfnetwork compare to Arrived?**
-A: Both are Reg A LLC platforms with $100 minimums and single-property exposure. Arrived's differentiator is brand recognition and SFR / STR focus. psfnetwork's differentiator is the per-square-foot ownership unit (you hold a stake in N square feet of the property rather than abstract shares). Underlying legal structure is the same; what differs is presentation, which can make the math easier to reason about.
+**Q: How does PSFnetwork compare to Arrived?**
+A: Both are Reg A LLC platforms with $100 minimums and single-property exposure. Arrived's differentiator is brand recognition and SFR / STR focus. PSFnetwork's differentiator is the per-square-foot ownership unit (you hold a stake in N square feet of the property rather than abstract shares). Underlying legal structure is the same; what differs is presentation, which can make the math easier to reason about.
 
 ---
 
@@ -142,7 +142,7 @@ A: Both are Reg A LLC platforms with $100 minimums and single-property exposure.
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at psfnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA** - investment strategist and former real estate analyst.
 
@@ -156,7 +156,7 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Want to see how psfnetwork's per-square-foot model compares on a specific property? psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+Want to see how PSFnetwork's per-square-foot model compares on a specific property? PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 

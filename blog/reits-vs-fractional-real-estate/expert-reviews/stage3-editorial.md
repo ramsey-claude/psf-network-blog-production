@@ -10,9 +10,9 @@
 
 DOMAIN FINDINGS:
 
-Structural compliance verified. All 6 H2s in question format. All capsules in 50-75 word range (verified: 61 / 68 / 59 / 65 / 70 / 54). FAQ has 6 Q/A pairs (above 5 minimum). No em or en dashes. psfnetwork lowercase throughout. No "guaranteed return" phrase. No "Daniel Cho" quote in this post (correctly omitted; no natural anchor for one). <!-- check-rules: allow -->
+Structural compliance verified. All 6 H2s in question format. All capsules in 50-75 word range (verified: 61 / 68 / 59 / 65 / 70 / 54). FAQ has 6 Q/A pairs (above 5 minimum). No em or en dashes. PSFnetwork lowercase throughout. No "guaranteed return" phrase. No "Daniel Cho" quote in this post (correctly omitted; no natural anchor for one). <!-- check-rules: allow -->
 
-The Opening is the strongest in the cluster so far. "If you have spent time researching REITs, you have probably already met fractional real estate. The two get compared constantly, often by people selling one or the other. This is the comparison written for the reader, not the salesperson." Anchors the reader's likely state, names the conflict honestly, and positions psfnetwork as the neutral voice. Hook quality: high.
+The Opening is the strongest in the cluster so far. "If you have spent time researching REITs, you have probably already met fractional real estate. The two get compared constantly, often by people selling one or the other. This is the comparison written for the reader, not the salesperson." Anchors the reader's likely state, names the conflict honestly, and positions PSFnetwork as the neutral voice. Hook quality: high.
 
 The differences table is the substantive payoff of the post. Eight rows is the right density. Tax form footnote on 1099-DIV addresses the non-traded REIT exception (which carried forward from the hub post's K-1 footnote pattern).
 
@@ -20,7 +20,7 @@ Author and reviewer match `brand/personas.md`. Disclaimer text matches canonical
 
 FLAGGED ISSUES:
 
-1. **CTA opening line: "Curious how psfnetwork's per-square-foot model compares to your current REIT allocation?"** - SEVERITY: LOW - FIX: Strong CTA but assumes the reader already has a REIT allocation. Not every reader does. Consider: "Want to see how psfnetwork's per-square-foot model fits alongside REITs?" - serves both new and existing REIT holders.
+1. **CTA opening line: "Curious how PSFnetwork's per-square-foot model compares to your current REIT allocation?"** - SEVERITY: LOW - FIX: Strong CTA but assumes the reader already has a REIT allocation. Not every reader does. Consider: "Want to see how PSFnetwork's per-square-foot model fits alongside REITs?" - serves both new and existing REIT holders.
 
 2. **Stat card "4%+ Average REIT dividend yield in early 2026"** - SEVERITY: MED - FIX: The "+" is editorially weak. Either "4%" or "over 4%" without the + sign. The + reads as marketing rather than fact. Suggested: "Over 4%" matches the body language.
 

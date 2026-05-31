@@ -119,15 +119,15 @@ Importantly, **Section 1031 like-kind exchanges do not apply to LLC member inter
 
 ---
 
-## How does this apply to psfnetwork specifically?
+## How does this apply to PSFnetwork specifically?
 
-**Answer capsule:** psfnetwork uses the same Reg A LLC structure as most fractional platforms. Each property is its own LLC; each LLC issues K-1s to its investors. The per-square-foot model affects how shares are counted (you own a specific number of square feet rather than a percentage), but the K-1 tax mechanics are identical to any other Reg A LLC offering. Depreciation, passive activity rules, state filings, and Section 1250 recapture work the same way.
+**Answer capsule:** PSFnetwork uses the same Reg A LLC structure as most fractional platforms. Each property is its own LLC; each LLC issues K-1s to its investors. The per-square-foot model affects how shares are counted (you own a specific number of square feet rather than a percentage), but the K-1 tax mechanics are identical to any other Reg A LLC offering. Depreciation, passive activity rules, state filings, and Section 1250 recapture work the same way.
 
-The legal structure is well-established. Regulation A Tier 2 allows the LLC to raise up to $75 million per 12-month period and accept non-accredited investors (subject to a cap of 10% of the greater of annual income or net worth, with primary residence and loans secured by the primary residence excluded from the net worth calculation). Tier 1 is limited to $20 million per 12-month period. Most fractional platforms, including psfnetwork, operate under Tier 2 because the offering size and non-accredited access fit the consumer-facing model.
+The legal structure is well-established. Regulation A Tier 2 allows the LLC to raise up to $75 million per 12-month period and accept non-accredited investors (subject to a cap of 10% of the greater of annual income or net worth, with primary residence and loans secured by the primary residence excluded from the net worth calculation). Tier 1 is limited to $20 million per 12-month period. Most fractional platforms, including PSFnetwork, operate under Tier 2 because the offering size and non-accredited access fit the consumer-facing model.
 
 What does the per-square-foot framing change for taxes? It changes the unit of allocation but not the mechanics. Instead of "you own 0.05% of the LLC," your K-1 reflects "you own 50 of 100,000 issued square feet", same proportional share, different unit of measurement. The K-1 boxes, the partnership return, the depreciation flow-through, and the state allocations are governed by IRS rules that do not distinguish between percentage-based and unit-based ownership.
 
-Before investing in any specific psfnetwork property, the offering circular spells out the LLC structure, the operator's K-1 production timeline, and any composite-return practice for multi-state properties. Review that section with your CPA before you commit capital.
+Before investing in any specific PSFnetwork property, the offering circular spells out the LLC structure, the operator's K-1 production timeline, and any composite-return practice for multi-state properties. Review that section with your CPA before you commit capital.
 
 ---
 
@@ -169,7 +169,7 @@ A: Different mechanics. Selling your LLC member interest is a sale of a partners
 
 ## Author
 
-**Maya Reyes**, Senior Editor at psfnetwork.
+**Maya Reyes**, Senior Editor at PSFnetwork.
 
 **Reviewed by Daniel Cho, CFA**.
 
@@ -183,7 +183,7 @@ Past performance is not indicative of future results. Real estate investing invo
 
 ## CTA
 
-If you are evaluating a specific psfnetwork property, review the offering circular's tax structure section with your CPA before you commit capital. The offering documents spell out the LLC structure, K-1 delivery practice, and any composite-return arrangements.
+If you are evaluating a specific PSFnetwork property, review the offering circular's tax structure section with your CPA before you commit capital. The offering documents spell out the LLC structure, K-1 delivery practice, and any composite-return arrangements.
 
 ---
 

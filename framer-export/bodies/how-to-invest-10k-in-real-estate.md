@@ -1,6 +1,6 @@
 ## Quick Answer (60 seconds)
 
-$10,000 is the capital level where you can build a real real estate position rather than just sample the asset class. Three structures are practical at this level: spread across several fractional properties ($1,000-$2,000 each on platforms like Arrived, Ark7, Realbricks, or psfnetwork) for property-level exposure, hold a REIT ETF position (VNQ or IYR) for instant diversification and liquidity, and add a debt-side position (Groundfloor or similar) for yield certainty. An illustrative split: $5,000 across 5 fractional properties, $3,000 in a REIT ETF, $2,000 in real estate debt. This is a framework, not personal investment advice.
+$10,000 is the capital level where you can build a real real estate position rather than just sample the asset class. Three structures are practical at this level: spread across several fractional properties ($1,000-$2,000 each on platforms like Arrived, Ark7, Realbricks, or PSFnetwork) for property-level exposure, hold a REIT ETF position (VNQ or IYR) for instant diversification and liquidity, and add a debt-side position (Groundfloor or similar) for yield certainty. An illustrative split: $5,000 across 5 fractional properties, $3,000 in a REIT ETF, $2,000 in real estate debt. This is a framework, not personal investment advice.
 
 - **$10,000** - The capital this guide assumes
 - **5 positions** - Recommended fractional spread at this capital level
@@ -53,7 +53,7 @@ This is a framework, not a recommendation for your specific situation. Adjust ba
 
 ## How should you diversify $10,000 across fractional platforms?
 
-**Answer capsule:** Five $1,000 positions across different properties beats one $5,000 position, even on the same platform. The reason: each property carries its own vacancy, repair, and market risk. Diversification across properties is the single most effective hedge at this capital level. If you also want platform-level diversification, split across two platforms with different property types (e.g., $2,500 on Arrived for single-family rentals and $2,500 on psfnetwork for the per-square-foot model).
+**Answer capsule:** Five $1,000 positions across different properties beats one $5,000 position, even on the same platform. The reason: each property carries its own vacancy, repair, and market risk. Diversification across properties is the single most effective hedge at this capital level. If you also want platform-level diversification, split across two platforms with different property types (e.g., $2,500 on Arrived for single-family rentals and $2,500 on PSFnetwork for the per-square-foot model).
 
 The trade-off is administrative complexity. Each position generates its own K-1 at tax time. Five positions = five K-1s; ten positions = ten K-1s. For most $10,000 investors, the diversification gain outweighs the paperwork cost; if you find K-1s overwhelming, hire a tax preparer or stick to three positions.
 
@@ -108,7 +108,7 @@ A: Each fractional position generates a Schedule K-1 (Form 1065) because the und
 
 ## Author
 
-**Maya Reyes**, Senior Editor at psfnetwork.
+**Maya Reyes**, Senior Editor at PSFnetwork.
 
 **Reviewed by Daniel Cho, CFA**.
 
@@ -122,7 +122,7 @@ Past performance is not indicative of future results. Real estate investing invo
 
 ## CTA
 
-Want to put part of your $10,000 into property-level fractional exposure? psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest.
+Want to put part of your $10,000 into property-level fractional exposure? PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest.
 
 ---
 

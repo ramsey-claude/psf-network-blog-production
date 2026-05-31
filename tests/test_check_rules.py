@@ -171,11 +171,12 @@ def test_runs_without_grep_errors_on_unicode_content(cr, tmp_path):
 
 
 # ---------------------------------------------------------------------
-# Brand voice: psfnetwork casing variants. Tier 2 BLOCKING.
+# Brand voice: PSFnetwork casing variants. Tier 2 BLOCKING.
+# Per the 2026 client brief, the brand is written PSFnetwork (capital PSF).
 # ---------------------------------------------------------------------
 
 @pytest.mark.parametrize('variant', [
-    'PSFnetwork', 'PSF Network', 'PSFNETWORK', 'Psfnetwork',
+    'psfnetwork', 'PSF Network', 'PSFNETWORK', 'Psfnetwork',
 ])
 def test_psfnetwork_casing_blocks(cr, tmp_path, variant):
     f = tmp_path / 'doc.md'
@@ -184,9 +185,17 @@ def test_psfnetwork_casing_blocks(cr, tmp_path, variant):
     assert any(b[0] == 'psfnetwork-casing' for b in blocking)
 
 
-def test_psfnetwork_lowercase_passes(cr, tmp_path):
+def test_psfnetwork_capitalized_passes(cr, tmp_path):
     f = tmp_path / 'doc.md'
-    f.write_text('A reference to psfnetwork in body prose.\n')
+    f.write_text('A reference to PSFnetwork in body prose.\n')
+    blocking, _ = cr.check_file(f)
+    casing_hits = [b for b in blocking if b[0] == 'psfnetwork-casing']
+    assert casing_hits == []
+
+
+def test_psfnetwork_domain_not_flagged(cr, tmp_path):
+    f = tmp_path / 'doc.md'
+    f.write_text('See https://psfnetwork.com/blog for details.\n')
     blocking, _ = cr.check_file(f)
     casing_hits = [b for b in blocking if b[0] == 'psfnetwork-casing']
     assert casing_hits == []

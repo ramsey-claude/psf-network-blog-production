@@ -1,6 +1,6 @@
-# psfnetwork Standing Personas
+# PSFnetwork Standing Personas
 
-psfnetwork uses standing author and reviewer personas for blog content. These are brand-approved bylines, not real individuals. Operator has authorized their automated use across the pipeline. No per-post operator approval is required.
+PSFnetwork uses standing author and reviewer personas for blog content. These are brand-approved bylines, not real individuals. Operator has authorized their automated use across the pipeline. No per-post operator approval is required.
 
 This file is the source of truth for who appears in the byline and credit on every post.
 
@@ -12,7 +12,7 @@ This file is the source of truth for who appears in the byline and credit on eve
 
 - **Role on post:** Author byline
 - **Appears in:** Frontmatter `author` field, ArticleHero component, AuthorCard component
-- **Bio (canonical):** Maya Reyes is a Senior Editor at psfnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+- **Bio (canonical):** Maya Reyes is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
 - **Voice:** Plain, declarative, second-person. No first-person ("I") in content.
 - **Quotable:** No. Maya is the byline; quotes from "Maya Reyes" are not used in body content. The author voice IS the content's voice.
 
@@ -43,7 +43,7 @@ If a quote candidate violates any rule above, the pipeline does not produce the 
 
 ## Disclosure
 
-psfnetwork's About page is responsible for disclosing the production model (AI-assisted content under standing editorial personas). The blog post itself does not need to repeat that disclosure - the Disclaimer block already covers the content's nature.
+PSFnetwork's About page is responsible for disclosing the production model (AI-assisted content under standing editorial personas). The blog post itself does not need to repeat that disclosure - the Disclaimer block already covers the content's nature.
 
 This separation is by operator decision. The pipeline does not author or modify the About page.
 

@@ -1,6 +1,6 @@
 # SERP Snapshot - square-foot real estate ownership
 
-Captured: 2026-05-14. Topic is psfnetwork-native; SERP is dominated by psfnetwork's own pages plus a few definitional misuses (square-foot pricing of property generally, not ownership). No competitor owns the definitional explainer for the ownership model.
+Captured: 2026-05-14. Topic is psfnetwork-native; SERP is dominated by PSFnetwork's own pages plus a few definitional misuses (square-foot pricing of property generally, not ownership). No competitor owns the definitional explainer for the ownership model.
 
 ## Cannibalization
 

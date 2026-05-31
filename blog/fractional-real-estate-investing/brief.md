@@ -19,16 +19,16 @@
 | is fractional real estate a good investment | 30 | 14 | I |
 
 ## ICP
-First-time US investor, 25-45, $500-$50K to invest, wants real estate exposure without landlord responsibilities. May have heard of Fundrise or Arrived but hasn't invested yet. US-resident audience only (psfnetwork operates in the US market).
+First-time US investor, 25-45, $500-$50K to invest, wants real estate exposure without landlord responsibilities. May have heard of Fundrise or Arrived but hasn't invested yet. US-resident audience only (PSFnetwork operates in the US market).
 
 ## Content Angle
-Definitive explainer that positions psfnetwork's square-foot model as the natural evolution of fractional ownership. Covers what it is, how it works, the different platform models, and why the per-sq-ft approach is the clearest way to understand fractional ownership.
+Definitive explainer that positions PSFnetwork's square-foot model as the natural evolution of fractional ownership. Covers what it is, how it works, the different platform models, and why the per-sq-ft approach is the clearest way to understand fractional ownership.
 
 ## Competitor Gap
 - Arrived has a page (/blog/fractional-real-estate-investing) getting 100 traffic with thin content
 - Ark7 has programmatic city pages but no standalone hub on fractional investing
 - No competitor has a GEO-optimized, answer-capsule-structured hub on this topic
-- psfnetwork can own this keyword with better structure + unique sq-ft angle
+- PSFnetwork can own this keyword with better structure + unique sq-ft angle
 
 ## SEO Notes
 - Focus keyword in H1, first 100 words, one H2, URL slug

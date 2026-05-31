@@ -43,7 +43,7 @@ Stage 7. Verified against `checklist/qa-gate.md`.
 
 | Item | Status | Note |
 |------|--------|------|
-| Brand name written as psfnetwork throughout | PASS | Lowercase one-word everywhere |
+| Brand name written as PSFnetwork throughout | PASS | Lowercase one-word everywhere |
 | No em dashes or en dashes | PASS | Hyphens and commas only |
 | Tone matches `brand/tone-and-voice.md` | PASS | Second person, short sentences, active voice, no superlatives without proof |
 | No contradictions within the content | PASS | Reviewed against evidence.md and outline.md |

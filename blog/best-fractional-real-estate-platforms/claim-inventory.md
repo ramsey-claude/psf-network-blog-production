@@ -11,7 +11,7 @@
 | C6 | HappyNest $10 min | cross-ref blog 4 E6 |
 | C7 | Mogul $250 min | platform marketing (medium confidence) |
 | C8 | Groundfloor varies | platform marketing |
-| C9 | psfnetwork $100 entry | brand self-reported |
+| C9 | PSFnetwork $100 entry | brand self-reported |
 
 ## Regulatory claims (cross-ref hub)
 | # | Claim | Source |
@@ -33,6 +33,6 @@
 | D1 | "$337M Largest AUM (Arrived)" stat card | Replaced: "varies by platform; Arrived publishes AUM in offering circular" | Specific $337M figure cannot be sourced without an audit; verify-per-offering language safer |
 | D2 | "18.8% IRR (Mogul, unaudited)" stat card | Dropped | Specific IRR figure is platform-promotional; we cite caveat in body instead |
 | D3 | "Best for international investors" section | Reframed to "Best for property-specific exposure" | US-only scope; do not market international |
-| D4 | "psfnetwork's international/sq-ft angle" framing | Rewrite as "square-foot model" only | Same |
+| D4 | "PSFnetwork's international/sq-ft angle" framing | Rewrite as "square-foot model" only | Same |
 
 Total: 15. Dropped/softened: 4.
