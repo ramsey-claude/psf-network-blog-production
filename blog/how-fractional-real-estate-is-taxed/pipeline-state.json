@@ -12,13 +12,25 @@
     "stage-4-revision",
     "stage-5-localization-noop",
     "stage-7-pre-publish-qa",
-    "stage-8-publish"
+    "stage-8-publish",
+    "stage10-post-publish-qa"
   ],
-  "pending_steps": ["stage-9-delivery", "stage-10-post-publish-qa"],
+  "pending_steps": [
+    "stage-9-delivery",
+    "stage-10-post-publish-qa"
+  ],
   "loop_count": 0,
-  "last_updated": "2026-05-15",
-  "expert_panel": ["SEC", "FINRA", "CFPB", "IRS-specialist", "Editorial"],
-  "target_markets": ["EN-US"],
+  "last_updated": "2026-06-01",
+  "expert_panel": [
+    "SEC",
+    "FINRA",
+    "CFPB",
+    "IRS-specialist",
+    "Editorial"
+  ],
+  "target_markets": [
+    "EN-US"
+  ],
   "flags": {
     "high_severity_issues_count": 0,
     "med_severity_issues_count": 8,
@@ -40,6 +52,25 @@
           "url": "https://docs.google.com/document/d/1BcQ6M3l8YScA-KOge7VWvIqSXqiyrpZqZxS4N10wio4/edit"
         }
       ]
+    },
+    "post_publish_qa": {
+      "completed_at": "2026-06-01",
+      "live": true,
+      "http_status": 200,
+      "checks": {
+        "canonical_present": false,
+        "canonical_matches": false,
+        "canonical_value": null,
+        "title_present": true,
+        "title_length_ok": false,
+        "title_value": "PSFnetwork",
+        "meta_description_present": false,
+        "meta_description_length_ok": false,
+        "schemas_found": [],
+        "has_article_schema": false,
+        "has_faq_schema": false,
+        "has_breadcrumb_schema": false
+      }
     }
   },
   "evidence_summary": {
