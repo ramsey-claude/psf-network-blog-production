@@ -24,15 +24,21 @@
     "stage6-recheck-noop",
     "stage7-pre-publish-qa-pass",
     "stage8-github-publish",
-    "stage9-drive-delivery"
+    "stage9-drive-delivery",
+    "stage10-post-publish-qa"
   ],
-  "pending_steps": [
-    "stage10-post-publish-qa (deferred until psfnetwork.com is live)"
-  ],
+  "pending_steps": [],
   "loop_count": 0,
-  "last_updated": "2026-05-14",
-  "expert_panel": ["SEC", "FINRA", "CFPB", "Editorial"],
-  "target_markets": ["EN-US"],
+  "last_updated": "2026-06-03",
+  "expert_panel": [
+    "SEC",
+    "FINRA",
+    "CFPB",
+    "Editorial"
+  ],
+  "target_markets": [
+    "EN-US"
+  ],
   "flags": {
     "high_severity_issues_count": 0,
     "med_severity_issues_count": 5,
@@ -55,6 +61,25 @@
           "mimeType": "application/vnd.google-apps.document"
         }
       ]
+    },
+    "post_publish_qa": {
+      "completed_at": "2026-06-03",
+      "live": true,
+      "http_status": 200,
+      "checks": {
+        "canonical_present": true,
+        "canonical_matches": false,
+        "canonical_value": "https://www.psfnetwork.com/blog/fractional-real-estate-investing",
+        "title_present": true,
+        "title_length_ok": false,
+        "title_value": "What Is Fractional Real Estate Investing? The 2026 Guide - PSFnetwork",
+        "meta_description_present": false,
+        "meta_description_length_ok": false,
+        "schemas_found": [],
+        "has_article_schema": false,
+        "has_faq_schema": false,
+        "has_breadcrumb_schema": false
+      }
     }
   },
   "expert_verdicts": {
