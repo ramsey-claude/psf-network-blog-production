@@ -23,15 +23,21 @@
     "stage6-recheck-noop",
     "stage7-pre-publish-qa-pass",
     "stage8-github-publish",
-    "stage9-drive-delivery"
+    "stage9-drive-delivery",
+    "stage10-post-publish-qa"
   ],
-  "pending_steps": [
-    "stage10-post-publish-qa (deferred until psfnetwork.com is live)"
-  ],
+  "pending_steps": [],
   "loop_count": 0,
-  "last_updated": "2026-05-14",
-  "expert_panel": ["SEC", "FINRA", "CFPB", "Editorial"],
-  "target_markets": ["EN-US"],
+  "last_updated": "2026-06-04",
+  "expert_panel": [
+    "SEC",
+    "FINRA",
+    "CFPB",
+    "Editorial"
+  ],
+  "target_markets": [
+    "EN-US"
+  ],
   "flags": {
     "high_severity_issues_count": 0,
     "med_severity_issues_count": 3,
@@ -44,7 +50,33 @@
       "format": "native Google Doc",
       "folder_id": "1Pu5tI9AbzjQma869tSNrO8fQ6ez2A_OI",
       "folder_url": "https://drive.google.com/drive/folders/1Pu5tI9AbzjQma869tSNrO8fQ6ez2A_OI",
-      "files": [{"name": "How to Invest in Real Estate With $100 (or Less) in 2026", "id": "1JSaKhuHc43KvGQBKGSoRh3j_t74n8zXROHbbvcWItQY", "url": "https://docs.google.com/document/d/1JSaKhuHc43KvGQBKGSoRh3j_t74n8zXROHbbvcWItQY/edit", "mimeType": "application/vnd.google-apps.document"}]
+      "files": [
+        {
+          "name": "How to Invest in Real Estate With $100 (or Less) in 2026",
+          "id": "1JSaKhuHc43KvGQBKGSoRh3j_t74n8zXROHbbvcWItQY",
+          "url": "https://docs.google.com/document/d/1JSaKhuHc43KvGQBKGSoRh3j_t74n8zXROHbbvcWItQY/edit",
+          "mimeType": "application/vnd.google-apps.document"
+        }
+      ]
+    },
+    "post_publish_qa": {
+      "completed_at": "2026-06-04",
+      "live": true,
+      "http_status": 200,
+      "checks": {
+        "canonical_present": true,
+        "canonical_matches": false,
+        "canonical_value": "https://www.psfnetwork.com/blog/how-to-invest-in-real-estate-with-100",
+        "title_present": true,
+        "title_length_ok": false,
+        "title_value": "How to Invest in Real Estate With $100 (or Less) in 2026 - PSFnetwork",
+        "meta_description_present": false,
+        "meta_description_length_ok": false,
+        "schemas_found": [],
+        "has_article_schema": false,
+        "has_faq_schema": false,
+        "has_breadcrumb_schema": false
+      }
     }
   },
   "expert_verdicts": {
@@ -56,6 +88,15 @@
       "Moderator": "PROCEED_TO_STAGE_4"
     }
   },
-  "evidence_summary": {"claims_total": 14, "claims_sourced": 11, "claims_dropped": 3},
-  "qa_summary": {"total_items": 33, "pass": 33, "fail": 0, "recommendation": "PUBLISH"}
+  "evidence_summary": {
+    "claims_total": 14,
+    "claims_sourced": 11,
+    "claims_dropped": 3
+  },
+  "qa_summary": {
+    "total_items": 33,
+    "pass": 33,
+    "fail": 0,
+    "recommendation": "PUBLISH"
+  }
 }
