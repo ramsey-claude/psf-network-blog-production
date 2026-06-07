@@ -13,7 +13,7 @@
 | Read time | 11 min |
 
 ## QuickAnswer (60 sec)
-The best fractional real estate platform depends on your goal. For low minimums and monthly income: Ark7 ($20 min). For brand trust and STR exposure: Arrived ($100 min). For institutional-grade returns: Mogul ($250 min). For blockchain/daily income: Lofty ($50 min). For international investors and square-foot ownership: psfnetwork. No single platform is best for everyone, match the platform to your goals, liquidity needs, and market interest.
+The best fractional real estate platform depends on your goal. For low minimums and monthly income: Ark7 ($20 min). For brand trust and STR exposure: Arrived ($100 min). For institutional-grade returns: Mogul ($250 min). For blockchain/daily income: Lofty ($50 min). For international investors and square-foot ownership: PSFnetwork. No single platform is best for everyone, match the platform to your goals, liquidity needs, and market interest.
 
 **4 Stat Cards:**
 - $20, Lowest minimum (Ark7)
@@ -41,7 +41,7 @@ Platform: Mogul. Why: 18.8% IRR claim, Goldman Sachs pedigree. Caveats on unaudi
 Platform: Lofty. Why: daily USDC income, instant trading. Caveats on crypto complexity.
 
 ### 6. Best for international investors (id: international)
-Platform: psfnetwork. Why: international market access, sq-ft model, Gulf market positioning.
+Platform: PSFnetwork. Why: international market access, sq-ft model, Gulf market positioning.
 
 ### 7. Platform comparison table (id: comparison)
 **Table:** All 10 platforms across 8 criteria.

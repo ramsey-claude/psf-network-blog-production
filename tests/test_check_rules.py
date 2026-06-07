@@ -171,11 +171,12 @@ def test_runs_without_grep_errors_on_unicode_content(cr, tmp_path):
 
 
 # ---------------------------------------------------------------------
-# Brand voice: psfnetwork casing variants. Tier 2 BLOCKING.
+# Brand voice: brand is PSFnetwork (one word, capital PSF). Tier 2 BLOCKING.
+# Rebranded 2026-05-30 from lowercase "psfnetwork" to "PSFnetwork".
 # ---------------------------------------------------------------------
 
 @pytest.mark.parametrize('variant', [
-    'PSFnetwork', 'PSF Network', 'PSFNETWORK', 'Psfnetwork',
+    'psfnetwork', 'PSF Network', 'PSF network', 'PSFNETWORK', 'Psfnetwork',
 ])
 def test_psfnetwork_casing_blocks(cr, tmp_path, variant):
     f = tmp_path / 'doc.md'
@@ -184,9 +185,25 @@ def test_psfnetwork_casing_blocks(cr, tmp_path, variant):
     assert any(b[0] == 'psfnetwork-casing' for b in blocking)
 
 
-def test_psfnetwork_lowercase_passes(cr, tmp_path):
+def test_psfnetwork_correct_casing_passes(cr, tmp_path):
     f = tmp_path / 'doc.md'
-    f.write_text('A reference to psfnetwork in body prose.\n')
+    f.write_text('A reference to PSFnetwork in body prose.\n')
+    blocking, _ = cr.check_file(f)
+    casing_hits = [b for b in blocking if b[0] == 'psfnetwork-casing']
+    assert casing_hits == []
+
+
+@pytest.mark.parametrize('identifier', [
+    'Visit psfnetwork.com for details.',          # domain
+    'The service is com.psfnetwork.stage10 here.',  # reverse-DNS
+    'Clone the psfnetwork-pipeline repo.',          # slug
+    'Read /Users/onur/.psfnetwork-drive/log now.',  # path
+    'Set PSFNETWORK_GITHUB_TOKEN before running.',  # env var
+])
+def test_psfnetwork_technical_identifiers_pass(cr, tmp_path, identifier):
+    """Lowercase technical identifiers are not brand-prose and must not block."""
+    f = tmp_path / 'doc.md'
+    f.write_text(identifier + '\n')
     blocking, _ = cr.check_file(f)
     casing_hits = [b for b in blocking if b[0] == 'psfnetwork-casing']
     assert casing_hits == []

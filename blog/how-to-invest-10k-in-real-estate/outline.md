@@ -12,7 +12,7 @@
 | Read time | 8 min |
 
 ## QuickAnswer
-$10,000 is enough capital to build a real, diversified real estate position rather than just sample the asset class. At this level, three structural options become practical: spreading across several fractional properties ($1,000-$2,000 each on platforms like Arrived, Ark7, Realbricks, or psfnetwork), buying a REIT ETF position (VNQ or IYR for instant diversification), and adding a debt-side position (Groundfloor for yield certainty). A common allocation: $5,000 across 5 fractional properties, $3,000 in a REIT ETF, $2,000 in real estate debt. This is illustrative, not advice.
+$10,000 is enough capital to build a real, diversified real estate position rather than just sample the asset class. At this level, three structural options become practical: spreading across several fractional properties ($1,000-$2,000 each on platforms like Arrived, Ark7, Realbricks, or PSFnetwork), buying a REIT ETF position (VNQ or IYR for instant diversification), and adding a debt-side position (Groundfloor for yield certainty). A common allocation: $5,000 across 5 fractional properties, $3,000 in a REIT ETF, $2,000 in real estate debt. This is illustrative, not advice.
 
 **Stat cards:**
 - **$10,000** - The capital this guide assumes

@@ -1,6 +1,6 @@
 # Moderator Consensus
 
-Raw: 1. Consolidated: 0. HIGH: 0 | MED: 0 | LOW: 1 (cosmetic note on psfnetwork brand mention; no action).
+Raw: 1. Consolidated: 0. HIGH: 0 | MED: 0 | LOW: 1 (cosmetic note on PSFnetwork brand mention; no action).
 
 All four reviewers issued APPROVE with no MED issues. Cleanest review in the cluster so far.
 

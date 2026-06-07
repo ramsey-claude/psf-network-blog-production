@@ -1,4 +1,4 @@
-# psfnetwork blog production pipeline - operator task runner
+# PSFnetwork blog production pipeline - operator task runner
 #
 # Common commands. Run `make help` to see this list.
 # All commands assume a venv at .venv created from requirements.txt.

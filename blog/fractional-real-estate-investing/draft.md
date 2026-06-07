@@ -46,7 +46,7 @@ Fractional real estate investing lets multiple investors co-own a single rental 
 
 The minimum stake in a US rental property used to be a $20,000 down payment. Now it can be $20. Fractional real estate investing changed the math: you can buy a slice of a rental property for less than the price of dinner, hold it through a regulated investment vehicle, and let a platform handle the tenants, repairs, and tax forms.
 
-The trade-offs are real. You give up direct control. Your money is locked up longer than a brokerage account. Platforms charge fees that compound across years. This guide walks through how fractional real estate investing actually works, where the risks sit, and how the per-square-foot ownership model used by psfnetwork compares to traditional share-based platforms. By the end, you will know whether fractional real estate fits your situation and how to evaluate any platform before you commit.
+The trade-offs are real. You give up direct control. Your money is locked up longer than a brokerage account. Platforms charge fees that compound across years. This guide walks through how fractional real estate investing actually works, where the risks sit, and how the per-square-foot ownership model used by PSFnetwork compares to traditional share-based platforms. By the end, you will know whether fractional real estate fits your situation and how to evaluate any platform before you commit.
 
 ---
 
@@ -54,7 +54,7 @@ The trade-offs are real. You give up direct control. Your money is locked up lon
 
 **Answer capsule:** Fractional real estate investing is the practice of multiple investors co-owning a single property through shares in a special purpose entity, usually an LLC, that holds title. Each investor receives a proportional share of rental income and appreciation. Online platforms standardized the model in the US after the JOBS Act of 2012 expanded private offering rules for non-accredited investors, and minimums now start as low as $20.
 
-Fractional real estate is not new. Wealthy families have co-owned vacation homes and commercial buildings for decades through partnerships and trusts. What changed is access. Online platforms standardized the legal structure, lowered the minimums, and used Securities and Exchange Commission (SEC) exemptions to allow public marketing of these offerings. The result is a category that now holds billions in assets across major US platforms like Fundrise, Arrived, Ark7, and psfnetwork, and continues to grow.
+Fractional real estate is not new. Wealthy families have co-owned vacation homes and commercial buildings for decades through partnerships and trusts. What changed is access. Online platforms standardized the legal structure, lowered the minimums, and used Securities and Exchange Commission (SEC) exemptions to allow public marketing of these offerings. The result is a category that now holds billions in assets across major US platforms like Fundrise, Arrived, Ark7, and PSFnetwork, and continues to grow.
 
 When you buy fractional shares, you are not buying a deed. You are buying a security, typically a unit of membership interest in an LLC that owns the property. That distinction matters for taxes, for how you can exit, and for what happens if the platform itself runs into trouble.
 
@@ -90,7 +90,7 @@ Returns are not guaranteed at any step. Property values can fall, tenants can de
 | Diversification | Easy across many properties | Hard, capital-intensive |
 | Risk concentration | Spread across properties | Concentrated in one asset |
 
-The fractional model also splits along platform structure. Some platforms use a per-share model where each share represents a fixed dollar amount. Others, like psfnetwork, use a per-square-foot model where each unit of ownership maps to a square foot of the property. Both are securities under SEC frameworks; the difference is presentation, not the underlying legal structure.
+The fractional model also splits along platform structure. Some platforms use a per-share model where each share represents a fixed dollar amount. Others, like PSFnetwork, use a per-square-foot model where each unit of ownership maps to a square foot of the property. Both are securities under SEC frameworks; the difference is presentation, not the underlying legal structure.
 
 ---
 
@@ -180,7 +180,7 @@ A: No. FDIC deposit insurance covers depositor accounts at insured banks, up to 
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at psfnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA** - investment strategist and former real estate analyst.
 
@@ -194,7 +194,7 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Ready to look at a property? psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+Ready to look at a property? PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 

@@ -68,5 +68,5 @@ Body: Honest treatment of risks without catastrophizing. How diversification mit
 
 ## Sources Needed
 1. NAR historical rental yield data
-2. psfnetwork platform yield data
+2. PSFnetwork platform yield data
 3. Compound interest calculation methodology

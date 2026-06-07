@@ -1,12 +1,12 @@
-# psfnetwork: Tone and Voice
+# PSFnetwork: Tone and Voice
 
-Brand voice reference for content producers. Read before writing any psfnetwork content.
+Brand voice reference for content producers. Read before writing any PSFnetwork content.
 
 ---
 
 ## Brand Personality
 
-psfnetwork makes fractional real estate investing accessible to people who want to build wealth through property without the complexity of full ownership. The brand is:
+PSFnetwork makes fractional real estate investing accessible to people who want to build wealth through property without the complexity of full ownership. The brand is:
 
 - **Confident but not arrogant**: we know what we're talking about, we don't need to shout
 - **Clear over clever**: plain language beats jargon every time
@@ -34,7 +34,7 @@ Use these terms consistently:
 | Use | Avoid |
 |-----|-------|
 | fractional ownership | fractional shares (securities connotation) |
-| psfnetwork | PSFnetwork / PSF Network / PSFNETWORK | <!-- check-rules: allow -->
+| PSFnetwork | psfnetwork / PSF Network / PSFNETWORK / Psfnetwork (in prose) | <!-- check-rules: allow -->
 | co-investors | shareholders (legal precision) |
 | property | asset (too generic) |
 | exit | sell / liquidate (too transactional for brand voice) |

@@ -48,6 +48,6 @@ Multi-asset alternatives platform. Real estate is one of several asset classes a
 - Wealth building and portfolio diversification
 - Competitor comparison articles
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-Yieldstreet competes for wallet share of investors who want alternatives beyond stocks. psfnetwork is a pure-play real estate platform. Content angle: "alternatives vs. direct real estate ownership" - psfnetwork can argue for the focus advantage.
+Yieldstreet competes for wallet share of investors who want alternatives beyond stocks. PSFnetwork is a pure-play real estate platform. Content angle: "alternatives vs. direct real estate ownership" - PSFnetwork can argue for the focus advantage.

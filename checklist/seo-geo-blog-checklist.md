@@ -1,6 +1,6 @@
 # SEO & GEO Blog İçerik Checklist
 
-> **Operating scope (2026-05-14):** psfnetwork US pazarı ve EN dili. Bu checklist sadece EN içerik için uygulanır. Lokalizasyon (TR / FR / AE) çıkarılmıştır - bkz. `checklist/localization-guide.md` future expansion notu.
+> **Operating scope (2026-05-14):** PSFnetwork US pazarı ve EN dili. Bu checklist sadece EN içerik için uygulanır. Lokalizasyon (TR / FR / AE) çıkarılmıştır - bkz. `checklist/localization-guide.md` future expansion notu.
 
 Her blog yayınlamadan önce bu listeyi baştan sona geç. Maddeler **SEO**, **GEO** veya **SEO+GEO** etiketiyle işaretlenmiştir.
 

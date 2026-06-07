@@ -24,7 +24,7 @@ Suggested fix: clarify in the Reg CF FAQ that the investment limits are explicit
 **L1. The "neither framework is 'safer'" framing is well-placed throughout.**
 Sections 4, 5, and 6 all explicitly avoid the "safer" framing. Good.
 
-**L2. Section 7 (psfnetwork) correctly identifies the framework choice without making it a marketing claim.**
+**L2. Section 7 (PSFnetwork) correctly identifies the framework choice without making it a marketing claim.**
 "The framework choice is not hidden." Good consumer-protection tone, empowers the reader to verify rather than relying on the platform's framing.
 
 ## Verdict

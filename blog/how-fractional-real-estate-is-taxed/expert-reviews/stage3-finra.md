@@ -17,7 +17,7 @@ Suggested fix: in Section 3, after introducing "tax-deferred cash flow," add one
 ### LOW
 
 **L1. "Most fractional platforms" generalization.**
-The post says "Most fractional real estate is structured as a pass-through LLC" and "Most fractional platforms, including psfnetwork, operate under Tier 2." These are accurate generalizations but FINRA prefers verifiable phrasing. Acceptable as-is; calling out for moderator visibility.
+The post says "Most fractional real estate is structured as a pass-through LLC" and "Most fractional platforms, including PSFnetwork, operate under Tier 2." These are accurate generalizations but FINRA prefers verifiable phrasing. Acceptable as-is; calling out for moderator visibility.
 
 **L2. No return projections in the post, correct.**
 The draft makes zero forward-looking return claims. The arithmetic example in Section 3 uses generic illustrative numbers ($40K, $25K depreciation) that don't read as a projection. This is the correct posture for a regulatory-friendly explainer.

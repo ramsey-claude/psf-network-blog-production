@@ -1,6 +1,6 @@
 # Trigger Contract
 
-The psfnetwork blog production pipeline is autonomous once triggered. This document defines exactly what the trigger authorizes.
+The PSFnetwork blog production pipeline is autonomous once triggered. This document defines exactly what the trigger authorizes.
 
 ## Triggers
 

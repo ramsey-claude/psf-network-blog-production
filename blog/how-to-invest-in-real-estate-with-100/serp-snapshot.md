@@ -17,7 +17,7 @@ Top organic:
 9. SideQuestHustle - Real Estate Investing Side Hustle 2026
 10. SmartAsset - How to Invest 100k in Real Estate
 
-**Pattern:** Realbricks owns the #1 slot for the literal phrase (per ROADMAP, 581 traffic). Arrived's homepage ranks for navigational intent. Benzinga and Moneywise have evergreen guides. **Most results recommend Arrived/Realbricks for $100 entry; few cite the broader platform mix.** Opportunity: psfnetwork can be the neutral comparison-savvy entry point.
+**Pattern:** Realbricks owns the #1 slot for the literal phrase (per ROADMAP, 581 traffic). Arrived's homepage ranks for navigational intent. Benzinga and Moneywise have evergreen guides. **Most results recommend Arrived/Realbricks for $100 entry; few cite the broader platform mix.** Opportunity: PSFnetwork can be the neutral comparison-savvy entry point.
 
 ## Query 2: "how to invest in real estate with little money beginner"
 
@@ -33,7 +33,7 @@ Top organic:
 9. Groundfloor - Little Money guide
 10. Propstream
 
-**Pattern:** Mix of fractional/REIT advice and old-school strategies (FHA loans, house hacking, seller financing). For a $100 audience, the old-school strategies are not applicable. psfnetwork content should make this distinction sharply and not waste capsule space on FHA mechanics.
+**Pattern:** Mix of fractional/REIT advice and old-school strategies (FHA loans, house hacking, seller financing). For a $100 audience, the old-school strategies are not applicable. PSFnetwork content should make this distinction sharply and not waste capsule space on FHA mechanics.
 
 ## Query 3: "fractional real estate $100 minimum platforms"
 

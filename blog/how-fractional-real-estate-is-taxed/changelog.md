@@ -8,7 +8,7 @@ Stage 4 revisions applied from Stage 3 moderator consensus on 2026-05-15.
 | 2 | Section 2 (What's on a K-1): replaced ambiguous "Box 13 / 20" with precise "Box 13, Other deductions; Box 20, Code Z, Section 199A QBI information" | IRS specialist M1 | MED |
 | 3 | Section 3 (Depreciation): after the $1,500/$2,500 arithmetic example, added a sentence pointing forward to Section 1250 unrecaptured-gain reversal at sale; closes the benefit/risk loop earlier | FINRA M1 | MED |
 | 4 | Section 3 (Depreciation): the $25K active-participation allowance now leads with the disqualifier ("most fractional investors will not qualify") rather than burying it; also adds explicit CPA-confirm closer | CFPB M1 | MED |
-| 5 | Section 7 (psfnetwork): Reg A Tier 2 non-accredited cap parenthetical expanded to note primary-residence exclusion from net worth calculation | SEC M1 | MED |
+| 5 | Section 7 (PSFnetwork): Reg A Tier 2 non-accredited cap parenthetical expanded to note primary-residence exclusion from net worth calculation | SEC M1 | MED |
 | 6 | FAQ Q1 (passive/active): added "Confirm with your CPA, this is the kind of judgment call where individual facts matter" closer | CFPB M2 | MED |
 | 7 | FAQ Q2 (W-2 offset): added the same CPA-confirm closer AND a one-line reference to Section 199A QBI eligibility as an additional fact-specific analysis path | CFPB M2 + IRS specialist M2 | MED |
 

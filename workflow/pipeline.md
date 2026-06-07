@@ -1,4 +1,4 @@
-# psfnetwork Blog Production Pipeline (v2)
+# PSFnetwork Blog Production Pipeline (v2)
 
 Autonomous pipeline. Triggered by a single command. No human approval between stages once triggered. State is persisted to `blog/[slug]/pipeline-state.json` so any stage can resume after interruption.
 
@@ -27,6 +27,7 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 | 5 | Localization | Per target market |
 | 6 | Expert re-check | Conditional, only if Stage 5 changed financial terms |
 | 7 | Pre-publish QA | Items checkable from markdown only |
+| 7.5 | Human Editor QA | Final human-grade editorial read; binding gate before publish |
 | 8 | Publish | Commit all artifacts to main |
 | 9 | Client delivery | Upload outputs to operator Google Drive |
 | 10 | Post-publish QA | Live URL: schema, performance, AI citation (deferred until site is live) |
@@ -42,7 +43,7 @@ No deliverable for this stage, it is a read-and-internalize step. The fact that 
 
 ## Stage -3 - Auto gap discovery (conditional)
 
-Runs only when Stage -2 reports `topic-generation-exhausted` (ROADMAP Step 2 has fewer than 3 unused gap candidates). Scans competitor blogs from ROADMAP Step 1, identifies topics not yet covered by psfnetwork, appends new candidates to Step 2, then loops back to Stage -2.
+Runs only when Stage -2 reports `topic-generation-exhausted` (ROADMAP Step 2 has fewer than 3 unused gap candidates). Scans competitor blogs from ROADMAP Step 1, identifies topics not yet covered by PSFnetwork, appends new candidates to Step 2, then loops back to Stage -2.
 
 Spec in `checklist/topic-discovery-stage-minus-3.md`. Halt conditions: `discovery-failed` (no surface-able candidates after a full scan) or `competitor-fetch-failed`.
 
@@ -146,7 +147,7 @@ Apply every HIGH, most MED, judgment on LOW. Never delete sections - revise. Mai
 **Input:** `draft.md`, `checklist/localization-guide.md`
 **Output:** `localization-notes-[market].md` and `draft-[market].md` per target market; primary market keeps base `draft.md`.
 
-**Default behavior:** psfnetwork operates in the US market only and ships English-only content. With the default `target_markets: ["EN-US"]`, Stage 5 is a no-op: it writes an empty `localization-notes-EN-US.md` recording "no localization required, primary market only", and proceeds. Stage 6 also becomes a no-op.
+**Default behavior:** PSFnetwork operates in the US market only and ships English-only content. With the default `target_markets: ["EN-US"]`, Stage 5 is a no-op: it writes an empty `localization-notes-EN-US.md` recording "no localization required, primary market only", and proceeds. Stage 6 also becomes a no-op.
 
 Multi-market localization (TR, FR, AE) is spec'd in `checklist/localization-guide.md` for future expansion, but is not invoked by the default pipeline. To enable, set `target_markets` in the brief's metadata to include additional markets before running.
 
@@ -162,7 +163,21 @@ See `checklist/qa-gate.md`. Items in this gate are only those verifiable from ma
 
 **Output:** `qa-report.md`
 
-**Decision:** PASS → Stage 8. FAIL → route to the stage indicated by failure type. Loop budget shared with Stage 3 (max 3 total).
+**Decision:** PASS → Stage 7.5. FAIL → route to the stage indicated by failure type. Loop budget shared with Stage 3 and Stage 7.5 (max 3 total).
+
+## Stage 7.5 - Human Editor QA
+**Input:** final `draft.md`, `brief.md`, `evidence.md`, `humanization-log.md`, `qa-report.md`, Stage 3 review files, `brand/editorial-agent.md`, `human-editor-notes.md` (if present)
+**Output:** `human-editor-qa.md`
+
+The last editorial read before anything reaches the client. A single reviewer agent positioned as a senior native-English financial copy editor with thirty years at the desk, with the authority to stop the line. It reads the whole piece the way a person does and answers one question: does this read as edited by a human, not optimized by a machine? Full spec, including the seven judgment lenses and the verdict format, in `checklist/human-editor-qa.md`.
+
+This is distinct from the Stage 3 editorial reviewer (one compliance-focused voice among regulators, reading a mid-process draft) for the same reason Stage 2.5 was pulled out of the panel: voice needs a dedicated pass with the authority to block. Stage 2.5 makes the draft human before the panel; Stage 7.5 confirms it stayed human after the panel, the revision, and the QA.
+
+The same reviewer also runs in **continuous mode**: a quick advisory read at the close of every prose-shaping stage (2.5, 4, 7), appended to `human-editor-notes.md`, so drift is caught early and the binding gate is rarely a surprise.
+
+**Decision:**
+- APPROVE / APPROVE_WITH_NOTES → Stage 8.
+- REJECT → loop back to Stage 4 (Revision) with the `human-editor-qa.md` redline notes as the rewrite brief. Increment `loop_count`. Shared budget with Stages 3 and 7, max 3. On exceed, set `stage: "manual-review-required"` and stop.
 
 ## Stage 8 - Publish
 Commit all artifacts to `main`:
@@ -177,6 +192,8 @@ blog/[slug]/draft-[market].md       (per market)
 blog/[slug]/changelog.md
 blog/[slug]/localization-notes-[market].md
 blog/[slug]/qa-report.md
+blog/[slug]/human-editor-qa.md
+blog/[slug]/human-editor-notes.md      (continuous-mode editor notes, if present)
 blog/[slug]/pipeline-state.json
 blog/[slug]/[slug]-chart.tsx        (if applicable, Framer-compatible TypeScript)
 blog/[slug]/expert-reviews/         (all stage3 and stage6 files)
@@ -288,6 +305,7 @@ The next run's Stage -4 reads this updated log, closing the loop.
     "qa_fail_reasons": ["string"],
     "cannibalization_conflict": "boolean",
     "topic_selection_reason": "string (only set when Stage -1 ran)",
+    "human_editor_verdict": "APPROVE | APPROVE_WITH_NOTES | REJECT (set by Stage 7.5)",
     "drive_delivery": {
       "delivered_at": "YYYY-MM-DD",
       "folder_id": "string",
@@ -304,7 +322,7 @@ The next run's Stage -4 reads this updated log, closing the loop.
 
 ## Loop budget
 
-Combined budget across Stage 3 and Stage 7: max 3. On exceed, set `stage: "manual-review-required"`, commit state, stop.
+Combined budget across Stage 3, Stage 7, and Stage 7.5: max 3. On exceed, set `stage: "manual-review-required"`, commit state, stop.
 
 ## Diagram
 
@@ -335,6 +353,10 @@ Combined budget across Stage 3 and Stage 7: max 3. On exceed, set `stage: "manua
   v
 [7] Pre-publish QA
   |-- FAIL routed by type --> [1] / [4] / [5] (max 3 total loops)
+  |
+  v
+[7.5] Human Editor QA (binding editorial read)
+  |-- REJECT --> [4] Revision (max 3 total loops)
   |
   v
 [8] Publish (GitHub commit)

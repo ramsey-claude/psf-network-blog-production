@@ -52,6 +52,6 @@ Blockchain-tokenized fractional ownership of US residential properties. Delaware
 - International real estate market content
 - Blockchain transparency angle
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-RealT is the international blockchain real estate platform. psfnetwork targets international investors but through a traditional (non-blockchain) ownership model. Potential content angle: "tokenized vs. traditional fractional real estate for international investors."
+RealT is the international blockchain real estate platform. PSFnetwork targets international investors but through a traditional (non-blockchain) ownership model. Potential content angle: "tokenized vs. traditional fractional real estate for international investors."

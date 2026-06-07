@@ -16,8 +16,8 @@ Reason: Headline "minimum investment" could be misread as the floor for a comple
 
 ### 2. CTA rewrite with offering circular + risk inline - MED
 Issue raised by: SEC (solicitation), CFPB (proximity)
-**Before:** "Ready to look at a property? Browse psfnetwork's current offerings, view the square-foot breakdown, and read the full risk disclosures before you invest."
-**After:** "Ready to look at a property? psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal."
+**Before:** "Ready to look at a property? Browse PSFnetwork's current offerings, view the square-foot breakdown, and read the full risk disclosures before you invest."
+**After:** "Ready to look at a property? PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal."
 Reason: Adds the qualified-offering condition (SEC: protects against general-solicitation issues if Reg D 506(b) applies; harmless if Reg A or 506(c) applies) and the inline risk line (CFPB: disclosure adjacent to the action).
 
 ### 3. Stat card risk-line footer - MED

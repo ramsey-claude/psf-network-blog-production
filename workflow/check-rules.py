@@ -48,8 +48,15 @@ BLOCKING = [
     # Tier 2: brand voice
     ('guaranteed-return', re.compile(r'guaranteed\s+(return|yield|annual)', re.IGNORECASE),
      'guaranteed return language (bans even in negation)'),
-    ('psfnetwork-casing', re.compile(r'\b(PSFnetwork|PSF\s+Network|PSFNETWORK|Psfnetwork)\b'),
-     'psfnetwork casing variant (must be lowercase one word)'),
+    # Brand is PSFnetwork (one word, capital PSF, lowercase "network"). Flag the
+    # wrong-case prose variants, but never the technical identifiers that stay
+    # lowercase: domains (psfnetwork.com), reverse-DNS (com.psfnetwork.stage10),
+    # slugs/paths (psfnetwork-pipeline, .psfnetwork-drive, /psfnetwork) and env
+    # vars (PSFNETWORK_GITHUB_TOKEN). The lookarounds carve those out.
+    ('psfnetwork-casing',
+     re.compile(r'(?<![\w./@-])(psfnetwork|Psfnetwork|PSFNETWORK)(?![\w/_-])(?!\.[a-z])'
+                r'|PSF +[Nn]etwork'),
+     'brand casing variant (must be PSFnetwork, one word, capital PSF)'),
 ]
 
 WARNING = [

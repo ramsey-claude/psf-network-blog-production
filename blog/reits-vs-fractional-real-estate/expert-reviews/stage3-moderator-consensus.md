@@ -22,7 +22,7 @@ CONSOLIDATED ISSUES:
 
 7. **"Instant diversification" wording** - SEVERITY: LOW - RAISED BY: Editorial - RECOMMENDED FIX: Replace "instant diversification" with "built-in diversification" for consistency with the table cell. - SECTION: differences capsule
 
-8. **CTA assumes existing REIT holder** - SEVERITY: LOW - RAISED BY: Editorial - RECOMMENDED FIX: Change "Curious how psfnetwork's per-square-foot model compares to your current REIT allocation?" to "Want to see how psfnetwork's per-square-foot model fits alongside REITs?" - SECTION: CTA
+8. **CTA assumes existing REIT holder** - SEVERITY: LOW - RAISED BY: Editorial - RECOMMENDED FIX: Change "Curious how PSFnetwork's per-square-foot model compares to your current REIT allocation?" to "Want to see how PSFnetwork's per-square-foot model fits alongside REITs?" - SECTION: CTA
 
 9. **REIT minimum cell phrasing** - SEVERITY: LOW - RAISED BY: SEC - RECOMMENDED FIX: Change "Price of one share (some brokers offer fractional shares for less)" to "Price of one share, or smaller if your broker offers fractional shares". - SECTION: differences table
 

@@ -35,7 +35,7 @@
 | FAQ | PASS | 6 Q/A pairs (minimum 5) |
 | Sources | PASS | 9 numbered sources, all IRS or SEC |
 | AuthorCard | PASS | Maya Reyes byline + Daniel Cho review credit |
-| Disclaimer | PASS | Standard psfnetwork disclaimer + tax-specific addendum |
+| Disclaimer | PASS | Standard PSFnetwork disclaimer + tax-specific addendum |
 | CTA | PASS | Action-oriented, links to offering circular review |
 | Related | PASS | 3 internal links to existing slugs |
 
@@ -49,7 +49,7 @@
 | K-1 arrival timing | 73 | OK |
 | Multi-state filing | 66 | OK |
 | Sale or exit | 70 | OK (initially 77; trimmed in Stage 7 fix) |
-| psfnetwork specifically | 73 | OK |
+| PSFnetwork specifically | 73 | OK |
 
 ## Section D: Content quality
 

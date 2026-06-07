@@ -86,7 +86,7 @@ Tools: WebSearch + curl with browser UA. Many claims cross-reference hub evidenc
 |------------------|----------|--------|
 | FAQ on non-US investors | Removed | US-only operating scope |
 | Stat card "10 min to open account" | Replaced with "Under 15 minutes typical" | Specific 10-min figure is fabricated |
-| psfnetwork $100 entry point in stat card | Framed as illustrative brand claim | Self-reported only |
+| PSFnetwork $100 entry point in stat card | Framed as illustrative brand claim | Self-reported only |
 
 ## Summary
 

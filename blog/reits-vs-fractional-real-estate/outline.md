@@ -29,7 +29,7 @@ Body: How REITs work, 90% distribution rule, 3 types, examples.
 
 ### 2. What is fractional real estate investing? (id: what-is-fractional)
 **Answer capsule:** 75-word definition, individual property ownership model.
-Body: How platforms work, SEC Reg A+, LLC structure, psfnetwork sq-ft model.
+Body: How platforms work, SEC Reg A+, LLC structure, PSFnetwork sq-ft model.
 
 ### 3. REITs vs fractional: the key differences (id: differences)
 **Answer capsule:** The 5 biggest differences in one sentence each.

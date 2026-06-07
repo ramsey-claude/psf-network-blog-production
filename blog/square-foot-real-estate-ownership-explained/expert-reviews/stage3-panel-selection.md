@@ -1,1 +1,1 @@
-Panel: SEC, FINRA, CFPB, Editorial. Definitional post on psfnetwork's own model framing; SEC is the primary substantive reviewer given the structural claims (LLC, security, Reg A). FINRA/CFPB lighter touch given no investment-recommendation framing.
+Panel: SEC, FINRA, CFPB, Editorial. Definitional post on PSFnetwork's own model framing; SEC is the primary substantive reviewer given the structural claims (LLC, security, Reg A). FINRA/CFPB lighter touch given no investment-recommendation framing.

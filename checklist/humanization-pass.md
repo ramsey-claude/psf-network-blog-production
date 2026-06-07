@@ -19,7 +19,7 @@ Putting humanization before Stage 3 forces the rewrite to happen while the draft
 - `draft.md` (output of Stage 2)
 - `brief.md` (especially the Human Anchors section)
 - `brand/tone-and-voice.md`
-- `brand/voice-samples/` (3-5 reference pieces from psfnetwork team writing)
+- `brand/voice-samples/` (3-5 reference pieces from PSFnetwork team writing)
 - `checklist/ai-tells.md` (ban list)
 
 ## Outputs
