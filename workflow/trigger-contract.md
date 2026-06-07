@@ -1,6 +1,6 @@
 # Trigger Contract
 
-The psfnetwork blog production pipeline is autonomous once triggered. This document defines exactly what the trigger authorizes.
+The PSFnetwork blog production pipeline is autonomous once triggered. This document defines exactly what the trigger authorizes.
 
 ## Triggers
 
@@ -40,7 +40,7 @@ Saying "yaz" pre-authorizes every action below for the duration of the run. No p
 - Anthropic API calls for any reviewer, drafter, moderator, classifier, or QA role
 - Internal looping (Stage 3 -> Stage 2, Stage 7 -> earlier) within the shared loop budget of 3
 - Web fetches and web searches for SERP snapshot and source verification in Stage 1
-- Google Drive REST API calls via `workflow/drive_cli.py` (OAuth, project `my-project-82896`, token at `/Users/onur/.psfnetwork-drive/token.json`) for Stage 9 delivery: folder creation under `psfnetwork/`, file upload, markdown-to-Google-Doc conversion (via `upload-as-gdoc`), file deletion for clean re-runs, all scoped to the operator's own Drive, no third-party sharing. The Drive MCP is NOT used (it cannot auto-convert docx → native gdoc and lacks delete).
+- Google Drive REST API calls via `workflow/drive_cli.py` (OAuth, project `my-project-82896`, token at `/Users/onur/.psfnetwork-drive/token.json`) for Stage 9 delivery: folder creation under `PSFnetwork/`, file upload, markdown-to-Google-Doc conversion (via `upload-as-gdoc`), file deletion for clean re-runs, all scoped to the operator's own Drive, no third-party sharing. The Drive MCP is NOT used (it cannot auto-convert docx → native gdoc and lacks delete).
 
 ## Stop conditions
 

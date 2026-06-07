@@ -48,8 +48,9 @@ BLOCKING = [
     # Tier 2: brand voice
     ('guaranteed-return', re.compile(r'guaranteed\s+(return|yield|annual)', re.IGNORECASE),
      'guaranteed return language (bans even in negation)'),
-    ('psfnetwork-casing', re.compile(r'\b(PSFnetwork|PSF\s+Network|PSFNETWORK|Psfnetwork)\b'),
-     'psfnetwork casing variant (must be lowercase one word)'),
+    ('psfnetwork-casing',
+     re.compile(r'(?<![./\w])(psfnetwork|PSF\s+Network|PSFNETWORK|Psfnetwork)(?!\.com)(?![\w-])'),
+     'PSFnetwork casing variant (must be PSFnetwork, capital PSF, one word)'),
 ]
 
 WARNING = [
@@ -134,6 +135,26 @@ def diff_base_files(base_sha):
             if line.endswith('.md') and (REPO_ROOT / line).exists()]
 
 
+# Path prefixes (relative to repo root, posix-style) excluded from scanning in
+# every mode. These mirror the default-scope exclusions so that --diff-base and
+# --staged honor them too (otherwise a brand-casing edit to an otherwise-exempt
+# file pulls it into the diff and the linter flags pre-existing content):
+#   - framer-export/ : generated import-staging copies of blog drafts
+#   - competitors/   : third-party content notes, not our prose
+EXCLUDE_PREFIXES = ('framer-export/', 'competitors/')
+
+
+def is_excluded(path):
+    try:
+        rel = path.relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        return False
+    # blog/**/draft.md goes through Stage 7 QA with its own rules.
+    if rel.startswith('blog/') and rel.endswith('/draft.md'):
+        return True
+    return any(rel.startswith(prefix) for prefix in EXCLUDE_PREFIXES)
+
+
 ALLOW_PRAGMA = re.compile(r'<!--\s*check-rules:\s*allow\s*-->')
 
 
@@ -213,6 +234,8 @@ def main():
         targets = [Path(f).resolve() for f in args.files]
     else:
         targets = default_scope()
+
+    targets = [t for t in targets if not is_excluded(t)]
 
     if not targets:
         if not args.quiet:

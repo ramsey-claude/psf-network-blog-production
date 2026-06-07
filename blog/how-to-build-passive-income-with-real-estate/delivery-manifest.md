@@ -12,7 +12,7 @@
 
 ```
 My Drive/
-└── psfnetwork/                                       (1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG)
+└── PSFnetwork/                                       (1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG)
     └── how-to-build-passive-income-with-real-estate/   (1nIHibw8FAeFspZmFOtjNbft60UyOilJM)
         └── Passive Income Real Estate: How to Build It Without Becoming a Landlord (native gdoc)
 ```

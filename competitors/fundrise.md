@@ -49,6 +49,6 @@ Pooled fund model - investors cannot select individual properties. Capital is di
 - Performance and portfolio update content
 - Strong email marketing and investor relations content
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-Fundrise is the diversified, hands-off option for US real estate. psfnetwork's model (individual property ownership by the square foot, international markets) is structurally different. Content comparison angle: "Fundrise vs fractional ownership" is a viable blog topic for psfnetwork.
+Fundrise is the diversified, hands-off option for US real estate. PSFnetwork's model (individual property ownership by the square foot, international markets) is structurally different. Content comparison angle: "Fundrise vs fractional ownership" is a viable blog topic for PSFnetwork.

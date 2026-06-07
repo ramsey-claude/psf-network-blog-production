@@ -52,6 +52,6 @@ Blockchain-tokenized fractional ownership of US rental properties. Each property
 - Comparison articles vs. Fundrise and Ark7
 - Tokenization trend and future of real estate content
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-Lofty targets crypto-native investors. psfnetwork's audience is traditional investors seeking accessible international real estate - no blockchain complexity. These audiences do not significantly overlap.
+Lofty targets crypto-native investors. PSFnetwork's audience is traditional investors seeking accessible international real estate - no blockchain complexity. These audiences do not significantly overlap.

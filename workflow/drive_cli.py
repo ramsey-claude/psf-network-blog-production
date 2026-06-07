@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Drive CLI helper for the psfnetwork pipeline.
+Drive CLI helper for the PSFnetwork pipeline.
 
 Uses the token minted by drive_auth.py (Drive scope).
 

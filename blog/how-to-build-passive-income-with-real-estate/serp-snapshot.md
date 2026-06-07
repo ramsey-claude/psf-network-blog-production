@@ -49,7 +49,7 @@ Top organic:
 9. Binaryx - Fractional Real Estate Investing: 2026 Complete Guide
 10. Concreit - 10 Ways to Build Passive Real Estate Income
 
-**Pattern:** Tax angle (IRS passive/nonpassive classification, Form 8582) is consistently surfaced. psfnetwork should not skip this; reader is searching for it.
+**Pattern:** Tax angle (IRS passive/nonpassive classification, Form 8582) is consistently surfaced. PSFnetwork should not skip this; reader is searching for it.
 
 ## People Also Ask (approximation)
 

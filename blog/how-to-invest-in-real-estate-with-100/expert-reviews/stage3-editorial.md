@@ -4,7 +4,7 @@
 
 DOMAIN FINDINGS:
 
-Structural compliance verified. 5 H2s in question format (plus FAQ = 6 sections per outline). Capsules in 50-75 word range (70, 67, 65, 70, 65). FAQ has 6 Q/A pairs. No em or en dashes. psfnetwork lowercase throughout. No "guaranteed return." No Daniel Cho quote (correctly omitted). <!-- check-rules: allow -->
+Structural compliance verified. 5 H2s in question format (plus FAQ = 6 sections per outline). Capsules in 50-75 word range (70, 67, 65, 70, 65). FAQ has 6 Q/A pairs. No em or en dashes. PSFnetwork lowercase throughout. No "guaranteed return." No Daniel Cho quote (correctly omitted). <!-- check-rules: allow -->
 
 Hook is the second-strongest in the cluster after the REIT-vs-fractional post. "The story you have probably heard is that real estate is for people with a down payment and good credit. That story was accurate for a long time. It is no longer accurate as the only path." Sets the educational stance immediately.
 

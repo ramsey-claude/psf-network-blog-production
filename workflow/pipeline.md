@@ -1,4 +1,4 @@
-# psfnetwork Blog Production Pipeline (v2)
+# PSFnetwork Blog Production Pipeline (v2)
 
 Autonomous pipeline. Triggered by a single command. No human approval between stages once triggered. State is persisted to `blog/[slug]/pipeline-state.json` so any stage can resume after interruption.
 
@@ -42,7 +42,7 @@ No deliverable for this stage, it is a read-and-internalize step. The fact that 
 
 ## Stage -3 - Auto gap discovery (conditional)
 
-Runs only when Stage -2 reports `topic-generation-exhausted` (ROADMAP Step 2 has fewer than 3 unused gap candidates). Scans competitor blogs from ROADMAP Step 1, identifies topics not yet covered by psfnetwork, appends new candidates to Step 2, then loops back to Stage -2.
+Runs only when Stage -2 reports `topic-generation-exhausted` (ROADMAP Step 2 has fewer than 3 unused gap candidates). Scans competitor blogs from ROADMAP Step 1, identifies topics not yet covered by PSFnetwork, appends new candidates to Step 2, then loops back to Stage -2.
 
 Spec in `checklist/topic-discovery-stage-minus-3.md`. Halt conditions: `discovery-failed` (no surface-able candidates after a full scan) or `competitor-fetch-failed`.
 
@@ -146,7 +146,7 @@ Apply every HIGH, most MED, judgment on LOW. Never delete sections - revise. Mai
 **Input:** `draft.md`, `checklist/localization-guide.md`
 **Output:** `localization-notes-[market].md` and `draft-[market].md` per target market; primary market keeps base `draft.md`.
 
-**Default behavior:** psfnetwork operates in the US market only and ships English-only content. With the default `target_markets: ["EN-US"]`, Stage 5 is a no-op: it writes an empty `localization-notes-EN-US.md` recording "no localization required, primary market only", and proceeds. Stage 6 also becomes a no-op.
+**Default behavior:** PSFnetwork operates in the US market only and ships English-only content. With the default `target_markets: ["EN-US"]`, Stage 5 is a no-op: it writes an empty `localization-notes-EN-US.md` recording "no localization required, primary market only", and proceeds. Stage 6 also becomes a no-op.
 
 Multi-market localization (TR, FR, AE) is spec'd in `checklist/localization-guide.md` for future expansion, but is not invoked by the default pipeline. To enable, set `target_markets` in the brief's metadata to include additional markets before running.
 
@@ -197,14 +197,14 @@ After GitHub publish, mirror the post's body to the operator's Google Drive as a
 
 ```
 My Drive/
-└── psfnetwork/
+└── PSFnetwork/
     └── [slug]/
         └── [Title].gdoc        (native Google Doc, one per slug)
 ```
 
 **Actions:**
 1. Invoke `workflow/deliver.py --slug [slug] --version [version] --folder-id [id] --title "[H1]"`. This wrapper enforces the QA gate (refuses upload without a `qa-report-vN.md` recording PUBLISH) and chains render + upload in one call.
-2. Ensure `psfnetwork/[slug]/` folder exists via `drive_cli.py list`. Create if missing.
+2. Ensure `PSFnetwork/[slug]/` folder exists via `drive_cli.py list`. Create if missing.
 3. Delete any existing files in the slug folder via `drive_cli.py delete <id>` (clean state across re-runs).
 4. After successful `deliver.py` response, write `delivery-manifest.md` with Drive file id + view URL + timestamp.
 5. Update `pipeline-state.json` `flags.drive_delivery`.

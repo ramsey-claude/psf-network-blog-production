@@ -1,6 +1,6 @@
 # Contributing
 
-This repository is the psfnetwork blog production pipeline. Most changes
+This repository is the PSFnetwork blog production pipeline. Most changes
 come from the autonomous pipeline itself; human contributions happen at
 the spec-and-rule level (checklists, brand voice, pipeline structure).
 

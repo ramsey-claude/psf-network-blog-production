@@ -33,8 +33,8 @@ Numbered list of every factual / numeric / regulatory / comparative claim the dr
 22. "Talk to your CPA" framing at each decision point, no specific tax advice claims
 23. State-filing complexity at multi-property scale, framed as "may apply, ask the operator about composite returns"
 
-## Brand / structural claim (psfnetwork)
-24. psfnetwork uses Reg A LLC structure; per-square-foot model affects share count but not K-1 mechanics, structural, no return promise
+## Brand / structural claim (PSFnetwork)
+24. PSFnetwork uses Reg A LLC structure; per-square-foot model affects share count but not K-1 mechanics, structural, no return promise
 
 ## Total
 - Numerical: 12

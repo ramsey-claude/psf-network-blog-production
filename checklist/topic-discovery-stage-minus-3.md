@@ -21,7 +21,7 @@ Output: `discovery-scan.md` listing per-competitor article inventory.
 
 ### 2. Gap identification
 
-For each competitor article, check whether psfnetwork has covered the topic:
+For each competitor article, check whether PSFnetwork has covered the topic:
 - If focus keyword is the focus of an existing brief: covered. Skip.
 - If overlapping but distinct angle exists: weak gap.
 - If not covered at all: strong gap. Add to candidate pool.
@@ -41,7 +41,7 @@ WebSearch each strong gap candidate's primary keyword + the cluster's anchor ter
 Apply the same filters as Stage -2:
 - US-only scope.
 - No cannibalization with existing briefs (2+ keyword overlap).
-- Brand fit (does psfnetwork's per-square-foot or fractional angle naturally appear).
+- Brand fit (does PSFnetwork's per-square-foot or fractional angle naturally appear).
 
 Rank by: KD / Volume score, brand fit, novelty (not already in ROADMAP pool).
 

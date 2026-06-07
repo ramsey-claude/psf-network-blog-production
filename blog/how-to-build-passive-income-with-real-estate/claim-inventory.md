@@ -31,7 +31,7 @@
 
 | # | Claim | Section | Source target |
 |---|-------|---------|---------------|
-| C13 | Fractional platforms (Fundrise, Arrived, Ark7, psfnetwork) operate under SEC frameworks | four-ways | (cross-reference to hub) |
+| C13 | Fractional platforms (Fundrise, Arrived, Ark7, PSFnetwork) operate under SEC frameworks | four-ways | (cross-reference to hub) |
 
 ## Out-of-scope / dropped
 

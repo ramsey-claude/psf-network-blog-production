@@ -46,7 +46,7 @@ The AI overview at the top of the result page synthesizes the K-1 vs 1099 distin
 - **Most strong-ranking secondary sources are PE / syndication firms (Crowd Street, FNRP, Windes, Willowdale).** Their POV is multi-property syndication or DST. None are written specifically for the fractional (single-property LLC) investor.
 - **Tone gap:** existing content is competent but dry. A reader-first explanation of "what arrives in your mailbox and when" is not the top hit.
 - **TurboTax and Gusto rank for general K-1 audience.** They're not real-estate specific and won't be direct competitors on the long-tail.
-- **Realbricks, Arrived, Ark7, Fundrise, none of the fractional platforms themselves have a definitive K-1 explainer.** This is the structural gap psfnetwork is filling.
+- **Realbricks, Arrived, Ark7, Fundrise, none of the fractional platforms themselves have a definitive K-1 explainer.** This is the structural gap PSFnetwork is filling.
 
 ## Strategic positioning for the draft
 
@@ -54,4 +54,4 @@ The AI overview at the top of the result page synthesizes the K-1 vs 1099 distin
 2. Make the partnership tax calendar concrete (March 16, 2026 + Form 7004 path) early, gives readers an actionable timeline.
 3. Use a fractional-investor frame ("you own a slice of one property's LLC"), not a syndication-LP frame.
 4. Don't avoid the multi-state filing complication, none of the competitors do, but it is the operational pain readers run into.
-5. Close with the psfnetwork structural note (per-square-foot ↔ Reg A LLC) without making the post a product page.
+5. Close with the PSFnetwork structural note (per-square-foot ↔ Reg A LLC) without making the post a product page.

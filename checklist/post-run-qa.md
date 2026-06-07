@@ -59,7 +59,7 @@ If an active rule didn't fire in the last 3 batches AND its underlying cause is 
 - GitHub rate limit headroom. If `< 1000 remaining` and reset > 30 min away, defer next batch.
 - Drive token: `.venv/bin/python3 workflow/drive_cli.py health` returns ok.
 - GitHub token: `.venv/bin/python3 workflow/token_expiry_check.py` returns no expiry warning.
-- launchd: both `com.psfnetwork.stage10` and `com.psfnetwork.token-check` listed by `launchctl list | grep psfnetwork`.
+- launchd: both `com.psfnetwork.stage10` and `com.psfnetwork.token-check` listed by `launchctl list | grep PSFnetwork`.
 
 Any failure here is a new incident.
 

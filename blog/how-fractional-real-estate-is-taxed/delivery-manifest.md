@@ -7,7 +7,7 @@
 
 ```
 My Drive/
-└── psfnetwork/
+└── PSFnetwork/
     └── how-fractional-real-estate-is-taxed/
         └── How Fractional Real Estate Is Taxed: A K-1 Guide for 2026.gdoc
 ```
@@ -16,7 +16,7 @@ My Drive/
 
 | Item | Value |
 |------|-------|
-| Drive parent folder | `1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG` (`psfnetwork/`) |
+| Drive parent folder | `1saBUbgnW9mb3VC6aokbBhSgo3VCU3ANG` (`PSFnetwork/`) |
 | Slug subfolder | `11txAR0kXJBlG11EewoUda7KxbI24Kd8e` (`how-fractional-real-estate-is-taxed/`) |
 | Native Google Doc id | `1BcQ6M3l8YScA-KOge7VWvIqSXqiyrpZqZxS4N10wio4` |
 | Title | How Fractional Real Estate Is Taxed: A K-1 Guide for 2026 |

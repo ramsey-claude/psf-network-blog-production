@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # rotate-github-token.sh
 #
-# Replaces the GitHub PAT used by the psfnetwork pipeline.
+# Replaces the GitHub PAT used by the PSFnetwork pipeline.
 # Asks the operator for the new token, writes it to the canonical token file
 # (/Users/onur/.psfnetwork-drive/github-token), and runs a smoke test against
 # the repo to verify the new token works.

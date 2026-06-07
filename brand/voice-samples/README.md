@@ -1,13 +1,13 @@
 # Voice Samples
 
-Reference library of real psfnetwork team writing. Used by:
+Reference library of real PSFnetwork team writing. Used by:
 
 - Stage 2 (Draft generation) as voice anchor input to the model
-- Stage 2.5 (Humanization pass) as the reference for "what does a human at psfnetwork actually sound like"
+- Stage 2.5 (Humanization pass) as the reference for "what does a human at PSFnetwork actually sound like"
 
 ## What belongs here
 
-- Founder essays, blog posts, or LinkedIn pieces written by named psfnetwork team members
+- Founder essays, blog posts, or LinkedIn pieces written by named PSFnetwork team members
 - Internal Slack threads or memos with permission to use
 - Transcripts of investor relations calls, podcasts, or panel appearances
 - Customer support replies that exemplify the voice
@@ -16,7 +16,7 @@ Reference library of real psfnetwork team writing. Used by:
 ## What does not belong here
 
 - Anything previously generated through this pipeline (circular reference)
-- Marketing copy from agencies or contractors who do not write in the psfnetwork voice
+- Marketing copy from agencies or contractors who do not write in the PSFnetwork voice
 - Generic industry writing (REIT analyst reports, etc.)
 
 ## File naming
