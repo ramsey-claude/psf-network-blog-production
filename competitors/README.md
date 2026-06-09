@@ -1,4 +1,4 @@
-# Competitor Research — Fractional Real Estate Platforms
+# Competitor Research: Fractional Real Estate Platforms
 
 Research compiled for PSFnetwork content strategy. Used to inform blog topic priorities, positioning angles, and content gaps.
 
@@ -29,7 +29,7 @@ Last updated: May 2026
 
 **Indirect competitors** (different model, same audience): Lofty, RealT (blockchain/tokenized); Fundrise, Groundfloor, Yieldstreet (fund/debt)
 
-**PSFnetwork differentiation angle**: Square-foot-based ownership model, international market access, UAE/Gulf market positioning — none of the above platforms operate in this space.
+**PSFnetwork differentiation angle**: Square-foot-based ownership model, international market access, UAE/Gulf market positioning. None of the above platforms operate in this space.
 
 ---
 
@@ -38,7 +38,7 @@ Last updated: May 2026
 - Ark7 has the most aggressive blog strategy: city-by-city programmatic SEO ("fractional real estate investing in [City]"), comparison articles against every competitor, and beginner guides. Sets the bar for content volume.
 - Mogul and Realbricks rely heavily on comparison content and return-focused posts (dividend announcements, quarterly updates).
 - Fundrise and Arrived have the strongest brand authority due to media coverage and funding history (Arrived: Bezos-backed, $114M raised).
-- Lofty and RealT own the blockchain/tokenization angle — PSFnetwork should not compete here.
-- CollabHome owns the student housing niche — fully differentiated, not a direct threat.
-- Groundfloor owns the short-term debt/fix-and-flip angle — different ICP.
+- Lofty and RealT own the blockchain/tokenization angle. PSFnetwork should not compete here.
+- CollabHome owns the student housing niche: fully differentiated, not a direct threat.
+- Groundfloor owns the short-term debt/fix-and-flip angle: different ICP.
 - **Gap identified**: No competitor has content specifically targeting Gulf/UAE/international investors seeking U.S. or international fractional real estate. PSFnetwork can own this lane.

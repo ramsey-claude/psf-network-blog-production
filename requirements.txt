@@ -1,4 +1,4 @@
-# Pinned dependencies for the psfnetwork blog production pipeline.
+# Pinned dependencies for the PSFnetwork blog production pipeline.
 # Used by the .venv that runs Stage 8 commits, Stage 9 Drive deliveries,
 # Stage 10 post-publish QA cron, and check-rules.py linting.
 #

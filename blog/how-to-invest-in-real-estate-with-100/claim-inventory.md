@@ -10,7 +10,7 @@
 | C4 | Fundrise (Flagship Fund): $10 minimum | options | platform marketing |
 | C5 | Lofty: $50 minimum | options | platform marketing |
 | C6 | HappyNest: $10 minimum | options | platform marketing |
-| C7 | psfnetwork: $100 entry point | (illustrative, brand context) | self-reported |
+| C7 | PSFnetwork: $100 entry point | (illustrative, brand context) | self-reported |
 | C8 | Typical fractional yield range: 4-9% (platform-reported) | what-it-buys | cross-ref hub E12 |
 
 ## Regulatory / structural claims

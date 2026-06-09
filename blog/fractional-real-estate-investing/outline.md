@@ -37,7 +37,7 @@ Body: Control, liquidity, effort, minimum, tax treatment comparison.
 **Table:** Platform model comparison (PSFnetwork sq-ft model vs share model vs token model).
 
 ### 4. What is the square-foot model? (id: sqft-model)
-**Answer capsule:** psfnetwork-specific explanation of per-sq-ft ownership.
+**Answer capsule:** PSFnetwork-specific explanation of per-sq-ft ownership.
 Body: Why sq-ft is more intuitive than shares, how it maps to real ownership, example calculation.
 Pull quote from Daniel Cho, CFA.
 

@@ -2,7 +2,7 @@
 
 DOMAIN FINDINGS:
 
-Structural compliance: 5 H2s + FAQ in question format. Capsules in 50-75 range (verified by passage spot-checks). No em/en dashes. psfnetwork lowercase. No "guaranteed return." No fabricated specific dollar figures (the $337M AUM and 18.8% IRR were correctly dropped from the original outline). <!-- check-rules: allow -->
+Structural compliance: 5 H2s + FAQ in question format. Capsules in 50-75 range (verified by passage spot-checks). No em/en dashes. PSFnetwork casing correct. No "guaranteed return." No fabricated specific dollar figures (the $337M AUM and 18.8% IRR were correctly dropped from the original outline). <!-- check-rules: allow -->
 
 Hook is the strongest opening PSFnetwork has produced in this cluster. The "this guide is written from the user's seat" framing is editorially distinctive and gives the post a position.
 
