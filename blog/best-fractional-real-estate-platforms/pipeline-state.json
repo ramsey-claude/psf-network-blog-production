@@ -46,7 +46,6 @@
       ]
     },
     "post_publish_qa": {
-      "completed_at": "2026-05-30",
       "live": true,
       "http_status": 200,
       "checks": {
@@ -64,7 +63,8 @@
         "has_article_schema": false,
         "has_faq_schema": true,
         "has_breadcrumb_schema": false
-      }
+      },
+      "_reset_note": "flag cleared 2026-06-10 to force Stage 10 re-check (report was stale; live page changed since 2026-05-30)"
     }
   },
   "evidence_summary": {
