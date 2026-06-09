@@ -21,7 +21,7 @@
     "stage10-deferred"
   ],
   "loop_count": 0,
-  "last_updated": "2026-05-30",
+  "last_updated": "2026-06-09",
   "expert_panel": [
     "SEC",
     "FINRA",
@@ -46,6 +46,7 @@
       ]
     },
     "post_publish_qa": {
+      "completed_at": "2026-06-09",
       "live": true,
       "http_status": 200,
       "checks": {
@@ -53,8 +54,8 @@
         "canonical_matches": false,
         "canonical_value": "https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms",
         "title_present": true,
-        "title_length_ok": false,
-        "title_value": "Best Fractional Real Estate Platforms in 2026 (Honest Comparison) - PSFnetwork",
+        "title_length_ok": true,
+        "title_value": "Best Fractional Real Estate Platforms in 2026 - PSFnetwork",
         "meta_description_present": false,
         "meta_description_length_ok": false,
         "schemas_found": [
@@ -63,8 +64,7 @@
         "has_article_schema": false,
         "has_faq_schema": true,
         "has_breadcrumb_schema": false
-      },
-      "_reset_note": "flag cleared 2026-06-10 to force Stage 10 re-check (report was stale; live page changed since 2026-05-30)"
+      }
     }
   },
   "evidence_summary": {

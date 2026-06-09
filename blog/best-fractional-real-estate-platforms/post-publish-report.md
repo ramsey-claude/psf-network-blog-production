@@ -2,7 +2,7 @@
 
 | Field | Value |
 |-------|-------|
-| Completed at | 2026-05-30 00:13:07 UTC |
+| Completed at | 2026-06-09 23:38:28 UTC |
 | Live URL | https://psfnetwork.com/blog/best-fractional-real-estate-platforms |
 | HTTP status | 200 |
 | Live | True |
@@ -15,7 +15,7 @@
 | Canonical present | PASS |
 | Canonical matches expected | FAIL |
 | Title tag present | PASS |
-| Title 50-65 chars | FAIL |
+| Title 50-65 chars | PASS |
 | Meta description present | FAIL |
 | Meta description 140-170 chars | FAIL |
 | Article-type schema | FAIL |
