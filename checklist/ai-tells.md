@@ -1,6 +1,6 @@
 # AI Tells: Ban List
 
-The single biggest reason psfnetwork drafts read as AI-generated is unfiltered language tells. This list is the canonical inventory of those tells, with the required replacement pattern. The humanization reviewer (see `humanization-pass.md`) enforces this list on every draft before the expert panel sees it.
+The single biggest reason PSFnetwork drafts read as AI-generated is unfiltered language tells. This list is the canonical inventory of those tells, with the required replacement pattern. The humanization reviewer (see `humanization-pass.md`) enforces this list on every draft before the expert panel sees it.
 
 A draft cannot enter Stage 3 (Expert Panel) with any HIGH-tier ban-list match unresolved.
 
@@ -176,7 +176,7 @@ The text refers to itself, hedges its identity, or breaks the second-person fram
 |--------|--------------|
 | "As an AI..." (any variant) | Block. Should never appear. |
 | Third-person discussion of "investors" when the addressee is the investor | Switch to "you". |
-| "We at psfnetwork..." opening | Lower-frequency. Allowed once per post max, ideally not in the opener. |
+| "We at PSFnetwork..." opening | Lower-frequency. Allowed once per post max, ideally not in the opener. |
 | Switching between "you" / "investors" / "one" within the same paragraph | Pick one and stay there. |
 
 ---

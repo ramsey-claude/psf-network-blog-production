@@ -1,8 +1,8 @@
-# psfnetwork blog production
+# PSFnetwork blog production
 
 [![Content rules](https://github.com/ramsey-claude/psf-network-blog-production/actions/workflows/lint-content.yml/badge.svg)](https://github.com/ramsey-claude/psf-network-blog-production/actions/workflows/lint-content.yml)
 
-End-to-end blog production pipeline for psfnetwork, from draft to published, with humanization, multi-expert regulatory review, localization, and QA gates.
+End-to-end blog production pipeline for PSFnetwork, from draft to published, with humanization, multi-expert regulatory review, localization, and QA gates.
 
 ## Quick start
 
@@ -18,7 +18,7 @@ security policy.
 
 ## Overview
 
-Every blog post goes through a structured pipeline before publication. The pipeline combines the SEO & GEO blog checklist with a humanization pass and a financial regulatory review layer specific to psfnetwork's fractional real estate content.
+Every blog post goes through a structured pipeline before publication. The pipeline combines the SEO & GEO blog checklist with a humanization pass and a financial regulatory review layer specific to PSFnetwork's fractional real estate content.
 
 ```
 Draft → Humanization Pass → Expert Panel Review → Revision → Localization → Expert Re-check → QA → Publish
@@ -62,7 +62,7 @@ The draft cannot enter Stage 3 with any HIGH-tier AI tell unresolved, all three 
 ### Stage 3: Expert Panel Discussion
 Eight US financial regulatory experts plus an editorial reviewer read the humanized draft, each from their own domain:
 
-| Expert | Domain | Focus in psfnetwork content |
+| Expert | Domain | Focus in PSFnetwork content |
 |--------|--------|----------------------------|
 | SEC | Securities Markets | Investment offering language, securities disclaimers |
 | CFTC | Futures & Derivatives | Derivative product references, commodity language |
@@ -103,14 +103,14 @@ psf-network-blog-production/
 │   ├── pipeline.md                        Detailed pipeline steps and decision trees
 │   └── loop-log-template.md               Template for logging pipeline restarts
 └── brand/
-    ├── tone-and-voice.md                  psfnetwork brand voice for content producers
+    ├── tone-and-voice.md                  PSFnetwork brand voice for content producers
     ├── personas.md                        Target audience personas
-    └── voice-samples/                     Reference writing samples from psfnetwork team
+    └── voice-samples/                     Reference writing samples from PSFnetwork team
 ```
 
 ## Brand Notes
 
-- Brand name is always written as **psfnetwork**: all lowercase, one word, no spaces
+- Brand name is always written as **PSFnetwork**: all lowercase, one word, no spaces
 - Brand colors: Cream #F7F5F0 | Matte Black #1C1C1C | Orange #FF7141 | Blue #4F8FA3
 - Font: Söhne (Kräftig, Halbfett, Buch)
 - Visual/video assets: produced by Superclasico

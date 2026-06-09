@@ -30,7 +30,7 @@ hero_visual_alt: "Illustration of a $100 bill being divided into shares of multi
 
 ## Quick Answer (60 seconds)
 
-In 2026, you can invest in real estate with as little as $10 to $100 through fractional platforms and real estate funds that hold rental properties or commercial buildings. Examples include Fundrise (from $10), Ark7 (from $20), Lofty (from $50), Realbricks (from $100), Arrived (from $100), and psfnetwork. Distributions are paid from rental income, typically monthly or quarterly. Starting small is genuinely useful: the compounding mechanism begins immediately, even if absolute dollar amounts are modest. All such investments involve risk, including loss of principal.
+In 2026, you can invest in real estate with as little as $10 to $100 through fractional platforms and real estate funds that hold rental properties or commercial buildings. Examples include Fundrise (from $10), Ark7 (from $20), Lofty (from $50), Realbricks (from $100), Arrived (from $100), and PSFnetwork. Distributions are paid from rental income, typically monthly or quarterly. Starting small is genuinely useful: the compounding mechanism begins immediately, even if absolute dollar amounts are modest. All such investments involve risk, including loss of principal.
 
 **Stat cards:**
 - **$10** - Lowest fractional platform minimum
@@ -81,7 +81,7 @@ For the literal $100 investor, fractional real estate platforms are usually the 
 
 **Answer capsule:** Five steps to your first fractional investment: pick a platform, verify its SEC filings, open and verify your account, fund by ACH or debit, buy your first share. Account opening typically takes under 15 minutes; the first distribution arrives within one to three months. Read the offering circular for any specific property before you commit; that document legally governs your investment.
 
-**Step 1: Pick a platform.** Match the platform's structure to your goal. Single property exposure: Arrived, Realbricks, Ark7, psfnetwork. Fund-style diversified exposure: Fundrise. Commercial focus: HappyNest. Tokenized fractions: Lofty uses an Algorand-based token model rather than the standard Reg A LLC structure; if you prefer the LLC structure, exclude tokenized platforms. Each platform's specifics change; verify minimums on the platform itself before relying on numbers in any third-party guide, including this one.
+**Step 1: Pick a platform.** Match the platform's structure to your goal. Single property exposure: Arrived, Realbricks, Ark7, PSFnetwork. Fund-style diversified exposure: Fundrise. Commercial focus: HappyNest. Tokenized fractions: Lofty uses an Algorand-based token model rather than the standard Reg A LLC structure; if you prefer the LLC structure, exclude tokenized platforms. Each platform's specifics change; verify minimums on the platform itself before relying on numbers in any third-party guide, including this one.
 
 **Step 2: Verify the SEC filings.** Search SEC EDGAR for the offering. Confirm Regulation A (Tier 2 is the common path for non-accredited public offerings) or Regulation D. If you cannot find a filing, that is a red flag.
 
@@ -130,7 +130,7 @@ The realistic plan for someone starting at $100 is not to live off the income. I
 A: Yes. In 2026 several SEC-regulated US platforms accept minimums from $10 to $100. You will not generate meaningful monthly income at this scale, but you will own a real piece of a rental property and begin the compounding mechanism. Starting is the point; scaling comes from regular additions and reinvestment.
 
 **Q: Which fractional real estate platform has the lowest minimum?**
-A: At the time of writing, Fundrise (Flagship Fund) and HappyNest each list $10 minimums. Ark7 lists $20. Lofty lists $50. Arrived, Realbricks, and psfnetwork list $100. Verify the current minimum on the platform's offering page before relying on this figure; minimums change.
+A: At the time of writing, Fundrise (Flagship Fund) and HappyNest each list $10 minimums. Ark7 lists $20. Lofty lists $50. Arrived, Realbricks, and PSFnetwork list $100. Verify the current minimum on the platform's offering page before relying on this figure; minimums change.
 
 **Q: How long before I receive my first distribution?**
 A: Typically one to three months from your first investment, depending on the platform's distribution schedule (monthly or quarterly). The first distribution will be small if your stake is $100; that is expected and not a sign of underperformance.
@@ -160,7 +160,7 @@ A: Yes, the same way as larger amounts. For US investors, fractional platform di
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at psfnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA** - investment strategist and former real estate analyst.
 
@@ -174,7 +174,7 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Ready to put your first $100 into a real property? psfnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+Ready to put your first $100 into a real property? PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 

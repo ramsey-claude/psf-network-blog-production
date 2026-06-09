@@ -48,8 +48,14 @@ BLOCKING = [
     # Tier 2: brand voice
     ('guaranteed-return', re.compile(r'guaranteed\s+(return|yield|annual)', re.IGNORECASE),
      'guaranteed return language (bans even in negation)'),
-    ('psfnetwork-casing', re.compile(r'\b(PSFnetwork|PSF\s+Network|PSFNETWORK|Psfnetwork)\b'),
-     'psfnetwork casing variant (must be lowercase one word)'),
+    # Brand name is "PSFnetwork" (capital PSF, lowercase "network", one word).
+    # Flags the wrong variants: lowercase "psfnetwork" used as the brand name in
+    # prose, plus "PSF Network" / "PSFNETWORK" / "Psfnetwork". The lowercase
+    # alternative is exempt when it is part of a URL/path/identifier
+    # (psfnetwork.com, psfnetwork-casing, psfnetwork/foo) so domains, slugs, and
+    # code identifiers are not flagged.
+    ('psfnetwork-casing', re.compile(r'\b(psfnetwork(?!\.\w)(?![\-/:])|PSF\s+Network|PSFNETWORK|Psfnetwork)\b'),
+     'PSFnetwork casing variant (brand name must be "PSFnetwork", capital PSF, one word)'),
 ]
 
 WARNING = [

@@ -38,7 +38,7 @@ curl -sL -A "$UA" "$URL"
 
 If a needed page is on sec.gov main domain and no investor.gov or EDGAR substitute exists, the fallback is to cite the canonical sec.gov URL with confidence "high" backed by the federally-codified rule, and note "page not retrievable via WebFetch in this run; rule sourced from federally documented regulation."
 
-GSC-based cannibalization is **deferred** until psfnetwork has 100 or more posts published. The site is not live yet; there is no useful GSC data to query. Until that threshold, cannibalization is a repo scan only.
+GSC-based cannibalization is **deferred** until PSFnetwork has 100 or more posts published. The site is not live yet; there is no useful GSC data to query. Until that threshold, cannibalization is a repo scan only.
 
 ## Sub-tasks
 

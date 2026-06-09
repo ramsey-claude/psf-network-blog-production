@@ -27,7 +27,7 @@ Among the remaining candidates, rank by:
 1. Hub-supporting: does this topic naturally link back to the published hub? Spokes preferred.
 2. KD/Volume score: `Volume / (KD + 1)`, higher is better.
 3. Type weight: Comparison or Definitional Spoke > Listicle.
-4. Brand fit: does the topic let psfnetwork's per-square-foot model show up naturally?
+4. Brand fit: does the topic let PSFnetwork's per-square-foot model show up naturally?
 
 Pick the top candidate. Record runner-up for transparency.
 
@@ -62,15 +62,15 @@ Write `blog/[new-slug]/brief.md` following the schema used by Phase 1 briefs. Re
 | ... 4-5 secondary keywords ... |
 
 ## ICP
-[US-only audience description, 2-4 sentences, references psfnetwork ICP from existing briefs]
+[US-only audience description, 2-4 sentences, references PSFnetwork ICP from existing briefs]
 
 ## Content Angle
-[2-3 sentences. Position psfnetwork's structural advantages without being promotional.]
+[2-3 sentences. Position PSFnetwork's structural advantages without being promotional.]
 
 ## Competitor Gap
 - [Specific competitor URL with traffic estimate if from ROADMAP Step 1]
 - [Why this gap exists]
-- [Why psfnetwork can win it]
+- [Why PSFnetwork can win it]
 
 ## SEO Notes
 - Focus keyword placement rules
@@ -196,7 +196,7 @@ If the candidate pool is then exhausted by repeated soft-fails, halt with `topic
 
 For batch runs ("yaz 10 blog"), Stage -1 alone would halt after Phase 1's 6 priority slugs are exhausted. Stage -2 makes the queue self-replenishing within the operator's strategic frame (the ROADMAP gap analysis), without requiring the operator to author briefs by hand mid-batch.
 
-Topic generation is rules-based and seed-bounded, Stage -2 cannot invent topics outside the ROADMAP frame, which keeps psfnetwork's content strategy under operator control.
+Topic generation is rules-based and seed-bounded, Stage -2 cannot invent topics outside the ROADMAP frame, which keeps PSFnetwork's content strategy under operator control.
 
 ## What this stage does NOT do
 
