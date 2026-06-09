@@ -46,7 +46,7 @@ The editorial reviewer is non-removable. Every post passes through this check.
 
 - [ ] No em dashes (—) or en dashes (–) anywhere <!-- check-rules: allow -->
 - [ ] No "guaranteed return" or synonyms (warranted return, assured return, certain return) <!-- check-rules: allow -->
-- [ ] No "psfnetwork" written with any other casing or spacing
+- [ ] No "PSFnetwork" written with any other casing or spacing
 - [ ] No "in conclusion", "in summary", "to wrap up"
 - [ ] No "delve", "leverage" (as verb), "synergy", "robust solution" <!-- check-rules: allow -->
 

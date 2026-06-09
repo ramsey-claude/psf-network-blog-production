@@ -31,7 +31,7 @@ Excluded: `blog/**` (covered by Stage 7), `competitors/**`, `workflow/incident-l
 
 ### Section M-B: Brand voice (BLOCKING)
 
-- [ ] `psfnetwork` written lowercase, single word, no spaces, no other casing
+- [ ] `PSFnetwork` written with capital PSF, single word, no spaces, no other casing
 - [ ] No "guaranteed return," "guaranteed yield," or any guaranteed-X-investment language <!-- check-rules: allow -->
 - [ ] No "delve," "leverage" (as verb), "synergy," "robust solution" <!-- check-rules: allow -->
 

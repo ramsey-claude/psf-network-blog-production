@@ -2,7 +2,7 @@
 
 DOMAIN FINDINGS:
 
-Platform structural classification is accurate: Reg A LLC for Fundrise/Ark7/Arrived/Realbricks/HappyNest/psfnetwork; tokenized for Lofty; Reg A/D mixed for Mogul. The Lofty caveats (Algorand, custodial wallet, regulatory ambiguity) match what the SEC has said about tokenized securities generally. The Mogul "performance claims platform-reported, unaudited" framing is correct.
+Platform structural classification is accurate: Reg A LLC for Fundrise/Ark7/Arrived/Realbricks/HappyNest/PSFnetwork; tokenized for Lofty; Reg A/D mixed for Mogul. The Lofty caveats (Algorand, custodial wallet, regulatory ambiguity) match what the SEC has said about tokenized securities generally. The Mogul "performance claims platform-reported, unaudited" framing is correct.
 
 Sources cite SEC EDGAR for filing verification, best practice.
 

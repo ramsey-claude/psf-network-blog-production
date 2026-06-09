@@ -13,7 +13,7 @@
 | Read time | 10 min |
 
 ## QuickAnswer (60 sec)
-Fractional real estate investing lets multiple investors co-own a single property by purchasing shares, typically starting at $20-$100. Each investor receives a proportional share of rental income and any appreciation when the property is sold. Platforms handle all property management. As of 2026, the category holds over $4B in assets across platforms like psfnetwork, Arrived, Ark7, and Fundrise.
+Fractional real estate investing lets multiple investors co-own a single property by purchasing shares, typically starting at $20-$100. Each investor receives a proportional share of rental income and any appreciation when the property is sold. Platforms handle all property management. As of 2026, the category holds over $4B in assets across platforms like PSFnetwork, Arrived, Ark7, and Fundrise.
 
 **4 Stat Cards:**
 - $20, Minimum investment on some platforms
@@ -34,10 +34,10 @@ Body: Platform selects property → lists shares → investor buys → rental in
 ### 3. Fractional ownership vs. owning a whole property (id: vs-direct)
 **Answer capsule:** Key tradeoffs table.
 Body: Control, liquidity, effort, minimum, tax treatment comparison.
-**Table:** Platform model comparison (psfnetwork sq-ft model vs share model vs token model).
+**Table:** Platform model comparison (PSFnetwork sq-ft model vs share model vs token model).
 
 ### 4. What is the square-foot model? (id: sqft-model)
-**Answer capsule:** psfnetwork-specific explanation of per-sq-ft ownership.
+**Answer capsule:** PSFnetwork-specific explanation of per-sq-ft ownership.
 Body: Why sq-ft is more intuitive than shares, how it maps to real ownership, example calculation.
 Pull quote from Daniel Cho, CFA.
 
@@ -70,4 +70,4 @@ Body: Regulatory status, fee structure, liquidity terms, property types, income 
 1. NAR annual real estate return data
 2. SEC EDGAR, Regulation A+ overview
 3. Category AUM data (Arrived, Fundrise, Ark7 public disclosures)
-4. psfnetwork platform data
+4. PSFnetwork platform data

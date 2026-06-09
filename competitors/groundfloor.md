@@ -48,6 +48,6 @@ Real estate debt model - investors fund short-term loans to property developers 
 - Fix-and-flip market data and commentary
 - "Investing Insights" blog category
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-Groundfloor is a debt product for short-term-oriented investors. psfnetwork is an equity product for long-term wealth builders. Minimal audience overlap. Content angle: "debt vs. equity real estate investing" comparison.
+Groundfloor is a debt product for short-term-oriented investors. PSFnetwork is an equity product for long-term wealth builders. Minimal audience overlap. Content angle: "debt vs. equity real estate investing" comparison.

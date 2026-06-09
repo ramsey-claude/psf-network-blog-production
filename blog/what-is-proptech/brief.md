@@ -19,17 +19,17 @@
 | proptech trends | 170 | 28 | I |
 
 ## ICP
-Investor or finance professional who keeps seeing "proptech" in headlines and wants to understand what it means, what companies are in the space, and how it relates to real estate investing. Entry-point for psfnetwork's technology positioning.
+Investor or finance professional who keeps seeing "proptech" in headlines and wants to understand what it means, what companies are in the space, and how it relates to real estate investing. Entry-point for PSFnetwork's technology positioning.
 
 ## Content Angle
-"Proptech news" at 14,800 volume and KD 31 is essentially unclaimed, no competitor has meaningful content on it. psfnetwork can become a proptech news/education destination. This post is the evergreen explainer; future posts can target time-sensitive proptech news topics.
+"Proptech news" at 14,800 volume and KD 31 is essentially unclaimed, no competitor has meaningful content on it. PSFnetwork can become a proptech news/education destination. This post is the evergreen explainer; future posts can target time-sensitive proptech news topics.
 
 ## Competitor Gap
 - Ark7 ignores proptech entirely
 - Arrived ignores proptech entirely
 - Fundrise ignores proptech entirely
 - Zero competitors have proptech content
-- psfnetwork can own "proptech" as an authority topic given its own proptech positioning
+- PSFnetwork can own "proptech" as an authority topic given its own proptech positioning
 
 ## Regulatory Flags for Expert Review
 - Lower regulatory complexity than other posts

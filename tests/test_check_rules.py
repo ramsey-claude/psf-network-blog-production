@@ -171,11 +171,12 @@ def test_runs_without_grep_errors_on_unicode_content(cr, tmp_path):
 
 
 # ---------------------------------------------------------------------
-# Brand voice: psfnetwork casing variants. Tier 2 BLOCKING.
+# Brand voice: PSFnetwork casing variants. Tier 2 BLOCKING.
+# Brand standard: "PSFnetwork" (capital PSF, lowercase "network", one word).
 # ---------------------------------------------------------------------
 
 @pytest.mark.parametrize('variant', [
-    'PSFnetwork', 'PSF Network', 'PSFNETWORK', 'Psfnetwork',
+    'psfnetwork', 'PSF Network', 'PSFNETWORK', 'Psfnetwork',
 ])
 def test_psfnetwork_casing_blocks(cr, tmp_path, variant):
     f = tmp_path / 'doc.md'
@@ -184,9 +185,23 @@ def test_psfnetwork_casing_blocks(cr, tmp_path, variant):
     assert any(b[0] == 'psfnetwork-casing' for b in blocking)
 
 
-def test_psfnetwork_lowercase_passes(cr, tmp_path):
+def test_psfnetwork_correct_casing_passes(cr, tmp_path):
     f = tmp_path / 'doc.md'
-    f.write_text('A reference to psfnetwork in body prose.\n')
+    f.write_text('A reference to PSFnetwork in body prose.\n')
+    blocking, _ = cr.check_file(f)
+    casing_hits = [b for b in blocking if b[0] == 'psfnetwork-casing']
+    assert casing_hits == []
+
+
+@pytest.mark.parametrize('exempt', [
+    'Visit psfnetwork.com today.',          # domain
+    'The com.psfnetwork.stage10 plist.',    # dotted identifier
+    'See the psfnetwork-casing rule.',      # hyphenated identifier
+    'Path blog/psfnetwork/draft.md here.',  # slash path
+])
+def test_psfnetwork_lowercase_identifiers_exempt(cr, tmp_path, exempt):
+    f = tmp_path / 'doc.md'
+    f.write_text(exempt + '\n')
     blocking, _ = cr.check_file(f)
     casing_hits = [b for b in blocking if b[0] == 'psfnetwork-casing']
     assert casing_hits == []

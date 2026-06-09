@@ -10,7 +10,7 @@
 
 DOMAIN FINDINGS:
 
-Structural compliance verified. Every H2 is a question. Every answer capsule is in the 50-75 word range (counted: 70, 63, 58, 62, 52, 52 across the six H2s). FAQ has 6 Q/A pairs (above the 5 minimum). No em or en dashes detected. psfnetwork appears in correct lowercase. "guaranteed return" appears only in the implicit negation pattern. <!-- check-rules: allow -->
+Structural compliance verified. Every H2 is a question. Every answer capsule is in the 50-75 word range (counted: 70, 63, 58, 62, 52, 52 across the six H2s). FAQ has 6 Q/A pairs (above the 5 minimum). No em or en dashes detected. PSFnetwork brand casing is correct. "guaranteed return" appears only in the implicit negation pattern. <!-- check-rules: allow -->
 
 The Opening hook ("'Passive' is the most oversold word in finance") is the strongest opener in the cluster so far. Sharp, share-worthy, AI-extractable. Daniel Cho quote was not used in this post, which is fine (one quote per post maximum, this one had no natural fit).
 

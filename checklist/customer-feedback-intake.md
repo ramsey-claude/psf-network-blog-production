@@ -4,7 +4,7 @@ How customer-reported issues enter the pipeline and which stage they trigger. Ad
 
 ## When this applies
 
-- Operator (Onur) receives feedback from the psfnetwork team that references a specific delivered article or a category of issues across articles.
+- Operator (Onur) receives feedback from the PSFnetwork team that references a specific delivered article or a category of issues across articles.
 - Internal review surfaces an issue on a published or delivered article (live URL or Drive Doc).
 - Auto-monitoring (Stage 10) flags a regression.
 

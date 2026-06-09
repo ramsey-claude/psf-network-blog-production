@@ -21,7 +21,7 @@ Suggested fix: rewrite paragraph 2 to focus on what the reader will be able to *
 **L1. Section 4 sentence "The practical pattern: your personal return file date tends to creep into September if you hold meaningful fractional positions" is a great reader insight.**
 This is the type of "informed friend" line the brand voice wants. Keep verbatim.
 
-**L2. Section 7 title "How does this apply to psfnetwork specifically?" is honest.**
+**L2. Section 7 title "How does this apply to PSFnetwork specifically?" is honest.**
 Doesn't try to soft-pedal it as a generic "What about platform structures?" The reader knows where they are; the question matches their context. Good.
 
 **L3. The FAQ phrasing is consistent.**

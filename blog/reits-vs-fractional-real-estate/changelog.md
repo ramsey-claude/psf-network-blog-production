@@ -34,8 +34,8 @@ Appended: "These profiles are general patterns, not individual investment advice
 **After:** "built-in diversification across many properties"
 
 ### 8. CTA rephrased for non-REIT-holders - LOW
-**Before:** "Curious how psfnetwork's per-square-foot model compares to your current REIT allocation?"
-**After:** "Want to see how psfnetwork's per-square-foot model fits alongside REITs?"
+**Before:** "Curious how PSFnetwork's per-square-foot model compares to your current REIT allocation?"
+**After:** "Want to see how PSFnetwork's per-square-foot model fits alongside REITs?"
 
 ### 9. REIT minimum table cell - LOW
 **Before:** "Price of one share (some brokers offer fractional shares for less)"

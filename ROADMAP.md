@@ -1,8 +1,8 @@
-# psfnetwork Blog Production - Master Roadmap
+# PSFnetwork Blog Production - Master Roadmap
 
 Last updated: May 2026
 
-> **Operating scope:** psfnetwork is a US-based fractional real estate company. All blog content is published in English for the US market. Multi-market localization is spec'd in `checklist/localization-guide.md` for future expansion but is not invoked by the default pipeline.
+> **Operating scope:** PSFnetwork is a US-based fractional real estate company. All blog content is published in English for the US market. Multi-market localization is spec'd in `checklist/localization-guide.md` for future expansion but is not invoked by the default pipeline.
 
 ---
 
@@ -79,7 +79,7 @@ See git history. Pattern: brand-heavy with one or two outlier articles each. Rea
 
 | # | Gap Topic | Why It's a Gap | Est. KD | Est. Volume |
 |---|-----------|---------------|---------|-------------|
-| 1 | Square-foot real estate ownership explained | Unique psfnetwork model, no competitor addresses it | Low | Definitional |
+| 1 | Square-foot real estate ownership explained | Unique PSFnetwork model, no competitor addresses it | Low | Definitional |
 | 2 | Fractional real estate vs REIT (clear comparison) | Competitors mention both but no one owns the comparison | Low-Med | 880+ |
 | 3 | How to invest in real estate with $100 | Realbricks has it weakly; strong keyword signal | Low | 581 traffic |
 | 4 | 90% of millionaires own real estate | Realbricks drives 763 traffic with this hook | Low | High CTR hook |
@@ -111,7 +111,7 @@ International / Gulf / UAE gaps are documented in git history but are out of sco
 
 ## Step 3 - Priority Blog Posts (Phase 1)
 
-Ranked by: gap size + KD + psfnetwork ICP alignment + pipeline feasibility. Used by Stage -1 topic selection.
+Ranked by: gap size + KD + PSFnetwork ICP alignment + pipeline feasibility. Used by Stage -1 topic selection.
 
 | Priority | Slug | Target Keyword | Vol | KD | Type |
 |----------|------|---------------|-----|----|------|
@@ -126,7 +126,7 @@ Hub-before-spoke dependency: Priority 1 must publish before Priorities 2-6 since
 
 ---
 
-## Step 4 - Template Structure (from psfnetwork blog template)
+## Step 4 - Template Structure (from PSFnetwork blog template)
 
 See `brand/template-structure.md` for the canonical component order. The pipeline produces drafts that map cleanly onto these components.
 

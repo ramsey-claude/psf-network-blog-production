@@ -34,7 +34,7 @@ Work through every item. Mark each PASS or FAIL. Use the routing table to decide
 
 ### C. Brand & content quality
 
-- [ ] Brand name written as psfnetwork throughout
+- [ ] Brand name written as PSFnetwork throughout
 - [ ] No em dashes or en dashes
 - [ ] Tone matches `brand/tone-and-voice.md`
 - [ ] No contradictions within the content

@@ -70,4 +70,4 @@ SERP AI overviews on these queries synthesize the offering caps ($20M Tier 1, $7
 2. Use the March 2025 minimum-investment guidance for Rule 506(c), it's recent, undercited in older content, and concrete.
 3. Make the "professional credentials route" (Series 7/65/82) explicit, most existing content focuses on income/net worth and undersells this pathway.
 4. Show the spousal-equivalent definition, it's a 2020 amendment that long-tail traffic queries (cohabiting partners checking accreditation).
-5. Keep psfnetwork structural in Section 7, the framework choice is real and visible on EDGAR, not a marketing claim.
+5. Keep PSFnetwork structural in Section 7, the framework choice is real and visible on EDGAR, not a marketing claim.

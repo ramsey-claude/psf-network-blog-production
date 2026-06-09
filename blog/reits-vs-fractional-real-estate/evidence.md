@@ -97,7 +97,7 @@ Tools: WebSearch + curl with browser UA for federal sources.
 | Original outline element | Decision | Reason |
 |--------------------------|----------|--------|
 | "$10 - REIT minimum (Fundrise)" stat card | Replaced: "Price of one share" with broker-fractional-share note | Fundrise's eREITs are not the same as exchange-traded REITs; conflating them misleads the reader |
-| "International/Gulf investors" in choose-fractional section | Removed | psfnetwork operates in US market only |
+| "International/Gulf investors" in choose-fractional section | Removed | PSFnetwork operates in US market only |
 | Specific high-yield REIT names from search results (16-20% yields) | Excluded | Stock-picking is out of scope; we are doing structural comparison |
 | 90% distribution claim | Strengthened to "at least 90%, most pay closer to 100%" per E1 | Investor.gov language directly supports this nuance |
 
