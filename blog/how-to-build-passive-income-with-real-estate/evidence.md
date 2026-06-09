@@ -95,7 +95,7 @@ Tools: WebSearch + curl with browser UA for federal sources (per `checklist/rese
 - Confidence: low
 - Use rule: present with caveats about leverage, vintage, expenses. Do not put in a stat card.
 
-## E10 - Fractional platforms (Fundrise, Arrived, Ark7, psfnetwork) exist and operate under SEC frameworks
+## E10 - Fractional platforms (Fundrise, Arrived, Ark7, PSFnetwork) exist and operate under SEC frameworks
 
 - Claim refs: C13
 - Source: Cross-reference to hub evidence E13 (https://fundrise.com/, https://arrived.com/, https://ark7.com/, https://psfnetwork.com/).

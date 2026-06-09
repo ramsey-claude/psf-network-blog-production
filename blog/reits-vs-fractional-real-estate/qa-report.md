@@ -38,7 +38,7 @@ Stage 7. Verified against `checklist/qa-gate.md`.
 
 | Item | Status |
 |------|--------|
-| psfnetwork lowercase throughout | PASS |
+| PSFnetwork casing correct throughout | PASS |
 | No em or en dashes | PASS |
 | Tone matches `brand/tone-and-voice.md` | PASS - second person, neutral, anti-hype |
 | No contradictions | PASS |

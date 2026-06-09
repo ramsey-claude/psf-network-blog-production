@@ -48,7 +48,7 @@
 | Disclosure / protections | 70 | OK |
 | Offering caps + timing | 65 | OK (initially 83; trimmed in Stage 7) |
 | Which framework do platforms use | 64 | OK |
-| psfnetwork specifically | 66 | OK |
+| PSFnetwork specifically | 66 | OK |
 
 ## Section D: Content quality
 

@@ -13,11 +13,11 @@
 | Read time | 7 min |
 
 ## QuickAnswer (60 sec)
-In 2026, you can invest in real estate with as little as $20-$100 through fractional platforms that let you buy shares of rental properties. Platforms like psfnetwork, Ark7, Arrived, and Realbricks all accept small minimums and pay distributions from rental income. The most important step is simply starting, even $100 invested today begins the compounding cycle. Choose a platform, verify its SEC registration, and make your first investment.
+In 2026, you can invest in real estate with as little as $20-$100 through fractional platforms that let you buy shares of rental properties. Platforms like PSFnetwork, Ark7, Arrived, and Realbricks all accept small minimums and pay distributions from rental income. The most important step is simply starting, even $100 invested today begins the compounding cycle. Choose a platform, verify its SEC registration, and make your first investment.
 
 **4 Stat Cards:**
 - $20, Lowest fractional platform minimum (Ark7)
-- $100, psfnetwork entry point
+- $100, PSFnetwork entry point
 - 4-9%, Typical target annual yield
 - 10 min, Time to open a fractional account
 

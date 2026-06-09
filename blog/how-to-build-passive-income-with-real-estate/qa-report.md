@@ -40,7 +40,7 @@ Stage 7. Verified against `checklist/qa-gate.md`.
 
 | Item | Status |
 |------|--------|
-| Brand name written as psfnetwork throughout | PASS |
+| Brand name written as PSFnetwork throughout | PASS |
 | No em or en dashes | PASS |
 | Tone matches `brand/tone-and-voice.md` | PASS - second person, short sentences, anti-hype |
 | No contradictions | PASS |

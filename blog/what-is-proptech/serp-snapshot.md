@@ -14,7 +14,7 @@ Top organic for "what is proptech 2026":
 9. WhiteMassif - Real Estate Technology Conference
 10. WhiteMassif again
 
-**Pattern:** Industry consultancies (PwC, MIT, NAR) own the high-authority end. Trade-conference and software-vendor sites fill the middle. **No competitor in psfnetwork's category (Ark7, Arrived, Fundrise, Realbricks) has proptech educational content** per ROADMAP gap analysis. psfnetwork can take the investor-angled definitional slot.
+**Pattern:** Industry consultancies (PwC, MIT, NAR) own the high-authority end. Trade-conference and software-vendor sites fill the middle. **No competitor in PSFnetwork's category (Ark7, Arrived, Fundrise, Realbricks) has proptech educational content** per ROADMAP gap analysis. PSFnetwork can take the investor-angled definitional slot.
 
 Top organic for "proptech companies trends 2026 market size":
 - Future Market Insights, Precedence Research, Fortune Business Insights, IMARC, Mordor, Market.us, all aggregator/research-firm reports

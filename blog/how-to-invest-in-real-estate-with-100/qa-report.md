@@ -34,7 +34,7 @@ Stage 7. Verified against `checklist/qa-gate.md`. Loop 0.
 
 | Item | Status |
 |------|--------|
-| psfnetwork lowercase | PASS |
+| PSFnetwork casing | PASS |
 | No em/en dashes | PASS |
 | Tone matches brand voice | PASS |
 | No contradictions | PASS |

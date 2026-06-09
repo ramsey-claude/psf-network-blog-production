@@ -21,12 +21,12 @@
 Aspirational investor who has seen the "90% of millionaires" claim and wants the truth. Likely encountered Realbricks' or similar promotional content and is now suspicious or curious. Wants an honest framing that respects their intelligence.
 
 ## Content Angle
-Honest debunk + practical reframe. The claim is widely cited but rigorous research shows it conflates "owns real estate" (true; mostly primary residence) with "made wealthy through real estate" (false for most millionaires). psfnetwork takes the honest position and converts the reader's curiosity into a grounded action path: real estate is a useful diversifier but not a wealth-creation magic bullet.
+Honest debunk + practical reframe. The claim is widely cited but rigorous research shows it conflates "owns real estate" (true; mostly primary residence) with "made wealthy through real estate" (false for most millionaires). PSFnetwork takes the honest position and converts the reader's curiosity into a grounded action path: real estate is a useful diversifier but not a wealth-creation magic bullet.
 
 ## Competitor Gap
 - Realbricks' page (/articles/90-of-millionaires-own-real-estate) drives 763 traffic with promotional spin.
 - No competitor takes the honest debunk angle.
-- psfnetwork can own "honest take on millionaire real estate claims" as a content positioning.
+- PSFnetwork can own "honest take on millionaire real estate claims" as a content positioning.
 
 ## SEO Notes
 - Focus keyword in H1.

@@ -10,7 +10,7 @@ Stage 7 QA: 33/33 PASS. Loop 0. PUBLISH.
 
 ## Brand-casing standard change 2026-06-10
 - Brand name standardized to "PSFnetwork" (capital PSF, one word).
-- check-rules.py psfnetwork-casing rule inverted: lowercase "psfnetwork" used as a
+- check-rules.py psfnetwork-casing rule inverted: a lowercase brand spelling used as a
   brand name is now BLOCKING; URLs (psfnetwork.com), dotted identifiers
   (com.psfnetwork.stage10), and hyphen/slash/colon identifiers stay exempt.
 - brand/tone-and-voice.md terminology table updated to match.

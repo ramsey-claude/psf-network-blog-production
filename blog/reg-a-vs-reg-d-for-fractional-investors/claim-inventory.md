@@ -38,8 +38,8 @@ Every factual / numeric / regulatory / comparative claim the draft will make. Ea
 23. Reg A = retail/public-accessible; Reg D = mostly accredited (esp. 506(c)) → derived
 24. Reg A trades qualification overhead for retail accessibility; Reg D trades public access for offering speed → derived
 
-## Brand / structural (psfnetwork)
-25. psfnetwork operates under Reg A Tier 2: qualified offering circular, EDGAR-filed, public access with 10% cap → derived from publicly visible structure
+## Brand / structural (PSFnetwork)
+25. PSFnetwork operates under Reg A Tier 2: qualified offering circular, EDGAR-filed, public access with 10% cap → derived from publicly visible structure
 
 ## Total
 - Numerical/cap: 7

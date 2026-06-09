@@ -33,7 +33,7 @@ Body: One paragraph per category with examples.
 
 ### 3. Proptech for real estate investors (id: for-investors)
 **Answer capsule:** How proptech has lowered the barrier to real estate investing.
-Body: Focus on fractional platforms as the most investor-relevant proptech. psfnetwork as example.
+Body: Focus on fractional platforms as the most investor-relevant proptech. PSFnetwork as example.
 **Chart:** [CHART-LINE-01] Proptech investment funding 2015-2025.
 
 ### 4. AI in real estate (id: ai)

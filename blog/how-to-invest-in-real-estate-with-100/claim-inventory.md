@@ -35,7 +35,7 @@
 |---|--------------------------|----------|--------|
 | D1 | "Can I invest in real estate with $100 from outside the US?" FAQ | Removed | US-only operating scope; do not market to non-US |
 | D2 | Outline stat card "$20 - Lowest fractional platform minimum (Ark7)" | Keep | Accurate per E11 (hub evidence) |
-| D3 | Outline stat card "$100, psfnetwork entry point" | Keep with "illustrative" framing | Self-reported brand claim |
+| D3 | Outline stat card "$100, PSFnetwork entry point" | Keep with "illustrative" framing | Self-reported brand claim |
 | D4 | Outline stat card "10 min, Time to open a fractional account" | Soften to "Under 15 minutes typical" | "10 min" is fabricated specificity |
 
 Total: 14. Dropped/softened: 3.

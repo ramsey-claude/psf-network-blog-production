@@ -49,6 +49,6 @@ Fractional equity ownership in individual single-family rental properties. Opera
 - Goldman Sachs credibility angle in most content
 - Trustpilot review management
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-Mogul competes on institutional credibility and return claims. psfnetwork's differentiation is geographic (international/Gulf markets) and the per-square-foot ownership model - neither of which Mogul addresses.
+Mogul competes on institutional credibility and return claims. PSFnetwork's differentiation is geographic (international/Gulf markets) and the per-square-foot ownership model - neither of which Mogul addresses.

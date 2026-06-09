@@ -110,7 +110,7 @@ psf-network-blog-production/
 
 ## Brand Notes
 
-- Brand name is always written as **PSFnetwork**: all lowercase, one word, no spaces
+- Brand name is always written as **PSFnetwork**: capital PSF, lowercase "network", one word, no spaces
 - Brand colors: Cream #F7F5F0 | Matte Black #1C1C1C | Orange #FF7141 | Blue #4F8FA3
 - Font: Söhne (Kräftig, Halbfett, Buch)
 - Visual/video assets: produced by Superclasico

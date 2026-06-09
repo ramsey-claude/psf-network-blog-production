@@ -48,6 +48,6 @@ Fractional equity ownership in individual long-term rental single-family propert
 - Beginner educational content
 - Google partnership story
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-Realbricks is a young US-only platform building credibility through consistent dividend performance. psfnetwork operates in a different geographic lane (international/Gulf) and with a different ownership model (square-foot based).
+Realbricks is a young US-only platform building credibility through consistent dividend performance. PSFnetwork operates in a different geographic lane (international/Gulf) and with a different ownership model (square-foot based).

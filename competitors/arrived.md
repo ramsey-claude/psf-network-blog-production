@@ -48,6 +48,6 @@ Fractional equity ownership in individual single-family rental and vacation/shor
 - Beginner-friendly educational content ("what is fractional real estate")
 - Media partnerships and PR-driven coverage
 
-## Positioning vs. psfnetwork
+## Positioning vs. PSFnetwork
 
-Arrived targets US retail investors with brand trust from Bezos backing. psfnetwork targets investors interested in international/Gulf real estate markets - a lane Arrived does not compete in.
+Arrived targets US retail investors with brand trust from Bezos backing. PSFnetwork targets investors interested in international/Gulf real estate markets - a lane Arrived does not compete in.

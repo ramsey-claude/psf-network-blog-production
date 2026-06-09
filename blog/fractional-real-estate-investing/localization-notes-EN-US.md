@@ -9,6 +9,6 @@ Stage 5 ran in no-op mode.
 | LOCALIZATION_CHANGES | None |
 | FINANCIAL_TERMS_MODIFIED | NO |
 | STAGE6_RECHECK_REQUIRED | NO |
-| REASON | Single-market default. psfnetwork operates in the US market and publishes English-only content. |
+| REASON | Single-market default. PSFnetwork operates in the US market and publishes English-only content. |
 
 Per `checklist/localization-guide.md` (operating state note dated 2026-05-14), this is the default behavior. Future multi-market activation would change `target_markets` in the brief metadata before pipeline run.

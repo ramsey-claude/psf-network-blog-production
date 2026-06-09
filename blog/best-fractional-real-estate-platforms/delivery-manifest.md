@@ -30,7 +30,7 @@ DELIVERY_RESULT: SUCCESS, 2 native gdocs (v1 + v2.1), 3 prior v2 docs deleted an
 Grammar fixes applied to 9 locations:
 - Awkward sentence "the question of which platform is more about whether" rewritten as two clearer sentences
 - Quoted phrase syntax around "I own 14 square feet" smoothed (parenthetical instead of comma-flanked)
-- Three comma splices fixed (lines covering $10 caveat, FAQ multi-platform answer, psfnetwork vs Arrived answer)
+- Three comma splices fixed (lines covering $10 caveat, FAQ multi-platform answer, PSFnetwork vs Arrived answer)
 - "the bigger split than people realize" rewritten as "matters more than people realize"
 - Missing coordinating-conjunction comma added in "Hold positions on three platforms, and your accountant..."
 - SEC Regulation A/D explanation restructured from one comma-laden run-on into three short sentences
