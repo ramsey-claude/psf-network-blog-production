@@ -38,8 +38,18 @@ PROD_NOTES_RE = re.compile(
 )
 
 
+YAML_FM_RE = re.compile(r'\A---\n(.*?)\n---\n', re.DOTALL)
+
+
 def split_notes(md: str):
-    """Return (production_notes_text, body_markdown)."""
+    """Return (metadata_block, body_markdown).
+
+    Batch 1 drafts carry YAML frontmatter. Batch 2 drafts, which came out of
+    Google Docs, carry a PRODUCTION NOTES bullet list instead. Handle both.
+    """
+    m = YAML_FM_RE.match(md)
+    if m:
+        return m.group(1), md[m.end():]
     m = PROD_NOTES_RE.search(md)
     if not m:
         return '', md
@@ -58,6 +68,9 @@ ALIASES = {
     'hero image alt': 'hero_alt', 'hero alt text': 'hero_alt',
     'focus keyword': 'focus_keyword',
     'author': 'author', 'reviewer': 'reviewer', 'read time': 'read_time',
+    # YAML frontmatter keys used by Batch 1 drafts
+    'meta_description': 'meta_description', 'hero_visual_alt': 'hero_alt',
+    'focus_keyword': 'focus_keyword', 'read_time': 'read_time',
 }
 
 
@@ -70,7 +83,15 @@ def parse_notes(notes: str) -> dict:
     out = {}
     for line in notes.split('\n'):
         line = line.strip()
+        if not line:
+            continue
         if not line.startswith('-'):
+            # YAML frontmatter form: key: value
+            m = re.match(r'([a-z_]{3,25}):\s*(.+)', line)
+            if m:
+                key = ALIASES.get(m.group(1).strip().lower())
+                if key and key not in out:
+                    out[key] = m.group(2).strip().strip('"')
             continue
         line = line.lstrip('-').strip()
         for chunk in re.split(r'\s+·\s+', line):
@@ -118,6 +139,20 @@ def md_to_html(md: str) -> str:
                        '</tr></thead><tbody>' +
                        ''.join('<tr>' + ''.join(f'<td>{inline(c)}</td>' for c in r) + '</tr>' for r in body) +
                        '</tbody></table>')
+            continue
+
+        # horizontal rule, used as a section separator in the drafts
+        if re.match(r'^-{3,}$', line.strip()):
+            i += 1
+            continue
+
+        # blockquote
+        if line.lstrip().startswith('>'):
+            quote = []
+            while i < len(lines) and lines[i].lstrip().startswith('>'):
+                quote.append(re.sub(r'^\s*>\s?', '', lines[i].rstrip()))
+                i += 1
+            out.append(f'<blockquote><p>{inline(" ".join(quote).strip())}</p></blockquote>')
             continue
 
         # heading
@@ -197,6 +232,9 @@ button.ghost{{background:#fff;color:var(--ink);border:1px solid var(--line);padd
 #body th,#body td{{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}}
 #body th{{background:var(--cream);font-weight:600}}
 #body ul,#body ol{{margin:0 0 14px;padding-left:22px}}
+#body blockquote{{margin:18px 0;padding:14px 20px;border-left:3px solid var(--orange);
+ background:var(--cream);border-radius:0 8px 8px 0;font-style:italic}}
+#body blockquote p{{margin:0}}
 #body li{{margin:0 0 6px}}
 .ok{{color:var(--blue);font-weight:600;font-size:13px}}
 </style></head><body><div class="wrap">
@@ -255,7 +293,11 @@ def field_row(label, value, key=''):
 
 
 def build(slug: str, out_dir: Path) -> dict:
-    md = (BLOG / slug / 'draft.md').read_text(encoding='utf-8')
+    # Prefer a humanized v2 when one exists.
+    src = BLOG / slug / 'draft-v2-humanized.md'
+    if not src.exists():
+        src = BLOG / slug / 'draft.md'
+    md = src.read_text(encoding='utf-8')
     notes_raw, body_md = split_notes(md)
     notes = parse_notes(notes_raw)
 
@@ -332,7 +374,16 @@ fill that field from the SEO panel while you are in there.</div>
 </div></body></html>
 """
 
-LIVE = {'how-to-choose-fractional-real-estate-platform', 'proptech-future-of-real-estate'}
+# Articles already published on psfnetwork.com, per the 2026-07-21 sitemap audit.
+LIVE = {
+    'how-to-choose-fractional-real-estate-platform', 'proptech-future-of-real-estate',
+    'fractional-real-estate-investing', '90-percent-millionaires-real-estate',
+    'best-fractional-real-estate-platforms', 'how-fractional-real-estate-is-taxed',
+    'how-to-build-passive-income-with-real-estate', 'how-to-invest-10k-in-real-estate',
+    'how-to-invest-in-real-estate-with-100', 'real-estate-crowdfunding-vs-fractional',
+    'reg-a-vs-reg-d-for-fractional-investors', 'square-foot-real-estate-ownership-explained',
+    'what-is-proptech',
+}
 
 
 def main():
@@ -348,8 +399,13 @@ def main():
     if args.slug:
         slugs = args.slug
     else:
-        slugs = sorted(p.parent.name for p in BLOG.glob('*/draft.md')
-                       if 'PRODUCTION NOTES' in p.read_text(encoding='utf-8')[:3000])
+        # Default scope: everything ready for Framer entry. That means any
+        # article with a humanized v2, plus the Batch 2 set, which arrived
+        # from Google Docs with a PRODUCTION NOTES block.
+        ready = {p.parent.name for p in BLOG.glob('*/draft-v2-humanized.md')}
+        ready |= {p.parent.name for p in BLOG.glob('*/draft.md')
+                  if 'PRODUCTION NOTES' in p.read_text(encoding='utf-8')[:3000]}
+        slugs = sorted(ready)
 
     results = []
     for s in slugs:

@@ -35,3 +35,14 @@ My Drive/
 DELIVERY_RESULT: SUCCESS
 FILES_UPLOADED: 1 native Google Doc
 RETRIES_USED: 0
+
+## v2-humanized (2026-07-21)
+
+| Field | Value |
+|-------|-------|
+| Doc | https://docs.google.com/document/d/1ngv9HQvGkYSLfs3zrQXgIoYMzpqz_4FUJX5-j7Y-vWk/edit |
+| Source | `draft-v2-humanized.md` |
+| QA report | `qa-report-v2-humanized.md` (34 PASS, 0 FAIL) |
+| Change log | `draft-v2-humanization-log.md` |
+| Gate | Delivered through `workflow/deliver.py`, QA gate PASS |
+| Note | v1 doc retained for comparison. Live Framer page still serves v1. |
