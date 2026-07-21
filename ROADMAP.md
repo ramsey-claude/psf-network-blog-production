@@ -102,10 +102,21 @@ See git history. Pattern: brand-heavy with one or two outlier articles each. Rea
 | 21 | Fractional real estate IRA / self-directed IRA | Tax-advantaged path; complex but high-intent | Low-Med | Medium |
 | 22 | Real estate vs index funds for retirement | Asset allocation framing; pulls in retirement readers | Med | High |
 | 23 | What happens when a fractional property is sold | Exit mechanics; consumer pain point | Low | Definitional |
+| 24 | How to verify a fractional real estate platform is legit | Trust play, no strong incumbent, GEO-friendly | Low | Medium |
+| 25 | Red flags in a fractional real estate offering circular | Consumer protection angle, sourceable to SEC guidance | Low | Definitional |
+| 26 | What to ask a fractional platform before you invest | Due-diligence checklist format, high intent | Low | Medium |
+| 27 | Fractional real estate for retirees (yield, liquidity, tax) | Persona segment ignored by competitors | Low | Medium |
+| 28 | Fractional real estate for high-income earners (tax-first) | K-1 pass-through advantage, high AOV | Low-Med | Medium |
+| 29 | Fractional real estate in a 401(k) rollover | Self-directed IRA spoke, complements Batch 2 IRA post | Low-Med | Medium |
+| 30 | Reinvesting fractional distributions (10-year compound math) | Math-heavy, sourceable, evergreen | Low | Medium |
+| 31 | Diversifying across fractional platforms (portfolio framework) | Multi-platform investor persona, natural PSF+X comparison | Low | Medium |
+| 32 | Fractional real estate as a bond substitute (when it works) | Asset allocation angle, brings in institutional-curious readers | Low | Medium |
+
+Deliberately excluded from Batch 3: direct alternatives comparisons (fractional vs high-yield savings, vs direct rental ownership, vs vacation rental). The operator flagged 2026-05-26 that these framings could position PSF weakly in some scenarios; hold until competitive posture is stronger.
 
 International / Gulf / UAE gaps are documented in git history but are out of scope under the current US-only operating posture.
 
-**Pool status (2026-05-14):** Items 1-7 published or in pipeline. Items 9-10 published as Stage -2 generations. Items 8, 11-23 remain as future candidates. When the pool drops below 3 unused items, regenerate the gap list via Stage -3 or operator-led SERP audit.
+**Pool status (2026-05-26):** Items 1-7 published or in pipeline. Items 9-10 published as Stage -2 generations. Items 11-16, 19-22 covered by Batch 2 (June 2026, 14 articles). Items 8, 17, 18 open (17 and 18 explicitly cancelled by operator; 8 REITs 101 deferred). **Items 24-32 = Batch 3 planned pool** (9 titles, approved 2026-05-26, awaiting Human Anchor source material before Stage -2 kicks off).
 
 ---
 
