@@ -51,6 +51,8 @@ def test_irs_urls_are_live_paths():
         'https://www.irs.gov/taxtopics/',
         'https://www.irs.gov/newsroom/',
         'https://www.irs.gov/retirement-plans/',
+        'https://www.irs.gov/charities-non-profits/',
+        'https://www.irs.gov/credits-deductions/',
         'https://www.irs.gov/forms-pubs/about-form-1065',
         'https://www.irs.gov/forms-pubs/about-form-',
         'https://www.irs.gov/forms-pubs/about-schedule-e',
