@@ -37,23 +37,34 @@ def test_banned_urls_not_present_in_any_blog_file():
     )
 
 
-def test_irs_k1_uses_instructions_url():
-    """Posts that reference Schedule K-1 must point to the i1065sk1 page."""
-    correct = 'https://www.irs.gov/instructions/i1065sk1'
-    refers_to_k1 = []
+def test_irs_urls_are_live_paths():
+    """Every irs.gov URL used in drafts must be one of the known-working paths.
+
+    The 2026-05-26 audit found /forms-pubs/about-schedule-k-1-form-1065 returns
+    404. This test enforces that any irs.gov URL in a draft falls under a
+    directory known to have live content. Add new paths to the allow-list
+    only after curl-verifying they return 200.
+    """
+    ALLOW_PREFIXES = (
+        'https://www.irs.gov/instructions/',
+        'https://www.irs.gov/publications/',
+        'https://www.irs.gov/taxtopics/',
+        'https://www.irs.gov/forms-pubs/about-form-1065',
+        'https://www.irs.gov/forms-pubs/about-form-',
+        'https://www.irs.gov/forms-pubs/about-schedule-e',
+    )
+    bad = []
     for path in _all_md_files():
         text = path.read_text(encoding='utf-8')
-        if 'Schedule K-1' in text and 'irs.gov' in text:
-            refers_to_k1.append(path)
-    # Every K-1-referencing file with an IRS URL should use the correct one
-    bad = []
-    for path in refers_to_k1:
-        text = path.read_text(encoding='utf-8')
-        urls = re.findall(r'https://www\.irs\.gov/[^\s,)\]"]+', text)
-        cleaned = [u.rstrip('.,;:)') for u in urls]
-        if cleaned and not any(u == correct or u.startswith('https://www.irs.gov/forms-pubs/about-form-1065') for u in cleaned):
-            bad.append((str(path.relative_to(REPO_ROOT)), cleaned))
-    assert bad == [], f'Files referencing Schedule K-1 with non-canonical IRS URL: {bad}'
+        for url in re.findall(r'https://www\.irs\.gov/[^\s,)\]"]+', text):
+            cleaned = url.rstrip('.,;:)')
+            if not any(cleaned.startswith(p) for p in ALLOW_PREFIXES):
+                bad.append((str(path.relative_to(REPO_ROOT)), cleaned))
+    assert bad == [], (
+        'IRS URL not on the known-live allow-list. Verify with curl before '
+        'adding a new prefix to ALLOW_PREFIXES:\n'
+        + '\n'.join(f'  {p}: {u}' for p, u in bad)
+    )
 
 
 def test_internal_links_resolve_to_existing_slugs():

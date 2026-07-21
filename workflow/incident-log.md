@@ -24,6 +24,18 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 
 ---
 
+### 2026-05-26: Batch 2 shared persona anchor across 13 articles (Priya)
+
+- **Stage:** 2.5 (Humanization pass) via prior psf-content-qa system
+- **Symptom:** During Batch 2 sync into repo, audit revealed the same first name "Priya" as the humanization Real Story anchor in 13 of 15 Batch 2 articles. Same name applied to different professions across articles (nurse in Sacramento, software engineer in Denver, dental practice in Columbus, design studio in Denver, contractor in Denver). Any reader visiting two articles sees the character collision.
+- **Root cause:** Prior humanization system (psf-content-qa scored ≥95) had no cross-article persona-consistency check. Each article passed voice/rhythm/anchor criteria in isolation. Cross-article recurrence was not part of the rubric.
+- **Fix:** Replaced Priya in all 13 articles with 13 unique names (Elena, Rachel, Sofia, Naomi, Amara, Aisha, Nadia, Zara, Yasmin, Leila, Ana, Jasmine, Mei). Each unique per article. Also swept em-dashes and other Tier 0 violations from Batch 2 drafts during the sync.
+- **Rule:** New Section F in `checklist/qa-gate.md` (to be added): cross-article persona-anchor uniqueness check. Any name used as a Real Story anchor in one article cannot appear as a Real Story anchor in any other blog/**/draft.md. Test in `tests/test_persona_uniqueness.py`.
+- **Tests:** tests/test_persona_uniqueness.py (to be added in same commit).
+- **Reference:** commit added 2026-05-26 batch 2 sync.
+
+---
+
 ## Active rules (apply on every run)
 
 These are non-negotiable. Re-read this list at the start of every run.
