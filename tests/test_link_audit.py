@@ -49,16 +49,22 @@ def test_irs_urls_are_live_paths():
         'https://www.irs.gov/instructions/',
         'https://www.irs.gov/publications/',
         'https://www.irs.gov/taxtopics/',
+        'https://www.irs.gov/newsroom/',
+        'https://www.irs.gov/retirement-plans/',
         'https://www.irs.gov/forms-pubs/about-form-1065',
         'https://www.irs.gov/forms-pubs/about-form-',
         'https://www.irs.gov/forms-pubs/about-schedule-e',
+    )
+    # Known-404 URLs that must never appear. Overrides ALLOW_PREFIXES.
+    KNOWN_404 = (
+        'https://www.irs.gov/newsroom/one-big-beautiful-bill-business-tax-provisions-youtube-video-text-script',
     )
     bad = []
     for path in _all_md_files():
         text = path.read_text(encoding='utf-8')
         for url in re.findall(r'https://www\.irs\.gov/[^\s,)\]"]+', text):
             cleaned = url.rstrip('.,;:)')
-            if not any(cleaned.startswith(p) for p in ALLOW_PREFIXES):
+            if cleaned in KNOWN_404 or not any(cleaned.startswith(p) for p in ALLOW_PREFIXES):
                 bad.append((str(path.relative_to(REPO_ROOT)), cleaned))
     assert bad == [], (
         'IRS URL not on the known-live allow-list. Verify with curl before '

@@ -98,7 +98,6 @@ Sources
 3. U.S. Securities and Exchange Commission, Accredited Investors: https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors
 4. Internal Revenue Service, Instructions for Form 1120-REIT: https://www.irs.gov/instructions/i1120rei
 5. Internal Revenue Service, Qualified Business Income Deduction (Section 199A): https://www.irs.gov/newsroom/qualified-business-income-deduction
-6. Internal Revenue Service, One Big Beautiful Bill: Business Tax Provisions: https://www.irs.gov/newsroom/one-big-beautiful-bill-business-tax-provisions-youtube-video-text-script
 7. U.S. Securities and Exchange Commission, EDGAR Full Text Search: https://www.sec.gov/edgar/search/
 [a]@onurbesen@incendioai.com Using the same name "Aisha" in every article. Please use different names in each to appeal to different people. Aisha is not a common name in the US
 _onurbesen@incendioai.com adlı kullanıcıya atandı_
