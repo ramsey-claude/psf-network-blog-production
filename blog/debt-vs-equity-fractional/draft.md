@@ -1,6 +1,4 @@
-.lst-kix_list_2-6 > li:before{content:"■  "}.lst-kix_list_2-7 > li:before{content:"■  "}ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_2-4 > li:before{content:"■  "}.lst-kix_list_2-5 > li:before{content:"■  "}.lst-kix_list_2-8 > li:before{content:"■  "}ol.lst-kix_list_3-0{list-style-type:none}.lst-kix_list_3-0 > li:before{content:"" counter(lst-ctn-kix_list_3-0,decimal) ". "}.lst-kix_list_3-1 > li:before{content:"○  "}.lst-kix_list_3-2 > li:before{content:"■  "}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}ol.lst-kix_list_3-0.start{counter-reset:lst-ctn-kix_list_3-0 0}ul.lst-kix_list_1-3{list-style-type:none}ul.lst-kix_list_3-1{list-style-type:none}.lst-kix_list_3-5 > li:before{content:"■  "}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4 > li:before{content:"■  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3 > li:before{content:"■  "}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}ul.lst-kix_list_3-4{list-style-type:none}.lst-kix_list_3-8 > li:before{content:"■  "}.lst-kix_list_4-0 > li:before{content:"●  "}.lst-kix_list_4-1 > li:before{content:"○  "}.lst-kix_list_3-6 > li:before{content:"■  "}.lst-kix_list_3-7 > li:before{content:"■  "}.lst-kix_list_4-4 > li:before{content:"■  "}.lst-kix_list_4-3 > li:before{content:"■  "}.lst-kix_list_4-5 > li:before{content:"■  "}.lst-kix_list_4-2 > li:before{content:"■  "}.lst-kix_list_4-6 > li:before{content:"■  "}.lst-kix_list_4-8 > li:before{content:"■  "}.lst-kix_list_4-7 > li:before{content:"■  "}ul.lst-kix_list_4-8{list-style-type:none}ul.lst-kix_list_4-6{list-style-type:none}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_1-0 > li:before{content:"●  "}ul.lst-kix_list_2-3{list-style-type:none}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_4-4{list-style-type:none}ul.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_4-5{list-style-type:none}.lst-kix_list_1-1 > li:before{content:"○  "}.lst-kix_list_1-2 > li:before{content:"■  "}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3 > li:before{content:"■  "}.lst-kix_list_1-4 > li:before{content:"■  "}.lst-kix_list_3-0 > li{counter-increment:lst-ctn-kix_list_3-0}.lst-kix_list_1-7 > li:before{content:"■  "}.lst-kix_list_1-5 > li:before{content:"■  "}.lst-kix_list_1-6 > li:before{content:"■  "}.lst-kix_list_2-0 > li:before{content:"●  "}.lst-kix_list_2-1 > li:before{content:"○  "}.lst-kix_list_1-8 > li:before{content:"■  "}.lst-kix_list_2-2 > li:before{content:"■  "}.lst-kix_list_2-3 > li:before{content:"■  "}
-
-PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY
+**PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY**
 
 - Meta title (SEO): Debt Platforms vs Equity Fractional Real Estate
 
@@ -24,21 +22,21 @@ Sarah and Mike each wired $5,000 into the same brick apartment building off a qu
 
 ## Quick Answer (60 seconds)
 
-In fractional real estate, a debt position means you lend money against a property and collect interest, usually at a fixed rate, for a set term. An equity position means you own a piece of the property itself, so you share in the rent and in any rise or fall in value.
+In fractional real estate, a **debt** position means you lend money against a property and collect interest, usually at a fixed rate, for a set term. An **equity** position means you own a piece of the property itself, so you share in the rent and in any rise or fall in value.
 
 Debt tends to be steadier and gets paid first, but its upside is capped at the interest rate. Equity carries more risk and gets paid last, yet it captures appreciation and rising income over time.
 
 Neither one is better in the abstract. The right pick depends on whether you want predictable cash flow or long-term growth, and how much volatility you can sit through to get it.
 
-By the numbers:
+**By the numbers:**
 
-- Capital stack order: debt is repaid before equity in nearly every deal, which is why it is called senior.
+- **Capital stack order:** debt is repaid before equity in nearly every deal, which is why it is called senior.
 
-- $75 million is the most a company can raise per rolling 12 months under Regulation A Tier 2, per the SEC.
+- **$75 million** is the most a company can raise per rolling 12 months under Regulation A Tier 2, per the SEC.
 
-- $200,000 in income, or $1 million in net worth excluding a primary residence, is the general bar for accredited investor status, per the SEC.
+- **$200,000** in income, or **$1 million** in net worth excluding a primary residence, is the general bar for accredited investor status, per the SEC.
 
-- $5 million is the annual cap under Regulation Crowdfunding, which is open to non-accredited investors, per the SEC.
+- **$5 million** is the annual cap under Regulation Crowdfunding, which is open to non-accredited investors, per the SEC.
 
 Disclaimer: all real estate investments carry risk including loss of principal. Debt is senior to equity, but senior does not mean guaranteed.
 
@@ -56,7 +54,7 @@ That split is the whole topic. Same address, same sponsor, two different financi
 
 When you hold real estate debt, you are the lender, not the owner. Your money funds a loan secured by the property, and in exchange you receive interest on a schedule, then your principal back at the end of the term.
 
-The defining trait is seniority. Debt sits ahead of equity in the capital stack, which is the order in which everyone gets paid. Lenders are repaid before owners see a dollar, so when income is tight, your interest check has the stronger claim.
+The defining trait is **seniority**. Debt sits ahead of equity in the capital stack, which is the order in which everyone gets paid. Lenders are repaid before owners see a dollar, so when income is tight, your interest check has the stronger claim.
 
 That priority is the source of debt's appeal. Returns are usually fixed and known in advance, the holding period is defined, and a real property backs the loan as collateral.
 
@@ -92,9 +90,9 @@ A practical way to read this: debt trades upside for predictability, and equity 
 
 The two positions do not just pay differently. They are treated differently once the money reaches you, and the gap matters at tax time.
 
-Debt income is usually interest, which the IRS generally taxes as ordinary income at your regular rate. It is steady and easy to forecast, but it rarely qualifies for the lighter treatment that long-term gains receive.
+**Debt income** is usually **interest**, which the IRS generally taxes as ordinary income at your regular rate. It is steady and easy to forecast, but it rarely qualifies for the lighter treatment that long-term gains receive.
 
-Equity income is more layered. You may receive rental distributions during the hold, then a separate gain or loss when the property sells, which can qualify as long-term capital gains if held long enough, per the IRS.
+**Equity income** is more layered. You may receive rental distributions during the hold, then a separate gain or loss when the property sells, which can qualify as **long-term capital gains** if held long enough, per the IRS.
 
 Equity holders also tend to receive different paperwork, often a Schedule K-1 when the investment is structured as a partnership. We cover the mechanics in detail in our guide to [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed). The short version: confirm the tax form and the income type before you invest, not after.
 
@@ -102,11 +100,11 @@ Equity holders also tend to receive different paperwork, often a Schedule K-1 wh
 
 There is no universal answer, only a fit between the instrument and your goal. A few honest signals point the way.
 
-1. Choose debt if you want predictable cash flow, a defined exit date, and a position that gets paid before owners do. The tradeoff you accept is a hard ceiling on returns.
+1. **Choose debt** if you want predictable cash flow, a defined exit date, and a position that gets paid before owners do. The tradeoff you accept is a hard ceiling on returns.
 
-2. Choose equity if you are investing for years, want exposure to appreciation, and can tolerate uneven income along the way. The tradeoff is volatility and last-in-line payment.
+2. **Choose equity** if you are investing for years, want exposure to appreciation, and can tolerate uneven income along the way. The tradeoff is volatility and last-in-line payment.
 
-3. Blend both if you want a foundation of steadier income with a layer of growth on top. This is closer to how seasoned investors actually build wealth across a full cycle.
+3. **Blend both** if you want a foundation of steadier income with a layer of growth on top. This is closer to how seasoned investors actually build wealth across a full cycle.
 
 Where we stand, stated plainly: PSFnetwork is an issuer rather than a neutral referee, and our model is equity-based, per-square-foot ownership in mortgage-free properties. That structure suits an investor who wants tangible ownership and long-horizon upside. It is a poor fit for someone who needs a fixed coupon and a short, certain exit, and if that describes you, a debt instrument elsewhere is the better tool.
 
@@ -116,9 +114,9 @@ One detail separates fractional real estate from a direct purchase: leverage. A 
 
 That financing layer can lift equity returns when rates are low and rents are rising. It can also crush them when a loan comes due in a harder market, the kind of refinancing squeeze that leveraged real estate faces when rates climb.
 
-PSFnetwork takes a different route. Our properties carry no mortgage, so equity holders are not standing behind a lender at all. Rental income is not reduced by debt service, and the holdings avoid the refinancing risk that leverage introduces.
+PSFnetwork takes a different route. Our properties carry **no mortgage**, so equity holders are not standing behind a lender at all. Rental income is not reduced by debt service, and the holdings avoid the refinancing risk that leverage introduces.
 
-The regulatory frame is the same one most quality fractional offerings use. Offerings are qualified under Regulation A, which lets a company raise up to $75 million per rolling 12 months and welcomes non-accredited investors, per the SEC.
+The regulatory frame is the same one most quality fractional offerings use. Offerings are qualified under **Regulation A**, which lets a company raise up to $75 million per rolling 12 months and welcomes non-accredited investors, per the SEC.
 
 You can read the offering circular and ongoing filings on EDGAR rather than trusting a pitch. For a closer look at the rule sets, see [Reg A vs Reg D for fractional investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors).
 
@@ -134,27 +132,27 @@ PSFnetwork offers equity fractional ownership measured per square foot and tied 
 
 ### Is debt or equity safer in fractional real estate?
 
-Debt is generally lower risk, but not risk-free. It gets paid before equity, so in a weak year a lender's interest has the stronger claim. That protection has limits, because if a borrower defaults and the property sells for less than the loan, debt investors can still lose principal.
+**Debt is generally lower risk, but not risk-free.** It gets paid before equity, so in a weak year a lender's interest has the stronger claim. That protection has limits, because if a borrower defaults and the property sells for less than the loan, debt investors can still lose principal.
 
 ### Can I lose money with a debt position?
 
-Yes. Seniority improves your odds of repayment, but it does not guarantee it, and all real estate carries risk including loss of principal. If the underlying property fails and its sale does not cover the loan, even a senior lender can take a loss.
+**Yes.** Seniority improves your odds of repayment, but it does not guarantee it, and all real estate carries risk including loss of principal. If the underlying property fails and its sale does not cover the loan, even a senior lender can take a loss.
 
 ### Does equity always earn more than debt?
 
-No, it only earns more when the property performs. Equity has uncapped upside, so in a strong market it can beat a fixed return by a wide margin. In a flat or falling market, equity can underperform debt or post a loss, because owners absorb declines and get paid last.
+**No, it only earns more when the property performs.** Equity has uncapped upside, so in a strong market it can beat a fixed return by a wide margin. In a flat or falling market, equity can underperform debt or post a loss, because owners absorb declines and get paid last.
 
 ### How are debt and equity returns taxed differently?
 
-Debt interest is usually taxed as ordinary income, while equity can produce long-term capital gains. Interest is taxed at your regular rate, per the IRS. Equity may generate rental distributions during the hold and a capital gain at sale, which can qualify for lower long-term rates if held long enough.
+**Debt interest is usually taxed as ordinary income, while equity can produce long-term capital gains.** Interest is taxed at your regular rate, per the IRS. Equity may generate rental distributions during the hold and a capital gain at sale, which can qualify for lower long-term rates if held long enough.
 
 ### Which is better for passive income?
 
-Debt is the more predictable income tool, but mortgage-free equity competes closely. A fixed-rate note pays a known amount on a schedule, while unleveraged, income-oriented equity can also distribute steadily, since no debt service is skimmed off the top. Your timeline and risk tolerance decide the fit.
+**Debt is the more predictable income tool, but mortgage-free equity competes closely.** A fixed-rate note pays a known amount on a schedule, while unleveraged, income-oriented equity can also distribute steadily, since no debt service is skimmed off the top. Your timeline and risk tolerance decide the fit.
 
 ### Do fractional platforms offer both debt and equity?
 
-Some do, many specialize. Certain platforms run lending or note products, others offer only equity ownership, and a few list both. Read each offering to confirm exactly which instrument you are buying, because the same property can be packaged either way.
+**Some do, many specialize.** Certain platforms run lending or note products, others offer only equity ownership, and a few list both. Read each offering to confirm exactly which instrument you are buying, because the same property can be packaged either way.
 
 ## Sources
 

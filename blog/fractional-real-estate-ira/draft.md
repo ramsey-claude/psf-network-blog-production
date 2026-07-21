@@ -1,18 +1,16 @@
-ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_3-0 > li:before{content:"●  "}ul.lst-kix_list_5-7{list-style-type:none}ul.lst-kix_list_5-8{list-style-type:none}.lst-kix_list_3-1 > li:before{content:"○  "}.lst-kix_list_3-2 > li:before{content:"■  "}ul.lst-kix_list_5-5{list-style-type:none}ul.lst-kix_list_5-6{list-style-type:none}.lst-kix_list_5-0 > li{counter-increment:lst-ctn-kix_list_5-0}.lst-kix_list_6-0 > li{counter-increment:lst-ctn-kix_list_6-0}ul.lst-kix_list_1-3{list-style-type:none}.lst-kix_list_3-5 > li:before{content:"■  "}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4 > li:before{content:"■  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_5-3{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3 > li:before{content:"■  "}ul.lst-kix_list_5-4{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_5-1{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_5-2{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}.lst-kix_list_3-8 > li:before{content:"■  "}.lst-kix_list_3-6 > li:before{content:"■  "}.lst-kix_list_3-7 > li:before{content:"■  "}ol.lst-kix_list_5-0.start{counter-reset:lst-ctn-kix_list_5-0 0}.lst-kix_list_5-0 > li:before{content:"" counter(lst-ctn-kix_list_5-0,decimal) ". "}ol.lst-kix_list_6-0{list-style-type:none}.lst-kix_list_4-8 > li:before{content:"■  "}.lst-kix_list_5-3 > li:before{content:"■  "}.lst-kix_list_4-7 > li:before{content:"■  "}.lst-kix_list_5-2 > li:before{content:"■  "}.lst-kix_list_5-1 > li:before{content:"○  "}ul.lst-kix_list_4-8{list-style-type:none}.lst-kix_list_5-7 > li:before{content:"■  "}ul.lst-kix_list_4-6{list-style-type:none}.lst-kix_list_5-6 > li:before{content:"■  "}.lst-kix_list_5-8 > li:before{content:"■  "}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_5-4 > li:before{content:"■  "}ul.lst-kix_list_4-4{list-style-type:none}.lst-kix_list_5-5 > li:before{content:"■  "}ul.lst-kix_list_4-5{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}.lst-kix_list_6-1 > li:before{content:"○  "}.lst-kix_list_6-3 > li:before{content:"■  "}.lst-kix_list_6-0 > li:before{content:"" counter(lst-ctn-kix_list_6-0,decimal) ". "}.lst-kix_list_6-4 > li:before{content:"■  "}.lst-kix_list_6-2 > li:before{content:"■  "}.lst-kix_list_6-8 > li:before{content:"■  "}.lst-kix_list_6-5 > li:before{content:"■  "}.lst-kix_list_6-7 > li:before{content:"■  "}.lst-kix_list_6-6 > li:before{content:"■  "}ol.lst-kix_list_5-0{list-style-type:none}.lst-kix_list_2-6 > li:before{content:"■  "}.lst-kix_list_2-7 > li:before{content:"■  "}.lst-kix_list_2-4 > li:before{content:"■  "}.lst-kix_list_2-5 > li:before{content:"■  "}.lst-kix_list_2-8 > li:before{content:"■  "}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}ul.lst-kix_list_3-1{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}ul.lst-kix_list_3-0{list-style-type:none}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_3-4{list-style-type:none}.lst-kix_list_4-0 > li:before{content:"●  "}.lst-kix_list_4-1 > li:before{content:"○  "}.lst-kix_list_4-4 > li:before{content:"■  "}.lst-kix_list_4-3 > li:before{content:"■  "}.lst-kix_list_4-5 > li:before{content:"■  "}.lst-kix_list_4-2 > li:before{content:"■  "}.lst-kix_list_4-6 > li:before{content:"■  "}ul.lst-kix_list_6-6{list-style-type:none}ul.lst-kix_list_6-7{list-style-type:none}ul.lst-kix_list_6-4{list-style-type:none}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_6-5{list-style-type:none}ul.lst-kix_list_6-8{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}.lst-kix_list_1-0 > li:before{content:"●  "}ul.lst-kix_list_2-3{list-style-type:none}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_6-2{list-style-type:none}ul.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_6-3{list-style-type:none}.lst-kix_list_1-1 > li:before{content:"○  "}.lst-kix_list_1-2 > li:before{content:"■  "}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_6-1{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3 > li:before{content:"■  "}.lst-kix_list_1-4 > li:before{content:"■  "}.lst-kix_list_1-7 > li:before{content:"■  "}.lst-kix_list_1-5 > li:before{content:"■  "}.lst-kix_list_1-6 > li:before{content:"■  "}.lst-kix_list_2-0 > li:before{content:"●  "}.lst-kix_list_2-1 > li:before{content:"○  "}ol.lst-kix_list_6-0.start{counter-reset:lst-ctn-kix_list_6-0 0}.lst-kix_list_1-8 > li:before{content:"■  "}.lst-kix_list_2-2 > li:before{content:"■  "}.lst-kix_list_2-3 > li:before{content:"■  "}
+**PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY**
 
-PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY
+- **Focus keyword:** fractional real estate in a self-directed IRA
 
-- Focus keyword: fractional real estate in a self-directed IRA
+- **Slug:** fractional-real-estate-ira
 
-- Slug: fractional-real-estate-ira
+- **Canonical:** https://www.psfnetwork.com/blog/fractional-real-estate-ira
 
-- Canonical: https://www.psfnetwork.com/blog/fractional-real-estate-ira
+- **Author:** Maya Reyes · **Reviewer:** Daniel Cho, CFA
 
-- Author: Maya Reyes · Reviewer: Daniel Cho, CFA
+- **Published:** 2026-06-19 · **Updated:** 2026-06-19
 
-- Published: 2026-06-19 · Updated: 2026-06-19
-
-- FIXED v2: Conclusion H2 removed, body moved before FAQ; disclaimer paragraph removed.
+- **FIXED v2:** Conclusion H2 removed, body moved before FAQ; disclaimer paragraph removed.
 
 # Fractional Real Estate in a Self-Directed IRA: How It Works and What to Check First
 
@@ -24,21 +22,21 @@ That instinct is common, and it is reasonable. A retirement account is built to 
 
 ## Quick Answer (60 seconds)
 
-A regular IRA at a big brokerage will not let you buy a share of a rental house. To hold fractional real estate inside a retirement account, you need a self-directed IRA, an IRA held at a custodian that allows alternative assets.
+A regular IRA at a big brokerage will not let you buy a share of a rental house. To hold **fractional real estate** inside a retirement account, you need a **self-directed IRA**, an IRA held at a custodian that allows alternative assets.
 
 The account owns the investment, not you personally. Income and gains flow back into the IRA, tax-deferred in a Traditional IRA or potentially tax-free in a Roth. That is the appeal.
 
-The catch is the rulebook. The IRS bans certain prohibited transactions between your IRA and you or your family, and debt-financed property can trigger a tax called UBIT even inside the account. Get those wrong and the bill can be severe.
+The catch is the rulebook. The IRS bans certain **prohibited transactions** between your IRA and you or your family, and debt-financed property can trigger a tax called UBIT even inside the account. Get those wrong and the bill can be severe.
 
-Stat snapshot:
+**Stat snapshot:**
 
 - A self-directed IRA can hold real estate, private placement securities, and notes, while a typical brokerage IRA usually cannot, per Investor.gov.
 
-- The 2026 IRA contribution limit is $7,500, or $8,600 if you are 50 or older, per the IRS.
+- The 2026 IRA contribution limit is **$7,500**, or **$8,600** if you are 50 or older, per the IRS.
 
-- A prohibited transaction stops the account from being an IRA as of the first day of that tax year, per the IRS.
+- A **prohibited transaction** stops the account from being an IRA as of the first day of that tax year, per the IRS.
 
-- Income from debt-financed property held in an IRA can become unrelated business taxable income, per the IRS.
+- Income from debt-financed property held in an IRA can become **unrelated business taxable income**, per the IRS.
 
 Disclaimer: a disqualified IRA is treated as a full distribution, which can mean income tax on the whole balance plus penalties. This is not a casual strategy.
 
@@ -52,13 +50,13 @@ That gap is also where most people lose money or, worse, lose the account. The r
 
 Most IRAs sit at brokerages that offer stocks, funds, and bonds. They are not set up to hold a deed or a private security, so a fractional property is off the menu by default.
 
-A self-directed IRA is the workaround. It is a regular IRA under the tax code, Traditional or Roth, but held at a custodian that permits alternative assets. Investor.gov notes that self-directed IRAs are set apart mainly by the assets they allow, which can include real estate and private placement securities.
+A **self-directed IRA** is the workaround. It is a regular IRA under the tax code, Traditional or Roth, but held at a custodian that permits alternative assets. Investor.gov notes that self-directed IRAs are set apart mainly by the assets they allow, which can include real estate and private placement securities.
 
 Two points are easy to miss:
 
-- The custodian does not vet your deal. A self-directed IRA custodian holds the asset and handles paperwork. Per Investor.gov, these custodians do not evaluate the quality or legitimacy of any investment in the account or its promoters.
+- **The custodian does not vet your deal.** A self-directed IRA custodian holds the asset and handles paperwork. Per Investor.gov, these custodians do not evaluate the quality or legitimacy of any investment in the account or its promoters.
 
-- Due diligence is entirely yours. Because no one is checking the underlying offering for you, the screening that a brokerage might imply simply is not there.
+- **Due diligence is entirely yours.** Because no one is checking the underlying offering for you, the screening that a brokerage might imply simply is not there.
 
 That access is exactly what makes the account useful and exactly what makes it risky. You can reach assets a normal IRA blocks, and you carry the responsibility that comes with them.
 
@@ -68,25 +66,25 @@ Buying a whole rental property inside a self-directed IRA is possible, but it is
 
 Fractional ownership lowers that wall. Instead of the IRA buying a building, it buys a share of one, which keeps the position small enough to fit a real retirement balance.
 
-Here the title of the asset matters. Many fractional platforms issue LLC shares, which the IRA can hold as a private security.
+Here the title of the asset matters. Many fractional platforms issue **LLC shares**, which the IRA can hold as a private security.
 
-PSFnetwork instead measures ownership by the square foot, tied to a specific property, so the IRA holds a defined, legible stake rather than an abstract block of units. The legal wrapper is a Regulation A offering, which keeps SEC reporting and EDGAR filings in place. For the underlying mechanics first, see our guide to [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing).
+PSFnetwork instead measures ownership by the square foot, tied to a specific property, so the IRA holds a defined, legible stake rather than an abstract block of units. The legal wrapper is a **Regulation A** offering, which keeps SEC reporting and EDGAR filings in place. For the underlying mechanics first, see our guide to [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing).
 
 ## The Rule That Ends IRAs: Prohibited Transactions
 
-This is the part that gets people in trouble, so read it twice. The IRS bans certain dealings between your IRA and disqualified persons, a group that includes you, your spouse, your ancestors, your lineal descendants, and entities they control.
+This is the part that gets people in trouble, so read it twice. The IRS bans certain dealings between your IRA and **disqualified persons**, a group that includes you, your spouse, your ancestors, your lineal descendants, and entities they control.
 
 The logic is that your retirement account must benefit your retirement, not your present-day life. The moment the account and the owner mix, the protection collapses.
 
 Common ways investors trip the wire:
 
-- Personal use. You or a family member cannot stay in, vacation at, or use a property the IRA holds, even for one night.
+- **Personal use.** You or a family member cannot stay in, vacation at, or use a property the IRA holds, even for one night.
 
-- Sweat equity. You cannot personally repair, manage, or improve the property. The work has to be paid for by the IRA to a third party.
+- **Sweat equity.** You cannot personally repair, manage, or improve the property. The work has to be paid for by the IRA to a third party.
 
-- Self-dealing. You cannot sell your own property to your IRA or buy the IRA's property yourself.
+- **Self-dealing.** You cannot sell your own property to your IRA or buy the IRA's property yourself.
 
-- Indirect benefit. Lending to, or borrowing from, the IRA, or routing any personal benefit through it, is off limits.
+- **Indirect benefit.** Lending to, or borrowing from, the IRA, or routing any personal benefit through it, is off limits.
 
 The penalty is not a slap. Per the IRS, a prohibited transaction stops the account from being an IRA as of the first day of that tax year, which treats the full balance as distributed. For a large account, that single event can trigger income tax on everything, plus an early-distribution penalty if you are under 59½.
 
@@ -94,9 +92,9 @@ The penalty is not a slap. Per the IRS, a prohibited transaction stops the accou
 
 A second trap is quieter, because it does not destroy the account. It just sends it a tax bill that surprises the owner.
 
-IRAs are tax-advantaged, but they are not tax-exempt from every kind of income. Income from a trade or business that is regularly carried on can be unrelated business taxable income, or UBIT, taxed inside the account under trust tax rates, which climb quickly.
+IRAs are tax-advantaged, but they are not tax-exempt from every kind of income. Income from a trade or business that is regularly carried on can be **unrelated business taxable income**, or UBIT, taxed inside the account under trust tax rates, which climb quickly.
 
-For fractional real estate, the version that matters most is debt-financed property. When an IRA holds property bought with a mortgage, the income tied to that borrowed money becomes unrelated debt-financed income, a subset of UBIT, per IRS Publication 598.
+For fractional real estate, the version that matters most is debt-financed property. When an IRA holds property bought with a mortgage, the income tied to that borrowed money becomes **unrelated debt-financed income**, a subset of UBIT, per IRS Publication 598.
 
 This is where leverage cuts the wrong way. A mortgage that boosts a personal investor's return can pull a slice of an IRA's rental income into a separate tax. Debt-free fractional property sidesteps that specific issue, because there is no acquisition debt to trigger UDFI in the first place.
 
@@ -122,17 +120,17 @@ To compare the wider tax picture, see [how fractional real estate is taxed](http
 
 Treat this as a deliberate process, not a same-day purchase. The steps below map the path most investors follow.
 
-1. Confirm the account type. Decide between a Traditional and a Roth self-directed IRA based on your tax timing, not the asset.
+1. **Confirm the account type.** Decide between a Traditional and a Roth self-directed IRA based on your tax timing, not the asset.
 
-2. Choose a real custodian. Pick a custodian that handles alternative assets, and read its fee schedule line by line.
+2. **Choose a real custodian.** Pick a custodian that handles alternative assets, and read its fee schedule line by line.
 
-3. Read the offering documents. For a Regulation A deal, review the offering circular and ongoing filings through SEC EDGAR before committing.
+3. **Read the offering documents.** For a Regulation A deal, review the offering circular and ongoing filings through SEC EDGAR before committing.
 
-4. Map the prohibited-transaction risk. Make sure no disqualified person will use, service, or benefit from the property.
+4. **Map the prohibited-transaction risk.** Make sure no disqualified person will use, service, or benefit from the property.
 
-5. Check for debt. Confirm whether the property carries a mortgage, since that is what can trigger UDFI inside the account.
+5. **Check for debt.** Confirm whether the property carries a mortgage, since that is what can trigger UDFI inside the account.
 
-6. Keep it all in the IRA. Every dollar in and every dollar out must run through the account, never your personal funds.
+6. **Keep it all in the IRA.** Every dollar in and every dollar out must run through the account, never your personal funds.
 
 Most people approach a real estate IRA looking for a yes or no. The more useful question is whether you are willing to run the strategy by the rules, because the rules are where the value and the danger both live.
 
@@ -144,27 +142,27 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 ### Can I hold fractional real estate in a Roth IRA?
 
-Yes, through a self-directed Roth IRA held at a custodian that allows alternative assets. A standard brokerage Roth usually will not permit it, and the same prohibited-transaction and UBIT rules still apply. The appeal of the Roth is that qualified withdrawals, including rental income and appreciation, can come out tax-free when you meet the rules.
+**Yes, through a self-directed Roth IRA held at a custodian that allows alternative assets.** A standard brokerage Roth usually will not permit it, and the same prohibited-transaction and UBIT rules still apply. The appeal of the Roth is that qualified withdrawals, including rental income and appreciation, can come out tax-free when you meet the rules.
 
 ### What is a prohibited transaction in a real estate IRA?
 
-It is a banned dealing between your IRA and a disqualified person, such as you, your spouse, or close family. Examples include using the property yourself, doing your own repairs, or selling your own property to the IRA. Per the IRS, this stops the account from being an IRA as of the first day of that tax year, which is treated as a full distribution.
+**It is a banned dealing between your IRA and a disqualified person, such as you, your spouse, or close family.** Examples include using the property yourself, doing your own repairs, or selling your own property to the IRA. Per the IRS, this stops the account from being an IRA as of the first day of that tax year, which is treated as a full distribution.
 
 ### Will I owe taxes on rental income inside my IRA?
 
-Usually the income grows tax-deferred or tax-free, but debt-financed property can trigger UBIT. When an IRA holds property bought with a mortgage, the income tied to that debt becomes unrelated debt-financed income and can be taxed inside the account, per IRS Publication 598. Debt-free property avoids that specific trigger.
+**Usually the income grows tax-deferred or tax-free, but debt-financed property can trigger UBIT.** When an IRA holds property bought with a mortgage, the income tied to that debt becomes unrelated debt-financed income and can be taxed inside the account, per IRS Publication 598. Debt-free property avoids that specific trigger.
 
 ### How much can I contribute to a self-directed IRA?
 
-The 2026 limit is $7,500, or $8,600 if you are 50 or older, per the IRS. That cap is the same across Traditional and Roth and across regular and self-directed IRAs. Many investors fund a real estate position over time or by rolling over an existing account.
+**The 2026 limit is $7,500, or $8,600 if you are 50 or older, per the IRS.** That cap is the same across Traditional and Roth and across regular and self-directed IRAs. Many investors fund a real estate position over time or by rolling over an existing account.
 
 ### Does the IRA custodian check that the investment is legitimate?
 
-No, the custodian does not vet the deal; it only holds the asset and handles paperwork. Per Investor.gov, self-directed IRA custodians do not evaluate the quality or legitimacy of any investment in the account or its promoters. The due diligence is entirely your responsibility.
+**No, the custodian does not vet the deal; it only holds the asset and handles paperwork.** Per Investor.gov, self-directed IRA custodians do not evaluate the quality or legitimacy of any investment in the account or its promoters. The due diligence is entirely your responsibility.
 
 ### Can I manage the property myself if my IRA owns it?
 
-No, personally repairing, managing, or improving an IRA-held property is sweat equity, which is a prohibited transaction. All work and expenses must be paid by the IRA to a third party. This is one reason a hands-off, managed fractional structure fits an IRA better than a do-it-yourself rental.
+**No, personally repairing, managing, or improving an IRA-held property is sweat equity, which is a prohibited transaction.** All work and expenses must be paid by the IRA to a third party. This is one reason a hands-off, managed fractional structure fits an IRA better than a do-it-yourself rental.
 
 ## Sources
 

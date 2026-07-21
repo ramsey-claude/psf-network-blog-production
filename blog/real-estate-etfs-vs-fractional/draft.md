@@ -1,36 +1,34 @@
-ol.lst-kix_list_5-0{list-style-type:none}.lst-kix_list_2-6 > li:before{content:"■  "}.lst-kix_list_2-7 > li:before{content:"■  "}ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_2-4 > li:before{content:"■  "}.lst-kix_list_2-5 > li:before{content:"■  "}.lst-kix_list_2-8 > li:before{content:"■  "}.lst-kix_list_3-0 > li:before{content:"●  "}ul.lst-kix_list_5-7{list-style-type:none}ul.lst-kix_list_5-8{list-style-type:none}.lst-kix_list_3-1 > li:before{content:"○  "}.lst-kix_list_3-2 > li:before{content:"■  "}ul.lst-kix_list_5-5{list-style-type:none}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_5-6{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}.lst-kix_list_5-0 > li{counter-increment:lst-ctn-kix_list_5-0}ul.lst-kix_list_1-3{list-style-type:none}ul.lst-kix_list_3-1{list-style-type:none}.lst-kix_list_3-5 > li:before{content:"■  "}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4 > li:before{content:"■  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_3-0{list-style-type:none}ul.lst-kix_list_5-3{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3 > li:before{content:"■  "}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_5-4{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_5-1{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_5-2{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}ul.lst-kix_list_3-4{list-style-type:none}.lst-kix_list_3-8 > li:before{content:"■  "}.lst-kix_list_4-0 > li:before{content:"●  "}.lst-kix_list_4-1 > li:before{content:"○  "}.lst-kix_list_3-6 > li:before{content:"■  "}.lst-kix_list_3-7 > li:before{content:"■  "}.lst-kix_list_4-4 > li:before{content:"■  "}ol.lst-kix_list_5-0.start{counter-reset:lst-ctn-kix_list_5-0 0}.lst-kix_list_4-3 > li:before{content:"■  "}.lst-kix_list_4-5 > li:before{content:"■  "}.lst-kix_list_4-2 > li:before{content:"■  "}.lst-kix_list_4-6 > li:before{content:"■  "}.lst-kix_list_5-0 > li:before{content:"" counter(lst-ctn-kix_list_5-0,decimal) ". "}.lst-kix_list_4-8 > li:before{content:"■  "}.lst-kix_list_5-3 > li:before{content:"■  "}.lst-kix_list_4-7 > li:before{content:"■  "}.lst-kix_list_5-2 > li:before{content:"■  "}.lst-kix_list_5-1 > li:before{content:"○  "}ul.lst-kix_list_4-8{list-style-type:none}.lst-kix_list_5-7 > li:before{content:"■  "}ul.lst-kix_list_4-6{list-style-type:none}.lst-kix_list_5-6 > li:before{content:"■  "}.lst-kix_list_5-8 > li:before{content:"■  "}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_1-0 > li:before{content:"●  "}ul.lst-kix_list_2-3{list-style-type:none}.lst-kix_list_5-4 > li:before{content:"■  "}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_4-4{list-style-type:none}.lst-kix_list_5-5 > li:before{content:"■  "}ul.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_4-5{list-style-type:none}.lst-kix_list_1-1 > li:before{content:"○  "}.lst-kix_list_1-2 > li:before{content:"■  "}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3 > li:before{content:"■  "}.lst-kix_list_1-4 > li:before{content:"■  "}.lst-kix_list_1-7 > li:before{content:"■  "}.lst-kix_list_1-5 > li:before{content:"■  "}.lst-kix_list_1-6 > li:before{content:"■  "}.lst-kix_list_2-0 > li:before{content:"●  "}.lst-kix_list_2-1 > li:before{content:"○  "}.lst-kix_list_1-8 > li:before{content:"■  "}.lst-kix_list_2-2 > li:before{content:"■  "}.lst-kix_list_2-3 > li:before{content:"■  "}
+**PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY**
 
-PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY
+- **Title tag (SEO):** Real Estate ETFs vs Fractional Real Estate: A Comparison
 
-- Title tag (SEO): Real Estate ETFs vs Fractional Real Estate: A Comparison
+- **Meta description:** Real estate ETFs vs fractional real estate, compared honestly: liquidity, ownership, income, taxes, and fees, so you can match the structure to your goals.
 
-- Meta description: Real estate ETFs vs fractional real estate, compared honestly: liquidity, ownership, income, taxes, and fees, so you can match the structure to your goals.
+- **Slug:** real-estate-etfs-vs-fractional
 
-- Slug: real-estate-etfs-vs-fractional
+- **Canonical URL:** https://www.psfnetwork.com/blog/real-estate-etfs-vs-fractional
 
-- Canonical URL: https://www.psfnetwork.com/blog/real-estate-etfs-vs-fractional
+- **Focus keyword:** real estate ETFs vs fractional real estate
 
-- Focus keyword: real estate ETFs vs fractional real estate
+- **Secondary keywords:** real estate ETF, fractional real estate investing, REIT ETF, fractional real estate vs ETF, passive real estate income
 
-- Secondary keywords: real estate ETF, fractional real estate investing, REIT ETF, fractional real estate vs ETF, passive real estate income
+- **Hero visual alt text:** Split illustration contrasting a stock-ticker real estate ETF with a single building divided into fractional square-foot shares.
 
-- Hero visual alt text: Split illustration contrasting a stock-ticker real estate ETF with a single building divided into fractional square-foot shares.
+- **Hero size:** 1600x900 px
 
-- Hero size: 1600x900 px
+- **Schema:** Article, FAQPage
 
-- Schema: Article, FAQPage
+- **Author:** Maya Reyes, Senior Editor
 
-- Author: Maya Reyes, Senior Editor
+- **Reviewer:** Daniel Cho, CFA
 
-- Reviewer: Daniel Cho, CFA
+- **Read time:** 9 min
 
-- Read time: 9 min
+- **Published:** 2026-06-19
 
-- Published: 2026-06-19
+- **Updated:** 2026-06-19
 
-- Updated: 2026-06-19
-
-- FIXED v2: Conclusion H2 removed, body moved before FAQ; disclaimer paragraph removed.
+- **FIXED v2:** Conclusion H2 removed, body moved before FAQ; disclaimer paragraph removed.
 
 # Real Estate ETFs vs Fractional Real Estate: Which Fits Your Goals?
 
@@ -38,19 +36,19 @@ Nicole wanted real estate in her portfolio before her lunch break ended. A nurse
 
 ## Quick Answer (60 seconds)
 
-A real estate ETF is a fund that holds many property companies, mostly REITs, and trades on a stock exchange like a single share. You buy in one tap and sell the same way. What you own is a thin slice of hundreds of buildings you will never name.
+A **real estate ETF** is a fund that holds many property companies, mostly REITs, and trades on a stock exchange like a single share. You buy in one tap and sell the same way. What you own is a thin slice of hundreds of buildings you will never name.
 
-Fractional real estate works the opposite way. You buy a defined stake in one identified property and collect a share of its income, while a platform handles operations.
+**Fractional real estate** works the opposite way. You buy a defined stake in one identified property and collect a share of its income, while a platform handles operations.
 
 Neither wins outright. An ETF trades distance from the asset for instant liquidity and broad diversification. Fractional ownership trades easy exit for a concrete, single-property position you can actually point to.
 
-Key figures:
+**Key figures:**
 
-- From $100 is a common entry point on fractional platforms, with PSFnetwork starting there.
+- **From $100** is a common entry point on fractional platforms, with PSFnetwork starting there.
 
-- At least 90% of taxable income is what a REIT must distribute to shareholders each year to keep its tax status, per the IRS.
+- **At least 90%** of taxable income is what a REIT must distribute to shareholders each year to keep its tax status, per the IRS.
 
-- $75 million is the most a company can raise per rolling 12 months under Regulation A Tier 2, per the SEC.
+- **$75 million** is the most a company can raise per rolling 12 months under Regulation A Tier 2, per the SEC.
 
 All real estate investments carry risk, including loss of principal. ETF prices can swing daily, and fractional positions can be hard to sell.
 
@@ -64,7 +62,7 @@ Here is our footing, stated plainly: PSFnetwork builds and sells fractional owne
 
 ## What a Real Estate ETF Actually Is
 
-A real estate ETF pools investor money and buys a basket of property-related securities, usually shares of REITs that own apartments, warehouses, data centers, and shopping centers. The fund trades on an exchange, so its price moves second by second during market hours.
+A real estate ETF pools investor money and buys a basket of property-related securities, usually shares of **REITs** that own apartments, warehouses, data centers, and shopping centers. The fund trades on an exchange, so its price moves second by second during market hours.
 
 You are buying a fund, not a building. Your money is spread across dozens or hundreds of companies, which softens the blow of any one bad asset. It also means you never hold a stake in a specific property you chose.
 
@@ -78,9 +76,9 @@ Fractional real estate splits one property into smaller pieces so individual inv
 
 Most platforms sell shares of an LLC that holds a single property. The structure is sound, though a block of LLC units is still an abstraction. It can be hard to picture what a given number of units represents inside a real building.
 
-PSFnetwork takes a more tangible route. Ownership is measured by the square foot and tied to a specific property, so you can see exactly how much of a building you hold.
+PSFnetwork takes a more **tangible** route. Ownership is measured by the square foot and tied to a specific property, so you can see exactly how much of a building you hold.
 
-Many of these offerings, including PSFnetwork, use Regulation A, the SEC framework that lets both accredited and non-accredited investors participate. You can review offering circulars and ongoing filings through EDGAR rather than trusting marketing copy.
+Many of these offerings, including PSFnetwork, use **Regulation A**, the SEC framework that lets both accredited and non-accredited investors participate. You can review offering circulars and ongoing filings through EDGAR rather than trusting marketing copy.
 
 ## The Core Tradeoff: Liquidity vs Tangibility
 
@@ -113,9 +111,9 @@ PSFnetwork is the debt-free option among fractional structures. The properties c
 
 Both pay you to wait, but the paperwork and the timing differ in ways worth knowing before April.
 
-- ETF dividends typically arrive quarterly and land on a standard brokerage 1099. Most REIT dividends are taxed as ordinary income, though a portion may qualify for the pass-through deduction, per the IRS.
+- **ETF dividends** typically arrive quarterly and land on a standard brokerage 1099. Most REIT dividends are taxed as ordinary income, though a portion may qualify for the pass-through deduction, per the IRS.
 
-- Fractional distributions come from one property's rental income and follow the platform's schedule. Depending on the structure, you may receive a 1099 or a Schedule K-1, which can arrive later in tax season.
+- **Fractional distributions** come from one property's rental income and follow the platform's schedule. Depending on the structure, you may receive a 1099 or a Schedule K-1, which can arrive later in tax season.
 
 The practical point is timing and complexity. An ETF keeps your tax life simple and liquid. A single-property position can offer income tied to a concrete asset, sometimes with depreciation benefits passed through, at the cost of more involved filing.
 
@@ -135,11 +133,11 @@ If the contrast here interests you, our [REITs vs fractional real estate](https:
 
 There is no universal winner, only a better fit. The useful question is what you want the money to do.
 
-- Choose a real estate ETF if you value instant liquidity, want broad diversification with one purchase, and are comfortable owning an abstraction priced by the market.
+- **Choose a real estate ETF if** you value instant liquidity, want broad diversification with one purchase, and are comfortable owning an abstraction priced by the market.
 
-- Choose fractional real estate if you want a concrete stake in a property you selected, prefer income tied to a real building, and can leave the capital in place for the medium to long term.
+- **Choose fractional real estate if** you want a concrete stake in a property you selected, prefer income tied to a real building, and can leave the capital in place for the medium to long term.
 
-- Consider holding both if you want a liquid core for flexibility and a tangible position for the part of your portfolio you would rather not watch tick by the second.
+- **Consider holding both if** you want a liquid core for flexibility and a tangible position for the part of your portfolio you would rather not watch tick by the second.
 
 New investors weighing a first small step may find our piece on [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing) a useful primer before committing.
 
@@ -155,27 +153,27 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 ### Is a real estate ETF safer than fractional real estate?
 
-Neither is risk-free, and "safer" depends on which risk you mean. An ETF is more liquid and more diversified, so a single failing property barely moves it, yet its price can drop sharply in a market selloff. Fractional real estate is concentrated and harder to sell, but it is not whipped around by daily market sentiment.
+**Neither is risk-free, and "safer" depends on which risk you mean.** An ETF is more liquid and more diversified, so a single failing property barely moves it, yet its price can drop sharply in a market selloff. Fractional real estate is concentrated and harder to sell, but it is not whipped around by daily market sentiment.
 
 ### Can I sell fractional real estate as easily as an ETF?
 
-No, and that is the central tradeoff. An ETF trades on any market day in seconds, while fractional positions often carry lockup periods and limited resale. Plan to hold a fractional stake for the medium to long term, since exiting can take months or hinge on a redemption window.
+**No, and that is the central tradeoff.** An ETF trades on any market day in seconds, while fractional positions often carry lockup periods and limited resale. Plan to hold a fractional stake for the medium to long term, since exiting can take months or hinge on a redemption window.
 
 ### Do real estate ETFs pay dividends?
 
-Yes. Real estate ETFs hold REITs, which must distribute at least 90% of their taxable income to shareholders each year to keep their tax status, per the IRS. The fund passes much of that through to you, usually as quarterly dividends taxed mostly as ordinary income.
+**Yes.** Real estate ETFs hold REITs, which must distribute at least 90% of their taxable income to shareholders each year to keep their tax status, per the IRS. The fund passes much of that through to you, usually as quarterly dividends taxed mostly as ordinary income.
 
 ### How much money do I need to start with each?
 
-Less than most people expect for both. A real estate ETF costs the price of one fund share, which you can check on any brokerage before you buy. Fractional platforms set their own minimums, with PSFnetwork starting from about $100.
+**Less than most people expect for both.** A real estate ETF costs the price of one fund share, which you can check on any brokerage before you buy. Fractional platforms set their own minimums, with PSFnetwork starting from about $100.
 
 ### Are fractional real estate platforms regulated by the SEC?
 
-Many are, commonly under Regulation A. That framework lets a company raise up to $75 million per rolling 12 months and is open to non-accredited investors, per the SEC. Because qualified Regulation A offerings file with the SEC, you can review the offering circular and ongoing reports through EDGAR.
+**Many are, commonly under Regulation A.** That framework lets a company raise up to $75 million per rolling 12 months and is open to non-accredited investors, per the SEC. Because qualified Regulation A offerings file with the SEC, you can review the offering circular and ongoing reports through EDGAR.
 
 ### Which is better for passive income?
 
-Both are passive, but the income feels different. An ETF spreads dividends across hundreds of buildings, smooth but impersonal, while a fractional position pays you from one specific property. The right choice depends on whether you prefer breadth or a concrete asset you can track.
+**Both are passive, but the income feels different.** An ETF spreads dividends across hundreds of buildings, smooth but impersonal, while a fractional position pays you from one specific property. The right choice depends on whether you prefer breadth or a concrete asset you can track.
 
 ## Sources
 

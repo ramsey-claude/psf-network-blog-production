@@ -1,6 +1,4 @@
-ol.lst-kix_list_5-0{list-style-type:none}.lst-kix_list_2-6 > li:before{content:"■  "}.lst-kix_list_2-7 > li:before{content:"■  "}ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_2-4 > li:before{content:"■  "}.lst-kix_list_2-5 > li:before{content:"■  "}.lst-kix_list_2-8 > li:before{content:"■  "}.lst-kix_list_3-0 > li:before{content:"●  "}ul.lst-kix_list_5-7{list-style-type:none}ul.lst-kix_list_5-8{list-style-type:none}.lst-kix_list_3-1 > li:before{content:"○  "}.lst-kix_list_3-2 > li:before{content:"■  "}ul.lst-kix_list_5-5{list-style-type:none}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_5-6{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}.lst-kix_list_5-0 > li{counter-increment:lst-ctn-kix_list_5-0}ul.lst-kix_list_1-3{list-style-type:none}ul.lst-kix_list_3-1{list-style-type:none}.lst-kix_list_3-5 > li:before{content:"■  "}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4 > li:before{content:"■  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_3-0{list-style-type:none}ul.lst-kix_list_5-3{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3 > li:before{content:"■  "}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_5-4{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_5-1{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_5-2{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}ul.lst-kix_list_3-4{list-style-type:none}.lst-kix_list_3-8 > li:before{content:"■  "}.lst-kix_list_4-0 > li:before{content:"●  "}.lst-kix_list_4-1 > li:before{content:"○  "}.lst-kix_list_3-6 > li:before{content:"■  "}.lst-kix_list_3-7 > li:before{content:"■  "}.lst-kix_list_4-4 > li:before{content:"■  "}ol.lst-kix_list_5-0.start{counter-reset:lst-ctn-kix_list_5-0 0}.lst-kix_list_4-3 > li:before{content:"■  "}.lst-kix_list_4-5 > li:before{content:"■  "}.lst-kix_list_4-2 > li:before{content:"■  "}.lst-kix_list_4-6 > li:before{content:"■  "}.lst-kix_list_5-0 > li:before{content:"" counter(lst-ctn-kix_list_5-0,decimal) ". "}.lst-kix_list_4-8 > li:before{content:"■  "}.lst-kix_list_5-3 > li:before{content:"■  "}.lst-kix_list_4-7 > li:before{content:"■  "}.lst-kix_list_5-2 > li:before{content:"■  "}.lst-kix_list_5-1 > li:before{content:"○  "}ul.lst-kix_list_4-8{list-style-type:none}.lst-kix_list_5-7 > li:before{content:"■  "}ul.lst-kix_list_4-6{list-style-type:none}.lst-kix_list_5-6 > li:before{content:"■  "}.lst-kix_list_5-8 > li:before{content:"■  "}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_1-0 > li:before{content:"●  "}ul.lst-kix_list_2-3{list-style-type:none}.lst-kix_list_5-4 > li:before{content:"■  "}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_4-4{list-style-type:none}.lst-kix_list_5-5 > li:before{content:"■  "}ul.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_4-5{list-style-type:none}.lst-kix_list_1-1 > li:before{content:"○  "}.lst-kix_list_1-2 > li:before{content:"■  "}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3 > li:before{content:"■  "}.lst-kix_list_1-4 > li:before{content:"■  "}.lst-kix_list_1-7 > li:before{content:"■  "}.lst-kix_list_1-5 > li:before{content:"■  "}.lst-kix_list_1-6 > li:before{content:"■  "}.lst-kix_list_2-0 > li:before{content:"●  "}.lst-kix_list_2-1 > li:before{content:"○  "}.lst-kix_list_1-8 > li:before{content:"■  "}.lst-kix_list_2-2 > li:before{content:"■  "}.lst-kix_list_2-3 > li:before{content:"■  "}
-
-PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY
+**PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY**
 
 - Title tag (SEO): Single-Family vs Multifamily Fractional Real Estate
 
@@ -46,21 +44,21 @@ It never did, because the real difference was not on those pages. It shows up th
 
 ## Quick Answer (60 seconds)
 
-Single-family fractional ties your money to one house with one tenant, so income is simple but pauses entirely when that unit sits empty. Multifamily fractional spreads your slice across several units in one building, so one vacancy dents income instead of stopping it.
+**Single-family fractional** ties your money to one house with one tenant, so income is simple but pauses entirely when that unit sits empty. **Multifamily fractional** spreads your slice across several units in one building, so one vacancy dents income instead of stopping it.
 
 Neither is safer in every case. Single-family tends to be cheaper to enter and easier to picture. Multifamily smooths income across tenants but adds operational complexity and usually a higher price per share.
 
 The right pick depends on your timeline, your appetite for income gaps, and how much you value simplicity. The table further down maps each type to a kind of investor.
 
-Key figures:
+**Key figures:**
 
-- Reg A Tier 2 ceiling: a company can raise up to $75 million per rolling 12 months, per the SEC.
+- **Reg A Tier 2 ceiling:** a company can raise up to $75 million per rolling 12 months, per the SEC.
 
-- Accredited threshold: generally income above $200,000, or net worth above $1 million excluding a primary residence, per the SEC.
+- **Accredited threshold:** generally income above $200,000, or net worth above $1 million excluding a primary residence, per the SEC.
 
-- Reg CF ceiling: up to $5 million per 12 months, open to non-accredited investors, per the SEC.
+- **Reg CF ceiling:** up to $5 million per 12 months, open to non-accredited investors, per the SEC.
 
-- Vacancy math: one empty unit zeroes out single-family income; in an eight-unit building it cuts roughly one-eighth.
+- **Vacancy math:** one empty unit zeroes out single-family income; in an eight-unit building it cuts roughly one-eighth.
 
 Disclaimer: all real estate investments carry risk, including loss of principal, and fractional positions can be hard to exit.
 
@@ -70,21 +68,21 @@ Most comparisons of these two property types start with returns. That is the wro
 
 A single-family rental has one tenant. When that tenant pays, the property earns. When the unit turns over, income stops until a new lease is signed, and the gap can run weeks.
 
-A multifamily building holds that same risk in smaller pieces. One vacancy in an eight-unit property trims income by about an eighth, not the whole thing. That spread is the structural case for multifamily, and it is worth weighing before any yield figure enters the conversation.
+A multifamily building holds that same risk in smaller pieces. **One vacancy in an eight-unit property** trims income by about an eighth, not the whole thing. That spread is the structural case for multifamily, and it is worth weighing before any yield figure enters the conversation.
 
 ## Single-Family Fractional: Simple to Picture, Sharper Swings
 
 A single-family share is the easiest version of fractional real estate to reason about. There is one address, one tenant, and one rent check, divided among the investors who hold the property.
 
-That clarity is a real advantage. You can see the house, look up the neighborhood, and understand exactly what you own. For a first step into [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing), that legibility lowers the learning curve.
+That clarity is a real advantage. You can see the house, look up the neighborhood, and understand exactly what you own. For a first step into [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing), that **legibility** lowers the learning curve.
 
 The tradeoff is concentration. Income from a single-family position is binary in a way multifamily is not:
 
-- Leased: the property earns and distributions flow.
+- **Leased:** the property earns and distributions flow.
 
-- Vacant: income pauses entirely until a new tenant signs.
+- **Vacant:** income pauses entirely until a new tenant signs.
 
-- Turnover: cleaning, repairs, and lost rent stack up between leases.
+- **Turnover:** cleaning, repairs, and lost rent stack up between leases.
 
 Single-family homes also tend to track the for-sale housing market closely, which can help on appreciation and hurt during a downturn. The position is simple, but simplicity cuts both ways.
 
@@ -92,7 +90,7 @@ Single-family homes also tend to track the for-sale housing market closely, whic
 
 Multifamily flips the math. Instead of one tenant, the building has several, so the income stream is averaged across leases that begin and end at different times.
 
-That averaging is the appeal. A single move-out is a dent rather than a stop, and a well-occupied building can deliver steadier distributions through ordinary tenant churn. Diversification inside a single asset is the headline feature here.
+That averaging is the appeal. A single move-out is a dent rather than a stop, and a well-occupied building can deliver steadier distributions through ordinary tenant churn. **Diversification inside a single asset** is the headline feature here.
 
 The complexity sits behind that smoother number. More units mean more leases, more maintenance, and more operational decisions, all handled by the sponsor rather than by you. Multifamily buildings are also often valued on net operating income rather than nearby home sales, so their pricing can move on different signals than single-family homes.
 
@@ -128,9 +126,9 @@ Worth saying plainly: we issue these offerings, so we are not a disinterested sc
 
 Two features apply to both types on the platform:
 
-- Mortgage-free assets: no loan sits on the property, so distributions are not reduced by debt service and the position avoids refinancing pressure.
+- **Mortgage-free assets:** no loan sits on the property, so distributions are not reduced by debt service and the position avoids refinancing pressure.
 
-- Regulation A structure: offerings are open to accredited and non-accredited investors, with SEC filings available for review.
+- **Regulation A structure:** offerings are open to accredited and non-accredited investors, with SEC filings available for review.
 
 For investors weighing the two, the building type matters less than matching the income pattern to your own timeline. You can explore current offerings directly at [PSFnetwork](https://www.psfnetwork.com/).
 
@@ -146,31 +144,31 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 ### Is single-family or multifamily fractional safer?
 
-Neither is uniformly safer. Multifamily spreads vacancy risk across several units, so income stays steadier through ordinary turnover. Single-family carries that risk in one tenant, which means sharper income swings but a simpler position to evaluate.
+**Neither is uniformly safer.** Multifamily spreads vacancy risk across several units, so income stays steadier through ordinary turnover. Single-family carries that risk in one tenant, which means sharper income swings but a simpler position to evaluate.
 
 ### Which one needs less money to start?
 
-Single-family fractional usually has the lower entry point. A share of one house typically asks less capital than a share of a multi-unit building, though exact minimums depend on the platform and offering. Always check the stated minimum in the offering documents before committing.
+**Single-family fractional usually has the lower entry point.** A share of one house typically asks less capital than a share of a multi-unit building, though exact minimums depend on the platform and offering. Always check the stated minimum in the offering documents before committing.
 
 ### Does multifamily produce more reliable income?
 
-Often, but not guaranteed. Multiple tenants average out the income stream, so a single move-out is a dent rather than a stop. That said, distributions are platform-reported, may vary, and depend on occupancy, expenses, and management across the whole building.
+**Often, but not guaranteed.** Multiple tenants average out the income stream, so a single move-out is a dent rather than a stop. That said, distributions are platform-reported, may vary, and depend on occupancy, expenses, and management across the whole building.
 
 ### How does vacancy actually affect each type?
 
-It is the core difference between them. In a single-family property, one vacancy pauses income entirely until a new tenant signs. In an eight-unit building, that same vacancy cuts roughly one-eighth of the income, leaving the rest intact.
+**It is the core difference between them.** In a single-family property, one vacancy pauses income entirely until a new tenant signs. In an eight-unit building, that same vacancy cuts roughly one-eighth of the income, leaving the rest intact.
 
 ### Can non-accredited investors buy both types?
 
-Yes, when the offering uses Regulation A or Regulation Crowdfunding. Regulation A Tier 2 lets a company raise up to $75 million per rolling 12 months and is open to non-accredited investors, per the SEC. Regulation D offerings, by contrast, are generally limited to accredited investors.
+**Yes, when the offering uses Regulation A or Regulation Crowdfunding.** Regulation A Tier 2 lets a company raise up to $75 million per rolling 12 months and is open to non-accredited investors, per the SEC. Regulation D offerings, by contrast, are generally limited to accredited investors.
 
 ### Are these positions easy to sell?
 
-No, plan to hold for years. Both single-family and multifamily fractional shares are far less liquid than public REITs. Exiting depends on platform redemption windows or a secondary market, so only invest capital you will not need soon.
+**No, plan to hold for years.** Both single-family and multifamily fractional shares are far less liquid than public REITs. Exiting depends on platform redemption windows or a secondary market, so only invest capital you will not need soon.
 
 ### Which type appreciates more?
 
-It varies with the market and cannot be promised. Single-family values tend to track nearby home sales, while multifamily values often track net operating income. Past performance does not predict future results, so treat any appreciation figure as context rather than a guarantee.
+**It varies with the market and cannot be promised.** Single-family values tend to track nearby home sales, while multifamily values often track net operating income. Past performance does not predict future results, so treat any appreciation figure as context rather than a guarantee.
 
 ## Sources
 

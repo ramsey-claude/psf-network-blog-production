@@ -1,6 +1,4 @@
-ul.lst-kix_list_1-0{list-style-type:none}ol.lst-kix_list_3-0{list-style-type:none}.lst-kix_list_3-0 > li:before{content:"" counter(lst-ctn-kix_list_3-0,decimal) ". "}ul.lst-kix_list_5-7{list-style-type:none}ul.lst-kix_list_5-8{list-style-type:none}.lst-kix_list_3-1 > li:before{content:"○  "}.lst-kix_list_3-2 > li:before{content:"■  "}ul.lst-kix_list_5-5{list-style-type:none}ul.lst-kix_list_5-6{list-style-type:none}.lst-kix_list_6-0 > li{counter-increment:lst-ctn-kix_list_6-0}ul.lst-kix_list_1-3{list-style-type:none}.lst-kix_list_3-5 > li:before{content:"■  "}ul.lst-kix_list_5-0{list-style-type:none}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4 > li:before{content:"■  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_5-3{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3 > li:before{content:"■  "}ul.lst-kix_list_5-4{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_5-1{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_5-2{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}.lst-kix_list_3-8 > li:before{content:"■  "}.lst-kix_list_3-6 > li:before{content:"■  "}.lst-kix_list_3-7 > li:before{content:"■  "}.lst-kix_list_5-0 > li:before{content:"●  "}ol.lst-kix_list_6-0{list-style-type:none}.lst-kix_list_4-8 > li:before{content:"■  "}.lst-kix_list_5-3 > li:before{content:"■  "}.lst-kix_list_4-7 > li:before{content:"■  "}.lst-kix_list_5-2 > li:before{content:"■  "}.lst-kix_list_5-1 > li:before{content:"○  "}ul.lst-kix_list_4-8{list-style-type:none}.lst-kix_list_5-7 > li:before{content:"■  "}ul.lst-kix_list_4-6{list-style-type:none}.lst-kix_list_5-6 > li:before{content:"■  "}.lst-kix_list_5-8 > li:before{content:"■  "}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_5-4 > li:before{content:"■  "}ul.lst-kix_list_4-4{list-style-type:none}.lst-kix_list_5-5 > li:before{content:"■  "}ul.lst-kix_list_4-5{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}.lst-kix_list_6-1 > li:before{content:"○  "}.lst-kix_list_6-3 > li:before{content:"■  "}.lst-kix_list_6-0 > li:before{content:"" counter(lst-ctn-kix_list_6-0,decimal) ". "}.lst-kix_list_6-4 > li:before{content:"■  "}.lst-kix_list_3-0 > li{counter-increment:lst-ctn-kix_list_3-0}.lst-kix_list_6-2 > li:before{content:"■  "}.lst-kix_list_6-8 > li:before{content:"■  "}.lst-kix_list_6-5 > li:before{content:"■  "}.lst-kix_list_6-7 > li:before{content:"■  "}.lst-kix_list_6-6 > li:before{content:"■  "}.lst-kix_list_2-6 > li:before{content:"■  "}.lst-kix_list_2-7 > li:before{content:"■  "}.lst-kix_list_2-4 > li:before{content:"■  "}.lst-kix_list_2-5 > li:before{content:"■  "}.lst-kix_list_2-8 > li:before{content:"■  "}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}ol.lst-kix_list_3-0.start{counter-reset:lst-ctn-kix_list_3-0 0}ul.lst-kix_list_3-1{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_3-4{list-style-type:none}.lst-kix_list_4-0 > li:before{content:"●  "}.lst-kix_list_4-1 > li:before{content:"○  "}.lst-kix_list_4-4 > li:before{content:"■  "}.lst-kix_list_4-3 > li:before{content:"■  "}.lst-kix_list_4-5 > li:before{content:"■  "}.lst-kix_list_4-2 > li:before{content:"■  "}.lst-kix_list_4-6 > li:before{content:"■  "}ul.lst-kix_list_6-6{list-style-type:none}ul.lst-kix_list_6-7{list-style-type:none}ul.lst-kix_list_6-4{list-style-type:none}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_6-5{list-style-type:none}ul.lst-kix_list_6-8{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}.lst-kix_list_1-0 > li:before{content:"●  "}ul.lst-kix_list_2-3{list-style-type:none}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_6-2{list-style-type:none}ul.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_6-3{list-style-type:none}.lst-kix_list_1-1 > li:before{content:"○  "}.lst-kix_list_1-2 > li:before{content:"■  "}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_6-1{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3 > li:before{content:"■  "}.lst-kix_list_1-4 > li:before{content:"■  "}.lst-kix_list_1-7 > li:before{content:"■  "}.lst-kix_list_1-5 > li:before{content:"■  "}.lst-kix_list_1-6 > li:before{content:"■  "}.lst-kix_list_2-0 > li:before{content:"●  "}.lst-kix_list_2-1 > li:before{content:"○  "}ol.lst-kix_list_6-0.start{counter-reset:lst-ctn-kix_list_6-0 0}.lst-kix_list_1-8 > li:before{content:"■  "}.lst-kix_list_2-2 > li:before{content:"■  "}.lst-kix_list_2-3 > li:before{content:"■  "}
-
-PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY
+**PRODUCTION NOTES | NOT PART OF THE PUBLISHED BODY**
 
 - Focus keyword: how to read a Reg A offering circular
 
@@ -34,31 +32,31 @@ A Reg A offering circular holds the answers to almost every real question about 
 
 By the third page, Dave stopped reading and started skimming. A paramedic in Pittsburgh saving toward a rental income stream, he had opened a 140-page offering circular for a fractional property deal and felt the document fighting back. The risk factors alone ran longer than the pitch that brought him there.
 
-That reaction is the whole problem. The offering circular is the one document written to protect the investor, and it is the one most investors never finish. Reading it well is a skill, and it takes less time than the deal will cost you if you skip it.
+That reaction is the whole problem. The **offering circular** is the one document written to protect the investor, and it is the one most investors never finish. Reading it well is a skill, and it takes less time than the deal will cost you if you skip it.
 
 ## Quick Answer (60 seconds)
 
-A Reg A offering circular is the disclosure document a company files with the SEC, on Form 1-A, before raising money from the public under Regulation A. It explains what you are buying, how the money is used, what could go wrong, and who is running the deal.
+A **Reg A offering circular** is the disclosure document a company files with the SEC, on Form 1-A, before raising money from the public under Regulation A. It explains what you are buying, how the money is used, what could go wrong, and who is running the deal.
 
 You do not read it front to back. You read it in a deliberate order: the offering summary, the use of proceeds, the risk factors, the fees, the management, and the financial statements.
 
 Each section answers one plain question about whether the deal fits you. Every qualified Reg A offering is searchable on the SEC's EDGAR system, so you can pull the real filing rather than trust a marketing page. The skill is knowing which sections carry the weight and which red flags justify walking away.
 
-Stat snapshot:
+**Stat snapshot:**
 
-- $75 million is the most a company can raise under Regulation A Tier 2 in any rolling 12-month period, per the SEC.
+- **$75 million** is the most a company can raise under **Regulation A Tier 2** in any rolling 12-month period, per the SEC.
 
-- $20 million is the Tier 1 ceiling, and Tier 1 offerings do not carry the same ongoing federal reporting, per the SEC.
+- **$20 million** is the Tier 1 ceiling, and Tier 1 offerings do not carry the same ongoing federal reporting, per the SEC.
 
-- Tier 2 requires audited financial statements and ongoing reports (Forms 1-K, 1-SA, 1-U), per the SEC.
+- Tier 2 requires **audited financial statements** and ongoing reports (Forms 1-K, 1-SA, 1-U), per the SEC.
 
-- Reg A is open to non-accredited investors, unlike most Regulation D offerings, per Investor.gov.
+- Reg A is open to **non-accredited investors**, unlike most Regulation D offerings, per Investor.gov.
 
 Disclaimer: an offering circular discloses risk, it does not remove it. All real estate investments carry risk, including loss of principal.
 
 ## What a Reg A Offering Circular Actually Is
 
-Regulation A is an SEC exemption that lets a company raise capital from the general public without a full IPO. The disclosure that makes that legal is the offering circular, filed as part of Form 1-A and "qualified" by the SEC before any money changes hands.
+Regulation A is an SEC exemption that lets a company raise capital from the general public without a full IPO. The disclosure that makes that legal is the offering circular, filed as part of **Form 1-A** and "qualified" by the SEC before any money changes hands.
 
 Think of it as the deal's owner's manual. The marketing page tells you why to invest. The circular tells you what you are actually buying, on terms the issuer can be held to.
 
@@ -72,19 +70,19 @@ A circular is organized for completeness, not for a busy reader. Reading it cove
 
 The sequence below moves from "what is this" to "can I trust the numbers." Each step has a job, and you can stop early if an answer disqualifies the deal.
 
-1. Offering summary. What security is sold, at what price, the minimum investment, and the target raise. This is the one-paragraph shape of the deal.
+1. **Offering summary.** What security is sold, at what price, the minimum investment, and the target raise. This is the one-paragraph shape of the deal.
 
-2. Use of proceeds. Where your money goes. A clean deal shows most capital flowing into the asset, not into fees and related-party payments.
+2. **Use of proceeds.** Where your money goes. A clean deal shows most capital flowing into the asset, not into fees and related-party payments.
 
-3. Risk factors. The honest list of what can go wrong. Generic risks are normal, but deal-specific risks are where the real disclosure lives.
+3. **Risk factors.** The honest list of what can go wrong. Generic risks are normal, but deal-specific risks are where the real disclosure lives.
 
-4. Plan of distribution and fees. What the issuer and intermediaries collect, and when.
+4. **Plan of distribution and fees.** What the issuer and intermediaries collect, and when.
 
-5. Description of the business and property. The actual asset, its condition, leases, and any debt against it.
+5. **Description of the business and property.** The actual asset, its condition, leases, and any debt against it.
 
-6. Management and related parties. Who runs it, their track record, and any conflicts of interest.
+6. **Management and related parties.** Who runs it, their track record, and any conflicts of interest.
 
-7. Financial statements. The audited numbers (for Tier 2) that either support the story or quietly contradict it.
+7. **Financial statements.** The audited numbers (for Tier 2) that either support the story or quietly contradict it.
 
 Read in that order, the document stops being a wall and becomes a checklist. Most deals reveal their character by step three.
 
@@ -96,7 +94,7 @@ Some sections are formality. A few do the real work, and these are where careful
 
 This section maps every dollar of the raise to a destination. The question it answers is simple: how much of your money buys the asset, and how much pays the people selling it?
 
-Watch the share that goes to organizational and offering costs, sponsor fees, and acquisitions from related parties. A deal where a large slice never reaches the property is telling you something before you read a single risk factor.
+Watch the share that goes to **organizational and offering costs**, sponsor fees, and acquisitions from related parties. A deal where a large slice never reaches the property is telling you something before you read a single risk factor.
 
 ### Risk Factors: Skip the Boilerplate, Read the Specifics
 
@@ -106,7 +104,7 @@ Look for risks tied to this property and this sponsor: a single tenant, a near-t
 
 ### Fees and Liquidity: The Two Things Marketing Glosses Over
 
-Fees compound quietly against your return, so read the plan of distribution for the full schedule, not just the headline number. Then find the exit terms. Reg A securities can be hard to sell, and many have no active secondary market.
+Fees compound quietly against your return, so read the **plan of distribution** for the full schedule, not just the headline number. Then find the exit terms. Reg A securities can be hard to sell, and many have no active secondary market.
 
 If the circular cannot tell you how and when you might get your money back, treat that as the answer. This is the same liquidity caution that applies across fractional models, which we cover in [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) and in the broader [real estate crowdfunding vs fractional real estate](https://www.psfnetwork.com/blog/real-estate-crowdfunding-vs-fractional) comparison.
 
@@ -130,11 +128,11 @@ Marketing materials live on the platform. The official document lives at the SEC
 
 Pull the filing directly so you are reading the qualified version, not a summary written to sell:
 
-- EDGAR full-text search. Search the issuer's name at the SEC's EDGAR system and open the Form 1-A and any 1-A/A amendments.
+- **EDGAR full-text search.** Search the issuer's name at the SEC's EDGAR system and open the Form 1-A and any 1-A/A amendments.
 
-- The qualification date. Confirm the offering was actually qualified by the SEC, not merely filed.
+- **The qualification date.** Confirm the offering was actually qualified by the SEC, not merely filed.
 
-- The ongoing reports. For Tier 2, check the latest 1-K (annual) and 1-SA (semiannual) to see how the story aged.
+- **The ongoing reports.** For Tier 2, check the latest 1-K (annual) and 1-SA (semiannual) to see how the story aged.
 
 If a platform resists pointing you to its EDGAR filings, that reluctance is its own disclosure. A legitimate Reg A issuer has nothing to hide on EDGAR, because the document is public by design. For more on how the exemptions differ, see [Reg A vs Reg D for fractional investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors).
 
@@ -152,15 +150,15 @@ Most circulars are honest documents for ordinary deals. A few patterns, though, 
 
 Treat these as stop signs while you read:
 
-- No EDGAR trail. The issuer claims Reg A but you cannot find a qualified Form 1-A on EDGAR.
+- **No EDGAR trail.** The issuer claims Reg A but you cannot find a qualified Form 1-A on EDGAR.
 
-- Lopsided use of proceeds. A large share of the raise pays fees, promoters, or related parties instead of the asset.
+- **Lopsided use of proceeds.** A large share of the raise pays fees, promoters, or related parties instead of the asset.
 
-- Guaranteed or "risk-free" returns. Real estate is never risk-free, and that language is a warning, not a feature.
+- **Guaranteed or "risk-free" returns.** Real estate is never risk-free, and that language is a warning, not a feature.
 
-- Vague management history. No named track record, or undisclosed conflicts of interest.
+- **Vague management history.** No named track record, or undisclosed conflicts of interest.
 
-- No exit story. The liquidity section cannot say how or when you might sell.
+- **No exit story.** The liquidity section cannot say how or when you might sell.
 
 Any one of these deserves a hard pause. Two or more, and the circular has already told you what you needed to know.
 
@@ -174,31 +172,31 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 ### What is a Reg A offering circular in plain terms?
 
-It is the SEC-qualified disclosure document a company must publish before raising money from the public under Regulation A. Filed on Form 1-A, it spells out the security, the price, the use of proceeds, the risks, the fees, and the people running the deal, so you can evaluate the investment from facts rather than marketing.
+**It is the SEC-qualified disclosure document a company must publish before raising money from the public under Regulation A.** Filed on Form 1-A, it spells out the security, the price, the use of proceeds, the risks, the fees, and the people running the deal, so you can evaluate the investment from facts rather than marketing.
 
 ### Do I have to be an accredited investor to invest in a Reg A offering?
 
-No. Regulation A is open to non-accredited investors, which is one of its defining features, per Investor.gov. Tier 2 applies investment limits for non-accredited investors based on income or net worth, while most Regulation D offerings remain restricted to accredited investors entirely.
+**No.** Regulation A is open to non-accredited investors, which is one of its defining features, per Investor.gov. Tier 2 applies investment limits for non-accredited investors based on income or net worth, while most Regulation D offerings remain restricted to accredited investors entirely.
 
 ### Which sections of the offering circular matter most?
 
-Use of proceeds, risk factors, fees, and the financial statements. Use of proceeds shows where your money goes, risk factors reveal deal-specific weaknesses, the fee schedule shows what is skimmed off your return, and the audited financials (in Tier 2) either support or undercut the story.
+**Use of proceeds, risk factors, fees, and the financial statements.** Use of proceeds shows where your money goes, risk factors reveal deal-specific weaknesses, the fee schedule shows what is skimmed off your return, and the audited financials (in Tier 2) either support or undercut the story.
 
 ### How do I know the offering circular is legitimate?
 
-Find it on the SEC's EDGAR system and confirm it was qualified, not just filed. A real Reg A offering leaves a public Form 1-A trail, plus ongoing Tier 2 reports. If an issuer cannot point you to its EDGAR filings, treat that as a serious red flag.
+**Find it on the SEC's EDGAR system and confirm it was qualified, not just filed.** A real Reg A offering leaves a public Form 1-A trail, plus ongoing Tier 2 reports. If an issuer cannot point you to its EDGAR filings, treat that as a serious red flag.
 
 ### What is the difference between Tier 1 and Tier 2?
 
-Tier 1 allows up to $20 million with no ongoing federal reporting, while Tier 2 allows up to $75 million and requires audited financials and continuing SEC reports, per the SEC. Tier 2 gives you a longer, more reliable paper trail to monitor the investment over time.
+**Tier 1 allows up to $20 million with no ongoing federal reporting, while Tier 2 allows up to $75 million and requires audited financials and continuing SEC reports, per the SEC.** Tier 2 gives you a longer, more reliable paper trail to monitor the investment over time.
 
 ### Does an offering circular mean the SEC approved the investment?
 
-No. SEC qualification confirms the issuer provided the required disclosures, not that the deal is safe or endorsed. The circular gives you the facts; judging whether they add up to a sound investment is still your job.
+**No.** SEC qualification confirms the issuer provided the required disclosures, not that the deal is safe or endorsed. The circular gives you the facts; judging whether they add up to a sound investment is still your job.
 
 ### How long should it take to read one well?
 
-About an hour for a focused first pass. Reading by question (summary, use of proceeds, risk factors, fees, management, financials) lets you reach a yes-or-no on most deals quickly, then return for a deeper read on the ones that survive.
+**About an hour for a focused first pass.** Reading by question (summary, use of proceeds, risk factors, fees, management, financials) lets you reach a yes-or-no on most deals quickly, then return for a deeper read on the ones that survive.
 
 ## Sources
 
