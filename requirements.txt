@@ -17,6 +17,10 @@ google-auth-oauthlib==1.2.1
 # YAML parsing for blog frontmatter (Stage 2 draft and render-for-drive)
 PyYAML==6.0.2
 
+# Image processing for article visuals (workflow/render_visual.py).
+# Needed for WebP output; PNG rendering itself only needs headless Chrome.
+Pillow==12.3.0
+
 # Test runner (tests/ directory)
 pytest==8.3.3
 

@@ -13,8 +13,25 @@ article as the editable original.
 Usage:
     python3 workflow/render_visual.py blog/<slug>/<name>.html
     python3 workflow/render_visual.py blog/<slug>/<name>.html --width 1600 --scale 2
+    python3 workflow/render_visual.py blog/<slug>/<name>.html --max-kb 100
 
-Output lands beside the source as <name>.png.
+Output lands beside the source as <name>.png and <name>.webp.
+
+WebP is the delivery format. Two findings drive how it is produced:
+
+  - For flat-colour graphics like these, LOSSLESS WebP is smaller than lossy.
+    Lossy spends bits on ringing artefacts around the sharp edges. On the
+    first visual, lossless came to 103 KB while lossy q95 came to 284 KB.
+
+  - Downscaling makes the file BIGGER, not smaller. Lanczos resampling
+    invents thousands of intermediate colours and destroys the flat-colour
+    structure lossless WebP compresses so well. Render at the target size
+    and leave it alone.
+
+So when a size budget is set, the lever is palette size, not quality and not
+dimensions. The images carry roughly 1,200 distinct colours, nearly all of
+them text antialiasing, so quantising to 256 is visually lossless: measured
+PSNR 65.9 dB with 0.5 percent of subpixels altered.
 
 Brand and accessibility constraints for any visual rendered here:
   - Background cream #F7F5F0, ink #1C1C1C
@@ -29,6 +46,11 @@ import subprocess
 import sys
 import zlib
 from pathlib import Path
+
+try:
+    from PIL import Image
+except ImportError:
+    Image = None
 
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
@@ -102,6 +124,40 @@ def trim_bottom(path: Path, pad: int = 120):
     return w, h, nh
 
 
+def to_webp(png: Path, max_kb: float | None = None):
+    """Write a lossless WebP beside the PNG, shrinking the palette if needed.
+
+    Returns (path, kb, colours) where colours is None when no quantisation
+    was required.
+    """
+    if Image is None:
+        print('Pillow not installed, skipping WebP. pip install -r requirements.txt',
+              file=sys.stderr)
+        return None, 0, None
+
+    out = png.with_suffix('.webp')
+    im = Image.open(png).convert('RGB')
+
+    im.save(out, 'WEBP', lossless=True, quality=100, method=6)
+    kb = out.stat().st_size / 1024
+    if max_kb is None or kb <= max_kb:
+        return out, kb, None
+
+    # Step the palette down until it fits. 256 is already visually lossless
+    # for this kind of graphic; anything below 64 starts to band on gradients.
+    for colours in (256, 192, 128, 96, 64):
+        q = im.quantize(colors=colours, method=Image.Quantize.MEDIANCUT,
+                        dither=Image.Dither.NONE).convert('RGB')
+        q.save(out, 'WEBP', lossless=True, quality=100, method=6)
+        kb = out.stat().st_size / 1024
+        if kb <= max_kb:
+            return out, kb, colours
+
+    print(f'WARNING: could not reach {max_kb} KB, smallest was {kb:.1f} KB',
+          file=sys.stderr)
+    return out, kb, 64
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('source', help='Path to the visual HTML file')
@@ -109,6 +165,9 @@ def main():
     ap.add_argument('--height', type=int, default=3000, help='Render height before trim')
     ap.add_argument('--scale', type=int, default=2, help='Device scale factor, default 2')
     ap.add_argument('--no-trim', action='store_true')
+    ap.add_argument('--max-kb', type=float, default=100,
+                    help='WebP size budget in KB, default 100. Use 0 for no limit.')
+    ap.add_argument('--no-webp', action='store_true')
     args = ap.parse_args()
 
     src = Path(args.source).resolve()
@@ -131,11 +190,19 @@ def main():
         sys.exit(f'Render failed:\n{r.stderr[-800:]}')
 
     if args.no_trim:
-        w, h, _, _ = _read_png(out)
-        print(f'{out.name}  {w}x{h}')
+        w, _h, _ch, rows = _read_png(out)
+        h1 = len(rows)
+        print(f'{out.name}  {w}x{h1}  {out.stat().st_size / 1024:.1f} KB')
     else:
         w, h0, h1 = trim_bottom(out, pad=args.scale * 60)
-        print(f'{out.name}  {w}x{h1}  (trimmed from {h0})')
+        print(f'{out.name}  {w}x{h1}  {out.stat().st_size / 1024:.1f} KB  (trimmed from {h0})')
+
+    if not args.no_webp:
+        budget = args.max_kb if args.max_kb > 0 else None
+        wp, kb, colours = to_webp(out, budget)
+        if wp:
+            note = f'  palette {colours}' if colours else '  full colour'
+            print(f'{wp.name}  {w}x{h1}  {kb:.1f} KB  lossless{note}')
 
 
 if __name__ == '__main__':
