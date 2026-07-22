@@ -51,9 +51,9 @@ This guide is the second tab, turned into a routine. Five checks, in order of im
 
 ## Does the platform have a real SEC filing?
 
-Start at EDGAR, the SEC's public filing database. Use the full-text search at sec.gov and enter the name of the issuing entity, which is often not the platform's brand name but a series LLC named after the property or the platform's holding structure. The offering circular or the Form D will name it; so will the fine print at the bottom of the platform's own site.
+Start at EDGAR, the SEC's public filing database. Use the [EDGAR full-text search](https://www.sec.gov/edgar/search/) and enter the name of the issuing entity, which is often not the platform's brand name but a series LLC named after the property or the platform's holding structure. The offering circular or the Form D will name it; so will the fine print at the bottom of the platform's own site.
 
-What you want to find is one of two things. A Regulation A offering shows a Form 1-A and, for Tier 2 issuers, an annual Form 1-K that stays public. A Regulation D offering shows a Form D notice. Which framework applies changes who can invest and how much disclosure you get; our guide on [Reg A vs Reg D](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors) walks through the differences.
+What you want to find is one of two things. A [Regulation A](https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a) offering shows a Form 1-A and, for Tier 2 issuers, an annual Form 1-K that stays public. A [Regulation D](https://www.investor.gov/introduction-investing/investing-basics/glossary/rule-506-regulation-d) offering shows a Form D notice. Which framework applies changes who can invest and how much disclosure you get; our guide on [Reg A vs Reg D](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors) walks through the differences.
 
 What if the search returns nothing? Check spelling, check the entity name again, then stop. No filing under any related entity name is the single loudest signal in this entire guide. Legitimate US fractional offerings leave a paper trail; its absence is not a formality problem.
 
@@ -63,7 +63,7 @@ What if the search returns nothing? Check spelling, check the entity name again,
 
 The structure you want to see: each property inside its own LLC, with investors holding membership interests in that LLC, and the LLC separate from the company that runs the website. This is the standard architecture across regulated platforms, and it matters for one reason. If the platform's operating company fails, the property LLC does not go down with it.
 
-The offering circular states the structure in its first pages. Confirm three things. The property is titled to the LLC you are buying into. Investor funds move through an escrow account during the raise, not into the operator's general account. And a transfer agent or ledger process records who owns what, so your position exists somewhere other than the platform's own database.
+The offering circular states the structure in its first pages. Confirm three things. The property is titled to the LLC you are buying into. Investor funds move through an [escrow](https://www.investor.gov/introduction-investing/investing-basics/glossary/escrow) account during the raise, not into the operator's general account. And a transfer agent or ledger process records who owns what, so your position exists somewhere other than the platform's own database.
 
 None of this requires trust. All of it is in the documents the platform was required to file to sell you the security in the first place.
 
@@ -110,7 +110,7 @@ Here is the honest core of it. The rare failure mode in this category is the out
 ## FAQ
 
 **Q: Is fractional real estate investing legit?**
-A: The regulated version is a legal, SEC-filed security: typically a membership interest in an LLC that owns a specific property, offered under Regulation A or Regulation D. Legit does not mean low-risk. Principal loss, illiquidity, and platform failure are real risks that the offering documents themselves describe. Our [complete guide to fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing) covers how the structure works.
+A: The regulated version is a legal, SEC-filed security: typically a membership interest in an LLC that owns a specific property, offered under Regulation A or Regulation D. Legit does not mean low-risk; the SEC's own [guide to avoiding fraud](https://www.investor.gov/protect-your-investments/fraud/how-avoid-fraud) is worth ten minutes regardless of platform. Principal loss, illiquidity, and platform failure are real risks that the offering documents themselves describe. Our [complete guide to fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing) covers how the structure works.
 
 **Q: How do I search SEC EDGAR for a platform?**
 A: Use EDGAR full-text search at sec.gov. Search the issuing entity's legal name, which the platform's offering documents and site footer disclose; it is often a series LLC rather than the brand name. Look for a Form 1-A and Form 1-K under Regulation A, or a Form D under Regulation D.
@@ -119,7 +119,7 @@ A: Use EDGAR full-text search at sec.gov. Search the issuing entity's legal name
 A: Stop there. US fractional offerings sold to the public must be filed. If neither the platform nor any related issuing entity appears, the offering is either not being made lawfully or is structured in a way that leaves you outside the disclosure system. Either way, that is the entire answer.
 
 **Q: Does FINRA regulate fractional real estate platforms?**
-A: Not directly. Platforms are issuers, not broker-dealers, though some sell through a registered broker-dealer partner. If one is named, you can look that firm up on FINRA BrokerCheck to see its registration and disciplinary history. The absence of a broker-dealer is not itself a red flag; the offering framework does the regulatory work.
+A: Not directly. Platforms are issuers, not broker-dealers, though some sell through a registered broker-dealer partner. If one is named, you can look that firm up on [FINRA BrokerCheck](https://brokercheck.finra.org/) to see its registration and disciplinary history. The absence of a broker-dealer is not itself a red flag; the offering framework does the regulatory work.
 
 **Q: Can a legit platform still lose my money?**
 A: Yes, and the offering circular says so in its risk factors section. Property values fall, tenants default, projects overrun. Verification confirms the structure is what it claims to be. It does not remove market risk, and no filing makes an investment safe.

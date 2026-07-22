@@ -25,6 +25,7 @@ Stage 7, run against `checklist/qa-gate.md` sections A through E.
 | B | B7 substantive H2s in question format | PASS | 5 of 5 ("What this routine does not do" is a closing admin section) |
 | B | B10 FAQ >= 5 | PASS | 6 |
 | B | B11 internal links | PASS | 3, all verified live on psfnetwork.com |
+| B | B11-ext inline external authority links | PASS | 6 in body: EDGAR search, investor.gov Reg A, Reg D, escrow glossary, fraud guide, FINRA BrokerCheck. 5 curl-verified 200; sec.gov/edgar/search is documented anti-bot 403, browser-live |
 | C | C1 brand casing | PASS | |
 | C | C2 no em or en dashes | PASS | |
 | C | C7 canonical disclaimer | PASS | |

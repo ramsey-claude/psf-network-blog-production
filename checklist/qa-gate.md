@@ -30,6 +30,7 @@ Work through every item. Mark each PASS or FAIL. Use the routing table to decide
 - [ ] Every H2 has an answer capsule of 50-75 words (self-contained)
 - [ ] FAQ section structured for FAQ schema (Q/A pairs), minimum 5 entries
 - [ ] At least 2 internal links to relevant posts that actually exist in the repo
+- [ ] At least 2 inline authoritative external links in the BODY (not counting the Sources section). Allowed domains: investor.gov, sec.gov, irs.gov, finra.org, fdic.gov, federalreserve.gov, congress.gov. Every URL curl-verified live, or documented as known anti-bot 403 (sec.gov main domain) in the incident log. Added 2026-07-22, Batch 3 onward.
 - [ ] All external links point to high-authority sources from `evidence.md`
 
 ### C. Brand & content quality
