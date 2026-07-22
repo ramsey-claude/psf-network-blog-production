@@ -116,7 +116,7 @@ Deliberately excluded from Batch 3: direct alternatives comparisons (fractional 
 
 International / Gulf / UAE gaps are documented in git history but are out of scope under the current US-only operating posture.
 
-**Pool status (2026-05-26):** Items 1-7 published or in pipeline. Items 9-10 published as Stage -2 generations. Items 11-16, 19-22 covered by Batch 2 (June 2026, 14 articles). Items 8, 17, 18 open (17 and 18 explicitly cancelled by operator; 8 REITs 101 deferred). **Items 24-32 = Batch 3 planned pool** (9 titles, approved 2026-05-26, awaiting Human Anchor source material before Stage -2 kicks off).
+**Pool status (2026-05-26):** Items 1-7 published or in pipeline. Items 9-10 published as Stage -2 generations. Items 11-16, 19-22 covered by Batch 2 (June 2026, 14 articles). Items 8, 17, 18 open (17 and 18 explicitly cancelled by operator; 8 REITs 101 deferred). **Items 24-32 = Batch 3, all 9 produced and delivered 2026-07-22** to the 07-July Drive folder (flat, no subfolders). Scenario-style personas per the approved Batch 2 pattern; every article carries 2+ inline external authority links per the qa-gate rule added 2026-07-22.
 
 ---
 
