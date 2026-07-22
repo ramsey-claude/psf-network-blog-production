@@ -144,8 +144,10 @@ def to_webp(png: Path, max_kb: float | None = None):
         return out, kb, None
 
     # Step the palette down until it fits. 256 is already visually lossless
-    # for this kind of graphic; anything below 64 starts to band on gradients.
-    for colours in (256, 192, 128, 96, 64):
+    # for this kind of graphic. The 56 and 48 steps were PSNR-checked on the
+    # two densest visuals at 53 to 55 dB, still above the 50 dB
+    # visually-lossless line. Do not go below 48 without re-measuring.
+    for colours in (256, 192, 128, 96, 64, 56, 48):
         q = im.quantize(colors=colours, method=Image.Quantize.MEDIANCUT,
                         dither=Image.Dither.NONE).convert('RGB')
         q.save(out, 'WEBP', lossless=True, quality=100, method=6)

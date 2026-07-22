@@ -1,68 +1,7 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
-<style>
-  :root{
-    --cream:#F7F5F0; --ink:#1C1C1C; --vermillion:#FF7141; --blue:#4F8FA3;
-    --grey:#D8D4CC; --muted:#1C1C1C8C;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{width:1600px;background:var(--cream);
-       font-family:"Söhne","Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
-       color:var(--ink);-webkit-font-smoothing:antialiased}
-  .card{padding:64px 72px 56px}
-
-  .eyebrow{font-size:15px;letter-spacing:.14em;text-transform:uppercase;
-           color:var(--muted);font-weight:600;margin-bottom:14px}
-  h1{font-size:46px;line-height:1.12;letter-spacing:-.022em;font-weight:700;max-width:1100px}
-  .sub{font-size:20px;line-height:1.5;color:var(--muted);margin-top:14px;max-width:900px}
-
-  .split{display:grid;grid-template-columns:640px 1fr;gap:64px;margin-top:52px;align-items:start}
-
-  /* property grid */
-  .gridwrap{background:#fff;border:1px solid #1C1C1C1A;border-radius:16px;padding:28px}
-  .gridhead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
-  .gridtitle{font-size:17px;font-weight:600}
-  .gridmeta{font-size:14px;color:var(--muted)}
-  .grid{display:grid;grid-template-columns:repeat(40,1fr);gap:2px}
-  .cell{aspect-ratio:1;background:var(--grey);border-radius:1px}
-  .cell.own{background:var(--vermillion)}
-  .legend{display:flex;gap:26px;margin-top:20px;font-size:14px;align-items:center}
-  .legend span{display:flex;gap:8px;align-items:center;color:var(--muted)}
-  .sw{width:13px;height:13px;border-radius:2px;display:inline-block}
-
-  /* numbers */
-  .facts{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .fact{background:#fff;border:1px solid #1C1C1C1A;border-radius:14px;padding:22px 24px}
-  .fact .n{font-size:38px;font-weight:700;letter-spacing:-.02em;line-height:1}
-  .fact .n.accent{color:var(--vermillion)}
-  .fact .l{font-size:14px;color:var(--muted);margin-top:9px;line-height:1.4}
-
-  /* comparison */
-  .cmp{margin-top:26px;background:#fff;border:1px solid #1C1C1C1A;border-radius:14px;overflow:hidden}
-  .cmp .ch{display:grid;grid-template-columns:1.15fr 1fr 1fr;
-           background:var(--cream);border-bottom:1px solid #1C1C1C14}
-  .cmp .ch div{padding:14px 20px;font-size:13px;font-weight:600;
-               text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
-  .cmp .r{display:grid;grid-template-columns:1.15fr 1fr 1fr;border-top:1px solid #1C1C1C0F}
-  .cmp .r div{padding:13px 20px;font-size:16px}
-  .cmp .r div:first-child{color:var(--muted)}
-  .cmp .r.diff{background:#FF71410F}
-  .cmp .r.diff div{font-weight:600}
-  .cmp .r.diff div:last-child{color:var(--vermillion)}
-
-  .kicker{margin-top:26px;display:flex;gap:14px;align-items:flex-start;
-          background:#fff;border:1px solid #1C1C1C1A;border-left:4px solid var(--blue);
-          border-radius:0 14px 14px 0;padding:20px 24px}
-  .kicker .t{font-size:17px;line-height:1.5}
-  .kicker .t b{font-weight:600}
-
-  footer{margin-top:44px;padding-top:22px;border-top:1px solid #1C1C1C1A;
-         display:flex;justify-content:space-between;align-items:center;
-         font-size:14px;color:var(--muted)}
-  .brand{font-weight:700;color:var(--ink);font-size:16px}
-  .brand i{color:var(--vermillion);font-style:normal}
-</style></head>
-<body><div class="card">
+<link rel="stylesheet" href="../../workflow/visual-base.css">
+</head><body><div class="card">
 
   <div class="eyebrow">Square-foot ownership</div>
   <h1>Same investment. Same rights. A unit you can picture.</h1>
@@ -70,19 +9,17 @@
      Here is what a $20,000 position actually buys, and what the square-foot label does and does not change.</p>
 
   <div class="split">
-
-    <div class="gridwrap">
-      <div class="gridhead">
-        <div class="gridtitle">One property, 1,200 square feet</div>
-        <div class="gridmeta">each square = 1 sq ft</div>
+    <div class="panel">
+      <div class="panel-head">
+        <div class="panel-title">One property, 1,200 square feet</div>
+        <div class="panel-meta">each square = 1 sq ft</div>
       </div>
-      <div class="grid" id="grid"></div>
+      <div class="grid" id="grid" style="display:grid;grid-template-columns:repeat(40,1fr);gap:2px"></div>
       <div class="legend">
         <span><i class="sw" style="background:#FF7141"></i> Your 50 sq ft (4.17%)</span>
         <span><i class="sw" style="background:#D8D4CC"></i> Held by other co-investors</span>
       </div>
     </div>
-
     <div>
       <div class="facts">
         <div class="fact"><div class="n accent">$20,000</div><div class="l">Your capital at $400 per square foot</div></div>
@@ -90,42 +27,36 @@
         <div class="fact"><div class="n">$1,400</div><div class="l">Annual income at a 7% yield, illustrative</div></div>
         <div class="fact"><div class="n">K-1</div><div class="l">Tax form, because the LLC is a pass-through</div></div>
       </div>
-
-      <div class="cmp">
-        <div class="ch"><div>Element</div><div>Share-based</div><div>Square-foot</div></div>
-        <div class="r"><div>Capital</div><div>$20,000</div><div>$20,000</div></div>
-        <div class="r"><div>Stake</div><div>4.17%</div><div>4.17%</div></div>
-        <div class="r"><div>Unit price</div><div>$400 / share</div><div>$400 / sq ft</div></div>
-        <div class="r diff"><div>Unit count</div><div>50 shares</div><div>50 sq ft</div></div>
-        <div class="r"><div>Income at 7%</div><div>$1,400</div><div>$1,400</div></div>
-        <div class="r"><div>Tax form</div><div>K-1</div><div>K-1</div></div>
+      <div class="cmp" style="margin-top:26px">
+        <div class="ch c3"><div>Element</div><div>Share-based</div><div>Square-foot</div></div>
+        <div class="r c3"><div>Capital</div><div>$20,000</div><div>$20,000</div></div>
+        <div class="r c3"><div>Stake</div><div>4.17%</div><div>4.17%</div></div>
+        <div class="r c3"><div>Unit price</div><div>$400 / share</div><div>$400 / sq ft</div></div>
+        <div class="r c3 diff"><div>Unit count</div><div>50 shares</div><div>50 sq ft</div></div>
+        <div class="r c3"><div>Income at 7%</div><div>$1,400</div><div>$1,400</div></div>
+        <div class="r c3"><div>Tax form</div><div>K-1</div><div>K-1</div></div>
       </div>
     </div>
   </div>
 
-  <div class="kicker">
-    <div class="t"><b>Only one row differs, and it is the name of the unit.</b>
-      The legal structure, the SEC framework, the income, the tax treatment and every risk are identical
-      to a share-based platform. You hold an LLC membership interest, not a deed, and you cannot stand in
-      your 50 square feet by right.</div>
-  </div>
+  <div class="kicker"><div class="t"><b>Only one row differs, and it is the name of the unit.</b>
+    The legal structure, the SEC framework, the income, the tax treatment and every risk are identical
+    to a share-based platform. You hold an LLC membership interest, not a deed, and you cannot stand in
+    your 50 square feet by right.</div></div>
 
-  <footer>
-    <div class="brand">PSF<i>network</i></div>
-    <div>Illustrative figures. Fractional real estate carries risk, including possible loss of principal.</div>
-  </footer>
-
-</div>
 <script>
   const g=document.getElementById('grid');
-  // 1,200 cells = 40 columns x 30 rows. The owned 50 sq ft sit as a
-  // contiguous block so the reader can see the position as one piece.
   const owned=new Set();
   for(let r=0;r<5;r++) for(let c=0;c<10;c++) owned.add(r*40+c);
   for(let i=0;i<1200;i++){
     const d=document.createElement('div');
-    d.className='cell'+(owned.has(i)?' own':'');
+    d.style.cssText='aspect-ratio:1;border-radius:1px;background:'+(owned.has(i)?'#FF7141':'#D8D4CC');
     g.appendChild(d);
   }
 </script>
-</body></html>
+
+  <footer>
+    <div class="brand">PSF<i>network</i></div>
+    <div class="note">Illustrative figures. Fractional real estate carries risk, including possible loss of principal.</div>
+  </footer>
+</div></body></html>
