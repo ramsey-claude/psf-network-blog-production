@@ -2,5 +2,8 @@
 __pycache__/
 *.pyc
 *.docx
+
+# Article visuals are deliverables, keep them
+!blog/**/*.png
 .DS_Store
 .pytest_cache/
