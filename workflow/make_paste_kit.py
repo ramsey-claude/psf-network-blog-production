@@ -98,9 +98,12 @@ def parse_notes(notes: str) -> dict:
             m = re.match(r'([^:]{2,40}):\s*(.+)', chunk.strip())
             if not m:
                 continue
-            key = ALIASES.get(m.group(1).strip().lower())
+            # Labels may be bolded ("**Meta description:** ..."); the go-live
+            # QA on 2026-08-11 found six drafts whose fields silently parsed
+            # to nothing because of the asterisks. Strip them from both sides.
+            key = ALIASES.get(m.group(1).strip().strip('*').strip().lower())
             if key and key not in out:
-                out[key] = m.group(2).strip()
+                out[key] = m.group(2).strip().lstrip('*').strip()
     return out
 
 

@@ -46,8 +46,13 @@ BLOCKING = [
     ('em-dash', re.compile(r'—'), 'literal em-dash character'),
     ('en-dash', re.compile(r'–'), 'literal en-dash character'),
     # Tier 2: brand voice
-    ('guaranteed-return', re.compile(r'guaranteed\s+(return|yield|annual)', re.IGNORECASE),
-     'guaranteed return language (bans even in negation)'),
+    # Widened 2026-08-11: the editorial rule bans the word in ANY form, but
+    # this pattern only covered "guaranteed return/yield/annual". Six bare
+    # uses ("guaranteed to be fast", "not guaranteed") shipped to Drive and
+    # were only caught in the manual go-live QA. Rule and automation now
+    # match. Documentation lines use the check-rules: allow pragma.
+    ('guaranteed', re.compile(r'\bguaranteed\b', re.IGNORECASE),
+     'the word "guaranteed" (banned even in negation or quotes)'),
     # Brand name is "PSFnetwork" (capital PSF, lowercase "network", one word).
     # Flags the wrong variants: lowercase "psfnetwork" used as the brand name in
     # prose, plus "PSF Network" / "PSFNETWORK" / "Psfnetwork". The lowercase
@@ -59,6 +64,11 @@ BLOCKING = [
 ]
 
 WARNING = [
+    # Noun/verb form of the banned word. The editorial ban covers "guaranteed";
+    # "no guarantee" / "does not guarantee" appears in live Batch 2 prose and
+    # was never flagged by the brand. Surface it, do not block on it.
+    ('guarantee-noun', re.compile(r'\bguarantees?\b', re.IGNORECASE),
+     'noun/verb form of the banned word; review whether "promise" reads better'),
     ('ai-tell-hype', re.compile(r'\b(unlock|leverage[sd]?|leveraging|robust|seamless|streamlined|synergy|harness|empower|myriad|plethora)\b', re.IGNORECASE),
      'HIGH-tier AI tell verb/adjective'),
     ('ai-tell-opener', re.compile(r'(in today.s rapidly evolving|now more than ever|when it comes to|in conclusion|at the end of the day)', re.IGNORECASE),

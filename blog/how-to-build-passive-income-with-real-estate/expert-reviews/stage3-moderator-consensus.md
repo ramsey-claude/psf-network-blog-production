@@ -22,7 +22,7 @@ CONSOLIDATED ISSUES:
 
 5. **Stat card "4 - Distinct passive income real estate methods" too bare** - SEVERITY: LOW - RAISED BY: Editorial - RECOMMENDED FIX: Expand to "4 methods - Fractional, REIT, direct rental, debt" - SECTION: QuickAnswer stat cards
 
-6. **"Usually means" suggests guaranteed timeline (LOW)** - SEVERITY: LOW - RAISED BY: FINRA - RECOMMENDED FIX: Change "usually means" to "for most investors means" in the line about reinvesting before drawing - SECTION: how-much body
+6. **"Usually means" suggests guaranteed timeline (LOW)** - SEVERITY: LOW - RAISED BY: FINRA - RECOMMENDED FIX: Change "usually means" to "for most investors means" in the line about reinvesting before drawing - SECTION: how-much body <!-- check-rules: allow -->
 
 7. **Reinvest-vs-draw oversimplification + reinvestment toggle optimism** - SEVERITY: LOW (combined) - RAISED BY: CFPB, Editorial - RECOMMENDED FIX:
    - In "What to do with the distributions" body, append after "If you are at or past the goal, draw income.": "If you need cash sooner, draw immediately and accept lower compounding."

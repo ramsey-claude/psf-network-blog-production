@@ -39,4 +39,10 @@ When generating a new draft, the model is prompted with 2-3 samples from this li
 
 ---
 
-**Status:** Library is currently empty. Populate before the next pipeline run that relies on humanization Stage 2.5 voice anchors.
+**Status: PERMANENTLY EMPTY, by operator decision (2026-07-22).** The brand
+does not produce internal writing of this kind and will not supply samples.
+This is not a pending task. Humanization Stage 2.5 runs in its
+voice-samples-empty mode as the standing default: drafting against
+`tone-and-voice.md` alone, with the conservative bias described in
+`checklist/humanization-pass.md` under "Voice samples directory is empty".
+Do not re-open this as an action item in audits or retrospectives.

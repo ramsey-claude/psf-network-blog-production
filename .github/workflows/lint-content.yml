@@ -41,6 +41,27 @@ jobs:
             python3 workflow/check-rules.py --diff-base "$BASE_SHA"
           fi
 
+  qa-battery:
+    # Full-scope content battery: every canonical draft, every standing rule,
+    # on every push. Diff-mode check-rules only sees touched files, which is
+    # how legacy violations sat dormant until the 2026-08-11 go-live QA.
+    # This job closes that gap. Known legacy debt lives in
+    # workflow/qa-baseline.txt (remove-only ratchet); new content must pass
+    # outright.
+    name: Content QA battery (all articles)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Run qa_battery.py across all articles
+        run: python3 workflow/qa_battery.py
+
   tests:
     name: Pytest suite
     runs-on: ubuntu-latest

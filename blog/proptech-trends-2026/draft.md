@@ -54,7 +54,7 @@ Platforms like PSFnetwork sit in that second group. Ownership is tied to a speci
 
 **Disclaimer:** Technology lowers the barrier to entry, not the risk. All real estate investments carry risk including loss of principal, and new tooling does not change that.
 
-## Why "Proptech" Is a Vague Label in 2026
+## What Does "Proptech" Actually Cover in 2026?
 
 Megan runs a small design studio in Portland and reads three real estate newsletters with her coffee. By March she could recite every proptech buzzword on the market and still could not say which one would touch her money. The word had become a tote bag, holding everything and explaining nothing.
 

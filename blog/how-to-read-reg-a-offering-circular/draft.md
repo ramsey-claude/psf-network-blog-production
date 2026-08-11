@@ -154,7 +154,7 @@ Treat these as stop signs while you read:
 
 - **Lopsided use of proceeds.** A large share of the raise pays fees, promoters, or related parties instead of the asset.
 
-- **Guaranteed or "risk-free" returns.** Real estate is never risk-free, and that language is a warning, not a feature.
+- **Promised or "risk-free" returns.** Real estate is never risk-free, and that language is a warning, not a feature.
 
 - **Vague management history.** No named track record, or undisclosed conflicts of interest.
 

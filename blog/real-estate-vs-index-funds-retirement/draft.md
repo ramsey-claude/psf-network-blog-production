@@ -6,7 +6,7 @@
 
 - Meta title (SEO): Real Estate vs Index Funds for Retirement: An Honest Look
 
-- Meta description: Real estate vs index funds for retirement: a clear comparison of returns, income, liquidity, taxes, and effort, so you can decide which fits your retirement plan.
+- Meta description: Real estate vs index funds for retirement: growth, income, liquidity, and taxes compared honestly, plus who should hold both and in what rough balance.
 
 - Slug: real-estate-vs-index-funds-retirement
 

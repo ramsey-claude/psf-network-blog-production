@@ -30,7 +30,7 @@ hero_visual_alt: "Illustration of multiple investors holding shares of a single 
 
 ## Quick Answer (60 seconds)
 
-Fractional real estate investing lets multiple investors co-own a single rental property by purchasing shares of the legal entity that holds the property, typically an LLC. Each investor receives a proportional share of rental income and any appreciation when the property is sold. Platforms handle property management. A single share on some regulated US platforms (such as Ark7) costs as little as $20; a meaningful position typically requires aggregating multiple shares. All such investments carry real risk, including the loss of principal, and returns are not guaranteed.
+Fractional real estate investing lets multiple investors co-own a single rental property by purchasing shares of the legal entity that holds the property, typically an LLC. Each investor receives a proportional share of rental income and any appreciation when the property is sold. Platforms handle property management. A single share on some regulated US platforms (such as Ark7) costs as little as $20; a meaningful position typically requires aggregating multiple shares. All such investments carry real risk, including the loss of principal, and returns are not guaranteed. <!-- check-rules: allow -->
 
 **Stat cards:**
 - **$20** - Per-share minimum on some regulated US platforms (e.g., Ark7)
@@ -72,7 +72,7 @@ When you buy fractional shares, you are not buying a deed. You are buying a secu
 
 **Step 4: Distributions.** The platform manages the property, collects rent, pays expenses, and distributes net income. For US investors, distributions are typically reported on a Schedule K-1 (Form 1065) because the LLC is usually a pass-through entity. K-1 reporting can be more complex than a standard 1099 and may delay your tax filing; consult a tax advisor before investing. When the property is sold, proceeds are distributed in proportion to ownership after any platform fees or carry.
 
-Returns are not guaranteed at any step. Property values can fall, tenants can default, and platforms can change their fee structures.
+Returns are not guaranteed at any step. Property values can fall, tenants can default, and platforms can change their fee structures. <!-- check-rules: allow -->
 
 ---
 
@@ -145,7 +145,7 @@ A defensible due diligence process: pull the SEC filing for the specific offerin
 ## FAQ
 
 **Q: Is fractional real estate investing safe?**
-A: It is not risk-free. The principal risks are loss of principal if property values decline, illiquidity if you need to exit early, and platform risk if the operator fails. Regulated platforms must disclose these risks in their offering documents. Past performance is not indicative of future results, and returns are not guaranteed.
+A: It is not risk-free. The principal risks are loss of principal if property values decline, illiquidity if you need to exit early, and platform risk if the operator fails. Regulated platforms must disclose these risks in their offering documents. Past performance is not indicative of future results, and returns are not guaranteed. <!-- check-rules: allow -->
 
 **Q: How is income from fractional real estate taxed?**
 A: For US investors, income is generally reported on a Schedule K-1 (Form 1065) because most platforms use pass-through LLC structures. You may also receive depreciation pass-through, which can offset some of the distribution income. Tax treatment varies by structure and by jurisdiction. Consult a tax advisor before investing.

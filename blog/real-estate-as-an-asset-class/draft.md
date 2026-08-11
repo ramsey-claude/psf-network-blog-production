@@ -6,7 +6,7 @@
 
 - Meta title (SEO): Real Estate as an Asset Class: A Beginner Guide
 
-- Meta description: Real estate as an asset class explained for beginners: how it compares to stocks and bonds, where the income and inflation case holds, and where illiquidity bites. USD, US investors.
+- Meta description: Real estate as an asset class, explained for beginners: how property earns, how it compares to stocks and bonds, and the honest risks behind the pitch.
 
 - Slug: real-estate-as-an-asset-class
 

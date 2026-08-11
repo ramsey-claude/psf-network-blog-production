@@ -107,7 +107,7 @@ If a specific is not available from `evidence.md`, the claim is generic-tagged. 
 - The humanization log explicitly notes "voice-samples-empty: drafting against tone-and-voice.md spec only"
 - The Step 5 (voice consistency) check is harder to verify without samples; the reviewer leans more conservatively (more deletion of voice-shifty phrasings)
 
-When voice samples become available, future runs auto-pick them up. No code change needed.
+Operator decision 2026-07-22: the brand will not supply voice samples. Empty is the permanent state; WARN mode is the standing default, not a stopgap.
 
 ### Human Anchor appears invented
 

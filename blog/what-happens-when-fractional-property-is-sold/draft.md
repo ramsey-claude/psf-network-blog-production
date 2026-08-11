@@ -2,7 +2,7 @@
 
 - Focus keyword: how to sell fractional real estate · Meta title: How to Sell Fractional Real Estate: Exit Options
 
-- Meta description: Selling fractional real estate is not like selling stock. Compare secondary markets, redemptions, lockups, timelines, and taxes before you exit.
+- Meta description: What happens when a fractional property is sold: how the exit gets decided, how proceeds flow back to investors, and the taxes and timelines to expect.
 
 - Slug: how-to-sell-fractional-real-estate · Canonical: https://www.psfnetwork.com/blog/how-to-sell-fractional-real-estate
 
@@ -22,7 +22,7 @@ Her entry was a few taps. Her exit was a negotiation. That gap between the easy 
 
 You can sell a fractional real estate position three main ways: on a platform's secondary marketplace, by holding until the property itself is sold, or through a redemption program where one is offered. A fourth route, transferring a tokenized interest, exists on a handful of blockchain-based platforms where the law allows it.
 
-None of these is guaranteed to be fast. The price you get depends on demand, the lockup terms on your shares, and how the deal was structured. A listed position can sit unsold, and you may have to accept a discount or wait for the deal to wind down on its own schedule.
+None of these is necessarily fast. The price you get depends on demand, the lockup terms on your shares, and how the deal was structured. A listed position can sit unsold, and you may have to accept a discount or wait for the deal to wind down on its own schedule.
 
 Quick numbers:
 
@@ -32,9 +32,9 @@ Quick numbers:
 
 - **12 months:** the holding period that separates short-term from long-term capital gains, per the IRS
 
-- **Liquidity is not guaranteed:** private fractional offerings generally have no public market
+- **Liquidity is not promised:** private fractional offerings generally have no public market
 
-All real estate investing carries risk, including the possible loss of principal. Liquidity is not guaranteed; a listed position can sit unsold, and you may have to accept a discount or wait for the deal to close.
+All real estate investing carries risk, including the possible loss of principal. Liquidity is not promised; a listed position can sit unsold, and you may have to accept a discount or wait for the deal to close.
 
 ## What "selling" actually means in fractional real estate
 

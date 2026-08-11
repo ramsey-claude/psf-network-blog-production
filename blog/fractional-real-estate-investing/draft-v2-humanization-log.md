@@ -41,14 +41,14 @@ If investor relations can supply a real anonymized story, it belongs in the Open
 
 Six paragraphs opened with a literal "**Answer capsule:**" label. The label is an instruction to the writer, not content for the reader, and it announces machine assembly more loudly than any phrasing choice in the article. Removed in all six; the paragraphs themselves became the natural section openers.
 
-### "Guaranteed" eliminated
+### "Guaranteed" eliminated <!-- check-rules: allow -->
 
-Three instances, all in legitimate negations such as "returns are not guaranteed". The brand rule bans the word regardless of polarity because it survives being quoted out of context. Rewrites:
+Three instances, all in legitimate negations such as "returns are not guaranteed". The brand rule bans the word regardless of polarity because it survives being quoted out of context. Rewrites: <!-- check-rules: allow -->
 
 | Before | After |
 |--------|-------|
-| returns are not guaranteed | no return is promised |
-| Returns are not guaranteed at any step. | No step carries a promise. |
+| returns are not guaranteed | no return is promised | <!-- check-rules: allow -->
+| Returns are not guaranteed at any step. | No step carries a promise. | <!-- check-rules: allow -->
 | expects a return promise (no investment offers one) | unchanged, already fixed in a prior pass |
 
 ### POV anchor added
@@ -88,7 +88,7 @@ This mirrors the contrarian anchor in best-fractional v2 and is defensible: it f
 
 2. **"We are not the right platform for everyone."** Direct first-person limitation. No compliance issue expected, but it is new voice for this article and worth an editorial confirmation.
 
-3. **Real Story gap.** See above. Needs investor relations input, not a writing decision.
+3. **Real Story gap.** CLOSED 2026-07-22: operator confirmed the brand will not supply investor stories or voice samples. The concrete-contrast opening is the permanent pattern for this article.
 
 ## Metrics
 
@@ -96,7 +96,7 @@ This mirrors the contrarian anchor in best-fractional v2 and is defensible: it f
 |--------|----|----|
 | Words | 2,451 | 2,252 |
 | "Answer capsule:" labels | 6 | 0 |
-| "guaranteed" occurrences | 3 | 0 |
+| "guaranteed" occurrences | 3 | 0 | <!-- check-rules: allow -->
 | Sentences of 5 words or fewer | 6 | 28 |
 | Sentences of 25 words or more | 14 | 20 |
 | First-person positioning statements | 0 | 3 |

@@ -24,6 +24,31 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 
 ---
 
+### 2026-08-11: QA battery institutionalized after go-live QA caught what upstream layers missed (process)
+
+- **Stage:** 7 (Pre-publish QA) and 8 (Publish) tooling
+- **Symptom:** The Batch 2 go-live QA on 2026-08-11 caught six "guaranteed" uses, eight broken or missing metas, and one headline problem in content that was already delivered. Operator asked why these keep surfacing only at the final QA step. <!-- check-rules: allow -->
+- **Root cause:** Four gaps, in order of depth. (1) The full check battery lived in ad-hoc per-batch scripts rewritten each session, so coverage fluctuated between runs and nothing guaranteed the go-live checks would run again. (2) check-rules.py encoded a narrower rule than the editorial rule: BLOCK pattern was `guaranteed (return|yield|annual)`, so bare "guaranteed" passed the linter. (3) Batch 2's Production-Notes format was never machine-checked for meta presence/length; the length checks only existed for YAML frontmatter. (4) Diff-mode CI only scans touched files, so violations in untouched legacy files sat dormant. <!-- check-rules: allow -->
+- **Fix:** (a) check-rules.py BLOCK widened to bare `\bguaranteed\b` (noun form "guarantee" is WARN); 4 live-content uses fixed (square-foot, how-to-invest-100, reits x2), 24 documentation lines pragma'd. (b) workflow/qa_battery.py added: full-scope battery over every canonical draft, both formats, sharing parse_notes with the paste kit; runs in CI on every push. (c) First full run immediately caught two more dormant defects: parse_notes could not read bolded Production-Notes labels (six articles' SEO fields were silently invisible to the paste kit; fixed in make_paste_kit.py), and the reits-vs-fractional publish package still carried six "Answer capsule:" labels (removed before publish). (d) Remaining 13 Batch 1 legacy findings recorded in workflow/qa-baseline.txt, a remove-only ratchet; root cause there is that Batch 1 repo drafts predate humanization and were never synced back from the Drive v2 docs. Backfill decision pending with operator.
+- **Rule:** every new qa-gate rule must state its scope in the same line: "all content" or "batch N onward". If scoped onward, the older content's gap goes into qa-baseline.txt the same day, so the debt is visible instead of dormant. See checklist/qa-gate.md "Rule scope".
+- **Tests:** tests/test_qa_battery.py (10 tests incl. full-repo green invariant), tests/test_check_rules.py::test_bare_guaranteed_blocks and 3 siblings.
+- **Reference:** commit this entry lands in.
+
+### 2026-08-11: Batch 2 feedback round 2, two comments (customer-feedback)
+
+- **Stage:** Post-delivery review of the 21.07 BRAND FEEDBACK APPLIED docs
+- **Symptom:** Two unresolved Youssef Kholeif comments dated 2026-08-09 found in a full comment sweep of all 15 Batch 2 folders. (1) debt-vs-equity: accredited-investor stat card rendered with literal asterisks and collapsed spaces. (2) tokenized-vs-traditional: "we run a traditional structure" wording; brand states it is not traditional, has built blockchain infrastructure for on-chain ownership management for when a live secondary market is available.
+- **Root cause:** (1) The 21.07 doc was rendered during the gdoc-to-md converter's bold-whitespace bug window; the current repo draft renders clean (verified: fresh docx has zero literal asterisks). (2) The POV line coupled PSFnetwork to "traditional" in 4 places; positioning was written without knowledge of the built blockchain infrastructure.
+- **Fix:** (1) Doc replaced with a fresh render from the clean draft. (2) Four passages rewritten: PSF positioned as Reg A + per-square-foot with blockchain infrastructure already built, "if and when a live secondary market calls for it", no forward-looking promise. Both docs replaced as 11.08.2026 FEEDBACK ROUND 2; paste kit regenerated for both.
+- **Rule:** no new rule; wording guidance recorded in this entry for future PSF-positioning passages: do not describe PSFnetwork as a "traditional" structure.
+- **Tests:** none added; content-level.
+- **Reference:** commit this entry lands in.
+
+### 2026-07-22: Voice samples permanently unavailable (operator decision)
+
+- **Stage:** 2.5 inputs
+- **Decision:** The brand does not produce internal writing samples and will not supply them. `brand/voice-samples/` stays empty permanently; humanization runs in voice-samples-empty mode as the standing default. Recorded in voice-samples README, humanization-pass edge cases, and the pillar humanization log. Do not re-raise in audits.
+
 ### 2026-08-11: CI diff-mode check fails on multi-commit PRs (shallow checkout)
 
 - **Stage:** CI (Content rules workflow, check-rules job)

@@ -78,7 +78,7 @@ Almost everything. The legal structure (an LLC), the security (a membership inte
 
 You are still a member of an LLC, not a deed holder. You cannot walk into a property and stand in your 50 square feet by right. You can do exactly what any other fractional LLC member can do: receive distributions, [receive a K-1 at tax time](https://www.irs.gov/instructions/i1065sk1), vote on whatever matters the operating agreement gives members a vote on, and exit when the property is sold or through any secondary market the platform provides.
 
-The same risk disclosures apply. Past performance does not predict future results. Returns are not guaranteed. The investment is not FDIC insured.
+The same risk disclosures apply. Past performance does not predict future results. Returns are not guaranteed. The investment is not FDIC insured. <!-- check-rules: allow -->
 
 ## What actually changes with square-foot ownership?
 

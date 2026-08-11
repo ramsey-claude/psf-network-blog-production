@@ -110,7 +110,7 @@ Lower (private market, not daily-priced)
 
 *Most publicly traded REITs report dividends on 1099-DIV; some non-traded REITs structured as partnerships may issue K-1 instead. Check the offering documents.
 
-Returns are not guaranteed for either structure. REIT prices can fall, fractional property values can fall, and platform-reported yields are not promises.
+Returns are not guaranteed for either structure. REIT prices can fall, fractional property values can fall, and platform-reported yields are not promises. <!-- check-rules: allow -->
 
 ## When should you choose a REIT?
 
@@ -126,7 +126,7 @@ Inside a taxable brokerage account, the ordinary-income tax treatment is a meani
 
 **Answer capsule:** Fractional real estate suits investors who want property-level transparency, are comfortable with a multi-year hold, value K-1 pass-through tax treatment, and want exposure to specific properties rather than a portfolio average. Typical profiles: investors who already have liquid market exposure and want a different return profile, investors who want to see and choose the underlying asset, and investors at lower capital levels where fractional minimums beat a direct-ownership down payment.
 
-The case for fractional is also structural. You see the property, the operating agreement, the fee schedule, and the offering circular before you commit. The depreciation pass-through on the K-1 can offset some of the distribution income for tax purposes. Returns reported by platforms have historically fallen in a 4 to 10 percent annual range, though those numbers are platform-reported and not guaranteed.
+The case for fractional is also structural. You see the property, the operating agreement, the fee schedule, and the offering circular before you commit. The depreciation pass-through on the K-1 can offset some of the distribution income for tax purposes. Returns reported by platforms have historically fallen in a 4 to 10 percent annual range, though those numbers are platform-reported and not guaranteed. <!-- check-rules: allow -->
 
 The cost is illiquidity and platform risk. You cannot exit on a Tuesday afternoon. Your capital is committed for the property's hold period, often 5 to 10 years. The platform itself can fail, and recovering full value through a failed-platform scenario can take months or years and is not assured.
 

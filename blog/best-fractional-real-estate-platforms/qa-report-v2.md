@@ -19,17 +19,17 @@ This QA was run **after** initial Drive delivery rather than before, in violatio
 
 | Section | Result |
 |---------|--------|
-| A. Financial accuracy | 1 FAIL (A4 "guaranteed" word in disclaimer phrasing), 3 MANUAL, 2 PASS |
+| A. Financial accuracy | 1 FAIL (A4 "guaranteed" word in disclaimer phrasing), 3 MANUAL, 2 PASS | <!-- check-rules: allow -->
 | B. SEO & GEO structure | 1 FAIL (B7 H2 question format: only 2 of 7 substantive H2s were questions), 2 MANUAL, 9 PASS |
 | C. Brand & content quality | 0 FAIL, 4 MANUAL, 4 PASS |
 | D. Template completeness | 1 NOTE (D4 opening was 3 paragraphs instead of 2), 0 FAIL, 6 PASS |
 
 ## Fixes applied
 
-### A4: "guaranteed" language
-- **Before:** `Yields are "target," not "guaranteed."`
+### A4: "guaranteed" language <!-- check-rules: allow -->
+- **Before:** `Yields are "target," not "guaranteed."` <!-- check-rules: allow -->
 - **After:** `Yields are labeled "target," never promised.`
-- **Reason:** brand voice rule bans the word "guaranteed" anywhere, even in negation, because it can be quoted out of context.
+- **Reason:** brand voice rule bans the word "guaranteed" anywhere, even in negation, because it can be quoted out of context. <!-- check-rules: allow -->
 
 ### B7: H2 question format
 Five H2 headers rewritten to question format to match the v1 SEO/featured-snippet structure while preserving the humanized prose underneath:

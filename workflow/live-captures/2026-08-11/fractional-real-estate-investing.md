@@ -1,6 +1,6 @@
 # What Is Fractional Real Estate Investing? The 2026 Guide
 
-**Fractional real estate investing lets multiple investors co-own a single rental property by purchasing shares of the legal entity that holds the property, typically an LLC. Each investor receives a proportional share of rental income and any appreciation when the property is sold. Platforms handle property management. A single share on some regulated US platforms (such as Ark7) costs as little as $20; a meaningful position typically requires aggregating multiple shares. All such investments carry real risk, including the loss of principal, and returns are not guaranteed.**
+**Fractional real estate investing lets multiple investors co-own a single rental property by purchasing shares of the legal entity that holds the property, typically an LLC. Each investor receives a proportional share of rental income and any appreciation when the property is sold. Platforms handle property management. A single share on some regulated US platforms (such as Ark7) costs as little as $20; a meaningful position typically requires aggregating multiple shares. All such investments carry real risk, including the loss of principal, and returns are not guaranteed.** <!-- check-rules: allow -->
 
 Fractional real estate investing allows multiple individuals to purchase shares of a single property. Here is a complete guide to how the market works and how you can participate in 2026.
 

@@ -94,13 +94,13 @@ The biggest takeaway from this table: crowdfunding answers how the money is gath
 
 ## A Quick Note on Risk and Returns
 
-Private real estate is not a sure thing. Returns are not guaranteed, and any yields you see quoted are platform-reported and may vary. Property values can fall. Historical performance does not predict future results.
+Private real estate is not a sure thing. Returns are not guaranteed, and any yields you see quoted are platform-reported and may vary. Property values can fall. Historical performance does not predict future results. <!-- check-rules: allow -->
 
 Liquidity is another point to weigh. Unlike a publicly traded stock, a fractional or crowdfunded stake can be hard to sell on short notice. Read each offering's terms so you understand how, and whether, you can exit.
 
 As a result; crowdfunding and fractional real estate are not interchangeable, even though they often share a sign-up page. One is a method for raising money. The other is a way of owning property. The regulation behind each offering shapes who can invest and how much can be raised: Reg CF caps a raise at $5 million a year and is open to non-accredited investors with limits, while [Regulation A allows up to $75 million](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation) a year under Tier 2 and welcomes both investor types (sec.gov; investor.gov).
 
-If you want a stake tied to a single, identified property rather than a broad pool, fractional ownership is the model to look at. PSFnetwork applies that approach through Regulation A, [measuring ownership per square foot](./square-foot-real-estate-ownership-explained) on mortgage-free, income-oriented properties, and keeping the door open to both accredited and non-accredited investors. Whichever route you explore, read the terms, understand the liquidity, and remember that returns are never guaranteed.
+If you want a stake tied to a single, identified property rather than a broad pool, fractional ownership is the model to look at. PSFnetwork applies that approach through Regulation A, [measuring ownership per square foot](./square-foot-real-estate-ownership-explained) on mortgage-free, income-oriented properties, and keeping the door open to both accredited and non-accredited investors. Whichever route you explore, read the terms, understand the liquidity, and remember that returns are never guaranteed. <!-- check-rules: allow -->
 
 ## Sources
 

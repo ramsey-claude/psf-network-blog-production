@@ -54,7 +54,7 @@ This guide is for the reader who has $100 (or less) to start and wants the hones
 
 **Answer capsule:** Yes. As of 2026, several SEC-regulated US platforms let you buy a share of a rental property for $10 to $100. Examples: Fundrise and HappyNest from $10, Ark7 from $20, Lofty from $50, Realbricks and Arrived from $100. You are not buying a deed; you buy a security (an LLC interest) that pays distributions from rental income. The structure is regulated and the income is real.
 
-The catch is that "real" does not mean "guaranteed." Your $100 share earns its proportional cut of net rental income, which can rise and fall with vacancy, repairs, and management costs. Property values can drop too, in which case the share value drops with them. The barrier to entry is gone; the risk of investing in any property is not.
+The catch is that "real" does not mean "promised." Your $100 share earns its proportional cut of net rental income, which can rise and fall with vacancy, repairs, and management costs. Property values can drop too, in which case the share value drops with them. The barrier to entry is gone; the risk of investing in any property is not.
 
 What changed: SEC frameworks like Regulation A Tier 2 (qualified in modern form starting 2015 under the JOBS Act) allow public marketing of small offerings to non-accredited investors. That is the legal scaffolding that makes a $10 share possible.
 

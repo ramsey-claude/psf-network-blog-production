@@ -2,7 +2,7 @@
 
 - Meta title (SEO): Debt Platforms vs Equity Fractional Real Estate
 
-- Meta description: Debt vs equity in fractional real estate, compared plainly: how each pays, what each risks, and which fits an income or growth investor. Honest tradeoffs, no hype.
+- Meta description: Debt vs equity in fractional real estate, compared plainly: how each one pays out, what each one risks, and which fits an income or a growth investor.
 
 - Focus keyword: debt vs equity fractional real estate
 
@@ -38,7 +38,7 @@ Neither one is better in the abstract. The right pick depends on whether you wan
 
 - **$5 million** is the annual cap under Regulation Crowdfunding, which is open to non-accredited investors, per the SEC.
 
-Disclaimer: all real estate investments carry risk including loss of principal. Debt is senior to equity, but senior does not mean guaranteed.
+Disclaimer: all real estate investments carry risk including loss of principal. Debt is senior to equity, but senior does not mean certain.
 
 ## Back to Sarah and Mike
 

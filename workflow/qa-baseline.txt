@@ -1,0 +1,27 @@
+# QA battery baseline: known legacy findings that do not fail CI.
+#
+# THE RATCHET RULE: entries may only be REMOVED from this file (after a
+# backfill fixes the content). Adding an entry for new content is never
+# allowed; new content must pass the battery outright.
+#
+# Every entry below is Batch 1 debt. The repo drafts for most Batch 1
+# articles predate the humanization pass; the humanized versions that
+# actually went live exist as Drive docs and were never synced back into
+# the repo (unlike Batch 2, which was synced on 2026-08-05). The correct
+# fix is a Batch 1 Drive-to-repo sync, after which this file shrinks to
+# empty. Tracked in workflow/incident-log.md (2026-08-11).
+#
+# Format: slug<TAB>normalized finding text.
+90-percent-millionaires-real-estate	F3 Answer capsule label
+how-fractional-real-estate-is-taxed	F3 Answer capsule label
+how-to-build-passive-income-with-real-estate	F3 Answer capsule label
+how-to-invest-10k-in-real-estate	F3 Answer capsule label
+how-to-invest-10k-in-real-estate	F5 meta description 147 chars (need 150-160)
+how-to-invest-10k-in-real-estate	F7 title 53 chars (target 55-60)
+how-to-invest-in-real-estate-with-100	F3 Answer capsule label
+real-estate-crowdfunding-vs-fractional	F3 Answer capsule label
+real-estate-crowdfunding-vs-fractional	F7 title 61 chars (target 55-60)
+reg-a-vs-reg-d-for-fractional-investors	F3 Answer capsule label
+square-foot-real-estate-ownership-explained	F3 Answer capsule label
+square-foot-real-estate-ownership-explained	F5 meta description 144 chars (need 150-160)
+what-is-proptech	F3 Answer capsule label

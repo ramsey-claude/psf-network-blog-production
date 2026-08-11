@@ -19,7 +19,7 @@ meta_description: "Fractional real estate investing lets you co-own a rental pro
 canonical: https://www.psfnetwork.com/blog/fractional-real-estate-investing
 hero_visual_alt: "Illustration of multiple investors holding shares of a single rental property building, showing fractional ownership."
 version: v2-humanized
-v2_changes: "Stage 2.5 humanization. Answer capsule labels removed, POV and contrarian anchors added, cadence and specificity rewritten, guaranteed language replaced. H2 questions and template blocks unchanged to protect live rankings. See draft-v2-humanization-log.md."
+v2_changes: "Stage 2.5 humanization. Answer capsule labels removed, POV and contrarian anchors added, cadence and specificity rewritten, promise language replaced. H2 questions and template blocks unchanged to protect live rankings. See draft-v2-humanization-log.md."
 ---
 
 # What Is Fractional Real Estate Investing? A Complete Guide for 2026

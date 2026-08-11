@@ -132,9 +132,9 @@ Once you complete the transaction online, typically on a mobile-friendly dashboa
 
 Small does not mean risk-free, and a careful investor reads the fine print before committing.
 
-Start with returns. Any yield or performance figure you see on a platform is platform-reported and may vary. Returns are not guaranteed, and historical performance does not predict future results. Treat past numbers as context, not a promise. Income, where it exists, generally comes from the property's operations and depends on the asset.
+Start with returns. Any yield or performance figure you see on a platform is platform-reported and may vary. Returns are not guaranteed, and historical performance does not predict future results. Treat past numbers as context, not a promise. Income, where it exists, generally comes from the property's operations and depends on the asset. <!-- check-rules: allow -->
 
-Next, risk. All real estate investments carry risk including loss of principal. Property values can fall, tenants can leave, and distributions can pause. No platform can honestly promise a guaranteed or risk-free return, and any claim framed that way deserves skepticism.
+Next, risk. All real estate investments carry risk including loss of principal. Property values can fall, tenants can leave, and distributions can pause. No platform can honestly promise a guaranteed or risk-free return, and any claim framed that way deserves skepticism. <!-- check-rules: allow -->
 
 Then liquidity, meaning how quickly you can turn your stake back into cash. Real estate is not a stock you can sell in a second. Fractional investments can be [harder to exit than publicly traded REITs](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits), and secondary markets may be limited. Plan to hold for the medium to long term, and only invest money you will not need soon.
 
