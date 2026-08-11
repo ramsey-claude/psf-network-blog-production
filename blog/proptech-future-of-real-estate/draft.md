@@ -149,7 +149,7 @@ This article is for general educational purposes and does not constitute investm
 
 ### How does PropTech lower the cost of entry?
 
-**It splits a property into smaller pieces and handles the legal and payment work online.** Under frameworks like Regulation A and Regulation Crowdfunding, companies can offer these stakes to non-accredited investors. That turns a five-figure down payment into a position you can take for a few hundred dollars.
+**It splits a property into smaller pieces and handles the legal and payment work online.** Under frameworks like [Regulation A](https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a) and [Regulation Crowdfunding](https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-crowdfunding), companies can offer these stakes to non-accredited investors. That turns a five-figure down payment into a position you can take for a few hundred dollars.
 
 ### Are digital real estate investments liquid?
 

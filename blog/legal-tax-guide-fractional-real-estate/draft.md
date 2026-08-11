@@ -2,7 +2,7 @@
 
 - **Meta title (SEO):** Legal & Tax Guide to Fractional Real Estate (2026)
 
-- **Meta description:** A plain-English legal and tax guide to fractional real estate: Reg A vs Reg D, how income is taxed, REIT dividends, offering circulars, and operating agreements.
+- **Meta description:** The legal and tax guide to fractional real estate: the LLC structure, SEC frameworks, K-1 mechanics, and exactly which clauses to read before you invest.
 
 - **Focus keyword:** legal and tax guide to fractional real estate
 

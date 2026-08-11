@@ -14,7 +14,7 @@
 
 - Meta title: Single-Family vs Multifamily Fractional Real Estate
 
-- Meta description: Single-family vs multifamily fractional investing compared: income stability, vacancy risk, liquidity, and which property type fits your goals. Honest tradeoffs.
+- Meta description: Single-family vs multifamily fractional real estate: income steadiness, risk, tenant exposure, and which of the two structures suits your first position.
 
 - Canonical URL: https://www.psfnetwork.com/blog/single-family-vs-multifamily-fractional
 
@@ -152,7 +152,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 ### Does multifamily produce more reliable income?
 
-**Often, but not guaranteed.** Multiple tenants average out the income stream, so a single move-out is a dent rather than a stop. That said, distributions are platform-reported, may vary, and depend on occupancy, expenses, and management across the whole building.
+**Often, but not promised.** Multiple tenants average out the income stream, so a single move-out is a dent rather than a stop. That said, distributions are platform-reported, may vary, and depend on occupancy, expenses, and management across the whole building.
 
 ### How does vacancy actually affect each type?
 
