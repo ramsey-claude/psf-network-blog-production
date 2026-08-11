@@ -173,7 +173,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 ### Which is better for passive income?
 
-**Both are passive, but the income feels different.** An ETF spreads dividends across hundreds of buildings, smooth but impersonal, while a fractional position pays you from one specific property. The right choice depends on whether you prefer breadth or a concrete asset you can track.
+**Both are passive, but the income feels different.** An ETF spreads dividends across hundreds of buildings, smooth but impersonal, while a fractional position pays you from one specific property. Choose by whether you prefer breadth or a concrete asset you can track.
 
 ## Sources
 

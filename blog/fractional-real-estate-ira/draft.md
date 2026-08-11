@@ -2,6 +2,12 @@
 
 - **Focus keyword:** fractional real estate in a self-directed IRA
 
+- **Meta title (SEO):** Fractional Real Estate in a Self-Directed IRA: 2026 Guide
+
+- **Meta description:** How fractional real estate works inside a self-directed IRA: custodian rules, UBIT, prohibited transactions, and the checks to run before you invest a dollar.
+
+- **Hero visual alt text:** Illustration of a self-directed IRA folder holding fractional property shares beside a custodian checklist.
+
 - **Slug:** fractional-real-estate-ira
 
 - **Canonical:** https://www.psfnetwork.com/blog/fractional-real-estate-ira

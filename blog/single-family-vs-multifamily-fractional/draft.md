@@ -116,7 +116,7 @@ Terms vary by platform and offering, so confirm current figures against each off
 | Entry cost | Typically lower | Typically higher |
 | Valuation driver | Nearby home sales | Net operating income |
 | Operational complexity | Lower | Higher |
-| Best for | Clarity and appreciation | Steadier income through churn |
+| Best suited to | Clarity and appreciation | Steadier income through churn |
 
 ## How PSFnetwork Treats Both Types
 

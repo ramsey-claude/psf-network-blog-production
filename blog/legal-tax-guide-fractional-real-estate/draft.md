@@ -149,7 +149,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 ### How is income from fractional real estate taxed?
 
-**It depends on the structure, and it is rarely just one bucket.** Distributions can arrive as ordinary income, return of capital that lowers your basis, or REIT dividends, and selling your shares triggers capital gains. The full treatment is covered in [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed).
+**The structure decides, and it is rarely just one bucket.** Distributions can arrive as ordinary income, return of capital that lowers your basis, or REIT dividends, and selling your shares triggers capital gains. The full treatment is covered in [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed).
 
 ### Will I get a K-1 or a 1099?
 

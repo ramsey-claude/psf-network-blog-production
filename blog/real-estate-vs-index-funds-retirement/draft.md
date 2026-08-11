@@ -36,7 +36,7 @@ Both can fund a retirement. They just get there in very different ways. This is 
 
 ## Quick Answer (60 seconds)
 
-For most retirement savers, **index funds** win on simplicity, liquidity, and cost, while **real estate** wins on direct income and tangible ownership. Neither is automatically better. The right choice depends on how hands-on you want to be and how much liquidity you need.
+For most retirement savers, **index funds** win on simplicity, liquidity, and cost, while **real estate** wins on direct income and tangible ownership. Neither is automatically better. Decide by how hands-on you want to be and how much liquidity you need.
 
 Index funds spread your money across hundreds or thousands of companies, trade in seconds, and ask almost nothing of you after the first deposit. Real estate ties your money to physical property and pays through rent, but it is slower to sell and usually asks for more attention or a manager in between.
 

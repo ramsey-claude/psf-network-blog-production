@@ -116,7 +116,7 @@ A fair word on bias: we are PSFnetwork, so we are not a neutral observer. Even s
 
 ## How the PropTech Pillar Fits Together
 
-| Guide | What it answers | Best for |
+| Guide | What it answers | Best suited to |
 |---|---|---|
 | [What PropTech is](https://www.psfnetwork.com/blog/what-is-proptech) | The plain definition and main categories | Readers new to the term |
 | [PropTech trends 2026](https://www.psfnetwork.com/blog/proptech-trends-2026) | What is durable versus hype | Investors tracking where it is heading |
