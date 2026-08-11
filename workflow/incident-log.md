@@ -24,6 +24,18 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 
 ---
 
+### 2026-08-11: CI diff-mode check fails on multi-commit PRs (shallow checkout)
+
+- **Stage:** CI (Content rules workflow, check-rules job)
+- **Symptom:** "Brand voice and punctuation" check red on PR #4 at its third commit, with zero actual rule violations. Job log: `git diff against <base-sha> failed: fatal: bad object`, exit 2.
+- **Root cause:** `lint-content.yml` checked out with `fetch-depth: 2`. On a pull_request event the job diffs against the base branch head, which a 2-deep shallow clone no longer contains once the PR carries more than one commit. The same class of failure exists on the push path (`github.event.before`) for multi-commit pushes. Single-commit PRs masked the bug, which is why the first two pushes on the same PR ran green.
+- **Fix:** `fetch-depth: 0` in the check-rules job checkout. Repo is small; full history is cheap.
+- **Rule:** Any CI job that diffs against a ref outside the pushed commits must checkout with full history (or explicitly fetch the base ref) rather than a fixed shallow depth.
+- **Tests:** none (workflow-level, exercised by every multi-commit PR from now on).
+- **Reference:** PR #4, check run 93800168882.
+
+---
+
 ### 2026-05-26: Batch 2 shared persona anchor across 13 articles (Priya)
 
 - **Stage:** 2.5 (Humanization pass) via prior psf-content-qa system
