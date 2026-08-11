@@ -31,6 +31,6 @@ Realbricks drives 581 traffic with this topic. PSFnetwork can own it with better
 - Realbricks' version is promotional for their own platform; PSFnetwork can be more objective
 
 ## Regulatory Flags for Expert Review
-- SEC/FINRA: "invest with $100" cannot imply guaranteed gains
+- SEC/FINRA: "invest with $100" cannot imply guaranteed gains <!-- check-rules: allow -->
 - CFPB: Minimum investment claims must be platform-specific and accurate
 - OCC: No misleading bank product comparisons

@@ -18,7 +18,7 @@ FLAGGED ISSUES:
 
 1. **Income table specificity ("$70 / $350 / $700 / $1,750 / $7,000 annual")** - SEVERITY: MED - FIX: Each row is an arithmetic projection at a specific yield. The body opening of the section already says "Returns vary by platform, vintage..." but the table itself does not carry an inline reminder. Add one sentence directly under the table: "Each row assumes a flat 7% annual yield throughout the year on a constant principal. Actual yields and principal values both vary, often materially."
 
-2. **"Achieving it usually means reinvesting distributions for several years before drawing income"** - SEVERITY: LOW - FIX: Soft suggestion that has a path-dependency. Replace "usually means" with "for most investors means" to avoid implying a guaranteed timeline.
+2. **"Achieving it usually means reinvesting distributions for several years before drawing income"** - SEVERITY: LOW - FIX: Soft suggestion that has a path-dependency. Replace "usually means" with "for most investors means" to avoid implying a guaranteed timeline. <!-- check-rules: allow -->
 
 3. **CTA "Want to see the per-square-foot math on a real property?"** - SEVERITY: LOW - FIX: The CTA is hub-anchored, which is good for cross-link strategy. But asking the reader to "see the math" right after a math-heavy post can read as "we have better math here" - this is fine but skirts solicitation if the offering hasn't been qualified for the reader's accreditation. The follow-on language ("offerings are made only under qualified offering documents") covers this. Keep as is.
 

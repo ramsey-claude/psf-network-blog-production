@@ -53,4 +53,4 @@ Anchors are editorial positions derived from the article's own sourced material 
 - SEC: EDGAR search instructions must be accurate; Reg A/D descriptions match prior cleared articles
 - FINRA: BrokerCheck description must not imply platforms themselves are FINRA members
 - CFPB: fee-stack language factual, no fear-mongering
-- No "guaranteed", no em dashes, Disclaimer not Risk note
+- No "guaranteed", no em dashes, Disclaimer not Risk note <!-- check-rules: allow -->

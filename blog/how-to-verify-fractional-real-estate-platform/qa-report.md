@@ -15,7 +15,7 @@ Stage 7, run against `checklist/qa-gate.md` sections A through E.
 | Section | Item | Result | Detail |
 |---------|------|--------|--------|
 | A | A3 risk disclosure with return references | PASS | No yield figures beyond category context; disclaimer block canonical |
-| A | A4 no guaranteed language | PASS | 0 occurrences |
+| A | A4 no guaranteed language | PASS | 0 occurrences | <!-- check-rules: allow -->
 | A | A5 regulator references | PASS | Reg A Form 1-A/1-K, Reg D Form D, EDGAR full-text search, BrokerCheck described as broker-dealer lookup only |
 | A | A6 no misleading comparisons | PASS | FINRA FAQ explicitly states platforms are issuers, not broker-dealers |
 | B | B2 title 55-60 | PASS | 56 |

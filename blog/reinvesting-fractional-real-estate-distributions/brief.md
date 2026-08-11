@@ -47,5 +47,5 @@ feedback (unique common US name, no testimonial framing).
 ## Production constraints applied
 Fact-pack-only statistics; question-format substantive H2s; 4 stat cards;
 2-paragraph opening; FAQ of 5 or 6; Related of exactly 3; no dashes; no
-"guaranteed"; Disclaimer wording; at least 2 inline internal and 2 inline
+"guaranteed"; Disclaimer wording; at least 2 inline internal and 2 inline <!-- check-rules: allow -->
 external authority links per the qa-gate rule added 2026-07-22.

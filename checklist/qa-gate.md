@@ -6,6 +6,14 @@ Stage 7. Verifies items that can be checked from the markdown file before commit
 
 Work through every item. Mark each PASS or FAIL. Use the routing table to decide where a FAIL goes - blanket restart from Stage 1 is not the default.
 
+The machine-checkable subset of this gate runs automatically as `workflow/qa_battery.py` (CI runs it on every push, over every article). This checklist remains the human layer: judgment items the battery cannot decide (headline quality, positioning wording, whether an H2 is "substantive").
+
+## Rule scope
+
+Every rule added to this gate must state its scope on the same line it is added: **"all content"** or **"batch N onward"**. There is no unscoped rule.
+
+If a rule is scoped "batch N onward", the gap it leaves in older content is recorded in `workflow/qa-baseline.txt` the same day, so the debt is visible and tracked instead of dormant. The baseline is a remove-only ratchet: entries come out when a backfill fixes the content, and no entry is ever added for content authored after its rule existed. This rule exists because the external-link rule (2026-07-22, "Batch 3 onward") left Batch 2 silently non-compliant until the go-live QA found it (incident-log 2026-08-11).
+
 ## Checklist
 
 ### A. Financial accuracy (sourced)

@@ -137,21 +137,21 @@ def test_guaranteed_return_blocks(cr, tmp_path):
     f = tmp_path / 'doc.md'
     f.write_text('No platform offers a guaranteed return on real estate.\n')
     blocking, _ = cr.check_file(f)
-    assert any(b[0] == 'guaranteed-return' for b in blocking)
+    assert any(b[0] == 'guaranteed' for b in blocking)
 
 
 def test_guaranteed_returns_plural_blocks(cr, tmp_path):
     f = tmp_path / 'doc.md'
     f.write_text('You should not expect guaranteed returns from this asset class.\n')
     blocking, _ = cr.check_file(f)
-    assert any(b[0] == 'guaranteed-return' for b in blocking)
+    assert any(b[0] == 'guaranteed' for b in blocking)
 
 
 def test_guaranteed_yield_blocks(cr, tmp_path):
     f = tmp_path / 'doc.md'
     f.write_text('There is no guaranteed yield on fractional shares.\n')
     blocking, _ = cr.check_file(f)
-    assert any(b[0] == 'guaranteed-return' for b in blocking)
+    assert any(b[0] == 'guaranteed' for b in blocking)
 
 
 # ---------------------------------------------------------------------
@@ -205,3 +205,39 @@ def test_psfnetwork_lowercase_identifiers_exempt(cr, tmp_path, exempt):
     blocking, _ = cr.check_file(f)
     casing_hits = [b for b in blocking if b[0] == 'psfnetwork-casing']
     assert casing_hits == []
+
+
+# Incident: 2026-08-11 go-live QA. Six bare uses of the banned word
+# ("guaranteed to be fast", "not guaranteed") shipped to Drive because the
+# BLOCK pattern only covered "guaranteed return/yield/annual". The editorial
+# rule bans the word in ANY form; the pattern now matches it bare.
+def test_bare_guaranteed_blocks(cr, tmp_path):
+    f = tmp_path / 'd.md'
+    f.write_text('Distributions are not guaranteed to arrive monthly.\n')
+    blocking, _ = cr.check_file(f)
+    assert any(b[0] == 'guaranteed' for b in blocking)
+
+
+def test_quoted_guaranteed_blocks(cr, tmp_path):
+    f = tmp_path / 'd.md'
+    f.write_text('Here "real" does not mean "guaranteed."\n')
+    blocking, _ = cr.check_file(f)
+    assert any(b[0] == 'guaranteed' for b in blocking)
+
+
+def test_guarantee_noun_warns_not_blocks(cr, tmp_path):
+    # The noun/verb form appears in live Batch 2 prose ("does not guarantee
+    # a buyer") and was never flagged by the brand. It must surface as a
+    # WARNING for editorial review but must not block.
+    f = tmp_path / 'd.md'
+    f.write_text('Tokenization does not guarantee a buyer.\n')
+    blocking, warning = cr.check_file(f)
+    assert not any(b[0] == 'guaranteed' for b in blocking)
+    assert any(w[0] == 'guarantee-noun' for w in warning)
+
+
+def test_guaranteed_pragma_still_exempts(cr, tmp_path):
+    f = tmp_path / 'd.md'
+    f.write_text('- No "guaranteed" language allowed. <!-- check-rules: allow -->\n')
+    blocking, _ = cr.check_file(f)
+    assert not blocking

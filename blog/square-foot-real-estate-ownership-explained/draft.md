@@ -84,7 +84,7 @@ The columns are identical except for unit naming. Same income, same tax form, sa
 
 You are still a member of an LLC, not a deed holder. You cannot walk into a property and stand in your 50 square feet by right. You can do exactly what any other fractional LLC member can do: receive distributions, receive a K-1 at tax time, vote in any matters the operating agreement gives members vote on, and exit when the property is sold or via any secondary market the platform provides.
 
-The same risk disclosures apply. Past performance does not predict future results. Returns are not guaranteed. The investment is not FDIC insured.
+The same risk disclosures apply. Past performance does not predict future results. No return is promised. The investment is not FDIC insured.
 
 ---
 

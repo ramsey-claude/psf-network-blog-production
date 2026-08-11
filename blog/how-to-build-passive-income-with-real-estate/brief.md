@@ -37,6 +37,6 @@ Most "passive income real estate" content focuses on becoming a landlord. This p
 - Target featured snippet: "how to build passive income with real estate"
 
 ## Regulatory Flags for Expert Review
-- CFPB: passive income claims must not imply guaranteed income
+- CFPB: passive income claims must not imply guaranteed income <!-- check-rules: allow -->
 - SEC: any mention of specific platform returns needs risk disclosure
 - FINRA: investment return comparisons need balanced risk context

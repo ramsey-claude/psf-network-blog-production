@@ -13,7 +13,7 @@
 
 DOMAIN FINDINGS:
 
-The risk disclosure architecture in the draft is sound at the macro level. "Past performance is not indicative of future results" appears in both the FAQ and the Disclaimer block. The phrase "returns are not guaranteed" appears multiple times in body content. The QuickAnswer block carries a risk line. Good practice.
+The risk disclosure architecture in the draft is sound at the macro level. "Past performance is not indicative of future results" appears in both the FAQ and the Disclaimer block. The phrase "returns are not guaranteed" appears multiple times in body content. The QuickAnswer block carries a risk line. Good practice. <!-- check-rules: allow -->
 
 Return claims are handled correctly: the 4-9% dividend yield is presented as a range, labeled "platform-reported", and qualified with "These figures are not guarantees and past performance does not predict future results." This is the right pattern.
 

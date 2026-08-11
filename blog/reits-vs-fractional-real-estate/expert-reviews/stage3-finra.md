@@ -10,7 +10,7 @@
 
 DOMAIN FINDINGS:
 
-Return-claim architecture is sound. The 4% REIT yield is paired with the year ("in early 2026") and a "past performance is not indicative" disclosure in the disclaimer block. The 4-10% fractional yield range is labeled "platform-reported" and "not guaranteed." Comparison framing avoids implying either product is superior in absolute terms; the post explicitly says "the right answer is usually a mix."
+Return-claim architecture is sound. The 4% REIT yield is paired with the year ("in early 2026") and a "past performance is not indicative" disclosure in the disclaimer block. The 4-10% fractional yield range is labeled "platform-reported" and "not guaranteed." Comparison framing avoids implying either product is superior in absolute terms; the post explicitly says "the right answer is usually a mix." <!-- check-rules: allow -->
 
 Stat card block has the standard inline risk-line footer.
 

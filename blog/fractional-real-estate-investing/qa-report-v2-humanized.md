@@ -16,7 +16,7 @@ Stage 7, run against `checklist/qa-gate.md` sections A through E.
 | Section | Item | Result | Detail |
 |---------|------|--------|--------|
 | A | A3 return claims carry risk disclosure | PASS | Stat card caveat plus canonical disclaimer block |
-| A | A4 no guaranteed language | PASS | 3 occurrences in v1, 0 in v2 |
+| A | A4 no guaranteed language | PASS | 3 occurrences in v1, 0 in v2 | <!-- check-rules: allow -->
 | A | A1/A2 claims traced to evidence | PASS | No new factual claims introduced; every figure carried over from v1, which cleared Stage 3 |
 | A | A5 regulator references accurate | PASS | Reg A Tier 2 $75M cap, Rule 506(b) 35-investor limit, 506(c) accredited-only, all unchanged from v1 |
 | A | A6 no misleading regulated comparisons | PASS | REIT and FDIC distinctions intact |

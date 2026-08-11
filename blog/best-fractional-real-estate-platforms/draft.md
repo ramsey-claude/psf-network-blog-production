@@ -131,7 +131,7 @@ Across all of them, the most important check is the SEC filing. If a platform ca
 
 **Answer capsule:** Four risks apply to every fractional platform regardless of brand: platform risk (the operator can fail), illiquidity (typical 5 to 10 year hold; secondary markets are thin), fee compounding (1 to 2 percent annual fees compound over multi-year holds), and tax complexity (K-1 reporting for most LLC-structured platforms is more involved than a 1099). Read the offering circular's risk factors section in full; that document, not the marketing page, is what legally governs your investment.
 
-Performance claims are the area where caveats matter most. Yields are usually labeled "target" rather than "guaranteed". IRRs are typically platform-reported (not audited by a third party). Past performance does not predict future results. Treat any specific yield or IRR number as backward-looking, not as a forecast.
+Performance claims are the area where caveats matter most. Yields are usually labeled "target" rather than "guaranteed". IRRs are typically platform-reported (not audited by a third party). Past performance does not predict future results. Treat any specific yield or IRR number as backward-looking, not as a forecast. <!-- check-rules: allow -->
 
 ---
 

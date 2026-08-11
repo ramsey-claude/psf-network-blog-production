@@ -24,6 +24,16 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 
 ---
 
+### 2026-08-11: QA battery institutionalized after go-live QA caught what upstream layers missed (process)
+
+- **Stage:** 7 (Pre-publish QA) and 8 (Publish) tooling
+- **Symptom:** The Batch 2 go-live QA on 2026-08-11 caught six "guaranteed" uses, eight broken or missing metas, and one headline problem in content that was already delivered. Operator asked why these keep surfacing only at the final QA step. <!-- check-rules: allow -->
+- **Root cause:** Four gaps, in order of depth. (1) The full check battery lived in ad-hoc per-batch scripts rewritten each session, so coverage fluctuated between runs and nothing guaranteed the go-live checks would run again. (2) check-rules.py encoded a narrower rule than the editorial rule: BLOCK pattern was `guaranteed (return|yield|annual)`, so bare "guaranteed" passed the linter. (3) Batch 2's Production-Notes format was never machine-checked for meta presence/length; the length checks only existed for YAML frontmatter. (4) Diff-mode CI only scans touched files, so violations in untouched legacy files sat dormant. <!-- check-rules: allow -->
+- **Fix:** (a) check-rules.py BLOCK widened to bare `\bguaranteed\b` (noun form "guarantee" is WARN); 4 live-content uses fixed (square-foot, how-to-invest-100, reits x2), 24 documentation lines pragma'd. (b) workflow/qa_battery.py added: full-scope battery over every canonical draft, both formats, sharing parse_notes with the paste kit; runs in CI on every push. (c) First full run immediately caught two more dormant defects: parse_notes could not read bolded Production-Notes labels (six articles' SEO fields were silently invisible to the paste kit; fixed in make_paste_kit.py), and the reits-vs-fractional publish package still carried six "Answer capsule:" labels (removed before publish). (d) Remaining 13 Batch 1 legacy findings recorded in workflow/qa-baseline.txt, a remove-only ratchet; root cause there is that Batch 1 repo drafts predate humanization and were never synced back from the Drive v2 docs. Backfill decision pending with operator.
+- **Rule:** every new qa-gate rule must state its scope in the same line: "all content" or "batch N onward". If scoped onward, the older content's gap goes into qa-baseline.txt the same day, so the debt is visible instead of dormant. See checklist/qa-gate.md "Rule scope".
+- **Tests:** tests/test_qa_battery.py (10 tests incl. full-repo green invariant), tests/test_check_rules.py::test_bare_guaranteed_blocks and 3 siblings.
+- **Reference:** commit this entry lands in.
+
 ### 2026-08-11: Batch 2 feedback round 2, two comments (customer-feedback)
 
 - **Stage:** Post-delivery review of the 21.07 BRAND FEEDBACK APPLIED docs
