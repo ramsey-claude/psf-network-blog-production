@@ -37,6 +37,8 @@ The target exists in the repo (so this passes the repo-existence check) but is s
 
 **Action:** unchanged from the live-site audit: publish reits-vs-fractional-real-estate in Framer, place its visual in the same edit.
 
+**Update, later the same day:** the article is now live, so the 404 side of this finding is closed. The publish skipped the visual and carried its own defects; see `workflow/live-site-audit-2026-08-11.md` Finding 2.
+
 ## Finding 3: Frontmatter length drift on 6 articles (MEDIUM)
 
 | Article | Field | Actual | Target |
