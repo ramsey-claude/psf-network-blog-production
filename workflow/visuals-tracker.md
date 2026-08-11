@@ -41,7 +41,9 @@ Batch 1: 12 of 12 produced. 11 of 12 placed in Framer.
 - reits-vs-fractional is the only visual not yet placed. Its article is
   also the only Batch 1 article not published on the live site (absent
   from sitemap.xml, see workflow/live-site-audit-2026-07-21.md). The
-  visual is ready; both go in together when the article ships. That
+  visual is ready; publish package (paste-kit HTML + WebP + PNG) was
+  prepared and handed to the operator on 2026-08-11. Both go in together
+  when the article ships. That
   publish also closes the 10 dead internal links pointing at the slug.
 
 ## Batch 2 (not started)

@@ -24,6 +24,23 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 
 ---
 
+### 2026-08-11: Batch 2 feedback round 2, two comments (customer-feedback)
+
+- **Stage:** Post-delivery review of the 21.07 BRAND FEEDBACK APPLIED docs
+- **Symptom:** Two unresolved Youssef Kholeif comments dated 2026-08-09 found in a full comment sweep of all 15 Batch 2 folders. (1) debt-vs-equity: accredited-investor stat card rendered with literal asterisks and collapsed spaces. (2) tokenized-vs-traditional: "we run a traditional structure" wording; brand states it is not traditional, has built blockchain infrastructure for on-chain ownership management for when a live secondary market is available.
+- **Root cause:** (1) The 21.07 doc was rendered during the gdoc-to-md converter's bold-whitespace bug window; the current repo draft renders clean (verified: fresh docx has zero literal asterisks). (2) The POV line coupled PSFnetwork to "traditional" in 4 places; positioning was written without knowledge of the built blockchain infrastructure.
+- **Fix:** (1) Doc replaced with a fresh render from the clean draft. (2) Four passages rewritten: PSF positioned as Reg A + per-square-foot with blockchain infrastructure already built, "if and when a live secondary market calls for it", no forward-looking promise. Both docs replaced as 11.08.2026 FEEDBACK ROUND 2; paste kit regenerated for both.
+- **Rule:** no new rule; wording guidance recorded in this entry for future PSF-positioning passages: do not describe PSFnetwork as a "traditional" structure.
+- **Tests:** none added; content-level.
+- **Reference:** commit this entry lands in.
+
+### 2026-07-22: Voice samples permanently unavailable (operator decision)
+
+- **Stage:** 2.5 inputs
+- **Decision:** The brand does not produce internal writing samples and will not supply them. `brand/voice-samples/` stays empty permanently; humanization runs in voice-samples-empty mode as the standing default. Recorded in voice-samples README, humanization-pass edge cases, and the pillar humanization log. Do not re-raise in audits.
+
+---
+
 ### 2026-05-26: Batch 2 shared persona anchor across 13 articles (Priya)
 
 - **Stage:** 2.5 (Humanization pass) via prior psf-content-qa system

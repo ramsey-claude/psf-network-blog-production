@@ -88,7 +88,7 @@ This mirrors the contrarian anchor in best-fractional v2 and is defensible: it f
 
 2. **"We are not the right platform for everyone."** Direct first-person limitation. No compliance issue expected, but it is new voice for this article and worth an editorial confirmation.
 
-3. **Real Story gap.** See above. Needs investor relations input, not a writing decision.
+3. **Real Story gap.** CLOSED 2026-07-22: operator confirmed the brand will not supply investor stories or voice samples. The concrete-contrast opening is the permanent pattern for this article.
 
 ## Metrics
 
