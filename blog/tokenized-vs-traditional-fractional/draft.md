@@ -82,7 +82,7 @@ The pitch is easy to like. Real estate tokenization borrows the language of cryp
 
 The technology is real. Recording ownership on a blockchain can make transfers faster and the cap table easier to audit. For an investor who already runs a wallet, daily stablecoin income and a live marketplace are genuine conveniences.
 
-A fair admission: we are PSFnetwork, and we are not a neutral referee. Our offerings run under Regulation A with ownership measured per square foot, and we have already built blockchain infrastructure to manage ownership on-chain if and when a live secondary market calls for it, which puts us closer to the middle of this comparison than to either camp. That is exactly why this section grants the tokenized model its real strengths before the next one tests them. A comparison earns its keep only when it can say where the other side wins.
+A fair admission: we are PSFnetwork, and we are not a neutral party. Our offerings run under Regulation A with ownership measured per square foot, and we have already built blockchain infrastructure to manage ownership on-chain if and when a live secondary market calls for it, which puts us closer to the middle of this comparison than to either camp. That is exactly why this section grants the tokenized model its real strengths before the next one tests them. A comparison earns its keep only when it can say where the other side wins.
 
 ## Where the Tokenized Model Earns Its Keep
 

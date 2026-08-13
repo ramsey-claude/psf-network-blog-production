@@ -96,7 +96,7 @@ Instead of buying a whole building, you buy a defined share of one. A platform h
 
 PSFnetwork measures ownership by the **square foot** and ties it to a specific property rather than a vague pool. The properties are mortgage-free, so rental income is not eaten by debt service. Offerings are structured under **Regulation A**, the SEC framework that lets both accredited and non-accredited investors participate and review filings through EDGAR. Our explainer on [square-foot real estate ownership](https://www.psfnetwork.com/blog/square-foot-real-estate-ownership-explained) covers how that unit works in practice.
 
-A fair disclosure belongs here: PSFnetwork is an issuer, not a neutral referee. For a saver who needs every dollar liquid by next Tuesday, a broad index fund is simply the better tool, and fractional real estate is a complement to that core, not a replacement for it.
+A fair disclosure belongs here: PSFnetwork is an issuer, not a neutral party. For a saver who needs every dollar liquid by next Tuesday, a broad index fund is simply the better tool, and fractional real estate is a complement to that core, not a replacement for it.
 
 ## Side by Side: How They Compare for Retirement
 

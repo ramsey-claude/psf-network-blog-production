@@ -64,7 +64,7 @@ Disclaimer: all of these carry risk, including loss of principal. Liquidity, inc
 
 Most comparison articles pick a winner because the publisher sells the winner. The ranking sounds clean, and the bias sits one click away in the sign-up button.
 
-A fair disclosure belongs here: PSFnetwork is an issuer, so we are not a neutral referee either. A comparison only earns trust when it names the cases where a REIT, an ETF, or a plain index fund is the better call, and several below are exactly that.
+A fair disclosure belongs here: PSFnetwork is an issuer, so we are not a neutral party either. A comparison only earns trust when it names the cases where a REIT, an ETF, or a plain index fund is the better call, and several below are exactly that.
 
 So treat "versus" as a sorting tool, not a contest. Each pairing isolates one decision, such as liquidity, control, leverage, or asset type. Work through the ones that match your question and skip the rest.
 

@@ -106,7 +106,7 @@ There is no universal answer, only a fit between the instrument and your goal. A
 
 3. **Blend both** if you want a foundation of steadier income with a layer of growth on top. This is closer to how seasoned investors actually build wealth across a full cycle.
 
-Where we stand, stated plainly: PSFnetwork is an issuer rather than a neutral referee, and our model is equity-based, per-square-foot ownership in mortgage-free properties. That structure suits an investor who wants tangible ownership and long-horizon upside. It is a poor fit for someone who needs a fixed coupon and a short, certain exit, and if that describes you, a debt instrument elsewhere is the better tool.
+Where we stand, stated plainly: PSFnetwork is an issuer rather than a neutral party, and our model is equity-based, per-square-foot ownership in mortgage-free properties. That structure suits an investor who wants tangible ownership and long-horizon upside. It is a poor fit for someone who needs a fixed coupon and a short, certain exit, and if that describes you, a debt instrument elsewhere is the better tool.
 
 ## Where Fractional Structure Changes the Math
 

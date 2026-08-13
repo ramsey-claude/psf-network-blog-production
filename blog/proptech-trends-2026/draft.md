@@ -62,7 +62,7 @@ That gap is the real story of 2026. **Proptech** now covers listing apps, buildi
 
 So this guide draws a line. On one side sit tools that make existing real estate slightly easier. On the other sit changes to ownership, access, and regulation, which is where an investor's attention earns its keep.
 
-A fair note on where we stand: PSFnetwork is an issuer, not a referee. We read these trends through our own model, so the honest move is to flag where a trend points somewhere other than us. We will do that as we go.
+A fair note on where we stand: PSFnetwork is an issuer, not a neutral party. We read these trends through our own model, so the honest move is to flag where a trend points somewhere other than us. We will do that as we go.
 
 ## What Is Proptech, Briefly
 

@@ -74,7 +74,7 @@ A multifamily building holds that same risk in smaller pieces. **One vacancy in 
 
 A single-family share is the easiest version of fractional real estate to reason about. There is one address, one tenant, and one rent check, divided among the investors who hold the property.
 
-That clarity is a real advantage. You can see the house, look up the neighborhood, and understand exactly what you own. For a first step into [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing), that **legibility** lowers the learning curve.
+That clarity is a real advantage. You can see the house, look up the neighborhood, and understand exactly what you own. For a first step into [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing), that **clarity** lowers the learning curve.
 
 The tradeoff is concentration. Income from a single-family position is binary in a way multifamily is not:
 
@@ -120,9 +120,9 @@ Terms vary by platform and offering, so confirm current figures against each off
 
 ## How PSFnetwork Treats Both Types
 
-PSFnetwork measures ownership by the square foot and ties it to a specific property, whether that property is a single house or a multi-unit building. You can see exactly how much of the asset you hold, which keeps single-family and multifamily positions equally legible.
+PSFnetwork measures ownership by the square foot and ties it to a specific property, whether that property is a single house or a multi-unit building. You can see exactly how much of the asset you hold, which keeps single-family and multifamily positions equally tangible.
 
-Worth saying plainly: we issue these offerings, so we are not a disinterested scorekeeper. The honest read is that single-family suits investors who want a clear, concentrated stake, while multifamily suits those who will trade a higher entry for steadier income.
+Worth saying plainly: we issue these offerings, so we are not a neutral party. The honest read is that single-family suits investors who want a clear, concentrated stake, while multifamily suits those who will trade a higher entry for steadier income.
 
 Two features apply to both types on the platform:
 

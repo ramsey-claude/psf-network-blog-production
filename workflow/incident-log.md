@@ -24,6 +24,16 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 
 ---
 
+### 2026-08-11: Second-wave client feedback missed by both sessions' sweeps (customer-feedback)
+
+- **Stage:** Post-delivery review of Batch 2 Drive docs
+- **Symptom:** Youssef left a second wave of feedback the evening of 08-11 (18:55 reit-dividend-taxation, 19:08-19:17 how-to-choose): one open comment ("formatting error still here", the bold-whitespace render bug in a doc from the same converter window as the debt doc) plus suggestion-mode edits on both docs. Neither the go-live comment sweep (ran ~17:15) nor this session's morning doc sweep saw them, because both sweeps ran before the feedback existed. The operator found it by opening the doc.
+- **Root cause:** (1) Sweeps are point-in-time with no standing pre-delivery re-check, so feedback arriving after a sweep is invisible until someone looks manually. (2) Comment sweeps do not surface suggestion-mode edits at all; two sessions independently missed suggestions for this reason on the same day. (3) The converter-bug fix was applied to the doc it was reported on, not to every doc rendered in the bug window, which is what "still here" referred to. (4) The reit-dividend miss included a real quality escape: a male scene character written with "her/she" in four spots, a class no regex gate covers.
+- **Fix:** Both docs' suggestions applied to repo drafts (15 edits, incl. the pronoun fix). Recurring preferences promoted to standing rules: tone-and-voice Terminology rows (property over building in generic references, neutral party over referee/scorekeeper/disinterested, tangible over legible) plus a Brand positioning section (never call PSFnetwork "traditional"; blockchain infrastructure built, held for a live secondary market). check-rules WARN `client-rejected-wording` added. Remaining 10 uses of the rejected wording swept across 8 other drafts in the same commit. qa-gate Section E gains a named-character pronoun-consistency item. checklist/delivery.md gains a pre-delivery sweep step (comments AND suggestions, timestamped) and the converter-bug re-render rule.
+- **Rule:** Delivery and re-delivery batches start with a timestamped Drive sweep covering comments and suggestion-mode edits; converter-bug fixes trigger re-render of every doc from the bug window.
+- **Tests:** none added; the WARN pattern is exercised by check-rules on every run.
+- **Reference:** commit this entry lands in; predecessor entries below from the same day.
+
 ### 2026-08-11: QA battery institutionalized after go-live QA caught what upstream layers missed (process)
 
 - **Stage:** 7 (Pre-publish QA) and 8 (Publish) tooling

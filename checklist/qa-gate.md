@@ -71,6 +71,7 @@ Added 2026-05-26 after customer feedback flagged "grammatical errors and mobile 
 - [ ] No hyphen-as-em-dash constructions (single hyphen surrounded by spaces between lowercase words)
 - [ ] No bare comparatives missing a standard ("the bigger X than Y realize" type)
 - [ ] No run-on sentences (heuristic: 40+ words, 3+ commas, no semicolon)
+- [ ] Named-character pronoun consistency: every named persona in a scene keeps one set of pronouns end to end. Added 2026-08-11 after client feedback caught a male character written with "her/she" in four spots (reit-dividend-taxation). Regex cannot catch this reliably; read every scene paragraph with a name in it.
 - [ ] Wide tables fit a phone screen. 6+ column tables are restructured to 4 columns max, with non-critical columns folded into a narrative paragraph below. The 6-column comparison table flagged on 2026-05-26 was the failure mode this rule prevents.
 - [ ] Optional deeper check: run LanguageTool against the draft if Java is available in the pipeline venv. Recipe: `pip install language-tool-python; python -c "import language_tool_python; t = language_tool_python.LanguageTool('en-US'); print(t.check(open('blog/[slug]/draft-vN.md').read()))"`. Not required for PASS but recommended before any externally visible delivery.
 

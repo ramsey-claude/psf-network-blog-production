@@ -37,8 +37,16 @@ Use these terms consistently:
 | PSFnetwork | psfnetwork / PSF Network / PSFNETWORK / Psfnetwork | <!-- check-rules: allow -->
 | co-investors | shareholders (legal precision) |
 | property | asset (too generic) |
+| property (generic references to the asset) | building (client feedback 2026-08-11; literal buildings, e.g. "an eight-unit building", stay) |
+| neutral party | referee / scorekeeper / disinterested party (client rejected the metaphors, 2026-08-11) | <!-- check-rules: allow -->
+| tangible | legible (describing ownership; client feedback 2026-08-11) | <!-- check-rules: allow -->
 | exit | sell / liquidate (too transactional for brand voice) |
 | target return | guaranteed return (never use guaranteed) | <!-- check-rules: allow -->
+
+### Brand positioning (client-stated facts, 2026-08-11)
+
+- Never describe PSFnetwork itself as a "traditional" structure. The approved framing: offerings run under Regulation A with per-square-foot ownership; ownership records are conventional today, and the blockchain infrastructure to manage them on-chain is already built, held for the point where a live secondary market makes it useful.
+- No forward-looking promises about the secondary market; "if and when a live secondary market calls for it" is the ceiling.
 
 ---
 
