@@ -34,6 +34,7 @@ Before any delivery or re-delivery batch, sweep the Drive folders of every artic
 1. **Comments AND suggestion-mode edits.** Read each article's newest doc with comments included. Suggestion-mode edits do not surface in comment listings and were missed twice on 2026-08-11; the flattened export shows them as concatenated old/new text runs.
 2. **Timestamp discipline.** Record when the sweep ran. Feedback arriving after the sweep but before upload belongs to the next cycle; feedback found during the sweep blocks delivery until applied.
 3. **Converter-bug rule.** When a render/converter bug is fixed, re-render and re-deliver every previously delivered doc that was produced during the bug window, not only the doc the bug was noticed on. The bold-whitespace bug was fixed for one doc on 2026-08-11 and re-surfaced in another doc rendered in the same window ("formatting error still here").
+4. **Scope: unpublished batches only (operator directive, 2026-08-13).** Sweeps, re-renders, and re-deliveries never touch a batch that is already live. Published articles' drafts are the frozen record of what shipped; see the incident log's Active Rules for the full frozen-batch rule.
 
 ## Step by step
 
