@@ -183,7 +183,7 @@ We will say the obvious part out loud: PSFnetwork is one of these platforms, so 
 
 If you want to see [how PSFnetwork structures exits and secondary access](https://www.psfnetwork.com/) alongside the per-square-foot ownership model, the offering documents lay out the terms in plain language.
 
-## Frequently asked questions
+## Frequently Asked Questions
 
 ### Can you sell fractional real estate before the property is sold?
 

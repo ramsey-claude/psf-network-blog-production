@@ -21,6 +21,7 @@ FAIL (exit 1, CI red):
   F5  meta description length outside 150-160 characters
   F6  Google-Docs CSS residue (style blocks, .cN class selectors)
   F7  title missing, or (YAML-format drafts) title length outside 55-60
+  F8  declared slug (or canonical tail) does not match the folder name
 
 WARN (reported, not blocking):
   W1  title length outside 55-60 on Production-Notes drafts (Batch 2 titles
@@ -145,6 +146,20 @@ def check_article(folder: Path):
     # F6: Google-Docs CSS residue
     if CSS_RESIDUE.search(body):
         fails.append('F6 CSS residue in body')
+
+    # F8: the draft's declared slug must match its folder name, and the
+    # canonical URL must end in that same slug. A mismatch publishes the
+    # article at an address nothing links to and orphans every inbound
+    # internal link (found on article 13 three weeks after import; the link
+    # test only checks that the target folder exists, so it passed).
+    declared = meta.get('slug', '').strip().strip('/')
+    if declared and declared != slug:
+        fails.append(f'F8 slug "{declared}" does not match folder "{slug}"')
+    canonical = meta.get('canonical', '').strip().rstrip('/')
+    if canonical:
+        tail = canonical.rsplit('/', 1)[-1]
+        if tail != slug:
+            fails.append(f'F8 canonical ends in "{tail}", folder is "{slug}"')
 
     # F7/W1: title
     title = meta.get('title', '')

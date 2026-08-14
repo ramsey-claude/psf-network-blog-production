@@ -98,7 +98,7 @@ Entry costs usually run higher too. A share of an eight-unit building typically 
 
 ## Where Liquidity and Taxes Land
 
-Neither property type is liquid the way a public stock is. Both usually expect a multi-year hold, and exiting early depends on the platform reopening redemptions or running a secondary market. Before committing, read [what happens when a fractional property is sold](https://www.psfnetwork.com/blog/what-happens-when-fractional-property-is-sold) so the exit is not a surprise.
+Neither property type is liquid the way a public stock is. Both usually expect a multi-year hold, and exiting early depends on the platform reopening redemptions or running a secondary market. Before committing, read [what happens when a fractional property is sold](https://www.psfnetwork.com/blog/how-to-sell-fractional-real-estate) so the exit is not a surprise.
 
 Taxes follow the structure more than the building type. Distributions, depreciation pass-through, and gains on sale are shaped by how the offering is organized, not by unit count. The mechanics are covered in [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed).
 

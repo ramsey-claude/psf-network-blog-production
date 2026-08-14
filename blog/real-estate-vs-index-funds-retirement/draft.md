@@ -86,7 +86,7 @@ Property also behaves differently from stocks. It does not move in lockstep with
 
 The brochure version of real estate is steady rent and rising values. The lived version, for anyone who has owned a rental, includes vacancy gaps, repair bills, and tenant turnover. That work is the reason many savers admire real estate but never actually buy it.
 
-There is also the liquidity problem. You cannot sell a bedroom to cover a medical bill, and selling a whole property can take months and a chunk of the proceeds in fees. If you want a fuller picture of how the exit actually works, our guide to [what happens when a fractional property is sold](https://www.psfnetwork.com/blog/what-happens-when-fractional-property-is-sold) walks through the timeline.
+There is also the liquidity problem. You cannot sell a bedroom to cover a medical bill, and selling a whole property can take months and a chunk of the proceeds in fees. If you want a fuller picture of how the exit actually works, our guide to [what happens when a fractional property is sold](https://www.psfnetwork.com/blog/how-to-sell-fractional-real-estate) walks through the timeline.
 
 ## Fractional Real Estate: Splitting the Difference
 
