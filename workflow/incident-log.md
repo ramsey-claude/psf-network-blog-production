@@ -83,6 +83,29 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 
 ---
 
+## 2026-08-14 - Stat-card text loss root cause: pandoc dollar-math + Drive docx import
+
+**What happened.** The recurring stat-card corruption in delivered Drive docs
+("$200,000 in income, or $" missing) was traced to its root cause. Pandoc's
+gfm reader has tex_math_dollars enabled, so any line containing two dollar
+amounts ("**$200,000** in income, or **$1 million**") parses the span between
+the dollar signs as inline TeX math. The docx then carries an oMath block,
+and Google Drive's docx import silently drops oMath content. Every article
+line with two dollar figures was corrupted in delivery while the repo draft
+stayed correct.
+
+**Fix.** render-for-drive.py now renders with `-f gfm-tex_math_dollars`
+(extension disabled) and pins the delivered font spec (Aptos body 12pt,
+Aptos Display headings 20/16/14pt #0F4761, links #156082) in the docx
+post-process. For cloud sessions, render-for-drive-rtf.py renders the draft
+to RTF and uploads through the Drive MCP as text; Drive's RTF import applies
+the same heading font mapping (Aptos Display -> Play) and text transfer
+avoids the base64-corruption failure mode entirely.
+
+**Also fixed.** The stray empty "Field/Value" table at the top of GO-LIVE
+docs came from production_notes_md() emitting an empty frontmatter table for
+notes-style drafts; it now returns nothing when there is no frontmatter.
+
 ## Active rules (apply on every run)
 
 These are non-negotiable. Re-read this list at the start of every run.

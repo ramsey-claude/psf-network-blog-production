@@ -36,6 +36,24 @@ Before any delivery or re-delivery batch, sweep the Drive folders of every artic
 3. **Converter-bug rule.** When a render/converter bug is fixed, re-render and re-deliver every previously delivered doc that was produced during the bug window, not only the doc the bug was noticed on. The bold-whitespace bug was fixed for one doc on 2026-08-11 and re-surfaced in another doc rendered in the same window ("formatting error still here").
 4. **Scope: unpublished batches only (operator directive, 2026-08-13).** Sweeps, re-renders, and re-deliveries never touch a batch that is already live. Published articles' drafts are the frozen record of what shipped; see the incident log's Active Rules for the full frozen-batch rule.
 
+## Cloud-session path (Drive MCP, added 2026-08-14)
+
+When Stage 9 runs from a cloud session (no local Drive token), use
+`workflow/render-for-drive-rtf.py` and upload the resulting RTF via the Drive
+MCP `create_file` with `contentMimeType: application/rtf` + `textContent`.
+Drive converts RTF to a native Google Doc and applies the same font mapping
+the docx path produced: "Aptos Display" imports as Play for headings and
+"Aptos" falls back to the default body font, which matches how the delivered
+GO-LIVE docs render on screen. Do NOT use the base64 docx or markdown/HTML
+MCP paths for delivery: base64 is impractical for a model-mediated transfer
+(one corrupted character breaks the zip), and markdown/HTML lose the fonts.
+
+Root cause of the recurring stat-card text loss (found 2026-08-14): pandoc's
+gfm reader parses a line with two dollar amounts ("**$200,000** ... **$1
+million**") as inline TeX math, and Drive's docx import silently drops the
+resulting oMath block. `render-for-drive.py` now renders with
+`-f gfm-tex_math_dollars`; keep that flag if the command is ever rebuilt.
+
 ## Step by step
 
 For each post in Stage 9:
