@@ -4,7 +4,7 @@ After GitHub publish (Stage 8), Stage 9 mirrors the post's outputs to the operat
 
 ## Tooling stack
 
-The pipeline does NOT use the Drive MCP for this stage. The MCP's `create_file` does not auto-convert docx into a native Google Doc (its conversion list covers only text/plain and text/csv), and it lacks a delete operation. Instead the pipeline uses Google's Drive REST API directly via a thin Python helper.
+From the operator's machine the pipeline uses Google's Drive REST API directly via a thin Python helper, not the Drive MCP: the MCP's `create_file` does not auto-convert docx into a native Google Doc (its conversion list covers only text/plain, text/csv, text/markdown, HTML, and RTF). From a cloud session, where no local Drive token exists, delivery runs through the MCP's RTF path instead, described under "Cloud-session path" below.
 
 Three local files implement the stack:
 
@@ -12,7 +12,7 @@ Three local files implement the stack:
 |------|------|
 | `workflow/render-for-drive.py` | Convert `draft.md` (markdown + YAML frontmatter) to a styled `.docx` via pandoc. Prepends a "Production Notes" table with the SEO metadata. Replaces `[VISUAL-HERO-XX]` with a designer note callout. |
 | `workflow/drive_auth.py` | One-shot OAuth flow to mint a Drive-scoped token. Run once, interactively. |
-| `workflow/drive_cli.py` | Day-to-day Drive operations: `list`, `delete`, `upload-as-gdoc`, `upload-as-is`. Used by Stage 9. |
+| `workflow/drive_cli.py` | Day-to-day Drive operations: `list`, `archive` (move a superseded doc to `old version/`), `upload-as-gdoc`, `upload-as-is`. Used by Stage 9. `delete` is disabled and exits with an error. |
 
 The token is stored at `/Users/onur/.psfnetwork-drive/token.json` (outside the repo) and auto-refreshes.
 
