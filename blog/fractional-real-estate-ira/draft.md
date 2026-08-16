@@ -12,7 +12,7 @@
 
 - **Canonical:** https://www.psfnetwork.com/blog/fractional-real-estate-ira
 
-- **Author:** Maya Reyes · **Reviewer:** Daniel Cho, CFA
+- **Author:** Youssef Kholeif, CMO · **Reviewer:** Daniel Cho, CFA
 
 - **Published:** 2026-06-19 · **Updated:** 2026-06-19
 

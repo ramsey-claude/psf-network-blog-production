@@ -1,20 +1,41 @@
 # PSFnetwork Standing Personas
 
-PSFnetwork uses standing author and reviewer personas for blog content. These are brand-approved bylines, not real individuals. Operator has authorized their automated use across the pipeline. No per-post operator approval is required.
+PSFnetwork uses standing author and reviewer personas for blog content. The reviewer persona is a brand-approved byline, not a real individual; the author byline is a real member of the PSFnetwork team. Operator has authorized their automated use across the pipeline. No per-post operator approval is required.
 
 This file is the source of truth for who appears in the byline and credit on every post.
 
 ---
 
-## Standing personas
+## Author byline (operator directive, 2026-08-16)
 
-### Maya Reyes - Senior Editor
+**Every post is bylined to a real PSFnetwork person: either Youssef or Omar. No other name goes in the `author` field.**
 
+The invented editor persona that previously held this slot is retired. It was corrected in Framer on the live articles, and the pipeline must not reintroduce it, on any batch, at any stage.
+
+### Youssef Kholeif - CMO
+
+- **Byline string:** `Youssef Kholeif, CMO`
 - **Role on post:** Author byline
-- **Appears in:** Frontmatter `author` field, ArticleHero component, AuthorCard component
-- **Bio (canonical):** Maya Reyes is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
-- **Voice:** Plain, declarative, second-person. No first-person ("I") in content.
-- **Quotable:** No. Maya is the byline; quotes from "Maya Reyes" are not used in body content. The author voice IS the content's voice.
+- **Appears in:** `author` field (YAML frontmatter or Production Notes), ArticleHero component, AuthorCard component
+- **Bio (canonical):** Youssef Kholeif is the CMO of PSFnetwork, writing on fractional real estate, real-asset investing, and consumer finance.
+- **Quotable:** No. The byline is the article's voice; quotes attributed to Youssef are not placed in body content.
+- **Status:** Confirmed. Already carried by `real-estate-as-an-asset-class`, applied by Youssef himself in the round-2 Drive doc, and the default byline for the rest of Batch 2.
+
+### Omar - title pending
+
+- **Byline string:** pending. Needs a surname and a title from the operator before any post can use it.
+- **Role on post:** Author byline
+- **Status:** Approved as a permitted byline by the operator on 2026-08-16, but not yet usable. Until the full name and title land here, posts use the Youssef byline. Do not guess a surname or title.
+
+### Retired: the previous editor persona
+
+- **Status:** Retired 2026-08-16. Not a valid byline on any new or revised draft.
+- **Published Batch 1 content:** the live articles carry the corrected byline in Framer. Batch 1's repo drafts still show the old persona because published batches are frozen (see `workflow/incident-log.md`, 2026-08-13). That gap is recorded debt, not something to sweep-fix in place.
+- **Automation:** `qa_battery.py` W8 flags any draft whose author is not an approved byline.
+
+---
+
+## Standing personas
 
 ### Daniel Cho, CFA - Reviewer
 

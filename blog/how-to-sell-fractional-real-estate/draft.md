@@ -8,7 +8,7 @@
 
 - Hero alt: Illustration of a single fractional property share being handed from one investor to another across a marketplace listing screen. (1200x630)
 
-- Schema: Article + FAQPage · Author: Maya Reyes, Senior Editor · Reviewer: Daniel Cho, CFA · Read time: 8 min · Published/Updated: 2026-06-19
+- Schema: Article + FAQPage · Author: Youssef Kholeif, CMO · Reviewer: Daniel Cho, CFA · Read time: 8 min · Published/Updated: 2026-06-19
 
 - FIXED v2: closing H2 removed, body moved before FAQ; disclaimer paragraph removed.
 
@@ -213,7 +213,7 @@ If you want to see [how PSFnetwork structures exits and secondary access](https:
 
 **Usually, the asset survives.** Your ownership is typically tied to the property-holding entity or token, not to the platform's software, so it does not vanish if the operator fails. In practice, a shutdown can still disrupt distributions, reporting, and any secondary marketplace you were counting on to exit. This is why platform stability and a clear wind-down plan belong on your pre-investment checklist.
 
-**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Youssef Kholeif** is the CMO of PSFnetwork, writing on fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 

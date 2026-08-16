@@ -6,6 +6,8 @@ Scope: the 12 Batch 1 articles per `workflow/visuals-tracker.md`. Canonical draf
 
 Why now: Batch 2 was re-synced with 148 internal links and brand feedback applied. Batch 3 shipped born-compliant with the inline external authority link rule. Batch 1, the oldest batch, has never been re-checked against the standard that evolved after it shipped. This audit closes that gap.
 
+> **CLIENT APPROVED, 2026-08-16.** The operator relayed the client's sign-off on Batch 1 and Batch 2. Batch 1 is live and therefore frozen: the retrofit options this audit lays out below (internal and external link retrofit, hero alt trims, canonicalization) stay open decisions and are not executed as a sweep. The author byline on the live Batch 1 articles was corrected in Framer by the operator; the repo drafts still show the retired persona because frozen means frozen, and that gap is recorded debt rather than something to fix in place.
+
 ---
 
 ## Verdict in one paragraph

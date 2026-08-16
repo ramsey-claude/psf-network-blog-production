@@ -81,6 +81,20 @@ BANNED_BODY_LABELS = [
 
 CSS_RESIDUE = re.compile(r'<style|\.c\d+\s*\{|font-family:\s*"')
 
+# Operator directive 2026-08-16: every byline is a real PSFnetwork person,
+# either Youssef or Omar. The invented editor persona that used to hold the
+# slot was corrected in Framer on the live articles and must not come back
+# through the pipeline. Matched on first name so a later title change
+# ("Youssef Kholeif, CMO" to "Youssef Kholeif, Head of Growth") does not
+# turn into a false positive. Omar's surname and title are still pending in
+# brand/personas.md, so the name alone is what we can check today.
+APPROVED_AUTHORS = re.compile(r'\b(Youssef|Omar)\b', re.IGNORECASE)
+
+# Operator directive 2026-08-16: internal links are absolute, with scheme and
+# host. A root-relative link means something different in each of the three
+# places a draft gets rendered before a reader sees it.
+RELATIVE_INTERNAL = re.compile(r'\]\((/blog/[^)\s]*)\)')
+
 TEMPLATE_H2S = {
     'quick answer (60 seconds)', 'the 60-second version',
     'frequently asked questions', 'faq', 'related reading', 'related',
@@ -218,6 +232,25 @@ def check_article(folder: Path):
             continue
         if not h2.rstrip().endswith('?'):
             warns.append(f'W7 non-question H2: "{h2.strip()[:60]}"')
+
+    # W8: author byline. See APPROVED_AUTHORS above and brand/personas.md.
+    # WARN rather than FAIL because published Batch 1 drafts are frozen and
+    # still carry the retired persona; promoting this to FAIL is correct only
+    # once every unpublished batch is converted and the Batch 1 debt has moved
+    # into qa-baseline.txt.
+    author = meta.get('author', '').strip()
+    if not author:
+        warns.append('W8 author byline missing')
+    elif not APPROVED_AUTHORS.search(author):
+        warns.append(f'W8 author "{author[:40]}" is not an approved byline')
+
+    # W9: relative internal links. Same severity reasoning as W8: Batch 3 was
+    # authored relative and is not converted yet.
+    rel = RELATIVE_INTERNAL.findall(body)
+    if rel:
+        warns.append(
+            f'W9 {len(rel)} relative internal link(s), must be absolute '
+            f'(first: {rel[0]})')
 
     return slug, fmt, fails, warns
 

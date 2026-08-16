@@ -10,7 +10,7 @@
 
 - Hero alt: Split illustration contrasting a fractional real estate debt position paying fixed interest with an equity position sharing in rent and appreciation
 
-- Schema: Article, FAQPage · Author: Maya Reyes, Senior Editor · Reviewer: Daniel Cho, CFA · Read time: 10 min · Published/Updated: 2026-06-19
+- Schema: Article, FAQPage · Author: Youssef Kholeif, CMO · Reviewer: Daniel Cho, CFA · Read time: 10 min · Published/Updated: 2026-06-19
 
 - FINAL: independent re-score 95+ (hook trimmed to 3 sentences; removed unsourced 2023-2026 leverage-window claim).
 

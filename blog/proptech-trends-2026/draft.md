@@ -18,7 +18,7 @@
 
 - **Schema:** Article + FAQPage
 
-- **Author:** Maya Reyes, Senior Editor
+- **Author:** Youssef Kholeif, CMO
 
 - **Reviewer:** Daniel Cho, CFA
 

@@ -38,6 +38,7 @@ If a rule is scoped "batch N onward", the gap it leaves in older content is reco
 - [ ] Every H2 has an answer capsule of 50-75 words (self-contained)
 - [ ] FAQ section structured for FAQ schema (Q/A pairs), minimum 5 entries
 - [ ] At least 2 internal links to relevant posts that actually exist in the repo
+- [ ] Every internal link is absolute: `https://www.psfnetwork.com/blog/slug`, never `/blog/slug`. Operator directive 2026-08-16; both forms work live, but only the absolute form survives the Docs and Framer render steps unchanged. Automated as `qa_battery.py` W9.
 - [ ] At least 2 inline authoritative external links in the BODY (not counting the Sources section). Allowed domains: investor.gov, sec.gov, irs.gov, finra.org, fdic.gov, federalreserve.gov, congress.gov. Every URL curl-verified live, or documented as known anti-bot 403 (sec.gov main domain) in the incident log. Added 2026-07-22, Batch 3 onward.
 - [ ] All external links point to high-authority sources from `evidence.md`
 
@@ -72,6 +73,7 @@ Added 2026-05-26 after customer feedback flagged "grammatical errors and mobile 
 - [ ] No bare comparatives missing a standard ("the bigger X than Y realize" type)
 - [ ] No run-on sentences (heuristic: 40+ words, 3+ commas, no semicolon)
 - [ ] Named-character pronoun consistency: every named persona in a scene keeps one set of pronouns end to end. Added 2026-08-11 after client feedback caught a male character written with "her/she" in four spots (reit-dividend-taxation). Regex cannot catch this reliably; read every scene paragraph with a name in it.
+- [ ] Author byline is Youssef or Omar, in the `author` field AND in the AuthorCard bio paragraph. Operator directive 2026-08-16; the invented editor persona is retired and was corrected in Framer on the live articles. The two places drift apart independently, so check both. Automated as `qa_battery.py` W8, which reads the field only.
 - [ ] Wide tables fit a phone screen. 6+ column tables are restructured to 4 columns max, with non-critical columns folded into a narrative paragraph below. The 6-column comparison table flagged on 2026-05-26 was the failure mode this rule prevents.
 - [ ] Optional deeper check: run LanguageTool against the draft if Java is available in the pipeline venv. Recipe: `pip install language-tool-python; python -c "import language_tool_python; t = language_tool_python.LanguageTool('en-US'); print(t.check(open('blog/[slug]/draft-vN.md').read()))"`. Not required for PASS but recommended before any externally visible delivery.
 
