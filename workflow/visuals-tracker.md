@@ -46,7 +46,65 @@ Batch 1: 12 of 12 produced. 11 of 12 placed in Framer.
   when the article ships. That
   publish also closes the 10 dead internal links pointing at the slug.
 
-## Batch 2 (not started)
+## Batch 2 (cover images done, in Drive only)
 
-Visuals for the 15 June-2026 articles follow once Batch 1 is placed in
-Framer. Same stylesheet, same tracker format, rows to be added here.
+This section said "not started" until 2026-08-17, which was wrong and cost
+real time: it was read as fact during the Framer import and the operator was
+told Batch 2 had no hero images to upload. The operator corrected it, and a
+Drive search confirmed all 15 covers exist and have since 2026-07-29.
+
+They are **cover images, not the in-body visuals** Batch 1 has. Batch 1's
+rows above track a rendered explanatory graphic per article, produced from
+an HTML source in the article folder via `render_visual.py`, with PNG and
+WebP beside it. Batch 2's covers are 1200x630 WebP files that live only in
+each article's Drive folder, named `cover-<slug>-1200x630.webp`. No HTML
+source and no repo copy, so `render_visual.py` cannot regenerate them.
+
+Two consequences worth stating plainly. The covers are the Framer Hero Image
+and nothing else; a Batch 2 article still has no in-body graphic, which is a
+real gap against Batch 1. And because the only copy is in Drive, the
+no-delete rule matters here as much as it does for the docs.
+
+Hero Image is an asset field, so it cannot be CSV-imported. It is uploaded
+per article in the CMS after the import.
+
+| # | Article | Cover in Drive | KB | In Framer |
+|---|---------|:--------------:|---:|:---------:|
+| 13 | how-to-sell-fractional-real-estate | + | 38 | |
+| 15 | real-estate-etfs-vs-fractional | + | 31 | |
+| 16 | real-estate-vs-index-funds-retirement | + | 83 | |
+| 19 | single-family-vs-multifamily-fractional | + | 92 | |
+| 26 | fractional-real-estate-vs-other-investments | + | 95 | |
+| 27 | legal-tax-guide-fractional-real-estate | + | 14 | |
+| 29 | proptech-future-of-real-estate | + | 18 | |
+| - | debt-vs-equity-fractional | + | 17 | |
+| - | fractional-real-estate-ira | + | 81 | |
+| - | how-to-choose-fractional-real-estate-platform | + | 29 | |
+| - | how-to-read-reg-a-offering-circular | + | 16 | |
+| - | proptech-trends-2026 | + | 68 | |
+| - | real-estate-as-an-asset-class | + | 20 | |
+| - | reit-dividend-taxation | + | 57 | |
+| - | tokenized-vs-traditional-fractional | + | 93 | |
+
+Drive folder numbers are filled in only where this repo has recorded them
+(see the operator's numbering directive, incident-log 2026-08-14). The rest
+are known by slug; look the folder up rather than guessing a number.
+
+## Batch 3 (cover images done, in Drive only)
+
+Same situation, found in the same 2026-08-17 sweep. All 9 covers exist,
+created 2026-08-04, same naming and same 1200x630 WebP form, Drive only.
+Batch 3 has not been opened for work yet, so these rows exist to record that
+the assets are there and nothing needs producing.
+
+| Article | Cover in Drive | KB | In Framer |
+|---------|:--------------:|---:|:---------:|
+| diversifying-across-fractional-platforms | + | 83 | |
+| fractional-real-estate-401k-rollover | + | 37 | |
+| fractional-real-estate-for-retirees | + | 17 | |
+| fractional-real-estate-high-income-earners | + | 36 | |
+| fractional-real-estate-vs-bonds | + | 23 | |
+| how-to-verify-fractional-real-estate-platform | + | 38 | |
+| questions-to-ask-fractional-platform | + | 12 | |
+| red-flags-fractional-offering-circular | + | 31 | |
+| reinvesting-fractional-real-estate-distributions | + | 12 | |
