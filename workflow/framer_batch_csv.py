@@ -350,7 +350,22 @@ def faq_slugs_for(slug: str, body_md: str, sep: str = ', ') -> str:
     return sep.join(slugs)
 
 
-def row_for(slug: str, hero_style='download', category='', faq_sep=', '):
+def category_value(name: str, by: str) -> str:
+    """How the Blog Categories multi-reference is addressed.
+
+    Slug by default. The first import sent the display name, "Taxes", and the
+    category came back empty: a live Batch 1 page renders its category in the
+    hero, and ours rendered nothing there. FAQ S, the other multi-reference on
+    this collection, resolved fine when it was given item slugs, so slug is
+    the form that is known to work for a multi-reference here.
+    """
+    if not name or by == 'name':
+        return name
+    return re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
+
+
+def row_for(slug: str, hero_style='download', category='', faq_sep=', ',
+            category_by='slug'):
     """Return (row_dict, problems)."""
     src = BLOG / slug / 'draft-v2-humanized.md'
     if not src.exists():
@@ -437,7 +452,8 @@ def row_for(slug: str, hero_style='download', category='', faq_sep=', '):
         'Hero Image': (HERO_URL_STYLES[hero_style].format(id=HERO_FILE_IDS[slug])
                        if slug in HERO_FILE_IDS else ''),
         'Author': AUTHOR_NAME,
-        'Blog Categories': category or CATEGORIES.get(slug, ''),
+        'Blog Categories': category_value(category or CATEGORIES.get(slug, ''),
+                                          category_by),
         'FAQ S': faq_s,
     }
     if slug not in HERO_FILE_IDS:
@@ -458,6 +474,10 @@ def main():
                     default='download',
                     help='URL shape for the Drive cover image; try another if '
                          'Framer will not fetch the default')
+    ap.add_argument('--category-by', choices=['slug', 'name'], default='slug',
+                    help='how Blog Categories addresses the Categories item. '
+                         'Default slug: sending the display name on 2026-08-17 '
+                         'left the category empty on the live page')
     ap.add_argument('--faq-sep', default=', ',
                     help='separator between FAQ slugs in the FAQ S column; '
                          'change it if the import reads the list as one value')
@@ -478,7 +498,7 @@ def main():
     rows, blocked = [], []
     for s in slugs:
         row, problems = row_for(s, args.hero_url_style, args.category,
-                                args.faq_sep)
+                                args.faq_sep, args.category_by)
         if problems:
             blocked.append((s, problems))
             continue
