@@ -21,11 +21,16 @@ The invented editor persona that previously held this slot is retired. It was co
 - **Quotable:** No. The byline is the article's voice; quotes attributed to Youssef are not placed in body content.
 - **Status:** Confirmed. Already carried by `real-estate-as-an-asset-class`, applied by Youssef himself in the round-2 Drive doc, and the default byline for the rest of Batch 2.
 
-### Omar - title pending
+### Omar Elghazaly
 
-- **Byline string:** pending. Needs a surname and a title from the operator before any post can use it.
+- **Byline string:** `Omar Elghazaly`
 - **Role on post:** Author byline
-- **Status:** Approved as a permitted byline by the operator on 2026-08-16, but not yet usable. Until the full name and title land here, posts use the Youssef byline. Do not guess a surname or title.
+- **Appears in:** `author` field (YAML frontmatter or Production Notes), ArticleHero component, AuthorCard component
+- **Bio (canonical):** pending. Needs one sentence from the operator, in the shape of Youssef's above.
+- **Quotable:** No, same rule as the Youssef byline.
+- **Title:** none on file. The operator supplied the name on 2026-08-17 and no title with it, so the byline runs as the bare name. That is a valid form here: `fractional-real-estate-ira` shipped a bare-name byline before this directive. Add a title only when the operator gives one; inventing one would put a false role under a real person's name.
+- **Status:** Usable. No article is assigned to this byline yet; all 15 Batch 2 articles carry the Youssef byline. Reassignment is a per-article operator decision, not a default.
+- **Spelling:** supplied as `omar-elghazaly`, which is handle form. Rendered here as `Omar Elghazaly`. Correct this line if the capitalisation differs.
 
 ### Retired: the previous editor persona
 
