@@ -103,14 +103,20 @@ def main():
     ap.add_argument('--question-field', default='Question')
     ap.add_argument('--answer-field', default='Answer')
     ap.add_argument('--article-field', default='Article')
-    ap.add_argument('--article-by', choices=['title', 'slug'], default='title',
-                    help='what the Article reference is matched on')
+    ap.add_argument('--article-by', choices=['title', 'slug'], default='slug',
+                    help='what the Article reference is matched on. Default is '
+                         'slug: the 2026-08-17 import sent titles and every '
+                         'Article cell came back empty')
     ap.add_argument('--slug-style', choices=['prefixed', 'bare'],
                     default='prefixed',
                     help='prefixed cannot collide with the 73 items already in '
                          'the collection; bare copies their convention')
-    ap.add_argument('--status', default='Draft',
-                    help='Draft by default: these articles are not live yet')
+    ap.add_argument('--status', default=None,
+                    help='NOT recommended. Framer does not map a Status column '
+                         'onto its built-in publish state; the 2026-08-17 '
+                         'import created a second, junk field called Status '
+                         'instead, and the real state defaulted to Live. Omit '
+                         'this and set the publish state in the CMS')
     ap.add_argument('--check', action='store_true')
     args = ap.parse_args()
 
@@ -120,7 +126,9 @@ def main():
         return 2
 
     fields = [args.question_field, args.answer_field, args.article_field,
-              'Slug', 'Status']
+              'Slug']
+    if args.status:
+        fields.append('Status')
     rows, empty, seen_slugs = [], [], {}
     for s in slugs:
         src = BLOG / s / 'draft-v2-humanized.md'
@@ -152,7 +160,7 @@ def main():
                 args.answer_field: a,
                 args.article_field: title if args.article_by == 'title' else s,
                 'Slug': slug_val,
-                'Status': args.status,
+                **({'Status': args.status} if args.status else {}),
             })
         print(f'  ok  {s}: {len(pairs)} question(s)')
 
@@ -167,8 +175,9 @@ def main():
     print(f'\n{len(rows)} question(s) from {len(slugs) - len(empty)} article(s)')
     print(f'answers {min(lens)} to {max(lens)} chars')
     print(f'columns: {", ".join(fields)}')
-    print(f'Article reference matched by {args.article_by}; Status={args.status}; '
-          f'slug style={args.slug_style}')
+    print(f'Article reference matched by {args.article_by}; '
+          f'slug style={args.slug_style}; '
+          f'Status column {"included" if args.status else "omitted"}')
     if args.slug_style == 'bare':
         print('WARNING: bare slugs can match an item already in the collection, '
               'which Framer treats as an update. Check against the existing 73 '
