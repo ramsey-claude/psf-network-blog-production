@@ -74,6 +74,7 @@ Usage:
 """
 import argparse
 import csv
+import json
 import importlib.util
 import re
 import sys
@@ -156,7 +157,7 @@ BATCH2 = [
 # script: importing one as plain text either fails or blanks the reference.
 FIELDS = ['Title', 'Slug', 'Date', 'Excerpt', 'Meta Description', 'Keywords',
           'TL;DR', 'Sources', 'Content', 'Hero Image', 'Author',
-          'Blog Categories', 'FAQ S']
+          'Blog Categories', 'FAQ S', 'FAQ Schema']
 
 HERO_PLACEHOLDER = re.compile(r'^\s*\[VISUAL-[A-Z0-9-]+\]\s*$', re.MULTILINE)
 H1 = re.compile(r'^#\s+.*$', re.MULTILINE)
@@ -165,6 +166,9 @@ QUICK_ANSWER = re.compile(
     re.MULTILINE | re.DOTALL | re.IGNORECASE)
 SOURCES = re.compile(r'^##\s*Sources[^\n]*\n(.*?)(?=^##\s|\Z)',
                      re.MULTILINE | re.DOTALL | re.IGNORECASE)
+FAQ_SECTION = re.compile(
+    r'^##\s*(?:Frequently Asked Questions|FAQ)[^\n]*\n(.*?)(?=^##\s|\Z)',
+    re.MULTILINE | re.DOTALL | re.IGNORECASE)
 
 
 # The risk paragraph that closes a Quick Answer is italic in the Batch 1
@@ -287,6 +291,42 @@ def split_dek(body_md: str):
     return dek.strip(), stripped
 
 
+def _faq_module():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        'framer_faq_csv', Path(__file__).resolve().parent / 'framer_faq_csv.py')
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def faq_jsonld(slug: str, body_md: str) -> str:
+    """FAQPage JSON-LD for the FAQ Schema field.
+
+    Needed because removing the FAQ from Content removes the schema with it.
+    The site builds FAQPage in the browser by walking headings that end in a
+    question mark, and a Batch 2 article's own H2s are statements, so the only
+    question-format headings it had were the FAQ ones. The accordion is not
+    headings, so it does not feed that script. Publishing the schema as data
+    keeps it independent of how the questions happen to be marked up.
+
+    Shape matches what the page's own script emits, so the two cannot disagree
+    if both ever run.
+    """
+    pairs = _faq_module().faq_pairs(body_md)
+    if not pairs:
+        return ''
+    return json.dumps({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+            {'@type': 'Question', 'name': q,
+             'acceptedAnswer': {'@type': 'Answer', 'text': a[:800]}}
+            for q, a in pairs
+        ],
+    }, ensure_ascii=False)
+
+
 def faq_slugs_for(slug: str, body_md: str, sep: str = ', ') -> str:
     """The FAQ item slugs this article's questions were exported under.
 
@@ -298,11 +338,7 @@ def faq_slugs_for(slug: str, body_md: str, sep: str = ', ') -> str:
     imported here lazily: it imports this one at module level, and a top-level
     import in both directions would not load.
     """
-    import importlib.util
-    spec = importlib.util.spec_from_file_location(
-        'framer_faq_csv', Path(__file__).resolve().parent / 'framer_faq_csv.py')
-    faq = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(faq)
+    faq = _faq_module()
     slugs = [f'{slug}-{faq.slugify(q)}'[:100] for q, _ in faq.faq_pairs(body_md)]
     return sep.join(slugs)
 
@@ -321,10 +357,14 @@ def row_for(slug: str, hero_style='download', category='', faq_sep=', '):
 
     dek, body_md = split_dek(body_md)
     faq_s = faq_slugs_for(slug, body_md, faq_sep)
+    faq_schema = faq_jsonld(slug, body_md)
     tldr = quick_answer_prose(body_md)
     sources = sources_plain(body_md)
-    # Sources move to their own field, so drop the section from the body.
+    # Sources and FAQ move to their own fields, so drop both sections from the
+    # body. Leaving the FAQ in shipped it twice on the first published page:
+    # once as headings from Content and once as the accordion from FAQ S.
     body_md = SOURCES.sub('', body_md)
+    body_md = FAQ_SECTION.sub('', body_md)
     content = _mpk.md_to_html(body_md)
 
     declared = notes.get('slug', '').strip().strip('/')
@@ -393,6 +433,7 @@ def row_for(slug: str, hero_style='download', category='', faq_sep=', '):
         'Author': AUTHOR_NAME,
         'Blog Categories': category,
         'FAQ S': faq_s,
+        'FAQ Schema': faq_schema,
     }
     if slug not in HERO_FILE_IDS:
         problems.append('no cover image recorded for this slug')
