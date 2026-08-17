@@ -159,6 +159,26 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **Fix:** Switched Stage 9 to Drive REST API via `workflow/drive_cli.py` with OAuth (project `my-project-82896`). Upload with `mimeType: application/vnd.google-apps.document` triggers Drive-side docx-to-gdoc conversion.
 - **Rule:** Drive MCP is forbidden for Stage 9. See Active Rules > Tooling.
 
+### 2026-08-17: placeholder FAQ text is live on two Batch 1 articles
+
+- **Stage:** live site
+- **Symptom:** `square-foot-real-estate-ownership-explained` and
+  `what-is-proptech` render an accordion entry reading "This is a question?"
+  with the answer "This is an answer". Verified in the fetched HTML: the text
+  sits inside a real `<button aria-expanded>` accordion item, not in a script
+  block and with no hiding class, so readers see it.
+- **Cause:** two placeholder items in the FAQs collection, both Live, both
+  with an empty Article reference. Found while importing Batch 2's FAQs.
+- **Not yet fixed.** Operator deferred the Batch 1 pass; recorded here so it
+  is not lost. Also open on the same sweep: `reits-vs-fractional-real-estate`
+  still 404s, which the 2026-08-11 audit flagged as closing 18 dead internal
+  links; a duplicate "Can I invest in a Reg D offering if I'm not accredited?"
+  under two slugs; and an orphan Draft copy of the Reg A vs Reg D question
+  with no Article.
+- **Scope note:** deleting placeholder rows from a CMS collection is not a
+  content edit to a published article, so the frozen-batch rule does not
+  block it. It is still the operator's call.
+
 ### 2026-05-14: sec.gov returns 403 to WebFetch and curl
 - **Stage:** 1 (Research & evidence)
 - **Symptom:** WebFetch and curl both got 403 from `www.sec.gov/...` even with browser User-Agent. Blocked anti-bot.
