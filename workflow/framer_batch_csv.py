@@ -350,18 +350,37 @@ def faq_slugs_for(slug: str, body_md: str, sep: str = ', ') -> str:
     return sep.join(slugs)
 
 
+# The Categories collection's real slugs, read off the CMS on 2026-08-17.
+# Four of the six are template leftovers that have nothing to do with the
+# label, which is why slugifying the display name silently produced values
+# that match no item. Never derive these; they are data, not a transformation.
+CATEGORY_SLUGS = {
+    'Getting Started': 'cms',
+    'Fundamentals': 'basics',
+    'Comparisons': 'pro-tips',
+    'Reviews': 'updates',
+    'Risk': 'risk',
+    'Taxes': 'taxes',
+}
+
+
 def category_value(name: str, by: str) -> str:
     """How the Blog Categories multi-reference is addressed.
 
-    Slug by default. The first import sent the display name, "Taxes", and the
-    category came back empty: a live Batch 1 page renders its category in the
-    hero, and ours rendered nothing there. FAQ S, the other multi-reference on
-    this collection, resolved fine when it was given item slugs, so slug is
-    the form that is known to work for a multi-reference here.
+    Slug by default, looked up rather than derived. Slugifying the label was
+    right for Risk and Taxes by coincidence and wrong for the other four:
+    Getting Started is "cms", Fundamentals is "basics", Comparisons is
+    "pro-tips", Reviews is "updates". Twelve of the fifteen Batch 2 articles
+    would have shipped pointing at a category that does not exist.
+
+    Worth stating because it cost time: a single-article category cannot be
+    verified from the live site. A page shows its category through the strip
+    of other posts in it, so a category holding one article shows nothing, and
+    there are no category listing URLs. The CMS record is the only check.
     """
     if not name or by == 'name':
         return name
-    return re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
+    return CATEGORY_SLUGS.get(name, re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-'))
 
 
 def row_for(slug: str, hero_style='download', category='', faq_sep=', ',
