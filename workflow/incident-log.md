@@ -159,6 +159,45 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **Fix:** Switched Stage 9 to Drive REST API via `workflow/drive_cli.py` with OAuth (project `my-project-82896`). Upload with `mimeType: application/vnd.google-apps.document` triggers Drive-side docx-to-gdoc conversion.
 - **Rule:** Drive MCP is forbidden for Stage 9. See Active Rules > Tooling.
 
+### 2026-08-17: Batch 2 published, 15 of 15 live and verified
+
+- **Stage:** 8 (Publish)
+- **Outcome:** all 15 Batch 2 articles are live and audited against the live
+  HTML: category correct on every one, FAQ accordion at the expected 6 or 7
+  entries with no duplicate in the body, TL;DR, Sources block, both tables,
+  hero image, byline and internal links present everywhere.
+- **BATCH 2 IS NOW FROZEN.** The published-batches rule (2026-08-13) applies
+  from this moment: no sweep, retrofit, wording pass or rule backfill touches
+  these 15 drafts. Changes happen per article, on an explicit instruction,
+  through the full pipeline.
+- **Route:** CSV import rather than manual paste. `framer_batch_csv.py` for
+  the Articles collection, `framer_faq_csv.py` for the 94 FAQ items. Import
+  order matters: FAQs first so the items exist, then Articles so FAQ S
+  resolves.
+- **Known and accepted:** these pages carry no FAQPage JSON-LD. The site
+  builds that schema in the browser from headings ending in a question mark,
+  and the FAQ headings were the only ones feeding it on most articles.
+  proptech-trends-2026 is the exception, since one of its body H2s is written
+  as a question. The CMS FAQ Schema field does not work (operator, 2026-08-17).
+- **Also open, template-side not content-side:** every article page carries
+  two H1s, the title and a component reading "Start from square one". Batch 1
+  has the same pair.
+
+### 2026-08-17: Framer serves an identical shell for minutes after publish
+
+- **Stage:** 8 (Publish) verification
+- **Symptom:** immediately after publishing 14 articles, every one of their
+  URLs returned HTTP 200 with no category, no FAQ, no TL;DR, no Sources and
+  no tables. Read literally, the batch had shipped empty.
+- **Root cause:** the pages were not built yet. All 14 responses were
+  byte-identical, 26,934 bytes, same md5, title "PSFnetwork", no H1, body
+  consisting of Framer's bootstrap script. An article verified complete
+  minutes earlier returned the same shell, which is what gave it away.
+- **Rule:** after publishing, check response size before reading content. A
+  real article page is 350 to 400 KB; anything near 27 KB is the shell and
+  the audit has to wait. Identical byte counts across several URLs are the
+  tell.
+
 ### 2026-08-17: placeholder FAQ text is live on two Batch 1 articles
 
 - **Stage:** live site
