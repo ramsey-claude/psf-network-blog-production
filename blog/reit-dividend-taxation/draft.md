@@ -12,7 +12,7 @@
 
 - **Canonical URL:** https://www.psfnetwork.com/blog/reit-dividend-taxation
 
-- **Hero visual alt text:** An investor at a desk matching boxes on a 1099-DIV form to three labeled jars marked ordinary income, capital gain, and return of capital.
+- **Hero visual alt text:** An investor matching boxes on a 1099-DIV form to jars marked ordinary income, capital gain, and return of capital.
 
 - **Hero visual size:** 1200x630 px
 

@@ -12,7 +12,7 @@
 
 - **Canonical URL:** https://www.psfnetwork.com/blog/proptech-trends-2026
 
-- **Hero visual alt text:** Investor reviewing a real estate technology dashboard on a laptop showing property data, ownership records, and distribution charts.
+- **Hero visual alt text:** Investor reviewing a real estate technology dashboard showing property data, ownership records, and distribution charts.
 
 - **Hero visual size:** 1200x630 px
 
@@ -198,7 +198,7 @@ If the appeal of property is the income and the ownership rather than the buzzwo
 
 1. U.S. Securities and Exchange Commission, Regulation A: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation)
 
-2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding](https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding)
+2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding)
 
 3. U.S. Securities and Exchange Commission, Accredited Investors: [https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors](https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors)
 

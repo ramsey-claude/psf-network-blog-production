@@ -12,7 +12,7 @@
 
 - Canonical URL: https://www.psfnetwork.com/blog/real-estate-vs-index-funds-retirement
 
-- Hero visual alt text: A split illustration showing a small apartment building on one side and a rising stock index chart on the other, with a retirement savings dashboard between them.
+- Hero visual alt text: Split illustration: a small apartment building, a rising stock index chart, and a retirement savings dashboard.
 
 - Hero visual size: 1200x630
 

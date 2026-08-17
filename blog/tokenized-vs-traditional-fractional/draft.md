@@ -12,7 +12,7 @@
 
 - **Canonical URL:** https://www.psfnetwork.com/blog/tokenized-vs-traditional-fractional
 
-- **Hero visual alt text:** Split illustration comparing a blockchain token wallet on one side and an LLC share certificate on the other, both pointing to the same apartment building.
+- **Hero visual alt text:** Split illustration of a blockchain token wallet and an LLC share certificate pointing to the same apartment building.
 
 - **Hero size:** 1200x630
 
@@ -182,7 +182,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 1. U.S. Securities and Exchange Commission, Regulation A: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation)
 
-2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding](https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding)
+2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding)
 
 3. U.S. Securities and Exchange Commission, Accredited Investors: [https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors](https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors)
 

@@ -12,7 +12,7 @@
 
 - **Secondary keywords:** real estate ETF, fractional real estate investing, REIT ETF, fractional real estate vs ETF, passive real estate income
 
-- **Hero visual alt text:** Split illustration contrasting a stock-ticker real estate ETF with a single building divided into fractional square-foot shares.
+- **Hero visual alt text:** Split illustration of a stock-ticker real estate ETF beside a building divided into fractional square-foot shares.
 
 - **Hero size:** 1600x900 px
 

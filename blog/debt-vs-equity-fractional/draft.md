@@ -8,7 +8,7 @@
 
 - Slug: debt-vs-equity-fractional · Canonical: https://www.psfnetwork.com/blog/debt-vs-equity-fractional
 
-- Hero alt: Split illustration contrasting a fractional real estate debt position paying fixed interest with an equity position sharing in rent and appreciation
+- Hero alt: Split illustration: a debt position paying fixed interest beside an equity position sharing rent and appreciation.
 
 - Schema: Article, FAQPage · Author: Youssef Kholeif, CMO · Reviewer: Daniel Cho, CFA · Read time: 10 min · Published/Updated: 2026-06-19
 

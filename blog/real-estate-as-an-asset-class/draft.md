@@ -12,7 +12,7 @@
 
 - Canonical URL: https://www.psfnetwork.com/blog/real-estate-as-an-asset-class
 
-- Hero visual alt text: A small apartment building set beside stacked coins and a rising line chart, illustrating real estate as one asset class among several.
+- Hero visual alt text: A small apartment building beside stacked coins and a rising line chart, showing real estate as one asset class.
 
 - Hero visual size: 1200 x 630 px
 

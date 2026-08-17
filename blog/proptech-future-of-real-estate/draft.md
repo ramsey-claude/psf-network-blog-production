@@ -12,7 +12,7 @@
 
 - Canonical URL: https://www.psfnetwork.com/blog/proptech-future-of-real-estate
 
-- Hero visual alt text: A laptop showing a fractional real estate dashboard beside a city skyline, illustrating property technology reshaping real estate investing.
+- Hero visual alt text: A laptop showing a fractional real estate dashboard beside a city skyline, illustrating property technology at work.
 
 - Hero size: 1200x630
 
@@ -163,7 +163,7 @@ This article is for general educational purposes and does not constitute investm
 
 1. U.S. Securities and Exchange Commission, Regulation A: https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation
 
-2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding
+2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding
 
 3. U.S. Securities and Exchange Commission, Accredited Investors: https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors
 

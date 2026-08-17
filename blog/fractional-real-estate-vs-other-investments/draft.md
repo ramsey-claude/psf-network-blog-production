@@ -16,7 +16,7 @@
 
 - Canonical URL: https://www.psfnetwork.com/blog/fractional-real-estate-vs-other-investments
 
-- Hero visual alt text: A decision map comparing fractional real estate against REITs, ETFs, index funds, and crowdfunding across liquidity, control, and income.
+- Hero visual alt text: A decision map comparing fractional real estate with REITs, ETFs, index funds, and crowdfunding on liquidity and income.
 
 - Schema types: Article, FAQPage
 
@@ -180,7 +180,7 @@ Before committing capital, read the offering documents, study the fees and liqui
 
 1. U.S. Securities and Exchange Commission, Regulation A: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation)
 
-2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding](https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding)
+2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding)
 
 3. U.S. Securities and Exchange Commission, Accredited Investors: [https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors](https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors)
 

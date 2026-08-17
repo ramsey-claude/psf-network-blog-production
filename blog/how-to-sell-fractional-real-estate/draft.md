@@ -6,7 +6,7 @@
 
 - Slug: how-to-sell-fractional-real-estate · Canonical: https://www.psfnetwork.com/blog/how-to-sell-fractional-real-estate
 
-- Hero alt: Illustration of a single fractional property share being handed from one investor to another across a marketplace listing screen. (1200x630)
+- Hero alt: Illustration of a fractional property share passing from one investor to another on a marketplace listing screen.
 
 - Schema: Article + FAQPage · Author: Youssef Kholeif, CMO · Reviewer: Daniel Cho, CFA · Read time: 8 min · Published/Updated: 2026-06-19
 
