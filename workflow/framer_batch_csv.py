@@ -17,10 +17,14 @@ wrong is expensive:
     is what we want for Batch 2, since all fifteen slugs currently 404, but
     it also means a typo in a slug silently produces a duplicate rather than
     an error.
-  - Author, Hero Image, Blog Categories and FAQ S are reference or asset
-    fields. They are deliberately NOT columns here. Importing them as plain
-    text either fails or, worse, blanks the reference on an existing item.
-    They are set in the CMS after the import.
+  - FAQ S is a multi-reference and is never a column. Importing a reference
+    as plain text either fails or, worse, blanks it on an existing item.
+  - Hero Image, Author and Blog Categories ARE columns, as an attempt rather
+    than a certainty. Hero Image carries a Drive URL for Framer to fetch and
+    Author carries the Author item's name for Framer to match. Whether the
+    import maps either one is unverified, because it can only be answered in
+    the import UI. If it will not, --no-refs drops all three and they go back
+    to being set by hand; nothing else in the file changes.
 
 The field split is not a guess. It was read off a live Batch 1 page
 (what-is-proptech, fetched 2026-08-17) and matched against that article's
@@ -83,6 +87,50 @@ _spec = importlib.util.spec_from_file_location(
 _mpk = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_mpk)
 
+# Cover images live only in Drive, one per article folder, named
+# cover-<slug>-1200x630.webp (see workflow/visuals-tracker.md). Hero Image is
+# an asset field, so a CSV can only offer Framer a URL to fetch. Whether it
+# fetches one is untested: drive.google.com is blocked from the cloud session
+# that wrote this, so the URLs below were built from verified file IDs but the
+# fetch itself has to be confirmed in the import UI.
+#
+# Every one of these files is currently shared as "anyone: writer", which is
+# what makes an unauthenticated fetch possible at all. That is also broader
+# than the job needs, and it is flagged in visuals-tracker.md.
+#
+# If Framer rejects the default URL form, --hero-url-style offers the two
+# other shapes Drive serves images through, so the retry does not need a code
+# change.
+HERO_FILE_IDS = {
+    'debt-vs-equity-fractional': '1qfLSF3_eykRt9csDyPKhMyF2Mcblydwb',
+    'fractional-real-estate-ira': '154dHiuk1r36A9FrMr5cTQXl8y5c0p-dh',
+    'fractional-real-estate-vs-other-investments': '1aH0BEOUnwDgFJ9IwYkBGwsUdqDiCSl2b',
+    'how-to-choose-fractional-real-estate-platform': '1hCtqouxtlCOqRdCVRgKQs8OOG-6EPlGQ',
+    'how-to-read-reg-a-offering-circular': '1T1m-IhmgDkpRec4M3H8hgxgMlFhwsEmm',
+    'legal-tax-guide-fractional-real-estate': '1KUhv3XusWgoYQLADv7hlAyA4I5s2XxuJ',
+    'proptech-future-of-real-estate': '1uH-HuDoC6vwwVByIrhJQFa2aJHy5rvSg',
+    'proptech-trends-2026': '1j1VlHsf4iLjYFVFxOdMJGgb81RzC3lO4',
+    'real-estate-as-an-asset-class': '1Se9E_vf3QiFV93ubdYPqVG3jKY5FYUMm',
+    'real-estate-etfs-vs-fractional': '1J5_RodWgP_VKqIWz4sLqs_pIzoXrCju7',
+    'real-estate-vs-index-funds-retirement': '1RrL8yY0RtK3jvWkGFRZZvqe1Cy09w4aT',
+    'reit-dividend-taxation': '1oTFNB1lqlxiPyLbvGzUrSmkD2YUHlWPZ',
+    'single-family-vs-multifamily-fractional': '1gsvNfrVdQSdlceKD33OgaTNHsoUwmTAe',
+    'tokenized-vs-traditional-fractional': '19f2izxyc3FaSCDZtHlYVXxkgwkHaLYbH',
+    'how-to-sell-fractional-real-estate': '1poxF2es7J_c-MTllDWfNr0okPSPQ7wSD',
+}
+
+HERO_URL_STYLES = {
+    'download': 'https://drive.google.com/uc?export=download&id={id}',
+    'view': 'https://drive.google.com/uc?export=view&id={id}',
+    'lh3': 'https://lh3.googleusercontent.com/d/{id}',
+}
+
+# The Author collection item's name, read off the live Batch 1 page, where the
+# byline renders as "Youssef Kholeif" with the title in a separate line. A
+# reference is matched by that name, so the CMS string is the bare name even
+# though brand/personas.md records the byline as "Youssef Kholeif, CMO".
+AUTHOR_NAME = 'Youssef Kholeif'
+
 BATCH2 = [
     'debt-vs-equity-fractional',
     'fractional-real-estate-ira',
@@ -107,7 +155,8 @@ BATCH2 = [
 # no Sources block. Every reference and asset field stays out, per that
 # script: importing one as plain text either fails or blanks the reference.
 FIELDS = ['Title', 'Slug', 'Date', 'Excerpt', 'Meta Description', 'Keywords',
-          'TL;DR', 'Sources', 'Content']
+          'TL;DR', 'Sources', 'Content', 'Hero Image', 'Author',
+          'Blog Categories']
 
 HERO_PLACEHOLDER = re.compile(r'^\s*\[VISUAL-[A-Z0-9-]+\]\s*$', re.MULTILINE)
 H1 = re.compile(r'^#\s+.*$', re.MULTILINE)
@@ -238,7 +287,7 @@ def split_dek(body_md: str):
     return dek.strip(), stripped
 
 
-def row_for(slug: str):
+def row_for(slug: str, hero_style='download', category=''):
     """Return (row_dict, problems)."""
     src = BLOG / slug / 'draft-v2-humanized.md'
     if not src.exists():
@@ -318,7 +367,13 @@ def row_for(slug: str):
         'TL;DR': tldr,
         'Sources': sources,
         'Content': content,
+        'Hero Image': (HERO_URL_STYLES[hero_style].format(id=HERO_FILE_IDS[slug])
+                       if slug in HERO_FILE_IDS else ''),
+        'Author': AUTHOR_NAME,
+        'Blog Categories': category,
     }
+    if slug not in HERO_FILE_IDS:
+        problems.append('no cover image recorded for this slug')
     return row, problems
 
 
@@ -329,6 +384,18 @@ def main():
     ap.add_argument('-o', '--out', default='framer-import.csv')
     ap.add_argument('--check', action='store_true',
                     help='report and write nothing')
+    ap.add_argument('--hero-url-style', choices=sorted(HERO_URL_STYLES),
+                    default='download',
+                    help='URL shape for the Drive cover image; try another if '
+                         'Framer will not fetch the default')
+    ap.add_argument('--no-refs', action='store_true',
+                    help='drop the Hero Image, Author and Blog Categories '
+                         'columns, for when the import will not map them')
+    ap.add_argument('--category', default='',
+                    help='value for Blog Categories, applied to every row. '
+                         'Left empty by default: the Batch 2 drafts carry no '
+                         'category field, and guessing one would invent a '
+                         'taxonomy')
     args = ap.parse_args()
 
     slugs = args.slug or (BATCH2 if args.batch2 else [])
@@ -338,7 +405,7 @@ def main():
 
     rows, blocked = [], []
     for s in slugs:
-        row, problems = row_for(s)
+        row, problems = row_for(s, args.hero_url_style, args.category)
         if problems:
             blocked.append((s, problems))
             continue
@@ -360,16 +427,27 @@ def main():
         return 1
 
     print(f'\n{len(rows)} row(s) ready, {len(blocked)} skipped')
-    print('Not in this CSV, set them in the CMS after importing: '
-          'Hero Image, Author, Blog Categories, FAQ S, Featured.')
+    if not args.category:
+        print('Blog Categories is empty: pass --category to fill it, or set it '
+              'in the CMS.')
+    print('Never in this CSV, always set in the CMS: FAQ S, Featured.')
+    print('Hero Image and Author are URLs and names for Framer to resolve. '
+          'If the import will not map them, clear them with --no-refs and set '
+          'both by hand.')
 
     if args.check:
         print('--check given, nothing written')
         return 1 if blocked else 0
 
+    fields = FIELDS
+    if args.no_refs:
+        drop = {'Hero Image', 'Author', 'Blog Categories'}
+        fields = [f for f in FIELDS if f not in drop]
+        rows = [{k: v for k, v in r.items() if k not in drop} for r in rows]
+
     out = Path(args.out).expanduser()
     with out.open('w', newline='', encoding='utf-8') as f:
-        w = csv.DictWriter(f, fieldnames=FIELDS, quoting=csv.QUOTE_ALL)
+        w = csv.DictWriter(f, fieldnames=fields, quoting=csv.QUOTE_ALL)
         w.writeheader()
         w.writerows(rows)
     print(f'written to {out}')
