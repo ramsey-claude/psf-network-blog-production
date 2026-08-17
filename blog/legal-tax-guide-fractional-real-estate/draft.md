@@ -175,7 +175,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 5. Internal Revenue Service, Qualified Business Income Deduction (Section 199A): [https://www.irs.gov/newsroom/qualified-business-income-deduction](https://www.irs.gov/newsroom/qualified-business-income-deduction)
 
-6. Internal Revenue Service, One Big Beautiful Bill: Business Tax Provisions: [https://www.irs.gov/newsroom/one-big-beautiful-bill-act-tax-deductions-for-working-americans-and-seniors](https://www.irs.gov/newsroom/one-big-beautiful-bill-act-tax-deductions-for-working-americans-and-seniors)
+6. Internal Revenue Service, Working Families Tax Cuts: Tax Deductions for Working Americans and Seniors: [https://www.irs.gov/newsroom/working-families-tax-cuts-tax-deductions-for-working-americans-and-seniors](https://www.irs.gov/newsroom/working-families-tax-cuts-tax-deductions-for-working-americans-and-seniors)
 
 7. U.S. Securities and Exchange Commission, EDGAR Full Text Search: [https://www.sec.gov/edgar/search/](https://www.sec.gov/edgar/search/)
 

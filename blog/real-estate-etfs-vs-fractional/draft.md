@@ -181,7 +181,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 2. Internal Revenue Service, Instructions for Form 1120-REIT (90% distribution requirement): [https://www.irs.gov/instructions/i1120rei](https://www.irs.gov/instructions/i1120rei)
 
-3. Investor.gov, Mutual Funds and Exchange-Traded Funds (ETFs): [https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1](https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1)
+3. Investor.gov, Mutual Funds and Exchange-Traded Funds (ETFs): [https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs/mutual-funds](https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs/mutual-funds)
 
 4. Investor.gov, Real Estate Investment Trusts (REITs): [https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits)
 

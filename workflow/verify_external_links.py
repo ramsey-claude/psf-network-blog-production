@@ -187,10 +187,25 @@ def main():
 
     blocked = [u for u in dead if results[u][0] == '000']
 
+    # A 403 from these hosts is anti-bot, not a broken URL. sec.gov rejects
+    # automated agents from any machine regardless of User-Agent
+    # (incident-log 2026-05-14), and ecfr.gov answers with a
+    # unblock.federalregister.gov interstitial. curl cannot decide whether
+    # such a URL is live, so the report must not call it dead: a human has to
+    # open it in a real browser. Learned the hard way on 2026-08-17, when a
+    # verification run from an unblocked machine returned 403 for all 14
+    # sec.gov URLs and the raw output read as fourteen broken links.
+    ANTIBOT_HOSTS = ('sec.gov', 'ecfr.gov')
+    unverifiable = [u for u in dead
+                    if results[u][0] == '403'
+                    and any(h in u for h in ANTIBOT_HOSTS)]
+    dead = [u for u in dead if u not in unverifiable]
+
     def report(w):
         w('# External link verification\n')
         w(f'{len(urls)} unique URLs, {len(slugs)} articles. '
-          f'{len(ok)} clean, {len(moved)} redirected, {len(dead)} dead.\n')
+          f'{len(ok)} clean, {len(moved)} redirected, {len(dead)} dead, '
+          f'{len(unverifiable)} unverifiable by machine.\n')
         if blocked:
             w('\n**Every dead result below is status 000, which means curl never '
               'reached the host.** That is a local network problem, not a broken '
@@ -200,6 +215,9 @@ def main():
             ('Redirected', moved,
              'these resolve today only because the publisher redirects them; '
              'update the draft to the final URL'),
+            ('Unverifiable by machine', unverifiable,
+             'the host blocks automated agents, so a 403 here says nothing '
+             'about whether the page exists. Open each one in a real browser'),
         ):
             if not group:
                 continue
