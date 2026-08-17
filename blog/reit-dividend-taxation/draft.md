@@ -183,5 +183,5 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 5. Internal Revenue Service, Topic No. 409 Capital Gains and Losses: [https://www.irs.gov/taxtopics/tc409](https://www.irs.gov/taxtopics/tc409)
 
-6. U.S. Securities and Exchange Commission, Investor Bulletin: Real Estate Investment Trusts (REITs): [https://www.sec.gov/resources-investors/investor-alerts-bulletins/investor-bulletin-real-estate-investment-trusts-reits](https://www.sec.gov/resources-investors/investor-alerts-bulletins/investor-bulletin-real-estate-investment-trusts-reits)
+6. Investor.gov (U.S. Securities and Exchange Commission), Real Estate Investment Trusts (REITs): [https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits)
 

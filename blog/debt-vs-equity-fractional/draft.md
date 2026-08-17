@@ -156,7 +156,7 @@ PSFnetwork offers equity fractional ownership measured per square foot and tied 
 
 ## Sources
 
-- U.S. Securities and Exchange Commission, Regulation A: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-a](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-a)
+- U.S. Securities and Exchange Commission, Regulation A: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation)
 
 - U.S. Securities and Exchange Commission, Accredited Investors: [https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors](https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors)
 
