@@ -17,8 +17,9 @@ wrong is expensive:
     is what we want for Batch 2, since all fifteen slugs currently 404, but
     it also means a typo in a slug silently produces a duplicate rather than
     an error.
-  - FAQ S is a multi-reference and is never a column. Importing a reference
-    as plain text either fails or, worse, blanks it on an existing item.
+  - FAQ S is a multi-reference and IS a column, holding the FAQ item slugs.
+    Framer treats it and the FAQs collection's own Article reference as two
+    independent fields, so importing the FAQ side alone leaves this empty.
   - Hero Image, Author and Blog Categories ARE columns, as an attempt rather
     than a certainty. Hero Image carries a Drive URL for Framer to fetch and
     Author carries the Author item's name for Framer to match. Whether the
@@ -37,11 +38,8 @@ which CMS field:
     against blog/what-is-proptech/draft.md.
   - Sources holds the source list as plain text; the template prints the
     "Sources:" label itself.
-  - faq_schema is left empty on purpose. The site builds FAQPage JSON-LD in
-    the browser by walking every h2/h3 whose text ends in a question mark and
-    taking the following prose as the answer. Nothing needs to be authored,
-    and the schema appears as long as the FAQ questions are headings in
-    Content.
+  - The FAQ is not in the body either. It lives in the FAQs collection and is
+    reached through FAQ S; see below.
 
 What is stripped from Content, and why:
 
@@ -54,18 +52,23 @@ What is stripped from Content, and why:
   - The Sources section, which moves to the Sources field. Leaving it in
     Content would print the sources inside the article body, where Batch 1
     does not have them.
+  - The FAQ section, which moves to the FAQs collection.
 
 What is deliberately kept in Content: the Quick Answer section, even though
 its prose also goes into TL;DR. That is the live Batch 1 arrangement, not an
-oversight. And the FAQ, as an H2 with H3 questions.
+oversight.
 
-The FAQ is the one thing a CSV cannot place properly. Batch 1 links FAQ
-entries through FAQ S, a multi-reference to a separate collection, which an
-Articles import cannot populate. Left inside Content the questions render as
-ordinary headings rather than an accordion, which looks different from Batch
-1 but keeps the SEO, since the schema script reads headings and does not care
-whether they came from a reference. Moving them into the collection later is
-possible without touching Content.
+The FAQ is removed from Content and lives only in the FAQs collection, reached
+through FAQ S. Leaving it in shipped the questions twice on the first
+published page, once as headings and once as the accordion.
+
+One consequence, accepted by the operator on 2026-08-17: these articles ship
+without FAQPage JSON-LD. The site builds that schema in the browser from
+headings ending in a question mark, and a Batch 2 article's own H2s are
+statements, so the FAQ headings were the only ones feeding it. The CMS has a
+FAQ Schema field that looks like the place to put the schema instead, but the
+operator reports it does not work, so it is not written to. Do not add it back
+without testing it on a live page first.
 
 Usage:
     python3 workflow/framer_batch_csv.py --batch2 -o ~/Desktop/batch2-framer.csv
@@ -74,7 +77,6 @@ Usage:
 """
 import argparse
 import csv
-import json
 import importlib.util
 import re
 import sys
@@ -157,7 +159,7 @@ BATCH2 = [
 # script: importing one as plain text either fails or blanks the reference.
 FIELDS = ['Title', 'Slug', 'Date', 'Excerpt', 'Meta Description', 'Keywords',
           'TL;DR', 'Sources', 'Content', 'Hero Image', 'Author',
-          'Blog Categories', 'FAQ S', 'FAQ Schema']
+          'Blog Categories', 'FAQ S']
 
 HERO_PLACEHOLDER = re.compile(r'^\s*\[VISUAL-[A-Z0-9-]+\]\s*$', re.MULTILINE)
 H1 = re.compile(r'^#\s+.*$', re.MULTILINE)
@@ -300,33 +302,6 @@ def _faq_module():
     return m
 
 
-def faq_jsonld(slug: str, body_md: str) -> str:
-    """FAQPage JSON-LD for the FAQ Schema field.
-
-    Needed because removing the FAQ from Content removes the schema with it.
-    The site builds FAQPage in the browser by walking headings that end in a
-    question mark, and a Batch 2 article's own H2s are statements, so the only
-    question-format headings it had were the FAQ ones. The accordion is not
-    headings, so it does not feed that script. Publishing the schema as data
-    keeps it independent of how the questions happen to be marked up.
-
-    Shape matches what the page's own script emits, so the two cannot disagree
-    if both ever run.
-    """
-    pairs = _faq_module().faq_pairs(body_md)
-    if not pairs:
-        return ''
-    return json.dumps({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        'mainEntity': [
-            {'@type': 'Question', 'name': q,
-             'acceptedAnswer': {'@type': 'Answer', 'text': a[:800]}}
-            for q, a in pairs
-        ],
-    }, ensure_ascii=False)
-
-
 def faq_slugs_for(slug: str, body_md: str, sep: str = ', ') -> str:
     """The FAQ item slugs this article's questions were exported under.
 
@@ -357,7 +332,6 @@ def row_for(slug: str, hero_style='download', category='', faq_sep=', '):
 
     dek, body_md = split_dek(body_md)
     faq_s = faq_slugs_for(slug, body_md, faq_sep)
-    faq_schema = faq_jsonld(slug, body_md)
     tldr = quick_answer_prose(body_md)
     sources = sources_plain(body_md)
     # Sources and FAQ move to their own fields, so drop both sections from the
@@ -433,7 +407,6 @@ def row_for(slug: str, hero_style='download', category='', faq_sep=', '):
         'Author': AUTHOR_NAME,
         'Blog Categories': category,
         'FAQ S': faq_s,
-        'FAQ Schema': faq_schema,
     }
     if slug not in HERO_FILE_IDS:
         problems.append('no cover image recorded for this slug')
