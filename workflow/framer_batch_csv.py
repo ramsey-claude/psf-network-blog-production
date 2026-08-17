@@ -134,6 +134,38 @@ HERO_URL_STYLES = {
 # though brand/personas.md records the byline as "Youssef Kholeif, CMO".
 AUTHOR_NAME = 'Youssef Kholeif'
 
+# Blog Categories, assigned per article on 2026-08-17 by reading each draft's
+# focus keyword, H2 spine and Quick Answer against the six categories the CMS
+# offers: Getting Started, Fundamentals, Comparisons, Reviews, Risk, Taxes.
+#
+# Two calls worth explaining, since neither is obvious from a title alone.
+# how-to-choose is Getting Started rather than Reviews: it hands a first-timer
+# four criteria and never renders a verdict on a named platform, which is what
+# the Reviews category holds. how-to-sell is Risk rather than Getting Started:
+# its subject is illiquidity, lockups, secondary-market discounts and how long
+# an exit takes, not how to begin.
+#
+# Reviews ends up with nothing. Batch 2 contains no platform review; that
+# article is Batch 1's best-fractional-real-estate-platforms. An empty
+# category here is the honest result rather than a gap to fill.
+CATEGORIES = {
+    'debt-vs-equity-fractional': 'Comparisons',
+    'fractional-real-estate-ira': 'Taxes',
+    'fractional-real-estate-vs-other-investments': 'Comparisons',
+    'how-to-choose-fractional-real-estate-platform': 'Getting Started',
+    'how-to-read-reg-a-offering-circular': 'Risk',
+    'legal-tax-guide-fractional-real-estate': 'Taxes',
+    'proptech-future-of-real-estate': 'Fundamentals',
+    'proptech-trends-2026': 'Fundamentals',
+    'real-estate-as-an-asset-class': 'Fundamentals',
+    'real-estate-etfs-vs-fractional': 'Comparisons',
+    'real-estate-vs-index-funds-retirement': 'Comparisons',
+    'reit-dividend-taxation': 'Taxes',
+    'single-family-vs-multifamily-fractional': 'Comparisons',
+    'tokenized-vs-traditional-fractional': 'Comparisons',
+    'how-to-sell-fractional-real-estate': 'Risk',
+}
+
 BATCH2 = [
     'debt-vs-equity-fractional',
     'fractional-real-estate-ira',
@@ -405,7 +437,7 @@ def row_for(slug: str, hero_style='download', category='', faq_sep=', '):
         'Hero Image': (HERO_URL_STYLES[hero_style].format(id=HERO_FILE_IDS[slug])
                        if slug in HERO_FILE_IDS else ''),
         'Author': AUTHOR_NAME,
-        'Blog Categories': category,
+        'Blog Categories': category or CATEGORIES.get(slug, ''),
         'FAQ S': faq_s,
     }
     if slug not in HERO_FILE_IDS:
@@ -433,10 +465,9 @@ def main():
                     help='drop the Hero Image, Author and Blog Categories '
                          'columns, for when the import will not map them')
     ap.add_argument('--category', default='',
-                    help='value for Blog Categories, applied to every row. '
-                         'Left empty by default: the Batch 2 drafts carry no '
-                         'category field, and guessing one would invent a '
-                         'taxonomy')
+                    help='override Blog Categories for every row. Without it '
+                         'each article takes its per-article value from the '
+                         'CATEGORIES map')
     args = ap.parse_args()
 
     slugs = args.slug or (BATCH2 if args.batch2 else [])
@@ -458,6 +489,7 @@ def main():
         print(f'      title {len(row["Title"])}  meta {len(row["Meta Description"])}  '
               f'content {len(row["Content"])} chars  '
               f'internal links {internal} absolute / {relative} relative')
+        print(f'      category {row["Blog Categories"] or "(none)"}')
         print(f'      TL;DR {len(row["TL;DR"])} chars  '
               f'Sources {len(row["Sources"].splitlines())} entries  '
               f'FAQ S {len([x for x in row["FAQ S"].split(",") if x.strip()])} refs')
@@ -470,9 +502,9 @@ def main():
         return 1
 
     print(f'\n{len(rows)} row(s) ready, {len(blocked)} skipped')
-    if not args.category:
-        print('Blog Categories is empty: pass --category to fill it, or set it '
-              'in the CMS.')
+    missing = [r['Slug'] for r in rows if not r['Blog Categories'].strip()]
+    if missing:
+        print(f'Blog Categories empty on: {", ".join(missing)}')
     print('Never in this CSV, always set in the CMS: Featured.')
     print('Hero Image and Author are URLs and names for Framer to resolve. '
           'If the import will not map them, clear them with --no-refs and set '
