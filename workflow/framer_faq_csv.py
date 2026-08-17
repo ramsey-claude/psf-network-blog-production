@@ -11,18 +11,26 @@ Leaving the FAQ inside the article body produces headings instead of an
 accordion. Batch 2 has 94 questions across 15 articles, so entering them by
 hand is not a realistic option.
 
-What this does NOT do: link the items back to their articles. FAQ S is a
-multi-reference, and an import into the FAQ collection cannot populate a
-reference field on a different collection. The linking step is manual, or it
-runs from the article side if the FAQ collection turns out to carry an Article
-reference of its own, in which case the Article Slug column below is already
-the value that field needs.
+The collection is named FAQs and its fields were read off the CMS on
+2026-08-17: Question, Answer, Slug, Status, and Article. That last one is a
+reference back to the Articles collection, which means the link is importable
+from this side and FAQ S does not have to be filled in by hand from the
+article. The Article column carries the article's TITLE, because that is what
+the reference renders in the CMS; --article-by slug switches it if the import
+matches on slug instead.
 
-Column names are a guess and are meant to be edited. The FAQ collection's real
-field names were not observable from the rendered page, only the fact that it
-holds a question and an answer. Check them in the CMS and pass --question-field
-and --answer-field if they differ, rather than renaming the header by hand each
-time.
+Slugs are the one place this deviates from what the collection already
+contains. The existing 73 items use a bare slugified question, with a numeric
+suffix on collision (are-these-platforms-safe-2). Copying that convention
+would risk a Batch 2 question slugifying onto an existing Batch 1 item's slug,
+and Framer treats a slug match as an update, so a published Batch 1 FAQ would
+be silently overwritten. The default here prefixes the article slug, which
+cannot collide with anything already there. --slug-style bare reproduces the
+existing convention, with in-batch collisions suffixed, for when matching the
+convention matters more than the safety margin.
+
+Status defaults to Draft. Importing 94 items straight to Live would publish
+FAQ entries for articles that are not published yet.
 
 Both draft FAQ shapes are handled: the Batch 2 "### question" heading form, and
 the Batch 1 "**Q: ...**" / "A: ..." pair form.
@@ -94,6 +102,15 @@ def main():
     ap.add_argument('-o', '--out', default='framer-faq.csv')
     ap.add_argument('--question-field', default='Question')
     ap.add_argument('--answer-field', default='Answer')
+    ap.add_argument('--article-field', default='Article')
+    ap.add_argument('--article-by', choices=['title', 'slug'], default='title',
+                    help='what the Article reference is matched on')
+    ap.add_argument('--slug-style', choices=['prefixed', 'bare'],
+                    default='prefixed',
+                    help='prefixed cannot collide with the 73 items already in '
+                         'the collection; bare copies their convention')
+    ap.add_argument('--status', default='Draft',
+                    help='Draft by default: these articles are not live yet')
     ap.add_argument('--check', action='store_true')
     args = ap.parse_args()
 
@@ -102,8 +119,9 @@ def main():
         print('nothing to do: pass --batch2 or --slug', file=sys.stderr)
         return 2
 
-    fields = [args.question_field, args.answer_field, 'Slug', 'Article Slug']
-    rows, empty = [], []
+    fields = [args.question_field, args.answer_field, args.article_field,
+              'Slug', 'Status']
+    rows, empty, seen_slugs = [], [], {}
     for s in slugs:
         src = BLOG / s / 'draft-v2-humanized.md'
         if not src.exists():
@@ -111,20 +129,30 @@ def main():
         if not src.exists():
             empty.append((s, 'no draft'))
             continue
-        _, body = _fb._mpk.split_notes(src.read_text(encoding='utf-8'))
+        notes, body = _fb._mpk.split_notes(src.read_text(encoding='utf-8'))
+        title = _fb._mpk.parse_notes(notes).get('title', '').strip()
+        if args.article_by == 'title' and not title:
+            empty.append((s, 'no Title, cannot fill the Article reference'))
+            continue
         pairs = faq_pairs(body)
         if not pairs:
             empty.append((s, 'no FAQ section found'))
             continue
         for q, a in pairs:
+            # Framer identifies an item by slug. Prefixed slugs cannot hit an
+            # existing item; bare ones can, so they are de-duplicated within
+            # the batch the way the collection already does it.
+            base = slugify(q) if args.slug_style == 'bare' else f'{s}-{slugify(q)}'
+            base = base[:100]
+            n = seen_slugs.get(base, 0) + 1
+            seen_slugs[base] = n
+            slug_val = base if n == 1 else f'{base}-{n}'
             rows.append({
                 args.question_field: q,
                 args.answer_field: a,
-                # Framer identifies an item by slug, so give each question a
-                # stable one derived from the article and the question. Without
-                # it a re-import creates duplicates rather than updating.
-                'Slug': f'{s}-{slugify(q)}'[:100],
-                'Article Slug': s,
+                args.article_field: title if args.article_by == 'title' else s,
+                'Slug': slug_val,
+                'Status': args.status,
             })
         print(f'  ok  {s}: {len(pairs)} question(s)')
 
@@ -139,9 +167,12 @@ def main():
     print(f'\n{len(rows)} question(s) from {len(slugs) - len(empty)} article(s)')
     print(f'answers {min(lens)} to {max(lens)} chars')
     print(f'columns: {", ".join(fields)}')
-    print('Article Slug is a helper, not a Framer field. Map it only if the '
-          'FAQ collection has a reference back to the article; otherwise leave '
-          'it unmapped and link FAQ S from the article side.')
+    print(f'Article reference matched by {args.article_by}; Status={args.status}; '
+          f'slug style={args.slug_style}')
+    if args.slug_style == 'bare':
+        print('WARNING: bare slugs can match an item already in the collection, '
+              'which Framer treats as an update. Check against the existing 73 '
+              'before importing.')
 
     if args.check:
         print('--check given, nothing written')
