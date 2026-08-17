@@ -22,6 +22,23 @@ wrong is expensive:
     text either fails or, worse, blanks the reference on an existing item.
     They are set in the CMS after the import.
 
+The field split is not a guess. It was read off a live Batch 1 page
+(what-is-proptech, fetched 2026-08-17) and matched against that article's
+repo draft, which showed exactly which draft sections the template expects in
+which CMS field:
+
+  - The live body renders only the Quick Answer section and the article's
+    question H2s. It contains no Sources heading and no FAQ heading.
+  - TL;DR holds the Quick Answer prose, verbatim. Confirmed word for word
+    against blog/what-is-proptech/draft.md.
+  - Sources holds the source list as plain text; the template prints the
+    "Sources:" label itself.
+  - faq_schema is left empty on purpose. The site builds FAQPage JSON-LD in
+    the browser by walking every h2/h3 whose text ends in a question mark and
+    taking the following prose as the answer. Nothing needs to be authored,
+    and the schema appears as long as the FAQ questions are headings in
+    Content.
+
 What is stripped from Content, and why:
 
   - The H1. Framer renders the Title field as the page heading, so leaving
@@ -30,10 +47,21 @@ What is stripped from Content, and why:
   - The [VISUAL-HERO-XX] placeholder. It is an instruction to a designer,
     not copy, and it would render as a literal paragraph of bracket text.
   - The Production Notes block, which is not part of the published body.
+  - The Sources section, which moves to the Sources field. Leaving it in
+    Content would print the sources inside the article body, where Batch 1
+    does not have them.
 
-What is kept: everything else, Sources included. The dek is kept in Content
-AND copied into Excerpt, because Excerpt feeds listing cards while Content
-feeds the page; dropping it from Content would lose the standfirst.
+What is deliberately kept in Content: the Quick Answer section, even though
+its prose also goes into TL;DR. That is the live Batch 1 arrangement, not an
+oversight. And the FAQ, as an H2 with H3 questions.
+
+The FAQ is the one thing a CSV cannot place properly. Batch 1 links FAQ
+entries through FAQ S, a multi-reference to a separate collection, which an
+Articles import cannot populate. Left inside Content the questions render as
+ordinary headings rather than an accordion, which looks different from Batch
+1 but keeps the SEO, since the schema script reads headings and does not care
+whether they came from a reference. Moving them into the collection later is
+possible without touching Content.
 
 Usage:
     python3 workflow/framer_batch_csv.py --batch2 -o ~/Desktop/batch2-framer.csv
@@ -73,12 +101,109 @@ BATCH2 = [
     'how-to-sell-fractional-real-estate',
 ]
 
-# Column set is copied from the skill's framer_export.py rather than widened.
-# That script's author left out every reference and asset field on purpose.
-FIELDS = ['Title', 'Slug', 'Date', 'Excerpt', 'Meta Description', 'Keywords', 'Content']
+# The skill's framer_export.py stops at Content. TL;DR and Sources are added
+# here because the live Batch 1 page proves the template renders both as their
+# own blocks, and an import that leaves them empty ships a blank TL;DR box and
+# no Sources block. Every reference and asset field stays out, per that
+# script: importing one as plain text either fails or blanks the reference.
+FIELDS = ['Title', 'Slug', 'Date', 'Excerpt', 'Meta Description', 'Keywords',
+          'TL;DR', 'Sources', 'Content']
 
 HERO_PLACEHOLDER = re.compile(r'^\s*\[VISUAL-[A-Z0-9-]+\]\s*$', re.MULTILINE)
 H1 = re.compile(r'^#\s+.*$', re.MULTILINE)
+QUICK_ANSWER = re.compile(
+    r'^##\s*(?:Quick Answer|The 60-Second Version)[^\n]*\n(.*?)(?=^##\s)',
+    re.MULTILINE | re.DOTALL | re.IGNORECASE)
+SOURCES = re.compile(r'^##\s*Sources[^\n]*\n(.*?)(?=^##\s|\Z)',
+                     re.MULTILINE | re.DOTALL | re.IGNORECASE)
+
+
+# The risk paragraph that closes a Quick Answer is italic in the Batch 1
+# drafts and plain prose in several Batch 2 ones, so an italics test alone
+# lets it through into TL;DR. Batch 1's live TL;DR does not carry it, and a
+# summary field is the wrong place for boilerplate: the page has its own
+# Disclaimer block.
+#
+# Matched on phrases that only ever appear in the disclaimer, never in the
+# analysis. Deliberately NOT a sentence-anchored pattern: the boilerplate runs
+# to two or three sentences and only the first carries a marker, so anchoring
+# to the whole paragraph matched nothing. "carry risk" is written out in full
+# rather than as a stem, so analytical prose like "equity carries more risk"
+# is left alone. Applied only inside the Quick Answer section, where the
+# disclaimer is a known closing paragraph.
+RISK_MARKERS = re.compile(
+    r'\b(loss of principal|past performance|projections do not predict|'
+    r'investments? carry risk|carry risk, including|involves? risk, including|'
+    r'not tax advice|not investment advice)\b', re.IGNORECASE)
+
+
+def is_risk_boilerplate(par: str) -> bool:
+    # The length gate is a backstop: a genuine analytical paragraph that
+    # mentions principal loss should survive, and disclaimers are short.
+    return bool(RISK_MARKERS.search(par)) and len(par) <= 400
+
+
+def plain(md: str) -> str:
+    """Flatten inline markdown to plain text for the plain-text CMS fields."""
+    md = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'\1', md)
+    md = re.sub(r'\*\*([^*]+)\*\*', r'\1', md)
+    md = re.sub(r'(?<!\*)\*([^*\n]+)\*(?!\*)', r'\1', md)
+    return re.sub(r'\s+', ' ', md).strip()
+
+
+def quick_answer_prose(body_md: str) -> str:
+    """The Quick Answer section's prose, minus its stat cards and disclaimer.
+
+    Batch 1's live TL;DR is exactly this text. The stat cards are a bulleted
+    list and the risk line is italic; both are furniture around the summary
+    rather than part of it, and TL;DR is a plain-text field that cannot show
+    either as anything but run-on prose.
+    """
+    m = QUICK_ANSWER.search(body_md)
+    if not m:
+        return ''
+    keep = []
+    for para in m.group(1).split('\n\n'):
+        s = para.strip()
+        if not s:
+            continue
+        if s.startswith(('-', '*', '>')) or re.match(r'^\*\*Stat cards', s, re.I):
+            continue
+        if re.match(r'^\*[^*].*\*$', s):          # italic risk/disclaimer line
+            continue
+        if re.match(r'^\*\*Key (numbers|figures)', s, re.I):
+            continue
+        if is_risk_boilerplate(s):
+            continue
+        keep.append(plain(s))
+    return ' '.join(keep).strip()
+
+
+def sources_plain(body_md: str) -> str:
+    """The Sources list as plain text, one entry per line, links kept as URLs.
+
+    Batch 1's Sources field reads "Publisher, "Title", https://..." per entry.
+    The Batch 2 drafts write the URL as a markdown link whose anchor text is
+    the URL itself, so the anchor is dropped and the href kept, which would
+    otherwise print every address twice.
+    """
+    m = SOURCES.search(body_md)
+    if not m:
+        return ''
+    out = []
+    for line in m.group(1).split('\n'):
+        s = line.strip()
+        if not s or s.startswith('---'):
+            continue
+        s = re.sub(r'^\d+\.\s*', '', s)
+        s = re.sub(r'^-\s*', '', s)
+        # [https://x](https://x) -> https://x, and [Link](https://x) -> https://x
+        s = re.sub(r'\[[^\]]*\]\((https?://[^)]+)\)', r'\1', s)
+        s = re.sub(r'\*\*([^*]+)\*\*', r'\1', s)
+        s = re.sub(r'\s+', ' ', s).strip().rstrip('.')
+        if s:
+            out.append(s)
+    return '\n'.join(out)
 
 
 def split_dek(body_md: str):
@@ -126,6 +251,10 @@ def row_for(slug: str):
     notes = _mpk.parse_notes(notes_raw)
 
     dek, body_md = split_dek(body_md)
+    tldr = quick_answer_prose(body_md)
+    sources = sources_plain(body_md)
+    # Sources move to their own field, so drop the section from the body.
+    body_md = SOURCES.sub('', body_md)
     content = _mpk.md_to_html(body_md)
 
     declared = notes.get('slug', '').strip().strip('/')
@@ -144,6 +273,12 @@ def row_for(slug: str):
         problems.append('an H1 survived into Content')
     if '[VISUAL' in content:
         problems.append('a visual placeholder survived into Content')
+    if re.search(r'>Sources<', content):
+        problems.append('a Sources heading survived into Content')
+    if not tldr:
+        problems.append('no Quick Answer section found, TL;DR would ship empty')
+    if not sources:
+        problems.append('no Sources section found')
 
     # make_paste_kit.parse_notes has no alias for the secondary-keyword field,
     # so reading it through notes silently yields nothing and Keywords ships
@@ -180,6 +315,8 @@ def row_for(slug: str):
         'Excerpt': dek,
         'Meta Description': notes.get('meta_description', ''),
         'Keywords': keywords,
+        'TL;DR': tldr,
+        'Sources': sources,
         'Content': content,
     }
     return row, problems
@@ -212,6 +349,8 @@ def main():
         print(f'      title {len(row["Title"])}  meta {len(row["Meta Description"])}  '
               f'content {len(row["Content"])} chars  '
               f'internal links {internal} absolute / {relative} relative')
+        print(f'      TL;DR {len(row["TL;DR"])} chars  '
+              f'Sources {len(row["Sources"].splitlines())} entries')
 
     for s, problems in blocked:
         print(f'  SKIP {s}: {"; ".join(problems)}', file=sys.stderr)
