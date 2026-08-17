@@ -156,7 +156,7 @@ BATCH2 = [
 # script: importing one as plain text either fails or blanks the reference.
 FIELDS = ['Title', 'Slug', 'Date', 'Excerpt', 'Meta Description', 'Keywords',
           'TL;DR', 'Sources', 'Content', 'Hero Image', 'Author',
-          'Blog Categories']
+          'Blog Categories', 'FAQ S']
 
 HERO_PLACEHOLDER = re.compile(r'^\s*\[VISUAL-[A-Z0-9-]+\]\s*$', re.MULTILINE)
 H1 = re.compile(r'^#\s+.*$', re.MULTILINE)
@@ -287,7 +287,27 @@ def split_dek(body_md: str):
     return dek.strip(), stripped
 
 
-def row_for(slug: str, hero_style='download', category=''):
+def faq_slugs_for(slug: str, body_md: str, sep: str = ', ') -> str:
+    """The FAQ item slugs this article's questions were exported under.
+
+    FAQ S is a multi-reference on Articles, and Article is a reference on FAQs.
+    Framer treats those as two independent fields rather than two ends of one
+    relation, so importing the FAQ side leaves FAQ S empty, which is what the
+    first pass produced. Filling it needs the same slugs framer_faq_csv.py
+    writes, so that module is the single source of the slug rule and is
+    imported here lazily: it imports this one at module level, and a top-level
+    import in both directions would not load.
+    """
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        'framer_faq_csv', Path(__file__).resolve().parent / 'framer_faq_csv.py')
+    faq = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(faq)
+    slugs = [f'{slug}-{faq.slugify(q)}'[:100] for q, _ in faq.faq_pairs(body_md)]
+    return sep.join(slugs)
+
+
+def row_for(slug: str, hero_style='download', category='', faq_sep=', '):
     """Return (row_dict, problems)."""
     src = BLOG / slug / 'draft-v2-humanized.md'
     if not src.exists():
@@ -300,6 +320,7 @@ def row_for(slug: str, hero_style='download', category=''):
     notes = _mpk.parse_notes(notes_raw)
 
     dek, body_md = split_dek(body_md)
+    faq_s = faq_slugs_for(slug, body_md, faq_sep)
     tldr = quick_answer_prose(body_md)
     sources = sources_plain(body_md)
     # Sources move to their own field, so drop the section from the body.
@@ -371,9 +392,12 @@ def row_for(slug: str, hero_style='download', category=''):
                        if slug in HERO_FILE_IDS else ''),
         'Author': AUTHOR_NAME,
         'Blog Categories': category,
+        'FAQ S': faq_s,
     }
     if slug not in HERO_FILE_IDS:
         problems.append('no cover image recorded for this slug')
+    if not faq_s:
+        problems.append('no FAQ questions found, FAQ S would ship empty')
     return row, problems
 
 
@@ -388,6 +412,9 @@ def main():
                     default='download',
                     help='URL shape for the Drive cover image; try another if '
                          'Framer will not fetch the default')
+    ap.add_argument('--faq-sep', default=', ',
+                    help='separator between FAQ slugs in the FAQ S column; '
+                         'change it if the import reads the list as one value')
     ap.add_argument('--no-refs', action='store_true',
                     help='drop the Hero Image, Author and Blog Categories '
                          'columns, for when the import will not map them')
@@ -405,7 +432,8 @@ def main():
 
     rows, blocked = [], []
     for s in slugs:
-        row, problems = row_for(s, args.hero_url_style, args.category)
+        row, problems = row_for(s, args.hero_url_style, args.category,
+                                args.faq_sep)
         if problems:
             blocked.append((s, problems))
             continue
@@ -417,7 +445,8 @@ def main():
               f'content {len(row["Content"])} chars  '
               f'internal links {internal} absolute / {relative} relative')
         print(f'      TL;DR {len(row["TL;DR"])} chars  '
-              f'Sources {len(row["Sources"].splitlines())} entries')
+              f'Sources {len(row["Sources"].splitlines())} entries  '
+              f'FAQ S {len([x for x in row["FAQ S"].split(",") if x.strip()])} refs')
 
     for s, problems in blocked:
         print(f'  SKIP {s}: {"; ".join(problems)}', file=sys.stderr)
@@ -430,7 +459,7 @@ def main():
     if not args.category:
         print('Blog Categories is empty: pass --category to fill it, or set it '
               'in the CMS.')
-    print('Never in this CSV, always set in the CMS: FAQ S, Featured.')
+    print('Never in this CSV, always set in the CMS: Featured.')
     print('Hero Image and Author are URLs and names for Framer to resolve. '
           'If the import will not map them, clear them with --no-refs and set '
           'both by hand.')
@@ -441,7 +470,7 @@ def main():
 
     fields = FIELDS
     if args.no_refs:
-        drop = {'Hero Image', 'Author', 'Blog Categories'}
+        drop = {'Hero Image', 'Author', 'Blog Categories', 'FAQ S'}
         fields = [f for f in FIELDS if f not in drop]
         rows = [{k: v for k, v in r.items() if k not in drop} for r in rows]
 
