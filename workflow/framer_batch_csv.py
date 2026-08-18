@@ -134,6 +134,13 @@ HERO_URL_STYLES = {
 # though brand/personas.md records the byline as "Youssef Kholeif, CMO".
 AUTHOR_NAME = 'Youssef Kholeif'
 
+# Author is a reference, and like Blog Categories it did not resolve from the
+# display name: the 2026-08-17 import left the byline unrendered on all 15.
+# The slug is not on file yet, so this is a placeholder to be corrected from
+# the CMS Author collection the same way the category slugs were. Do not
+# assume it is the slugified name; four of the six category slugs were not.
+AUTHOR_SLUG = 'youssef-kholeif'
+
 # Blog Categories, assigned per article on 2026-08-17 by reading each draft's
 # focus keyword, H2 spine and Quick Answer against the six categories the CMS
 # offers: Getting Started, Fundamentals, Comparisons, Reviews, Risk, Taxes.
@@ -384,7 +391,7 @@ def category_value(name: str, by: str) -> str:
 
 
 def row_for(slug: str, hero_style='download', category='', faq_sep=', ',
-            category_by='slug'):
+            category_by='slug', author_by='slug'):
     """Return (row_dict, problems)."""
     src = BLOG / slug / 'draft-v2-humanized.md'
     if not src.exists():
@@ -470,7 +477,7 @@ def row_for(slug: str, hero_style='download', category='', faq_sep=', ',
         'Content': content,
         'Hero Image': (HERO_URL_STYLES[hero_style].format(id=HERO_FILE_IDS[slug])
                        if slug in HERO_FILE_IDS else ''),
-        'Author': AUTHOR_NAME,
+        'Author': AUTHOR_SLUG if author_by == 'slug' else AUTHOR_NAME,
         'Blog Categories': category_value(category or CATEGORIES.get(slug, ''),
                                           category_by),
         'FAQ S': faq_s,
@@ -493,6 +500,13 @@ def main():
                     default='download',
                     help='URL shape for the Drive cover image; try another if '
                          'Framer will not fetch the default')
+    ap.add_argument('--author-by', choices=['slug', 'name'], default='slug',
+                    help='how the Author reference is addressed. Sending the '
+                         'name on 2026-08-17 left the byline unrendered on all '
+                         '15 pages')
+    ap.add_argument('--author-slug', default=None,
+                    help='override AUTHOR_SLUG once the real value is read off '
+                         'the CMS Author collection')
     ap.add_argument('--category-by', choices=['slug', 'name'], default='slug',
                     help='how Blog Categories addresses the Categories item. '
                          'Default slug: sending the display name on 2026-08-17 '
@@ -509,6 +523,8 @@ def main():
                          'CATEGORIES map')
     args = ap.parse_args()
 
+    if args.author_slug:
+        globals()['AUTHOR_SLUG'] = args.author_slug
     slugs = args.slug or (BATCH2 if args.batch2 else [])
     if not slugs:
         print('nothing to do: pass --batch2 or --slug', file=sys.stderr)
@@ -517,7 +533,7 @@ def main():
     rows, blocked = [], []
     for s in slugs:
         row, problems = row_for(s, args.hero_url_style, args.category,
-                                args.faq_sep, args.category_by)
+                                args.faq_sep, args.category_by, args.author_by)
         if problems:
             blocked.append((s, problems))
             continue
