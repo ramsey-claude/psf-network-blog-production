@@ -93,36 +93,21 @@ Drive folder numbers are filled in only where this repo has recorded them
 (see the operator's numbering directive, incident-log 2026-08-14). The rest
 are known by slug; look the folder up rather than guessing a number.
 
-## Cover composition: keep text out of the crop zone
+## Cover composition
 
-Found 2026-08-17, after Batch 2 went live. The blog listing card is
-`aspect-ratio: 1.44928`. A 1200x630 cover is 1.9048. Under `object-fit:
-cover` with `object-position: center`, the card scales the image to its
-height and overflows the width by 31%, cutting **15.7% off each side**.
+Full production spec: **`brand/cover-image-spec.md`**.
 
-Batch 2's covers put their headline hard against the left edge, roughly 15%
-in, which is exactly where the cut lands:
+The short version, found 2026-08-17 after Batch 2 went live with its
+headlines cut off on the listing. The card container is 1.44928 and a
+1200x630 cover is 1.90476, so `object-fit: cover` with `object-position:
+center` discards **143 px from each side**, 12% of the width. Batch 2's
+covers set their headline at about x=180, just inside that line.
 
-    "You own hundreds of buildings."  ->  "wn hundreds of buildings."
-    "Property in your IRA?"           ->  "erty in your IRA?"
-    "Signing up is easy."             ->  "gning up is easy."
+Keep every word inside **x = 200 to x = 1000**. Nothing is lost vertically.
 
-Batch 1 is unaffected because its covers are charts and diagrams composed
-centrally; losing the outer 15% costs nothing readable.
-
-Nothing is wrong with the files. They are clean 1200x630 in Drive, and it is
-not a WebP problem either, though the format split is real: Batch 1 is PNG
-and Batch 2 is WebP. The mismatch is card ratio against image ratio.
-
-**Rule for any future cover:** keep every word inside the middle 68% of the
-width. Anything in the outer 15.7% on either side will be cut on the listing,
-however good it looks in Drive.
-
-The template-side fixes, in order of least disruption: set the card's
-`object-position` to `left`, which preserves left-aligned headlines and
-sacrifices the photo on the right; or set the card `aspect-ratio` to
-1200/630, which shows every cover whole but changes card height across the
-listing.
+Batch 1 escapes it because its covers are charts composed centrally. It is
+not a WebP problem, though the format split is real: Batch 1 is PNG and
+Batch 2 is WebP.
 
 ## Batch 3 (cover images done, in Drive only)
 
