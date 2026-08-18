@@ -198,6 +198,25 @@ These are non-negotiable. Re-read this list at the start of every run.
   the audit has to wait. Identical byte counts across several URLs are the
   tell.
 
+### 2026-08-18: mid-rebuild /blog looks broken in the browser too
+
+- **Stage:** 8 (Publish) verification, Batch 2 cover replacement
+- **Symptom:** right after the new-cover import was published, the operator's
+  screenshot of /blog showed each card as two images stacked with the card
+  text missing. Separately, a curl pass minutes later found 7 of the 15
+  article pages serving the 26,934-byte shell and a shared default og:image.
+- **Root cause:** the same post-publish window as the 2026-08-17 shell entry,
+  seen from the browser side. Framer server-renders every card several times,
+  one copy per breakpoint, and hides the extras with `display:none` CSS
+  (`ssr-variant hidden-*` classes). Caught before the stylesheet applies,
+  the duplicates all paint, which reads as stacked images and broken text.
+  Once the rebuild finished, all 15 pages were 380 to 400 KB, each with its
+  own new webp og:image, and the card DOM held one image plus the full text
+  block.
+- **Rule:** the shell rule extends to screenshots. A broken-looking /blog
+  right after a publish is not evidence of a bad import until a hard refresh
+  after the pages come back full-size shows the same thing.
+
 ### 2026-08-17: placeholder FAQ text is live on two Batch 1 articles
 
 - **Stage:** live site

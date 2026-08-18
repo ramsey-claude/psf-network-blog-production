@@ -82,21 +82,28 @@ night also sits in those archive folders and is not the live set.
 
 | # | Article | KB (Jul) | KB (Aug 18) | In Framer |
 |---|---------|---------:|------------:|:---------:|
-| 13 | how-to-sell-fractional-real-estate | 38 | 62 | |
-| 15 | real-estate-etfs-vs-fractional | 31 | 71 | |
-| 16 | real-estate-vs-index-funds-retirement | 83 | 106 | |
-| 19 | single-family-vs-multifamily-fractional | 92 | 106 | |
-| 26 | fractional-real-estate-vs-other-investments | 95 | 127 | |
-| 27 | legal-tax-guide-fractional-real-estate | 14 | 14 | |
-| 29 | proptech-future-of-real-estate | 18 | 72 | |
-| - | debt-vs-equity-fractional | 17 | 18 | |
-| - | fractional-real-estate-ira | 81 | 123 | |
-| - | how-to-choose-fractional-real-estate-platform | 29 | 64 | |
-| - | how-to-read-reg-a-offering-circular | 16 | 17 | |
-| - | proptech-trends-2026 | 68 | 88 | |
-| - | real-estate-as-an-asset-class | 20 | 76 | |
-| - | reit-dividend-taxation | 57 | 73 | |
-| - | tokenized-vs-traditional-fractional | 93 | 116 | |
+| 13 | how-to-sell-fractional-real-estate | 38 | 62 | + |
+| 15 | real-estate-etfs-vs-fractional | 31 | 71 | + |
+| 16 | real-estate-vs-index-funds-retirement | 83 | 106 | + |
+| 19 | single-family-vs-multifamily-fractional | 92 | 106 | + |
+| 26 | fractional-real-estate-vs-other-investments | 95 | 127 | + |
+| 27 | legal-tax-guide-fractional-real-estate | 14 | 14 | + |
+| 29 | proptech-future-of-real-estate | 18 | 72 | + |
+| - | debt-vs-equity-fractional | 17 | 18 | + |
+| - | fractional-real-estate-ira | 81 | 123 | + |
+| - | how-to-choose-fractional-real-estate-platform | 29 | 64 | + |
+| - | how-to-read-reg-a-offering-circular | 16 | 17 | + |
+| - | proptech-trends-2026 | 68 | 88 | + |
+| - | real-estate-as-an-asset-class | 20 | 76 | + |
+| - | reit-dividend-taxation | 57 | 73 | + |
+| - | tokenized-vs-traditional-fractional | 93 | 116 | + |
+
+All 15 replacements were imported and verified live on 2026-08-18: every
+article page serves its own new framerusercontent webp as og:image (15
+distinct assets), and the /blog card DOM carries one image plus the full
+text block per card. The proptech-trends-2026 file was also pulled from
+Drive and decoded: a true 1200x630 VP8 frame with the headline starting at
+about x=200, inside the spec's safe zone.
 
 Twelve of the fifteen gained weight, which is what a recomposed frame should
 do. Three did not: legal-tax-guide at 14 KB, how-to-read-reg-a at 17 KB and
