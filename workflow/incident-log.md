@@ -198,24 +198,45 @@ These are non-negotiable. Re-read this list at the start of every run.
   the audit has to wait. Identical byte counts across several URLs are the
   tell.
 
-### 2026-08-18: mid-rebuild /blog looks broken in the browser too
+### 2026-08-18: /blog cards render image-only; a hand-edit to the Article Card shipped with the cover publish
 
-- **Stage:** 8 (Publish) verification, Batch 2 cover replacement
-- **Symptom:** right after the new-cover import was published, the operator's
-  screenshot of /blog showed each card as two images stacked with the card
-  text missing. Separately, a curl pass minutes later found 7 of the 15
-  article pages serving the 26,934-byte shell and a shared default og:image.
-- **Root cause:** the same post-publish window as the 2026-08-17 shell entry,
-  seen from the browser side. Framer server-renders every card several times,
-  one copy per breakpoint, and hides the extras with `display:none` CSS
-  (`ssr-variant hidden-*` classes). Caught before the stylesheet applies,
-  the duplicates all paint, which reads as stacked images and broken text.
-  Once the rebuild finished, all 15 pages were 380 to 400 KB, each with its
-  own new webp og:image, and the card DOM held one image plus the full text
-  block.
-- **Rule:** the shell rule extends to screenshots. A broken-looking /blog
-  right after a publish is not evidence of a bad import until a hard refresh
-  after the pages come back full-size shows the same thing.
+- **Stage:** live site, found after the Batch 2 cover replacement
+- **Symptom:** every card on /blog renders as a bare cover image. The
+  category chip, title, excerpt, author and date are in the DOM but painted
+  underneath the image. Persisted through a hard refresh, so not the
+  post-publish shell window (the first diagnosis here, which was wrong: 7 of
+  15 article pages really were serving shells at the same moment, but the
+  card breakage is a separate, durable regression).
+- **Root cause:** the image frame inside the grid's Article Card component
+  changed between the 2026-08-17 publish and this one. Verified by diffing
+  the two listing HTMLs rule by rule; exactly three element styles differ,
+  and the breaking one is the card image container:
+  `position:relative; width:100%; height:aspect-ratio(1.44928)` became
+  `position:absolute; top:0; bottom:-25px; left:0; width:99%; height:auto;
+  z-index:1`. Pinned top and bottom, the image stretches over the whole card
+  and z-index lifts it above the text stack; being absolute, it also stops
+  giving the card any height. The per-breakpoint height overrides for the
+  same frame vanished from the CSS in the same publish, which is what Framer
+  does when a layer's positioning is re-edited by hand. A CSV import cannot
+  touch component layout, so this was an editor edit, most plausibly from
+  the 2026-08-17 attempts to fix the cover crop in the editor, published
+  together with the cover import. Two smaller edits rode along: the featured
+  A-Card image frame was restructured (still in flow, looks intact) and
+  Section 2 below the grid gained an aspect-ratio:6 background strip.
+- **Reproduction:** offline render of the live HTML in headless Chromium
+  (framerusercontent is proxy-blocked, so the document and a Drive cover
+  were served by request interception) produced the operator's screenshot
+  exactly: rows of image-only cards, no text.
+- **Fix:** in the Framer editor, either restore the pre-edit version from
+  the Versions panel (CMS content is not rolled back by a version restore,
+  so the new covers survive) or set the Article Card image layer back to
+  relative positioning at 100% width with the 1.449 aspect ratio, then
+  publish.
+- **Rule:** the shell rule stays (check page size before reading content),
+  but a broken layout that survives a hard refresh after pages are back to
+  full size is a design regression, not a build artifact. Diff the live CSS
+  against the last known-good fetch before blaming the rebuild; keep the
+  known-good listing HTML fetch for exactly this comparison.
 
 ### 2026-08-17: placeholder FAQ text is live on two Batch 1 articles
 
