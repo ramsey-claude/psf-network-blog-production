@@ -46,40 +46,7 @@ Batch 1: 12 of 12 produced. 11 of 12 placed in Framer.
   when the article ships. That
   publish also closes the 10 dead internal links pointing at the slug.
 
-## Batch 2 cover refresh (v2, 2026-08-18)
+## Batch 2 (not started)
 
-Not the in-article data visuals (those are still to come, rows below), but
-the 1200x630 hero/og covers. All 15 were regenerated as flat brand art per
-`brand/cover-image-spec.md` after the CMO flagged two covers and the spec
-audit found headlines sitting inside the listing crop zone. Copy deck:
-`brand/cover-copy-batch2-v2.json`. Generator: `workflow/make_cover.py`
-(safe zone pixel-verified per render). Uploaded to the Drive folders
-2026-08-18; old covers moved to each folder's `old version/`.
-
-| # | Article | v2 headline | KB | Uploaded |
-|---|---------|-------------|---:|:--------:|
-| 13 | how-to-sell-fractional-real-estate | Buying takes minutes. Selling can take years. | 62.5 | + |
-| 14 | fractional-real-estate-ira | Your IRA owns the house. You never touch it. | 54.6 | + |
-| 15 | real-estate-etfs-vs-fractional | Own hundreds of buildings. Name none of them. | 52.9 | + |
-| 16 | real-estate-vs-index-funds-retirement | Stocks or property? Two roads to retirement. | 66.4 | + |
-| 17 | debt-vs-equity-fractional | Same building, same day. One lends. One owns. | 62.8 | + |
-| 18 | tokenized-vs-traditional-fractional | A deed in your wallet. Old rules still apply. | 60.7 | + |
-| 19 | single-family-vs-multifamily-fractional | One rent can stop. Eight rarely do. | 53.1 | + |
-| 20 | reit-dividend-taxation | It's called a dividend. It's taxed like wages. | 60.0 | + |
-| 22 | how-to-read-reg-a-offering-circular | The dullest document. Also the most honest. | 59.4 | + |
-| 24 | proptech-trends-2026 | Gadgets get headlines. Law picks the winners. | 67.4 | + |
-| 25 | real-estate-as-an-asset-class | Doesn't move with stocks. That's the point. | 52.7 | + |
-| 26 | fractional-real-estate-vs-other-investments | The sellers are fighting. The products are not. | 60.1 | + |
-| 27 | legal-tax-guide-fractional-real-estate | You bought a slice. A security came along. | 59.8 | + |
-| 28 | how-to-choose-fractional-real-estate-platform | Pick criteria first. The platform follows. | 56.0 | + |
-| 29 | proptech-future-of-real-estate | Not a robot landlord. Same asset. New access. | 83.0 | + |
-
-CMO feedback baked in: 28's inverted "rankings picked themselves" headline
-replaced with the criteria-first argument; 29's vague "who gets in" made
-concrete and the kicker now names real estate ownership. 25 deliberately
-avoids "own clock", the phrase a reviewer flagged as cliche in the body.
-
-## Batch 2 in-article visuals (not started)
-
-Data visuals for the 15 June-2026 articles follow once Batch 1 is placed in
+Visuals for the 15 June-2026 articles follow once Batch 1 is placed in
 Framer. Same stylesheet, same tracker format, rows to be added here.

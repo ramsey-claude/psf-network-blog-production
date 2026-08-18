@@ -7,4 +7,3 @@ __pycache__/
 !blog/**/*.png
 .DS_Store
 .pytest_cache/
-*-card.png
