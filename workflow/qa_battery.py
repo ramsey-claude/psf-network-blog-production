@@ -252,6 +252,20 @@ def check_article(folder: Path):
             f'W9 {len(rel)} relative internal link(s), must be absolute '
             f'(first: {rel[0]})')
 
+    # W10: pre-qualification CTA language. Client decision 2026-08-18 (see
+    # workflow/client-decisions.md): until the offering is qualified, CTAs
+    # drive to the waitlist or homepage and no draft says "invest now".
+    # Narrow on purpose: the word invest is everywhere in this content
+    # legitimately; only the imperative direct-response phrasings are banned.
+    cta = re.findall(
+        r'\binvest (?:now|today)\b|\bstart investing (?:now|today)\b'
+        r'|\bbuy (?:your )?shares? (?:now|today)\b',
+        body, re.IGNORECASE)
+    if cta:
+        warns.append(
+            f'W10 pre-qualification CTA language ({len(cta)}x, '
+            f'first: "{cta[0]}"), not allowed until the offering is qualified')
+
     return slug, fmt, fails, warns
 
 
