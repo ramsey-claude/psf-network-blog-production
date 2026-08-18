@@ -1,0 +1,17 @@
+[
+ {"num": 13, "slug": "how-to-sell-fractional-real-estate", "repo": "what-happens-when-fractional-property-is-sold", "kicker": "Selling your share", "lines": ["Buying takes minutes.", "Selling can take years."], "motif": "split"},
+ {"num": 14, "slug": "fractional-real-estate-ira", "repo": "fractional-real-estate-ira", "kicker": "Property in your IRA", "lines": ["Your IRA owns the house.", "You never touch it."], "motif": "stack"},
+ {"num": 15, "slug": "real-estate-etfs-vs-fractional", "repo": "real-estate-etfs-vs-fractional", "kicker": "Fund or building", "lines": ["Own hundreds of buildings.", "Name none of them."], "motif": "split"},
+ {"num": 16, "slug": "real-estate-vs-index-funds-retirement", "repo": "real-estate-vs-index-funds-retirement", "kicker": "Real estate vs index funds", "lines": ["Stocks or property?", "Two roads to retirement."], "motif": "split"},
+ {"num": 17, "slug": "debt-vs-equity-fractional", "repo": "debt-vs-equity-fractional", "kicker": "Debt vs equity", "lines": ["Same building, same day.", "One lends. One owns."], "motif": "split"},
+ {"num": 18, "slug": "tokenized-vs-traditional-fractional", "repo": "tokenized-vs-traditional-fractional", "kicker": "Tokenized vs traditional", "lines": ["A deed in your wallet.", "Old rules still apply."], "motif": "split"},
+ {"num": 19, "slug": "single-family-vs-multifamily-fractional", "repo": "single-family-vs-multifamily-fractional", "kicker": "Single-family or multi", "lines": ["One rent can stop.", "Eight rarely do."], "motif": "split"},
+ {"num": 20, "slug": "reit-dividend-taxation", "repo": "reit-dividend-taxation", "kicker": "Tax reality check", "lines": ["It's called a dividend.", "It's taxed like wages."], "motif": "stack"},
+ {"num": 22, "slug": "how-to-read-reg-a-offering-circular", "repo": "how-to-read-reg-a-offering-circular", "kicker": "Field guide", "lines": ["The dullest document.", "Also the most honest."], "motif": "chevron"},
+ {"num": 24, "slug": "proptech-trends-2026", "repo": "proptech-trends-2026", "kicker": "Proptech in 2026", "lines": ["Gadgets get headlines.", "Law picks the winners."], "motif": "split"},
+ {"num": 25, "slug": "real-estate-as-an-asset-class", "repo": "real-estate-as-an-asset-class", "kicker": "The fourth asset class", "lines": ["Doesn't move with stocks.", "That's the point."], "motif": "split"},
+ {"num": 26, "slug": "fractional-real-estate-vs-other-investments", "repo": "fractional-real-estate-vs-other-investments", "kicker": "The comparison trap", "lines": ["The sellers are fighting.", "The products are not."], "motif": "grid"},
+ {"num": 27, "slug": "legal-tax-guide-fractional-real-estate", "repo": "legal-tax-guide-fractional-real-estate", "kicker": "The fine print", "lines": ["You bought a slice.", "A security came along."], "motif": "stack"},
+ {"num": 28, "slug": "how-to-choose-fractional-real-estate-platform", "repo": "how-to-choose-fractional-real-estate-platform", "kicker": "Picking a platform", "lines": ["Pick criteria first.", "The platform follows."], "motif": "grid"},
+ {"num": 29, "slug": "proptech-future-of-real-estate", "repo": "proptech-future-of-real-estate", "kicker": "Real estate ownership", "lines": ["Not a robot landlord.", "Same asset. New access."], "motif": "arc"}
+]
