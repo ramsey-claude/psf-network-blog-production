@@ -12,13 +12,13 @@
 
 - **Canonical URL:** https://www.psfnetwork.com/blog/reit-dividend-taxation
 
-- **Hero visual alt text:** An investor at a desk matching boxes on a 1099-DIV form to three labeled jars marked ordinary income, capital gain, and return of capital.
+- **Hero visual alt text:** An investor matching boxes on a 1099-DIV form to jars marked ordinary income, capital gain, and return of capital.
 
 - **Hero visual size:** 1200x630 px
 
 - **Schema:** Article, FAQPage
 
-- **Author:** Maya Reyes, Senior Editor
+- **Author:** Youssef Kholeif, CMO
 
 - **Reviewer:** Daniel Cho, CFA
 
@@ -60,11 +60,11 @@ All investments carry risk, including loss of principal. Tax treatment depends o
 
 Kevin, a software engineer in Austin, bought into a popular mortgage REIT for the yield. The headline number was over 9%, and he penciled in the after-tax figure using the dividend rate he paid on his index funds.
 
-In April her tax software told a different story. Almost the entire payout landed in the ordinary-income column, taxed at her marginal rate, not the 15% she had assumed. The gap between the brochure yield and the take-home yield was wider than she expected.
+In April his tax software told a different story. Almost the entire payout landed in the ordinary-income column, taxed at his marginal rate, not the 15% he had assumed. The gap between the brochure yield and the take-home yield was wider than he expected.
 
-That gap is the whole subject of this article. **REIT dividend taxation** does not follow the rules most investors learned for ordinary stock dividends. The word "dividend" is doing a lot of quiet work that trips people up.
+That gap is the whole subject of this article. **REIT dividend taxation** does not follow the rules most investors learned for ordinary stock dividends. The word "dividend" can be misleading and trips people up.
 
-A fair note on where we stand: PSFnetwork runs a fractional real estate platform, so we are not a disinterested party. We will still be direct about where REITs hold a genuine tax advantage and where the structure costs you.
+A fair note on where we stand: PSFnetwork runs a fractional real estate investing platform, so we are not a neutral party. We will still be direct about where REITs hold a genuine tax advantage and where the structure costs you.
 
 ## Why REIT Dividends Are Taxed Differently
 
@@ -78,7 +78,7 @@ That single design choice explains the surprise. The favorable rate you get on A
 
 ## The Three Buckets on Your 1099-DIV
 
-A REIT distribution is not one thing. By the time it reaches your tax return, it has usually been sorted into up to three categories, each taxed differently.
+A REIT distribution is not one thing. By the time a REIT distribution reaches your tax return, it has usually been sorted into up to three categories, each taxed differently.
 
 Here is what each bucket means and how it is treated.
 
@@ -127,13 +127,13 @@ If you want a broader picture of how property income is taxed across structures,
 
 ## How Fractional Ownership Differs
 
-A REIT is a company that holds many buildings, so your dividend is a slice of pooled, mostly ordinary income. Direct fractional ownership works on a different tax footing.
+A REIT is a company that holds many properties, so your dividend is a slice of pooled, mostly ordinary income. Direct fractional ownership works on a different tax footing.
 
 When you own real estate directly, including a per-square-foot fractional stake, your income is rental income from a specific property rather than a corporate distribution. That can change which deductions and depreciation apply to you, though the mechanics depend on the structure.
 
 PSFnetwork measures ownership by the square foot and ties it to one identifiable, debt-free property. The tax experience is closer to owning property than to holding shares of a fund, a different conversation from the 1099-DIV path above.
 
-To be even-handed: a REIT still wins on simplicity. One consolidated 1099-DIV and broad diversification across many assets is genuinely easier at tax time than tracking direct ownership. If you are weighing the two models head on, our breakdown of [REITs versus fractional real estate](https://www.psfnetwork.com/blog/reits-vs-fractional-real-estate) lays out the full set of tradeoffs.
+To be even-handed: A REIT still wins on simplicity. One consolidated 1099-DIV and broad diversification across many assets is genuinely easier at tax time than tracking direct ownership. If you are weighing the two models head on, our breakdown of [REITs versus fractional real estate](https://www.psfnetwork.com/blog/reits-vs-fractional-real-estate) lays out the full set of tradeoffs.
 
 For readers new to the category, [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing) covers the basics before the tax layer.
 
@@ -183,5 +183,5 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 5. Internal Revenue Service, Topic No. 409 Capital Gains and Losses: [https://www.irs.gov/taxtopics/tc409](https://www.irs.gov/taxtopics/tc409)
 
-6. U.S. Securities and Exchange Commission, Investor Bulletin: Real Estate Investment Trusts (REITs): [https://www.sec.gov/resources-investors/investor-alerts-bulletins/investor-bulletin-real-estate-investment-trusts-reits](https://www.sec.gov/resources-investors/investor-alerts-bulletins/investor-bulletin-real-estate-investment-trusts-reits)
+6. Investor.gov (U.S. Securities and Exchange Commission), Real Estate Investment Trusts (REITs): [https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits)
 

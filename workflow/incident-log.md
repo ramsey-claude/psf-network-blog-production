@@ -24,6 +24,16 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 
 ---
 
+### 2026-08-11: Second-wave client feedback missed by both sessions' sweeps (customer-feedback)
+
+- **Stage:** Post-delivery review of Batch 2 Drive docs
+- **Symptom:** Youssef left a second wave of feedback the evening of 08-11 (18:55 reit-dividend-taxation, 19:08-19:17 how-to-choose): one open comment ("formatting error still here", the bold-whitespace render bug in a doc from the same converter window as the debt doc) plus suggestion-mode edits on both docs. Neither the go-live comment sweep (ran ~17:15) nor this session's morning doc sweep saw them, because both sweeps ran before the feedback existed. The operator found it by opening the doc.
+- **Root cause:** (1) Sweeps are point-in-time with no standing pre-delivery re-check, so feedback arriving after a sweep is invisible until someone looks manually. (2) Comment sweeps do not surface suggestion-mode edits at all; two sessions independently missed suggestions for this reason on the same day. (3) The converter-bug fix was applied to the doc it was reported on, not to every doc rendered in the bug window, which is what "still here" referred to. (4) The reit-dividend miss included a real quality escape: a male scene character written with "her/she" in four spots, a class no regex gate covers.
+- **Fix:** Both docs' suggestions applied to repo drafts (15 edits, incl. the pronoun fix). Recurring preferences promoted to standing rules: tone-and-voice Terminology rows (property over building in generic references, neutral party over referee/scorekeeper/disinterested, tangible over legible) plus a Brand positioning section (never call PSFnetwork "traditional"; blockchain infrastructure built, held for a live secondary market). check-rules WARN `client-rejected-wording` added. Remaining 10 uses of the rejected wording swept across 8 other drafts in the same commit. qa-gate Section E gains a named-character pronoun-consistency item. checklist/delivery.md gains a pre-delivery sweep step (comments AND suggestions, timestamped) and the converter-bug re-render rule.
+- **Rule:** Delivery and re-delivery batches start with a timestamped Drive sweep covering comments and suggestion-mode edits; converter-bug fixes trigger re-render of every doc from the bug window.
+- **Tests:** none added; the WARN pattern is exercised by check-rules on every run.
+- **Reference:** commit this entry lands in; predecessor entries below from the same day.
+
 ### 2026-08-11: QA battery institutionalized after go-live QA caught what upstream layers missed (process)
 
 - **Stage:** 7 (Pre-publish QA) and 8 (Publish) tooling
@@ -49,6 +59,16 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 - **Stage:** 2.5 inputs
 - **Decision:** The brand does not produce internal writing samples and will not supply them. `brand/voice-samples/` stays empty permanently; humanization runs in voice-samples-empty mode as the standing default. Recorded in voice-samples README, humanization-pass edge cases, and the pillar humanization log. Do not re-raise in audits.
 
+### 2026-08-11: CI diff-mode check fails on multi-commit PRs (shallow checkout)
+
+- **Stage:** CI (Content rules workflow, check-rules job)
+- **Symptom:** "Brand voice and punctuation" check red on PR #4 at its third commit, with zero actual rule violations. Job log: `git diff against <base-sha> failed: fatal: bad object`, exit 2.
+- **Root cause:** `lint-content.yml` checked out with `fetch-depth: 2`. On a pull_request event the job diffs against the base branch head, which a 2-deep shallow clone no longer contains once the PR carries more than one commit. The same class of failure exists on the push path (`github.event.before`) for multi-commit pushes. Single-commit PRs masked the bug, which is why the first two pushes on the same PR ran green.
+- **Fix:** `fetch-depth: 0` in the check-rules job checkout. Repo is small; full history is cheap.
+- **Rule:** Any CI job that diffs against a ref outside the pushed commits must checkout with full history (or explicitly fetch the base ref) rather than a fixed shallow depth.
+- **Tests:** none (workflow-level, exercised by every multi-commit PR from now on).
+- **Reference:** PR #4, check run 93800168882.
+
 ---
 
 ### 2026-05-26: Batch 2 shared persona anchor across 13 articles (Priya)
@@ -62,6 +82,29 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 - **Reference:** commit added 2026-05-26 batch 2 sync.
 
 ---
+
+## 2026-08-14 - Stat-card text loss root cause: pandoc dollar-math + Drive docx import
+
+**What happened.** The recurring stat-card corruption in delivered Drive docs
+("$200,000 in income, or $" missing) was traced to its root cause. Pandoc's
+gfm reader has tex_math_dollars enabled, so any line containing two dollar
+amounts ("**$200,000** in income, or **$1 million**") parses the span between
+the dollar signs as inline TeX math. The docx then carries an oMath block,
+and Google Drive's docx import silently drops oMath content. Every article
+line with two dollar figures was corrupted in delivery while the repo draft
+stayed correct.
+
+**Fix.** render-for-drive.py now renders with `-f gfm-tex_math_dollars`
+(extension disabled) and pins the delivered font spec (Aptos body 12pt,
+Aptos Display headings 20/16/14pt #0F4761, links #156082) in the docx
+post-process. For cloud sessions, render-for-drive-rtf.py renders the draft
+to RTF and uploads through the Drive MCP as text; Drive's RTF import applies
+the same heading font mapping (Aptos Display -> Play) and text transfer
+avoids the base64-corruption failure mode entirely.
+
+**Also fixed.** The stray empty "Field/Value" table at the top of GO-LIVE
+docs came from production_notes_md() emitting an empty frontmatter table for
+notes-style drafts; it now returns nothing when there is no frontmatter.
 
 ## Active rules (apply on every run)
 
@@ -84,11 +127,16 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **Answer capsules:** 50-75 words. If first draft is over, Stage 4 must trim, never ship over. Sections with 4+ concrete points: prefer 3 in the capsule and let the fourth land in the body.
 - **Title:** 55-60 chars, focus keyword in first third. **Meta description:** 150-160 chars, includes focus keyword + CTA verb. Stage 2 produces these; Stage 7 QA rejects if missing or out-of-range. Hard-count BOTH directions, under-floor AND over-cap both count as fails. "Shortest viable" means shortest WITHIN the range, not absolutely shortest.
 - **Stage 7 micro-fix budget:** intended for ≤2 micro-fixes per run. If 4+ micro-fixes needed, escalate to Stage 4 (proper revision) rather than burning Stage 7 cleanup. 3 micro-fixes is on the boundary and warrants logging the pattern in incident history.
-- **Author + reviewer:** present in YAML frontmatter on every draft. Standing personas only.
+- **Author + reviewer:** present in the metadata block of every draft (YAML frontmatter or Production Notes). Reviewer is the standing persona in `brand/personas.md`. Author is a real PSFnetwork person, see next entry.
+- **Author byline is Youssef or Omar (operator directive, 2026-08-16):** the invented editor persona is retired. The operator corrected it in Framer on the live articles and asked that the pipeline never reintroduce it. Two places carry the name and drift apart independently: the `author` metadata field and the AuthorCard bio paragraph in the body. Both get checked. Both bylines are on file as of 2026-08-17: `Youssef Kholeif, CMO` and `Omar Elghazaly`. Omar came without a title, so his byline runs as the bare name; do not invent a title, and do not assume a title is missing by mistake. Which byline a given article carries is a per-article operator decision, not a default: all 15 Batch 2 articles currently carry Youssef. Enforced as qa_battery W8 (field only, WARN). W8 stays WARN rather than FAIL while published Batch 1 drafts, which are frozen, still carry the retired persona.
+- **Internal links are absolute (operator directive, 2026-08-16):** `https://www.psfnetwork.com/blog/slug`, never `/blog/slug`. Both resolve on the live site, and the operator chose absolute as the safest default: a draft is rendered in Google Docs, in the Framer paste, and on the live page before a reader sees it, and only a link carrying its own host means the same thing in all three. Batch 2 was already fully absolute. Batch 3 was authored relative (47 links across 9 articles) and converts when Batch 3 work opens. Enforced as qa_battery W9, WARN for the same reason as W8.
 - **Disclaimer:** every post ends with "Past performance is not indicative of future results. Real estate investing involves risk, including the possible loss of principal." or equivalent boilerplate.
 - **Sources section:** every regulatory or numerical claim cited to primary source (SEC/IRS/investor.gov/EDGAR). No marketing pages as sources for regulatory facts.
 
 ### Process
+- **Published batches are FROZEN (operator directive, 2026-08-13):** once a batch's articles are live, their repo drafts stop being drafts and become the record of what was published. No sweep, retrofit, wording pass, re-render, or rule backfill touches them. Every batch-wide operation (terminology sweeps, link retrofits, converter re-renders, re-deliveries) scopes to UNPUBLISHED batches only. Changes to published content happen only on an explicit per-article operator instruction, and then through the full pipeline (revision, QA, re-publish), never as a side effect of a sweep. Newly learned rules apply forward; for published content the gap goes into `workflow/qa-baseline.txt` as visible debt instead of being "fixed" in place.
+- **NOTHING IS EVER DELETED IN DRIVE (operator directive, 2026-08-14):** absolutely no Drive file is deleted or trashed, ever, by any means: `drive_cli.py`, the Drive MCP, or by hand. Every article folder has an `old version` subfolder, and the rule is mechanical: **whenever a new version of a doc is produced, the previous one is moved to `old version/` in the same folder.** The new doc keeps the main folder, so each folder always shows exactly one current doc with its full history one level down, comment threads intact. Enforced in tooling: `drive_cli.py delete` refuses and exits non-zero, and `drive_cli.py archive <fileId>` performs the move (creating the subfolder if missing). This replaces the earlier delete-then-reupload cleanup step in checklist/delivery.md.
+- **A draft's slug must equal its folder name (2026-08-14):** the declared `Slug` and the tail of the `Canonical` URL must both match the article's folder name. Article 13 sat for three weeks with folder `what-happens-when-fractional-property-is-sold` and slug `how-to-sell-fractional-real-estate` because the folder took its name from the ROADMAP topic while the writer chose the commercial keyword, and the internal-link generator built inbound links from the folder name. Publishing as-is would have orphaned both inbound links. Enforced as qa_battery F8 (FAIL), which the link test could never catch: it only verifies that a link target folder exists.
 - **Permission prompts, self-recover, do not pause:** when a tool call is rejected by the Claude Code permission system (user sees a prompt), Claude must NOT ask the operator. Auto-recovery protocol (apply in order):
   1. **Rewrite first.** Reshape the command into a form covered by an existing allowlist pattern. Examples: split a compound `cd … && … && for d in …` into one tool call per command; move a `/tmp/*.sh` push helper into `workflow/scripts/`; replace `mv` with `cp` + `rm` if `mv` not covered.
   2. **Narrow-allowlist as fallback.** If rewrite is genuinely not viable AND the pattern is safe (read-only OR scoped to project paths: `/Users/onur/psfnetwork-pipeline/**`, `/tmp/**`, `/Users/onur/.psfnetwork-drive/**`), append the narrowest possible pattern to `~/.claude/settings.local.json` and retry. Use specific patterns (`Bash(bash /tmp/push-*.sh)`), not broad ones (`Bash(*)`, blanket interpreter wildcards).
@@ -98,7 +146,7 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **Single-command Bash calls:** issue Bash tool calls as single commands, not multi-line compounds. Permission patterns match the FULL invocation string, not piece by piece, `Bash(for *)` does not cover `cd ... && ... && for d in ...`. For multi-step shell logic, write a script under `workflow/` (covered by `Bash(bash /Users/onur/psfnetwork-pipeline/*.sh)`) or use Python.
 - **One-shot push scripts go in repo:** ad-hoc push helpers belong under `/Users/onur/psfnetwork-pipeline/workflow/scripts/` (or a similar repo path), not `/tmp/`. `/tmp/*.sh` invocations are NOT allowlisted and trigger prompts. Repo-path scripts ARE covered by existing rules.
 - **Loop budget:** combined Stage 3 + Stage 7 max 3. On exceed, set `stage: "manual-review-required"` and halt.
-- **Idempotency:** every stage must be safe to re-run on the same inputs. Stage 9 deletes existing Drive files in the slug folder before re-uploading to keep state clean.
+- **Idempotency:** every stage must be safe to re-run on the same inputs. Stage 9 archives the existing Drive doc in the slug folder (moves it to `old version/`) before re-uploading, so a re-run leaves exactly one current doc without destroying history.
 
 ---
 
@@ -110,6 +158,110 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **Root cause:** MCP's `create_file` conversion table only covers text/plain → gdoc and text/csv → gsheet. docx → gdoc conversion is not exposed. MCP also has no delete operation, so re-runs accumulated junk.
 - **Fix:** Switched Stage 9 to Drive REST API via `workflow/drive_cli.py` with OAuth (project `my-project-82896`). Upload with `mimeType: application/vnd.google-apps.document` triggers Drive-side docx-to-gdoc conversion.
 - **Rule:** Drive MCP is forbidden for Stage 9. See Active Rules > Tooling.
+
+### 2026-08-17: Batch 2 published, 15 of 15 live and verified
+
+- **Stage:** 8 (Publish)
+- **Outcome:** all 15 Batch 2 articles are live and audited against the live
+  HTML: category correct on every one, FAQ accordion at the expected 6 or 7
+  entries with no duplicate in the body, TL;DR, Sources block, both tables,
+  hero image, byline and internal links present everywhere.
+- **BATCH 2 IS NOW FROZEN.** The published-batches rule (2026-08-13) applies
+  from this moment: no sweep, retrofit, wording pass or rule backfill touches
+  these 15 drafts. Changes happen per article, on an explicit instruction,
+  through the full pipeline.
+- **Route:** CSV import rather than manual paste. `framer_batch_csv.py` for
+  the Articles collection, `framer_faq_csv.py` for the 94 FAQ items. Import
+  order matters: FAQs first so the items exist, then Articles so FAQ S
+  resolves.
+- **Known and accepted:** these pages carry no FAQPage JSON-LD. The site
+  builds that schema in the browser from headings ending in a question mark,
+  and the FAQ headings were the only ones feeding it on most articles.
+  proptech-trends-2026 is the exception, since one of its body H2s is written
+  as a question. The CMS FAQ Schema field does not work (operator, 2026-08-17).
+- **Also open, template-side not content-side:** every article page carries
+  two H1s, the title and a component reading "Start from square one". Batch 1
+  has the same pair.
+
+### 2026-08-17: Framer serves an identical shell for minutes after publish
+
+- **Stage:** 8 (Publish) verification
+- **Symptom:** immediately after publishing 14 articles, every one of their
+  URLs returned HTTP 200 with no category, no FAQ, no TL;DR, no Sources and
+  no tables. Read literally, the batch had shipped empty.
+- **Root cause:** the pages were not built yet. All 14 responses were
+  byte-identical, 26,934 bytes, same md5, title "PSFnetwork", no H1, body
+  consisting of Framer's bootstrap script. An article verified complete
+  minutes earlier returned the same shell, which is what gave it away.
+- **Rule:** after publishing, check response size before reading content. A
+  real article page is 350 to 400 KB; anything near 27 KB is the shell and
+  the audit has to wait. Identical byte counts across several URLs are the
+  tell.
+
+### 2026-08-18: /blog cards render image-only; a hand-edit to the Article Card shipped with the cover publish
+
+- **Stage:** live site, found after the Batch 2 cover replacement
+- **Symptom:** every card on /blog renders as a bare cover image. The
+  category chip, title, excerpt, author and date are in the DOM but painted
+  underneath the image. Persisted through a hard refresh, so not the
+  post-publish shell window (the first diagnosis here, which was wrong: 7 of
+  15 article pages really were serving shells at the same moment, but the
+  card breakage is a separate, durable regression).
+- **Root cause:** the image frame inside the grid's Article Card component
+  changed between the 2026-08-17 publish and this one. Verified by diffing
+  the two listing HTMLs rule by rule; exactly three element styles differ,
+  and the breaking one is the card image container:
+  `position:relative; width:100%; height:aspect-ratio(1.44928)` became
+  `position:absolute; top:0; bottom:-25px; left:0; width:99%; height:auto;
+  z-index:1`. Pinned top and bottom, the image stretches over the whole card
+  and z-index lifts it above the text stack; being absolute, it also stops
+  giving the card any height. The per-breakpoint height overrides for the
+  same frame vanished from the CSS in the same publish, which is what Framer
+  does when a layer's positioning is re-edited by hand. A CSV import cannot
+  touch component layout, so this was an editor edit, most plausibly from
+  the 2026-08-17 attempts to fix the cover crop in the editor, published
+  together with the cover import. Two smaller edits rode along: the featured
+  A-Card image frame was restructured (still in flow, looks intact) and
+  Section 2 below the grid gained an aspect-ratio:6 background strip.
+- **Reproduction:** offline render of the live HTML in headless Chromium
+  (framerusercontent is proxy-blocked, so the document and a Drive cover
+  were served by request interception) produced the operator's screenshot
+  exactly: rows of image-only cards, no text.
+- **Fix:** resolved same day by the operator via the manual route: the
+  Article Card image layer set back to relative at 100% width with the
+  1.449 aspect ratio, then published. Verified on the live CSS and in a
+  rendered check: grid and featured cards show image then text, titles
+  hit-testable above the image. All 15 article pages rebuilt afterwards
+  with the same 15 new cover assets, so the fix publish did not disturb
+  the CMS. One trap to know: Site Settings also has a "Versions" panel,
+  but that one is deploy history; rolling it back reverts CMS content
+  snapshots too and the editor canvas keeps the bad edit. Canvas fixes
+  happen in the editor (Version History, Shift+Cmd+H) or by hand.
+- **Rule:** the shell rule stays (check page size before reading content),
+  but a broken layout that survives a hard refresh after pages are back to
+  full size is a design regression, not a build artifact. Diff the live CSS
+  against the last known-good fetch before blaming the rebuild; keep the
+  known-good listing HTML fetch for exactly this comparison.
+
+### 2026-08-17: placeholder FAQ text is live on two Batch 1 articles
+
+- **Stage:** live site
+- **Symptom:** `square-foot-real-estate-ownership-explained` and
+  `what-is-proptech` render an accordion entry reading "This is a question?"
+  with the answer "This is an answer". Verified in the fetched HTML: the text
+  sits inside a real `<button aria-expanded>` accordion item, not in a script
+  block and with no hiding class, so readers see it.
+- **Cause:** two placeholder items in the FAQs collection, both Live, both
+  with an empty Article reference. Found while importing Batch 2's FAQs.
+- **Not yet fixed.** Operator deferred the Batch 1 pass; recorded here so it
+  is not lost. Also open on the same sweep: `reits-vs-fractional-real-estate`
+  still 404s, which the 2026-08-11 audit flagged as closing 18 dead internal
+  links; a duplicate "Can I invest in a Reg D offering if I'm not accredited?"
+  under two slugs; and an orphan Draft copy of the Reg A vs Reg D question
+  with no Article.
+- **Scope note:** deleting placeholder rows from a CMS collection is not a
+  content edit to a published article, so the frozen-batch rule does not
+  block it. It is still the operator's call.
 
 ### 2026-05-14: sec.gov returns 403 to WebFetch and curl
 - **Stage:** 1 (Research & evidence)

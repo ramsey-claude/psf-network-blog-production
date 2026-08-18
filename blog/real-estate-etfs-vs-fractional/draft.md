@@ -12,13 +12,13 @@
 
 - **Secondary keywords:** real estate ETF, fractional real estate investing, REIT ETF, fractional real estate vs ETF, passive real estate income
 
-- **Hero visual alt text:** Split illustration contrasting a stock-ticker real estate ETF with a single building divided into fractional square-foot shares.
+- **Hero visual alt text:** Split illustration of a stock-ticker real estate ETF beside a building divided into fractional square-foot shares.
 
 - **Hero size:** 1600x900 px
 
 - **Schema:** Article, FAQPage
 
-- **Author:** Maya Reyes, Senior Editor
+- **Author:** Youssef Kholeif, CMO
 
 - **Reviewer:** Daniel Cho, CFA
 
@@ -173,7 +173,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 ### Which is better for passive income?
 
-**Both are passive, but the income feels different.** An ETF spreads dividends across hundreds of buildings, smooth but impersonal, while a fractional position pays you from one specific property. The right choice depends on whether you prefer breadth or a concrete asset you can track.
+**Both are passive, but the income feels different.** An ETF spreads dividends across hundreds of buildings, smooth but impersonal, while a fractional position pays you from one specific property. Choose by whether you prefer breadth or a concrete asset you can track.
 
 ## Sources
 
@@ -181,7 +181,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 2. Internal Revenue Service, Instructions for Form 1120-REIT (90% distribution requirement): [https://www.irs.gov/instructions/i1120rei](https://www.irs.gov/instructions/i1120rei)
 
-3. Investor.gov, Mutual Funds and Exchange-Traded Funds (ETFs): [https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1](https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1)
+3. Investor.gov, Mutual Funds and Exchange-Traded Funds (ETFs): [https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs/mutual-funds](https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs/mutual-funds)
 
 4. Investor.gov, Real Estate Investment Trusts (REITs): [https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits)
 

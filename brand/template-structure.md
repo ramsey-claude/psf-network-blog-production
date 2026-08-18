@@ -98,6 +98,24 @@ Stage 7 QA verifies every field is populated and within length rules. See `check
 - Disclaimer text is verbatim from `brand/tone-and-voice.md`
 - CTA is short, action-oriented, links to PSFnetwork product
 - Related lists exactly 3 posts, each an internal link to a slug in `blog/`
+- Author name comes from `brand/personas.md`, which permits exactly two bylines
+
+---
+
+## Internal links: absolute, always (operator directive, 2026-08-16)
+
+Every internal link is written in full, with scheme and host:
+
+```
+YES  [anchor](https://www.psfnetwork.com/blog/slug)
+NO   [anchor](/blog/slug)
+```
+
+Both forms resolve on the live site. Absolute is the standing rule because it is the safest one: a relative link changes meaning depending on where the document is rendered, and our drafts get rendered in three places before they reach a reader (Google Docs, the Framer paste, the live page). A link that carries its own host survives all three unchanged.
+
+Host is `www.psfnetwork.com`. The live site 301-redirects the bare domain to `www` and its canonical tags carry the `www` host, so drafts match that rather than the older non-www spec.
+
+Current state: Batch 2 is fully absolute. Batch 3 was authored relative (47 links across 9 articles) and converts when Batch 3 work opens; it is not touched before then. `qa_battery.py` W9 flags relative internal links.
 
 ---
 

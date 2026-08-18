@@ -12,13 +12,13 @@
 
 - Canonical URL: https://www.psfnetwork.com/blog/real-estate-vs-index-funds-retirement
 
-- Hero visual alt text: A split illustration showing a small apartment building on one side and a rising stock index chart on the other, with a retirement savings dashboard between them.
+- Hero visual alt text: Split illustration: a small apartment building, a rising stock index chart, and a retirement savings dashboard.
 
 - Hero visual size: 1200x630
 
 - Schema: Article, FAQPage
 
-- Author: Maya Reyes, Senior Editor
+- Author: Youssef Kholeif, CMO
 
 - Reviewer: Daniel Cho, CFA
 
@@ -36,7 +36,7 @@ Both can fund a retirement. They just get there in very different ways. This is 
 
 ## Quick Answer (60 seconds)
 
-For most retirement savers, **index funds** win on simplicity, liquidity, and cost, while **real estate** wins on direct income and tangible ownership. Neither is automatically better. The right choice depends on how hands-on you want to be and how much liquidity you need.
+For most retirement savers, **index funds** win on simplicity, liquidity, and cost, while **real estate** wins on direct income and tangible ownership. Neither is automatically better. Decide by how hands-on you want to be and how much liquidity you need.
 
 Index funds spread your money across hundreds or thousands of companies, trade in seconds, and ask almost nothing of you after the first deposit. Real estate ties your money to physical property and pays through rent, but it is slower to sell and usually asks for more attention or a manager in between.
 
@@ -86,7 +86,7 @@ Property also behaves differently from stocks. It does not move in lockstep with
 
 The brochure version of real estate is steady rent and rising values. The lived version, for anyone who has owned a rental, includes vacancy gaps, repair bills, and tenant turnover. That work is the reason many savers admire real estate but never actually buy it.
 
-There is also the liquidity problem. You cannot sell a bedroom to cover a medical bill, and selling a whole property can take months and a chunk of the proceeds in fees. If you want a fuller picture of how the exit actually works, our guide to [what happens when a fractional property is sold](https://www.psfnetwork.com/blog/what-happens-when-fractional-property-is-sold) walks through the timeline.
+There is also the liquidity problem. You cannot sell a bedroom to cover a medical bill, and selling a whole property can take months and a chunk of the proceeds in fees. If you want a fuller picture of how the exit actually works, our guide to [what happens when a fractional property is sold](https://www.psfnetwork.com/blog/how-to-sell-fractional-real-estate) walks through the timeline.
 
 ## Fractional Real Estate: Splitting the Difference
 
@@ -96,7 +96,7 @@ Instead of buying a whole building, you buy a defined share of one. A platform h
 
 PSFnetwork measures ownership by the **square foot** and ties it to a specific property rather than a vague pool. The properties are mortgage-free, so rental income is not eaten by debt service. Offerings are structured under **Regulation A**, the SEC framework that lets both accredited and non-accredited investors participate and review filings through EDGAR. Our explainer on [square-foot real estate ownership](https://www.psfnetwork.com/blog/square-foot-real-estate-ownership-explained) covers how that unit works in practice.
 
-A fair disclosure belongs here: PSFnetwork is an issuer, not a neutral referee. For a saver who needs every dollar liquid by next Tuesday, a broad index fund is simply the better tool, and fractional real estate is a complement to that core, not a replacement for it.
+A fair disclosure belongs here: PSFnetwork is an issuer, not a neutral party. For a saver who needs every dollar liquid by next Tuesday, a broad index fund is simply the better tool, and fractional real estate is a complement to that core, not a replacement for it.
 
 ## Side by Side: How They Compare for Retirement
 

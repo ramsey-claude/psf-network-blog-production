@@ -16,7 +16,7 @@
 
 - **Schema types:** Article, FAQPage
 
-- **Author:** Maya Reyes, Senior Editor
+- **Author:** Youssef Kholeif, CMO
 
 - **Reviewer:** Daniel Cho, CFA
 
@@ -68,7 +68,7 @@ Because it is a security, the sponsor cannot just sell it. They have to register
 
 The exemption they pick is not a back-office detail. It sets the floor for who can buy in and how much the sponsor owes you in disclosure.
 
-PSFnetwork structures its offerings under Regulation A, which keeps the door open to non-accredited investors and routes the same SEC reporting and EDGAR filings to everyone. We are an issuer here, not a referee, so take that as a starting point and hold any platform, ours included, to the documents rather than the pitch. The mechanics in this guide are shared across the category, and the rest of it walks through them one layer at a time.
+PSFnetwork structures its offerings under Regulation A, which keeps the door open to non-accredited investors and routes the same SEC reporting and EDGAR filings to everyone. We are an issuer here, not a neutral party, so take that as a starting point and hold any platform, ours included, to the documents rather than the pitch. The mechanics in this guide are shared across the category, and the rest of it walks through them one layer at a time.
 
 ## Reg A vs Reg D: The Exemption Decides Who Gets In
 
@@ -149,7 +149,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 ### How is income from fractional real estate taxed?
 
-**It depends on the structure, and it is rarely just one bucket.** Distributions can arrive as ordinary income, return of capital that lowers your basis, or REIT dividends, and selling your shares triggers capital gains. The full treatment is covered in [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed).
+**The structure decides, and it is rarely just one bucket.** Distributions can arrive as ordinary income, return of capital that lowers your basis, or REIT dividends, and selling your shares triggers capital gains. The full treatment is covered in [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed).
 
 ### Will I get a K-1 or a 1099?
 
@@ -175,7 +175,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 5. Internal Revenue Service, Qualified Business Income Deduction (Section 199A): [https://www.irs.gov/newsroom/qualified-business-income-deduction](https://www.irs.gov/newsroom/qualified-business-income-deduction)
 
-6. Internal Revenue Service, One Big Beautiful Bill: Business Tax Provisions: [https://www.irs.gov/newsroom/one-big-beautiful-bill-act-tax-deductions-for-working-americans-and-seniors](https://www.irs.gov/newsroom/one-big-beautiful-bill-act-tax-deductions-for-working-americans-and-seniors)
+6. Internal Revenue Service, Working Families Tax Cuts: Tax Deductions for Working Americans and Seniors: [https://www.irs.gov/newsroom/working-families-tax-cuts-tax-deductions-for-working-americans-and-seniors](https://www.irs.gov/newsroom/working-families-tax-cuts-tax-deductions-for-working-americans-and-seniors)
 
 7. U.S. Securities and Exchange Commission, EDGAR Full Text Search: [https://www.sec.gov/edgar/search/](https://www.sec.gov/edgar/search/)
 

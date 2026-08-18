@@ -16,11 +16,11 @@
 
 - Canonical URL: https://www.psfnetwork.com/blog/fractional-real-estate-vs-other-investments
 
-- Hero visual alt text: A decision map comparing fractional real estate against REITs, ETFs, index funds, and crowdfunding across liquidity, control, and income.
+- Hero visual alt text: A decision map comparing fractional real estate with REITs, ETFs, index funds, and crowdfunding on liquidity and income.
 
 - Schema types: Article, FAQPage
 
-- Author: Maya Reyes, Senior Editor
+- Author: Youssef Kholeif, CMO
 
 - Reviewer: Daniel Cho, CFA
 
@@ -64,7 +64,7 @@ Disclaimer: all of these carry risk, including loss of principal. Liquidity, inc
 
 Most comparison articles pick a winner because the publisher sells the winner. The ranking sounds clean, and the bias sits one click away in the sign-up button.
 
-A fair disclosure belongs here: PSFnetwork is an issuer, so we are not a neutral referee either. A comparison only earns trust when it names the cases where a REIT, an ETF, or a plain index fund is the better call, and several below are exactly that.
+A fair disclosure belongs here: PSFnetwork is an issuer, so we are not a neutral party either. A comparison only earns trust when it names the cases where a REIT, an ETF, or a plain index fund is the better call, and several below are exactly that.
 
 So treat "versus" as a sorting tool, not a contest. Each pairing isolates one decision, such as liquidity, control, leverage, or asset type. Work through the ones that match your question and skip the rest.
 
@@ -180,7 +180,7 @@ Before committing capital, read the offering documents, study the fees and liqui
 
 1. U.S. Securities and Exchange Commission, Regulation A: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation)
 
-2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding](https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding)
+2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding)
 
 3. U.S. Securities and Exchange Commission, Accredited Investors: [https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors](https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors)
 

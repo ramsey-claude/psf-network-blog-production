@@ -5,8 +5,16 @@ Drive CLI helper for the PSFnetwork pipeline.
 Uses the token minted by drive_auth.py (Drive scope).
 
 Operations:
+    archive <fileId>
+        Move a superseded doc into its folder's `old version` subfolder,
+        creating that subfolder if it does not exist. This is the ONLY way
+        the pipeline retires a Drive file. Nothing is ever deleted: see the
+        no-delete rule in workflow/incident-log.md (operator directive,
+        2026-08-14).
+
     delete <fileId>
-        Move a Drive file to trash and then permanently delete.
+        REFUSED. Kept only so old scripts fail loudly instead of destroying
+        a doc. Use `archive` instead.
 
     upload-as-gdoc <local_path> <parent_folder_id> <title>
         Upload a .docx (or other convertible) file and convert to a native
@@ -96,10 +104,66 @@ def cmd_health():
     print(json.dumps({'status': 'ok', 'checked_at': datetime.now(timezone.utc).isoformat()}))
 
 
+ARCHIVE_FOLDER_NAME = 'old version'
+
+
 def cmd_delete(file_id):
+    """Deleting Drive files is forbidden; fail loudly and point at archive."""
+    print(json.dumps({
+        'error': 'delete is disabled by operator directive (2026-08-14)',
+        'rule': 'No Drive file is ever deleted or trashed. A superseded doc '
+                'moves to its folder\'s "old version" subfolder.',
+        'use_instead': f'drive_cli.py archive {file_id}',
+    }), file=sys.stderr)
+    sys.exit(2)
+
+
+def _ensure_archive_folder(svc, parent_id):
+    """Return the id of parent's `old version` subfolder, creating if absent."""
+    q = (f"'{parent_id}' in parents and trashed = false "
+         f"and mimeType = 'application/vnd.google-apps.folder' "
+         f"and name = '{ARCHIVE_FOLDER_NAME}'")
+    found = svc.files().list(
+        q=q, fields='files(id)', supportsAllDrives=True,
+    ).execute().get('files', [])
+    if found:
+        return found[0]['id']
+    created = svc.files().create(
+        body={
+            'name': ARCHIVE_FOLDER_NAME,
+            'parents': [parent_id],
+            'mimeType': 'application/vnd.google-apps.folder',
+        },
+        fields='id',
+        supportsAllDrives=True,
+    ).execute()
+    return created['id']
+
+
+def cmd_archive(file_id):
+    """Move a superseded doc into its folder's `old version` subfolder."""
     svc = get_service()
-    svc.files().delete(fileId=file_id, supportsAllDrives=True).execute()
-    print(json.dumps({'deleted': file_id}))
+    meta = svc.files().get(
+        fileId=file_id, fields='id,name,parents', supportsAllDrives=True,
+    ).execute()
+    parents = meta.get('parents', [])
+    if not parents:
+        print(json.dumps({'error': f'{file_id} has no parent folder'}), file=sys.stderr)
+        sys.exit(1)
+    current_parent = parents[0]
+    archive_id = _ensure_archive_folder(svc, current_parent)
+    if current_parent == archive_id:
+        print(json.dumps({'archived': file_id, 'note': 'already in old version'}))
+        return
+    moved = svc.files().update(
+        fileId=file_id,
+        addParents=archive_id,
+        removeParents=current_parent,
+        fields='id,name,parents',
+        supportsAllDrives=True,
+    ).execute()
+    print(json.dumps({'archived': moved['id'], 'name': moved['name'],
+                      'archive_folder': archive_id}))
 
 
 def cmd_upload_as_gdoc(local_path, parent_id, title):
@@ -156,6 +220,8 @@ def main():
     try:
         if cmd == 'delete':
             cmd_delete(*args)
+        elif cmd == 'archive':
+            cmd_archive(*args)
         elif cmd == 'upload-as-gdoc':
             cmd_upload_as_gdoc(*args)
         elif cmd == 'upload-as-is':

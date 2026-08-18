@@ -21,6 +21,7 @@ FAIL (exit 1, CI red):
   F5  meta description length outside 150-160 characters
   F6  Google-Docs CSS residue (style blocks, .cN class selectors)
   F7  title missing, or (YAML-format drafts) title length outside 55-60
+  F8  declared slug (or canonical tail) does not match the folder name
 
 WARN (reported, not blocking):
   W1  title length outside 55-60 on Production-Notes drafts (Batch 2 titles
@@ -79,6 +80,20 @@ BANNED_BODY_LABELS = [
 ]
 
 CSS_RESIDUE = re.compile(r'<style|\.c\d+\s*\{|font-family:\s*"')
+
+# Operator directive 2026-08-16: every byline is a real PSFnetwork person,
+# either Youssef or Omar. The invented editor persona that used to hold the
+# slot was corrected in Framer on the live articles and must not come back
+# through the pipeline. Matched on first name so a later title change
+# ("Youssef Kholeif, CMO" to "Youssef Kholeif, Head of Growth") does not
+# turn into a false positive. Omar's surname and title are still pending in
+# brand/personas.md, so the name alone is what we can check today.
+APPROVED_AUTHORS = re.compile(r'\b(Youssef|Omar)\b', re.IGNORECASE)
+
+# Operator directive 2026-08-16: internal links are absolute, with scheme and
+# host. A root-relative link means something different in each of the three
+# places a draft gets rendered before a reader sees it.
+RELATIVE_INTERNAL = re.compile(r'\]\((/blog/[^)\s]*)\)')
 
 TEMPLATE_H2S = {
     'quick answer (60 seconds)', 'the 60-second version',
@@ -146,6 +161,20 @@ def check_article(folder: Path):
     if CSS_RESIDUE.search(body):
         fails.append('F6 CSS residue in body')
 
+    # F8: the draft's declared slug must match its folder name, and the
+    # canonical URL must end in that same slug. A mismatch publishes the
+    # article at an address nothing links to and orphans every inbound
+    # internal link (found on article 13 three weeks after import; the link
+    # test only checks that the target folder exists, so it passed).
+    declared = meta.get('slug', '').strip().strip('/')
+    if declared and declared != slug:
+        fails.append(f'F8 slug "{declared}" does not match folder "{slug}"')
+    canonical = meta.get('canonical', '').strip().rstrip('/')
+    if canonical:
+        tail = canonical.rsplit('/', 1)[-1]
+        if tail != slug:
+            fails.append(f'F8 canonical ends in "{tail}", folder is "{slug}"')
+
     # F7/W1: title
     title = meta.get('title', '')
     if not title:
@@ -203,6 +232,39 @@ def check_article(folder: Path):
             continue
         if not h2.rstrip().endswith('?'):
             warns.append(f'W7 non-question H2: "{h2.strip()[:60]}"')
+
+    # W8: author byline. See APPROVED_AUTHORS above and brand/personas.md.
+    # WARN rather than FAIL because published Batch 1 drafts are frozen and
+    # still carry the retired persona; promoting this to FAIL is correct only
+    # once every unpublished batch is converted and the Batch 1 debt has moved
+    # into qa-baseline.txt.
+    author = meta.get('author', '').strip()
+    if not author:
+        warns.append('W8 author byline missing')
+    elif not APPROVED_AUTHORS.search(author):
+        warns.append(f'W8 author "{author[:40]}" is not an approved byline')
+
+    # W9: relative internal links. Same severity reasoning as W8: Batch 3 was
+    # authored relative and is not converted yet.
+    rel = RELATIVE_INTERNAL.findall(body)
+    if rel:
+        warns.append(
+            f'W9 {len(rel)} relative internal link(s), must be absolute '
+            f'(first: {rel[0]})')
+
+    # W10: pre-qualification CTA language. Client decision 2026-08-18 (see
+    # workflow/client-decisions.md): until the offering is qualified, CTAs
+    # drive to the waitlist or homepage and no draft says "invest now".
+    # Narrow on purpose: the word invest is everywhere in this content
+    # legitimately; only the imperative direct-response phrasings are banned.
+    cta = re.findall(
+        r'\binvest (?:now|today)\b|\bstart investing (?:now|today)\b'
+        r'|\bbuy (?:your )?shares? (?:now|today)\b',
+        body, re.IGNORECASE)
+    if cta:
+        warns.append(
+            f'W10 pre-qualification CTA language ({len(cta)}x, '
+            f'first: "{cta[0]}"), not allowed until the offering is qualified')
 
     return slug, fmt, fails, warns
 
