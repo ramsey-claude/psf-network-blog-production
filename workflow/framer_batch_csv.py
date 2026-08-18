@@ -308,6 +308,29 @@ def sources_plain(body_md: str) -> str:
     return '\n'.join(out)
 
 
+def sources_linked(body_md: str) -> str:
+    """The Sources list as a markdown numbered list with clickable links.
+
+    Takes each sources_plain line, "Publisher, Title: https://url", and turns
+    it into "N. [Publisher, Title](https://url)". Only meaningful once the CMS
+    Sources field is a Formatted Text field; imported into a Plain Text field
+    the brackets print literally, which is why plain stays the default until
+    the type change is confirmed on a live page.
+    """
+    out = []
+    for n, line in enumerate(sources_plain(body_md).splitlines(), 1):
+        m = re.search(r'https?://\S+$', line)
+        if m:
+            url = m.group(0).rstrip('.,;)')
+            label = line[:m.start()].rstrip().rstrip(':').rstrip(',').strip()
+            label = label.replace('[', '(').replace(']', ')')
+            out.append(f'{n}. [{label}]({url})' if label else f'{n}. <{url}>')
+        else:
+            out.append(f'{n}. {line}')
+    return '\n'.join(out)
+
+
+
 def split_dek(body_md: str):
     """Return (dek_text, body_without_h1_or_placeholder).
 
@@ -399,7 +422,7 @@ def category_value(name: str, by: str) -> str:
 
 
 def row_for(slug: str, hero_style='download', category='', faq_sep=', ',
-            category_by='slug', author_by='slug'):
+            category_by='slug', author_by='slug', sources_style='plain'):
     """Return (row_dict, problems)."""
     src = BLOG / slug / 'draft-v2-humanized.md'
     if not src.exists():
@@ -414,7 +437,8 @@ def row_for(slug: str, hero_style='download', category='', faq_sep=', ',
     dek, body_md = split_dek(body_md)
     faq_s = faq_slugs_for(slug, body_md, faq_sep)
     tldr = quick_answer_prose(body_md)
-    sources = sources_plain(body_md)
+    sources = (sources_linked if sources_style == 'linked'
+               else sources_plain)(body_md)
     # Sources and FAQ move to their own fields, so drop both sections from the
     # body. Leaving the FAQ in shipped it twice on the first published page:
     # once as headings from Content and once as the accordion from FAQ S.
@@ -525,6 +549,17 @@ def main():
     ap.add_argument('--no-refs', action='store_true',
                     help='drop the Hero Image, Author and Blog Categories '
                          'columns, for when the import will not map them')
+    ap.add_argument('--sources-style', choices=['plain', 'linked'],
+                    default='plain',
+                    help='linked writes the Sources column as a markdown '
+                         'numbered list, [Publisher, Title](url). Requires the '
+                         'CMS Sources field to be Formatted Text; in a Plain '
+                         'Text field the markdown prints literally')
+    ap.add_argument('--fields', default='',
+                    help='comma-separated subset of columns to write, for '
+                         'partial updates that must not touch other fields '
+                         '(e.g. "Slug,Sources"). Slug is always kept: the '
+                         'import matches items by it')
     ap.add_argument('--category', default='',
                     help='override Blog Categories for every row. Without it '
                          'each article takes its per-article value from the '
@@ -541,7 +576,8 @@ def main():
     rows, blocked = [], []
     for s in slugs:
         row, problems = row_for(s, args.hero_url_style, args.category,
-                                args.faq_sep, args.category_by, args.author_by)
+                                args.faq_sep, args.category_by, args.author_by,
+                                args.sources_style)
         if problems:
             blocked.append((s, problems))
             continue
@@ -578,6 +614,16 @@ def main():
         return 1 if blocked else 0
 
     fields = FIELDS
+    if args.fields:
+        want = [f.strip() for f in args.fields.split(',') if f.strip()]
+        unknown = [f for f in want if f not in FIELDS]
+        if unknown:
+            print(f'unknown --fields: {", ".join(unknown)}', file=sys.stderr)
+            return 2
+        if 'Slug' not in want:
+            want.insert(0, 'Slug')
+        fields = [f for f in FIELDS if f in want]
+        rows = [{k: r[k] for k in fields} for r in rows]
     if args.no_refs:
         drop = {'Hero Image', 'Author', 'Blog Categories', 'FAQ S'}
         fields = [f for f in FIELDS if f not in drop]
