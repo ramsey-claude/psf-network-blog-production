@@ -91,11 +91,19 @@ _mpk = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_mpk)
 
 # Cover images live only in Drive, one per article folder, named
-# cover-<slug>-1200x630.webp (see workflow/visuals-tracker.md). Hero Image is
-# an asset field, so a CSV can only offer Framer a URL to fetch. Whether it
-# fetches one is untested: drive.google.com is blocked from the cloud session
-# that wrote this, so the URLs below were built from verified file IDs but the
-# fetch itself has to be confirmed in the import UI.
+# cover-<slug>-1200x630.webp (see workflow/visuals-tracker.md).
+#
+# These IDs are the REPLACEMENT covers the operator produced on 2026-08-18,
+# composed to brand/cover-image-spec.md so the listing card's 143 px side crop
+# no longer cuts the headline. The July originals are archived in each
+# article's `old version` subfolder, per the no-delete rule; each article
+# folder now holds exactly one image. A separate set of PNG "-v2" files from
+# the same night also sits in those archive folders and is NOT the live set.
+#
+# Hero Image is an asset field, so a CSV can only offer Framer a URL to
+# fetch. It does fetch it: the 2026-08-17 import pulled every cover and
+# re-hosted it, so the live og:image is a framerusercontent asset and no page
+# hotlinks Drive.
 #
 # Every one of these files is currently shared as "anyone: writer", which is
 # what makes an unauthenticated fetch possible at all. That is also broader
@@ -105,21 +113,21 @@ _spec.loader.exec_module(_mpk)
 # other shapes Drive serves images through, so the retry does not need a code
 # change.
 HERO_FILE_IDS = {
-    'debt-vs-equity-fractional': '1qfLSF3_eykRt9csDyPKhMyF2Mcblydwb',
-    'fractional-real-estate-ira': '154dHiuk1r36A9FrMr5cTQXl8y5c0p-dh',
-    'fractional-real-estate-vs-other-investments': '1aH0BEOUnwDgFJ9IwYkBGwsUdqDiCSl2b',
-    'how-to-choose-fractional-real-estate-platform': '1hCtqouxtlCOqRdCVRgKQs8OOG-6EPlGQ',
-    'how-to-read-reg-a-offering-circular': '1T1m-IhmgDkpRec4M3H8hgxgMlFhwsEmm',
-    'legal-tax-guide-fractional-real-estate': '1KUhv3XusWgoYQLADv7hlAyA4I5s2XxuJ',
-    'proptech-future-of-real-estate': '1uH-HuDoC6vwwVByIrhJQFa2aJHy5rvSg',
-    'proptech-trends-2026': '1j1VlHsf4iLjYFVFxOdMJGgb81RzC3lO4',
-    'real-estate-as-an-asset-class': '1Se9E_vf3QiFV93ubdYPqVG3jKY5FYUMm',
-    'real-estate-etfs-vs-fractional': '1J5_RodWgP_VKqIWz4sLqs_pIzoXrCju7',
-    'real-estate-vs-index-funds-retirement': '1RrL8yY0RtK3jvWkGFRZZvqe1Cy09w4aT',
-    'reit-dividend-taxation': '1oTFNB1lqlxiPyLbvGzUrSmkD2YUHlWPZ',
-    'single-family-vs-multifamily-fractional': '1gsvNfrVdQSdlceKD33OgaTNHsoUwmTAe',
-    'tokenized-vs-traditional-fractional': '19f2izxyc3FaSCDZtHlYVXxkgwkHaLYbH',
-    'how-to-sell-fractional-real-estate': '1poxF2es7J_c-MTllDWfNr0okPSPQ7wSD',
+    'debt-vs-equity-fractional': '1dywJ3FfB9ktZ4Eoft6wl_Ucpxd2xpxFN',
+    'fractional-real-estate-ira': '1bFtbU-pWUvm7u-rlVFIQnS5DyZqsNEFG',
+    'fractional-real-estate-vs-other-investments': '1NH_YvNqJKEJ3SOhN-WSufyq1iJXNiz7w',
+    'how-to-choose-fractional-real-estate-platform': '12uqzjpctZQmNaTcFN4j5S9fAHgEokbcI',
+    'how-to-read-reg-a-offering-circular': '1-nWUhx0piO2GdURl9LOB9HnDiSldGkSZ',
+    'legal-tax-guide-fractional-real-estate': '18Q_VCAZEaLekZ3tqb4iZ-_emWvlDeY9-',
+    'proptech-future-of-real-estate': '1GIfV2pZJz1hivlP71bCQVJemj0taMELf',
+    'proptech-trends-2026': '1t8vEX4Ybst-0lReEH1wolWYgB1946TBa',
+    'real-estate-as-an-asset-class': '1IVz1jrlS68MKBETugXtrewhvVUcAMwN5',
+    'real-estate-etfs-vs-fractional': '1r_lNmo_XXbqMjHGctauuBBgHX0IPLhG3',
+    'real-estate-vs-index-funds-retirement': '1mIobbHlMViXKE2Z9VAWXZvlnmvqUKkVx',
+    'reit-dividend-taxation': '1KgK53Jkn9E3gWUyKu9-mcyClLb9vXdSK',
+    'single-family-vs-multifamily-fractional': '1ScwXxvfZ5kQrYJg1qutR2gm1ZMMz7G5C',
+    'tokenized-vs-traditional-fractional': '1--u6TDNoiCseZKU1I98kXOo4OcqN9Ts_',
+    'how-to-sell-fractional-real-estate': '1zBsHeXT4-hdPbgceGVmrJskyyzwO0Zy2',
 }
 
 HERO_URL_STYLES = {

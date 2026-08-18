@@ -46,7 +46,7 @@ Batch 1: 12 of 12 produced. 11 of 12 placed in Framer.
   when the article ships. That
   publish also closes the 10 dead internal links pointing at the slug.
 
-## Batch 2 (covers placed in Framer 2026-08-17)
+## Batch 2 (covers replaced 2026-08-18)
 
 This section said "not started" until 2026-08-17, which was wrong and cost
 real time: it was read as fact during the Framer import and the operator was
@@ -71,23 +71,39 @@ fetches the file and re-hosts it: the live og:image is a framerusercontent
 asset and the pages do not hotlink Drive. All 15 were placed this way on
 2026-08-17, none by hand.
 
-| # | Article | Cover in Drive | KB | In Framer |
-|---|---------|:--------------:|---:|:---------:|
-| 13 | how-to-sell-fractional-real-estate | + | 38 | + |
-| 15 | real-estate-etfs-vs-fractional | + | 31 | + |
-| 16 | real-estate-vs-index-funds-retirement | + | 83 | + |
-| 19 | single-family-vs-multifamily-fractional | + | 92 | + |
-| 26 | fractional-real-estate-vs-other-investments | + | 95 | + |
-| 27 | legal-tax-guide-fractional-real-estate | + | 14 | + |
-| 29 | proptech-future-of-real-estate | + | 18 | + |
-| - | debt-vs-equity-fractional | + | 17 | + |
-| - | fractional-real-estate-ira | + | 81 | + |
-| - | how-to-choose-fractional-real-estate-platform | + | 29 | + |
-| - | how-to-read-reg-a-offering-circular | + | 16 | + |
-| - | proptech-trends-2026 | + | 68 | + |
-| - | real-estate-as-an-asset-class | + | 20 | + |
-| - | reit-dividend-taxation | + | 57 | + |
-| - | tokenized-vs-traditional-fractional | + | 93 | + |
+Covers were replaced on 2026-08-18. The July set had its headlines set at
+about x=180, inside the listing card's 143 px side crop, so every one read
+mid-word on /blog. The replacements are composed to
+`brand/cover-image-spec.md`. Sizes below are the new files.
+
+Each article folder now holds exactly one image; the July originals moved to
+that folder's `old version` subfolder. A set of PNG "-v2" files from the same
+night also sits in those archive folders and is not the live set.
+
+| # | Article | KB (Jul) | KB (Aug 18) | In Framer |
+|---|---------|---------:|------------:|:---------:|
+| 13 | how-to-sell-fractional-real-estate | 38 | 62 | |
+| 15 | real-estate-etfs-vs-fractional | 31 | 71 | |
+| 16 | real-estate-vs-index-funds-retirement | 83 | 106 | |
+| 19 | single-family-vs-multifamily-fractional | 92 | 106 | |
+| 26 | fractional-real-estate-vs-other-investments | 95 | 127 | |
+| 27 | legal-tax-guide-fractional-real-estate | 14 | 14 | |
+| 29 | proptech-future-of-real-estate | 18 | 72 | |
+| - | debt-vs-equity-fractional | 17 | 18 | |
+| - | fractional-real-estate-ira | 81 | 123 | |
+| - | how-to-choose-fractional-real-estate-platform | 29 | 64 | |
+| - | how-to-read-reg-a-offering-circular | 16 | 17 | |
+| - | proptech-trends-2026 | 68 | 88 | |
+| - | real-estate-as-an-asset-class | 20 | 76 | |
+| - | reit-dividend-taxation | 57 | 73 | |
+| - | tokenized-vs-traditional-fractional | 93 | 116 | |
+
+Twelve of the fifteen gained weight, which is what a recomposed frame should
+do. Three did not: legal-tax-guide at 14 KB, how-to-read-reg-a at 17 KB and
+debt-vs-equity at 18 KB are all under the spec's 60 KB floor and are within a
+kilobyte of their July sizes. Either they are flat art that genuinely
+compresses that small, or they were re-exported at the old quality. Worth a
+look before the next batch adopts these settings.
 
 Drive folder numbers are filled in only where this repo has recorded them
 (see the operator's numbering directive, incident-log 2026-08-14). The rest
