@@ -227,11 +227,16 @@ These are non-negotiable. Re-read this list at the start of every run.
   (framerusercontent is proxy-blocked, so the document and a Drive cover
   were served by request interception) produced the operator's screenshot
   exactly: rows of image-only cards, no text.
-- **Fix:** in the Framer editor, either restore the pre-edit version from
-  the Versions panel (CMS content is not rolled back by a version restore,
-  so the new covers survive) or set the Article Card image layer back to
-  relative positioning at 100% width with the 1.449 aspect ratio, then
-  publish.
+- **Fix:** resolved same day by the operator via the manual route: the
+  Article Card image layer set back to relative at 100% width with the
+  1.449 aspect ratio, then published. Verified on the live CSS and in a
+  rendered check: grid and featured cards show image then text, titles
+  hit-testable above the image. All 15 article pages rebuilt afterwards
+  with the same 15 new cover assets, so the fix publish did not disturb
+  the CMS. One trap to know: Site Settings also has a "Versions" panel,
+  but that one is deploy history; rolling it back reverts CMS content
+  snapshots too and the editor canvas keeps the bad edit. Canvas fixes
+  happen in the editor (Version History, Shift+Cmd+H) or by hand.
 - **Rule:** the shell rule stays (check page size before reading content),
   but a broken layout that survives a hard refresh after pages are back to
   full size is a design regression, not a build artifact. Diff the live CSS
