@@ -309,25 +309,27 @@ def sources_plain(body_md: str) -> str:
 
 
 def sources_linked(body_md: str) -> str:
-    """The Sources list as a markdown numbered list with clickable links.
+    """The Sources list as HTML: an <ol> of <a> links, one per source.
 
-    Takes each sources_plain line, "Publisher, Title: https://url", and turns
-    it into "N. [Publisher, Title](https://url)". Only meaningful once the CMS
-    Sources field is a Formatted Text field; imported into a Plain Text field
-    the brackets print literally, which is why plain stays the default until
-    the type change is confirmed on a live page.
+    Takes each sources_plain line, "Publisher, Title: https://url", and makes
+    the whole "Publisher, Title" the link text. Emits HTML, not markdown: the
+    2026-08-18 test import sent markdown and it printed literally on the live
+    page, brackets and all, while the Content column has always imported as
+    HTML from md_to_html and renders real links. Requires the CMS Sources
+    field to be Formatted Text; a Plain Text field prints the tags literally.
+    The rendered links take the site's Link text style automatically.
     """
-    out = []
-    for n, line in enumerate(sources_plain(body_md).splitlines(), 1):
+    items = []
+    for line in sources_plain(body_md).splitlines():
         m = re.search(r'https?://\S+$', line)
         if m:
             url = m.group(0).rstrip('.,;)')
             label = line[:m.start()].rstrip().rstrip(':').rstrip(',').strip()
-            label = label.replace('[', '(').replace(']', ')')
-            out.append(f'{n}. [{label}]({url})' if label else f'{n}. <{url}>')
+            items.append(f'[{label}]({url})' if label else f'<{url}>')
         else:
-            out.append(f'{n}. {line}')
-    return '\n'.join(out)
+            items.append(line)
+    md = '\n'.join(f'{n}. {it}' for n, it in enumerate(items, 1))
+    return _mpk.md_to_html(md)
 
 
 
@@ -551,10 +553,12 @@ def main():
                          'columns, for when the import will not map them')
     ap.add_argument('--sources-style', choices=['plain', 'linked'],
                     default='plain',
-                    help='linked writes the Sources column as a markdown '
-                         'numbered list, [Publisher, Title](url). Requires the '
-                         'CMS Sources field to be Formatted Text; in a Plain '
-                         'Text field the markdown prints literally')
+                    help='linked writes the Sources column as HTML, an <ol> '
+                         'of <a> links, the same encoding the Content column '
+                         'uses. Requires the CMS Sources field to be Formatted '
+                         'Text; in a Plain Text field the tags print literally '
+                         '(markdown was tried on 2026-08-18 and printed '
+                         'literally even so, hence HTML)')
     ap.add_argument('--fields', default='',
                     help='comma-separated subset of columns to write, for '
                          'partial updates that must not touch other fields '
