@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
+# brain-rule: R-auth-infrastructure-github-token
 TOKEN_FILE="${PSFNETWORK_TOKEN_FILE:-/Users/onur/.psfnetwork-drive/github-token}"
 if [[ ! -f "$TOKEN_FILE" ]]; then
   echo "ERROR: token file missing at $TOKEN_FILE" >&2

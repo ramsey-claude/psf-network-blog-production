@@ -36,7 +36,7 @@ from pathlib import Path
 REPO = Path('/Users/onur/psfnetwork-pipeline')
 PY = REPO / '.venv' / 'bin' / 'python3'
 RENDER = REPO / 'workflow' / 'render-for-drive.py'
-DRIVE_CLI = REPO / 'workflow' / 'drive_cli.py'
+DRIVE_CLI = REPO / 'workflow' / 'drive_cli.py'  # brain-rule: R-tooling-drive-uploads
 
 PUBLISH_RE = re.compile(r'(?:^|\W)(PUBLISH|publish)(?:\W|$)')
 FAIL_VERDICT_RE = re.compile(r'(?:^|\W)(FAIL|HALT|REJECT|MANUAL-REVIEW-REQUIRED)(?:\W|$)')

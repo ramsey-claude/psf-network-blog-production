@@ -6,7 +6,7 @@
 VENV := .venv/bin
 PY := $(VENV)/python
 
-.PHONY: help setup test lint lint-staged check-drive list-blog status humanize-status
+.PHONY: help setup test lint lint-staged check-drive list-blog status humanize-status brain brain-check brain-search
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-22s\033[0m %s\n", $$1, $$2}'
@@ -53,6 +53,16 @@ brief-preflight:  ## Verify a brief is ready for Stage 2. Usage: make brief-pref
 	$(PY) workflow/brief_preflight.py blog/$(SLUG)/brief.md
 
 meta-qa:  ## Stage 11 sub-step: scan operational artifacts against checklist/meta-qa.md
-	$(PY) workflow/check-rules.py README.md ROADMAP.md $$(find checklist workflow brand -name '*.md')
+	$(PY) workflow/check-rules.py README.md ROADMAP.md CLAUDE.md $$(find checklist workflow brand brain -name '*.md')
 
-status: lint list-blog humanize-status  ## One-shot repo health snapshot
+brain:  ## Rebuild the brain indexes from their sources
+	python3 workflow/brain.py build
+
+brain-check:  ## Fail if the brain no longer matches the repo it describes
+	python3 workflow/brain.py check
+
+brain-search:  ## Recall across everything. Usage: make brain-search Q="drive delivery"
+	@if [ -z "$(Q)" ]; then echo 'Usage: make brain-search Q="your question"'; exit 2; fi
+	@python3 workflow/brain.py search $(Q)
+
+status: lint list-blog humanize-status brain-check  ## One-shot repo health snapshot

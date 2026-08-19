@@ -38,6 +38,8 @@ The trigger is a blanket pre-authorization for every stage that follows. Pipelin
 
 If the incident log is unreachable (network error, repo unavailable), halt with `incident-log-unreachable` rather than running blind. The active rules represent every guardrail the pipeline has learned the hard way; running without them re-introduces past failures.
 
+`python3 workflow/brain.py rules` prints the same active rules as an indexed list with an id per rule, and `--category` or `--grep` narrows it. Use it as the working view; the log stays the source of truth and the halt condition is unchanged. `python3 workflow/brain.py check` at the same time reports whether the indexes still match their sources.
+
 No deliverable for this stage, it is a read-and-internalize step. The fact that it ran is implicit in the run proceeding successfully (errors prevented by the log won't appear).
 
 ## Stage -3 - Auto gap discovery (conditional)
@@ -257,8 +259,11 @@ The output is an updated `workflow/incident-log.md` committed to `main`. This is
 
 **Outputs:**
 - Updated `workflow/incident-log.md` on `main`.
+- Rebuilt registries under `brain/`, committed alongside it.
 - One-line summary: slugs processed, halts, new incidents, open issues count.
 - `workflow/meta-qa-report-YYYY-MM-DD.md` from the Stage 11 meta-QA sub-step.
+
+**Sub-step: brain rebuild.** Run `python3 workflow/brain.py build` and commit whatever it rewrites, in the same commit as the incident-log update. The registries under `brain/` are generated from this log, from `ROADMAP.md` Step 2, and from every article's state. A batch that changed any of those leaves the brain describing a repo that no longer exists until it is rebuilt. `python3 workflow/brain.py check` is the verification, and it also runs in CI on every push. Active rule: brain rebuild, under Process.
 
 **Sub-step: meta-QA on pipeline artifacts.** Before committing the incident-log update, run the checks in `checklist/meta-qa.md` against `README.md`, `ROADMAP.md`, `checklist/**/*.md`, `workflow/**/*.md`, `brand/**/*.md`, and any public-facing customer wireframes in the working tree. BLOCKING failures halt the retrospective until fixed. Added 2026-05-26 after the v3 humanization rollout shipped 101 em-dashes across 7 operational files because Stage 7 only inspected blog drafts.
 
