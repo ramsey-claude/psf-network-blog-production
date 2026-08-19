@@ -42,11 +42,24 @@ def test_bank_parses_and_ids_are_unique(mind):
     assert all(q['domain'] and q['text'] for q in bank)
 
 
-def test_bank_covers_every_seeded_domain(mind):
-    """A seed lands in a domain the interview can also ask about."""
+def test_bank_is_about_a_person_not_a_project(mind):
+    """The starter questions have to work whatever the owner does for a living."""
     domains = {q['domain'] for q in mind.parse_bank()}
-    seeded = {alan for _, _, alan, _, _, _ in mind.SEEDS}
-    assert seeded - domains == {'acik'}, 'seed domain with no questions behind it'
+    assert {'kimlik', 'degerler', 'karar-verme', 'uzmanlik'} <= domains
+    text = ' '.join(q['text'] for q in mind.parse_bank()).lower()
+    for project_word in ('psfnetwork', 'makale', 'blog', 'seo', 'marka sesi'):
+        assert project_word not in text, 'a personal bank must not assume one job'
+
+
+def test_bank_grows_with_its_owner(mind, store):
+    """A starter list written by someone else runs out; the store's own does not."""
+    mind.init(store)
+    before = len(mind.parse_bank(store=store))
+    new_id = mind.add_question('Bunu neden hep erteliyorum', domain='kendi', store=store)
+    after = mind.parse_bank(store=store)
+    assert len(after) == before + 1
+    assert new_id in [q['id'] for q in after]
+    assert new_id in [q['id'] for q in mind.pick_questions(200, store=store)]
 
 
 # --- the model --------------------------------------------------------------
@@ -75,25 +88,33 @@ def test_ids_increment_per_kind(mind, store):
     assert first.startswith('H-')
 
 
-def test_init_seeds_unconfirmed_and_does_not_duplicate(mind, store):
+def test_init_starts_empty(mind, store):
+    """The clone is a person. It starts with nothing until that person speaks."""
     mind.init(store)
+    assert mind.all_entries(store) == []
+    assert (store / 'model' / 'beliefs.md').exists()
+
+
+def test_repo_seeding_is_opt_in_and_always_unconfirmed(mind, store):
+    mind.init(store, from_repo=True)
     entries = mind.all_entries(store)
-    assert len(entries) == len(mind.SEEDS)
+    assert len(entries) == len(mind.REPO_SEEDS)
     assert {e['fields']['durum'] for e in entries} == {'onaysız'}, \
         'a seed is a hypothesis, never the owner\'s confirmed view'
-    assert all(e['fields'].get('kaynak') for e in entries)
-    mind.init(store)
-    assert len(mind.all_entries(store)) == len(mind.SEEDS)
+    assert all('iş reposundan' in e['fields']['kaynak'] for e in entries), \
+        'a seed has to say where it came from'
+    mind.init(store, from_repo=True)
+    assert len(mind.all_entries(store)) == len(mind.REPO_SEEDS)
 
 
 def test_confirm_rewrites_status_in_place_and_keeps_the_entry(mind, store):
-    mind.init(store)
+    mind.init(store, from_repo=True)
     target = mind.all_entries(store)[0]['id']
     mind.confirm(target, 'reddedildi', note='tam tersi', store=store)
     entry = [e for e in mind.all_entries(store) if e['id'] == target][0]
     assert entry['fields']['durum'] == 'reddedildi'
     assert 'tam tersi' in ' '.join(entry['fields'].values())
-    assert len(mind.all_entries(store)) == len(mind.SEEDS), 'rejecting must not delete'
+    assert len(mind.all_entries(store)) == len(mind.REPO_SEEDS), 'rejecting must not delete'
 
 
 # --- capture and interview --------------------------------------------------
@@ -117,7 +138,7 @@ def test_answered_questions_leave_the_pool(mind, store):
 
 
 def test_interview_prefers_p1_then_thin_domains(mind, store):
-    mind.init(store)
+    mind.init(store, from_repo=True)
     picked = mind.pick_questions(10, store=store)
     assert all(q['priority'] == 'P1' for q in picked)
     covered = mind.domain_coverage(store)
@@ -146,20 +167,20 @@ def test_capture_writes_and_distill_tracks_processed(mind, store):
 # --- recall -----------------------------------------------------------------
 
 def test_ask_finds_entries_and_flags_unconfirmed(mind, store):
-    mind.init(store)
+    mind.init(store, from_repo=True)
     result = mind.ask('borç kalite', store)
     assert result['entries']
     assert any(e['fields']['durum'] == 'onaysız' for e in result['entries'])
 
 
 def test_ask_on_an_unknown_subject_returns_questions_instead(mind, store):
-    mind.init(store)
+    mind.init(store, from_repo=True)
     result = mind.ask('köpek eğitimi', store)
     assert not result['entries']
 
 
 def test_confirmed_entries_outrank_unconfirmed(mind, store):
-    mind.init(store)
+    mind.init(store, from_repo=True)
     mind.add_entry('inanc', 'Kalite ölçülmezse dalgalanır ve borç birikir',
                    {'Durum': 'onaylı', 'Güven': 'yüksek', 'Kaynak': 'test', 'Alan': 'kalite'},
                    store=store)
@@ -196,7 +217,7 @@ def test_check_is_clean_on_a_fresh_clone(mind, store):
 
 
 def test_check_catches_a_broken_entry(mind, store):
-    mind.init(store)
+    mind.init(store, from_repo=True)
     path = store / 'model' / 'beliefs.md'
     path.write_text(path.read_text() + '\n### B-001. Aynı id ikinci kez\n\n- **Durum:** belirsiz\n- **Güven:** çok\n')
     messages = ' '.join(m for _, m in mind.check(store))
@@ -232,6 +253,16 @@ def test_export_takes_the_clone_and_the_machinery(mind, store, tmp_path):
     assert (target / 'mind' / 'questions' / 'bank.md').exists()
 
 
-def test_the_store_never_lands_in_git(mind):
+def test_the_store_lives_outside_the_repo(mind):
+    """Default location is the owner's home, not a folder inside a public repo."""
+    assert mind.DEFAULT_HOME == Path.home() / '.mind'
+    assert REPO_ROOT not in mind.DEFAULT_HOME.parents
     ignored = (REPO_ROOT / '.gitignore').read_text()
-    assert 'mind/private/' in ignored, 'a public repo must not carry a personal clone'
+    assert 'mind/private/' in ignored, 'MIND_HOME may still point inside the repo'
+
+
+def test_engine_has_no_repo_dependencies(mind):
+    """The clone must survive being copied somewhere else, alone."""
+    source = (REPO_ROOT / 'workflow' / 'mind.py').read_text()
+    assert 'brain.py' not in source
+    assert 'importlib' not in source

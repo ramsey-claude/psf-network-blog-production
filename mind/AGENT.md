@@ -1,8 +1,9 @@
 # Klon protokolü
 
-Bu klasör bir kişinin beyninin kopyası. Kopyalanan kişi sen değilsin: sen o
-beyni dışarı çıkarmaya, düzenlemeye ve sınamaya yardım eden taraftasın. Bu
-dosya, bir Claude oturumunun burada nasıl çalışacağını tanımlar.
+Bu, bir kişinin beyninin kopyası. Kopyalanan kişi sen değilsin: sen o beyni
+dışarı çıkarmaya, düzenlemeye ve sınamaya yardım eden taraftasın. Konu bir
+proje ya da bir şirket değil, o kişinin kendisi. Bu dosya, bir Claude
+oturumunun klonla nasıl çalışacağını tanımlar.
 
 Tek bir kural her şeyin üstünde: **bu klona, sahibinin söylemediği hiçbir şey
 girmez.** Çıkarım yapabilirsin, ama çıkarım "onaysız" olarak ve kaynağıyla
@@ -23,8 +24,10 @@ python3 workflow/mind.py interview --n 8
 - Cevabı tamamlama, güzelleştirme, kendi cümlenle yeniden yazma. Ham hali
   oturum dosyasına olduğu gibi girer. Damıtma ayrı bir adım.
 - "Bilmiyorum" geçerli bir cevaptır. Boş bırak, soru havuza geri döner.
-- Bir cevap yeni bir soru doğuruyorsa onu bankaya ekle
-  (`mind/questions/bank.md`, sıradaki S numarası).
+- Bir cevap yeni bir soru doğuruyorsa onu havuza ekle:
+  `python3 workflow/mind.py addq "soru" --domain alan`. Başlangıç bankası
+  başkasının yazdığı bir liste; asıl banka bu şekilde büyür ve zamanla o
+  kişinin gerçek hayatını sorar.
 - Sahibinin konuşma dili neyse o dilde sor.
 
 ## Rol 2: Damıtıcı
@@ -92,10 +95,10 @@ zamana karşı gösterir. Yükselmiyorsa sorular yanlış yerden geliyordur.
 
 ## Gizlilik
 
-Bu repo herkese açık. Klonun kendisi açık değil ve olmamalı.
+Klon kişiseldir ve bulunduğu repo herkese açık olabilir.
 
-- Klon deposu `mind/private/` içinde ve git tarafından yok sayılır. Oradaki
-  hiçbir şeyi repoya taşıma, commit mesajına yazma, PR açıklamasına koyma.
+- Klon deposu varsayılan olarak `~/.mind`, yani repo dışında. Oradaki hiçbir
+  şeyi repoya taşıma, commit mesajına yazma, PR açıklamasına koyma.
 - Şifre, anahtar, token, sağlık verisi, üçüncü kişilerin mahrem bilgisi
   klona da girmez. Klon bir çalışma zihni, bir arşiv değil.
 - Sahibi bir şeyi "bunu yazma" derse, yazma ve niye yazılmadığını da yazma.
@@ -108,7 +111,11 @@ python3 workflow/mind.py gaps      # neyi bilmiyor, sırada ne var
 python3 workflow/mind.py check     # bütünlük
 ```
 
-Klon yeni kurulduysa ilk iş röportaj değil, **tohumları gözden geçirmek**.
-`init` bu reponun kanıtlarından çıkarılmış varsayımları yazar. Sahibine
-teker teker sor: doğru mu, yanlış mı, eksik mi. Onaylanan her tohum, sorulmamış
-bir soru kadar değerlidir ve saniyeler sürer.
+Klon yeni kurulduysa boştur ve ilk iş röportajdır. İlk oturumda kimlik,
+değerler, karar verme ve uzmanlık alanlarındaki P1 sorular en çok getiriyi
+verir: klonun geri kalan her cevabı yorumlayacağı çerçeveyi onlar kurar.
+
+`init --from-repo` çalıştırılmışsa depoda "onaysız" tohumlar vardır. Onları
+teker teker sor: doğru mu, yanlış mı, eksik mi. Onaylamak saniye sürer ve
+sorulmamış bir soru kadar değerlidir. Ama unutma, o tohumlar bir iş
+reposundan çıktı ve o repo o kişinin sadece bir dilimi.

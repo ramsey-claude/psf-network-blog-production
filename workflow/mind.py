@@ -51,8 +51,8 @@ Usage:
   python3 workflow/mind.py stats
 """
 import argparse
-import importlib.util
 import json
+import math
 import os
 import re
 import shutil
@@ -65,24 +65,14 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 ASSETS = REPO_ROOT / 'mind'
 BANK_PATH = ASSETS / 'questions' / 'bank.md'
 PROTOCOL = ASSETS / 'AGENT.md'
-DEFAULT_HOME = ASSETS / 'private'
 
-
-def _load(name, path):
-    spec = importlib.util.spec_from_file_location(name, path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
-
-
-# The ranking is borrowed rather than reimplemented, same reason qa_battery
-# imports the paste kit: one scorer, one behaviour, no drift between the two
-# things that search this repo.
-_brain = _load('brain', REPO_ROOT / 'workflow' / 'brain.py')
+# Outside the repo by default. The clone belongs to a person, not to a project,
+# and this repository happens to be public.
+DEFAULT_HOME = Path.home() / '.mind'
 
 
 def home():
-    """Where the clone lives. Outside git, by default and by design."""
+    """Where the clone lives. Outside this repo by default and by design."""
     return Path(os.environ.get('MIND_HOME') or DEFAULT_HOME).expanduser()
 
 
@@ -128,6 +118,98 @@ def slugify(text, max_len=40):
     text = text.translate(table).lower()
     text = re.sub(r'[^a-z0-9]+', '-', text).strip('-')
     return text[:max_len].strip('-') or 'not'
+
+
+# ---------------------------------------------------------------------------
+# recall primitives: small on purpose, so this file works anywhere it is copied
+# ---------------------------------------------------------------------------
+
+# Unicode-aware: an ASCII class shreds "köpek" into "k" and "pek", and those
+# fragments then match everything.
+TOKEN = re.compile(r"[^\W_]+(?:['’_-][^\W_]+)*", re.UNICODE)
+COMBINING_DOT = '\u0307'
+HEADING_RE = re.compile(r'^(#{1,6})\s+(.+)$')
+CHUNK_MAX_LINES = 120
+
+
+def fold(text):
+    """Lowercase for matching. Turkish İ lowercases to i plus a combining dot."""
+    return text.lower().replace(COMBINING_DOT, '')
+
+
+def tokens_of(text):
+    return TOKEN.findall(fold(text))
+
+
+def chunks_of(path):
+    """Heading-aware chunks, so a hit points at a section and not a whole file."""
+    lines = read(path).split('\n')
+    chunks, buf, heading, start = [], [], '', 1
+
+    def flush():
+        if any(line.strip() for line in buf):
+            chunks.append({'path': str(path), 'heading': heading, 'line': start,
+                           'lines': list(buf), 'text': '\n'.join(buf)})
+
+    for i, line in enumerate(lines, start=1):
+        match = HEADING_RE.match(line)
+        if match or len(buf) >= CHUNK_MAX_LINES:
+            flush()
+            buf, start = [], i
+            if match:
+                heading = match.group(2).strip()
+        buf.append(line)
+    flush()
+    for chunk in chunks:
+        chunk['tokens'] = Counter(tokens_of(chunk['text']))
+        chunk['label_tokens'] = set(tokens_of(chunk['heading']))
+    return chunks
+
+
+def rank(query, chunks, limit=6):
+    """Term frequency against inverse document frequency, heading weighted."""
+    terms = tokens_of(query)
+    if not terms or not chunks:
+        return []
+    doc_freq = Counter()
+    for chunk in chunks:
+        for term in set(terms):
+            if chunk['tokens'].get(term):
+                doc_freq[term] += 1
+    total = len(chunks)
+    phrase = fold(query).strip()
+
+    scored = []
+    for chunk in chunks:
+        score, hits = 0.0, 0
+        for term in terms:
+            count = chunk['tokens'].get(term, 0)
+            if not count:
+                continue
+            hits += 1
+            weight = math.log((total + 1) / (doc_freq[term] + 1)) + 1.0
+            score += (1 + math.log(count)) * weight
+            if term in chunk['label_tokens']:
+                score += 1.5 * weight
+        if not hits:
+            continue
+        score *= (hits / len(terms)) ** 1.5
+        if len(phrase) > 6 and phrase in fold(chunk['text']):
+            score += 6.0
+        scored.append((score, chunk))
+
+    scored.sort(key=lambda pair: (-pair[0], pair[1]['path'], pair[1]['line']))
+    results = []
+    for _, chunk in scored[:limit]:
+        best, best_hits, offset = '', 0, 0
+        for i, line in enumerate(chunk['lines']):
+            found = sum(1 for term in set(terms) if term in fold(line))
+            if found > best_hits:
+                best, best_hits, offset = line.strip(), found, i
+        results.append({'path': chunk['path'], 'line': chunk['line'] + offset,
+                        'heading': chunk['heading'],
+                        'snippet': ' '.join(best.split())[:220] or ' '.join(chunk['text'].split())[:220]})
+    return results
 
 
 # ---------------------------------------------------------------------------
@@ -213,8 +295,7 @@ def add_entry(kind, title, fields, note='', store=None):
 # the question bank
 # ---------------------------------------------------------------------------
 
-def parse_bank(text=None):
-    text = read(BANK_PATH) if text is None else text
+def parse_bank_text(text):
     questions = []
     domain = ''
     for line in text.split('\n'):
@@ -227,6 +308,55 @@ def parse_bank(text=None):
             questions.append({'id': item.group(1), 'priority': item.group(2),
                               'domain': domain, 'text': item.group(3).strip()})
     return questions
+
+
+def store_bank_path(store=None):
+    return (home() if store is None else store) / 'questions.md'
+
+
+def parse_bank(text=None, store=None):
+    """The starter bank plus whatever the person's own answers have added.
+
+    A fixed list of questions written by someone else runs out, and worse, it
+    keeps asking about the life it imagined instead of the one being lived. Any
+    answer that opens a new question gets that question appended to the store's
+    own bank, and from then on it is part of the pool.
+    """
+    if text is not None:
+        return parse_bank_text(text)
+    questions = parse_bank_text(read(BANK_PATH))
+    questions += parse_bank_text(read(store_bank_path(store)))
+    seen, unique = set(), []
+    for question in questions:
+        if question['id'] in seen:
+            continue
+        seen.add(question['id'])
+        unique.append(question)
+    return unique
+
+
+def add_question(text, domain='kendi', priority='P1', store=None):
+    """Append a question to the person's own bank."""
+    store = home() if store is None else store
+    path = store_bank_path(store)
+    existing = parse_bank(store=store)
+    used = [int(q['id'][2:]) for q in existing if q['id'][2:].isdigit()]
+    question_id = 'S-%03d' % (max(used, default=0) + 1)
+    body = read(path)
+    if not body:
+        body = ('# Kendi soruların\n\nCevaplarından doğan sorular buraya eklenir. '
+                'Başlangıç bankası mind/questions/bank.md, bu dosya onun devamı.\n')
+    header = '## %s' % domain
+    line = '- %s [%s] %s' % (question_id, priority, text.strip())
+    if header in body:
+        parts = body.split(header, 1)
+        rest = parts[1].split('\n## ', 1)
+        block = rest[0].rstrip('\n') + '\n' + line + '\n'
+        body = parts[0] + header + block + ('\n## ' + rest[1] if len(rest) > 1 else '')
+    else:
+        body = body.rstrip('\n') + '\n\n%s\n\n%s\n' % (header, line)
+    write(path, body)
+    return question_id
 
 
 def state_path(store=None):
@@ -330,7 +460,7 @@ def pick_questions(n=8, domain=None, store=None):
     """
     answered = answered_ids(store)
     coverage = domain_coverage(store)
-    pool = [q for q in parse_bank() if q['id'] not in answered]
+    pool = [q for q in parse_bank(store=store) if q['id'] not in answered]
     if domain:
         pool = [q for q in pool if domain.lower() in q['domain'].lower()]
     pool.sort(key=lambda q: (q['priority'], coverage.get(q['domain'], 0), q['id']))
@@ -370,10 +500,15 @@ def raw_items(store=None, include_processed=False):
 
 
 # ---------------------------------------------------------------------------
-# seeding: hypotheses the repo already supports, none of them confirmed
+# optional seeding from a work repo
+#
+# Off by default. The clone is a person, not a project, and a project only ever
+# shows one slice of one. When `init --from-repo` is passed, these hypotheses
+# are drawn from the decisions recorded in this repository and land unconfirmed
+# with their evidence, so confirming or rejecting one takes a second.
 # ---------------------------------------------------------------------------
 
-SEEDS = [
+REPO_SEEDS = [
     ('kural', 'Çalışan bir sistem onay istemek yerine kendini toparlamalı',
      'otomasyon', 'orta',
      'workflow/incident-log.md 2026-05-15: operatör, izin isteyen bileşik komutu reddederek "tam otonom değil" noktasını kanıtladı',
@@ -479,8 +614,8 @@ python3 workflow/mind.py add --kind inanc --title "..." --alan strateji --kaynak
 -->"""
 
 
-def init(store=None, reseed=False):
-    """Create the store, seed it with hypotheses, leave the rest to the owner."""
+def init(store=None, reseed=False, from_repo=False):
+    """Create the store. Seeding from the work repo is opt in."""
     store = home() if store is None else store
     created = []
     for folder in ('model', 'model/domains', 'inbox', 'sessions', 'deltas'):
@@ -497,11 +632,12 @@ def init(store=None, reseed=False):
         created.append(relpath)
 
     seeded = 0
-    if reseed or not all_entries(store):
-        for kind, title, alan, guven, kaynak, note in SEEDS:
+    if from_repo and (reseed or not all_entries(store)):
+        for kind, title, alan, guven, kaynak, note in REPO_SEEDS:
             add_entry(kind, title, {
                 'Tür': KINDS[kind][2], 'Alan': alan, 'Güven': guven,
-                'Durum': 'onaysız', 'Kaynak': kaynak, 'Tarih': today(),
+                'Durum': 'onaysız', 'Kaynak': 'bu iş reposundan çıkarıldı: ' + kaynak,
+                'Tarih': today(),
             }, note=note, store=store)
             seeded += 1
 
@@ -519,10 +655,10 @@ def entry_text(entry):
 
 
 def match_entries(query, store=None, limit=8):
-    terms = {t for t in set(_brain.TOKEN.findall(_brain.fold(query))) if len(t) > 2}
+    terms = {t for t in tokens_of(query) if len(t) > 2}
     scored = []
     for entry in all_entries(store):
-        tokens = set(_brain.TOKEN.findall(_brain.fold(entry_text(entry))))
+        tokens = set(tokens_of(entry_text(entry)))
         hits = terms & tokens
         if not hits:
             continue
@@ -535,23 +671,21 @@ def match_entries(query, store=None, limit=8):
 
 
 def store_chunks(store=None):
-    """Index the raw side of the store with the same scorer the repo uses."""
+    """Index everything in the store: model, sessions, inbox, rehearsals."""
     store = home() if store is None else store
     chunks = []
     for path in sorted(store.rglob('*.md')):
-        scope = path.relative_to(store).parts[0] if path.relative_to(store).parts else 'model'
-        chunks.extend(_brain.chunks_of(path, scope))
-    return _brain.index_chunks(chunks)
+        chunks.extend(chunks_of(path))
+    return chunks
 
 
 def ask(query, store=None, limit=6):
     store = home() if store is None else store
     entries = match_entries(query, store, limit=limit)
-    raw = _brain.search(query, {'inbox', 'sessions', 'deltas', 'model'}, limit=limit,
-                        chunks=store_chunks(store))
-    terms = {t for t in set(_brain.TOKEN.findall(_brain.fold(query))) if len(t) > 3}
-    suggestions = [q for q in parse_bank()
-                   if terms & set(_brain.TOKEN.findall(_brain.fold(q['text'])))
+    raw = rank(query, store_chunks(store), limit=limit)
+    terms = {t for t in tokens_of(query) if len(t) > 3}
+    suggestions = [q for q in parse_bank(store=store)
+                   if terms & set(tokens_of(q['text']))
                    and q['id'] not in answered_ids(store)][:3]
     return {'entries': entries, 'raw': raw, 'suggestions': suggestions}
 
@@ -638,7 +772,7 @@ def gaps(store=None):
     store = home() if store is None else store
     entries = all_entries(store)
     coverage = domain_coverage(store)
-    bank = parse_bank()
+    bank = parse_bank(store=store)
     answered = answered_ids(store)
     bank_domains = {q['domain'] for q in bank}
     return {
@@ -657,7 +791,7 @@ def check(store=None):
     findings = []
     store = home() if store is None else store
 
-    bank = parse_bank()
+    bank = parse_bank(store=store)
     if not bank:
         findings.append(('FAIL', 'soru bankası okunamadı: %s' % BANK_PATH))
     seen = {}
@@ -703,7 +837,7 @@ def stats(store=None):
     store = home() if store is None else store
     entries = all_entries(store)
     raw = raw_items(store, include_processed=True)
-    bank = parse_bank()
+    bank = parse_bank(store=store)
     answered = answered_ids(store)
     words = sum(len(entry_text(e).split()) for e in entries)
     words += sum(len(item['text'].split()) for item in raw)
@@ -764,18 +898,19 @@ def confirm(entry_id, status, note='', store=None):
 
 def cmd_init(args):
     store = home()
-    created, seeded = init(store, reseed=args.reseed)
+    created, seeded = init(store, reseed=args.reseed, from_repo=args.from_repo)
     print('Klon deposu: %s' % store)
-    print('  %d dosya oluşturuldu, %d tohum girdi yazıldı.' % (len(created), seeded))
+    print('  %d dosya oluşturuldu.' % len(created))
+    if seeded:
+        print('  %d tohum girdi bu iş reposundan çıkarıldı, hepsi "onaysız".' % seeded)
+        print('  Gözden geçir: python3 workflow/mind.py gaps')
     print('')
-    print('Tohum girdiler bu reponun kanıtlarından çıkarılmış varsayımlar. Hepsi "onaysız".')
-    print('Sıradaki adım, onları gözden geçirmek:')
+    print('Klon boş başlar ve senin cevaplarınla dolar. İlk oturum:')
     print('')
-    print('  python3 workflow/mind.py gaps')
-    print('  python3 workflow/mind.py confirm B-001 --durum onaylı')
-    print('  python3 workflow/mind.py confirm B-002 --durum reddedildi --note "tam tersi"')
+    print('  python3 workflow/mind.py interview --n 8')
     print('')
-    print('Sonra ilk röportaj: python3 workflow/mind.py interview --n 8')
+    print('Sorular oturum dosyasına yazılır, cevapları altına yazarsın, sonra:')
+    print('  python3 workflow/mind.py distill')
     return 0
 
 
@@ -896,6 +1031,13 @@ def cmd_confirm(args):
     return 0
 
 
+def cmd_addq(args):
+    question_id = add_question(' '.join(args.text), domain=args.domain, priority=args.priority)
+    print('%s eklendi (%s): %s' % (question_id, args.domain, ' '.join(args.text)))
+    print('Havuza girdi, sıradaki oturumda çıkabilir.')
+    return 0
+
+
 def cmd_ask(args):
     store = home()
     query = ' '.join(args.query)
@@ -945,7 +1087,7 @@ def cmd_rehearse(args):
     store = home()
     question = ' '.join(args.question) if args.question else ''
     if not question:
-        pending = [q for q in parse_bank() if q['id'] not in answered_ids(store)]
+        pending = [q for q in parse_bank(store=store) if q['id'] not in answered_ids(store)]
         if not pending:
             print('Prova için soru kalmadı.', file=sys.stderr)
             return 1
@@ -1086,10 +1228,10 @@ def cmd_export(args):
             destination = target / 'mind' / asset.relative_to(ASSETS)
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(asset, destination)
-    for script in (REPO_ROOT / 'workflow' / 'mind.py', REPO_ROOT / 'workflow' / 'brain.py'):
-        destination = target / 'workflow' / script.name
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(script, destination)
+    script = REPO_ROOT / 'workflow' / 'mind.py'
+    destination = target / 'workflow' / script.name
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(script, destination)
     print('Kopyalandı: %s' % target)
     print('')
     print('Orada kullanmak için:')
@@ -1104,7 +1246,9 @@ def main():
     parser = argparse.ArgumentParser(description='Beyin klonu: bildiğini dışarı çıkar, büyüt.')
     sub = parser.add_subparsers(dest='command')
 
-    p = sub.add_parser('init', help='klon deposunu kur ve tohum varsayımları yaz')
+    p = sub.add_parser('init', help='klon deposunu kur')
+    p.add_argument('--from-repo', action='store_true',
+                   help='bu iş reposunun kayıtlarından varsayım tohumları çıkar')
     p.add_argument('--reseed', action='store_true', help='dolu depoya tohumları tekrar yaz')
     p.set_defaults(func=cmd_init)
 
@@ -1138,6 +1282,12 @@ def main():
     p.add_argument('--durum', default='onaylı', choices=list(STATUSES))
     p.add_argument('--note', default='')
     p.set_defaults(func=cmd_confirm)
+
+    p = sub.add_parser('addq', help='bankaya kendi sorunu ekle')
+    p.add_argument('text', nargs='+')
+    p.add_argument('--domain', default='kendi')
+    p.add_argument('--priority', default='P1', choices=['P1', 'P2', 'P3'])
+    p.set_defaults(func=cmd_addq)
 
     p = sub.add_parser('ask', help='klon bu konuda ne tutuyor')
     p.add_argument('query', nargs='+')

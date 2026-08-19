@@ -37,18 +37,20 @@ drifts from its sources fails the build. Full explanation in
 
 ## The clone
 
-`mind/` is the operator's own knowledge rather than the operation's: beliefs,
-decision heuristics, preferences, judgment. The machinery is in git; the clone
-itself is not, because this repository is public.
+`mind/` is a person's own knowledge rather than this project's: beliefs,
+decision heuristics, preferences, judgment. It is not about PSFnetwork or any
+other single job, and it does not depend on the rest of this repo. The engine
+is one self-contained file in git; the clone itself lives in `~/.mind`, outside
+version control.
 
 ```bash
-python3 workflow/mind.py init          # create the store, seed it with hypotheses
+python3 workflow/mind.py init          # create the store (empty, it fills from answers)
 python3 workflow/mind.py interview     # the next questions worth answering
 python3 workflow/mind.py ask "..."     # what the clone holds on a subject
 python3 workflow/mind.py fidelity      # how often it predicts its owner correctly
 ```
 
-The store lives in `mind/private/` (gitignored) or wherever `MIND_HOME` points.
+`MIND_HOME` moves the store, `export` moves the whole thing to a private repo.
 Guide in `mind/README.md`, agent protocol in `mind/AGENT.md`.
 
 ## Overview

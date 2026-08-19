@@ -52,12 +52,13 @@ and which the build regenerates.
 `brain/` is the operation's memory: rules, incidents, articles, topics. It
 changes when the pipeline changes, and it is public like the rest of this repo.
 
-`mind/` is the operator's own: beliefs, decision heuristics, preferences,
-judgment. It changes when he changes. The machinery lives in git; the clone
-itself lives in `mind/private/`, which is gitignored because this repository is
-public. Before touching anything there, read `mind/AGENT.md`: it is the protocol
-for interviewing, distilling, and answering as the clone, and its first rule is
-that nothing enters the clone that its owner did not say.
+`mind/` is a person's own: beliefs, decision heuristics, preferences, judgment.
+It changes when that person changes, it is not about this project, and the
+engine depends on nothing else in the repo. The clone itself lives in `~/.mind`,
+outside version control, because it is personal and this repository is public.
+Before touching anything there, read `mind/AGENT.md`: it is the protocol for
+interviewing, distilling, and answering as the clone, and its first rule is that
+nothing enters the clone that its owner did not say.
 
 ## Commands
 
