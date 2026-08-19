@@ -7,3 +7,8 @@ __pycache__/
 !blog/**/*.png
 .DS_Store
 .pytest_cache/
+
+# The brain clone is personal and this repository is public.
+# Everything under here stays out of git. Move it with:
+#   python3 workflow/mind.py export --to <dir>
+mind/private/

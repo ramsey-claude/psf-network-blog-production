@@ -28,8 +28,8 @@ Usage:
 
 Default scope: every .md file in the repo excluding blog/**/draft.md (those go
 through Stage 7 QA which has its own rules) and competitors/** (third-party
-content notes). The full default scope is README.md, ROADMAP.md, checklist/,
-workflow/, brand/. Override with explicit file args.
+content notes). The full default scope is README.md, ROADMAP.md, CLAUDE.md,
+checklist/, workflow/, brand/, brain/. Override with explicit file args.
 """
 import argparse
 import re
@@ -116,11 +116,11 @@ GRAMMAR = [
 
 def default_scope():
     files = []
-    for pattern in ['README.md', 'ROADMAP.md']:
+    for pattern in ['README.md', 'ROADMAP.md', 'CLAUDE.md']:
         p = REPO_ROOT / pattern
         if p.exists():
             files.append(p)
-    for subdir in ['checklist', 'workflow', 'brand']:
+    for subdir in ['checklist', 'workflow', 'brand', 'brain']:
         d = REPO_ROOT / subdir
         if d.is_dir():
             files.extend([p for p in d.rglob('*.md')])

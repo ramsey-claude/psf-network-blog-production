@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-TOKEN_FILE = Path('/Users/onur/.psfnetwork-drive/github-token')
+TOKEN_FILE = Path('/Users/onur/.psfnetwork-drive/github-token')  # brain-rule: R-auth-infrastructure-github-token
 SENTINEL_DIR = Path('/Users/onur/.psfnetwork-drive')
 REPO = 'ramsey-claude/psf-network-blog-production'
 WARNING_DAYS = 7

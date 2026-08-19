@@ -10,11 +10,48 @@ End-to-end blog production pipeline for PSFnetwork, from draft to published, wit
 make setup       # create venv, install pinned deps
 make lint        # run brand-voice and grammar checks
 make test        # run pytest suite
+make brain       # rebuild the operation's knowledge index
 make status      # repo health snapshot
 ```
 
-See `CONTRIBUTING.md` for contributor protocol and `SECURITY.md` for the
-security policy.
+Start a session at `CLAUDE.md`, then `brain/README.md`. See `CONTRIBUTING.md`
+for contributor protocol and `SECURITY.md` for the security policy.
+
+## The brain
+
+`brain/` is the operation's memory: one indexed place for what is decided, what
+is in force, what has gone wrong, what has shipped, and what is left to write.
+
+```bash
+python3 workflow/brain.py search "drive delivery gate"   # ranked recall with file:line
+python3 workflow/brain.py rules --category tooling        # rules in force, and what checks them
+python3 workflow/brain.py stats                           # what the brain holds
+```
+
+Curated pages (`brain/decisions.md`, `brain/canon/`, `brain/playbooks/`) hold
+knowledge with no other home. Generated registries (`brain/rules.md`,
+`incidents.md`, `articles.md`, `topics.md`, `index.md`) are rebuilt from the
+files that own those facts, and `brain.py check` runs in CI so an index that
+drifts from its sources fails the build. Full explanation in
+`brain/README.md`.
+
+## The clone
+
+`mind/` is a person's own knowledge rather than this project's: beliefs,
+decision heuristics, preferences, judgment. It is not about PSFnetwork or any
+other single job, and it does not depend on the rest of this repo. The engine
+is one self-contained file in git; the clone itself lives in `~/.mind`, outside
+version control.
+
+```bash
+python3 workflow/mind.py init          # create the store (empty, it fills from answers)
+python3 workflow/mind.py interview     # the next questions worth answering
+python3 workflow/mind.py ask "..."     # what the clone holds on a subject
+python3 workflow/mind.py fidelity      # how often it predicts its owner correctly
+```
+
+`MIND_HOME` moves the store, `export` moves the whole thing to a private repo.
+Guide in `mind/README.md`, agent protocol in `mind/AGENT.md`.
 
 ## Overview
 
@@ -90,6 +127,16 @@ Stage 8 commits all artifacts to `main`. Stage 9 delivers a native Google Doc to
 ```
 psf-network-blog-production/
 ├── README.md                              This file
+├── CLAUDE.md                              Entry point for a session, human or agent
+├── brain/
+│   ├── README.md                          How the knowledge index works
+│   ├── decisions.md                       Standing decisions with their evidence
+│   ├── rules.md                           Generated: every rule in force, and what enforces it
+│   ├── incidents.md                       Generated: the incident timeline and open issues
+│   ├── articles.md                        Generated: every article folder and its state
+│   ├── topics.md                          Generated: the gap pool matched against what shipped
+│   ├── canon/                             Brand, product, compliance, systems, glossary
+│   └── playbooks/                         Runbooks for the jobs that recur
 ├── checklist/
 │   ├── ai-tells.md                        Ban list of AI-generated language tells
 │   ├── humanization-pass.md               Stage 1 humanization spec
@@ -101,6 +148,7 @@ psf-network-blog-production/
 │   └── qa-gate.md                         QA gate criteria and failure protocol
 ├── workflow/
 │   ├── pipeline.md                        Detailed pipeline steps and decision trees
+│   ├── brain.py                           Knowledge index and recall (build, check, search)
 │   └── loop-log-template.md               Template for logging pipeline restarts
 └── brand/
     ├── tone-and-voice.md                  PSFnetwork brand voice for content producers

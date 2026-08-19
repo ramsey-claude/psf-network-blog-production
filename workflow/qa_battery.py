@@ -135,7 +135,8 @@ def check_article(folder: Path):
         if pat.search(body):
             fails.append(f'F3 {desc}')
 
-    # F4/F5: meta description
+    # F4/F5: meta description (brain-rule: R-content-quality-title, which sets both
+    # the 150-160 meta range and the 55-60 title range checked in F7 below)
     md = meta.get('meta_description', '')
     if not md:
         fails.append('F4 meta description missing')

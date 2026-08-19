@@ -60,7 +60,10 @@ UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
 
 
 def _write_auth_broken(reason):
-    """Write auth-broken-github sentinel and exit. Used on hard auth failures."""
+    """Write auth-broken-github sentinel and exit. Used on hard auth failures.
+
+    brain-rule: R-auth-infrastructure-auth-sentinels
+    """
     SENTINEL_DIR.mkdir(parents=True, exist_ok=True)
     (SENTINEL_DIR / 'auth-broken-github').write_text(json.dumps({
         'reason': reason,

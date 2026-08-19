@@ -58,6 +58,33 @@ jobs:
       - name: Run qa_battery.py across all articles
         run: python3 workflow/qa_battery.py
 
+  brain:
+    # The operation's index over its own knowledge. Registries under brain/ are
+    # generated from the incident log, the roadmap, and the article folders, so
+    # a source change without a rebuild leaves the brain describing a repo that
+    # no longer exists. This job fails on that drift, and on a rule or decision
+    # id cited anywhere in brain/ or CLAUDE.md that does not resolve.
+    # brain-rule: R-process-brain-rebuild
+    name: Brain index is current
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Run brain.py check
+        run: python3 workflow/brain.py check
+
+      # No clone store exists in CI, and none ever should: it is personal and
+      # gitignored. This checks the parts that do live in git, the question
+      # bank and the protocol, so a broken bank cannot reach the operator.
+      - name: Run mind.py check (assets only)
+        run: python3 workflow/mind.py check
+
   tests:
     name: Pytest suite
     runs-on: ubuntu-latest

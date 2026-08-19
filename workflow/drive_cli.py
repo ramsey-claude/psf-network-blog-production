@@ -35,7 +35,7 @@ from googleapiclient.errors import HttpError
 
 TOKEN_PATH = Path('/Users/onur/.psfnetwork-drive/token.json')
 SENTINEL_DIR = Path('/Users/onur/.psfnetwork-drive')
-AUTH_BROKEN_SENTINEL = SENTINEL_DIR / 'auth-broken-drive'
+AUTH_BROKEN_SENTINEL = SENTINEL_DIR / 'auth-broken-drive'  # brain-rule: R-auth-infrastructure-drive-token
 SCOPES = ['https://www.googleapis.com/auth/drive']
 
 

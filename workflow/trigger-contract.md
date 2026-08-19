@@ -15,6 +15,7 @@ The first action of every triggered run, before any other read or fetch:
 1. Read `workflow/incident-log.md` from current `main`.
 2. Internalize the "Active rules" section. These rules govern this run.
 3. If the incident log is unreachable, halt with `incident-log-unreachable`. Do not proceed.
+4. Optional but cheap: `python3 workflow/brain.py rules` for the same rules indexed by id, and `python3 workflow/brain.py check` to confirm the indexes under `brain/` still match their sources. Neither replaces step 1, and a failing check does not halt the run; it means the previous run skipped its rebuild, and this run fixes it in Stage 11.
 
 This is non-optional. The active rules encode every failure mode the pipeline has previously fixed; skipping the read re-introduces past failures.
 
@@ -24,7 +25,8 @@ The last action of every batch run, after the last slug publishes or the run hal
 
 1. Run the `checklist/post-run-qa.md` retrospective.
 2. Append any new incidents to `workflow/incident-log.md`. Promote new structural causes to "Active rules".
-3. Commit the updated log to `main` with message `chore(workflow): post-run QA for batch ending [date], [N] slugs, [M] new incidents`.
+3. Run `python3 workflow/brain.py build` and stage whatever it rewrites.
+4. Commit the updated log and the rebuilt registries to `main` with message `chore(workflow): post-run QA for batch ending [date], [N] slugs, [M] new incidents`.
 
 Skipping post-run QA breaks the learning loop. The next run's Stage -4 needs current rules.
 
@@ -36,6 +38,7 @@ Saying "yaz" pre-authorizes every action below for the duration of the run. No p
 - GitHub API reads against `ramsey-claude/psf-network-blog-production`
 - GitHub API writes against `ramsey-claude/psf-network-blog-production` (commits, file PUTs, ref updates) within the slug's directory and `blog/[slug]/loop-log-[N].md` (per-loop, template in `workflow/loop-log-template.md`)
 - Brief.md and outline.md generation in new slug directories under `blog/[new-slug]/` (Stage -2)
+- Regenerating the indexes under `brain/` via `workflow/brain.py build`, and committing them (Stage 11, and any stage that changes the incident log, the roadmap topic table, or an article's state)
 - Updates to `ROADMAP.md` Phase 1/2 trackers when Stage -2 generates a new topic
 - Anthropic API calls for any reviewer, drafter, moderator, classifier, or QA role
 - Internal looping (Stage 3 -> Stage 2, Stage 7 -> earlier) within the shared loop budget of 3

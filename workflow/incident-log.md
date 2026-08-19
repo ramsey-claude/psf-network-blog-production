@@ -24,6 +24,16 @@ Customer-feedback intakes follow `checklist/customer-feedback-intake.md` and pro
 
 ---
 
+### 2026-08-19: Operation knowledge indexed, drift now fails CI (process)
+
+- **Stage:** -4 (Pre-flight) and 11 (Post-run workflow QA) tooling
+- **Symptom:** Every run started by reading one file, this log, while the rest of what the operation knows sat unindexed across twenty checklists, the pipeline spec, the roadmap, four brand files, ten competitor notes, and 36 article folders. Answering "what did we decide about X" meant reading all of it, so in practice nobody did, and standing decisions with no rule attached (voice samples permanently unavailable, the positioning fix from the 2026-08-11 feedback round, the topics the operator cancelled) lived only in the memory of whoever was in that conversation.
+- **Root cause:** The log captures rules and incidents well and captures nothing else. There was no registry of what is published, no map of which gap topic produced which article, no record of which rules a machine actually checks versus which ride on discipline, and no entry point for a session starting cold. Two consequences were already visible: the `seed_topic` gap numbers in `pipeline-state.json` point into a roadmap table that has been renumbered since, so #3 and #6 now resolve to the wrong rows; and the Batch 2 cover refresh was reverted on main with no recorded reason while its commit message says all 15 covers had already been uploaded to Drive.
+- **Fix:** (a) `workflow/brain.py`, an index-and-recall tool over the whole repo: `build` regenerates five registries (index, rules, incidents, articles, topics) from the files that own those facts, `check` fails on drift and on unresolved rule or decision citations, `search` does heading-aware ranked retrieval with file and line, `rules` and `stats` report what is in force. Standard library only, so CI runs it without installing anything. (b) `brain/`, curated pages for knowledge with no other home: a decision register of 18 standing decisions with their evidence, canon pages for brand, product, compliance, systems, and vocabulary, and six playbooks. (c) `CLAUDE.md`, the entry point a session reads first. (d) `brain-rule:` markers in `deliver.py`, `drive_cli.py`, `stage10_runner.py`, `qa_battery.py`, `token_expiry_check.py`, and `push.sh`, so the rules registry reports which rules have a machine behind them: five of twenty at the time of writing. (e) A fourth CI job running `brain.py check` on every push, and `brain/` plus `CLAUDE.md` added to the `check-rules.py` default scope so the brain is linted like everything else.
+- **Rule:** Stage 11 rebuilds the brain and commits it, and any run that changes this log, the roadmap topic table, or an article's state rebuilds before its final commit. Promoted to Active rules > Process.
+- **Tests:** tests/test_brain.py (rule parsing and id stability, incident parsing, article registry from disk evidence, pragma carrying, search ranking, drift detection, and a full-repo green invariant).
+- **Reference:** commit this entry lands in.
+
 ### 2026-08-11: QA battery institutionalized after go-live QA caught what upstream layers missed (process)
 
 - **Stage:** 7 (Pre-publish QA) and 8 (Publish) tooling
@@ -99,6 +109,7 @@ These are non-negotiable. Re-read this list at the start of every run.
 - **One-shot push scripts go in repo:** ad-hoc push helpers belong under `/Users/onur/psfnetwork-pipeline/workflow/scripts/` (or a similar repo path), not `/tmp/`. `/tmp/*.sh` invocations are NOT allowlisted and trigger prompts. Repo-path scripts ARE covered by existing rules.
 - **Loop budget:** combined Stage 3 + Stage 7 max 3. On exceed, set `stage: "manual-review-required"` and halt.
 - **Idempotency:** every stage must be safe to re-run on the same inputs. Stage 9 deletes existing Drive files in the slug folder before re-uploading to keep state clean.
+- **Brain rebuild:** the generated registries under `brain/` are rebuilt with `python3 workflow/brain.py build` and committed as part of Stage 11, and any run that changes this log, `ROADMAP.md` Step 2, or an article's state rebuilds them before its final commit. `brain.py check` runs in CI and fails on drift, on a rule id cited under `brain/` or in `CLAUDE.md` that does not resolve, and on a broken relative link in a brain page. Applies to all content.
 
 ---
 
