@@ -79,6 +79,12 @@ jobs:
       - name: Run brain.py check
         run: python3 workflow/brain.py check
 
+      # No clone store exists in CI, and none ever should: it is personal and
+      # gitignored. This checks the parts that do live in git, the question
+      # bank and the protocol, so a broken bank cannot reach the operator.
+      - name: Run mind.py check (assets only)
+        run: python3 workflow/mind.py check
+
   tests:
     name: Pytest suite
     runs-on: ubuntu-latest

@@ -6,7 +6,7 @@
 VENV := .venv/bin
 PY := $(VENV)/python
 
-.PHONY: help setup test lint lint-staged check-drive list-blog status humanize-status brain brain-check brain-search
+.PHONY: help setup test lint lint-staged check-drive list-blog status humanize-status brain brain-check brain-search mind mind-gaps mind-check
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-22s\033[0m %s\n", $$1, $$2}'
@@ -64,5 +64,14 @@ brain-check:  ## Fail if the brain no longer matches the repo it describes
 brain-search:  ## Recall across everything. Usage: make brain-search Q="drive delivery"
 	@if [ -z "$(Q)" ]; then echo 'Usage: make brain-search Q="your question"'; exit 2; fi
 	@python3 workflow/brain.py search $(Q)
+
+mind:  ## Start or continue the brain clone. Usage: make mind (then follow the prompts)
+	python3 workflow/mind.py stats || python3 workflow/mind.py init
+
+mind-gaps:  ## What the clone does not know yet, and the next questions to ask
+	python3 workflow/mind.py gaps
+
+mind-check:  ## Integrity of the clone store
+	python3 workflow/mind.py check
 
 status: lint list-blog humanize-status brain-check  ## One-shot repo health snapshot

@@ -47,6 +47,18 @@ to get prose past the linter.
 Start at `brain/README.md`. It explains which of those pages a person maintains
 and which the build regenerates.
 
+## Two memories, and they are not the same thing
+
+`brain/` is the operation's memory: rules, incidents, articles, topics. It
+changes when the pipeline changes, and it is public like the rest of this repo.
+
+`mind/` is the operator's own: beliefs, decision heuristics, preferences,
+judgment. It changes when he changes. The machinery lives in git; the clone
+itself lives in `mind/private/`, which is gitignored because this repository is
+public. Before touching anything there, read `mind/AGENT.md`: it is the protocol
+for interviewing, distilling, and answering as the clone, and its first rule is
+that nothing enters the clone that its owner did not say.
+
 ## Commands
 
 ```bash

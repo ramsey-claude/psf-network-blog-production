@@ -838,8 +838,21 @@ GENERATED = {
 # ---------------------------------------------------------------------------
 
 HEADING_RE = re.compile(r'^(#{1,6})\s+(.+)$')
-TOKEN = re.compile(r"[a-z0-9][a-z0-9'_-]*")
+# Unicode-aware on purpose: the repo is English but the clone that borrows this
+# scorer is Turkish, and an ASCII class silently shreds "köpek" into "k" and
+# "pek", which then matches everything.
+TOKEN = re.compile(r"[^\W_]+(?:['’_-][^\W_]+)*", re.UNICODE)
+COMBINING_DOT = '\u0307'
 CHUNK_MAX_LINES = 120
+
+
+def fold(text):
+    """Lowercase for matching.
+
+    Turkish İ lowercases to i plus a combining dot, so "İnanç" and "inanç" would
+    otherwise be different tokens. Drop the mark.
+    """
+    return text.lower().replace(COMBINING_DOT, '')
 
 
 def scope_of(path):
@@ -889,21 +902,32 @@ def chunks_of(path, scope):
     return chunks
 
 
+def index_chunks(chunks):
+    """Add the token counts the scorer needs. Any caller can build the chunks."""
+    for chunk in chunks:
+        chunk['tokens'] = Counter(TOKEN.findall(fold(chunk['text'])))
+        chunk['label_tokens'] = set(TOKEN.findall(fold(chunk['heading'] + ' ' + chunk['path'])))
+    return chunks
+
+
 def build_corpus(scopes):
     chunks = []
     for path, scope in corpus_files(scopes):
         chunks.extend(chunks_of(path, scope))
-    for chunk in chunks:
-        chunk['tokens'] = Counter(TOKEN.findall(chunk['text'].lower()))
-        chunk['label_tokens'] = set(TOKEN.findall((chunk['heading'] + ' ' + chunk['path']).lower()))
-    return chunks
+    return index_chunks(chunks)
 
 
-def search(query, scopes, limit=8):
-    chunks = build_corpus(scopes)
+def search(query, scopes, limit=8, chunks=None):
+    """Rank chunks against a query.
+
+    `chunks` lets another corpus borrow this scorer instead of copying it:
+    mind.py indexes a store outside the repo and passes it in. Default is the
+    repo corpus.
+    """
+    chunks = build_corpus(scopes) if chunks is None else chunks
     if not chunks:
         return []
-    terms = [t for t in TOKEN.findall(query.lower())]
+    terms = [t for t in TOKEN.findall(fold(query))]
     if not terms:
         return []
     doc_freq = Counter()
@@ -912,7 +936,7 @@ def search(query, scopes, limit=8):
             if chunk['tokens'].get(term):
                 doc_freq[term] += 1
     total = len(chunks)
-    phrase = query.lower().strip()
+    phrase = fold(query).strip()
 
     scored = []
     for chunk in chunks:
@@ -930,7 +954,7 @@ def search(query, scopes, limit=8):
         if not hits:
             continue
         score *= (hits / len(terms)) ** 1.5          # reward chunks covering the whole query
-        if len(phrase) > 6 and phrase in chunk['text'].lower():
+        if len(phrase) > 6 and phrase in fold(chunk['text']):
             score += 6.0
         scored.append((score, chunk))
 
@@ -939,7 +963,7 @@ def search(query, scopes, limit=8):
     for score, chunk in scored[:limit]:
         best_line, best_hits, offset = '', 0, 0
         for i, line in enumerate(chunk['lines']):
-            found = sum(1 for term in set(terms) if term in line.lower())
+            found = sum(1 for term in set(terms) if term in fold(line))
             if found > best_hits:
                 best_line, best_hits, offset = line.strip(), found, i
         results.append({'score': round(score, 2), 'path': chunk['path'],

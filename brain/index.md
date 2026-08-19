@@ -57,11 +57,11 @@ Change the source, then rebuild the brain, never the other way round.
 
 | Document | Purpose | Lines |
 |----------|---------|-------|
-| [README.md](../README.md) | End-to-end blog production pipeline for PSFnetwork, from draft to published, with humanization, multi-expert… | 153 |
+| [README.md](../README.md) | End-to-end blog production pipeline for PSFnetwork, from draft to published, with humanization, multi-expert… | 169 |
 | [ROADMAP.md](../ROADMAP.md) | Last updated: May 2026 | 191 |
 | [CONTRIBUTING.md](../CONTRIBUTING.md) | This repository is the PSFnetwork blog production pipeline. | 88 |
 | [SECURITY.md](../SECURITY.md) | If you discover a security issue in this repository (leaked credentials, exploitable script behavior, auth by… | 48 |
-| [CLAUDE.md](../CLAUDE.md) | PSFnetwork's blog production pipeline: research, drafting, humanization, regulatory review, QA, publish, deli… | 90 |
+| [CLAUDE.md](../CLAUDE.md) | PSFnetwork's blog production pipeline: research, drafting, humanization, regulatory review, QA, publish, deli… | 102 |
 
 ### Pipeline and tooling
 
