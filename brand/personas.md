@@ -41,11 +41,31 @@ The invented editor persona that previously held this slot is retired. It was co
 - **Appears in:** `author` field (YAML frontmatter or Production Notes), ArticleHero component, AuthorCard component
 - **Bio (canonical):** pending. Needs one sentence from the operator, in the shape of Youssef's above.
 - **Quotable:** No, same rule as the Youssef byline.
-- **Title:** the question is moot in the CMS, which keeps the role in its own
-  Position field rather than in the byline. Omar's Position is whatever the
-  Author collection holds; nothing needs inventing here.
-- **Status:** Usable. No article is assigned to this byline yet; all 15 Batch 2 articles carry the Youssef byline. Reassignment is a per-article operator decision, not a default.
+- **Title:** kept in the CMS Position field, which reads `CEO, PSFnetwork`
+  (read off a live page on 2026-08-18; renders under the name in the hero
+  byline and the AuthorCard).
+- **Status:** In use. On 2026-08-18 eight live Batch 2 articles were
+  reassigned to this byline in the CMS (fractional-real-estate-ira,
+  how-to-choose-fractional-real-estate-platform,
+  how-to-read-reg-a-offering-circular,
+  legal-tax-guide-fractional-real-estate, proptech-future-of-real-estate,
+  real-estate-as-an-asset-class, real-estate-etfs-vs-fractional,
+  reit-dividend-taxation); the other six stayed with Youssef, and
+  single-family-vs-multifamily-fractional came out of the same edit
+  carrying a third name (see below). The frozen repo drafts still say
+  Youssef; live is the record for published batches.
 - **Spelling:** supplied as `omar-elghazaly`, which is handle form. Rendered here as `Omar Elghazaly`. Correct this line if the capitalisation differs.
+
+### Unresolved: "Robert DiFranco" (2026-08-18)
+
+A live check after the 2026-08-18 republish found
+`single-family-vs-multifamily-fractional` bylined to **Robert DiFranco**,
+a name not in this file. The Author collection has held three items all
+along; this is presumably the third. The standing directive (2026-08-16)
+says the byline is Youssef or Omar only, so either the operator adds
+Robert here as an approved byline or the article's Author reference gets
+corrected in the CMS. Flagged to the operator the same day; not a
+pipeline change to make silently.
 
 ### Retired: the previous editor persona
 
