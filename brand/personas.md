@@ -56,16 +56,17 @@ The invented editor persona that previously held this slot is retired. It was co
   Youssef; live is the record for published batches.
 - **Spelling:** supplied as `omar-elghazaly`, which is handle form. Rendered here as `Omar Elghazaly`. Correct this line if the capitalisation differs.
 
-### Unresolved: "Robert DiFranco" (2026-08-18)
+### Rejected: "Robert DiFranco" (decision 2026-08-24)
 
 A live check after the 2026-08-18 republish found
 `single-family-vs-multifamily-fractional` bylined to **Robert DiFranco**,
-a name not in this file. The Author collection has held three items all
-along; this is presumably the third. The standing directive (2026-08-16)
-says the byline is Youssef or Omar only, so either the operator adds
-Robert here as an approved byline or the article's Author reference gets
-corrected in the CMS. Flagged to the operator the same day; not a
-pipeline change to make silently.
+presumably the Author collection's third item picked by mistake during
+the byline reassignment wave. The operator ruled on 2026-08-24:
+**"sadece youssef ve omar olacak yazarlarda"** - the byline set stays
+Youssef and Omar only, Robert is not an approved byline, and the
+article's Author reference is to be corrected in the CMS (either
+approved name) and republished. Until a live check confirms the fix,
+that article is the one known byline violation.
 
 ### Retired: the previous editor persona
 
