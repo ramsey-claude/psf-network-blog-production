@@ -319,19 +319,30 @@ def sources_linked(body_md: str) -> str:
     field to be Formatted Text; a Plain Text field prints the tags literally.
     The rendered links take the site's Link text style automatically.
     """
-    items = []
-    for line in sources_plain(body_md).splitlines():
+    def esc(t):
+        return t.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+    # Numbered PARAGRAPHS, not an <ol>. The live runtime draws list numbers
+    # with absolutely positioned CSS counters and the published page lacks the
+    # positioning they need, so an imported <ol> shows its links but not its
+    # numbers (2026-08-27, seen on the reit test page; the editor renders the
+    # numbers fine, which is what made it confusing). Paragraphs with the
+    # number in the text render identically everywhere, same as Content.
+    out = []
+    for n, line in enumerate(sources_plain(body_md).splitlines(), 1):
         m = re.search(r'https?://\S+', line)
         if m:
             url = m.group(0).rstrip('.,;)')
             label = line[:m.start()].rstrip().rstrip(':').rstrip(',').strip()
             trail = line[m.start() + len(url):].lstrip(' ,;')
-            item = f'[{label}]({url})' if label else f'<{url}>'
-            items.append(f'{item} {trail}'.rstrip() if trail else item)
+            item = (f'<a href="{url}">{esc(label)}</a>' if label
+                    else f'<a href="{url}">{url}</a>')
+            if trail:
+                item = f'{item} {esc(trail)}'
         else:
-            items.append(line)
-    md = '\n'.join(f'{n}. {it}' for n, it in enumerate(items, 1))
-    return _mpk.md_to_html(md)
+            item = esc(line)
+        out.append(f'<p>{n}. {item}</p>')
+    return ''.join(out)
 
 
 
