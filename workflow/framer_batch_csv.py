@@ -321,11 +321,13 @@ def sources_linked(body_md: str) -> str:
     """
     items = []
     for line in sources_plain(body_md).splitlines():
-        m = re.search(r'https?://\S+$', line)
+        m = re.search(r'https?://\S+', line)
         if m:
             url = m.group(0).rstrip('.,;)')
             label = line[:m.start()].rstrip().rstrip(':').rstrip(',').strip()
-            items.append(f'[{label}]({url})' if label else f'<{url}>')
+            trail = line[m.start() + len(url):].lstrip(' ,;')
+            item = f'[{label}]({url})' if label else f'<{url}>'
+            items.append(f'{item} {trail}'.rstrip() if trail else item)
         else:
             items.append(line)
     md = '\n'.join(f'{n}. {it}' for n, it in enumerate(items, 1))
