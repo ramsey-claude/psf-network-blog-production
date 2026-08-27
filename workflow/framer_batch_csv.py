@@ -516,10 +516,13 @@ def row_for(slug: str, hero_style='download', category='', faq_sep=', ',
                                           category_by),
         'FAQ S': faq_s,
     }
+    # Only real problems for the columns actually being written. A partial
+    # update (--fields "Slug,Sources") must not be blocked because a Batch 1
+    # slug has no cover in HERO_FILE_IDS or no FAQ refs recorded.
     if slug not in HERO_FILE_IDS:
-        problems.append('no cover image recorded for this slug')
+        problems.append('Hero Image::no cover image recorded for this slug')
     if not faq_s:
-        problems.append('no FAQ questions found, FAQ S would ship empty')
+        problems.append('FAQ S::no FAQ questions found, FAQ S would ship empty')
     return row, problems
 
 
@@ -582,6 +585,11 @@ def main():
         row, problems = row_for(s, args.hero_url_style, args.category,
                                 args.faq_sep, args.category_by, args.author_by,
                                 args.sources_style)
+        if args.fields and problems:
+            wanted = {f.strip() for f in args.fields.split(',')}
+            problems = [p for p in problems
+                        if '::' not in p or p.split('::', 1)[0] in wanted]
+        problems = [p.split('::', 1)[-1] for p in problems]
         if problems:
             blocked.append((s, problems))
             continue
