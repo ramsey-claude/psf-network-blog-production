@@ -42,6 +42,9 @@ every one.
 - 4 Batch 1 articles have their sources inline in Content and already
   clickable (investing, with-100, crowdfunding, reg-a-vs-reg-d): left
   untouched, no box needed.
-- `how-fractional-real-estate-is-taxed`: 8 in-body source URLs are still
-  plain text; needs a hand edit in the CMS Content editor (select URL,
-  add link). Importing the box for it would duplicate its inline list.
+- `how-fractional-real-estate-is-taxed`: migrated to the box the same
+  day (both fields imported, the old in-body Sources section deleted
+  from Content by the operator). Verified live: box renders 8 numbered
+  linked entries plus one URL-less SEC citation, no duplicate in the
+  body. With this, every live article that lists sources does so
+  clickably: 22 of 22.
