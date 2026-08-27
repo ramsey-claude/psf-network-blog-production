@@ -198,6 +198,26 @@ These are non-negotiable. Re-read this list at the start of every run.
   the audit has to wait. Identical byte counts across several URLs are the
   tell.
 
+### 2026-08-27: same-tab clicks on lazily rendered listing cards do nothing
+
+- **Stage:** live site, /blog listing
+- **Symptom:** clicking an article card in the same tab neither navigates
+  nor changes the URL; opening the same card in a new tab works, and the
+  direct URL works. Only cards beyond the roughly six server-rendered ones
+  are affected, which is exactly the set the listing renders client-side
+  for Load More.
+- **Diagnosis:** the hrefs are correct in the DOM (verified). The failure
+  is in Framer's client-side router, which intercepts same-tab clicks and
+  cannot resolve the routes of lazily loaded CMS cards; a new tab bypasses
+  the SPA router entirely, which is why it works. The site's custom inline
+  scripts were read and ruled out. A clean republish regenerated 15 of 18
+  runtime modules and did not fix it, so it is not CDN or cache staleness.
+- **Status:** open, escalated outside the pipeline. The operator emailed
+  Alex about it on 2026-08-27. Workaround if it drags: disable Load More /
+  raise the collection list's item count so every card is server-rendered.
+- **Rule:** anchor-vs-router failures split cleanly with one test: same
+  tab vs new tab. If new tab works, stop debugging hrefs.
+
 ### 2026-08-18: /blog cards render image-only; a hand-edit to the Article Card shipped with the cover publish
 
 - **Stage:** live site, found after the Batch 2 cover replacement

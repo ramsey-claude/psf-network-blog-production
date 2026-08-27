@@ -65,8 +65,9 @@ the byline reassignment wave. The operator ruled on 2026-08-24:
 **"sadece youssef ve omar olacak yazarlarda"** - the byline set stays
 Youssef and Omar only, Robert is not an approved byline, and the
 article's Author reference is to be corrected in the CMS (either
-approved name) and republished. Until a live check confirms the fix,
-that article is the one known byline violation.
+approved name) and republished. The operator applied the fix in
+the CMS on 2026-08-27; live verification pending at the time of this
+edit - see the session log for the final check.
 
 ### Retired: the previous editor persona
 
