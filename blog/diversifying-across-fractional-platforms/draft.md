@@ -3,11 +3,11 @@ title: "How to Diversify Across Fractional Real Estate Platforms"
 slug: diversifying-across-fractional-platforms
 type: How-to
 topic: Portfolio
-author: Maya Reyes, Senior Editor
+author: Omar Elghazaly
 reviewer: Daniel Cho, CFA
 read_time: 9 min
 published: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-15
 focus_keyword: diversify across fractional real estate platforms
 secondary_keywords:
   - platform risk in fractional real estate
@@ -63,7 +63,7 @@ Fee drift deserves particular attention because holds are long. Typical fraction
 
 Two to three platforms is a reasonable spread for most investors. One platform leaves you fully exposed to a single operator. Two breaks the single point of failure. Three lets you hold genuinely different structures at once. Beyond three, the marginal risk reduction shrinks while the paperwork multiplies: every additional platform adds its own onboarding, its own tax documents, and its own minimums competing for the same capital.
 
-We should be transparent about our own incentives here, because they are unusual for this industry. We want a share of your allocation, not all of it. A reader who holds PSFnetwork alongside a competitor is running the strategy we would run ourselves, because that reader survives our mistakes as well as our successes. Regulation quietly points the same direction: under Reg A Tier 2, non-accredited investors are capped at 10% of the greater of annual income or net worth per offering, a structure that assumes your money is spread across offerings rather than piled into one.
+PSFnetwork was designed to fit this strategy rather than fight it. Per-square-foot ownership with a $100 minimum makes it a platform you can hold alongside others without fragmenting your capital, and a genuine spread is the strategy we would run ourselves. Regulation quietly points the same direction: under Reg A Tier 2, non-accredited investors are capped at 10% of the greater of annual income or net worth per offering, a structure that assumes your money is spread across offerings rather than piled into one.
 
 ---
 
@@ -71,9 +71,9 @@ We should be transparent about our own incentives here, because they are unusual
 
 Choose platforms for different structures, not different logos. The useful axes are the investment vehicle (fund-style pools versus single-property LLCs versus per-square-foot ownership), the regulatory wrapper (Reg A offerings open to non-accredited investors versus Reg D offerings limited mostly to accredited ones), and the fee model. Two platforms with identical structures, similar markets, and matching fee schedules give you the feeling of diversification without much of the substance.
 
-Start with the wrapper, because it determines what you can even buy and what gets disclosed. A Reg A Tier 2 issuer can raise up to $75 million per 12 months, admit non-accredited investors, and must file a public annual Form 1-K. A Reg D Rule 506(c) offering has no raise cap and can advertise, but it is limited to accredited investors: $1 million in net worth excluding your primary residence, or $200,000 in income ($300,000 jointly). If you qualify for both, holding one of each diversifies your disclosure regime along with your operator; our comparison of [Reg A and Reg D for fractional investors](/blog/reg-a-vs-reg-d-for-fractional-investors) walks through the tradeoffs.
+Start with the wrapper, because it determines what you can even buy and what gets disclosed. A Reg A Tier 2 issuer can raise up to $75 million per 12 months, admit non-accredited investors, and must file a public annual Form 1-K. A Reg D Rule 506(c) offering has no raise cap and can advertise, but it is limited to accredited investors: $1 million in net worth excluding your primary residence, or $200,000 in income ($300,000 jointly). If you qualify for both, holding one of each diversifies your disclosure regime along with your operator; our comparison of [Reg A and Reg D for fractional investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors) walks through the tradeoffs.
 
-Then differentiate by structure. Pair a fund-style vehicle on one platform with single-property deals on another, or with [per-square-foot ownership](/blog/square-foot-real-estate-ownership-explained), which prices exposure by the square foot rather than by the deal. Our rubric for [how to choose a fractional real estate platform](/blog/how-to-choose-fractional-real-estate-platform) covers the evaluation criteria in depth, and our roundup of the [best fractional real estate platforms](/blog/best-fractional-real-estate-platforms) is a practical starting shortlist. Pick for contrast. Overlap is the enemy.
+Then differentiate by structure. Pair a fund-style vehicle on one platform with single-property deals on another, or with [per-square-foot ownership](https://www.psfnetwork.com/blog/square-foot-real-estate-ownership-explained), which prices exposure by the square foot rather than by the deal. Our rubric for [how to choose a fractional real estate platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform) covers the evaluation criteria in depth, and our roundup of the [best fractional real estate platforms](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms) is a practical starting shortlist. Pick for contrast. Overlap is the enemy.
 
 ---
 
@@ -95,7 +95,7 @@ Repeat this for each platform in your spread. It takes under an hour. Boring is 
 
 The honest bill has three lines: taxes, time, and fragmentation. Each LLC position issues its own Schedule K-1, so three platforms can mean a pile of them arriving near the March 16, 2026 partnership deadline, or as late as September 15 on extension. Each platform also demands its own KYC onboarding. And each minimum you meet elsewhere is capital that cannot compound in your strongest idea.
 
-The tax mechanics deserve specifics. Pass-through LLCs issue a Schedule K-1 (Form 1065), not a 1099, and the IRS [instructions for Schedule K-1](https://www.irs.gov/instructions/i1065sk1) are long for a reason. Partnership returns for tax year 2025 are due March 16, 2026, and a Form 7004 extension can push K-1 arrival to September 15, which can hold your own filing hostage. Depreciation can make the taxable income on a K-1 smaller than the cash you actually received, subject to passive activity rules, and one property can create filing obligations in multiple states. Multiply every one of those frictions by each position you add across each platform. Our guide to [how fractional real estate is taxed](/blog/how-fractional-real-estate-is-taxed) covers the full picture.
+The tax mechanics deserve specifics. Pass-through LLCs issue a Schedule K-1 (Form 1065), not a 1099, and the IRS [instructions for Schedule K-1](https://www.irs.gov/instructions/i1065sk1) are long for a reason. Partnership returns for tax year 2025 are due March 16, 2026, and a Form 7004 extension can push K-1 arrival to September 15, which can hold your own filing hostage. Depreciation can make the taxable income on a K-1 smaller than the cash you actually received, subject to passive activity rules, and one property can create filing obligations in multiple states. Multiply every one of those frictions by each position you add across each platform. Our guide to [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) covers the full picture.
 
 Fragmentation is the quieter cost. Platform minimums range from $10 to $5,000, and a high minimum on one platform can consume the capital you meant to spread across three. If you have $3,000 to deploy, a $5,000 minimum simply excludes that platform from your plan. PSFnetwork's $100 minimum exists partly for this reason: a low floor makes a genuine multi-platform spread arithmetically possible for ordinary account sizes, instead of a luxury reserved for large ones.
 
@@ -136,7 +136,7 @@ A: No. Fractional real estate positions are not FDIC insured; FDIC coverage appl
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Omar Elghazaly** is the CEO of PSFnetwork, writing on fractional real estate, per-square-foot ownership, and real-asset investing.
 
 **Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 
@@ -146,10 +146,10 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-If PSFnetwork earns one slot in your two-or-three-platform spread, the $100 minimum makes it practical to start small and add as your conviction grows. That partial allocation is exactly the strategy we would run ourselves. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+PSFnetwork was built to be an easy platform to hold in a spread like this: per-square-foot ownership of mortgage-free properties, Reg A offerings you can verify on EDGAR, and a $100 minimum that lets you start small and add as your conviction grows. Explore [how PSFnetwork works](https://www.psfnetwork.com/how-it-works) and [join the waitlist](https://www.psfnetwork.com/waitlist) to be first in line when new offerings open. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ## Related
 
-- [Best Fractional Real Estate Platforms (2026)](/blog/best-fractional-real-estate-platforms)
-- [How to Choose a Fractional Real Estate Platform](/blog/how-to-choose-fractional-real-estate-platform)
-- [How to Invest $10,000 in Real Estate: A Playbook](/blog/how-to-invest-10k-in-real-estate)
+- [Best Fractional Real Estate Platforms (2026)](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms)
+- [How to Choose a Fractional Real Estate Platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform)
+- [How to Invest $10,000 in Real Estate: A Playbook](https://www.psfnetwork.com/blog/how-to-invest-10k-in-real-estate)

@@ -3,11 +3,11 @@ title: "Fractional Real Estate for High-Income Earners: Tax First"
 slug: fractional-real-estate-high-income-earners
 type: Explainer
 topic: Personas
-author: Maya Reyes, Senior Editor
+author: Youssef Kholeif
 reviewer: Daniel Cho, CFA
 read_time: 9 min
 published: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-15
 focus_keyword: fractional real estate for high income earners
 secondary_keywords:
   - accredited investor real estate
@@ -45,7 +45,7 @@ Fractional real estate can suit high income earners for a reason most marketing 
 
 Linda, a 45-year-old surgeon in Chicago, spends a Saturday morning with a spreadsheet, a cold coffee, and a folder labeled taxes. Her problem is not finding investments. Deal invitations arrive weekly: private funds, an angel round, a colleague's surgery center expansion. Her problem is keeping what she earns after tax, because at her marginal rate, a large slice of every new dollar of ordinary income never reaches her at all.
 
-This article is for that reader. It walks through fractional real estate the way a tax adviser would, not the way a landing page does: what pass-through depreciation actually does to the taxable income on a K-1, where the Section 199A deduction may apply, what accreditation under Reg D opens that [fractional real estate investing](/blog/fractional-real-estate-investing) under Reg A does not, and the honest paperwork price of all of it. At the end, we say plainly when a plain REIT ETF is the better call.
+This article is for that reader. It walks through fractional real estate the way a tax adviser would, not the way a landing page does: what pass-through depreciation actually does to the taxable income on a K-1, where the Section 199A deduction may apply, what accreditation under Reg D opens that [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing) under Reg A does not, and the honest paperwork price of all of it. At the end, we say plainly when a plain REIT ETF is the simpler call.
 
 ---
 
@@ -53,7 +53,7 @@ This article is for that reader. It walks through fractional real estate the way
 
 Because depreciation changes the tax character of the cash, and at a high marginal rate the tax character often matters more than the headline number. A pass-through property position reports income on a Schedule K-1, and depreciation can make that reported taxable income smaller than the cash you actually received, limited by passive activity rules. Platform-reported yields of 4 to 9 percent look similar everywhere. Their after-tax value does not.
 
-Here is the mechanism. Most fractional platforms hold each property in a pass-through LLC, so the entity itself pays no tax; income, deductions, and depreciation flow to you on a Schedule K-1 (Form 1065), not a 1099. Depreciation is the deduction that does the work. It reduces the taxable income the K-1 reports without reducing the cash the property distributes, which is why a year's distributions can arrive largely sheltered on paper. Passive activity rules cap the magic: passive losses generally offset passive income, not a surgeon's salary, and what depreciation shelters now is deferral, not forgiveness. We cover the full mechanics in our guide to [how fractional real estate is taxed](/blog/how-fractional-real-estate-is-taxed).
+Here is the mechanism. Most fractional platforms hold each property in a pass-through LLC, so the entity itself pays no tax; income, deductions, and depreciation flow to you on a Schedule K-1 (Form 1065), not a 1099. Depreciation is the deduction that does the work. It reduces the taxable income the K-1 reports without reducing the cash the property distributes, which is why a year's distributions can arrive largely sheltered on paper. Passive activity rules cap the magic: passive losses generally offset passive income, not a surgeon's salary, and what depreciation shelters now is deferral, not forgiveness. We cover the full mechanics in our guide to [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed).
 
 We think high earners are the most underserved readers in this category: every platform wants their money, and almost nobody writes for the part of the decision that actually moves for them, which is the tax line. Yield tables get the headlines. The tax line decides the outcome.
 
@@ -73,7 +73,7 @@ It buys eligibility, not superiority. Accreditation, meaning $1 million in net w
 
 The standard pitch to high earners is access: exclusive deals behind the accredited wall. That pitch sells. It also misses the point. Access is the weakest reason to invest, because the structural reason a pass-through property position can suit a high earner is boring and printed on a K-1: depreciation timing, not deal exclusivity.
 
-Consider what sits on either side of the wall. A Reg A Tier 2 offering can raise up to $75 million per 12 months, is open to non-accredited investors capped at 10 percent of the greater of annual income or net worth per offering, and comes with a filed Form 1-A plus a public annual Form 1-K you can pull yourself through [EDGAR full-text search](https://www.sec.gov/edgar/search/). Reg D lives behind the wall: 506(c) permits general solicitation of verified accredited investors with no offering cap, while 506(b) permits no general solicitation at all. But both Reg A and Reg D are securities exemptions, not tax structures, and neither one decides what tax form you receive. A Reg A offering organized as a REIT-style entity sends you a 1099; one built on a pass-through LLC sends a K-1 with depreciation flowing through it. The tax story lives in the entity, so read the offering circular for the structure before you read it for the yield. We break down the full comparison in [Reg A vs Reg D for fractional investors](/blog/reg-a-vs-reg-d-for-fractional-investors).
+Consider what sits on either side of the wall. A Reg A Tier 2 offering can raise up to $75 million per 12 months, is open to non-accredited investors capped at 10 percent of the greater of annual income or net worth per offering, and comes with a filed Form 1-A plus a public annual Form 1-K you can pull yourself through [EDGAR full-text search](https://www.sec.gov/edgar/search/). That is the side PSFnetwork chose deliberately: per-square-foot ownership under Reg A, filings in public view, and a $100 minimum that never asks for an accreditation letter. Reg D lives behind the wall: 506(c) permits general solicitation of verified accredited investors with no offering cap, while 506(b) permits no general solicitation at all. But both Reg A and Reg D are securities exemptions, not tax structures, and neither one decides what tax form you receive. A Reg A offering organized as a REIT-style entity sends you a 1099; one built on a pass-through LLC sends a K-1 with depreciation flowing through it. The tax story lives in the entity, so read the offering circular for the structure before you read it for the yield. We break down the full comparison in [Reg A vs Reg D for fractional investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors).
 
 ---
 
@@ -95,7 +95,7 @@ None of this is exotic; the [partner's instructions for Schedule K-1](https://ww
 
 When simplicity is worth more to you than depreciation timing, which for many busy high earners it honestly is. REITs must distribute at least 90 percent of taxable income, the dividends are generally taxed as ordinary income, and some REIT dividends may also qualify for the Section 199A deduction. You give up the K-1 depreciation shelter and, in exchange, you file taxes like a normal person.
 
-Run the costs side by side too. A 1 percent annual management fee across a 10-year hold consumes roughly a tenth of your starting capital, before upfront and exit fees, and typical fractional holds run 5 to 10 years with no public market to exit through. A broad [REIT position](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits) in ETF form trades whenever markets are open and produces a standard brokerage tax document instead of a stack of K-1s. Our honest rule: if you would not read a K-1, an offering circular, and at least one state tax notice without resenting it, buy the ETF and keep your weekends.
+Run the costs side by side too. A 1 percent annual management fee across a 10-year hold consumes roughly a tenth of your starting capital, before upfront and exit fees, and typical fractional holds run 5 to 10 years with no public market to exit through. A broad [REIT position](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits) in ETF form trades whenever markets are open and produces a standard brokerage tax document instead of a stack of K-1s. Our honest rule: the K-1 route rewards the investor willing to read an offering circular and brief a preparer. If that is not you this year, the ETF is the simpler instrument, and PSFnetwork's filings will still be on EDGAR when the depreciation math starts to matter to you.
 
 ---
 
@@ -142,7 +142,7 @@ A: Yes. Real estate income is generally sourced to the state where the property 
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Youssef Kholeif** is the CMO of PSFnetwork, writing on fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 
@@ -156,12 +156,12 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-If the tax mechanics here fit your situation, the next step is reading an actual offering, not another article: PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+If the tax mechanics here fit your situation, the next step is reading an actual offering, not another article. PSFnetwork's Reg A filings sit on EDGAR for exactly that purpose, and the $100 minimum means testing the structure does not require a position size that matters. [Join the waitlist](https://www.psfnetwork.com/waitlist) to hear when new offerings open. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 
 ## Related
 
-- [How Fractional Real Estate Is Taxed: A K-1 Guide](/blog/how-fractional-real-estate-is-taxed)
-- [Reg A vs Reg D for Fractional Real Estate Investors](/blog/reg-a-vs-reg-d-for-fractional-investors)
-- [How to Invest $10,000 in Real Estate: A Playbook](/blog/how-to-invest-10k-in-real-estate)
+- [How Fractional Real Estate Is Taxed: A K-1 Guide](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed)
+- [Reg A vs Reg D for Fractional Real Estate Investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors)
+- [How to Invest $10,000 in Real Estate: A Playbook](https://www.psfnetwork.com/blog/how-to-invest-10k-in-real-estate)

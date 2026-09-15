@@ -3,11 +3,11 @@ title: "How to Verify a Fractional Real Estate Platform Is Legit"
 slug: how-to-verify-fractional-real-estate-platform
 type: How-to
 topic: Due Diligence
-author: Maya Reyes, Senior Editor
+author: Omar Elghazaly
 reviewer: Daniel Cho, CFA
 read_time: 9 min
 published: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-15
 focus_keyword: verify fractional real estate platform
 secondary_keywords:
   - is fractional real estate legit
@@ -141,7 +141,7 @@ A: Under an hour for all five checks the first time, and faster after that. The 
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Omar Elghazaly** is the CEO of PSFnetwork, writing on fractional real estate, per-square-foot ownership, and real-asset investing.
 
 **Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 
@@ -155,12 +155,12 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Run these five checks on PSFnetwork. Our offerings are made only under qualified offering documents, and the filings are where they should be. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+Run these five checks on PSFnetwork; we built the platform to pass them, and the filings sit on EDGAR where they should be. When you are satisfied, [join the waitlist](https://www.psfnetwork.com/waitlist) to be first in line for new offerings. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 
 ## Related
 
-- [Reg A vs Reg D for Fractional Real Estate Investors](/blog/reg-a-vs-reg-d-for-fractional-investors)
-- [How to Choose a Fractional Real Estate Platform](/blog/how-to-choose-fractional-real-estate-platform)
-- [What Is Fractional Real Estate Investing? A Complete Guide](/blog/fractional-real-estate-investing)
+- [Reg A vs Reg D for Fractional Real Estate Investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors)
+- [How to Choose a Fractional Real Estate Platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform)
+- [What Is Fractional Real Estate Investing? A Complete Guide](https://www.psfnetwork.com/blog/fractional-real-estate-investing)

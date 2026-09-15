@@ -39,7 +39,12 @@ The invented editor persona that previously held this slot is retired. It was co
   this byline; do not assume it mirrors the name.
 - **Role on post:** Author byline
 - **Appears in:** `author` field (YAML frontmatter or Production Notes), ArticleHero component, AuthorCard component
-- **Bio (canonical):** pending. Needs one sentence from the operator, in the shape of Youssef's above.
+- **Bio (canonical):** proposed 2026-09-15, pending operator confirmation:
+  Omar Elghazaly is the CEO of PSFnetwork, writing on fractional real
+  estate, per-square-foot ownership, and real-asset investing. (Drafted in
+  the shape of Youssef's during the Batch 3 brand-forward revision, where
+  four drafts needed an Author section for this byline; correct here and
+  in those drafts if the operator supplies different wording.)
 - **Quotable:** No, same rule as the Youssef byline.
 - **Title:** kept in the CMS Position field, which reads `CEO, PSFnetwork`
   (read off a live page on 2026-08-18; renders under the name in the hero

@@ -34,6 +34,12 @@ WARN (reported, not blocking):
   W5  FAQ question count outside 5-6
   W6  "Related" section link count != 3
   W7  substantive H2 not in question format
+  W8  author byline not an approved name (Youssef or Omar)
+  W9  relative internal links (must be absolute)
+  W10 pre-qualification CTA language ("invest now" family)
+  W11 brand-forward positioning (client directive 2026-09-15): the draft
+      has no waitlist CTA, or still carries a self-deprecating platform
+      formula. See workflow/client-decisions.md.
 
 Lines carrying `<!-- check-rules: allow -->` are exempt from F1/F2 (same
 pragma as check-rules.py).
@@ -94,6 +100,18 @@ APPROVED_AUTHORS = re.compile(r'\b(Youssef|Omar)\b', re.IGNORECASE)
 # host. A root-relative link means something different in each of the three
 # places a draft gets rendered before a reader sees it.
 RELATIVE_INTERNAL = re.compile(r'\]\((/blog/[^)\s]*)\)')
+
+# W11: brand-forward positioning (client directive, 2026-09-15, see
+# workflow/client-decisions.md). Two halves: every article invites the
+# reader to the waitlist, and the apologetic platform formulas are retired.
+# Phrases are lowercase substrings matched against the whole body; kept
+# short and distinctive so editorial prose about other subjects does not
+# trip them.
+SELF_DEPRECATING = (
+    'not a neutral party', 'not a neutral source', 'we are not neutral',
+    'better tool is', 'happier on', 'wrong for most', 'rather you land',
+    'poor fit for you', 'we would rather lose', 'churns less',
+)
 
 TEMPLATE_H2S = {
     'quick answer (60 seconds)', 'the 60-second version',
@@ -265,6 +283,15 @@ def check_article(folder: Path):
         warns.append(
             f'W10 pre-qualification CTA language ({len(cta)}x, '
             f'first: "{cta[0]}"), not allowed until the offering is qualified')
+
+    # W11: brand-forward positioning. WARN for the same reason as W8/W9:
+    # published Batch 1/2 drafts are frozen and predate the directive.
+    lower_body = body.lower()
+    if 'waitlist' not in lower_body:
+        warns.append('W11 no waitlist CTA in draft')
+    for phrase in SELF_DEPRECATING:
+        if phrase in lower_body:
+            warns.append(f'W11 self-deprecating formula: "{phrase}"')
 
     return slug, fmt, fails, warns
 

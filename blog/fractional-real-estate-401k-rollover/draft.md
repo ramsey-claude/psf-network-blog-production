@@ -3,11 +3,11 @@ title: "Fractional Real Estate in a 401(k) Rollover: What Works"
 slug: fractional-real-estate-401k-rollover
 type: How-to
 topic: Retirement
-author: Maya Reyes, Senior Editor
+author: Omar Elghazaly
 reviewer: Daniel Cho, CFA
 read_time: 9 min
 published: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-15
 focus_keyword: fractional real estate 401k rollover
 secondary_keywords:
   - self-directed IRA fractional real estate
@@ -53,7 +53,7 @@ The short answer is yes, it can be done. The longer answer is that the route run
 
 Through three moves. You open a self-directed IRA at a custodian that accepts alternative assets, request a direct rollover from the old 401(k) so the money moves institution to institution, and then direct the custodian to buy the fractional interests in the account's name. The rollover itself is a routine, tax-deferred transfer. The self-directed part is where cost, paperwork, and real risk enter.
 
-A standard brokerage IRA will not work here. Mainstream custodians hold stocks, bonds, and funds; they do not hold private placement interests in a property LLC. You need a specialty custodian that handles alternative assets, and you need to confirm the specific platform you want will accept IRA money at all, because some do not. If the underlying product is new to you, start with our [guide to fractional real estate investing](/blog/fractional-real-estate-investing) before touching retirement funds.
+A standard brokerage IRA will not work here. Mainstream custodians hold stocks, bonds, and funds; they do not hold private placement interests in a property LLC. You need a specialty custodian that handles alternative assets, and you need to confirm the specific platform you want will accept IRA money at all, because some do not. If the underlying product is new to you, start with our [guide to fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing) before touching retirement funds.
 
 1. **Open the self-directed IRA first.** Choose a custodian that explicitly supports private real estate interests, and get the full fee schedule in writing: setup, annual, per-transaction, and per-valuation charges.
 2. **Request a direct rollover.** Ask the old plan administrator to send the balance straight to the new custodian. The IRS explains the mechanics on its page covering [rollovers of retirement plan and IRA distributions](https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions). A direct transfer avoids the withholding and deadline problems an indirect rollover can create.
@@ -67,7 +67,7 @@ Because retirement accounts are tax-deferred, not tax-immune. When an IRA-held i
 
 This surprises almost everyone. The logic is that Congress did not want tax-exempt accounts using borrowed money to outcompete taxable investors, so income traced to leverage loses its shelter. The IRS lays out the framework on its [unrelated business income tax](https://www.irs.gov/charities-non-profits/unrelated-business-income-tax) page, and the mechanics run through the deal's paperwork: a pass-through LLC still issues a Schedule K-1 (Form 1065), except it goes to the IRA rather than to you personally.
 
-Your custodian typically handles the filing, but the account pays the tax, and every filing is another fee. Before committing retirement money, ask the sponsor one blunt question: does this deal carry debt, and has counsel assessed the UDFI exposure? If the answer is vague, walk. For the fuller picture of how these interests are taxed in and out of retirement wrappers, see our [K-1 guide to how fractional real estate is taxed](/blog/how-fractional-real-estate-is-taxed).
+Your custodian typically handles the filing, but the account pays the tax, and every filing is another fee. Before committing retirement money, ask the sponsor one blunt question: does this deal carry debt, and has counsel assessed the UDFI exposure? If the answer is vague, walk. For the fuller picture of how these interests are taxed in and out of retirement wrappers, see our [K-1 guide to how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed).
 
 ---
 
@@ -85,7 +85,7 @@ Passive fractional stakes are safer ground than the classic self-directed disast
 
 Expect paperwork on both ends. Before funding, custodians vet the asset: subscription documents, an offering circular, and confirmation the interest can be titled to the IRA. After funding, they require an updated fair market value for the position, usually every year, because the account must report what it is worth. Illiquid assets make that valuation slow, and every custodial task carries a fee.
 
-Those fees stack on top of the platform's own economics. A 1% annual management fee across a 10-year hold already consumes roughly a tenth of your starting capital before upfront and exit fees, and custodial charges come out of the same account. Typical holds run 5 to 10 years with no early exit you can count on, which matters twice over in retirement money: once for emergencies, and again later in life when required distributions eventually demand either cash or a distributable, valued asset. Platforms differ widely on IRA support, fees, and reporting, which is exactly the comparison work covered in our guide to [choosing a fractional real estate platform](/blog/how-to-choose-fractional-real-estate-platform).
+Those fees stack on top of the platform's own economics. A 1% annual management fee across a 10-year hold already consumes roughly a tenth of your starting capital before upfront and exit fees, and custodial charges come out of the same account. Typical holds run 5 to 10 years with no early exit you can count on, which matters twice over in retirement money: once for emergencies, and again later in life when required distributions eventually demand either cash or a distributable, valued asset. Platforms differ widely on IRA support, fees, and reporting, which is exactly the comparison work covered in our guide to [choosing a fractional real estate platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform).
 
 ---
 
@@ -93,7 +93,7 @@ Those fees stack on top of the platform's own economics. A 1% annual management 
 
 Most people, honestly. If the old 401(k) is your primary retirement asset, if you might need the money within a decade, or if you cannot explain UBIT and disqualified persons in your own words, the self-directed route is a poor fit. Fees compound the problem, because flat custodial charges punish small balances hardest. A boring rollover into an ordinary IRA full of index funds is a perfectly good outcome.
 
-We think the self-directed IRA route is right for a minority of investors and wrong for most, and we would rather say that plainly than collect custodial-friction money from readers who should have kept things simple. The honest candidate has a substantial rolled-over balance, a separate emergency fund, existing conventional retirement holdings, and a genuine willingness to pay for tax advice. Everyone else has a cheaper path: keep the retirement money conventional and buy fractional real estate with taxable dollars, where the minimums start at $100 on PSFnetwork and the rulebook is far shorter.
+We think the self-directed IRA route earns its keep for a specific profile, and we say that plainly: a substantial rolled-over balance, a separate emergency fund, existing conventional retirement holdings, and a genuine willingness to pay for tax advice. Everyone else has a simpler path, and PSFnetwork built for it deliberately: keep the retirement money conventional and buy fractional real estate with taxable dollars, where the minimum is $100, the offerings are filed under Reg A for anyone to read, and the rulebook is far shorter.
 
 Contribution limits explain why rollovers get all the attention here. For 2025 the employee deferral limit is [$23,500 for a 401(k) and $7,000 for an IRA](https://www.irs.gov/newsroom/401k-limit-increases-to-23500-for-2025-ira-limit-remains-7000), so fresh contributions rarely build an alternative-assets sleeve worth the custodial overhead. An old plan balance is usually the only pool big enough. For Jason, that is the real decision: not whether the maneuver is possible, but whether his balance, timeline, and appetite for paperwork clear the bar. On his numbers, it may not.
 
@@ -142,7 +142,7 @@ A: No. FDIC insurance covers bank deposits up to $250,000 per depositor, per ban
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Omar Elghazaly** is the CEO of PSFnetwork, writing on fractional real estate, per-square-foot ownership, and real-asset investing.
 
 **Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 
@@ -156,12 +156,12 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Curious how per-square-foot ownership works with taxable dollars first? PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+Curious how per-square-foot ownership works with taxable dollars first? PSFnetwork opens that door at a $100 minimum, with Reg A offerings anyone can read on EDGAR. Take a look at [how PSFnetwork works](https://www.psfnetwork.com/how-it-works) and [join the waitlist](https://www.psfnetwork.com/waitlist) to be there when new offerings open. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ---
 
 ## Related
 
-- [How Fractional Real Estate Is Taxed: A K-1 Guide](/blog/how-fractional-real-estate-is-taxed)
-- [What Is Fractional Real Estate Investing? A Complete Guide](/blog/fractional-real-estate-investing)
-- [Reg A vs Reg D for Fractional Real Estate Investors](/blog/reg-a-vs-reg-d-for-fractional-investors)
+- [How Fractional Real Estate Is Taxed: A K-1 Guide](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed)
+- [What Is Fractional Real Estate Investing? A Complete Guide](https://www.psfnetwork.com/blog/fractional-real-estate-investing)
+- [Reg A vs Reg D for Fractional Real Estate Investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors)

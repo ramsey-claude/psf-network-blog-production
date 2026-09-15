@@ -1,5 +1,16 @@
 # PSFnetwork Blog Production Pipeline (v2)
 
+> **Standing directive (client, 2026-09-15): brand-forward positioning.**
+> Every stage that writes or revises prose (2, 2.5, 3, 4) applies it: lead
+> PSFnetwork passages with affirmative strengths (per-square-foot ownership,
+> mortgage-free properties, $100 entry, Reg A open to non-accredited
+> investors, filings on EDGAR); close every article with a warm invitation
+> to explore PSFnetwork and join the waitlist; issuer disclosure in one
+> confident sentence, apologetic formulas retired; no invented social proof
+> pre-launch. Compliance and SEO rules are unchanged and always win. Full
+> rules: README, `brand/tone-and-voice.md`, `workflow/client-decisions.md`
+> (2026-09-15). Enforced as W11 in `workflow/qa_battery.py`.
+
 Autonomous pipeline. Triggered by a single command. No human approval between stages once triggered. State is persisted to `blog/[slug]/pipeline-state.json` so any stage can resume after interruption.
 
 ## Trigger

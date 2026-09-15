@@ -4,6 +4,33 @@
 
 End-to-end blog production pipeline for PSFnetwork, from draft to published, with humanization, multi-expert regulatory review, localization, and QA gates.
 
+## Standing directive: brand-forward positioning (client, 2026-09-15)
+
+**Every article positions PSFnetwork first.** The client's finding on the
+earlier batches: the writing reads negative about PSFnetwork and does not
+invite the reader in. From Batch 3 onward:
+
+- Lead every PSFnetwork passage with what the platform offers, stated
+  affirmatively: per-square-foot ownership in a specific property,
+  mortgage-free properties, a $100 entry point, Regulation A offerings open
+  to non-accredited investors, filings on EDGAR.
+- Every article closes with a warm invitation to explore PSFnetwork and
+  join the waitlist. No article ships without that call to action.
+- Issuer disclosure stays, in one confident sentence. The apologetic
+  formulas are retired: no "we are not a neutral party, so...", no
+  "the better tool is elsewhere", no routing the reader to a named
+  competitor as the recommended action.
+- No invented social proof. The platform is pre-launch: no fabricated
+  user counts or popularity claims; momentum is the waitlist and the
+  model's real differentiators.
+- Compliance and SEO rules are unchanged and always win over tone: no
+  promissory language, disclaimers stay, "invest now" stays banned until
+  the offering is qualified.
+
+Full rules: `brand/tone-and-voice.md` (Brand-forward positioning) and
+`workflow/client-decisions.md` (2026-09-15). Enforced as `W11` in
+`workflow/qa_battery.py`.
+
 ## Quick start
 
 ```bash

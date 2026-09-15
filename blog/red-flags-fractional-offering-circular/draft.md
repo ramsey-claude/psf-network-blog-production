@@ -3,11 +3,11 @@ title: "Red Flags in a Fractional Real Estate Offering Circular"
 slug: red-flags-fractional-offering-circular
 type: How-to
 topic: Due Diligence
-author: Maya Reyes, Senior Editor
+author: Omar Elghazaly
 reviewer: Daniel Cho, CFA
 read_time: 9 min
 published: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-15
 focus_keyword: red flags fractional real estate offering circular
 secondary_keywords:
   - offering circular red flags
@@ -53,7 +53,7 @@ He is doing the single highest-value thing a fractional investor can do, because
 
 Every Regulation A offering circular is a public document. The issuer files it as Form 1-A with the SEC, and you can pull it free through EDGAR full-text search. Tier 2 issuers also file a public annual report on Form 1-K. Print the circular, read the risk factors first, and mark every fee, every affiliate, and every sentence about the manager disappearing. Highlighters beat trust.
 
-Fractional platforms that accept non-accredited investors typically raise under [Regulation A](https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a), which allows an issuer to raise up to $75 million in any 12-month period under Tier 2, with non-accredited investors capped at 10% of the greater of their annual income or net worth per offering. That structure buys you something valuable: mandatory public disclosure, filed where anyone can read it. If a deal is raised under Reg D instead, the disclosure rules and the eligible audience change, and we break down exactly what that means in [Reg A vs Reg D for fractional investors](/blog/reg-a-vs-reg-d-for-fractional-investors).
+Fractional platforms that accept non-accredited investors typically raise under [Regulation A](https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a), which allows an issuer to raise up to $75 million in any 12-month period under Tier 2, with non-accredited investors capped at 10% of the greater of their annual income or net worth per offering. That structure buys you something valuable: mandatory public disclosure, filed where anyone can read it. If a deal is raised under Reg D instead, the disclosure rules and the eligible audience change, and we break down exactly what that means in [Reg A vs Reg D for fractional investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors).
 
 A workable reading routine takes four steps:
 
@@ -62,7 +62,7 @@ A workable reading routine takes four steps:
 3. **Pull the Form 1-K.** Tier 2 issuers file this public annual report, and it shows what actually happened after the marketing stopped. Tier 1 issuers file no annual report at all, which itself tells you how much ongoing disclosure to expect.
 4. **Read risk factors and fees before the photographs.** The glossy pages sit at the front for a reason.
 
-A note from our side of the table. We publish circulars because the law requires it, and we would rather they were read with a highlighter than filed away unopened: an informed investor churns less and complains less. The seven flags below are the ones we would check first in anyone's document, including our own.
+A note from our side of the table. PSFnetwork files its circulars on EDGAR and genuinely wants them read with a highlighter, because informed investors are the ones the platform was built for. The seven flags below are the ones we would check first in anyone's document, including our own.
 
 ---
 
@@ -102,7 +102,7 @@ Three flags travel together: projections styled to read like returns, blind-pool
 
 Projection formatting is a design choice, and design choices tell you things. A "targeted" return in display type with its assumptions buried eight pages later is a document built to be skimmed. Check every target against the issuer's own filed results: for Tier 2 issuers, the annual Form 1-K on EDGAR records what was actually distributed, which is the closest thing to ground truth this market offers. The SEC's guidance on [how to avoid investment fraud](https://www.investor.gov/protect-your-investments/fraud/how-avoid-fraud) lists unrealistic projected returns among the classic warning signs, and an offering circular is exactly where such projections live.
 
-Blind pools and thin exit history compound each other. Typical holds run 5 to 10 years, so a sponsor with no completed disposition has never been graded on a full cycle, only on midterms. Good looks like named addresses in the Use of Proceeds and at least one finished exit described with entry price, sale price, and dates. A first-time issuer raising a blind pool is stacking two flags into one, and if you are still deciding where to invest at all, our guide to [choosing a fractional real estate platform](/blog/how-to-choose-fractional-real-estate-platform) covers how to weigh track record against structure.
+Blind pools and thin exit history compound each other. Typical holds run 5 to 10 years, so a sponsor with no completed disposition has never been graded on a full cycle, only on midterms. Good looks like named addresses in the Use of Proceeds and at least one finished exit described with entry price, sale price, and dates. A first-time issuer raising a blind pool is stacking two flags into one, and if you are still deciding where to invest at all, our guide to [choosing a fractional real estate platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform) covers how to weigh track record against structure.
 
 ---
 
@@ -141,7 +141,7 @@ A: A blind pool raises money before naming the properties it will buy. It is not
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Omar Elghazaly** is the CEO of PSFnetwork, writing on fractional real estate, per-square-foot ownership, and real-asset investing.
 
 **Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 
@@ -151,10 +151,10 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-The fastest way to build this skill is to practice on a live document before real money moves. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+The fastest way to build this skill is to practice on a live document before real money moves, and PSFnetwork's own circular is a good place to start; it is filed on EDGAR for exactly this kind of reading. Bring your highlighter, then [join the waitlist](https://www.psfnetwork.com/waitlist) to be first in line when new offerings open. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ## Related
 
-- [Reg A vs Reg D for Fractional Real Estate Investors](/blog/reg-a-vs-reg-d-for-fractional-investors)
-- [How to Choose a Fractional Real Estate Platform](/blog/how-to-choose-fractional-real-estate-platform)
-- [What Is Fractional Real Estate Investing? A Complete Guide](/blog/fractional-real-estate-investing)
+- [Reg A vs Reg D for Fractional Real Estate Investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors)
+- [How to Choose a Fractional Real Estate Platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform)
+- [What Is Fractional Real Estate Investing? A Complete Guide](https://www.psfnetwork.com/blog/fractional-real-estate-investing)

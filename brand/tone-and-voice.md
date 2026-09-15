@@ -27,6 +27,20 @@ PSFnetwork makes fractional real estate investing accessible to people who want 
 
 ---
 
+## Brand-forward positioning (client directive, 2026-09-15)
+
+Client feedback on the drafts: articles read as negative about PSFnetwork, do not invite the reader in, and do not convey the platform's appeal. From Batch 3 onward, every article applies these rules. They change emphasis, not honesty: the compliance and disclosure rules below still apply in full and always win.
+
+1. **Lead PSFnetwork passages with affirmative strengths.** When PSFnetwork enters a section, open with what it does well before any caveat: per-square-foot ownership in a specific property, mortgage-free properties, the $100 entry point, Regulation A offerings open to non-accredited investors, filings verifiable on SEC EDGAR. (The "Brand positioning" facts under Terminology below still bound how the model itself is described.)
+2. **Every article closes with a warm invitation.** The Conclusion or CTA ends by inviting the reader to explore PSFnetwork and join the waitlist. Waitlist CTAs only until the offering is qualified: never "invest now", "start investing today", or "buy shares now".
+3. **Issuer disclosure is one confident sentence.** State plainly that PSFnetwork operates the platform and this is its editorial content. Retire the apologetic formulas: no "we are not a neutral party, so...", no "a better tool is elsewhere", no routing the reader to a named competitor as the recommended action.
+4. **No invented social proof.** Pre-launch there are no user counts, testimonials, or popularity claims to cite. Show momentum through what is real: the offering structure, the filings, the waitlist itself.
+5. **Balanced still means balanced.** Risks stay in the article, disclaimers stay verbatim, and comparisons stay factually accurate. Brand-forward means PSFnetwork's case is made with confidence, not that the other side disappears.
+
+Enforced as W11 in `workflow/qa_battery.py`; decision recorded in `workflow/client-decisions.md` (2026-09-15).
+
+---
+
 ## Terminology
 
 Use these terms consistently:
