@@ -43,9 +43,9 @@ $10,000 is the capital level where you can build a real real estate position rat
 
 ## Opening
 
-At $100, the conversation about real estate investing is mostly about whether you can start at all. At $10,000, the question changes: which structure or mix of structures best fits your goal? You have enough capital to spread risk and to combine instruments, which means the right answer is rarely "all in on one platform." This guide walks through what is practical at this capital level and an illustrative allocation framework.
+At [$100](https://www.psfnetwork.com/blog/how-to-invest-in-real-estate-with-100), the conversation about real estate investing is mostly about whether you can start at all. At $10,000, the question changes: which structure or mix of structures best fits your goal? You have enough capital to spread risk and to combine instruments, which means the right answer is rarely "all in on one platform." This guide walks through what is practical at this capital level and an illustrative allocation framework.
 
-The framework is not personal advice. Your right answer depends on your income stability, tax bracket, time horizon, and existing portfolio. The framework gives you a starting point you can adjust.
+The framework is not personal advice. Your right answer depends on your income stability, [tax](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) bracket, time horizon, and existing portfolio. The framework gives you a starting point you can adjust.
 
 ---
 
@@ -53,7 +53,7 @@ The framework is not personal advice. Your right answer depends on your income s
 
 **Answer capsule:** $10,000 is enough capital to participate in all three major real estate structures simultaneously. You could spread across 5 to 10 fractional properties ($1,000 to $2,000 each), buy a meaningful REIT ETF position (50 to 100 shares of VNQ or IYR depending on price), and fund a real estate debt position on a platform like Groundfloor. At this capital level the constraint shifts from "what can I access" to "how should I diversify."
 
-The practical implication: at $100, your single position is your whole real estate exposure. At $10,000, your single position is one slice of a portfolio. Acting on this means designing for diversification rather than just picking the highest-yielding single platform.
+The practical implication: at $100, your single position is your whole real estate exposure. At $10,000, your single position is one slice of a portfolio. Acting on this means designing for diversification rather than just picking the highest-yielding single [platform](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms).
 
 ---
 
@@ -61,7 +61,7 @@ The practical implication: at $100, your single position is your whole real esta
 
 **Answer capsule:** The three practical structures: fractional real estate (equity ownership of specific properties via LLC, K-1 tax form, multi-year hold, 4-9% platform-reported yields), REIT ETFs (publicly traded basket of REITs, daily liquidity, 1099-DIV ordinary income, market-correlated prices), and real estate debt (lend to specific projects on platforms like Groundfloor, defined maturity, interest income, default risk). Each has a different tax form, liquidity profile, and primary risk.
 
-For a quick mental model: fractional gives you property selection and appreciation upside; REIT ETF gives you instant diversification and exit liquidity; debt gives you predictable income with defined timing. You can hold all three.
+For a quick mental model: fractional gives you property selection and appreciation upside; [REIT](https://www.psfnetwork.com/blog/reits-vs-fractional-real-estate) ETF gives you instant diversification and exit liquidity; debt gives you predictable income with defined timing. You can hold all three.
 
 | Structure | Tax form | Liquidity | Primary risk | Primary return source |
 |-----------|----------|-----------|--------------|----------------------|
@@ -104,6 +104,8 @@ At this scale, the income is not life-changing but it is real. The compounding c
 Beyond these, the largest meta-mistake is treating $10,000 as a single decision rather than the start of an ongoing allocation. Real estate compounds across years, not quarters. Whatever you deploy now should be sized for the long position you want to be in, not just the first month of income.
 
 ---
+
+New to the model? Start with [what fractional real estate investing is](https://www.psfnetwork.com/blog/fractional-real-estate-investing).
 
 ## FAQ
 

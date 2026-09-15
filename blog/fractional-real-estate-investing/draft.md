@@ -44,9 +44,9 @@ Fractional real estate investing lets multiple investors co-own a single rental 
 
 ## Opening
 
-The minimum stake in a US rental property used to be a $20,000 down payment. Now it can be $20. Fractional real estate investing changed the math: you can buy a slice of a rental property for less than the price of dinner, hold it through a regulated investment vehicle, and let a platform handle the tenants, repairs, and tax forms.
+The minimum stake in a US rental property used to be a $20,000 down payment. Now it can be $20. Fractional real estate investing changed the math: you can buy a slice of a rental property for less than the price of dinner, hold it through a regulated investment vehicle, and let a platform handle the tenants, repairs, and [tax](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) forms.
 
-The trade-offs are real. You give up direct control. Your money is locked up longer than a brokerage account. Platforms charge fees that compound across years. This guide walks through how fractional real estate investing actually works, where the risks sit, and how the per-square-foot ownership model used by PSFnetwork compares to traditional share-based platforms. By the end, you will know whether fractional real estate fits your situation and how to evaluate any platform before you commit.
+The trade-offs are real. You give up direct control. Your money is locked up longer than a brokerage account. Platforms charge fees that compound across years. This guide walks through how fractional real estate investing actually works, where the risks sit, and how the per-[square-foot](https://www.psfnetwork.com/blog/square-foot-real-estate-ownership-explained) ownership model used by PSFnetwork compares to traditional share-based platforms. By the end, you will know whether fractional real estate fits your situation and how to evaluate any platform before you commit.
 
 ---
 
@@ -54,9 +54,9 @@ The trade-offs are real. You give up direct control. Your money is locked up lon
 
 **Answer capsule:** Fractional real estate investing is the practice of multiple investors co-owning a single property through shares in a special purpose entity, usually an LLC, that holds title. Each investor receives a proportional share of rental income and appreciation. Online platforms standardized the model in the US after the JOBS Act of 2012 expanded private offering rules for non-accredited investors, and minimums now start as low as $20.
 
-Fractional real estate is not new. Wealthy families have co-owned vacation homes and commercial buildings for decades through partnerships and trusts. What changed is access. Online platforms standardized the legal structure, lowered the minimums, and used Securities and Exchange Commission (SEC) exemptions to allow public marketing of these offerings. The result is a category that now holds billions in assets across major US platforms like Fundrise, Arrived, Ark7, and PSFnetwork, and continues to grow.
+Fractional real estate is not new. Wealthy families have co-owned vacation homes and commercial buildings for decades through partnerships and trusts. What changed is access. Online platforms standardized the [legal](https://www.psfnetwork.com/blog/legal-tax-guide-fractional-real-estate) structure, lowered the minimums, and used Securities and Exchange Commission (SEC) exemptions to allow public marketing of these offerings. The result is a category that now holds billions in assets across major US platforms like Fundrise, Arrived, Ark7, and PSFnetwork, and continues to grow.
 
-When you buy fractional shares, you are not buying a deed. You are buying a security, typically a unit of membership interest in an LLC that owns the property. That distinction matters for taxes, for how you can exit, and for what happens if the platform itself runs into trouble.
+When you buy fractional shares, you are not buying a deed. You are buying a security, typically a unit of membership interest in an LLC that owns the property. That distinction matters for taxes, for how you can exit, and for what happens if the [platform](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms) itself runs into trouble.
 
 ---
 
@@ -112,7 +112,7 @@ The case for it: lower minimums than direct ownership, passive income, exposure 
 
 The case against it: limited liquidity (most platforms do not have a deep secondary market), platform risk (the platform itself can fail), fee drag (annual management fees, sourcing fees, and carry can compress returns), and concentration risk inside the platform (you depend on the platform's underwriting).
 
-Comparing returns across fractional platforms, public REITs, and direct rental ownership requires care: platform-reported figures, REIT index returns, and direct-rental ROI surveys use different fee, vintage, and survivorship assumptions. A like-for-like comparison is rare, and any single number for "fractional return" or "REIT return" understates the variance. Use ranges, read the fine print, and treat any specific historical number as backward-looking.
+Comparing returns across fractional platforms, public [REITs](https://www.psfnetwork.com/blog/reits-vs-fractional-real-estate), and direct rental ownership requires care: platform-reported figures, REIT index returns, and direct-rental ROI surveys use different fee, vintage, and survivorship assumptions. A like-for-like comparison is rare, and any single number for "fractional return" or "REIT return" understates the variance. Use ranges, read the fine print, and treat any specific historical number as backward-looking.
 
 Fractional real estate suits an investor who:
 - Has already covered emergency savings and high-interest debt
@@ -141,6 +141,8 @@ It does not suit an investor who needs the capital back within 12 months, expect
 A defensible due diligence process: pull the SEC filing for the specific offering, read the risk factors section in full, compare fee schedules across at least three platforms, and check the platform's track record across full property cycles, not just current vintages.
 
 ---
+
+Once the model makes sense, the next question is which platform fits you. Our guide to [how to choose a fractional real estate platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform) walks through the four filters that matter.
 
 ## FAQ
 

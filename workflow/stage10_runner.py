@@ -160,6 +160,23 @@ CANONICAL_RE = re.compile(
     re.IGNORECASE,
 )
 TITLE_RE = re.compile(r'<title[^>]*>(.*?)</title>', re.IGNORECASE | re.DOTALL)
+INTERNAL_LINK_RE = re.compile(
+    r'href=[\'"](?:https?://(?:www\.)?psfnetwork\.com)?/blog/([a-z0-9-]+)/?[\'"]',
+    re.IGNORECASE,
+)
+
+
+def count_internal_links(html, slug):
+    """Distinct other /blog/ posts this page links to, measured on the LIVE html.
+
+    Internal links are lost in the Doc-to-Framer paste (live-site audit
+    2026-07-21, finding 2). The draft can pass qa-gate.md's "at least 2
+    internal links" rule while the published page has none, so the count
+    has to come from the served page, not the repo.
+    """
+    targets = {m.group(1).lower() for m in INTERNAL_LINK_RE.finditer(html)}
+    targets.discard(slug.lower())
+    return len(targets), sorted(targets)
 META_DESC_RE = re.compile(
     r'<meta[^>]+name=[\'"]description[\'"][^>]+content=[\'"]([^\'"]+)[\'"]',
     re.IGNORECASE,
@@ -232,6 +249,12 @@ def run_checks(slug, state):
     report['checks']['has_faq_schema'] = 'FAQPage' in schema_types
     report['checks']['has_breadcrumb_schema'] = 'BreadcrumbList' in schema_types
 
+    # Internal links (qa-gate.md: at least 2 internal links to other posts)
+    n_links, link_targets = count_internal_links(html, slug)
+    report['checks']['internal_links_count'] = n_links
+    report['checks']['internal_links_ok'] = n_links >= 2
+    report['checks']['internal_link_targets'] = link_targets
+
     return report
 
 
@@ -270,8 +293,10 @@ def write_report(slug, report):
         f'| Article-type schema | {"PASS" if checks["has_article_schema"] else "FAIL"} |',
         f'| FAQ schema | {"PASS" if checks["has_faq_schema"] else "FAIL"} |',
         f'| Breadcrumb schema | {"PASS" if checks["has_breadcrumb_schema"] else "FAIL"} |',
+        f'| Internal links to other posts (>= 2) | {"PASS" if checks.get("internal_links_ok") else "FAIL"} ({checks.get("internal_links_count", 0)}) |',
         '',
         f'**Schemas detected:** {", ".join(checks["schemas_found"]) or "(none)"}',
+        f'**Internal links found:** {", ".join(checks.get("internal_link_targets", [])) or "(none)"}',
         '',
         '## Manual follow-up (not automated)',
         '',

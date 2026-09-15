@@ -43,7 +43,7 @@ Square-foot real estate ownership expresses your stake in a property as a number
 
 ## Opening
 
-The square-foot ownership model is a presentation choice, not a legal innovation. Underneath, you are buying the same thing you would buy on a share-based fractional platform: a unit of membership interest in an LLC that holds title to a specific property. The legal documents, the SEC filings, the tax forms, and the risk factors are all the same.
+The square-foot ownership model is a presentation choice, not a legal innovation. Underneath, you are buying the same thing you would buy on a share-based fractional [platform](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms): a unit of membership interest in an LLC that holds title to a specific property. The legal documents, the SEC filings, the tax forms, and the risk factors are all the same.
 
 What the model changes is what you can picture. "I own 50 shares of a rental property" is abstract. "I own 50 square feet of a 1,200 square foot apartment that rents for $X a month" is concrete. For some investors that anchoring matters; for others it does not. This post explains the model precisely so you can decide whether it matters for you.
 
@@ -53,7 +53,7 @@ What the model changes is what you can picture. "I own 50 shares of a rental pro
 
 **Answer capsule:** Square-foot real estate ownership is a fractional-investing model that expresses your stake in a property as a number of square feet rather than as shares. You buy a membership interest in an LLC that owns the property; the LLC denominates ownership in square feet so the math anchors to the physical property. Legally, you hold a security regulated under SEC Regulation A or Regulation D, same as any other fractional real estate platform.
 
-The model is recent. It emerged as a presentation layer on top of standard Reg A LLC structures that platforms like Fundrise, Arrived, Ark7, and Realbricks already use. PSFnetwork is the most prominent platform offering per-square-foot ownership as its default unit. The square-foot model does not require any change to securities law or LLC operating agreements; it is a naming and pricing convention.
+The model is recent. It emerged as a presentation layer on top of standard [Reg A](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors) LLC structures that platforms like Fundrise, Arrived, Ark7, and Realbricks already use. PSFnetwork is the most prominent platform offering per-square-foot ownership as its default unit. The square-foot model does not require any change to securities law or LLC operating agreements; it is a naming and pricing convention.
 
 If a property is 1,200 square feet and the platform values it at $480,000, the per-square-foot price is $400. A 50 square foot purchase costs $20,000 and represents 4.17 percent of the property. The math is identical to buying 50 shares of an equivalent share-based offering at $400 per share; the units just have a physical anchor.
 
@@ -74,7 +74,7 @@ A side-by-side at a 4.17 percent stake of a $480,000, 1,200 square foot property
 | Annual income at 7% yield | $1,400 | $1,400 |
 | Tax form | K-1 | K-1 |
 
-The columns are identical except for unit naming. Same income, same tax form, same regulatory framework, same risks.
+The columns are identical except for unit naming. Same income, same [tax](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) form, same regulatory framework, same risks.
 
 ---
 

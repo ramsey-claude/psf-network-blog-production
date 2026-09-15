@@ -43,7 +43,7 @@ Real estate crowdfunding and fractional real estate are often used interchangeab
 
 ## Opening
 
-The same building shows up on two platforms. One calls it a crowdfunding deal; the other calls it fractional ownership. The whole debate lives in that gap: same property, same returns, two different words, and most investors never notice that the label quietly sets their tax form, their exit, and what they actually hold.
+The same building shows up on two [platforms](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms). One calls it a crowdfunding deal; the other calls it fractional ownership. The whole debate lives in that gap: same property, same returns, two different words, and most investors never notice that the label quietly sets their tax form, their exit, and what they actually hold.
 
 The marketing pages tend to use "crowdfunding" and "fractional" as if they meant the same thing. They do not, exactly. Crowdfunding describes how a deal is financed: many small investors pooling capital. Fractional describes what you end up owning: a slice of a specific property's equity through an LLC. Most equity fractional platforms ARE crowdfunded under SEC frameworks. But "crowdfunded" includes things fractional does not, like debt-side participation in a real estate loan.
 
@@ -55,7 +55,7 @@ This guide maps the overlap and the real differences without claiming one is bet
 
 **Answer capsule:** Real estate crowdfunding is a financing mechanism in which many small investors pool capital to fund a real estate deal. It operates under one of three SEC frameworks: Regulation Crowdfunding (Reg CF, up to $5 million per 12 months, with specific investor caps), Regulation A (Tier 2 allows up to $75 million per 12 months and non-accredited investors), or Regulation D (typically accredited investors only). The mechanism is the pooling; the underlying investment can be either equity in a property entity or debt to a property project.
 
-The category emerged after the JOBS Act of 2012 created Regulation Crowdfunding and modernized Regulation A. Before 2012, raising real estate capital from non-accredited investors required either a public offering (very expensive) or a private placement (limited investor count). Modern crowdfunding made small-dollar pooling legal at scale.
+The category emerged after the JOBS Act of 2012 created Regulation Crowdfunding and modernized [Regulation A](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors). Before 2012, raising real estate capital from non-accredited investors required either a public offering (very expensive) or a private placement (limited investor count). Modern crowdfunding made small-dollar pooling legal at scale.
 
 Crowdfunding includes platforms like Fundrise, Groundfloor (debt-focused), and CrowdStreet, plus many fractional platforms whose offerings are technically crowdfunded under Reg A.
 
@@ -102,13 +102,15 @@ For most investors building a real estate allocation from scratch, a mix is sens
 
 ---
 
+For the wider comparison set, see [fractional real estate vs other ways to invest](https://www.psfnetwork.com/blog/fractional-real-estate-vs-other-investments).
+
 ## FAQ
 
 **Q: Is Fundrise crowdfunding or fractional?**
 A: Both. Fundrise operates eREITs (Fundrise's branded fund-style real estate investment products) that are crowdfunded under SEC frameworks. The funds hold many properties; you own shares of the fund rather than shares of a specific property. By common usage, Fundrise is called crowdfunding more than fractional, though the legal mechanism overlaps with fractional.
 
 **Q: Is fractional real estate the same as REIT crowdfunding?**
-A: Not exactly. A REIT is a specific legal/tax entity (must distribute 90 percent of taxable income, must meet asset-test rules). Fractional platforms typically use LLC structures, not REIT structures. Fundrise's "eREITs" are REITs that are also crowdfunded. Single-property fractional platforms are usually LLCs, not REITs.
+A: Not exactly. A [REIT](https://www.psfnetwork.com/blog/reits-vs-fractional-real-estate) is a specific legal/tax entity (must distribute 90 percent of taxable income, must meet asset-test rules). Fractional platforms typically use LLC structures, not REIT structures. Fundrise's "eREITs" are REITs that are also crowdfunded. Single-property fractional platforms are usually LLCs, not REITs.
 
 **Q: What is Reg CF?**
 A: Regulation Crowdfunding, an SEC framework created by the JOBS Act of 2012. Allows companies to raise up to $5 million per 12 months from both accredited and non-accredited investors through SEC-registered intermediaries. Non-accredited investors face caps on how much they can invest based on income/net worth.
