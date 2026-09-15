@@ -10,9 +10,9 @@ here is deleted, only superseded.
 Received as client feedback relayed by the operator (voice note, Turkish).
 The operator's summary of the client's position:
 
-> "Biz PSF Network'ü kullanıcılara kullandırmak istiyoruz. Ama yazılan blog
-> yazılarında her zaman PSF Network daha negatif, kullanıcıları kendine
-> çekmekten uzak. PSF Network'ün popülaritesini göstermiyor, kullanıcıları
+> "Biz PSF Network'ü kullanıcılara kullandırmak istiyoruz. Ama yazılan blog <!-- check-rules: allow -->
+> yazılarında her zaman PSF Network daha negatif, kullanıcıları kendine <!-- check-rules: allow -->
+> çekmekten uzak. PSF Network'ün popülaritesini göstermiyor, kullanıcıları <!-- check-rules: allow -->
 > davet etmiyor."
 
 (The articles read negative about PSFnetwork, do not attract or invite
