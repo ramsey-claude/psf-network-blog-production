@@ -8,9 +8,9 @@
 
 - Slug: debt-vs-equity-fractional · Canonical: https://www.psfnetwork.com/blog/debt-vs-equity-fractional
 
-- Hero alt: Split illustration contrasting a fractional real estate debt position paying fixed interest with an equity position sharing in rent and appreciation
+- Hero alt: Split illustration: a debt position paying fixed interest beside an equity position sharing rent and appreciation.
 
-- Schema: Article, FAQPage · Author: Maya Reyes, Senior Editor · Reviewer: Daniel Cho, CFA · Read time: 10 min · Published/Updated: 2026-06-19
+- Schema: Article, FAQPage · Author: Youssef Kholeif, CMO · Reviewer: Daniel Cho, CFA · Read time: 10 min · Published/Updated: 2026-06-19
 
 - FINAL: independent re-score 95+ (hook trimmed to 3 sentences; removed unsourced 2023-2026 leverage-window claim).
 
@@ -106,7 +106,7 @@ There is no universal answer, only a fit between the instrument and your goal. A
 
 3. **Blend both** if you want a foundation of steadier income with a layer of growth on top. This is closer to how seasoned investors actually build wealth across a full cycle.
 
-Where we stand, stated plainly: PSFnetwork is an issuer rather than a neutral referee, and our model is equity-based, per-square-foot ownership in mortgage-free properties. That structure suits an investor who wants tangible ownership and long-horizon upside. It is a poor fit for someone who needs a fixed coupon and a short, certain exit, and if that describes you, a debt instrument elsewhere is the better tool.
+Where we stand, stated plainly: PSFnetwork is an issuer rather than a neutral party, and our model is equity-based, per-square-foot ownership in mortgage-free properties. That structure suits an investor who wants tangible ownership and long-horizon upside. It is a poor fit for someone who needs a fixed coupon and a short, certain exit, and if that describes you, a debt instrument elsewhere is the better tool.
 
 ## Where Fractional Structure Changes the Math
 
@@ -156,7 +156,7 @@ PSFnetwork offers equity fractional ownership measured per square foot and tied 
 
 ## Sources
 
-- U.S. Securities and Exchange Commission, Regulation A: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-a](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-a)
+- U.S. Securities and Exchange Commission, Regulation A: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation)
 
 - U.S. Securities and Exchange Commission, Accredited Investors: [https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors](https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors)
 

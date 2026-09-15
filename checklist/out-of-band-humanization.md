@@ -64,7 +64,7 @@ deliver.py refuses if `qa-report-v2-humanized.md` is missing or has a non-PUBLIS
 
 By default, KEEP the v1 Drive doc alongside the new v2 doc so the customer can compare. The delivery-manifest captures both links and the prior-version-deleted history.
 
-If the operator decides v1 should be deleted (e.g., customer signs off on v2 as the canonical version), delete the v1 doc via `drive_cli.py delete <fileId>` and add a "DELETED" row to the delivery-manifest history table.
+If the operator decides v1 is superseded (e.g., customer signs off on v2 as the canonical version), move v1 into the slug folder's `old version` subfolder via `drive_cli.py archive <fileId>` and add an "ARCHIVED" row to the delivery-manifest history table. Never delete it: see the no-delete rule in `workflow/incident-log.md`.
 
 ### 7. Customer communication
 

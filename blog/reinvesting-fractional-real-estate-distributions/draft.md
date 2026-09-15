@@ -3,11 +3,11 @@ title: "Reinvesting Fractional Real Estate Distributions: The Math"
 slug: reinvesting-fractional-real-estate-distributions
 type: Explainer
 topic: Portfolio
-author: Maya Reyes, Senior Editor
+author: Youssef Kholeif
 reviewer: Daniel Cho, CFA
 read_time: 9 min
 published: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-15
 focus_keyword: reinvesting fractional real estate distributions
 secondary_keywords:
   - fractional real estate compounding
@@ -55,7 +55,7 @@ Reinvesting adds about $2,672 to a $10,000 position over ten years, using the st
 
 You can reproduce these numbers yourself with the SEC's [compound interest calculator](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator) on Investor.gov. The assumptions matter and are worth stating plainly: distributions are reinvested once a year, the reinvested dollars earn the same 7% yield as the original position, and the model ignores fees and taxes. Every one of those assumptions is generous, which is exactly why the next section exists.
 
-Still, the direction of the math is not in dispute. The extra $2,672 does not require a better property, a sharper market call, or good timing, because it comes entirely from putting the same cash back to work instead of letting it drain away. Reinvestment is what turns an income approach, the kind we outline in our guide to [building passive income with real estate](/blog/how-to-build-passive-income-with-real-estate), into a growth approach. Same properties. Different trajectory.
+Still, the direction of the math is not in dispute. The extra $2,672 does not require a better property, a sharper market call, or good timing, because it comes entirely from putting the same cash back to work instead of letting it drain away. Reinvestment is what turns an income approach, the kind we outline in our guide to [building passive income with real estate](https://www.psfnetwork.com/blog/how-to-build-passive-income-with-real-estate), into a growth approach. Same properties. Different trajectory.
 
 ---
 
@@ -79,7 +79,7 @@ The working pattern has three parts:
 2. **Set the threshold.** Your trigger is the minimum ticket on your platform of choice. A low minimum shortens the idle window; a $5,000 minimum can strand small distributions for a very long time, earning nothing toward the loop.
 3. **Redeploy on a schedule.** Pick a recurring date, check the balance, and invest whatever has cleared the threshold. Decisions made on a calendar beat decisions made on impulse.
 
-The lower the minimum, the less cash sits stranded between compounding periods, which is the quiet argument for low-ticket platforms generally. If you are starting from small numbers, our guide to [investing in real estate with $100](/blog/how-to-invest-in-real-estate-with-100) covers how the low end of the market actually works. Stranded cash is the silent leak in every reinvestment plan. Plug it first.
+The lower the minimum, the less cash sits stranded between compounding periods, which is the quiet argument for low-ticket platforms generally. If you are starting from small numbers, our guide to [investing in real estate with $100](https://www.psfnetwork.com/blog/how-to-invest-in-real-estate-with-100) covers how the low end of the market actually works. Stranded cash is the silent leak in every reinvestment plan. Plug it first.
 
 ---
 
@@ -87,7 +87,7 @@ The lower the minimum, the less cash sits stranded between compounding periods, 
 
 Concentrating reinvestment on one platform simplifies your tax season; spreading it multiplies paperwork. Each fractional position held through a pass-through LLC issues its own Schedule K-1, not a 1099, and a single property can trigger filings in multiple states. Reinvesting across several platforms can therefore turn one distribution stream into a stack of K-1s, each arriving on the partnership's schedule rather than yours.
 
-The schedule is the part that surprises people. The partnership return deadline for tax year 2025 is March 16, 2026, and a Form 7004 extension can legally push K-1 arrival to September 15, which means every reinvested distribution that opened a new position may also have extended your own filing timeline. The IRS [instructions for Schedule K-1](https://www.irs.gov/instructions/i1065sk1) are worth skimming before you scale the loop, and our explainer on [how fractional real estate is taxed](/blog/how-fractional-real-estate-is-taxed) walks through the full picture.
+The schedule is the part that surprises people. The partnership return deadline for tax year 2025 is March 16, 2026, and a Form 7004 extension can legally push K-1 arrival to September 15, which means every reinvested distribution that opened a new position may also have extended your own filing timeline. The IRS [instructions for Schedule K-1](https://www.irs.gov/instructions/i1065sk1) are worth skimming before you scale the loop, and our explainer on [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) walks through the full picture.
 
 There is a partial offset. Depreciation can make the taxable income on your K-1 smaller than the cash you actually received, limited by passive activity rules, so the after-tax math of reinvesting is often better than the form count suggests. Our view on the tradeoff: diversify across properties, but be deliberate about how many separate issuers and states you accumulate. Ten tiny positions across ten sponsors is a filing project. The compounding does not care how many envelopes it arrives in.
 
@@ -138,7 +138,7 @@ A: No. Distributions are variable, can pause, and are not insured by any governm
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Youssef Kholeif** is the CMO of PSFnetwork, writing on fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 
@@ -148,10 +148,10 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-If your distributions have been landing in checking and quietly disappearing, PSFnetwork's $100 minimum makes the batching loop practical; PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+If your distributions have been landing in checking and quietly disappearing, PSFnetwork's $100 minimum makes the batching loop practical, which is exactly why the floor is set that low. Explore [how PSFnetwork works](https://www.psfnetwork.com/how-it-works) and [join the waitlist](https://www.psfnetwork.com/waitlist) to be ready when the next offering opens. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ## Related
 
-- [Passive Income Real Estate: A Beginner's Guide](/blog/how-to-build-passive-income-with-real-estate)
-- [How to Invest in Real Estate With $100: A Guide](/blog/how-to-invest-in-real-estate-with-100)
-- [Square-Foot Real Estate Ownership: How It Works](/blog/square-foot-real-estate-ownership-explained)
+- [Passive Income Real Estate: A Beginner's Guide](https://www.psfnetwork.com/blog/how-to-build-passive-income-with-real-estate)
+- [How to Invest in Real Estate With $100: A Guide](https://www.psfnetwork.com/blog/how-to-invest-in-real-estate-with-100)
+- [Square-Foot Real Estate Ownership: How It Works](https://www.psfnetwork.com/blog/square-foot-real-estate-ownership-explained)

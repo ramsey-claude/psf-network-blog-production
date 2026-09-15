@@ -3,11 +3,11 @@ title: "Questions to Ask a Fractional Platform Before You Invest"
 slug: questions-to-ask-fractional-platform
 type: How-to
 topic: Due Diligence
-author: Maya Reyes, Senior Editor
+author: Youssef Kholeif
 reviewer: Daniel Cho, CFA
 read_time: 9 min
 published: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-15
 focus_keyword: questions to ask fractional real estate platform
 secondary_keywords:
   - fractional real estate due diligence
@@ -53,7 +53,7 @@ That email is the cheapest due diligence available to an individual investor, an
 
 Most due-diligence lists tell you to ask about returns first. Returns are the one answer a platform cannot honestly give you; the ten questions worth asking are all about structure, and none of them mention yield. A projection is a marketing artifact. Structure is a fact you can verify. Ask who issues your shares, who holds your money, what the fees total, and how the deal ends.
 
-Put all ten in a single email before you fund anything, and ask for replies in writing. We think the quality of a platform's answers matters as much as the answers themselves; a support inbox that responds in writing, quickly and specifically, is telling you how it will behave when something goes wrong. Vague replies, phone-call deflections, or a week of silence are also answers. Use them. If you are still building a shortlist, our review of the [best fractional real estate platforms](/blog/best-fractional-real-estate-platforms) applies this same lens across the market.
+Put all ten in a single email before you fund anything, and ask for replies in writing. We think the quality of a platform's answers matters as much as the answers themselves; a support inbox that responds in writing, quickly and specifically, is telling you how it will behave when something goes wrong. Vague replies, phone-call deflections, or a week of silence are also answers. Use them. If you are still building a shortlist, our review of the [best fractional real estate platforms](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms) applies this same lens across the market.
 
 Here is the full list. The four sections that follow explain each theme.
 
@@ -74,7 +74,7 @@ Here is the full list. The four sections that follow explain each theme.
 
 Ask three things: which legal entity issues your shares, which securities framework the offering uses, and where the filings live on EDGAR. Most fractional platforms sell securities under Regulation A or Regulation D, and the difference decides who can invest, what must be disclosed, and how much public paper trail exists. A good written answer names the exact issuer and links the filing, not the homepage.
 
-The framework matters because it sets the disclosure floor. A [Regulation A](https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a) Tier 2 issuer can raise up to $75 million per 12 months, may accept non-accredited investors capped at 10% of the greater of their annual income or net worth per offering, and must file a Form 1-A offering circular plus a public annual Form 1-K. A Regulation D Rule 506(c) issuer faces no offering cap but must limit itself to verified accredited investors, while Rule 506(b) permits a limited number of sophisticated non-accredited investors and bars general solicitation. Our side-by-side guide to [Reg A versus Reg D for fractional investors](/blog/reg-a-vs-reg-d-for-fractional-investors) covers the tradeoffs in depth.
+The framework matters because it sets the disclosure floor. A [Regulation A](https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a) Tier 2 issuer can raise up to $75 million per 12 months, may accept non-accredited investors capped at 10% of the greater of their annual income or net worth per offering, and must file a Form 1-A offering circular plus a public annual Form 1-K. A Regulation D Rule 506(c) issuer faces no offering cap but must limit itself to verified accredited investors, while Rule 506(b) permits a limited number of sophisticated non-accredited investors and bars general solicitation. Our side-by-side guide to [Reg A versus Reg D for fractional investors](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors) covers the tradeoffs in depth.
 
 Then verify. Paste the issuer's exact name into [EDGAR full-text search](https://www.sec.gov/edgar/search/) and read what comes back. The check is quick. A good written answer names the issuing entity, states the framework, and links directly to its filing index. A platform that claims a Regulation A offering but shows nothing on EDGAR has just answered a question you did not even ask.
 
@@ -96,7 +96,7 @@ Fractional deals typically carry three fee layers: an upfront charge when the de
 
 Small percentages get large over long holds. A 1% annual management fee across a 10-year hold consumes roughly a tenth of your starting capital, and that is before any upfront or exit fees are counted. Typical platform-reported annual yields run 4 to 9%, which makes the gross-versus-net question decisive: the same deal can look meaningfully different depending on which side of the fees the marketing page sits on. A good answer shows both versions without being pushed.
 
-One more layer hides behind the fees: taxes. Most fractional deals are structured as pass-through LLCs that issue a [Schedule K-1](https://www.irs.gov/instructions/i1065sk1), not a 1099, which changes your filing timeline and your after-tax outcome. Our guide to [how fractional real estate is taxed](/blog/how-fractional-real-estate-is-taxed) walks through the details. The fee question itself is simple. Ask for every charge, upfront, annual, and at exit, on one sample investment, in writing.
+One more layer hides behind the fees: taxes. Most fractional deals are structured as pass-through LLCs that issue a [Schedule K-1](https://www.irs.gov/instructions/i1065sk1), not a 1099, which changes your filing timeline and your after-tax outcome. Our guide to [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) walks through the details. The fee question itself is simple. Ask for every charge, upfront, annual, and at exit, on one sample investment, in writing.
 
 ---
 
@@ -146,7 +146,7 @@ A: No. FDIC insurance covers bank deposits up to $250,000 per depositor, per ban
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Youssef Kholeif** is the CMO of PSFnetwork, writing on fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 
@@ -156,10 +156,10 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-Ready to put the checklist to work? Start with PSFnetwork's per-square-foot model at a $100 minimum, and send your ten questions first. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+Ready to put the checklist to work? Start with PSFnetwork: a per-square-foot model, a $100 minimum, and offerings filed on EDGAR where every answer can be checked. Send your ten questions, then [join the waitlist](https://www.psfnetwork.com/waitlist) so you hear the moment new offerings open. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ## Related
 
-- [Best Fractional Real Estate Platforms (2026)](/blog/best-fractional-real-estate-platforms)
-- [How to Choose a Fractional Real Estate Platform](/blog/how-to-choose-fractional-real-estate-platform)
-- [How Fractional Real Estate Is Taxed: A K-1 Guide](/blog/how-fractional-real-estate-is-taxed)
+- [Best Fractional Real Estate Platforms (2026)](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms)
+- [How to Choose a Fractional Real Estate Platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform)
+- [How Fractional Real Estate Is Taxed: A K-1 Guide](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed)

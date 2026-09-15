@@ -3,11 +3,11 @@ title: "Fractional Real Estate as a Bond Substitute: When It Works"
 slug: fractional-real-estate-vs-bonds
 type: Explainer
 topic: Portfolio
-author: Maya Reyes, Senior Editor
+author: Youssef Kholeif
 reviewer: Daniel Cho, CFA
 read_time: 9 min
 published: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-15
 focus_keyword: fractional real estate as a bond substitute
 secondary_keywords:
   - bonds vs fractional real estate
@@ -73,7 +73,7 @@ Liquidity widens the gap further. Bonds trade daily in deep markets, so an inves
 
 The substitute case holds for long-horizon income money that can tolerate variability. If you will not need the principal for a decade, a 5 to 10 year hold is a feature rather than a flaw, platform-reported yields of 4 to 9% are competitive with many coupons, and property income does not move in lockstep with the rate-driven pricing that whipsaws bond funds.
 
-Consider the money Beth might actually move: a slice of her portfolio she will not touch until her late sixties. The honest case for fractional real estate as a bond substitute rests on that shape of capital, and [building passive income with real estate](/blog/how-to-build-passive-income-with-real-estate) is designed around exactly it. If a hypothetical 7% yield held for a full decade, reinvestment is where that patience would pay. Run the math on that scenario: $10,000 with distributions reinvested annually grows to about $19,672 over 10 years, while taking the same distributions as cash leaves $17,000 in total, $10,000 of principal plus $700 a year. In that scenario, reinvesting adds about $2,672, and you can pressure-test other assumptions with a [compound interest calculator](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator).
+Consider the money Beth might actually move: a slice of her portfolio she will not touch until her late sixties. The honest case for fractional real estate as a bond substitute rests on that shape of capital, and [building passive income with real estate](https://www.psfnetwork.com/blog/how-to-build-passive-income-with-real-estate) is designed around exactly it. If a hypothetical 7% yield held for a full decade, reinvestment is where that patience would pay. Run the math on that scenario: $10,000 with distributions reinvested annually grows to about $19,672 over 10 years, while taking the same distributions as cash leaves $17,000 in total, $10,000 of principal plus $700 a year. In that scenario, reinvesting adds about $2,672, and you can pressure-test other assumptions with a [compound interest calculator](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator).
 
 There is also a diversification argument. Bond prices move with interest rates, so a long-duration fund can fall hard in a fast hiking cycle even while every coupon arrives on time. Property income responds to rents, occupancy, and expenses instead, which means the two income streams tend not to fail for the same reasons at the same moment. Different risks, not fewer risks.
 
@@ -83,7 +83,7 @@ There is also a diversification argument. Bond prices move with interest rates, 
 
 Three kinds of money should never leave bonds for fractional real estate: ladders built to fund specific dates, cash earmarked for a known future liability, and emergency reserves. Each of those jobs depends on principal returning at a defined time, and fractional real estate has no mechanism for that. Holds run 5 to 10 years, secondary markets are thin, and distributions can pause without warning.
 
-We sell the property side of this comparison and we will still say it plainly: money that must arrive on a schedule belongs in instruments with a maturity date, and no rental distribution has one. Three jobs make the point concrete:
+PSFnetwork stands on the property side of this comparison, and we still say it plainly: money that must arrive on a schedule belongs in instruments with a maturity date, and no rental distribution has one. Three jobs make the point concrete:
 
 **1. Bond ladders.** A ladder works because each rung matures on a known date and returns a known amount. Fractional real estate has no rung to offer; an open-ended 5 to 10 year hold cannot fund a specific December.
 
@@ -99,7 +99,7 @@ Treat the switch as a partial reallocation of patient income money, not a wholes
 
 Diligence here is easier than it sounds. Regulation A offerings follow [rules the SEC explains in plain language](https://www.investor.gov/introduction-investing/investing-basics/glossary/regulation-a), and Tier 2 issuers, who can raise up to $75 million per 12 months from non-accredited investors, must post annual Form 1-K reports in public view. Pull them yourself through [EDGAR full-text search](https://www.sec.gov/edgar/search/). Fees deserve equal attention, because a 1% annual management fee across a 10-year hold consumes roughly a tenth of your starting capital before upfront and exit fees are counted. That drag is real. Price it in.
 
-Sizing is the final control. Platform minimums range from $10 to $5,000, and PSFnetwork's minimum is $100, so nothing forces a large first position while you learn how the structure behaves through an actual year of distributions. If the model itself is new to you, start with [how fractional real estate investing works](/blog/fractional-real-estate-investing), and understand [how the income is taxed](/blog/how-fractional-real-estate-is-taxed) before your first K-1 arrives, not after.
+Sizing is the final control. Platform minimums range from $10 to $5,000, and PSFnetwork's minimum is $100, so nothing forces a large first position while you learn how the structure behaves through an actual year of distributions. If the model itself is new to you, start with [how fractional real estate investing works](https://www.psfnetwork.com/blog/fractional-real-estate-investing), and understand [how the income is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) before your first K-1 arrives, not after.
 
 ---
 
@@ -142,7 +142,7 @@ A: Not under Regulation A Tier 2, which is open to non-accredited investors, cap
 
 ## Author
 
-**Maya Reyes** is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
+**Youssef Kholeif** is the CMO of PSFnetwork, writing on fractional real estate, real-asset investing, and consumer finance.
 
 **Reviewed by Daniel Cho, CFA:** investment strategist and former real estate analyst.
 
@@ -152,10 +152,10 @@ Past performance is not indicative of future results. Fractional real estate inv
 
 ## CTA
 
-If the patient slice of your portfolio is ready to try property income, you can explore per-square-foot ownership on PSFnetwork starting at $100. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
+If the patient slice of your portfolio is ready to try property income, PSFnetwork is a confident place to start: per-square-foot ownership of mortgage-free properties, a $100 minimum, and Reg A offerings open to non-accredited investors. [Join the waitlist](https://www.psfnetwork.com/waitlist) to be first to know when the next offering opens. PSFnetwork's offerings are made only under qualified offering documents. Review the offering circular and risk factors before you invest. All investments involve risk, including the possible loss of principal.
 
 ## Related
 
-- [Passive Income Real Estate: A Beginner's Guide](/blog/how-to-build-passive-income-with-real-estate)
-- [What Is Fractional Real Estate Investing? A Complete Guide](/blog/fractional-real-estate-investing)
-- [How to Invest $10,000 in Real Estate: A Playbook](/blog/how-to-invest-10k-in-real-estate)
+- [Passive Income Real Estate: A Beginner's Guide](https://www.psfnetwork.com/blog/how-to-build-passive-income-with-real-estate)
+- [What Is Fractional Real Estate Investing? A Complete Guide](https://www.psfnetwork.com/blog/fractional-real-estate-investing)
+- [How to Invest $10,000 in Real Estate: A Playbook](https://www.psfnetwork.com/blog/how-to-invest-10k-in-real-estate)

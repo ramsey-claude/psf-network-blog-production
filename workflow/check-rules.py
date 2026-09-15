@@ -73,6 +73,12 @@ WARNING = [
      'HIGH-tier AI tell verb/adjective'),
     ('ai-tell-opener', re.compile(r'(in today.s rapidly evolving|now more than ever|when it comes to|in conclusion|at the end of the day)', re.IGNORECASE),
      'AI stock opener/closer phrase'),
+    # Wording the client rejected across Batch 2 round-2 feedback (2026-08-11).
+    # Replacements per brand/tone-and-voice.md Terminology: "neutral party",
+    # "tangible". WARN, not BLOCK: the words have legitimate uses outside the
+    # rejected metaphors, so a human confirms each hit.
+    ('client-rejected-wording', re.compile(r'\b(referee|scorekeeper|disinterested party|legible|legibility)\b', re.IGNORECASE),
+     'wording the client has rejected; see brand/tone-and-voice.md Terminology'),
 ]
 
 

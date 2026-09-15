@@ -1,5 +1,16 @@
 # PSFnetwork Blog Production Pipeline (v2)
 
+> **Standing directive (client, 2026-09-15): brand-forward positioning.**
+> Every stage that writes or revises prose (2, 2.5, 3, 4) applies it: lead
+> PSFnetwork passages with affirmative strengths (per-square-foot ownership,
+> mortgage-free properties, $100 entry, Reg A open to non-accredited
+> investors, filings on EDGAR); close every article with a warm invitation
+> to explore PSFnetwork and join the waitlist; issuer disclosure in one
+> confident sentence, apologetic formulas retired; no invented social proof
+> pre-launch. Compliance and SEO rules are unchanged and always win. Full
+> rules: README, `brand/tone-and-voice.md`, `workflow/client-decisions.md`
+> (2026-09-15). Enforced as W11 in `workflow/qa_battery.py`.
+
 Autonomous pipeline. Triggered by a single command. No human approval between stages once triggered. State is persisted to `blog/[slug]/pipeline-state.json` so any stage can resume after interruption.
 
 ## Trigger
@@ -205,7 +216,7 @@ My Drive/
 **Actions:**
 1. Invoke `workflow/deliver.py --slug [slug] --version [version] --folder-id [id] --title "[H1]"`. This wrapper enforces the QA gate (refuses upload without a `qa-report-vN.md` recording PUBLISH) and chains render + upload in one call.
 2. Ensure `psfnetwork/[slug]/` folder exists via `drive_cli.py list`. Create if missing.
-3. Delete any existing files in the slug folder via `drive_cli.py delete <id>` (clean state across re-runs).
+3. Archive any existing doc in the slug folder via `drive_cli.py archive <id>` (moves it to the folder's `old version` subfolder). Never delete: no Drive file is ever removed, see the no-delete rule in `workflow/incident-log.md`.
 4. After successful `deliver.py` response, write `delivery-manifest.md` with Drive file id + view URL + timestamp.
 5. Update `pipeline-state.json` `flags.drive_delivery`.
 

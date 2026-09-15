@@ -14,7 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          # Full history: the diff-base comparison needs the base branch head,
+          # which a shallow clone lacks once a PR carries more than one commit
+          # (git diff fails with "bad object", exit 2, red check with zero
+          # actual violations). Incident logged 2026-08-11.
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5

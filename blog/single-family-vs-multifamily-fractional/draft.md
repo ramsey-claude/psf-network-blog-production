@@ -24,7 +24,7 @@
 
 - Schema: Article + FAQPage
 
-- Author: Maya Reyes, Senior Editor
+- Author: Youssef Kholeif, CMO
 
 - Reviewer: Daniel Cho, CFA
 
@@ -74,7 +74,7 @@ A multifamily building holds that same risk in smaller pieces. **One vacancy in 
 
 A single-family share is the easiest version of fractional real estate to reason about. There is one address, one tenant, and one rent check, divided among the investors who hold the property.
 
-That clarity is a real advantage. You can see the house, look up the neighborhood, and understand exactly what you own. For a first step into [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing), that **legibility** lowers the learning curve.
+That clarity is a real advantage. You can see the house, look up the neighborhood, and understand exactly what you own. For a first step into [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing), that **clarity** lowers the learning curve.
 
 The tradeoff is concentration. Income from a single-family position is binary in a way multifamily is not:
 
@@ -98,7 +98,7 @@ Entry costs usually run higher too. A share of an eight-unit building typically 
 
 ## Where Liquidity and Taxes Land
 
-Neither property type is liquid the way a public stock is. Both usually expect a multi-year hold, and exiting early depends on the platform reopening redemptions or running a secondary market. Before committing, read [what happens when a fractional property is sold](https://www.psfnetwork.com/blog/what-happens-when-fractional-property-is-sold) so the exit is not a surprise.
+Neither property type is liquid the way a public stock is. Both usually expect a multi-year hold, and exiting early depends on the platform reopening redemptions or running a secondary market. Before committing, read [what happens when a fractional property is sold](https://www.psfnetwork.com/blog/how-to-sell-fractional-real-estate) so the exit is not a surprise.
 
 Taxes follow the structure more than the building type. Distributions, depreciation pass-through, and gains on sale are shaped by how the offering is organized, not by unit count. The mechanics are covered in [how fractional real estate is taxed](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed).
 
@@ -116,13 +116,13 @@ Terms vary by platform and offering, so confirm current figures against each off
 | Entry cost | Typically lower | Typically higher |
 | Valuation driver | Nearby home sales | Net operating income |
 | Operational complexity | Lower | Higher |
-| Best for | Clarity and appreciation | Steadier income through churn |
+| Best suited to | Clarity and appreciation | Steadier income through churn |
 
 ## How PSFnetwork Treats Both Types
 
-PSFnetwork measures ownership by the square foot and ties it to a specific property, whether that property is a single house or a multi-unit building. You can see exactly how much of the asset you hold, which keeps single-family and multifamily positions equally legible.
+PSFnetwork measures ownership by the square foot and ties it to a specific property, whether that property is a single house or a multi-unit building. You can see exactly how much of the asset you hold, which keeps single-family and multifamily positions equally tangible.
 
-Worth saying plainly: we issue these offerings, so we are not a disinterested scorekeeper. The honest read is that single-family suits investors who want a clear, concentrated stake, while multifamily suits those who will trade a higher entry for steadier income.
+Worth saying plainly: we issue these offerings, so we are not a neutral party. The honest read is that single-family suits investors who want a clear, concentrated stake, while multifamily suits those who will trade a higher entry for steadier income.
 
 Two features apply to both types on the platform:
 
@@ -174,7 +174,7 @@ PSFnetwork offers fractional real estate measured per square foot and tied to a 
 
 1. U.S. Securities and Exchange Commission, Regulation A: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation)
 
-2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding](https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding)
+2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: [https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding](https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding)
 
 3. U.S. Securities and Exchange Commission, Accredited Investors: [https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors](https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors)
 

@@ -6,11 +6,13 @@
 
 - **Focus keyword:** fractional real estate in a self-directed IRA
 
+- **Hero visual alt text:** Illustration of a self-directed IRA folder holding fractional property shares beside a custodian checklist.
+
 - **Slug:** fractional-real-estate-ira
 
 - **Canonical:** https://www.psfnetwork.com/blog/fractional-real-estate-ira
 
-- **Author:** Maya Reyes · **Reviewer:** Daniel Cho, CFA
+- **Author:** Youssef Kholeif, CMO · **Reviewer:** Daniel Cho, CFA
 
 - **Published:** 2026-06-19 · **Updated:** 2026-06-19
 
@@ -72,7 +74,7 @@ Fractional ownership lowers that wall. Instead of the IRA buying a building, it 
 
 Here the title of the asset matters. Many fractional platforms issue **LLC shares**, which the IRA can hold as a private security.
 
-PSFnetwork instead measures ownership by the square foot, tied to a specific property, so the IRA holds a defined, legible stake rather than an abstract block of units. The legal wrapper is a **Regulation A** offering, which keeps SEC reporting and EDGAR filings in place. For the underlying mechanics first, see our guide to [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing).
+PSFnetwork instead measures ownership by the square foot, tied to a specific property, so the IRA holds a defined, tangible stake rather than an abstract block of units. The legal wrapper is a **Regulation A** offering, which keeps SEC reporting and EDGAR filings in place. For the underlying mechanics first, see our guide to [fractional real estate investing](https://www.psfnetwork.com/blog/fractional-real-estate-investing).
 
 ## The Rule That Ends IRAs: Prohibited Transactions
 

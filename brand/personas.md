@@ -1,20 +1,89 @@
 # PSFnetwork Standing Personas
 
-PSFnetwork uses standing author and reviewer personas for blog content. These are brand-approved bylines, not real individuals. Operator has authorized their automated use across the pipeline. No per-post operator approval is required.
+PSFnetwork uses standing author and reviewer personas for blog content. The reviewer persona is a brand-approved byline, not a real individual; the author byline is a real member of the PSFnetwork team. Operator has authorized their automated use across the pipeline. No per-post operator approval is required.
 
 This file is the source of truth for who appears in the byline and credit on every post.
 
 ---
 
-## Standing personas
+## Author byline (operator directive, 2026-08-16)
 
-### Maya Reyes - Senior Editor
+**Every post is bylined to a real PSFnetwork person: either Youssef or Omar. No other name goes in the `author` field.**
 
+The invented editor persona that previously held this slot is retired. It was corrected in Framer on the live articles, and the pipeline must not reintroduce it, on any batch, at any stage.
+
+### Youssef Kholeif - CMO
+
+- **Byline string:** `Youssef Kholeif`. The title is NOT part of it. The CMS
+  Author collection stores the name and the role in separate fields, Author
+  and Position, and Youssef's Position already reads `CMO, PSFnetwork`. A
+  combined "Youssef Kholeif, CMO" string matches no Author item, which is one
+  of the two reasons the byline failed to import on 2026-08-17.
+- **CMS slug:** `youssef-kholeif`. A reference resolves by slug, not by the
+  displayed name; sending the name left the byline unrendered on all 15
+  Batch 2 pages.
+- **Short Bio:** empty in the CMS as of 2026-08-17, for Youssef and for every
+  other Author item. The AuthorCard therefore has no bio to show on any
+  article, Batch 1 included. Operator decision whether to write one.
 - **Role on post:** Author byline
-- **Appears in:** Frontmatter `author` field, ArticleHero component, AuthorCard component
-- **Bio (canonical):** Maya Reyes is a Senior Editor at PSFnetwork, covering fractional real estate, real-asset investing, and consumer finance.
-- **Voice:** Plain, declarative, second-person. No first-person ("I") in content.
-- **Quotable:** No. Maya is the byline; quotes from "Maya Reyes" are not used in body content. The author voice IS the content's voice.
+- **Appears in:** `author` field (YAML frontmatter or Production Notes), ArticleHero component, AuthorCard component
+- **Bio (canonical):** Youssef Kholeif is the CMO of PSFnetwork, writing on fractional real estate, real-asset investing, and consumer finance.
+- **Quotable:** No. The byline is the article's voice; quotes attributed to Youssef are not placed in body content.
+- **Status:** Confirmed. Already carried by `real-estate-as-an-asset-class`, applied by Youssef himself in the round-2 Drive doc, and the default byline for the rest of Batch 2.
+
+### Omar Elghazaly
+
+- **Byline string:** `Omar Elghazaly`. Spelling confirmed against the CMS
+  Author collection on 2026-08-17, exactly as recorded here.
+- **CMS slug:** not read yet. Read it off the Author collection before using
+  this byline; do not assume it mirrors the name.
+- **Role on post:** Author byline
+- **Appears in:** `author` field (YAML frontmatter or Production Notes), ArticleHero component, AuthorCard component
+- **Bio (canonical):** proposed 2026-09-15, pending operator confirmation:
+  Omar Elghazaly is the CEO of PSFnetwork, writing on fractional real
+  estate, per-square-foot ownership, and real-asset investing. (Drafted in
+  the shape of Youssef's during the Batch 3 brand-forward revision, where
+  four drafts needed an Author section for this byline; correct here and
+  in those drafts if the operator supplies different wording.)
+- **Quotable:** No, same rule as the Youssef byline.
+- **Title:** kept in the CMS Position field, which reads `CEO, PSFnetwork`
+  (read off a live page on 2026-08-18; renders under the name in the hero
+  byline and the AuthorCard).
+- **Status:** In use. On 2026-08-18 eight live Batch 2 articles were
+  reassigned to this byline in the CMS (fractional-real-estate-ira,
+  how-to-choose-fractional-real-estate-platform,
+  how-to-read-reg-a-offering-circular,
+  legal-tax-guide-fractional-real-estate, proptech-future-of-real-estate,
+  real-estate-as-an-asset-class, real-estate-etfs-vs-fractional,
+  reit-dividend-taxation); the other six stayed with Youssef, and
+  single-family-vs-multifamily-fractional came out of the same edit
+  carrying a third name (see below). The frozen repo drafts still say
+  Youssef; live is the record for published batches.
+- **Spelling:** supplied as `omar-elghazaly`, which is handle form. Rendered here as `Omar Elghazaly`. Correct this line if the capitalisation differs.
+
+### Rejected: "Robert DiFranco" (decision 2026-08-24)
+
+A live check after the 2026-08-18 republish found
+`single-family-vs-multifamily-fractional` bylined to **Robert DiFranco**,
+presumably the Author collection's third item picked by mistake during
+the byline reassignment wave. The operator ruled on 2026-08-24:
+**"sadece youssef ve omar olacak yazarlarda"** - the byline set stays
+Youssef and Omar only, Robert is not an approved byline, and the
+article's Author reference is to be corrected in the CMS (either
+approved name) and republished. The operator applied the fix in
+the CMS on 2026-08-27 and the live page now carries Omar Elghazaly,
+verified the same day. No byline violations remain: the live set is
+Youssef on six articles and Omar on nine.
+
+### Retired: the previous editor persona
+
+- **Status:** Retired 2026-08-16. Not a valid byline on any new or revised draft.
+- **Published Batch 1 content:** the live articles carry the corrected byline in Framer. Batch 1's repo drafts still show the old persona because published batches are frozen (see `workflow/incident-log.md`, 2026-08-13). That gap is recorded debt, not something to sweep-fix in place.
+- **Automation:** `qa_battery.py` W8 flags any draft whose author is not an approved byline.
+
+---
+
+## Standing personas
 
 ### Daniel Cho, CFA - Reviewer
 

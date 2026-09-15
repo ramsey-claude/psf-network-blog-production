@@ -12,13 +12,13 @@
 
 - Canonical URL: https://www.psfnetwork.com/blog/proptech-future-of-real-estate
 
-- Hero visual alt text: A laptop showing a fractional real estate dashboard beside a city skyline, illustrating property technology reshaping real estate investing.
+- Hero visual alt text: A laptop showing a fractional real estate dashboard beside a city skyline, illustrating property technology at work.
 
 - Hero size: 1200x630
 
 - Schema types: Article, FAQPage
 
-- Author: Maya Reyes, Senior Editor
+- Author: Youssef Kholeif, CMO
 
 - Reviewer: Daniel Cho, CFA
 
@@ -116,7 +116,7 @@ A fair word on bias: we are PSFnetwork, so we are not a neutral observer. Even s
 
 ## How the PropTech Pillar Fits Together
 
-| Guide | What it answers | Best for |
+| Guide | What it answers | Best suited to |
 |---|---|---|
 | [What PropTech is](https://www.psfnetwork.com/blog/what-is-proptech) | The plain definition and main categories | Readers new to the term |
 | [PropTech trends 2026](https://www.psfnetwork.com/blog/proptech-trends-2026) | What is durable versus hype | Investors tracking where it is heading |
@@ -163,7 +163,7 @@ This article is for general educational purposes and does not constitute investm
 
 1. U.S. Securities and Exchange Commission, Regulation A: https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation
 
-2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: https://www.sec.gov/smallbusiness/exemptofferings/regcrowdfunding
+2. U.S. Securities and Exchange Commission, Regulation Crowdfunding: https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding
 
 3. U.S. Securities and Exchange Commission, Accredited Investors: https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/accredited-investors
 
