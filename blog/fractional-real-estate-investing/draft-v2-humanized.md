@@ -48,7 +48,7 @@ Fractional real estate investing lets several investors co-own one rental proper
 
 For most of the last century, the entry ticket to a US rental property was a down payment of roughly $20,000. Today it can be $20. That is not a rounding difference. It is a change in who is allowed to own income-producing property at all.
 
-The trade is real, and you should see it before you like it. You give up every decision about the building. Your money sits still for years, not days. Fees accrue quietly across the whole hold. This guide covers how the structure actually works, where the risk genuinely sits, and how the per-square-foot model we use at PSFnetwork differs from the share-based platforms you will see alongside us.
+The trade is real, and you should see it before you like it. You give up every decision about the building. Your money sits still for years, not days. Fees accrue quietly across the whole hold. This guide covers how the structure actually works, where the risk genuinely sits, and how the per-[square-foot](https://www.psfnetwork.com/blog/square-foot-real-estate-ownership-explained) model we use at PSFnetwork differs from the share-based platforms you will see alongside us.
 
 ---
 
@@ -56,9 +56,9 @@ The trade is real, and you should see it before you like it. You give up every d
 
 Several investors co-own one property through shares in a special purpose entity, nearly always an LLC that holds title. Each investor receives a proportional share of rental income and appreciation. Online platforms standardized this in the US after the JOBS Act of 2012 opened private offerings to non-accredited investors, and minimums now start as low as $20.
 
-None of this is new. Wealthy families have split vacation homes and office buildings through partnerships for generations. What changed is who gets in the door. Platforms standardized the legal wrapper, cut the minimum by three orders of magnitude, and used Securities and Exchange Commission exemptions to market these offerings openly. Billions of dollars now sit in the category across Fundrise, Arrived, Ark7, and PSFnetwork.
+None of this is new. Wealthy families have split vacation homes and office buildings through partnerships for generations. What changed is who gets in the door. Platforms standardized the [legal](https://www.psfnetwork.com/blog/legal-tax-guide-fractional-real-estate) wrapper, cut the minimum by three orders of magnitude, and used Securities and Exchange Commission exemptions to market these offerings openly. Billions of dollars now sit in the category across Fundrise, Arrived, Ark7, and PSFnetwork.
 
-One thing to be precise about, because it decides your taxes and your exit. You are not buying a deed. You are buying a security, normally a unit of membership interest in the LLC that owns the building. Deed ownership and membership interest are different instruments with different rules, and the difference surfaces at tax time and again if the platform ever runs into trouble.
+One thing to be precise about, because it decides your taxes and your exit. You are not buying a deed. You are buying a security, normally a unit of membership interest in the LLC that owns the building. Deed ownership and membership interest are different instruments with different rules, and the difference surfaces at tax time and again if the [platform](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms) ever runs into trouble.
 
 ---
 
@@ -148,19 +148,21 @@ A defensible process looks like this: pull the SEC filing for the specific offer
 
 ---
 
+Once the model makes sense, the next question is which platform fits you. Our guide to [how to choose a fractional real estate platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform) walks through the four filters that matter.
+
 ## FAQ
 
 **Q: Is fractional real estate investing safe?**
 A: It is not risk-free. Your principal can decline if property values fall, you may be unable to exit when you want, and the operator can fail. Regulated platforms must disclose these risks in their offering documents. Past performance is not indicative of future results, and no return is promised.
 
 **Q: How is income from fractional real estate taxed?**
-A: For US investors, income generally arrives on a Schedule K-1 (Form 1065) because most platforms use pass-through LLC structures. Depreciation may also pass through, which can offset part of the distribution income. Treatment varies by structure and jurisdiction. Consult a tax advisor before investing.
+A: For US investors, income generally arrives on a Schedule K-1 (Form 1065) because most platforms use pass-through LLC structures. Depreciation may also pass through, which can offset part of the distribution income. Treatment varies by structure and jurisdiction. Consult a [tax](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) advisor before investing.
 
 **Q: What happens if the platform shuts down?**
 A: The property sits in an LLC separate from the platform, so a shutdown does not automatically erase the underlying value. Finding a replacement servicer takes time, though, and disputes can run months or years. Full recovery is not assured. Read the operating agreement's backup-servicer language before investing, not after.
 
 **Q: How is fractional real estate different from a REIT?**
-A: A REIT holds a portfolio of properties and, by tax rule, distributes at least 90% of taxable income to shareholders. A fractional investment is usually a stake in one specific property held by an LLC. Publicly traded REITs trade daily and spread you across a sector. Fractional lets you pick the building and gives up the liquidity.
+A: A REIT holds a portfolio of properties and, by tax rule, distributes at least 90% of taxable income to shareholders. A fractional investment is usually a stake in one specific property held by an LLC. Publicly traded [REITs](https://www.psfnetwork.com/blog/reits-vs-fractional-real-estate) trade daily and spread you across a sector. Fractional lets you pick the building and gives up the liquidity.
 
 **Q: What is the minimum investment for fractional real estate?**
 A: It varies by platform. Some regulated US platforms start as low as $20. Others begin at $100 or $5,000. Regulation D offerings typically require accredited investor status, which carries its own income and net worth thresholds.
