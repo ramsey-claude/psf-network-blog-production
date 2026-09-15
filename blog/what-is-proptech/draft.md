@@ -46,7 +46,7 @@ Proptech (short for property technology) is the category of software, platforms,
 
 Proptech is a word that started life in tech-press headlines and now appears in industry research firms' annual reports. The category covers everything from Zillow's listing search (proptech 1.0) to today's blockchain title registries and AI-driven property valuation tools. What unifies it: software and digital infrastructure that automate, democratize, or replace pieces of the traditional real estate stack.
 
-For an investor, the most useful framing is not which proptech buzzword to chase but which proptech category actually changes how you can put capital into real estate. The honest answer: fractional ownership platforms. Everything else (AI underwriting, smart leases, IoT building management) affects operators more than retail investors.
+For an investor, the most useful framing is not which proptech buzzword to chase but which proptech category actually changes how you can put capital into real estate. The honest answer: fractional ownership [platforms](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms). Everything else (AI underwriting, smart leases, IoT building management) affects operators more than retail investors.
 
 ---
 
@@ -111,6 +111,14 @@ Venture funding tells part of the story: $16.7 billion went into proptech global
 Tokenization remains experimental for most US investors. Regulatory clarity on tokenized real estate securities is improving but unevenly. For now, Lofty's Algorand-based tokenized model is the most active US-accessible tokenized fractional product; the structure carries additional considerations beyond standard Reg A LLC fractional platforms.
 
 ---
+
+The specific developments to watch this year are in [proptech trends for 2026](https://www.psfnetwork.com/blog/proptech-trends-2026).
+
+For where the technology is heading next, read [proptech and the future of real estate](https://www.psfnetwork.com/blog/proptech-future-of-real-estate).
+
+Proptech is changing who can own property, which is why the old claim about [whether 90% of millionaires really own real estate](https://www.psfnetwork.com/blog/90-percent-millionaires-real-estate) deserves a second look.
+
+To see where this fits in a portfolio, read [real estate as an asset class](https://www.psfnetwork.com/blog/real-estate-as-an-asset-class).
 
 ## FAQ
 

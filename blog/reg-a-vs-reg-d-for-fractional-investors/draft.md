@@ -43,7 +43,7 @@ Most fractional real estate platforms operate under either Regulation A (typical
 
 ## Opening
 
-The first time it happens is the moment of confusion. You see a fractional real estate offering on one platform and you can invest a few hundred dollars. You see another offering on a different platform and the platform asks if you are an accredited investor, and tells you that you cannot invest if you are not. Same asset class, similar pitch, two different gates. The reason is structural and it traces back to which SEC exemption the offering is using to legally raise capital from people who are not professional investors.
+The first time it happens is the moment of confusion. You see a fractional real estate offering on one [platform](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms) and you can invest a few hundred dollars. You see another offering on a different platform and the platform asks if you are an accredited investor, and tells you that you cannot invest if you are not. Same asset class, similar pitch, two different gates. The reason is structural and it traces back to which SEC exemption the offering is using to legally raise capital from people who are not professional investors.
 
 This guide walks through the two frameworks most fractional real estate platforms use, Regulation A and Regulation D, from the investor's side of the desk. After reading, you should be able to tell which framework a given offering uses, why the platform chose it, and what you are entitled to as an investor under that framework. None of this is a recommendation that one framework is better. They serve different product structures and different investor segments.
 
@@ -53,7 +53,7 @@ This guide walks through the two frameworks most fractional real estate platform
 
 **Answer capsule:** Regulation A is an SEC exemption that lets companies raise capital from the public, including non-accredited investors. It has two tiers: Tier 1 allows up to $20 million per 12-month period; Tier 2 allows up to $75 million and supersedes state-level "blue sky" review, but adds ongoing SEC reporting requirements. Most consumer-facing fractional real estate platforms operate under Tier 2.
 
-Regulation A was modernized by the JOBS Act of 2012 and the SEC's subsequent rulemaking (Regulation A+) in 2015. The Tier 2 offering cap was raised from $50 million to $75 million in March 2021. The framework is sometimes called "mini-IPO" because it requires SEC qualification of a public offering circular, but the disclosure and audit burdens sit below those of a full registered IPO.
+Regulation A was modernized by the JOBS Act of 2012 and the SEC's subsequent rulemaking (Regulation A+) in 2015. The Tier 2 offering cap was raised from $50 million to $75 million in March 2021. The framework is sometimes called "mini-IPO" because it requires SEC qualification of a public [offering circular](https://www.psfnetwork.com/blog/how-to-read-reg-a-offering-circular), but the disclosure and audit burdens sit below those of a full registered IPO.
 
 The two tiers have meaningfully different mechanics:
 
@@ -75,7 +75,7 @@ The two relevant rules under Reg D are 506(b) and 506(c):
 - **Rule 506(b)** is the older path. The issuer can sell to an unlimited number of accredited investors and up to 35 sophisticated non-accredited investors who can evaluate the merits and risks. The issuer cannot use general solicitation or advertising, no public marketing, no website ads, no broad email campaigns. Communications are limited to pre-existing relationships. For an accredited investor under 506(b), the issuer needs only a "reasonable belief" of accreditation, often from a subscription-agreement questionnaire.
 - **Rule 506(c)** was added by the JOBS Act in 2013. It lets the issuer publicly advertise the offering, including online, on social media, at conferences, provided two conditions hold: ALL investors must be accredited, AND the issuer must take reasonable steps to VERIFY the accredited status (not just rely on a questionnaire). Many crowdfunded commercial real estate syndications operate under 506(c) because the public-marketing freedom is operationally useful.
 
-In March 2025, the SEC clarified that issuers may rely on minimum investment amounts as a reasonable step to verify accredited status under 506(c), at least $200,000 for natural persons and $1 million for legal entities. This is a substantial loosening of the verification burden.
+In March 2025, the SEC clarified that issuers may rely on minimum investment amounts as a reasonable step to verify accredited status under 506(c), at least $200,000 for natural persons and $1 million for [legal](https://www.psfnetwork.com/blog/legal-tax-guide-fractional-real-estate) entities. This is a substantial loosening of the verification burden.
 
 ---
 
@@ -91,7 +91,7 @@ The current pathways to accredited status:
 - **Net worth.** More than $1 million, alone or together with a spouse or spousal equivalent, excluding the value of the primary residence (and excluding mortgage debt secured by the primary residence up to the value of that residence).
 - **Professional credentials.** Since 2020, holders of Series 7 (General Securities Representative), Series 65 (Investment Adviser Representative), or Series 82 (Private Securities Offerings Representative) licenses are accredited regardless of income or net worth. This pathway is underused because most retail investors don't have these licenses, but it matters for financial professionals.
 
-Under 506(c), the issuer must verify your accreditation. Acceptable verification methods include reviewing tax forms (W-2, 1099, Schedule K-1 of Form 1065, or Form 1040), brokerage and bank statements dated within the prior 90 days, or a written confirmation from a registered broker-dealer, an SEC-registered investment adviser, a licensed attorney, or a certified public accountant who has independently verified your status.
+Under 506(c), the issuer must verify your accreditation. Acceptable verification methods include reviewing [tax](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) forms (W-2, 1099, Schedule K-1 of Form 1065, or Form 1040), brokerage and bank statements dated within the prior 90 days, or a written confirmation from a registered broker-dealer, an SEC-registered investment adviser, a licensed attorney, or a certified public accountant who has independently verified your status.
 
 A practical note on the net worth calculation: many readers conclude they are accredited because their home equity puts them over $1 million. The rule explicitly excludes the value of the primary residence (and the mortgage debt secured by the residence, up to the value of the residence). If your $1 million net worth depends on home equity, you are likely NOT accredited for SEC purposes, confirm with the platform or your CPA before assuming you qualify.
 
@@ -155,7 +155,7 @@ Why Reg A Tier 2 specifically? Three reasons mirror the broader industry pattern
 ## FAQ
 
 **Q: Can I invest in a Reg D 506(c) offering if I'm not accredited?**
-A: No. Rule 506(c) limits sales to accredited investors only, and the issuer must take reasonable steps to verify your accredited status. If a platform is offering under 506(c) and you do not meet the income, net worth, or credentialed-professional thresholds, you cannot legally participate. If you want to invest in private real estate without being accredited, the path is Reg A (Tier 1 or Tier 2) offerings or, for very small rounds, Reg CF (crowdfunding under the JOBS Act).
+A: No. Rule 506(c) limits sales to accredited investors only, and the issuer must take reasonable steps to verify your accredited status. If a platform is offering under 506(c) and you do not meet the income, net worth, or credentialed-professional thresholds, you cannot legally participate. If you want to invest in private real estate without being accredited, the path is Reg A (Tier 1 or Tier 2) offerings or, for very small rounds, Reg CF ([crowdfunding](https://www.psfnetwork.com/blog/real-estate-crowdfunding-vs-fractional) under the JOBS Act).
 
 **Q: What does "general solicitation" mean and why does it matter?**
 A: General solicitation is broad public marketing of a securities offering, website ads, social media posts, conference presentations, mass emails to people you don't know. Rule 506(b) prohibits general solicitation; the issuer can only sell to people with whom there is a substantive pre-existing relationship. Rule 506(c) permits general solicitation but adds the accreditation verification requirement. Reg A permits general solicitation because the offering circular has been SEC-qualified.

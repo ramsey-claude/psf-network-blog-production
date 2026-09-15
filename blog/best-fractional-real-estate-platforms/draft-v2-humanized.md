@@ -80,7 +80,7 @@ Be honest with yourself about what $10 buys. It buys the habit. It does not buy 
 
 ### You have a hundred dollars and you want to pick the building
 
-Ark7 at $20 per share, or Arrived at $100. Ark7 gives you single-property selection at the lowest per-share cost in the category. Monthly distributions. Secondary market opens after a one-year hold, per platform marketing.
+Ark7 at $20 per share, or Arrived at [$100](https://www.psfnetwork.com/blog/how-to-invest-in-real-estate-with-100). Ark7 gives you single-property selection at the lowest per-share cost in the category. Monthly distributions. Secondary market opens after a one-year hold, per platform marketing.
 
 Arrived is the brand-recognition play at $100. The differentiator is single-family rentals and short-term rentals as the specific asset category, plus a high-profile investor lineup that makes the platform feel less experimental than its newer competitors. Quarterly distributions, not monthly.
 
@@ -88,7 +88,7 @@ We have heard both pitched as "the best." Neither is the best. They are differen
 
 ### You have a hundred dollars and you want to understand what you own
 
-This is where we put ourselves. PSFnetwork is a $100 entry point with a per-square-foot ownership unit. You hold a stake in a specific number of square feet of a specific property at a specific address. The underlying legal structure is the same Reg A LLC framework the others use. The difference is presentation.
+This is where we put ourselves. PSFnetwork is a $100 entry point with a per-square-foot ownership unit. You hold a stake in a specific number of square feet of a specific property at a specific address. The underlying legal structure is the same [Reg A](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors) LLC framework the others use. The difference is presentation.
 
 Why does presentation matter? Because the standard fractional industry talks in "shares" of an LLC. A share is an abstraction. Square feet are not. A first-time investor can hold one sentence in mind ("I own 14 square feet of a duplex on East 7th Street") and understand exactly what they bought. The same investor holding "0.0042 of an LLC interest" has to do a chain of mental math to get to the same place.
 
@@ -171,6 +171,8 @@ The performance section of any marketing page is the area where the caveats matt
 
 ---
 
+If you want the framework behind these rankings, read [how to choose a fractional real estate platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform) first.
+
 ## FAQ
 
 **Q: Are fractional real estate platforms safe?**
@@ -189,7 +191,7 @@ A: The property is held in an LLC separate from the platform itself, so a platfo
 A: Most US platforms file under one of two SEC rules. Regulation A Tier 2 lets non-accredited investors in with disclosure and caps the raise at $75 million per twelve months. Regulation D is typically accredited investors only. Tokenized platforms like Lofty operate in a different regulatory zone with additional considerations. Confirm the specific filing on EDGAR before committing.
 
 **Q: How does PSFnetwork compare to Arrived?**
-A: Both are Reg A LLC platforms with $100 minimums. Both let you pick the specific property. The legal structure is the same. Two real differences. First, Arrived focuses on single-family and short-term rentals; ours is mixed commercial and residential. Second, ours is presented as square-foot ownership rather than abstract shares. Same underlying interest, different cognitive framing. If "I own 14 square feet of a building on East 7th Street" makes more sense to you than "I own 0.0042 of an LLC interest," you will probably prefer ours. If you do not care about the framing, Arrived's brand recognition and SFR focus is a fair reason to choose them.
+A: Both are Reg A LLC platforms with $100 minimums. Both let you pick the specific property. The legal structure is the same. Two real differences. First, Arrived focuses on single-family and short-term rentals; ours is mixed commercial and residential. Second, ours is presented as [square-foot](https://www.psfnetwork.com/blog/square-foot-real-estate-ownership-explained) ownership rather than abstract shares. Same underlying interest, different cognitive framing. If "I own 14 square feet of a building on East 7th Street" makes more sense to you than "I own 0.0042 of an LLC interest," you will probably prefer ours. If you do not care about the framing, Arrived's brand recognition and SFR focus is a fair reason to choose them.
 
 ---
 

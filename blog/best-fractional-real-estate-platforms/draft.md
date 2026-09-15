@@ -74,11 +74,11 @@ $20 per share. Monthly income distributions. Secondary market available after a 
 
 ### Single-family rentals + brand trust: Arrived
 
-$100 minimum. Single-family and short-term-rental focus. Quarterly distributions. Backed by well-known investors. Best for: investors who value name recognition and SFR-specific exposure.
+[$100](https://www.psfnetwork.com/blog/how-to-invest-in-real-estate-with-100) minimum. Single-family and short-term-rental focus. Quarterly distributions. Backed by well-known investors. Best for: investors who value name recognition and SFR-specific exposure.
 
 ### Square-foot ownership: PSFnetwork
 
-$100 entry point. Per-square-foot ownership unit (you hold a stake in a specific number of square feet of a property). Same underlying Reg A LLC structure as other fractional platforms; the difference is presentation, which can make the math easier to reason about. Best for: investors who want the intuitive anchoring of a physical unit.
+$100 entry point. Per-square-foot ownership unit (you hold a stake in a specific number of square feet of a property). Same underlying [Reg A](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors) LLC structure as other fractional platforms; the difference is presentation, which can make the math easier to reason about. Best for: investors who want the intuitive anchoring of a physical unit.
 
 ### Tokenized fractions: Lofty
 
@@ -117,7 +117,7 @@ If you have $10 to start and want simplicity: Fundrise Flagship Fund.
 
 If you have $100 and want property-level selection at the lowest cost: Ark7 or Arrived.
 
-If you have $100 and want the intuitive square-foot framing: PSFnetwork.
+If you have $100 and want the intuitive [square-foot](https://www.psfnetwork.com/blog/square-foot-real-estate-ownership-explained) framing: PSFnetwork.
 
 If you have $250+ and want a curated commercial deal flow: Mogul.
 
@@ -134,6 +134,8 @@ Across all of them, the most important check is the SEC filing. If a platform ca
 Performance claims are the area where caveats matter most. Yields are usually labeled "target" rather than "guaranteed". IRRs are typically platform-reported (not audited by a third party). Past performance does not predict future results. Treat any specific yield or IRR number as backward-looking, not as a forecast. <!-- check-rules: allow -->
 
 ---
+
+If you want the framework behind these rankings, read [how to choose a fractional real estate platform](https://www.psfnetwork.com/blog/how-to-choose-fractional-real-estate-platform) first.
 
 ## FAQ
 

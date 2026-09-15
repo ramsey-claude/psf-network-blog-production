@@ -43,7 +43,7 @@ Most fractional real estate platforms structure each property as a pass-through 
 
 ## Opening
 
-The tax mechanics of fractional real estate are the part nobody discusses on the platform tour. You see the property page, you read about projected distributions, you wire your money. Then, eight months later, a tax form arrives in your inbox, and it is not the 1099 you may have been expecting. It is a Schedule K-1. It does not match the cash you actually received. And if you held a few different properties across a few different states, you may have several of them, each with its own quirks.
+The tax mechanics of fractional real estate are the part nobody discusses on the [platform](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms) tour. You see the property page, you read about projected distributions, you wire your money. Then, eight months later, a tax form arrives in your inbox, and it is not the 1099 you may have been expecting. It is a Schedule K-1. It does not match the cash you actually received. And if you held a few different properties across a few different states, you may have several of them, each with its own quirks.
 
 After this post, you should be able to do two things you probably can't right now: have a substantive conversation with your CPA about how a specific fractional property will hit your return, and tell a well-run operator from a sloppy one by the questions you ask before you invest. None of this is individualized tax advice. The point is to give you the vocabulary and the timeline so the conversation that actually matters, the one with your CPA, is faster and sharper.
 
@@ -57,7 +57,7 @@ The IRS is direct about the purpose of Form 1065 and its K-1: "A partnership doe
 
 This matters because of the second part: the partnership can have taxable income on paper that exceeds the cash it actually paid you. That happens routinely with real estate, where depreciation reduces taxable income on a different schedule than cash flows. The K-1 is the mechanism that pushes that nuance down to the investor.
 
-A few platforms, and the larger Fundrise-style eREIT products, use a REIT structure instead. REITs distribute via 1099-DIV and have their own tax rules (notably the 90% income-distribution requirement). If your platform offers REIT-structured products, you receive 1099-DIV; if it offers single-property LLC fractional, you receive K-1. The form on your screen at tax time is the cleanest test of what you actually own.
+A few platforms, and the larger Fundrise-style eREIT products, use a REIT structure instead. REITs distribute via [1099-DIV](https://www.psfnetwork.com/blog/reit-dividend-taxation) and have their own tax rules (notably the 90% income-distribution requirement). If your platform offers REIT-structured products, you receive 1099-DIV; if it offers single-property LLC fractional, you receive K-1. The form on your screen at tax time is the cleanest test of what you actually own.
 
 ---
 
@@ -108,7 +108,7 @@ What this means for you:
 - **Tax estimates:** good operators provide a tax estimate in late winter, before the K-1 arrives, so you can pay in any tax owed by April 15. Ask about this before you invest if predictability matters.
 - **State return timing:** if you must file in multiple states (see next section), each state has its own extension form and deadline.
 
-The practical pattern: your personal return file date tends to creep into September if you hold meaningful fractional positions. Operators with fast K-1 production are a real differentiator. Ask about historical K-1 delivery dates as part of due diligence.
+The practical pattern: your personal return file date tends to creep into September if you hold meaningful fractional positions. Operators with fast K-1 production are a real differentiator. Ask about historical K-1 delivery dates as part of [due diligence](https://www.psfnetwork.com/blog/legal-tax-guide-fractional-real-estate).
 
 ---
 
@@ -128,7 +128,7 @@ Practical implications:
 - Some states (notably California, New York, New Jersey) have aggressive enforcement; do not assume you can ignore a small allocation.
 - Even a property in your home state generates state-level allocations that flow to your home-state return.
 
-State-filing complexity is one of the genuine reasons fractional ownership is more involved than buying a REIT. It is not a deal-breaker, many investors run multi-state portfolios without issue, but the operator's state-filing practice is a meaningful piece of due diligence.
+State-filing complexity is one of the genuine reasons fractional ownership is more involved than buying a [REIT](https://www.psfnetwork.com/blog/reits-vs-fractional-real-estate). It is not a deal-breaker, many investors run multi-state portfolios without issue, but the operator's state-filing practice is a meaningful piece of due diligence.
 
 ---
 
@@ -153,7 +153,7 @@ Importantly, **Section 1031 like-kind exchanges do not apply to LLC member inter
 
 **Answer capsule:** PSFnetwork uses the same Reg A LLC structure as most fractional platforms. Each property is its own LLC; each LLC issues K-1s to its investors. The per-square-foot model affects how shares are counted (you own a specific number of square feet rather than a percentage), but the K-1 tax mechanics are identical to any other Reg A LLC offering. Depreciation, passive activity rules, state filings, and Section 1250 recapture work the same way.
 
-The legal structure is well-established. Regulation A Tier 2 allows the LLC to raise up to $75 million per 12-month period and accept non-accredited investors (subject to a cap of 10% of the greater of annual income or net worth, with primary residence and loans secured by the primary residence excluded from the net worth calculation). Tier 1 is limited to $20 million per 12-month period. Most fractional platforms, including PSFnetwork, operate under Tier 2 because the offering size and non-accredited access fit the consumer-facing model.
+The legal structure is well-established. [Regulation A](https://www.psfnetwork.com/blog/reg-a-vs-reg-d-for-fractional-investors) Tier 2 allows the LLC to raise up to $75 million per 12-month period and accept non-accredited investors (subject to a cap of 10% of the greater of annual income or net worth, with primary residence and loans secured by the primary residence excluded from the net worth calculation). Tier 1 is limited to $20 million per 12-month period. Most fractional platforms, including PSFnetwork, operate under Tier 2 because the offering size and non-accredited access fit the consumer-facing model.
 
 What does the per-square-foot framing change for taxes? It changes the unit of allocation but not the mechanics. Instead of "you own 0.05% of the LLC," your K-1 reflects "you own 50 of 100,000 issued square feet", same proportional share, different unit of measurement. The K-1 boxes, the partnership return, the depreciation flow-through, and the state allocations are governed by IRS rules that do not distinguish between percentage-based and unit-based ownership.
 

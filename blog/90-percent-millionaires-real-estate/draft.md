@@ -43,7 +43,7 @@ The "90 percent of millionaires own real estate" claim is widely cited but commo
 
 ## Opening
 
-If you have spent any time researching real estate, you have seen the 90 percent claim. It is on platform landing pages, in motivational books, in TikTok scripts. It is repeated so confidently that the source rarely gets named. When the source does get named, it is usually attributed to Andrew Carnegie, which makes the claim feel both old and authoritative.
+If you have spent any time researching real estate, you have seen the 90 percent claim. It is on [platform](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms) landing pages, in motivational books, in TikTok scripts. It is repeated so confidently that the source rarely gets named. When the source does get named, it is usually attributed to Andrew Carnegie, which makes the claim feel both old and authoritative.
 
 The actual story is more useful. The most-cited dataset is the Spectrem Group millionaire studies, and what they show is not what the slogan says. The Carnegie quote, when you go looking for it in his published writings, does not appear. The relationship between real estate and millionaire wealth is real but more textured than the slogan can carry.
 
@@ -83,7 +83,7 @@ The honest framing for the average reader is that you cannot reliably skip the w
 
 The practical sequence for most readers: build emergency savings first, contribute to retirement accounts up to any employer match, hold a diversified equity position, then add investment real estate via fractional platforms or REITs as a portfolio diversifier. The 90 percent figure should not change this sequence; if anything, it confirms that real estate complements rather than replaces the rest of the portfolio for most millionaires.
 
-For high-income earners with secure positions and existing market exposure, direct rental property or larger fractional positions become viable. For everyone else, fractional platforms (Fundrise from $10, Arrived from $100, PSFnetwork from $100) lower the entry point dramatically.
+For high-income earners with secure positions and existing market exposure, direct rental property or larger fractional positions become viable. For everyone else, fractional platforms (Fundrise from $10, Arrived from [$100](https://www.psfnetwork.com/blog/how-to-invest-in-real-estate-with-100), PSFnetwork from $100) lower the entry point dramatically.
 
 ---
 
@@ -94,6 +94,10 @@ For high-income earners with secure positions and existing market exposure, dire
 The right answer is not always the same as the answer that makes a good slogan. The "90 percent of millionaires" claim makes a good slogan. It does not make a good portfolio strategy by itself.
 
 ---
+
+The tools that make small-stake ownership possible are covered in our guide to [what proptech is](https://www.psfnetwork.com/blog/what-is-proptech).
+
+The modern on-ramp to ownership is fractional. Here is [what fractional real estate investing is](https://www.psfnetwork.com/blog/fractional-real-estate-investing).
 
 ## FAQ
 

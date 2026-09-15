@@ -44,9 +44,9 @@ Passive income real estate works through two channels: rental distributions (mon
 
 ## Opening
 
-"Passive" is one of the most oversold words in finance. A house with tenants is a business. A REIT in your brokerage account is a stock that can fall 30% in a year. Real estate can produce real, recurring income, but the work is in the choosing, not the running.
+"Passive" is one of the most oversold words in finance. A house with tenants is a business. A [REIT](https://www.psfnetwork.com/blog/reits-vs-fractional-real-estate) in your brokerage account is a stock that can fall 30% in a year. Real estate can produce real, recurring income, but the work is in the choosing, not the running.
 
-This guide walks the four real ways to earn passive income from real estate, the math behind each, and how to start. The lead path for most readers is fractional platforms because they remove the operational burden without removing the income. Direct ownership is here for the readers who want maximum control and can absorb the time and concentration risk.
+This guide walks the four real ways to earn passive income from real estate, the math behind each, and how to start. The lead path for most readers is fractional [platforms](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms) because they remove the operational burden without removing the income. Direct ownership is here for the readers who want maximum control and can absorb the time and concentration risk.
 
 ---
 
@@ -56,7 +56,7 @@ This guide walks the four real ways to earn passive income from real estate, the
 
 Passive income from real estate is not the same as a savings account or a bond coupon. The cash flow can be volatile, the principal can fall, and the timing of distributions depends on whether a property is occupied. What it offers that bonds do not is exposure to property appreciation and a different correlation profile from public markets.
 
-The tax treatment also differs. Under the Internal Revenue Code, rental real estate is generally a passive activity, governed by Form 8582 for loss limitations. This matters because passive losses can usually only offset passive income, not your salary. Consult a tax advisor on your specific situation.
+The [tax](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) treatment also differs. Under the Internal Revenue Code, rental real estate is generally a passive activity, governed by Form 8582 for loss limitations. This matters because passive losses can usually only offset passive income, not your salary. Consult a tax advisor on your specific situation.
 
 ---
 
@@ -153,6 +153,8 @@ If your goal is monthly cash flow now, you skip reinvestment and take distributi
 Real estate passive income is not FDIC insured. It is not a savings account. Treat it as an investment that has a return profile in between stocks and bonds, with its own particular risks.
 
 ---
+
+If you want to start smaller than that, the guide to [how to invest in real estate with $100](https://www.psfnetwork.com/blog/how-to-invest-in-real-estate-with-100) walks through the platforms that accept the lowest minimums.
 
 ## FAQ
 

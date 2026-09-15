@@ -44,7 +44,7 @@ In 2026, you can invest in real estate with as little as $10 to $100 through fra
 
 ## Opening
 
-The story you have probably heard is that real estate is for people with a down payment and good credit. That story was accurate for a long time. It is no longer accurate as the only path. As of 2026, regulated US platforms exist where the entry point is a $10 to $100 share of a real rental property, with the same kind of income distributions a full owner would receive, in proportion to your stake.
+The story you have probably heard is that real estate is for people with a down payment and good credit. That story was accurate for a long time. It is no longer accurate as the only path. As of 2026, regulated US [platforms](https://www.psfnetwork.com/blog/best-fractional-real-estate-platforms) exist where the entry point is a $10 to $100 share of a real rental property, with the same kind of income distributions a full owner would receive, in proportion to your stake.
 
 This guide is for the reader who has $100 (or less) to start and wants the honest map. We will cover what is actually available, what the four real options look like compared, what $100 specifically buys you, and the mistakes that quietly cost people more than the original $100.
 
@@ -73,7 +73,7 @@ What changed: SEC frameworks like Regulation A Tier 2 (qualified in modern form 
 
 *Most publicly traded REITs report on 1099-DIV; some non-traded REITs structured as partnerships issue K-1. Check the offering documents.
 
-For the literal $100 investor, fractional real estate platforms are usually the most direct way to own a piece of a specific rental property. REIT or ETF shares give you broader diversification but no choice of property. Debt platforms give you predictable interest with a different risk profile (default replaces vacancy as the main risk).
+For the literal $100 investor, fractional real estate platforms are usually the most direct way to own a piece of a specific rental property. [REIT](https://www.psfnetwork.com/blog/reits-vs-fractional-real-estate) or ETF shares give you broader diversification but no choice of property. Debt platforms give you predictable interest with a different risk profile (default replaces vacancy as the main risk).
 
 ---
 
@@ -124,6 +124,8 @@ The realistic plan for someone starting at $100 is not to live off the income. I
 
 ---
 
+Working with more capital? The same logic scales. See [how to invest $10,000 in real estate](https://www.psfnetwork.com/blog/how-to-invest-10k-in-real-estate).
+
 ## FAQ
 
 **Q: Is $100 enough to start investing in real estate?**
@@ -142,7 +144,7 @@ A: It is not risk-free. The principal risks are loss of principal if property va
 A: No, not directly. You are an LLC member with limited liability, so your personal exposure is capped at your contribution. The most you can lose is the value of the share itself if the property declines or the platform fails.
 
 **Q: Is the income from $100 in fractional real estate taxed?**
-A: Yes, the same way as larger amounts. For US investors, fractional platform distributions are typically reported on a Schedule K-1 (Form 1065) because the underlying entity is a pass-through LLC. The dollar amounts at $100 are small but you still receive a K-1 each year. Consult a tax advisor.
+A: Yes, the same way as larger amounts. For US investors, fractional platform distributions are typically reported on a Schedule [K-1](https://www.psfnetwork.com/blog/how-fractional-real-estate-is-taxed) (Form 1065) because the underlying entity is a pass-through LLC. The dollar amounts at $100 are small but you still receive a K-1 each year. Consult a tax advisor.
 
 ---
 
